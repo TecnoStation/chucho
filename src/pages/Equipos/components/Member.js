@@ -15,26 +15,27 @@ export default function Member({dato, removeDato}) {
       }
 
     return (
-        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} style={{textAlign: "left", marginTop: "10px", background: "yellow"}}>  
+        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} style={{textAlign: "left", marginTop: "10px", marginLeft: "-30px" }}>  
                         <Col  key={dato.id}  className="gutter-row" span={8}>
                         <Row>
-                            <Col style={{textAlign: "left"}} span={6}>
+                            <Col style={{textAlign: "left"}} span={5}>
                                 <p><img alt="ico" width="45" src={Avatar} /></p>
                             </Col>
-                            <Col span={18}>
+                            <Col style={{paddingLeft: "5px", }} span={19}>
                                 <span><b>{dato.title}</b></span><br/>
                                 <span>Programador JR</span> 
                             </Col>
                         </Row>
                     </Col>
-                    <Col className="gutter-row" span={2}>
-                        <Form.Item style={{textAlign: "center"}} >
+                    <Col className="gutter-row" style={{textAlign: "right", marginLeft: "10px"}} span={2}>
+                        <Form.Item>
                             <Checkbox />
                         </Form.Item>
                     </Col>
-                    <Col className="gutter-row" span={7}>
+                    <Col className="gutter-row" span={8}>
                         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}  >
-                            <Col className="gutter-row" span={24} >
+                            <Col span={4}></Col>
+                            <Col className="gutter-row" span={20} >
                                 <Form.Item name="rol" key={1}>
                                     <Select placeholder="Product Owner" >
                                         <Option value="jack">SCRUM</Option>
@@ -45,7 +46,7 @@ export default function Member({dato, removeDato}) {
                             </Col>
                         </Row>
                     </Col>
-                    <Col className="gutter-row" span={5}>
+                    <Col className="gutter-row" style={{textAlign: "center"}} span={5}  >
                         <Link className="link" href="#" onClick={handleRemoveClick} >Eliminar</Link>
                     </Col>
                 </Row>
