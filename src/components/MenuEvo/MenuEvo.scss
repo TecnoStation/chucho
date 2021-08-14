@@ -74,9 +74,9 @@
   }
 }
 
-.arrow {
-  position: absolute;
-  margin-top: -25px;
-  right: 40px;
-  color: $color-secu-b;
+.slideSide {
+  a,
+  a:hover {
+    color: $color-principal-text;
+  }
 }

@@ -31,54 +31,60 @@ export default function MenuEvo() {
             <li>
               <Link to="/miempresa">Mi empresa</Link>
             </li>
-            <li>
-              Áreas y puestos
-              <div className="arrow">
-                <Link
-                  to="#"
-                  className={drop}
-                  onClick={() => {
-                    setDrop("hide");
-                    seVisible("showBlock");
+            <Link
+              to="#"
+              className={drop}
+              onClick={() => {
+                setDrop("hide");
+                seVisible("showBlock");
+              }}
+            >
+              <li>
+                Areas y puestos
+                <IoMdArrowDropright
+                  style={{
+                    position: "absolute",
+                    fontSize: "16px",
+                    marginTop: "3px",
+                    color: "#000",
+                    marginRight: "-10px",
                   }}
-                >
-                  <IoMdArrowDropright
-                    style={{
-                      fontSize: "16px",
-                      marginTop: "10px",
-                      color: "#000",
-                    }}
-                  />
-                </Link>
-                <Link
-                  to="#"
-                  className={visible}
-                  onClick={() => {
-                    setDrop("showBlock");
-                    seVisible("hide");
+                />
+              </li>
+            </Link>
+            <Link
+              to="#"
+              className={visible}
+              onClick={() => {
+                setDrop("showBlock");
+                seVisible("hide");
+              }}
+            >
+              <li>
+                Areas y puestos
+                <IoMdArrowDropdown
+                  style={{
+                    position: "absolute",
+                    fontSize: "16px",
+                    marginTop: "3px",
+                    color: "#000",
+                    marginRight: "-10px",
                   }}
-                >
-                  <IoMdArrowDropdown
-                    style={{
-                      fontSize: "18px",
-                      marginTop: "10px",
-                      color: "#000",
-                    }}
-                  />
-                </Link>
-              </div>
-              <ul className={visible}>
-                <Link to="/areasypuestos?tab=1">
-                  <li>Crear área</li>
-                </Link>
-                <Link to="/areasypuestos?tab=2">
-                  <li>Crear Puestos</li>
-                </Link>
-                <Link to="/areasypuestos-colaborador">
-                  <li>Crear colaborador</li>
-                </Link>
-              </ul>
-            </li>
+                />
+                <ul className={visible}>
+                  <Link to="/areasypuestos?tab=1">
+                    <li>Crear área</li>
+                  </Link>
+                  <Link to="/areasypuestos?tab=2">
+                    <li>Crear Puestos</li>
+                  </Link>
+                  <Link to="/areasypuestos-colaborador">
+                    <li>Crear colaborador</li>
+                  </Link>
+                </ul>
+              </li>
+            </Link>
+
             <Link to="/equipoinicio">
               <li>Mis equipos</li>
             </Link>
@@ -134,48 +140,53 @@ export default function MenuEvo() {
           <span>Nine Box</span>
           <hr></hr>
           <ul>
-            <li>
-              Planes de desarrollo
-              <div className="arrow">
-                <Link
-                  to="#"
-                  className={drop}
-                  onClick={() => {
-                    setDrop("hide");
-                    seVisible("showBlock");
+            <Link
+              to="#"
+              className={drop}
+              onClick={() => {
+                setDrop("hide");
+                seVisible("showBlock");
+              }}
+            >
+              <li>
+                Planes de desarrollo
+                <IoMdArrowDropright
+                  style={{
+                    position: "absolute",
+                    fontSize: "16px",
+                    marginTop: "3px",
+                    color: "#000",
+                    marginRight: "-10px",
                   }}
-                >
-                  <IoMdArrowDropright
-                    style={{
-                      fontSize: "16px",
-                      marginTop: "10px",
-                      color: "#000",
-                    }}
-                  />
-                </Link>
-                <Link
-                  to="#"
-                  className={visible}
-                  onClick={() => {
-                    setDrop("showBlock");
-                    seVisible("hide");
+                />
+              </li>
+            </Link>
+            <Link
+              to="#"
+              className={visible}
+              onClick={() => {
+                setDrop("showBlock");
+                seVisible("hide");
+              }}
+            >
+              <li>
+                Planes de desarrollo
+                <IoMdArrowDropdown
+                  style={{
+                    position: "absolute",
+                    fontSize: "16px",
+                    marginTop: "3px",
+                    color: "#000",
+                    marginRight: "-10px",
                   }}
-                >
-                  <IoMdArrowDropdown
-                    style={{
-                      fontSize: "18px",
-                      marginTop: "10px",
-                      color: "#000",
-                    }}
-                  />
-                </Link>
-              </div>
-              <ul className={visible}>
-                <li>Crear plan</li>
-                <li>Mis planes</li>
-                <li>Provedores</li>
-              </ul>
-            </li>
+                />
+                <ul className={visible}>
+                  <li>Crear plan</li>
+                  <li>Mis planes</li>
+                  <li>Provedores</li>
+                </ul>
+              </li>
+            </Link>
             <li>Ver Nine Box</li>
           </ul>
         </div>

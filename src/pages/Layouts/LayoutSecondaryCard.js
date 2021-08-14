@@ -20,7 +20,7 @@ export default function LayoutSecondaryCard({
   const menu = (
     <Menu>
       <Menu.Item key="0">
-        <Menu.Item key="3">Ver Perfil</Menu.Item>
+        <Link to="/areasypuestos-perfil">Ver Perfil</Link>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="2">Cerrar sesión</Menu.Item>
@@ -42,8 +42,8 @@ export default function LayoutSecondaryCard({
                     <Col style={{ textAlign: "left" }} span={3} MdDeviceHub>
                       <h3>{Title}</h3>
                     </Col>
-                    <Col span={16}></Col>
-                    <Col span={3}>
+                    <Col span={15}></Col>
+                    <Col span={4} style={{ textAlign: "right" }}>
                       <Dropdown overlay={menu} trigger={["click"]}>
                         <Link
                           to=""
