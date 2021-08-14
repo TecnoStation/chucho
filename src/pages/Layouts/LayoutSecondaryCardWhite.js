@@ -25,7 +25,7 @@ export default function LayoutSecondaryCardWhite({
   const menu = (
     <Menu>
       <Menu.Item key="0">
-        <Menu.Item key="3">Ver Perfil</Menu.Item>
+        <Link to="/areasypuestos-perfil">Ver Perfil</Link>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="2">Cerrar sesión</Menu.Item>
@@ -73,7 +73,7 @@ export default function LayoutSecondaryCardWhite({
                       }}
                     >
                       {" "}
-                      <Link to="/organigramlist">
+                      <Link to="/organigram">
                         <MaterialIcon icon="format_list_bulleted" />
                       </Link>{" "}
                     </Col>
@@ -96,7 +96,7 @@ export default function LayoutSecondaryCardWhite({
                     <Col span={4} style={{ textAlign: "center" }}>
                       <Dropdown overlay={menu} trigger={["click"]}>
                         <Link
-                          to=""
+                          to="#"
                           className="iconGray"
                           onClick={(e) => e.preventDefault()}
                         >

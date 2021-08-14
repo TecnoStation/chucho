@@ -25,7 +25,9 @@ export default function LayoutSecondary({
   const menu = (
     <Menu>
       <Menu.Item key="0">
-        <Menu.Item key="3">Ver Perfil</Menu.Item>
+        <Menu.Item key="3">
+          <Link to="/areasypuestos-perfil">Ver Perfil</Link>
+        </Menu.Item>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="2">Cerrar sesión</Menu.Item>
