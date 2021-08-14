@@ -1,0 +1,27 @@
+@import "../../index.scss";
+
+.custom {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+
+  .message {
+    width: 24vw;
+    text-align: center;
+  }
+}
+
+.carruselItem {
+  margin-top: -15px;
+}
+
+.ant-dropdown-menu-item,
+.ant-dropdown-menu-submenu-title {
+  padding: 0px 6px !important;
+  font-size: 12px !important;
+}
+
+.transform-component-module_wrapper__1_Fgj {
+  height: 90vh !important;
+}

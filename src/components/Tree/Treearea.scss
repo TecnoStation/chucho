@@ -1,0 +1,48 @@
+@import "../../index.scss";
+
+.ant-tree{ 
+    .ant-tree-node-content-wrapper{
+        background: $color-hover !important;
+        color: $color-principal-text !important;
+        border: 0px solid blue !important;
+        width: 300px !important;
+        margin-left: 5px !important;
+
+        .ant-tree-iconEle{
+            color: $color-secondary-text;
+            font-size: 10px;
+        }
+
+    }
+
+    .ant-tree-node-content-wrapper:hover{
+        background: $color-base-b !important;
+        color: $color-white !important;
+        font-weight: bold !important;
+
+        .ant-tree-iconEle{
+            color: $color-white;
+            font-size: 10px;
+        }
+    }
+
+   
+}
+
+.ant-tree-switcher-leaf-line{
+    font-size: 25px !important;
+    color: red !important;
+}
+
+
+.ant-tree-show-line .ant-tree-indent-unit::before {
+    position: absolute;
+    top: 0;
+    right: 12px;
+    bottom: -4px;
+    content: '';
+}
+
+.ant-tree-treenode .ant-tree-treenode-switcher-open{
+    border: 3px solid red !important;
+}

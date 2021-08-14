@@ -1,0 +1,90 @@
+@import "../../index.scss";
+
+.menuSide {
+  background: $color-white;
+  height: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.contentFrame {
+  background: $color-font;
+  height: auto;
+  padding: 0px 0px 60px 60px;
+
+  header {
+    width: 85vw;
+    background: $color-font;
+    .title {
+      width: 30%;
+      float: left;
+    }
+
+    .perfil {
+      width: 30;
+      float: right;
+
+      a {
+        color: #000;
+      }
+    }
+  }
+}
+
+.cardlayout {
+  border-radius: 10px !important;
+  height: auto;
+}
+
+.cardlayoutGlass {
+  //background: rgba(255, 255, 255,0);
+  background: rgba(0, 0, 0, 0.02);
+  height: auto;
+  border: 0px;
+  width: 82vw;
+  height: auto;
+}
+
+.cardlayoutGlassFull {
+  //background: rgba(255, 255, 255,0);
+  background: rgba(0, 0, 0, 0);
+  height: auto;
+  border: 0px;
+  width: 82vw;
+  height: auto;
+}
+
+.cardlayoutGlassWhite {
+  background: rgba(255, 255, 255, 1);
+  height: auto;
+  border: 0px;
+  width: 82vw;
+  height: auto;
+  border-radius: 10px;
+}
+
+.layoutBtn {
+  background: rgba(255, 255, 255, 0);
+  width: 180px;
+  color: #000;
+  border: 0px solid $color-link;
+  font-weight: bold;
+  box-shadow: 0 0px 0 rgb(0, 0, 0 / 2%) !important;
+}
+
+.layoutBtn:active {
+  background: rgba(255, 255, 255, 0);
+}
+
+.layoutBtn:focus {
+  background: rgba(255, 255, 255, 0);
+}
+
+.layoutBtn:hover {
+  background: rgba(255, 255, 255, 0);
+}
+
+.ant-layout-header {
+  width: 100%;
+  padding: 0 10px !important;
+}

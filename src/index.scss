@@ -1,0 +1,310 @@
+$contorno: #394a7626;
+
+//color de fondo del menu desplegable
+$secuA: #dbfcff;
+$GreenMarker: #66bb6a;
+$color-orange: #fcb74d;
+
+//colores
+
+$color-base: #2cccd3;
+$color-secu-a: #b7dde1;
+$color-secu-b: #006271;
+$color-secu-c: #333f48;
+$color-secu-d: #c1c6c8;
+$color-base-b: #aadb1e;
+$color-principal-text: #00205b;
+$color-secondary-text: #5e6d88;
+$color-input: #aab4c8;
+$color-margin: #e2e6ec;
+$color-hover: #f4f6fb;
+$color-font: #f2f4f8;
+$color-link: #579bfc;
+$color-white: #ffffff;
+$color-yellow: #d3c02c;
+$color-red: #d32c2c;
+$color-pendings: #ff5d5d;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.square {
+  width: 100%;
+  height: 80vh;
+  background: $color-white;
+  border-radius: 10px;
+}
+
+.screen {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  z-index: 9999;
+}
+
+.primary {
+  background: $color-base !important;
+  color: $color-white !important;
+  border: 1px solid $color-base !important;
+  border-radius: 5px !important;
+  height: 32px;
+  width: auto;
+}
+
+.primaryB {
+  width: 150px;
+  background: $color-base !important;
+  color: $color-white !important;
+  border: 1px solid $color-base !important;
+  border-radius: 5px !important;
+  height: 32px;
+  font-weight: bold;
+}
+
+.secondary {
+  border-radius: 5px;
+}
+
+.link {
+  color: $color-link !important;
+}
+
+.linkBold {
+  color: $color-link !important;
+  font-weight: bold;
+}
+
+.tab {
+  width: 100%;
+  height: auto;
+}
+
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab {
+  background: $color-base;
+  color: $color-white;
+  border-radius: 10px 10px 0px 0px !important;
+  height: 35px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-tabs-tab-active {
+  background: $color-white !important;
+  color: $color-base !important;
+}
+
+.tabPane {
+  background: $color-white;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  margin-top: -20px;
+  padding: 0px 20px 0px 30px;
+}
+
+.card {
+  border-radius: 10px;
+  width: 400px;
+  height: 400px;
+}
+
+.cardDefault {
+  border-radius: 10px;
+  width: 500px;
+  height: auto;
+  text-align: center;
+  p {
+    text-align: justify;
+  }
+}
+
+.secondary {
+  border-radius: 5px;
+}
+
+.points {
+  background: $color-white !important;
+  color: #000 !important;
+  border: 0px solid #000 !important;
+  margin-left: -10px;
+  margin-top: -20px;
+}
+
+.third {
+  width: 180px;
+  color: $color-link;
+  border: 1px solid $color-link;
+  font-weight: bold;
+}
+
+.iconGreen {
+  color: $color-base;
+}
+
+.iconGreenTwo {
+  color: $GreenMarker;
+}
+
+.iconGray {
+  color: $color-secondary-text;
+}
+
+.iconRed {
+  color: $color-red;
+}
+
+.iconSureGray {
+  color: $color-input !important;
+}
+
+.iconBlue {
+  color: $color-link !important;
+}
+
+.btnBlue {
+  background: $color-link;
+  color: $color-white;
+}
+
+.iconAjust {
+  margin-right: 20px;
+  margin-top: -5px;
+  font-size: 30px;
+  position: absolute;
+  left: 10px;
+}
+
+.iconAjust2 {
+  margin-right: 20px;
+  margin-top: px;
+  font-size: 20px;
+  position: absolute;
+  left: 10px;
+}
+
+.textAjust {
+  float: right;
+}
+
+.textAjust2 {
+  float: right;
+  margin-right: 20px !important;
+}
+
+.textAjust3 {
+  float: right;
+  margin-right: 0px !important;
+}
+
+.textAjust4 {
+  float: right;
+  margin-right: 5px !important;
+  font-weight: bold;
+}
+
+.textAjust5 {
+  float: right;
+  margin-right: 90px !important;
+}
+
+.select {
+  width: 100% !important;
+  margin-top: 15px;
+}
+
+.formLogin2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+}
+
+.smallModal {
+  width: 330px !important;
+}
+
+.smallModal2 {
+  width: 330px !important;
+
+  .ant-modal-body {
+    height: 80px !important;
+  }
+}
+
+.largeModal {
+  width: 700px !important;
+}
+
+.dividerLeft {
+  border-left: 1px solid $color-margin;
+}
+
+.divider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dividerBottom {
+  border-bottom: 1px solid $color-margin;
+  width: 90%;
+}
+
+.dividerBottomFull {
+  border-bottom: 1px solid $color-margin;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: flex;
+}
+
+.showBlock {
+  display: block;
+}
+
+.showInline {
+  display: inline-block;
+}
+
+.roundBtn {
+  border-radius: 10px !important;
+}
+
+.roundBtnFull {
+  border-radius: 50% !important;
+}
+
+.primaryInvert {
+  color: $color-base !important;
+  background: $color-white !important;
+  border: 1px solid $color-base !important;
+}
+
+

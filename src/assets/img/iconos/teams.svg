@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58" height="58" viewBox="0 0 58 58">
+  <defs>
+    <filter id="Rectángulo_1565" x="0" y="0" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Componente_56_11" data-name="Componente 56 – 11" transform="translate(9 6)">
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Rectángulo_1565)">
+      <rect id="Rectángulo_1565-2" data-name="Rectángulo 1565" width="40" height="40" rx="11" transform="translate(9 6)" fill="#fff"/>
+    </g>
+    <g id="groups-24px" transform="translate(8 8)">
+      <rect id="Rectángulo_1900" data-name="Rectángulo 1900" width="24" height="24" fill="none"/>
+      <g id="Grupo_683" data-name="Grupo 683">
+        <path id="Trazado_1397" data-name="Trazado 1397" d="M12,12.75a10.611,10.611,0,0,1,4.24.9A2.984,2.984,0,0,1,18,16.38V18H6V16.39a2.963,2.963,0,0,1,1.76-2.73A10.44,10.44,0,0,1,12,12.75ZM4,13a2,2,0,1,0-2-2A2.006,2.006,0,0,0,4,13Zm1.13,1.1A6.983,6.983,0,0,0,4,14a6.95,6.95,0,0,0-2.78.58A2.011,2.011,0,0,0,0,16.43V18H4.5V16.39A4.5,4.5,0,0,1,5.13,14.1ZM20,13a2,2,0,1,0-2-2A2.006,2.006,0,0,0,20,13Zm4,3.43a2.011,2.011,0,0,0-1.22-1.85,6.8,6.8,0,0,0-3.91-.48,4.5,4.5,0,0,1,.63,2.29V18H24ZM12,6A3,3,0,1,1,9,9,3,3,0,0,1,12,6Z" fill="#5e6d88"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,82 @@
+@import "../../index.scss";
+
+.item {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 20px;
+
+  .itemicon {
+    font-size: 22px;
+  }
+
+  .itemtex {
+    font-size: 12px !important;
+  }
+}
+
+.slideSide {
+  width: 14.4vw;
+  height: 100%;
+  left: 8.2vw;
+  background: $secuA;
+  padding: 20px 15px 20px 15px;
+  text-align: left;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: none;
+  span {
+    font-weight: bold;
+    color: $color-secu-b;
+  }
+  hr {
+    border: 1px solid $color-base;
+  }
+  ul {
+    text-align: left;
+    padding: 5px 20px 0px 5px;
+    li {
+      list-style: none;
+      text-align: left;
+      padding: 10px 5px 20px 0px;
+      color: #000;
+      font-size: 12px;
+      ul .hide {
+        display: none;
+      }
+    }
+
+    li:hover {
+      color: $color-secu-b;
+      list-style: disc;
+      margin-left: 5px;
+      font-weight: bold;
+      ul .showBlock {
+        display: block;
+      }
+    }
+  }
+}
+
+.item:hover {
+  background: $secuA;
+  color: $color-base;
+  border-left: 8px solid $color-base;
+
+  .itemtex {
+    display: none;
+  }
+
+  .slideSide {
+    display: block;
+  }
+}
+
+.arrow {
+  position: absolute;
+  margin-top: -25px;
+  right: 40px;
+  color: $color-secu-b;
+}

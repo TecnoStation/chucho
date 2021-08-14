@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58" height="58" viewBox="0 0 58 58">
+  <defs>
+    <filter id="Rectángulo_1565" x="0" y="0" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Componente_57_11" data-name="Componente 57 – 11" transform="translate(9 6)">
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Rectángulo_1565)">
+      <rect id="Rectángulo_1565-2" data-name="Rectángulo 1565" width="40" height="40" rx="11" transform="translate(9 6)" fill="#fff"/>
+    </g>
+    <g id="business_black_24dp" transform="translate(8 8)">
+      <path id="Trazado_30619" data-name="Trazado 30619" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Trazado_30620" data-name="Trazado 30620" d="M12,7V3H2V21H22V7ZM6,19H4V17H6Zm0-4H4V13H6Zm0-4H4V9H6ZM6,7H4V5H6Zm4,12H8V17h2Zm0-4H8V13h2Zm0-4H8V9h2Zm0-4H8V5h2ZM20,19H12V17h2V15H12V13h2V11H12V9h8Zm-2-8H16v2h2Zm0,4H16v2h2Z" fill="#5e6d88"/>
+    </g>
+  </g>
+</svg>

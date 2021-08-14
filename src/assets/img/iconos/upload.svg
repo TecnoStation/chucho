@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58" height="58" viewBox="0 0 58 58">
+  <defs>
+    <filter id="Rectángulo_1405" x="0" y="0" width="58" height="58" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Componente_58_14" data-name="Componente 58 – 14" transform="translate(9 6)">
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Rectángulo_1405)">
+      <rect id="Rectángulo_1405-2" data-name="Rectángulo 1405" width="40" height="40" rx="11" transform="translate(9 6)" fill="#fff"/>
+    </g>
+    <g id="publish-24px" transform="translate(8 8)">
+      <path id="Trazado_761" data-name="Trazado 761" d="M0,0H24V24H0Z" fill="none"/>
+      <path id="Trazado_762" data-name="Trazado 762" d="M5,4V6H19V4ZM5,14H9v6h6V14h4L12,7Z" fill="#5e6d88"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,139 @@
+@import "../../index.scss";
+
+.info{
+    width: 100%;
+    text-align: center !important;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.info2{
+    width: 100%;
+    text-align: center !important;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    margin-left: 20px !important;
+}
+
+.info3{
+    width: 100%;
+    text-align: center !important;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    margin-left: 20px !important;
+}
+
+.info3Full{
+    width: 100%;
+    margin-top: 1px;
+    text-align: center !important;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left: 20px !important;
+}
+
+.formWork{
+    text-align: left;
+}
+
+
+.tagTwo{
+    width: 100%;
+    background: $color-hover;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 0px;
+    height: 25px;
+    color: #000;
+    
+}
+
+
+.tagThree{
+    width: 90%;
+    background: $secuA;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 0px;
+    height: 25px;
+    color: #000;
+    
+}
+
+.tagThreeFull{
+    width: 100%;
+    background: $secuA;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    border: 0px;
+    height: 25px;
+    color: #000;
+    
+}
+
+
+.autoComplete{
+    width: 100%;
+}
+
+.modalCuztom{
+    width: 400px !important;
+}
+
+.TagArea{
+    width: 130px;
+    background: $color-secondary-text;
+    color: $color-white !important;
+    border-radius: 12px;
+}
+
+.TagAreaGreen{
+    width: 130px;
+    background: $color-base-b;
+    color: $color-white !important;
+    border-radius: 12px;
+}
+
+.TagAreaRed{
+    width: 130px;
+    background: $color-red;
+    color: $color-white !important;
+    border-radius: 12px;
+}
+
+.ant-tag-close-icon{
+    color: $color-white;
+    float: right;
+    margin-top: 5px;
+}
+
+.divScrool{
+    height: 200px;
+    overflow-y: scroll;    
+}
+
+.divScrool::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.divScrool::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+.divScrool::-webkit-scrollbar-button:increment,.divScrool::-webkit-scrollbar-button {
+    display: none;
+} 
+
+.divScrool::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.divScrool::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.divScrool::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}

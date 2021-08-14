@@ -1,0 +1,54 @@
+@import "../../../../index.scss";
+
+.CardNode{
+    width: 270px;
+    height: 90px;
+    background: $color-white;
+    display: inline-block;
+    border-radius: 8px;
+    border: 1px solid $color-base;
+    padding: 3px 10px 0px 7px;
+}
+
+.CardNodeChild{
+    width: 270px;
+    height: 90px;
+    background: $color-white;
+    display: inline-block;
+    border-radius: 8px;
+    border: 1px solid $color-base;
+    padding: 3px 10px 0px 7px;
+    border-left: 15px solid $color-base;
+    margin-left: 50px;
+}
+
+.CardNodeGrandChild{
+    width: 270px;
+    height: 90px;
+    background: $color-white;
+    display: inline-block;
+    border-radius: 8px;
+    border: 1px solid $color-base;
+    padding: 3px 10px 0px 7px;
+    border-left: 8px solid $color-base;
+}
+
+
+.CardNodeGrandChildhide{
+    width: 270px;
+    height: 200px; 
+    display: none;
+}
+
+.CardNodeGrandChildShow{
+    width: 350px;
+    height: 200px; 
+    display: inline-block;
+    margin-left: 130px;
+}
+
+.line{
+    float: left;
+    margin-left: -50px;
+    margin-top: -150px;
+}
