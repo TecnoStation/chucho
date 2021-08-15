@@ -1343,13 +1343,13 @@ export default function Perfil() {
           className="dividerBottomFull"
           style={{ textAlign: "center", paddingBottom: "15px" }}
         >
-          <Col span={5}>
+          <Col span={7}>
             <b>Documento</b>
           </Col>
           <Col span={6}>
             <b>Estatus</b>
           </Col>
-          <Col span={9}>
+          <Col span={7}>
             <b>Fecha de carga</b>
           </Col>
           <Col span={4}>
@@ -1365,10 +1365,16 @@ export default function Perfil() {
             paddingBottom: "15px",
           }}
         >
-          <Col span={6}>Comprobante de Ingresos</Col>
-          <Col span={5}>No adjuntado</Col>
-          <Col span={9}>10 MAY 2016</Col>
-          <Col span={3}>
+          <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
+            Comprobante de Ingresos
+          </Col>
+          <Col style={{ paddingLeft: "15px" }} span={6}>
+            No adjuntado
+          </Col>
+          <Col style={{ paddingLeft: "10px" }} span={7}>
+            10 MAY 2016
+          </Col>
+          <Col style={{ paddingLeft: "10px" }} span={3}>
             <Link
               className="iconGreen"
               onClick={() => {
@@ -1395,10 +1401,16 @@ export default function Perfil() {
             paddingBottom: "15px",
           }}
         >
-          <Col span={6}>Comprobante de Estudios</Col>
-          <Col span={5}>No adjuntado</Col>
-          <Col span={9}>10 MAY 2016</Col>
-          <Col span={3}>
+          <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
+            Comprobante de Estudios
+          </Col>
+          <Col style={{ paddingLeft: "15px" }} span={6}>
+            No adjuntado
+          </Col>
+          <Col style={{ paddingLeft: "10px" }} span={7}>
+            10 MAY 2016
+          </Col>
+          <Col style={{ paddingLeft: "10px" }} span={3}>
             <Link
               className="iconGreen"
               onClick={() => {
@@ -1425,10 +1437,16 @@ export default function Perfil() {
             paddingBottom: "15px",
           }}
         >
-          <Col span={6}>Comprobante de Domicilio</Col>
-          <Col span={5}>No adjuntado</Col>
-          <Col span={9}>10 MAY 2016</Col>
-          <Col span={3}>
+          <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
+            Comprobante de Domicilio
+          </Col>
+          <Col style={{ paddingLeft: "15px" }} span={6}>
+            No adjuntado
+          </Col>
+          <Col style={{ paddingLeft: "10px" }} span={7}>
+            10 MAY 2016
+          </Col>
+          <Col style={{ paddingLeft: "10px" }} span={3}>
             <Link
               className="iconGreen"
               onClick={() => {
@@ -1455,10 +1473,16 @@ export default function Perfil() {
             paddingBottom: "15px",
           }}
         >
-          <Col span={6}>Identificación Oficial</Col>
-          <Col span={5}>No adjuntado</Col>
-          <Col span={9}>10 MAY 2016</Col>
-          <Col span={3}>
+          <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
+            Identificación Oficial
+          </Col>
+          <Col style={{ paddingLeft: "15px" }} span={6}>
+            No adjuntado
+          </Col>
+          <Col style={{ paddingLeft: "10px" }} span={7}>
+            10 MAY 2016
+          </Col>
+          <Col style={{ paddingLeft: "10px" }} span={3}>
             <Link
               className="iconGreen"
               onClick={() => {
@@ -1484,10 +1508,16 @@ export default function Perfil() {
             paddingBottom: "15px",
           }}
         >
-          <Col span={6}>Identificación Oficial</Col>
-          <Col span={5}>No adjuntado</Col>
-          <Col span={9}>10 MAY 2016</Col>
-          <Col span={3}>
+          <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
+            Identificación Oficial
+          </Col>
+          <Col style={{ paddingLeft: "15px" }} span={6}>
+            No adjuntado
+          </Col>
+          <Col style={{ paddingLeft: "10px" }} span={7}>
+            10 MAY 2016
+          </Col>
+          <Col style={{ paddingLeft: "10px" }} span={3}>
             <Link
               className="iconGreen"
               onClick={() => {
