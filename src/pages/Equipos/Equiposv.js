@@ -15,26 +15,18 @@ import { SearchOutlined } from "@ant-design/icons";
 import { BsFillGrid3X2GapFill, BsListUl } from "react-icons/bs";
 import { RiFilterFill } from "react-icons/ri";
 import Avatar from "../../assets/img/avatar.png";
-import Simplecard from "../../components/Cards/Simplecard";
+import Teamlist from "../../components/Cards/Teamlist";
 import { Link } from "react-router-dom";
 import More from "../../assets/img/iconos/more_vert-24px.svg";
 
-export default function Equiposv() {
-  const [modalCreateTeam, setModalCreateTeam] = useState(false);
-  const openModalCreateTeam = () => {
-    setModalCreateTeam(true);
-  };
-  const edit = () => {
-    // setModalTarget(false);
-    // setModalCreateTeam(true);
-  };
-  const [modalRename, setmodalRename] = useState(false);
+import CreateTeam from "./components/CreateTeam";
 
-  const rename = () => {
-    equipos[Item].nombre = value;
-    document.getElementById("nombreTeam").innerHTML = value;
-    setmodalRename(false);
-  };
+import "./Equipos.scss";
+const LOCAL_STORAGE_KEY = "lista";
+
+export default function Equiposv() {
+  const [btn1, setBtn1] = useState("hidden");
+  const [btn2, setBtn2] = useState("button");
 
   const equipos = [
     {
@@ -77,33 +69,101 @@ export default function Equiposv() {
 
   const [key, setKey] = useState(0);
 
+  const setDates = (item, e) => {
+    setItem(item);
+    setValue(equipos[item].nombre);
+    setKey(item);
+  };
+
+  const clone = () => {};
+
+  const rename = () => {
+    equipos[Item].nombre = value;
+    document.getElementById("nombreTeam").innerHTML = value;
+    setmodalRename(false);
+  };
+
+  const edit = () => {
+    setModalTarget(false);
+    setModalCreateTeam(true);
+    setBtn1("button");
+    setBtn2("hidden");
+  };
+
+  const deleteTeam = () => {};
+
+  const [modalRename, setmodalRename] = useState(false);
+
+  const closeModalRename = () => {
+    setmodalRename(false);
+  };
+
+  const openModalRename = () => {
+    setmodalRename(true);
+    setValue(equipos[Item].nombre);
+  };
+
+  const onchange = (e) => {
+    setValue(e.target.value);
+    setKey(key);
+  };
+
+  // ------------ modal target ----------------
+  const [modalTarget, setModalTarget] = useState();
+
+  const openModalTarget = (index, data, e) => {
+    setValue(data.nombre);
+    setModalTarget(true);
+  };
+
+  const closeModalTarget = () => {
+    setModalTarget(false);
+  };
+
+  //----------------- CREATE TEAM ----------
+
+  const [modalCreateTeam, setModalCreateTeam] = useState(false);
+  const openModalCreateTeam = () => {
+    setModalCreateTeam(true);
+    setBtn1("hidden");
+    setBtn2("button");
+  };
+
+  const [datos, setDatos] = useState([]);
+
+  useEffect(() => {
+    // fires when app component mounts to the DOM
+    const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    if (storageTodos) {
+      setDatos(storageTodos);
+    }
+  }, []);
+
+  useEffect(() => {
+    // fires when todos array gets updated
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(datos));
+  }, [datos]);
+
+  const agrega = (dato) => {
+    setDatos([dato, ...datos]);
+  };
+
+  function removeDato(id) {
+    setDatos(datos.filter((dato) => dato.id !== id));
+  }
+
   const menu = (
     <Menu>
       <Menu.Item key="0">
-        <Menu.Item key="01">
-          <Link to="#">Clonar equipo</Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key="1">
-        <Menu.Item key="12">
-          <Link
-            onClick={() => {
-              setmodalRename(true);
-            }}
-            to="#"
-          >
-            Renombrar
+        <Menu.Item key="3">
+          <Link onClick={edit} to="#">
+            Editar datos
           </Link>
         </Menu.Item>
       </Menu.Item>
-      <Menu.Item key="2">
-        <Menu.Item key="23">
-          <Link to="#">Editar</Link>
-        </Menu.Item>
-      </Menu.Item>
       <Menu.Divider />
-      <Menu.Item key="3">
-        <Menu.Item key="34">
+      <Menu.Item key="0">
+        <Menu.Item key="3">
           <Link to="#">Eliminar</Link>
         </Menu.Item>
       </Menu.Item>
@@ -114,23 +174,18 @@ export default function Equiposv() {
     <>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col className="gutter-row iconGray" span={1}>
-          <RiFilterFill style={{ fontSize: "22px" }} />
+          <RiFilterFill />
         </Col>
-        <Col className="gutter-row  rigth" span={1}>
-          <span>
-            <Link to="/Equipos">
-              <BsFillGrid3X2GapFill
-                style={{ fontSize: "24px" }}
-                className="iconGray"
-              />
-            </Link>
-          </span>
+        <Col className="gutter-row iconGray rigth" span={1}>
+          <Link className="iconBlue" to="/equipos">
+            <BsFillGrid3X2GapFill />
+          </Link>
         </Col>
         <Col className="gutter-row" span={3} style={{ textAlign: "left" }}>
-          <Link className="iconGray" to="/equiposv">
+          <Link className="iconBlue" to="/equiposv">
             <BsListUl
-              className="dividerLeft iconBlur"
-              style={{ paddingLeft: "5px", fontSize: "26px" }}
+              className="dividerLeft"
+              style={{ paddingLeft: "5px", fontSize: "20px" }}
             />
           </Link>
         </Col>
@@ -171,78 +226,43 @@ export default function Equiposv() {
         </Col>
       </Row>
 
-      <Row
-        style={{ marginTop: "30px", width: "80%", paddingBottom: "20px" }}
-        className="dividerBottomFull"
-      >
-        <Col span={11}>
-          <span>
-            <b>Equipo proyecto EVOU</b>
-          </span>
-          <br />
-          <span>Mandos medios</span>
-        </Col>
-        <Col span={11}>
-          <p>15-JUN-2021</p>
-        </Col>
-        <Col span={2}>
-          <Dropdown overlay={menu} trigger={["click"]}>
-            <Link
-              to="#"
-              className="ant-dropdown-link"
-              onClick={(e) => e.preventDefault()}
-            >
-              <img alt="logo" src={More} width="25" height="25" />
-            </Link>
-          </Dropdown>
-        </Col>
-      </Row>
+      <Teamlist
+        openModalTarget={openModalTarget}
+        delete={deleteTeam}
+        edit={edit}
+        clone={clone}
+        openModalRename={openModalRename}
+        setDates={setDates}
+        equipos={equipos}
+      />
 
-      <Row
-        style={{ marginTop: "30px", width: "80%", paddingBottom: "20px" }}
-        className="dividerBottomFull"
-      >
-        <Col span={11}>
-          <span>
-            <b>Equipo proyecto EVOU</b>
-          </span>
-          <br />
-          <span>Mandos medios</span>
-        </Col>
-        <Col span={11}>
-          <p>15-JUN-2021</p>
-        </Col>
-        <Col span={2}>
-          <Dropdown overlay={menu} trigger={["click"]}>
-            <Link
-              to="#"
-              className="ant-dropdown-link"
-              onClick={(e) => e.preventDefault()}
-            >
-              <img alt="logo" src={More} width="25" height="25" />
-            </Link>
-          </Dropdown>
-        </Col>
-      </Row>
+      <div style={{ height: "50px" }}></div>
+
+      <CreateTeam
+        btn1={btn1}
+        btn2={btn2}
+        modalCreateTeam={modalCreateTeam}
+        setModalCreateTeam={setModalCreateTeam}
+        openModalCreateTeam={openModalCreateTeam}
+        agrega={agrega}
+        datos={datos}
+        removeDato={removeDato}
+      />
 
       <Modal
         title="Renombre de equipo"
         className="smallModal2"
         visible={modalRename}
-        onCancel={() => {
-          setmodalRename(false);
-        }}
+        onCancel={closeModalRename}
         footer={[
           <Button
             style={{ marginRight: "20px", width: "100px" }}
             className="secondary"
-            onClick={() => {
-              setmodalRename(false);
-            }}
+            onClick={closeModalRename}
           >
             Cancelar
           </Button>,
-          <Link to="/equipos">
+          <Link to="/equiposv">
             <input
               type="button"
               className="primary"
@@ -264,6 +284,145 @@ export default function Equiposv() {
             />
           </Form.Item>
         </Form>
+      </Modal>
+
+      <Modal
+        title={value}
+        className="middleModal"
+        visible={modalTarget}
+        onCancel={closeModalTarget}
+        footer=""
+      >
+        <Row>
+          <Col span={6}>
+            <p>
+              <b>Tipo de equipo</b>
+            </p>
+          </Col>
+          <Col span={16}>
+            <p>
+              <b>Modalidad</b>
+            </p>
+          </Col>
+          <Col span={2}>
+            <Dropdown overlay={menu} trigger={["click"]}>
+              <Link
+                to="#"
+                className="ant-dropdown-link"
+                onClick={(e) => e.preventDefault()}
+              >
+                <img alt="logo" src={More} width="25" height="25" />
+              </Link>
+            </Dropdown>
+          </Col>
+        </Row>
+        <Row>
+          <Col span={6}>
+            <p>Personalizado</p>
+          </Col>
+          <Col span={18}>
+            <p>Multifuncional</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col style={{ textAlign: "left", paddingLeft: "5px" }} span={24}>
+            <p>
+              <b>Marco de trabajo</b>
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col style={{ textAlign: "left", paddingLeft: "5px" }} span={24}>
+            <p>SCRUM</p>
+          </Col>
+        </Row>
+        <Row style={{ textAlign: "center" }}>
+          <Col span={8}>Miembros del Equipo</Col>
+          <Col span={8}>Líder</Col>
+          <Col span={8}>Roles</Col>
+        </Row>
+        <Row
+          gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+          style={{ textAlign: "center", marginTop: "10px" }}
+        >
+          <Col className="gutter-row" span={11}>
+            <Row>
+              <Col span={2}>
+                <p>
+                  <img alt="ico" width="45" src={Avatar} />
+                </p>
+              </Col>
+              <Col span={20}>
+                <span>
+                  <b>Laura Mendoza</b>
+                </span>
+                <br />
+                <span>Programador JR</span>
+              </Col>
+            </Row>
+          </Col>
+          <Col className="gutter-row" span={2}>
+            <Form.Item style={{ textAlign: "center" }}>
+              <Checkbox />
+            </Form.Item>
+          </Col>
+
+          <Col style={{ textAlign: "right" }} className="gutter-row" span={10}>
+            <p className="iconSureGray">Product Owner</p>
+          </Col>
+        </Row>
+        <Row
+          gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+          style={{ textAlign: "center", marginTop: "10px" }}
+        >
+          <Col className="gutter-row" span={11}>
+            <Row>
+              <Col span={2}>
+                <p>
+                  <img alt="ico" width="45" src={Avatar} />
+                </p>
+              </Col>
+              <Col span={20}>
+                <span>
+                  <b>Laura Mendoza</b>
+                </span>
+                <br />
+                <span>Programador JR</span>
+              </Col>
+            </Row>
+          </Col>
+          <Col className="gutter-row" span={2}></Col>
+
+          <Col style={{ textAlign: "right" }} className="gutter-row" span={10}>
+            <p className="iconSureGray">Product Owner</p>
+          </Col>
+        </Row>
+        <Row
+          gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+          style={{ textAlign: "center", marginTop: "10px" }}
+        >
+          <Col className="gutter-row" span={11}>
+            <Row>
+              <Col span={2}>
+                <p>
+                  <img alt="ico" width="45" src={Avatar} />
+                </p>
+              </Col>
+              <Col span={20}>
+                <span>
+                  <b>Laura Mendoza</b>
+                </span>
+                <br />
+                <span>Programador JR</span>
+              </Col>
+            </Row>
+          </Col>
+          <Col className="gutter-row" span={2}></Col>
+
+          <Col style={{ textAlign: "right" }} className="gutter-row" span={10}>
+            <p className="iconSureGray">Product Owner</p>
+          </Col>
+        </Row>
       </Modal>
     </>
   );

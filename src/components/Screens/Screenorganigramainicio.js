@@ -1,6 +1,6 @@
 import { Button, Card } from "antd";
 import Item from "antd/lib/list/Item";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
 import { Link } from "react-router-dom";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
@@ -12,10 +12,22 @@ import "./Screen.scss";
 let carusel = document.getElementsByTagName("Carousel");
 
 export default function Screen() {
+  const titles = [
+    "¿Por qué crear un Organigrama?",
+    "¿Qué compone a mi organigrama?",
+    "¿Como puedo subir los datos?",
+    "",
+  ];
+
+  const [count, setCount] = useState(0);
+  const [visible, setVisible] = useState(75);
+  const [br, setBr] = useState("");
+  let title = titles[count];
+
   return (
     <div className="screen" id="screen">
       <Card
-        title="¿Por qué crear un Organigrama?"
+        title={title}
         className="card"
         id="cardOrganigrama"
         headStyle={{ textAlign: "center" }}
@@ -103,20 +115,23 @@ export default function Screen() {
                 <h4 style={{ textAlign: "center" }}>
                   Iniciemos la creación de tu organigrama
                 </h4>
-                <p>
+
+                <p className={br}>
                   Para iniciar la creación de tu organigrama, te sugerimos
                   comenzar llenando la información de la sección de “Mi
                   Empresa”.
                 </p>
-                <p>
+
+                <p className={br}>
                   Si te faltara información para completar lo que te pedimos,
                   siempre vas a poder regresar dando click desde el menú
                   principal o en este icono:
                 </p>
-                <p style={{ textAlign: "center", marginTop: "0px" }}>
-                  <img alt="ico" width="75" className="" src={Empresa} />
+
+                <p className={br} style={{ textAlign: "center" }}>
+                  <img alt="ico" width={visible} src={Empresa} />
                 </p>
-                <div style={{ textAlign: "center", marginTop: "0px" }}>
+                <div className={br} style={{ textAlign: "center" }}>
                   <Link to="/miempresa">
                     <Button
                       style={{ width: "176px", height: "32px" }}
@@ -133,14 +148,38 @@ export default function Screen() {
         <div className="arrows">
           <Link
             to="#"
-            onClick={() => carusel.slidePrev()}
+            onClick={() => {
+              if (count !== 0) {
+                setCount(count - 1);
+                carusel.slidePrev();
+              }
+            }}
             className="arrowLeft"
           >
             <LeftOutlined />
           </Link>
           <Link
             to="#"
-            onClick={() => carusel.slideNext()}
+            onClick={() => {
+              if (count < 3) {
+                setCount(count + 1);
+                carusel.slideNext();
+                if (count === 2) {
+                  setVisible(100);
+                  setBr("margin30");
+                  document.getElementsByClassName("rec");
+                  let pagination =
+                    document.getElementsByClassName("rec-pagination");
+                  pagination[0].setAttribute("style", "display: none");
+                  document
+                    .getElementsByClassName("arrows")[0]
+                    .setAttribute("style", "display: none");
+                  document
+                    .getElementsByClassName("link")[0]
+                    .setAttribute("style", "display: none");
+                }
+              }
+            }}
             className="arrowRigth"
           >
             <RightOutlined />
@@ -171,7 +210,7 @@ export default function Screen() {
           Continuar
         </Button>
         <Link to="/organigrama">
-          <Button className="primary">Omitir</Button>
+          <Button className="primary btn">Omitir</Button>
         </Link>
       </Card>
     </div>
