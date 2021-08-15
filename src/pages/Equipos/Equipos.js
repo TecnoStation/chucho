@@ -163,7 +163,7 @@ export default function Equipos() {
           </Menu.Item>
         </Menu>
       );
-
+  
     return (
         <>  
              <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} >

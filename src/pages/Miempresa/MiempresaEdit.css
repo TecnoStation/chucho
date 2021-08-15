@@ -1,0 +1,416 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.square {
+  width: 100%;
+  height: 80vh;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.screen {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: justify;
+  z-index: 9999;
+}
+
+.primary {
+  background: #2cccd3 !important;
+  color: #ffffff !important;
+  border: 1px solid #2cccd3 !important;
+  border-radius: 5px !important;
+  height: 32px;
+  width: auto;
+}
+
+.primaryB {
+  width: 150px;
+  background: #2cccd3 !important;
+  color: #ffffff !important;
+  border: 1px solid #2cccd3 !important;
+  border-radius: 5px !important;
+  height: 32px;
+  font-weight: bold;
+}
+
+.secondary {
+  border-radius: 5px;
+}
+
+.link {
+  color: #579bfc !important;
+}
+
+.linkBold {
+  color: #579bfc !important;
+  font-weight: bold;
+}
+
+.tab {
+  width: 100%;
+  height: auto;
+}
+
+.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab,
+.ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab {
+  background: #2cccd3;
+  color: #ffffff;
+  border-radius: 10px 10px 0px 0px !important;
+  height: 35px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ant-tabs-tab-active {
+  background: #ffffff !important;
+  color: #2cccd3 !important;
+}
+
+.tabPane {
+  background: #ffffff;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: -20px;
+  padding: 0px 20px 0px 30px;
+}
+
+.card {
+  border-radius: 10px;
+  width: 400px;
+  height: 400px;
+}
+
+.cardDefault {
+  border-radius: 10px;
+  width: 500px;
+  height: auto;
+  text-align: center;
+}
+
+.cardDefault p {
+  text-align: justify;
+}
+
+.secondary {
+  border-radius: 5px;
+}
+
+.points {
+  background: #ffffff !important;
+  color: #000 !important;
+  border: 0px solid #000 !important;
+  margin-left: -10px;
+  margin-top: -20px;
+}
+
+.third {
+  width: 180px;
+  color: #579bfc;
+  border: 1px solid #579bfc;
+  font-weight: bold;
+}
+
+.iconGreen {
+  color: #2cccd3;
+}
+
+.iconGreenTwo {
+  color: #66bb6a;
+}
+
+.iconGray {
+  color: #5e6d88;
+}
+
+.iconRed {
+  color: #d32c2c;
+}
+
+.iconSureGray {
+  color: #aab4c8 !important;
+}
+
+.iconBlue {
+  color: #579bfc !important;
+}
+
+.btnBlue {
+  background: #579bfc;
+  color: #ffffff;
+}
+
+.iconAjust {
+  margin-right: 20px;
+  margin-top: -5px;
+  font-size: 30px;
+  position: absolute;
+  left: 10px;
+}
+
+.iconAjust2 {
+  margin-right: 20px;
+  margin-top: px;
+  font-size: 20px;
+  position: absolute;
+  left: 10px;
+}
+
+.textAjust {
+  float: right;
+}
+
+.textAjust2 {
+  float: right;
+  margin-right: 20px !important;
+}
+
+.textAjust3 {
+  float: right;
+  margin-right: 0px !important;
+}
+
+.textAjust4 {
+  float: right;
+  margin-right: 5px !important;
+  font-weight: bold;
+}
+
+.textAjust5 {
+  float: right;
+  margin-right: 90px !important;
+}
+
+.select {
+  width: 100% !important;
+  margin-top: 15px;
+}
+
+.formLogin2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: justify;
+}
+
+.smallModal {
+  width: 330px !important;
+}
+
+.smallModal2 {
+  width: 330px !important;
+}
+
+.smallModal2 .ant-modal-body {
+  height: 80px !important;
+}
+
+.largeModal {
+  width: 700px !important;
+}
+
+.dividerLeft {
+  border-left: 1px solid #e2e6ec;
+}
+
+.divider {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dividerBottom {
+  border-bottom: 1px solid #e2e6ec;
+  width: 90%;
+}
+
+.dividerBottomFull {
+  border-bottom: 1px solid #e2e6ec;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.showBlock {
+  display: block;
+}
+
+.showInline {
+  display: inline-block;
+}
+
+.roundBtn {
+  border-radius: 10px !important;
+}
+
+.roundBtnFull {
+  border-radius: 50% !important;
+}
+
+.primaryInvert {
+  color: #2cccd3 !important;
+  background: #ffffff !important;
+  border: 1px solid #2cccd3 !important;
+}
+
+.info {
+  width: 100%;
+  text-align: center !important;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.formWork {
+  text-align: left;
+}
+
+.selectForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dividerLeft {
+  border-left: 1px solid #e2e6ec;
+}
+
+.divider {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dividerBottom {
+  border-bottom: 1px solid #e2e6ec;
+  width: 90%;
+}
+
+.dividerBottomFull {
+  border-bottom: 1px solid #e2e6ec;
+  width: 100%;
+}
+
+.sucursales span {
+  font-size: 0.8vw;
+}
+
+.nombresSucursal {
+  font-weight: bold !important;
+}
+
+.direccionSucursal {
+  text-align: justify;
+  color: #579bfc !important;
+}
+
+.rowSucursal {
+  margin-top: 20px;
+}
+
+.tagList {
+  width: 100%;
+}
+
+.tag {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  height: 25px;
+}
+
+.tag .plusOutlined {
+  color: #2cccd3;
+  float: right;
+  margin-top: 4px;
+  margin-right: 5px;
+  font-size: 13px;
+}
+
+.tag .CheckCircleFilled {
+  color: #2cccd3;
+  float: right;
+  margin-top: 4px;
+  margin-right: 5px;
+  font-size: 17px;
+}
+
+.tag:hover {
+  border-color: #2cccd3;
+  color: #006271;
+  font-weight: bold;
+}
+
+.tag-active {
+  background: #dbfcff;
+  border: 0px solid #000;
+  color: #006271;
+  font-weight: bold;
+}
+
+.tag-cefective {
+  border: 1px solid #2cccd3;
+  background: #ffffff;
+  text-align: center;
+  width: 60px;
+  height: 30px;
+}
+/*# sourceMappingURL=MiempresaEdit.css.map */
