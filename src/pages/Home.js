@@ -26,7 +26,7 @@ import AreasypuestosMasivaGeneral from "./Areasypuestos/AreasypuestosMasivaGener
 import Detalleerror from "./Areasypuestos/Detalleerror";
 import Detalleexito from "./Areasypuestos/Detalleexito";
 import Nofound from "./Nofound";
-import Messages from "./Messages";
+import Messages from "../pages/Messages/Messages";
 import Equipos from "./Equipos/Equipos";
 import Equiposv from "./Equipos/Equiposv";
 import Equipoinicio from "./Equipos/Equipoinicio";
