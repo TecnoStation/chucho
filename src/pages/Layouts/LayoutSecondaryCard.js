@@ -62,7 +62,9 @@ export default function LayoutSecondaryCard({
                         textAlign: "center",
                       }}
                     >
-                      <MaterialIcon icon="notifications" />
+                      <Link to="/mensajes">
+                        <MaterialIcon icon="notifications" />
+                      </Link>
                     </Col>
                   </Row>
                 </Header>

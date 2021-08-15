@@ -57,7 +57,7 @@ code {
   align-items: center;
   justify-content: center;
   text-align: justify;
-  z-index: 9999;
+  z-index: 99999999;
 }
 
 .primary {
@@ -260,11 +260,19 @@ code {
 }
 
 .smallModal {
-  width: 330px !important;
+  .ant-modal-body {
+    width: 110% !important;
+    text-align: left;
+    // margin-left: -50px;
+    // padding-left: 75px;
+  }
 }
 
 .smallModal2 {
-  width: 330px !important;
+  .ant-modal-content {
+    width: 330px !important;
+    text-align: left;
+  }
 
   .ant-modal-body {
     height: 80px !important;
@@ -272,7 +280,24 @@ code {
 }
 
 .largeModal {
-  width: 700px !important;
+  .ant-modal-content {
+    width: 750px !important;
+    text-align: left;
+  }
+}
+
+.middleModal {
+  .ant-modal-content {
+    width: 500px !important;
+    text-align: left !important;
+  }
+}
+
+.modalCuztom {
+  .ant-modal-content {
+    width: 400px !important;
+    text-align: left !important;
+  }
 }
 
 .dividerLeft {

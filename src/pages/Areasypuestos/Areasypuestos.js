@@ -805,6 +805,7 @@ export default function Areasypuestos() {
       </Modal>
 
       <Modal
+        className="middleModal"
         title="Descarga el archivo"
         visible={modalDownload}
         onCancel={closeModalDownload}
@@ -821,7 +822,7 @@ export default function Areasypuestos() {
             type="button"
             className="primary"
             onClick={ready}
-            value="Descarga"
+            value="Descargar"
           />,
         ]}
       >

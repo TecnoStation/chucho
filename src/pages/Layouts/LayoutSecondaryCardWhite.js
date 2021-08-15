@@ -120,7 +120,9 @@ export default function LayoutSecondaryCardWhite({
                       span={1}
                       style={{ marginTop: "5px", textAlign: "left" }}
                     >
-                      <MaterialIcon icon="notifications" />
+                      <Link to="/mensajes">
+                        <MaterialIcon icon="notifications" />
+                      </Link>
                     </Col>
                   </Row>
                 </Header>
