@@ -136,9 +136,9 @@ export default function CreateTeam(props) {
                             </Col>
                         </Row>
                     
-                        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} id="frame" style={{display: "none"}}  >
-                            <Col className="gutter-row" span={12}></Col>
-                            <Col className="gutter-row" span={12}>
+                        <Row id="frame" style={{display: "none" }}  >
+                            <Col span={12}></Col>
+                            <Col style={{ paddingLeft: "20px" }} span={12}>
                                 <Form.Item name="frame" label="Marco de trabajo" tooltip={info}>
                                     <Select placeholder="Selecciona una opción" >
                                         <Option value="jack">SCRUM</Option>
