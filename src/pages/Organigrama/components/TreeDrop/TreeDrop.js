@@ -113,7 +113,15 @@ export default function TreeDrop() {
           <Link
             to="#"
             onClick={() => {
-              setPassword(true);
+              setPassword({
+                visible: true,
+                titleModal: "Dar de baja a colaborador",
+                messageModal:
+                  "Al dar de baja a un colaborador de tu organización ya no se verá reflejada en tu organigrama.",
+                messageWarning:
+                  "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
+                question: "¿Seguro deseas eliminarlo?",
+              });
             }}
           >
             Dar de baja colaborador
@@ -122,7 +130,21 @@ export default function TreeDrop() {
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="#">Eliminar puesto</Link>
+          <Link
+            to="#"
+            onClick={() => {
+              setPassword({
+                visible: true,
+                titleModal: "Eliminar puesto",
+                messageModal:
+                  "Al eliminar un puesto de tu organización ya no se verá reflejada en tu organigrama.",
+                messageWarning: "Estás a punto de eliminar el puesto",
+                question: "¿Seguro deseas eliminarlo?",
+              });
+            }}
+          >
+            Eliminar puesto
+          </Link>
         </Menu.Item>
       </Menu.Item>
     </Menu>

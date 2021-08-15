@@ -70,7 +70,9 @@ export default function LayoutSecondary({
                         textAlign: "center",
                       }}
                     >
-                      <MaterialIcon icon="notifications" />
+                      <Link to="/mensajes">
+                        <MaterialIcon icon="notifications" />
+                      </Link>
                     </Col>
                   </Row>
                 </Header>

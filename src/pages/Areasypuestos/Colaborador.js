@@ -17,13 +17,11 @@ import Avatar from "../../assets/img/avatar.png";
 import Bien from "../../assets/img/iconos/bien_hecho.svg";
 import Screendefault from "../../components/Screens/Screendefault";
 import { PlusCircleOutlined } from "@ant-design/icons";
+import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 const { Option } = Select;
 
 export default function Colaborador() {
-  const [modalPassword, setModalPassword] = useState(false);
-  const closeModalPassword = () => {
-    setModalPassword(false);
-  };
+  const [Password, setPassword] = useState(false);
 
   const [Documets, setDocumets] = useState(false);
   const closeModalDocuments = () => {
@@ -85,10 +83,17 @@ export default function Colaborador() {
       <Menu.Item key="0">
         <Menu.Item key="3">
           <Link
-            onClick={() => {
-              setModalPassword(true);
-            }}
             to="#"
+            onClick={() => {
+              setPassword({
+                visible: true,
+                titleModal: "Eliminar Colaborador",
+                messageModal:
+                  "Al eliminar un colaborador de tu organización ya no formará parte de tu organizacion.",
+                messageWarning: "Estás a punto de eliminar al colaborador",
+                question: "¿Seguro deseas eliminarlo?",
+              });
+            }}
           >
             Eliminar Colaborador
           </Link>
@@ -459,40 +464,7 @@ export default function Colaborador() {
           </Row>
         </Form>
       </Modal>
-      <Modal
-        title="Dar de baja colaboradores"
-        visible={modalPassword}
-        onCancel={closeModalPassword}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalPassword}
-          >
-            Cancelar
-          </Button>,
-          <Link to="/areasypuestos?tab=2">
-            <Button
-              style={{ marginRight: "15px" }}
-              className="primary"
-              onClick={closeModalPassword}
-            >
-              Aceptar
-            </Button>
-          </Link>,
-        ]}
-      >
-        <p>
-          Al de baja un colaborador, este ya no formará parte de tu
-          organización.
-        </p>
-        <br />
-        <Form layout="vertical">
-          <Form.Item name="password" label="Ingresa tu contraseña de usuario">
-            <Input type="text" id="nombre" placeholder="Ej. Ghkcclsd23" />
-          </Form.Item>
-        </Form>
-      </Modal>
+      <ModalPassword Password={Password} setPassword={setPassword} />
     </Form>
   );
 }
