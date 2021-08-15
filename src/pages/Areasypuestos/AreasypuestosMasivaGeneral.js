@@ -32,7 +32,7 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "10px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
                 En este apartado vas a poder realizar la carga masiva de
@@ -41,7 +41,7 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "10px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
                 Para facilitar la carga de datos, proponemos subir la
@@ -56,13 +56,13 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "20px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p className="linkBold">Descargar plantilla de Estructura</p>
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "20px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
                 La segunda parte está pensada para que puedas subir toda la{" "}
@@ -75,7 +75,7 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "20px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p className="linkBold">
                 Descargar plantilla de Información de Puestos
@@ -83,7 +83,7 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "20px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
                 Finalmente tenemos una tercera parte, donde vas a poder subir{" "}
@@ -93,7 +93,7 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "20px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p className="linkBold">
                 Descargar plantilla de Información de Colaboradores
@@ -102,7 +102,7 @@ export default function AreasypuestosMasivaGeneral() {
           </Row>
         </Col>
         <Col className="gutter-row dividerLeft" span={12}>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "20px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
                 <b>
@@ -113,7 +113,7 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "10px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <span>- Cada columna tiene un encabezado.</span>
               <br />
@@ -127,13 +127,13 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "10px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>Adjunta tu archivo y ¡listo!</p>
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "10px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
                 <b>Subir archivo de estructura:</b>
@@ -141,7 +141,7 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "10px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <Link to="#" onClick={openModalUpload}>
                 {" "}
@@ -152,7 +152,7 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "10px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
                 <b>Subir archivo de información de puestos:</b>
@@ -160,7 +160,7 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "10px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <Link to="#" onClick={openModalUpload}>
                 {" "}
@@ -171,7 +171,7 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "10px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
                 <b>Subir archivo de información de colaboradores:</b>
@@ -179,7 +179,7 @@ export default function AreasypuestosMasivaGeneral() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row style={{paddingBottom: "10px"}} gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <Link to="#" onClick={openModalUpload}>
                 {" "}
