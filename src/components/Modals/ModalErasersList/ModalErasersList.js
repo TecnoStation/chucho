@@ -1,8 +1,11 @@
 import { Button, Col, Modal, Row } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import ModalMessage from "../ModalMessage/ModalMessage";
+import Warning from "../../../assets/img/iconos/atencion.svg";
 
-export default function ModalErasers({ historial, setHistorial }) {
+function ModalErasersList({ historial, setHistorial }) {
+  const [screen, setScreen] = useState("screen");
   return (
     <>
       <Modal
@@ -61,22 +64,34 @@ export default function ModalErasers({ historial, setHistorial }) {
           <Col span={6}>Área MKT</Col>
           <Col span={8}>10 MAY 2016</Col>
           <Col span={2}>
-            <Link className="iconBlue" to="#">
+            <Link className="iconBlue" to="/eraser">
               Ver
             </Link>
           </Col>
           <Col className="dividerLeft" span={2}>
-            <Link className="iconBlue" to="#">
+            <Link className="iconBlue" to="/eraser">
               Editar
             </Link>
           </Col>
           <Col className="dividerLeft" span={3}>
-            <Link className="iconBlue" to="#">
+            <Link
+              className="iconBlue"
+              onClick={() => {
+                setScreen("screen show");
+              }}
+              to="#"
+            >
               Eliminar
             </Link>
           </Col>
           <Col className="dividerLeft" span={3}>
-            <Link className="iconBlue" to="#">
+            <Link
+              className="iconBlue"
+              to="#"
+              onClick={() => {
+                setHistorial(false);
+              }}
+            >
               Aplicar
             </Link>
           </Col>
@@ -93,12 +108,12 @@ export default function ModalErasers({ historial, setHistorial }) {
           <Col span={6}>Área de TI A</Col>
           <Col span={8}>12 MAY 2016</Col>
           <Col span={2}>
-            <Link className="iconBlue" to="#">
+            <Link className="iconBlue" to="/eraser">
               Ver
             </Link>
           </Col>
           <Col className="dividerLeft" span={2}>
-            <Link className="iconBlue" to="#">
+            <Link className="iconBlue" to="/eraser">
               Editar
             </Link>
           </Col>
@@ -108,7 +123,13 @@ export default function ModalErasers({ historial, setHistorial }) {
             </Link>
           </Col>
           <Col className="dividerLeft" span={3}>
-            <Link className="iconBlue" to="#">
+            <Link
+              className="iconBlue"
+              to="#"
+              onClick={() => {
+                setHistorial(false);
+              }}
+            >
               Aplicar
             </Link>
           </Col>
@@ -124,12 +145,12 @@ export default function ModalErasers({ historial, setHistorial }) {
           <Col span={6}>Sucursal CUH</Col>
           <Col span={8}>12 MAY 2016</Col>
           <Col span={2}>
-            <Link className="iconBlue" to="#">
+            <Link className="iconBlue" to="/eraser">
               Ver
             </Link>
           </Col>
           <Col className="dividerLeft" span={2}>
-            <Link className="iconBlue" to="#">
+            <Link className="iconBlue" to="/eraser">
               Editar
             </Link>
           </Col>
@@ -139,12 +160,59 @@ export default function ModalErasers({ historial, setHistorial }) {
             </Link>
           </Col>
           <Col className="dividerLeft" span={3}>
-            <Link className="iconBlue" to="#">
+            <Link
+              className="iconBlue"
+              to="#"
+              onClick={() => {
+                setHistorial(false);
+              }}
+            >
               Aplicar
             </Link>
           </Col>
         </Row>
       </Modal>
+      <ModalMessage screen={screen}>
+        <Row>
+          <Col span={24}>
+            <p style={{ textAlign: "center" }}>
+              <img alt="ico" className="" src={Warning} />
+            </p>
+          </Col>
+          <Col span={24}>
+            <h3>¡Atención!</h3>
+          </Col>
+          <Col span={24}>
+            <h3>Estás a punto de eliminar el borrador.</h3>
+          </Col>
+          <Col span={24}>
+            <h3>¿Seguro deseas eliminarlo?</h3>
+            <br />
+          </Col>
+          <Col span={24}>
+            <Button
+              style={{ marginRight: "15px" }}
+              onClick={() => {
+                setScreen("screen");
+              }}
+              className="secondary btn"
+            >
+              Cancelar
+            </Button>
+            <Button
+              className="primary btn"
+              onClick={() => {
+                setScreen("screen");
+                setHistorial(false);
+              }}
+            >
+              Eliminar
+            </Button>
+          </Col>
+        </Row>
+      </ModalMessage>
     </>
   );
 }
+
+export default ModalErasersList;

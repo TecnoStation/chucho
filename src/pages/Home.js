@@ -10,6 +10,7 @@ import RecoveryPassword from "./Login/RecoveryPassword";
 import Organigramainicio from "./Organigrama/Organigramainicio";
 import Organigrama from "./Organigrama/Organigrama";
 import Organigram from "./Organigrama/Organigram";
+import Eraser from "./Organigrama/Eraser";
 import Login from "./Login/Login";
 import Miempresa from "./Miempresa/Miempresa";
 import MiempresaEdit from "./Miempresa/MiempresaEdit";
@@ -56,6 +57,12 @@ export default function Home() {
           path="/organigrama"
           title="Organigrama"
           component={Organigrama}
+        />
+        <LayoutSecondaryCardGlass
+          exact
+          path="/eraser"
+          title="Organigrama"
+          component={Eraser}
         />
         <LayoutSecondaryCardWhite
           exact

@@ -44,7 +44,7 @@ export default function CardNode({ setModalPassword }) {
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="#">Editar estructura</Link>
+          <Link to="/eraser">Editar estructura</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>

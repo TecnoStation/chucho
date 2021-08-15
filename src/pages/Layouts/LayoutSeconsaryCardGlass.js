@@ -1,5 +1,5 @@
-import React from "react";
-import { Col, Row, Menu, Dropdown, Avatar, Input } from "antd";
+import React, { useState } from "react";
+import { Col, Row, Menu, Dropdown, Avatar, Input, Button } from "antd";
 import {
   CaretDownOutlined,
   SearchOutlined,
@@ -12,6 +12,7 @@ import { MdDeviceHub } from "react-icons/md";
 
 import { Layout } from "antd";
 import "./LayoutSecondary.scss";
+import { IoIosArrowForward } from "react-icons/io";
 
 //const user = null;
 const user = { id: 1, username: "Lupita Gamiño" };
@@ -31,6 +32,9 @@ export default function LayoutSecondaryCardGlass({
       <Menu.Item key="2">Cerrar sesión</Menu.Item>
     </Menu>
   );
+
+  const [eraser, setEraser] = useState("show");
+  const [save, setSave] = useState(false);
 
   return (
     <Route {...rest}>
@@ -126,10 +130,73 @@ export default function LayoutSecondaryCardGlass({
                       <MaterialIcon icon="notifications" />
                     </Col>
                   </Row>
+                  <Row
+                    className={eraser}
+                    style={{
+                      background: "#E2E6EC",
+                      position: "absolute",
+                      width: "100%",
+                      left: "0",
+                      top: "0",
+                    }}
+                  >
+                    <Col span={1}></Col>
+                    <Col span={1}>
+                      <span>Borradores</span>
+                    </Col>
+                    <Col
+                      style={{
+                        textAlign: "left",
+                        marginLeft: "20px",
+                        marginTop: "2px",
+                      }}
+                      span={1}
+                    >
+                      <span style={{ position: "absolute" }}>
+                        <IoIosArrowForward
+                          style={{
+                            fontSize: "14px",
+                          }}
+                        />
+                      </span>
+                    </Col>
+                    <Col style={{ marginLeft: "-35px" }} span={4}>
+                      <span>Dirección de marketing</span>
+                    </Col>
+                    <Col style={{ textAlign: "right" }} span={4}>
+                      <Link to="./organigrama">
+                        <Button
+                          className="thirdBtnTwo"
+                          style={{
+                            background: "rgba(0,0,0,0)",
+                            width: "136px",
+                          }}
+                          size="small"
+                        >
+                          Aplicar cambios
+                        </Button>
+                      </Link>
+                    </Col>
+                    <Col style={{ marginLeft: "16px" }} span={10}>
+                      <Button
+                        className="btnBlue thirdBtn"
+                        onClick={() => {
+                          setSave(true);
+                        }}
+                        size="small"
+                      >
+                        Guardar como borrador
+                      </Button>
+                    </Col>
+                  </Row>
                 </Header>
                 <Content>
                   <div className="cardlayoutGlassFull">
-                    <Component />
+                    <Component
+                      setEraser={setEraser}
+                      save={save}
+                      setSave={setSave}
+                    />
                   </div>
                 </Content>
               </Col>

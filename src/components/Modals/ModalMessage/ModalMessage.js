@@ -1,10 +1,9 @@
 import React from "react";
 import { Card } from "antd";
-import "./Screen.scss";
 
-export default function Screendefault({ children }) {
+function ModalMessage({ screen, children }) {
   return (
-    <div className="screen" id="screen">
+    <div className={screen}>
       <Card
         title=""
         className="cardDefault"
@@ -15,3 +14,5 @@ export default function Screendefault({ children }) {
     </div>
   );
 }
+
+export default ModalMessage;

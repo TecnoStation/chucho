@@ -1,4 +1,4 @@
-import { Button, Col, Menu, Row, Tooltip } from "antd";
+import { Button, Col, Row, Tooltip } from "antd";
 import React, { useState } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import TreeOffice from "../TreeOffice/TreeOffice";
@@ -10,14 +10,9 @@ import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 
 import "./Zoom.scss";
-import ModalErasers from "../../../../components/Modals/ModalErasers/ModalErasers";
+import ModalErasersList from "../../../../components/Modals/ModalErasersList/ModalErasersList";
 
-export default function Zoom({
-  setColor,
-  setHistorialP,
-  setHistorialC,
-  setModalPassword,
-}) {
+export default function Zoom() {
   const menu = (
     <>
       <div className="menuToltip">
@@ -156,17 +151,12 @@ export default function Zoom({
               </Row>
             </div>
             <TransformComponent>
-              <TreeOffice
-                setColor={setColor}
-                setHistorialP={setHistorialP}
-                setHistorialC={setHistorialC}
-                setModalPassword={setModalPassword}
-              />
+              <TreeOffice />
             </TransformComponent>
           </React.Fragment>
         )}
       </TransformWrapper>
-      <ModalErasers historial={historial} setHistorial={setHistorial} />
+      <ModalErasersList historial={historial} setHistorial={setHistorial} />
     </>
   );
 }
