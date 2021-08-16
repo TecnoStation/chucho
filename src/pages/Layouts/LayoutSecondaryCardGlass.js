@@ -96,11 +96,11 @@ export default function LayoutSecondaryCardGlass({
                     >
                       <MaterialIcon icon="filter_alt" />
                     </Col>
-                    <Col span={5}></Col>
-                    <Col span={3} style={{ textAlign: "center" }}>
+                    <Col span={6}></Col>
+                    <Col span={2} style={{ textAlign: "center" }}>
                       <Dropdown overlay={menu} trigger={["click"]}>
                         <Link
-                          to=""
+                          to="#"
                           className="iconGray"
                           onClick={(e) => e.preventDefault()}
                         >
@@ -108,7 +108,13 @@ export default function LayoutSecondaryCardGlass({
                         </Link>
                       </Dropdown>
                     </Col>
-                    <Col span={4}>
+                    <Col
+                      style={{
+                        textAlign: "right",
+                        paddingRight: "10px",
+                      }}
+                      span={4}
+                    >
                       <Dropdown overlay={menu} trigger={["click"]}>
                         <Link
                           to=""
@@ -122,10 +128,7 @@ export default function LayoutSecondaryCardGlass({
                     </Col>
                     <Col
                       span={1}
-                      style={{
-                        marginTop: "5px",
-                        textAlign: "center",
-                      }}
+                      style={{ marginTop: "5px", textAlign: "left" }}
                     >
                       <Link to="/mensajes">
                         <MaterialIcon icon="notifications" />

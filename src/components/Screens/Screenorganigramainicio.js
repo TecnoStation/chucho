@@ -19,6 +19,7 @@ export default function Screen() {
     "",
   ];
 
+  const [link, setLink] = useState("link");
   const [count, setCount] = useState(0);
   const [visible, setVisible] = useState(75);
   const [br, setBr] = useState("");
@@ -171,6 +172,7 @@ export default function Screen() {
                   document
                     .getElementsByClassName("link")[0]
                     .setAttribute("style", "display: none");
+                  setLink("hide");
                 }
               }
             }}
@@ -181,7 +183,7 @@ export default function Screen() {
         </div>
         <div style={{ textAlign: "center", marginTop: "5px" }}>
           <p>
-            <Link className="link" onClick={showWarning} to="#">
+            <Link className={link} onClick={showWarning} to="#">
               Omitir
             </Link>
           </p>
