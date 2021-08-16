@@ -607,7 +607,7 @@ export default function Areasypuestos() {
               >
                 <Input placeholder="Ej. Agrega nombre de puesto" />
               </Col>
-              <Col span={2} style={{ textAlign: "left", marginRight: "20px" }}>
+              <Col span={2} style={{ textAlign: "left", marginRight: "16px" }}>
                 <Button onClick={cancelJob} className="secondary">
                   Cancelar
                 </Button>
