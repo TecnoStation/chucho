@@ -5,7 +5,7 @@ import LayoutSecondary from "./Layouts/LayoutSecondary";
 import LayoutSecondaryCard from "./Layouts/LayoutSecondaryCard";
 import LayoutSecondaryCardBack from "./Layouts/LayoutSecondaryCardBack";
 import LayoutSecondaryCardBackSmall from "./Layouts/LayoutSecondaryCardBackSmall";
-import LayoutSecondaryCardGlass from "./Layouts/LayoutSeconsaryCardGlass";
+import LayoutSecondaryCardGlass from "./Layouts/LayoutSecondaryCardGlass";
 import LayoutSecondaryCardWhite from "./Layouts/LayoutSecondaryCardWhite";
 import LayoutSecondaryCardBackGlass from "./Layouts/LayoutSecondaryCardBackGlass";
 import RecoveryPassword from "./Login/RecoveryPassword";
@@ -31,8 +31,6 @@ import Equipos from "./Equipos/Equipos";
 import Equiposv from "./Equipos/Equiposv";
 import Equipoinicio from "./Equipos/Equipoinicio";
 import Colaborador from "./Areasypuestos/Colaborador";
-
-
 
 export default function Home() {
   return (
@@ -110,7 +108,7 @@ export default function Home() {
           title="Áreas y puestos"
           component={AreasypuestosMasivaGeneral}
         />
-         <LayoutSecondaryCardBackGlass
+        <LayoutSecondaryCardBackGlass
           exact
           path="/mensajes"
           title="Bandeja de entrada"

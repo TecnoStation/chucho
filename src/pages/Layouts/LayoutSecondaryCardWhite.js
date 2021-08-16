@@ -92,8 +92,8 @@ export default function LayoutSecondaryCardWhite({
                     >
                       <MaterialIcon icon="filter_alt" />
                     </Col>
-                    <Col span={5}></Col>
-                    <Col span={4} style={{ textAlign: "center" }}>
+                    <Col span={6}></Col>
+                    <Col span={2} style={{ textAlign: "center" }}>
                       <Dropdown overlay={menu} trigger={["click"]}>
                         <Link
                           to="#"
@@ -104,7 +104,13 @@ export default function LayoutSecondaryCardWhite({
                         </Link>
                       </Dropdown>
                     </Col>
-                    <Col span={3}>
+                    <Col
+                      style={{
+                        textAlign: "right",
+                        paddingRight: "10px",
+                      }}
+                      span={4}
+                    >
                       <Dropdown overlay={menu} trigger={["click"]}>
                         <Link
                           to=""
