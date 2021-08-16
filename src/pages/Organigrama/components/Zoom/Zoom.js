@@ -119,12 +119,16 @@ export default function Zoom() {
                   >
                     <Button
                       className="secondary iconGray roundBtn"
-                      icon={<IoReloadSharp />}
+                      style={{ width: "40px" }}
                       size="large"
                       onClick={() => {
                         setHistorial(true);
                       }}
-                    />
+                    >
+                      <span style={{ marginLeft: "-8px" }}>
+                        <MaterialIcon icon="rotate_left" />
+                      </span>
+                    </Button>
                   </Tooltip>
                 </Col>
               </Row>

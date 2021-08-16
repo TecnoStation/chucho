@@ -28,15 +28,9 @@ export default function Screen() {
     <div className="screen" id="screen">
       <Card
         title={title}
-        className="card"
+        className="cardCarrousel"
         id="cardOrganigrama"
         headStyle={{ textAlign: "center" }}
-        style={{
-          width: "500px",
-          height: "420px",
-          fontSize: "16px",
-          fontWeight: "bold",
-        }}
       >
         <div>
           <Carousel ref={(ref) => (carusel = ref)}>

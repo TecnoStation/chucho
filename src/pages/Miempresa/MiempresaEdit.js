@@ -45,7 +45,6 @@ export default function MiempresaEdit() {
   };
 
   const [modalCrop, setModalCrop] = useState(false);
-  //const openModalCrop = () => {setModalCrop(true);}
   const closeModalCrop = () => {
     setModalCrop(false);
   };
@@ -68,8 +67,6 @@ export default function MiempresaEdit() {
 
   const [Item, setItem] = useState(false);
 
-  //------  funciones Modalcompetencias --------------
-
   const [Competencia, setCompetencia] = useState(false);
   const sendComp = () => {
     alert("ok");
@@ -90,8 +87,6 @@ export default function MiempresaEdit() {
     let screen = document.getElementById("screen");
     screen.setAttribute("style", "display: flex;");
   };
-
-  //--------------------------------------------------
 
   const [editDataV, seteditDataV] = useState("button");
   const [deleteDataV, setdeleteDataV] = useState("hidden");
@@ -197,12 +192,6 @@ export default function MiempresaEdit() {
 
   const tabs = ["1", "2"];
   const [Active, setActive] = useState(tabs[0]);
-
-  const saveInfo = () => {
-    let screen = document.getElementById("screen");
-    screen.setAttribute("style", "display: flex;");
-    setActive(tabs[1]);
-  };
 
   const closeInfo = () => {
     if (action !== 0) {
@@ -360,7 +349,8 @@ export default function MiempresaEdit() {
                   <Col className="gutter-row" span={12}>
                     <Link to="#" onClick={openModal}>
                       {" "}
-                      <PlusCircleOutlined /> Agregar sucursal
+                      <PlusCircleOutlined className="iconGreen" /> Agregar
+                      sucursal
                     </Link>
                   </Col>
                 </Row>

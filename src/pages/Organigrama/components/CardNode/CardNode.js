@@ -217,7 +217,7 @@ export default function CardNode({ setModalPassword }) {
             <Col span={3} className="iconGreenTwo">
               <span>42%</span>
             </Col>
-            <Col span={3}>
+            <Col className="iconGray" span={3}>
               <img
                 style={{ marginTop: "-5px" }}
                 alt="ico"

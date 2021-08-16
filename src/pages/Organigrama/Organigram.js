@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import MaterialIcon from "material-icons-react";
 import { Col, Input, Row, Tooltip } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import TreeDrop from "./components/TreeDrop/TreeDrop";
 import { Link } from "react-router-dom";
+import ModalErasersList from "../../components/Modals/ModalErasersList/ModalErasersList";
 
 function Organigram() {
   const menu = (
@@ -30,6 +31,8 @@ function Organigram() {
       </div>
     </>
   );
+
+  const [historial, setHistorial] = useState(false);
 
   return (
     <>
@@ -75,7 +78,20 @@ function Organigram() {
           className="dividerLeft"
           span={15}
         >
-          <MaterialIcon icon="filter_alt" />
+          <Tooltip
+            title="Historial de cambios"
+            placement="bottom"
+            color="#2cccd3"
+          >
+            <Link
+              to="#"
+              onClick={() => {
+                setHistorial(true);
+              }}
+            >
+              <MaterialIcon icon="rotate_left" />
+            </Link>
+          </Tooltip>
         </Col>
         <Col span={5}>
           <Input addonAfter={<SearchOutlined />} placeholder="Buscar puesto" />
@@ -85,6 +101,7 @@ function Organigram() {
       <TreeDrop />
       <br />
       <TreeDrop />
+      <ModalErasersList historial={historial} setHistorial={setHistorial} />
     </>
   );
 }

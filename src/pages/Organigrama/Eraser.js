@@ -15,6 +15,7 @@ export default function Eraser({ setEraser, setSave, save }) {
       <TreeEraser />
 
       <Modal
+        className="middleModal"
         title="Guardar como borrador"
         visible={save}
         onCancel={() => {

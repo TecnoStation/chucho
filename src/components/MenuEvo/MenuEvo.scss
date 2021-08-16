@@ -80,3 +80,24 @@
     color: $color-principal-text;
   }
 }
+
+.brive {
+  background: $color-base;
+  width: 21.5vw;
+  height: 40px;
+  position: absolute;
+  bottom: 120px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: right;
+  padding: 5px 10px 0px 0px;
+  z-index: 999999;
+  .allRigths {
+    width: 20vw;
+    margin-top: 30px;
+    text-align: center;
+    float: right;
+    font-size: 0.75vw;
+    margin-right: -4.2vw;
+  }
+}

@@ -16,8 +16,9 @@
 .menuToltip {
   border-bottom: 1px solid $color-white;
   padding: 5px 5px 5px 5px;
-  a {
-    color: $color-white;
+  a,
+  span {
+    color: $color-white !important;
   }
   a:hover {
     font-weight: bold;

@@ -63,7 +63,7 @@ export default function LayoutSecondaryCardBack({
                       <Dropdown overlay={menu} trigger={["click"]}>
                         <Link
                           to=""
-                          className="iconGray"
+                          className="principalColorText"
                           onClick={(e) => e.preventDefault()}
                         >
                           {user.username} <Avatar icon={<UserOutlined />} />{" "}

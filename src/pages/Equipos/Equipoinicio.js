@@ -24,7 +24,6 @@ export default function Equipoinicio() {
   const [datos, setDatos] = useState([]);
 
   useEffect(() => {
-    // fires when app component mounts to the DOM
     const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if (storageTodos) {
       setDatos(storageTodos);
@@ -32,7 +31,6 @@ export default function Equipoinicio() {
   }, []);
 
   useEffect(() => {
-    // fires when todos array gets updated
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(datos));
   }, [datos]);
 
@@ -47,11 +45,15 @@ export default function Equipoinicio() {
   return (
     <>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-        <Col className="gutter-row iconGray" span={1}>
+        <Col
+          className="gutter-row iconGray"
+          style={{ fontSize: "16px" }}
+          span={1}
+        >
           <RiFilterFill />
         </Col>
-        <Col className="gutter-row iconGray rigth" span={1}>
-          <span>
+        <Col className="gutter-row rigth" span={1}>
+          <span className="iconBlue" style={{ fontSize: "17px" }}>
             <BsFillGrid3X2GapFill />
           </span>
         </Col>
@@ -62,7 +64,7 @@ export default function Equipoinicio() {
         >
           <BsListUl
             className="dividerLeft"
-            style={{ paddingLeft: "5px", fontSize: "20px" }}
+            style={{ paddingLeft: "5px", fontSize: "22px" }}
           />
         </Col>
         <Col className="gutter-row" span={15}>

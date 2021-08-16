@@ -137,12 +137,25 @@ export default function CardNodeErase({ setModalPassword }) {
         <div>
           <p className="showBlock">Área de Marketing</p>
         </div>
+
         <div className="CardNode">
           <Row
             style={{ textAlign: "left", height: "50px", paddingBottom: "50px" }}
             className="dividerBottomFull"
           >
             <Col span={5}>
+              <div
+                style={{
+                  position: "absolute",
+                  left: "-43px",
+                  top: "25px",
+                }}
+              >
+                <Link to="#">
+                  {" "}
+                  <PlusCircleOutlined style={{ fontSize: "20px" }} />
+                </Link>
+              </div>
               <p>
                 <img
                   style={{ marginTop: "-5px" }}
@@ -160,6 +173,19 @@ export default function CardNodeErase({ setModalPassword }) {
               </span>
             </Col>
             <Col span={3}>
+              <div
+                style={{
+                  position: "absolute",
+                  right: "-45px",
+                  top: "25px",
+                }}
+              >
+                <Link to="#">
+                  {" "}
+                  <PlusCircleOutlined style={{ fontSize: "20px" }} />
+                </Link>
+              </div>
+
               <Dropdown overlay={menu} trigger={["click"]}>
                 <Link
                   to="#"

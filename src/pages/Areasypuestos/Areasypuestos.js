@@ -39,11 +39,6 @@ export default function Areasypuestos() {
   const tabs = ["1", "2"];
   const [Active, setActive] = useState(tabState);
 
-  const pasa = () => {
-    setActive(tabState);
-    history.push({ search: "?tab=2" });
-  };
-
   const changeActive = () => {
     query.set("tab", 2);
     if (Active === "1") {
@@ -309,9 +304,13 @@ export default function Areasypuestos() {
               <p>Ingresa los puestos de tus áreas.</p>
               <Row className="dividerBottom" style={{ paddingBottom: "15px" }}>
                 <Col span={14} style={{ marginLeft: "30px" }}>
-                  CEO
+                  <span>CEO</span>
                 </Col>
-                <Col span={8} className="iconGreen">
+                <Col
+                  span={8}
+                  className="iconGreen"
+                  style={{ fontSize: "18px" }}
+                >
                   <BiPlusCircle style={{ marginRight: "20px" }} />{" "}
                   <BiMinusCircle />
                 </Col>
@@ -319,9 +318,13 @@ export default function Areasypuestos() {
               <br />
               <Row className="dividerBottom" style={{ paddingBottom: "15px" }}>
                 <Col span={14} style={{ marginLeft: "30px" }}>
-                  Director de Finanzas
+                  <span>Director de Finanzas</span>
                 </Col>
-                <Col span={8} className="iconGreen">
+                <Col
+                  span={8}
+                  className="iconGreen"
+                  style={{ fontSize: "18px" }}
+                >
                   <BiPlusCircle style={{ marginRight: "20px" }} />{" "}
                   <BiMinusCircle />
                 </Col>
@@ -331,7 +334,11 @@ export default function Areasypuestos() {
                 <Col span={14} style={{ marginLeft: "30px" }}>
                   Asistente ejecutivo
                 </Col>
-                <Col span={8} className="iconGreen">
+                <Col
+                  span={8}
+                  className="iconGreen"
+                  style={{ fontSize: "18px" }}
+                >
                   <BiPlusCircle style={{ marginRight: "20px" }} />{" "}
                   <BiMinusCircle />
                 </Col>

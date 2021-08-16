@@ -173,19 +173,23 @@ export default function Equipos() {
   return (
     <>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-        <Col className="gutter-row iconGray" span={1}>
+        <Col
+          className="gutter-row iconGray"
+          style={{ fontSize: "16px" }}
+          span={1}
+        >
           <RiFilterFill />
         </Col>
-        <Col className="gutter-row iconBlue rigth" span={1}>
-          <span>
+        <Col className="gutter-row rigth" span={1}>
+          <span className="iconBlue" style={{ fontSize: "17px" }}>
             <BsFillGrid3X2GapFill />
           </span>
         </Col>
-        <Col className="gutter-row" span={3} style={{ textAlign: "left" }}>
-          <Link className="iconGray" to="/equiposv">
+        <Col className="gutter-row " span={3} style={{ textAlign: "left" }}>
+          <Link to="/equiposv">
             <BsListUl
-              className="dividerLeft"
-              style={{ paddingLeft: "5px", fontSize: "20px" }}
+              className="dividerLeft iconGray"
+              style={{ paddingLeft: "5px", fontSize: "22px" }}
             />
           </Link>
         </Col>
