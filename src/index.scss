@@ -99,6 +99,16 @@ label,
   font-weight: bold;
 }
 
+.primaryC {
+  width: 80px;
+  background: $color-base !important;
+  color: $color-white !important;
+  border: 1px solid $color-base !important;
+  border-radius: 5px !important;
+  height: 32px;
+  font-weight: bold;
+}
+
 .secondary {
   border-radius: 5px;
 }
@@ -350,6 +360,10 @@ label,
 
 .dividerLeft {
   border-left: 1px solid $color-margin;
+}
+
+.dividerLeftbold {
+  border-left: 2px solid $color-margin;
 }
 
 .divider {

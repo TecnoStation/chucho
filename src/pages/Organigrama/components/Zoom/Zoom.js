@@ -4,10 +4,9 @@ import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import TreeOffice from "../TreeOffice/TreeOffice";
 import { FiZoomIn, FiZoomOut } from "react-icons/fi";
 import { FaUsers } from "react-icons/fa";
-import { IoBusinessSharp, IoReloadSharp } from "react-icons/io5";
+import { IoBusinessSharp } from "react-icons/io5";
 import MaterialIcon from "material-icons-react";
 import { Link } from "react-router-dom";
-import { v4 as uuid } from "uuid";
 
 import "./Zoom.scss";
 import ModalErasersList from "../../../../components/Modals/ModalErasersList/ModalErasersList";
