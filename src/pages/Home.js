@@ -9,28 +9,28 @@ import LayoutSecondaryCardGlass from "./Layouts/LayoutSecondaryCardGlass";
 import LayoutSecondaryCardWhite from "./Layouts/LayoutSecondaryCardWhite";
 import LayoutSecondaryCardBackGlass from "./Layouts/LayoutSecondaryCardBackGlass";
 import RecoveryPassword from "./Login/RecoveryPassword";
-import Organigramainicio from "./Organigrama/Organigramainicio";
-import Organigrama from "./Organigrama/Organigrama";
-import Organigram from "./Organigrama/Organigram";
-import Eraser from "./Organigrama/Eraser";
+import Organigramstarted from "./Organigram/Organigramstarted";
+import Organigram from "./Organigram/Organigram";
+import OrganigramList from "./Organigram/OrganigramList";
+import Eraser from "./Organigram/Eraser";
 import Login from "./Login/Login";
-import Miempresa from "./Miempresa/Miempresa";
-import MiempresaEdit from "./Miempresa/MiempresaEdit";
-import Areasypuestos from "./Areasypuestos/Areasypuestos";
-import AreasypuestosJob from "./Areasypuestos/AreasypuestosAddJob";
-import AreasypuestosPerfil from "./Areasypuestos/Perfil";
-import AreasypuestosMasivaE from "./Areasypuestos/AreasypuestosMasivaE";
-import AreasypuestosMasivaP from "./Areasypuestos/AreasypuestosMasivaP";
-import AreasypuestosMasivaC from "./Areasypuestos/AreasypuestosMasivaC";
-import AreasypuestosMasivaGeneral from "./Areasypuestos/AreasypuestosMasivaGeneral";
-import Detalleerror from "./Areasypuestos/Detalleerror";
-import Detalleexito from "./Areasypuestos/Detalleexito";
+import Mybusiness from "./Mybusiness/Mybusiness";
+import MybusinessEdit from "./Mybusiness/MybusinessEdit";
+import AreasAndPositions from "./AreasAndPositions/AreasAndPositions";
+import AreasAndPositionsJob from "./AreasAndPositions/AreasAndPositionsAddJob";
+import AreasAndPositionsPerfil from "./AreasAndPositions/Perfil";
+import AreasAndPositionsMassiveE from "./AreasAndPositions/AreasAndPositionsMassiveE";
+import AreasAndPositionsMassiveP from "./AreasAndPositions/AreasAndPositionsMassiveP";
+import AreasAndPositionsMassiveC from "./AreasAndPositions/AreasAndPositionsMassiveC";
+import AreasAndPositionsMassiveGeneral from "./AreasAndPositions/AreasAndPositionsMassiveGeneral";
+import DetailError from "./AreasAndPositions/DetailError";
+import DetailSuccess from "./AreasAndPositions/DetailSuccess";
 import Nofound from "./Nofound";
 import Messages from "../pages/Messages/Messages";
-import Equipos from "./Equipos/Equipos";
-import Equiposv from "./Equipos/Equiposv";
-import Equipoinicio from "./Equipos/Equipoinicio";
-import Colaborador from "./Areasypuestos/Colaborador";
+import Teams from "./Teams/Teams";
+import Teamv from "./Teams/Teamv";
+import TeamStarted from "./Teams/TeamStarted";
+import Collaborator from "./AreasAndPositions/Collaborator";
 
 export default function Home() {
   return (
@@ -38,123 +38,123 @@ export default function Home() {
       <Switch>
         <LayoutSecondary
           exact
-          path="/miempresa-edit"
+          path="/organigrama/mybusiness-edit"
           title="Mi Empresa"
-          component={MiempresaEdit}
+          component={MybusinessEdit}
         />
         <LayoutSecondary
           exact
-          path="/areasypuestos"
+          path="/organigrama/areasandpositions"
           title="Áreas y puestos"
-          component={Areasypuestos}
+          component={AreasAndPositions}
         />
         <LayoutSecondary
           exact
-          path="/organigramainicio"
+          path="/organigrama/organigramstarted"
           title="Organigrama"
-          component={Organigramainicio}
+          component={Organigramstarted}
         />
         <LayoutSecondaryCardGlass
           exact
-          path="/organigrama"
+          path="/organigrama/organigram"
           title="Organigrama"
-          component={Organigrama}
+          component={Organigram}
         />
         <LayoutSecondaryCardGlass
           exact
-          path="/eraser"
+          path="/organigrama/eraser"
           title="Organigrama"
           component={Eraser}
         />
         <LayoutSecondaryCardWhite
           exact
-          path="/organigram"
+          path="/organigrama/organigramlist"
           title="Organigrama"
-          component={Organigram}
+          component={OrganigramList}
         />
         <LayoutSecondaryCard
           exact
-          path="/equipos"
+          path="/organigrama/teams"
           title="Equipos"
-          component={Equipos}
+          component={Teams}
         />
         <LayoutSecondaryCard
           exact
-          path="/equiposv"
+          path="/organigrama/teamsv"
           title="Equipos"
-          component={Equiposv}
+          component={Teamv}
         />
         <LayoutSecondaryCard
           exact
-          path="/miempresa"
+          path="/organigrama/mybusiness"
           title="Mi Empresa"
-          component={Miempresa}
+          component={Mybusiness}
         />
         <LayoutSecondaryCard
           exact
-          path="/equipoinicio"
+          path="/organigrama/teamstarted"
           title="Equipos"
-          component={Equipoinicio}
+          component={TeamStarted}
         />
         <LayoutSecondaryCard
           exact
-          path="/areasypuestos-colaborador"
+          path="/organigrama/areasandpositions-collaborator"
           title="Colaborador"
-          component={Colaborador}
+          component={Collaborator}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/areasypuestos-general"
+          path="/organigrama/areasandpositions-general"
           title="Áreas y puestos"
-          component={AreasypuestosMasivaGeneral}
+          component={AreasAndPositionsMassiveGeneral}
         />
         <LayoutSecondaryCardBackGlass
           exact
-          path="/mensajes"
+          path="/organigrama/mensajes"
           title="Bandeja de entrada"
           component={Messages}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/areasypuestos-addjob"
+          path="/organigrama/areasandpositions-addjob"
           title="Áreas y puestos"
-          component={AreasypuestosJob}
+          component={AreasAndPositionsJob}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/areasypuestos-Detalleerror"
+          path="/organigrama/areasandpositions-detailerror"
           title="Áreas y puestos"
-          component={Detalleerror}
+          component={DetailError}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/areasypuestos-Detalleexito"
+          path="/organigrama/areasandpositions-detailsuccess"
           title="Áreas y puestos"
-          component={Detalleexito}
+          component={DetailSuccess}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/areasypuestos-masivae"
+          path="/organigrama/areasandpositions-massivee"
           title="Áreas y puestos"
-          component={AreasypuestosMasivaE}
+          component={AreasAndPositionsMassiveE}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/areasypuestos-masivap"
+          path="/organigrama/areasandpositions-massivep"
           title="Áreas y puestos"
-          component={AreasypuestosMasivaP}
+          component={AreasAndPositionsMassiveP}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/areasypuestos-masivac"
+          path="/organigrama/areasandpositions-masivac"
           title="Áreas y puestos"
-          component={AreasypuestosMasivaC}
+          component={AreasAndPositionsMassiveC}
         />
         <LayoutSecondaryCardBackSmall
           exact
-          path="/areasypuestos-perfil"
+          path="/organigrama/areasandpositions-perfil"
           title="Perfil"
-          component={AreasypuestosPerfil}
+          component={AreasAndPositionsPerfil}
         />
         <LayoutPrimary
           exact

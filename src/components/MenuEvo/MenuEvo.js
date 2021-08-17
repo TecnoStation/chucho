@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import LogoSmall from "../../assets/img/Evou-E-color.png";
-import Tres from "../../assets/img/iconos/360-24px.svg";
-import Hub from "../../assets/img/iconos/device_hub-24px.svg";
-import Trending from "../../assets/img/iconos/trending_up-24px.svg";
-import Insights from "../../assets/img/iconos/insights-24px.svg";
-import Grupo from "../../assets/img/iconos/Grupo 625.svg";
+import Tres from "../../assets/img/icons/360-24px.svg";
+import Hub from "../../assets/img/icons/device_hub-24px.svg";
+import Trending from "../../assets/img/icons/trending_up-24px.svg";
+import Insights from "../../assets/img/icons/insights-24px.svg";
+import Grupo from "../../assets/img/icons/Grupo 625.svg";
 import { IoMdArrowDropright, IoMdArrowDropdown } from "react-icons/io";
 import Brive from "../../assets/img/brive/BVC-blanco-largo.svg";
 
@@ -39,7 +39,7 @@ export default function MenuEvo() {
           <hr></hr>
           <ul>
             <li>
-              <Link to="/miempresa">Mi empresa</Link>
+              <Link to="/organigrama/mybusiness">Mi empresa</Link>
             </li>
             <Link
               to="#"
@@ -82,23 +82,23 @@ export default function MenuEvo() {
                   }}
                 />
                 <ul className={visible}>
-                  <Link to="/areasypuestos?tab=1">
+                  <Link to="/organigrama/areasandpositions?tab=1">
                     <li>Crear área</li>
                   </Link>
-                  <Link to="/areasypuestos?tab=2">
+                  <Link to="/organigrama/areasandpositions?tab=2">
                     <li>Crear Puestos</li>
                   </Link>
-                  <Link to="/areasypuestos-colaborador">
+                  <Link to="/organigrama/areasandpositions-collaborator">
                     <li>Crear colaborador</li>
                   </Link>
                 </ul>
               </li>
             </Link>
 
-            <Link to="/equipoinicio">
+            <Link to="/organigrama/teamstarted">
               <li>Mis equipos</li>
             </Link>
-            <Link to="/organigrama">
+            <Link to="/organigrama/organigram">
               <li>Organigrama general</li>
             </Link>
           </ul>

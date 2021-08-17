@@ -26,7 +26,7 @@ export default function LayoutSecondary({
     <Menu>
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link to="/areasypuestos-perfil">Ver Perfil</Link>
+          <Link to="/areasandpositions-perfil">Ver Perfil</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Divider />

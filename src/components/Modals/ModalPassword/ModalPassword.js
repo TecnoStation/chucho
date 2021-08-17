@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Input, Form, Modal, Row, Col } from "antd";
-import Warning from "../../../assets/img/iconos/atencion.svg";
+import Warning from "../../../assets/img/icons/atencion.svg";
 
 import "./ModalPassword.scss";
 

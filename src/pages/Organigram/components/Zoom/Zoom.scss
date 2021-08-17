@@ -1,0 +1,27 @@
+@import "../../../../index.scss";
+
+.transform-component-module_wrapper__1_Fgj {
+  width: 100% !important;
+  height: 85vh !important;
+  overflow: hidden !important;
+  background: rgba(150, 150, 150, 0);
+}
+
+.tools {
+  position: fixed;
+  z-index: 9999;
+  right: 6vw;
+  top: 52vh;
+}
+
+.menuToltip {
+  border-bottom: 1px solid $color-white;
+  padding: 5px 5px 5px 5px;
+  a,
+  span {
+    color: $color-white !important;
+  }
+  a:hover {
+    font-weight: bold;
+  }
+}

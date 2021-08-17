@@ -1,12 +1,12 @@
 import React from "react";
 import { Col, Dropdown, Menu } from "antd";
 import { Link } from "react-router-dom";
-import More from "../../assets/img/iconos/more_vert-24px.svg";
+import More from "../../assets/img/icons/more_vert-24px.svg";
 
 import "./Simplecard.scss";
 
 export default function Simplecard(props) {
-  const { equipos } = props;
+  const { teams } = props;
 
   const menu = (
     <Menu>
@@ -40,9 +40,7 @@ export default function Simplecard(props) {
     </Menu>
   );
 
-  //console.log(equipos)
-
-  return equipos.map((data, index) => (
+  return teams.map((data, index) => (
     <div className="Simplecard" id={data.id} key={index}>
       <Col
         onClick={(e) => props.openModalTarget(index, data, e)}
@@ -50,10 +48,10 @@ export default function Simplecard(props) {
         className="gutter-row"
         span={22}
       >
-        <h5 id="nombreTeam">{data.nombre}</h5>
+        <h5 id="nameTeam">{data.name}</h5>
         <span>{data.subtitle}</span>
         <br />
-        <span>{data.fecha}</span>
+        <span>{data.date}</span>
       </Col>
       <Col className="gutter-row" span={2}>
         <Dropdown overlay={menu} trigger={["click"]}>
