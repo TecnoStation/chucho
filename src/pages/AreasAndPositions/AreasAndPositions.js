@@ -146,7 +146,7 @@ export default function AreasAndPositions() {
                   span={10}
                   style={{ textAlign: "left" }}
                 >
-                  <Link to="/organigrama/areasandpositions-massive">
+                  <Link to="/organigrama/areasandpositions-massivee">
                     <Button
                       className="third"
                       style={{ textAlign: "left", marginRight: "16px" }}

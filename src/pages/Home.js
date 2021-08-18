@@ -110,7 +110,7 @@ export default function Home() {
         />
         <LayoutSecondaryCardBackGlass
           exact
-          path="/organigrama/mensajes"
+          path="/mensajes"
           title="Bandeja de entrada"
           component={Messages}
         />
