@@ -49,7 +49,7 @@ export default function ScreenOrganigram() {
                   <b>
                     Visualiza el vínculo entre el alcance del puesto y el
                     talento del colaborador
-                  </b>{" "}
+                  </b>
                   cerrando las brechas de las áreas de acción de la compañías
                   así como las responsabilidades de los miembros que la forman.
                 </p>

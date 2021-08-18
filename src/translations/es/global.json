@@ -1,24 +1,24 @@
 {
     "login":{
         "h1-welcome" :"¡Bienvenido!",
-        "label-email":"Correo electrónico",
+        "label-user":"Usuario",
         "placeholder-user":"ejemplo@empresa.com",
         "label-password":"Contraseña",
         "placeholder-password" : "Contraseña",
         "check-box":"Mantener sesión abierta",
+        "link-recovery": "Recuperar contraseña",
         "btn-start-sesion" : "Entrar",
-        "btn-start-sesion-recovery":"Iniciar sesión",
-        "p-password-forgot" : "Olvide mi contraseña",
-        "h2-password-restart" : "Reiniciar contraseña",
-        "p-instructions-restart" : "Ingresa tu correo y te enviaremos una liga para reiniciar tu contraseña.",
-        "btn-recovery-password" :"Recuperar",
-        "p1-privacy":"Brivé Soluciones. All Rights Reserved.",
+        "p1-privacy": "Brivé Soluciones. All Rights Reserved.",
+        "check-privacy": "Al hacer clic en Entrar aceptas los términos, condiciones y la política de privacidad.",
         "p2-privacy":"Legal",
         "p3-privacy":"Aviso de Privacidad",
-        "p1-configutation-password":"Por favor configura tu contraseña:",
-        "label-new-password" :"Ingresa tu nueva contraseña",
-        "label-repeat-password" :"Repite tu nueva contraseña",
-        "btn-continue":"Continuar"
+        "title-recovery": "Recuperar contraseña",
+        "label-email-recovery":"Usuario",
+        "placeholder-user-recovery":"ejemplo@empresa.com",
+        "btn-recovery":"Recuperar",
+        "recovery-success": "¡Listo!",
+        "p-recovery-message": "Hemos enviado un correo electrónico al registrado para el usuario, sigue ls instrucciones para recuperar tu contraseña",
+        "btn-success": "ok"
     },
     "sidebar":{
         "organization-chart":"Organigrama",
@@ -28,27 +28,174 @@
         "nineBox" : "Nine Box",
         "copyright-brive" :"Brive Soluciones All Rights Reserved",
         "copyright-legal" : "Legal",
-        "copyright-privacy" : "Aviso de Privacidad",
-        "360-evaluation" : "Evaluación360",
-        "360-porfiles" : "Perfiles",    
-        "360-process" : "Procesos",    
-        "360-results" : "Resultados"
+        "copyright-privacy" : "Aviso de Privacidad"
     },
+    "organization-chart":{
+        "my-busines": "Mi empresa",
+        "areas-and-positions": "Areas y puestos",
+        "my-teams": "Mis equipos",
+        "general-organigram": "Organigrama general"
+    },
+    "areas-and-positions":{
+        "create-area": "Crear área",
+        "create-position": "Crear puesto",
+        "create-collaborator": "Crear colaborador"
+    },
+    "evaluation-360": {
+        "create-perfil-position":"Crear perfil de puesto",
+        "create-process":"Crear procesos",
+        "evaluations":"Evaluaciones"
+    },
+    "objectives" : {
+        "tree-objetives": "Árbol de objetivos",
+        "inbox": "Bandeja de entrada",
+        "resume-evaluations": "Resumen de evaluaciones"
+    },
+    "key-Indicators" : {
+        "my-indicators": "Mis indicadores",
+        "my-evaluations": "Mis evaluaciones",
+        "manage": "Gestionar"
+    },
+    "nineBox" : {
+        "developmentplans": "Planes de desarrollo",
+        "see-nine-box": "Ver Nine Box"
+    },
+    "developmentplans":{
+        "create-plan": "Crear plan",
+        "my-plans": "Mis planes",
+        "vendors": "Proveedores"
+    },
+
+
     "organigrama":{
         "empty-organigram-layout": {
             "h1-welcome":"¡Bienvenido al Organigrama!",
-            "p-row1":"Aquí podrás visualizar todas las estructuras de la",
-            "p-row2":"organización, además de facilitar la evaluación 360 y",
-            "p-row3":"la vista de los equipos para alcanzar los Objetivos."
+            "p-row1":"Aquí podrás visualizar todas las estructuras de la organización, además de facilitar la evaluación 360 y la vista de los equipos para alcanzar los Objetivos.",
+            "btn-start": "Iniciar"
         },
+
         "org-chart-on-boarding":{
-            "btn-start": "Comenzar",
-            "carousel-content0":"¿Por qué crear un Organigrama?",
-            "carousel-content1":"Mi Empresa",
-            "carousel-content2":"Puestos y Colaboradores",
-            "carousel-content3":"Visualización Inteligente",
-            "carousel-content4":"Importar Datos"
+            "carousel-title0":"¿Por qué crear un Organigrama?",
+            "carousel-title1":"¿Qué compone a mi organigrama?",
+            "carousel-title2":"¿Como puedo subir los datos?"
         },
+        "carousel-content0":{
+            "text1-a": "Podrás mejora la organización y definición",
+            "text1-b": "de los ejes principales en la toma de decisiones.",
+            "text2-a": "Divide y segmenta el trabajo",
+            "text2-b": "por unidades tácticas, mejorando la gestión de la estrategia.",
+            "text3-a": "Visualiza el vínculo entre el alcance del puesto y el talento del colaborador",
+            "text3-b": "cerrando las brechas de las áreas de acción de la compañías así como las responsabilidades de los miembros que la forman.",
+            "text4-a": "Optimiza y facilita la gestión de los procesos entre EVOU y Evaluatest"
+        },
+        "carousel-content1":{
+            "text1-a": "Para poder implementar tu organigrama se necesita conocer:",
+            "text2-a": "Tu empresa",
+            "text2-b": "su información básica y su cultura.",
+            "text3-a": "La estructura de tu empresa,",
+            "text3-b": "es decir que áreas la componen y que puestos existen dentro de ella.",
+            "text4-a": "El perfil de tus puestos,",
+            "text4-b": "lo que se traduce en los datos básicos, las habilidades requeridas y las competencias de cada uno.",
+            "text4-c": "El perfil de las personas",
+            "text4-d": "que ocupan estos puestos, lo que significa sus datos básicos y las habilidades de cada uno."
+        },
+        "carousel-content2":{
+            "text1-a": "Siempre vas a poder subir los datos directamente de forma manual, sin embargo, entendemos que existen ocasiones en las que es tanta la información, que hemos habilitado la carga masiva.",
+            "text2-a": "La carga masiva estará habilitada en los puntos donde hemos detectado esta necesidad dentro del organigrama.",
+            "text3-a": "En el panel principal vas a poder encontrar este icono para poder acceder a esta función:"
+        },
+        "started":{
+            "title": "Iniciemos la creación de tu organigrama",
+            "text1-a": " Para iniciar la creación de tu organigrama, te sugerimos comenzar llenando la información de la sección de “Mi Empresa”.",
+            "text2-a": "Si te faltara información para completar lo que te pedimos, siempre vas a poder regresar dando click desde el menú principal o en este icono:",
+            "btn-started": "Comenzar"
+            },
+        "skip":"Omitir",
+        "dialog-warnin": {
+            "atention": "Atención",
+            "text1": "Estás a punto de omitir el onboarding.",
+            "text2": "Recuerda que te orienta sobre el uso de la plataforma.",
+            "question": "¿Estás seguro?",
+            "btn-continue": "Continuar",
+            "btn-skip": "Omitir"
+        },
+
+        "dialog-started": {
+            "title": "Iniciemos la creación de tu organigrama",
+            "text1": "Para iniciar la creación de tu organigrama, te sugerimos comenzar llenando la información de la sección de “Mi Empresa”.",
+            "text2": "Si te faltara información para completar lo que te pedimos, siempre vas a poder regresar dando click desde el menú principal o en este icono:",
+            "btn-started": "Comenzar"
+        },
+
+        "mybusiness-principal":{
+            "data-general":{
+                "title": "Datos de Mi empresa",
+                "business-name": "Nombre de mi empresa",
+                "business-activity": "Actividad de la empresa",
+                "subactivity": "Subactividad",
+                "business-size": "Tamaño de la empresa",
+                "site-web": "Sitio Web",
+                "from": "Pais",
+                "name-headquartes": "Nombre de oficinas centrales",
+                "headquartes-direction": "Dirección de Oficinas Centrales",
+                "branch": "Sucursales"
+            },
+            "business-culture":{
+                "mission": "Proposito / Misión",
+                "View": "Proposito / Misión",
+                "business-description": "Descripción de la empresa",
+                "institutional-competences": "Competencias Institucionales",
+                "level": "Nivel"
+            },
+            "menu": "Editar datos"
+        },
+
+        "my-business-edit":{
+            "information":{
+                "title": "Información de Mi empresa",
+                "form":{
+                    "business-name": "Nombre de mi empresa",
+                    "business-name-placeholder": "Nombre",
+                    "business-activity": "Actividad de la empresa",
+                    "business-activity-placeholder": "Selecciona una opción",
+                    "subactivity": "Subactividad",
+                    "subactivity-placeholder": "Selecciona una opción",
+                    "business-size": "Tamaño de la empresa",
+                    "business-size-placeholder": "Selecciona una opción",
+                    "from": "Pais",
+                    "from-placeholder": "Selecciona una opción",
+                    "site-web": "Sitio Web",
+                    "site-web-placeholder": "Ej. www.empresa.com",
+                    
+                    "name-headquartes": "Nombre de oficinas centrales",
+                    "name-headquartes-placeholder": "Ej. Coorporativo",
+                    "headquartes-direction": "Dirección de Oficinas Centrales",
+                    "headquartes-direction-placeholder": "Ubica en el mapa",
+                    "add-branch-title": "Agregar sucursal",
+                    "add-branch-link": "Agregar sucursal",
+                    "branches-added": "Sucursales agregadas",
+                    "direction": "dirección"
+                }
+            },
+            "culture":{
+                "title": "Cultura de Mi empresa",
+                "mission": "Proposito / Misión",
+                "mission-placeholder": "Ej. “Organizar la información del mundo y hacerla universalmente accesible y útil - Google (1000)",
+                "View": "Proposito / Misión",
+                "View-placeholder": "Ej. “Ser el motor de búsqueda más importante del mundo” - Google (1000 caracteres)",
+                "business-description": "Descripción de la empresa",
+                "business-description-placeholder": "Ej. “Ser el motor de búsqueda más importante del mundo” - Google (1000 caracteres)",
+                "institutional-competencies": "Competencias Institucionales",
+                "add-competencies": "Agregar competencias",
+                "competencies-added": "Competencias agregadas",
+                "level": "Nivel"
+            }
+        },
+        
+
+
+
+
         "WhyCreateOrganization":{
             "span-row1":"Podrás mejora la organización y definición ",
             "p1-row1":"de los ejes principales en",
