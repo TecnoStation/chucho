@@ -1,18 +1,13 @@
 {
     "login":{
         "h1-welcome" :"¡Bienvenido!",
-<<<<<<< HEAD
         "label-user":"Usuario",
-=======
-        "label-email":"Usuario",
->>>>>>> bc86bca61ccfe6b844fcd0ea83429ef149926a7c
         "placeholder-user":"ejemplo@empresa.com",
         "label-password":"Contraseña",
         "placeholder-password" : "Contraseña",
         "check-box":"Mantener sesión abierta",
         "link-recovery": "Recuperar contraseña",
         "btn-start-sesion" : "Entrar",
-<<<<<<< HEAD
         "p1-privacy": "Brivé Soluciones. All Rights Reserved.",
         "check-privacy": "Al hacer clic en Entrar aceptas los términos, condiciones y la política de privacidad.",
         "p2-privacy":"Legal",
@@ -23,23 +18,16 @@
         "btn-recovery":"Recuperar",
         "recovery-success": "¡Listo!",
         "p-recovery-message": "Hemos enviado un correo electrónico al registrado para el usuario, sigue ls instrucciones para recuperar tu contraseña",
-        "btn-success": "ok"
+        "btn-success": "ok",
+        "h1-welcome-recovery" :"¡Bienvenido!",
+        "h1-user" :"Usuario",
+        "text": "Por favor configura tu contraseña",
+        "insert-password": "Ingresa tu nueva contraseña",
+        "insert-password-placeholder": "Contraseña",
+        "repeat-password": "Repite tu nueva contraseña",
+        "repeat-password-placeholder": "Contraseña",
+        "btn-next": "siguiente"
     },
-=======
-        "btn-start-sesion-recovery":"Iniciar sesión",
-        "p-password-forgot" : "Recuperar contraseña",
-        "h2-password-restart" : "Reiniciar contraseña",
-        "p-instructions-restart" : "Ingresa tu correo y te enviaremos una liga para reiniciar tu contraseña.",
-        "btn-recovery-password" :"Recuperar contraseña",
-        "p1-privacy":"Brivé Soluciones. All Rights Reserved.",
-        "p2-privacy":"Legal",
-        "p3-privacy":"Aviso de Privacidad",
-        "p1-configutation-password":"Por favor configura tu contraseña:",
-        "label-new-password" :"Ingresa tu nueva contraseña",
-        "label-repeat-password" :"Repite tu nueva contraseña",
-        "btn-continue":"Continuar"
-    }, 
->>>>>>> bc86bca61ccfe6b844fcd0ea83429ef149926a7c
     "sidebar":{
         "organization-chart":"Organigrama",
         "evaluation360" : "Evaluación 360",
