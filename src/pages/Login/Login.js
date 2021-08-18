@@ -27,29 +27,28 @@ export default function Login() {
           </Form.Item>
           <Form.Item style={{ textAlign: "left", marginTop: "-30px" }}>
             <Link to="/recoverypassword" className="linkText">
-              Recuperar contraseña
+              {t("login.link-recovery")} 
             </Link>
           </Form.Item>
           <Form.Item>
             <Link to="/organigrama/organigramstarted">
               <Button style={{ width: "100%" }} className="primary">
-                Entrar
+                {t("login.btn-start-sesion")}
               </Button>
             </Link>
           </Form.Item>
         </Form>
         <p className="legacyP grayText">
-          Brivé Soluciones. All Rights Reserved.
+          {t("login.p1-privacy")}
         </p>
         <p>
           <Checkbox className="terminos grayText">
-            Al hacer clic en Entrar aceptas los términos, condiciones y la
-            política de privacidad.
+            {t("login.check-privacy")}
           </Checkbox>
         </p>
         <p className="legacyP linkText">
-          Legal <br />
-          Aviso de Privacidad
+          {t("login.p2-privacy")} <br />
+          {t("login.p3-privacy")}
         </p>
       </div>
     </div>

@@ -9,6 +9,7 @@ import LayoutSecondaryCardGlass from "./Layouts/LayoutSecondaryCardGlass";
 import LayoutSecondaryCardWhite from "./Layouts/LayoutSecondaryCardWhite";
 import LayoutSecondaryCardBackGlass from "./Layouts/LayoutSecondaryCardBackGlass";
 import RecoveryPassword from "./Login/RecoveryPassword";
+import NewPassword from "./Login/NewPassword";
 import Organigramstarted from "./Organigram/Organigramstarted";
 import Organigram from "./Organigram/Organigram";
 import OrganigramList from "./Organigram/OrganigramList";
@@ -163,10 +164,15 @@ export default function Home() {
           path="/recoverypassword"
           component={RecoveryPassword}
         />
+         <LayoutPrimary
+          exact
+          path="/newpassword"
+          component={NewPassword}
+        />
         <LayoutPrimary exact path="/login" component={Login} />
         <LayoutPrimary exact path="/" component={Login} />
         <LayoutPrimary path="*" component={Nofound} />
       </Switch>
-    </Router>
+    </Router> 
   );
 }
