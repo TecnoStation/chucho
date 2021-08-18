@@ -1,12 +1,9 @@
-import { Card, Col, Row, Input, Button, Modal, Form } from "antd";
+import { Card, Col, Row, Input, Button, Modal, Form, Checkbox } from "antd";
 import React, { useState } from "react";
 import { IoMdArrowDropdown, IoMdArrowDropright } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Avatar from "../../assets/img/avatar.png";
 import MaterialIcon from "material-icons-react";
-import Checkbox from "antd/lib/checkbox/Checkbox";
-
-import "./Messages.scss";
 
 const { TextArea } = Input;
 

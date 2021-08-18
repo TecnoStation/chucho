@@ -2,17 +2,19 @@ import React from "react";
 import { Form, Input, Button, Checkbox } from "antd";
 import Logo from "../../assets/img/Evou-color.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import "./Login.scss";
 
 export default function Login() {
+  const [t, i18n] = useTranslation("global");
   return (
     <div>
       <div className="formLogin">
         <div className="img">
           <img alt="logo" src={Logo} width="175" height="85" />
         </div>
-        <h2>¡Bienvenido!</h2>
+        <h2>{t("login.h1-welcome")}</h2>
         <Form name="form" layout="vertical">
           <Form.Item name="username" label="Usuario">
             <Input type="text" placeholder="ejemplo@empresa.com" />

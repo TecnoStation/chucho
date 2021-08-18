@@ -1,0 +1,413 @@
+{
+    "login":{
+        "h1-welcome" :"¡Bienvenido!",
+        "label-email":"Correo electrónico",
+        "placeholder-user":"ejemplo@empresa.com",
+        "label-password":"Contraseña",
+        "placeholder-password" : "Contraseña",
+        "check-box":"Mantener sesión abierta",
+        "btn-start-sesion" : "Entrar",
+        "btn-start-sesion-recovery":"Iniciar sesión",
+        "p-password-forgot" : "Olvide mi contraseña",
+        "h2-password-restart" : "Reiniciar contraseña",
+        "p-instructions-restart" : "Ingresa tu correo y te enviaremos una liga para reiniciar tu contraseña.",
+        "btn-recovery-password" :"Recuperar",
+        "p1-privacy":"Brivé Soluciones. All Rights Reserved.",
+        "p2-privacy":"Legal",
+        "p3-privacy":"Aviso de Privacidad",
+        "p1-configutation-password":"Por favor configura tu contraseña:",
+        "label-new-password" :"Ingresa tu nueva contraseña",
+        "label-repeat-password" :"Repite tu nueva contraseña",
+        "btn-continue":"Continuar"
+    },
+    "sidebar":{
+        "organization-chart":"Organigrama",
+        "evaluation360" : "Evaluación 360",
+        "objectives" : "Objetivos",
+        "keyIndicators" : "Indicadores Clave",
+        "nineBox" : "Nine Box",
+        "copyright-brive" :"Brive Soluciones All Rights Reserved",
+        "copyright-legal" : "Legal",
+        "copyright-privacy" : "Aviso de Privacidad",
+        "360-evaluation" : "Evaluación360",
+        "360-porfiles" : "Perfiles",    
+        "360-process" : "Procesos",    
+        "360-results" : "Resultados"
+    },
+    "organigrama":{
+        "empty-organigram-layout": {
+            "h1-welcome":"¡Bienvenido al Organigrama!",
+            "p-row1":"Aquí podrás visualizar todas las estructuras de la",
+            "p-row2":"organización, además de facilitar la evaluación 360 y",
+            "p-row3":"la vista de los equipos para alcanzar los Objetivos."
+        },
+        "org-chart-on-boarding":{
+            "btn-start": "Comenzar",
+            "carousel-content0":"¿Por qué crear un Organigrama?",
+            "carousel-content1":"Mi Empresa",
+            "carousel-content2":"Puestos y Colaboradores",
+            "carousel-content3":"Visualización Inteligente",
+            "carousel-content4":"Importar Datos"
+        },
+        "WhyCreateOrganization":{
+            "span-row1":"Podrás mejora la organización y definición ",
+            "p1-row1":"de los ejes principales en",
+            "p2-row1":"la toma de decisiones.",
+            "span-row2":"Divide y segmenta el trabajo ",
+            "p1-row2":"por unidades tácticas, mejorando la",
+            "p2-row2":"gestión de la estrategia.",
+            "p1-row3":"Visualiza el vínculo entre el alcance del puesto y el talento del",
+            "p2-row3":"cerrando las brechas de las áreas de acción de la",
+            "p3-row3":"compañías así como las responsabilidades de los miembros que la",
+            "p4-row3":"forman.",
+            "span-row3":"colaborador",
+            "p1-row4":"Optimiza y facilita la gestión de los procesos entre EVOU y",
+            "p1-row5":"Evaluatest"
+            
+        },
+        "MyBusiness":{
+            "p-row1":"En “Mi Empresa” podrás:",
+            "p-row2":"Mejorar el tiempo en la creación de procesos",
+            "p-row3":"Reducir el tiempo en la creación de puestos",
+            "p-row4":"Homologar la cultura institucional",
+            "p-row5":"Optimizar las condiciones de la estrategia institucional"
+        },
+        "PositionsAndCollaborators":{
+            "p-row1":"Al definir las necesidades específicas de cada puesto:",
+            "p-row2":"Gestionar de manera adecuada los Puestos",
+            "p-row3":"Crear y cerrar Vacantes",
+            "p-row4":"Identificar las relaciones de jerarquía",
+            "p-row5":"Definir los ejes principales para conseguir objetivos",
+            "p-row6":"Al subir los datos de tus colaboradores:",
+            "p-row7":"Especificar las competencias de cada puesto",
+            "p-row8":"Identificar de mejor manera el talento de tu organización",
+            "p-row9":"Ubicar las relaciones entre diferentes perfiles",
+            "p-row10":"Asignar funciones específicas de cada puesto"
+        },
+        "SmartVisualization":{
+            "p-row1":"Podrás visualizar de un solo vistazo el cumplimiento de",
+            "p-row2":"Objetivos e Indicadores Clave, también las personas y",
+            "p-row3":"vacantes existentes a su cargo."
+        },
+        "ImportData":{
+            "p-row1":"Podrás importar de forma masiva el organigrama de tu organización. ",
+            "p-row2":"También, vas poder crear equipos multidisciplinarios, siguiendo",
+            "p-row3":"diferentes marcos de trabajo."
+        },
+        "tree-organization":{
+            "title-create-team":"Crear Equipo",
+            "title-mision-vision-modal":"Misión y Visión",
+            "title-load-from-file-organization":"Crear desde archivo",
+            "top-navbar-name":"Organigrama",
+            "search-placeholder":"Buscar"
+
+        },
+        "create-team":{
+            "form-item1-row1-col1": "Nombre de equipo",
+            "form-item1-row1-col1-input-placeholder":"Aqui puedes asignar el nombre de tu equipo",
+            "form-item1-row1-col2":"Tipo de equipo",
+            "form-item1-row1-col2-select-placeholder":"Personalizado",
+            "form-item1-row2-col1":"Agregar colaboradores",
+            "form-item1-row2-col1-seach-placeholder":"Agrega a los miembros de este equipo",
+            "form-item1-row2-col2":"Modalidad",
+            "form-item1-row2-col2-select-placeholder":"Equipo multifuncional",
+            "form-item3-btn-1":"Cancelar",
+            "form-item3-btn-2":"Crear"
+            
+        },
+        "mision-vision-modal":{
+            "h3-mision":"Misión",
+            "h3-vision":"Visión",
+            "btn-1":"Cancelar",
+            "btn-2":"Aplicar"
+        },
+        "load-from-file-organization":{
+            "form-item1-p":"Antes de importar los datos, es esencial asegurarse de que la tabla cumple estos tres requisitos:",
+            "form-item2-p":"Cada columna tiene un encabezado.",
+            "form-item3-p":"El CEO aparecerá como un empleado con una celda de supervisor correspondiente en blanco.",
+            "form-item4-p":"Tu archivo debe de ser .csv",
+            "form-item5-a":"Descargar plantilla",
+            "form-item6-btn1":"Cancelar",
+            "form-item6-btn2":"Cargar"
+        },
+        "form-edit":{
+            "label-nameColaborador":"Nombre Colaborador",
+            "placeholder-nameColaborador":"Nombre y Apellido",
+            "label-nameOfCharge":"Nombre del Cargo",
+            "placeholder-nameOfCharge":"Ej. CEO de la Organización",
+            "label-lavelOfCharge":"Nivel del Cargo",
+            "placeholder-lavelOfCharge":"Ej. Finanzas",
+            "label-jobLevel":"Nivel de Puesto",
+            "label-area":"Área",
+            "placeholder-area":"Ej. Finanzas",
+            "label-sucursal":"Sucursal",
+            "placeholder-sucursal":"Ej. CDMX",
+            "label-unity":"Unidad",
+            "placeholder-unity":"Ej. Regional 1",
+            "label-email":"Correo electrónico",
+            "placeholder-email":"nombre@tuempresa.com",
+            "label-reportTo":"Reporta a (Nombre del cargo)",
+            "placeholder-reportTo":"Ej. Coordinador",
+            "label-emailReport":"Correos Electrónico a quien reporta",
+            "placeholder-emailReport":"cordinador@tuempresa.com",
+            "label-jobModal":"Modalidad de Trabajo",
+            "placeholder-jobModal":"Ej. Home Office",
+            "label-startDate":"Fecha de ingreso",
+            "placeholder-startDate":"Ej. 26 noviembre 2020",
+            "label-gender":"Genero",
+            "label-keyCode":"Clave",
+            "placeholder-keyCode":"0da5d2ED",
+            "label-birthDate":"Fecha de nacimiento",
+            "placeholder-birthDate":"Ej. 29 junio 1987",
+            "label-perfil-photo":"Adjuntar Foto de Perfil",
+            "upload-text":"Adjuntar",
+            "btn-1":"Cancelar",
+            "btn-2":"Aceptar"
+
+
+        },
+        "add-permissions-confirmation":{
+            "modalTitle-add-permissions": "¿Aplicar los mismos permisos a todos los colaboradores en la misma línea de jerarquía?",
+            "radio1-p-row1":"Si, aplicar a todos los colaboradores en la ",
+            "radio1-p-row2":" misma línea de jerarquía ", 
+            "radio2-p":"Solo aplicar a este colaborador ",
+            "btn-1":"Cancelar",
+            "btn-2":"Aplicar"
+        }
+    },
+        
+    "evaluation360" : {
+        "EmptyEvaluation360Layout":{
+            "h1-welcome" : " ¡Bienvenido a tu primera Evaluación 360 con EVOU!",
+            "p-info-one" :"Estás a punto de iniciar este proceso, por lo que te recomendamos ver el video",
+            "p-info-two" : "introductorio que te pondrá en contexto sobre el uso de la herramienta.",
+            "p-info-three":"¿Cómo desea iniciar este proceso?",
+            "btn-direct" : "Directo",
+            "btn-watch-video" : "Ver video"
+        },
+        "EmptyProfileLibrary":{
+            "topBar-name" : "Biblioteca de perfiles",
+            "h1-welcome" : "¡Bienvenido a tu primera Biblioteca de Perfiles!",
+            "p-info-one" : "Ahora aquí puedes crear los perfiles de puesto que",
+            "p-info-two" : "los perfiles que necesites.",
+            "btn-new-library" : "Nueva Biblioteca"
+        },
+        "NewProfilleLibrary":{
+            "p-library-name" :"Nombre de la biblioteca",
+            "btn-cancel": "Cancelar",
+            "btn-acept" : "Aceptar"
+        },
+        "EmptyProcess":{
+            "h1-good-gob" : "¡Bien hecho!",
+            "p-info-one" : "Ahora, aquí vas a crear y personalizar tu estudio,",
+            "p-info-two" : "agregando los tipos de evaluaciones requeridas.",
+            "btn-create-process" : "Crear proceso"
+        },
+        "SettingsJobLevel" : {
+            "help-name-id": "Nombre que se usa para identificar perfil",
+            "help-choose-level" : "Elige un nivel de puesto",
+            "TopNavBar-library" : "Biblioteca",
+            "TopNavBar-name-library" :"Prueba",
+            "p-info-one":"Configuración del perfil de puesto",
+            "p-info-two" : "Ahora puedes guiarte con las plantillas de perfiles cargados en nuestra base de datos:",
+            "link-p-add" : "Agregar una plantilla de perfil de puesto",
+            "search-competence" : "Buscar Competencia",
+            "p-material" :  "Material de apoyo",
+            "p-material-info-one": "Siempre puedes acceder a nuestro material de apoyo, para guiarte en este paso:",
+            "p-diccionary" : "Diccionario de competencias",
+            "p-profile": "Plantilla de Perfilamiento",
+            "p-handbook": "Manual de Buenas Practicas para una selección objetiva de competencias",
+            "help" : "Ayuda",
+            "input-placeholder-name-profile" : "Ej. Gerente Comercial - Zonal",
+            "span-level-job": "Nivel de puesto",
+            "select-placeholder-level-job":"Mando",
+            "btn-cancel":"Cancelar",
+            "btn-create" : "Crear",
+            "span-name-profile" : "Nombre del perfil:",
+            "p-add-skills" : "Agregar Competencias"
+
+        },
+        "SettingCompetences":{
+           "p-info-one" : "Los colaboradores que tienen un alto dominio de esta competencia, por lo general tienen la capacidad de:",
+           "li-info-one" : "Escuchar y dispuesto a hacerlo.",
+            "li-info-two" : "Entiende los mensajes verbales",
+            "li-info-three" : "Comprende los aspectos no verbales de la comunicación.",
+            "li-info-four" : "Expresa sus ideas con claridad y coherencia.",
+            "li-info-five" : "Genera el impacto deseado en sus interlocutores.",
+            "col-skills" : "Dominio de competencia:",
+            "col-result" : "Competente:",
+            "label-type" : "Tipo de Competencia",
+            "btn-cancel" : "Cancelar",
+            "btn-save" : "Guardar"
+
+        },
+        "EmptyLibrary":{
+            "topbar-name": "Biblioteca: ",
+            "name-library" : "Prueba",
+            "h1-good-job" : "¡Bien hecho!",
+            "p-info-one" : "Ahora aquí puedes crear los perfiles de puesto que",
+            "p-info-two" : "existen en tu organización, agregando competencias",
+            "p-info-three" : "y niveles de dominio requeridos",
+            "btn-new-profile": "Nuevo Perfil"
+        },
+        "Evaluation360ProcessVideo":{
+            "title-modal" : "Evaluación 360 EVOU",
+            "p-info-one" : "Este video te ayudará a entender cómo es el proceso de Evaluación 360",
+            "btn-start" : "Iniciar"
+        },
+        "ProfileLibrary" :{
+            "new-library" : "Nueva Biblioteca"
+        },
+        "CreateFromFilePerfil":{
+            "charge-profiles" : "Cargar Perfiles",
+            "form-item1-p":"Antes de importar los datos, es esencial asegurarse de que la tabla cumple estos tres requisitos:",
+            "form-item2-p":"Cada columna tiene un encabezado.",
+            "form-item3-p":"Cada competencia tiene su rango",
+            "form-item4-p":"Tu archivo debe de ser .csv",
+            "form-item5-a1":"Descargar ejemplo",
+            "form-item5-a2":"Descargar plantilla",
+            "btn-1":"Cancelar",
+            "btn-2":"Cargar"
+        },
+        "TempletesProfiles":{
+            "title-modal-Perfiles":"Plantilla de perfiles",
+            "title-category":"Categorías",
+            "btn-1":"Cancelar",
+            "btn-2":"Añadir"
+        },
+        "Process" : {
+            "new-profile" : "Nuevo Perfil",
+            "charge-process" : "Cargar Proceso",
+            "continue" : "Continuar",
+            "asignation": "Asignar",
+            "process": "Proceso",
+            "persons" : "Personas",
+            "name" : "Nombre",
+            "area" : "Áreas/Nivel",
+            "search-area" : "Buscar Área",
+            "team" : "Equipos",
+            "search-team" : "Buscar Equipo",
+            "asignated" : "Asignados",
+            "add" : "Añadir",
+            "new-process": "Nuevo Proceso"
+
+        },
+        "CreateProcess":{
+            "notification-error":"La suma de las ponderaciones no puede ser mayor a 100%",
+            "title-type-evaluation":"Configura los tipos de evaluaciones",
+            "p1-type-evaluation":"Para comenzar, necesita asignar un porcentaje a cada evaluación según su importancia para el estudio. En el apartado “Brivé Va conmigo” (Preguntas Frecuentes) pueden encontrar sugerencias relevantes para esta tarea.",
+            "label-library": "Selecciona una biblioteca de perfil",
+            "placeholder-library":"Ej. Biblioteca de MKT",
+            "type-evaluation1":"Autoevaluación",
+            "type-evaluation2":"Colaborador a líder",
+            "type-evaluation3":"Líder a colaborador",
+            "type-evaluation4":"Evaluación de pares",
+            "type-evaluation5":"Cliente interno",
+            "type-evaluation6":"Cliente externo",
+            "title-configuration-process":"Configura tu proceso de evaluación.",
+            "name-process":"Nombre del proceso:",
+            "placeholder-name-process":"Ej. Gerente Comercial - Zonal",
+            "start-date":"Primer día de aplicación:",
+            "end-date":"Último día de la aplicación",
+            "switch-process":"Permitir a los colaboradores ver su reporte de resultados:",
+            "title-process-img":"Personalizar proceso de evaluación",
+            "description-process-img":"Puedes agregar una imagen para que los colaboradores participantes identifiquen su organización fácilmente:",
+            "p1-img":"Suelta tu imagen aquí o",
+            "a-img":"selecciona el archivo",
+            "p2-img":"Puedes subir una imagen JPG o PNG",
+            "btn-1":"Cancelar",
+            "btn-2":"Crear"
+        },
+        "AddQuestion":{
+            "title-modal":"Agrega pregunta",
+            "label-input":"Pregunta",
+            "text-switch":"Está pregunta es obligatoria",
+            "btn-1":"Cancelar",
+            "btn-2":"Crear"
+        },
+        "PlanningProcessEvaluations":{
+            "colum-Question":"Pregunta",
+            "colum-Status":"Estado",
+            "colum-actions":"Acciones",
+            "TopNavbar-name": "Proceso: ",
+            "new-process": "Asignar Proceso",
+            "p-1-new-process": "Aquí puedas asignar a los colaboradores que van a",
+            "p-2-new-process": "participar en este proceso.",
+            "btn-assign": "Asignar",
+            "tab-evaluation":"Evaluaciones",
+            "tab-questions":"Preguntas Personalizadas",
+            "btn-new-question":"Crear Pregunta",
+            "empty-questions":"Preguntas abiertas",
+            "empty-questions-p1":"Aquí puedas crear las preguntas que necesites",
+            "empty-questions-p2":"agregar a tus evaluaciones.",
+            "empry-btn-new-question":"Crear Pregunta"
+        },
+        "AdvancesGraph":{
+            "text-graph":"¿Cuántas evaluaciones se han contestado?\n",
+            "h2-1":"Avance de aplicación",
+            "h2-2":"¿Quiénes han contestado?",
+            "collapse-1":"En los siguientes gráficos puedes observar el avance por sucursales:",
+            "collapse-2":"En los siguientes gráficos puedes observar el avance por áreas:"
+        },
+        "Eject":{
+            "btn-create": "Crear Comunicado",
+            "column-release":"Comunicado",
+            "column-type":"Tipo",
+            "column-date":"Fecha",
+            "column-time":"Hora",
+            "h1-start":"Iniciar Ejecución",
+            "p1-start-process":"Es momento de iniciar el proceso y para mantener una correcta",
+            "p2-start-process":"comunicación con tus colaboradores, te sugerimos seguir este",
+            "p3-start-process":"orden de comunicados para lograrlo:",
+            "btn-start":"Iniciar",
+            "tab-1":"Sensibilidad",
+            "tab-1-title":"Sensibilización de proceso de Evaluación 360°",
+            "tab-2":"Invitacion",
+            "tab-2-title":"Invitacion de proceso de Evaluación 360°",
+            "tab-3":"Recordatorio",
+            "tab-3-title":"Recordatorio de proceso de Evaluación 360°",
+            "tab-4":"Agradecimiento",
+            "tab-4-title":"Agradecimiento de proceso de Evaluación 360°"
+        },
+        "Releases":{
+            "checkbox":"Enviar comunicado a todos en el proceso",
+            "div-id1":"Enviar comunicado a:",
+            "search-placeholder":"Buscar",
+            "div-select-message":"Selecciona un mensaje a enviar",
+            "select-placeholder-templete":"Plantilla Sensibilización",
+            "div-datePicker":"Fecha",
+            "div-timePicker":"Hora",
+            "label-affair":"Asunto",
+            "btn-1":"Cancelar",
+            "btn-2":"Agendar"
+            
+        },
+        "AddEvaluatorExternal":{
+            "span-title":"Evaluador Externo",
+            "modal-title":"Datos del Colaborador",
+            "label-name":"Nombre Colaborador Externo",
+            "input-value-placeholder":"Nombre y Apellido",
+            "label-inputValuePosition":"Nombre del Cargo" ,
+            "input-value-position-placeholder":"Ej. CEO de la Organización",
+            "label-inputValueLevel":"Nivel",
+            "inputValueLevel-placeholder":"Ej. CEO",
+            "label-inputValueEmail":"Correo electrónico",
+            "inputValueEmail-placeholder":"Ej. CEO de la Organización",
+            "label-inputValueArea":"Área",
+            "inputValueArea-placeholder":"Ej. Finanzas",
+            "label-inputValueOffice":"Sucursal",
+            "inputValueOffice-placeholder":"Ej. CDMX",
+            "label-inputValueModality":"Modalidad de Trabajo",
+            "inputValueModality-placeholder":"Ej. Home Office",
+            "label-inputValueLevelPosition":"Nivel del Puesto",
+            "inputValueLevelPosition-placeholder":"Ej. Mando Medio",
+            "label-gender":"Genero",
+            "select-gender-placeholder":"Ej. Femenino",
+            "btn-1":"Cancelar",
+            "btn-2":"Aceptar"
+        }
+    },
+
+    "required":{"message":"Este campo es obligatorio"}
+}
+
