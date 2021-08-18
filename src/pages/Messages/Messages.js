@@ -4,10 +4,12 @@ import { IoMdArrowDropdown, IoMdArrowDropright } from "react-icons/io";
 import { Link } from "react-router-dom";
 import Avatar from "../../assets/img/avatar.png";
 import MaterialIcon from "material-icons-react";
+import { useTranslation } from "react-i18next";
 
 const { TextArea } = Input;
 
 export default function Messages() {
+  const [t, i18n] = useTranslation("global");
   const [dropdown, setDropdown] = useState("showInline principalColorText");
   const [dropright, setDropright] = useState("hide");
   const [cardvisible, setCardvisible] = useState(

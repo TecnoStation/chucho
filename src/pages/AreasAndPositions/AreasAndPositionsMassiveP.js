@@ -7,8 +7,10 @@ import Like from "../../assets/img/icons/bien_hecho.svg";
 import { Link, useHistory } from "react-router-dom";
 import "./AreasAndPositions.scss";
 import Screendefault from "../../components/Screens/Screendefault";
+import { useTranslation } from "react-i18next";
 
 export default function AreasAndPositionsMassiveP() {
+  const [t, i18n] = useTranslation("global");
   const [modalUpload, setModalUpload] = useState(false);
 
   const closeModalUpload = () => {

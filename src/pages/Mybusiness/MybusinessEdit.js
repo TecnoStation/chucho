@@ -26,6 +26,7 @@ import Bien from "../../assets/img/icons/bien_hecho.svg";
 import "./MybusinessEdit.scss";
 import Modalcompetencies from "../../components/Modals/Modalcompetencies/Modalcompetencies";
 import Slidercompetencies from "../../components/Slider/Slidercompetencies";
+import { useTranslation } from "react-i18next";
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -34,6 +35,7 @@ const branchs = [];
 const competencies = [];
 
 export default function MybusinessEdit() {
+  const [t, i18n] = useTranslation("global");
   const { TabPane } = Tabs;
 
   const [modal, setModal] = useState(false);

@@ -1,7 +1,9 @@
 import React from "react";
 import { Button, Col, InputNumber, Row, Slider } from "antd";
+import { useTranslation } from "react-i18next";
 
 export default function Slidercompetencies(props) {
+  const [t, i18n] = useTranslation("global");
   console.log(props);
   return (
     <>

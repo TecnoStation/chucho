@@ -31,8 +31,10 @@ import Teams from "./Teams/Teams";
 import Teamv from "./Teams/Teamv";
 import TeamStarted from "./Teams/TeamStarted";
 import Collaborator from "./AreasAndPositions/Collaborator";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
+  const [t, i18n] = useTranslation("global");
   return (
     <Router>
       <Switch>

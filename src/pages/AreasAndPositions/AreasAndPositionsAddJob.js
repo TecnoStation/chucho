@@ -23,10 +23,12 @@ import { IoMdSquare } from "react-icons/io";
 import Avatar from "../../assets/img/avatar.png";
 import Warning from "../../assets/img/icons/atencion.svg";
 import Treearea from "../../components/Tree/Treearea";
+import { useTranslation } from "react-i18next";
 
 const { Option } = Select;
 
 export default function AreasAndPositionsAddJob() {
+  const [t, i18n] = useTranslation("global");
   const treeData = [
     {
       title: "CEO",

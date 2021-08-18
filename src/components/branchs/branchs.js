@@ -4,7 +4,6 @@ import More from "../../assets/img/icons/more_vert-24px.svg";
 
 export default function branchs(props) {
   const { data } = props;
-
   return data.map((branch, index) => (
     <Row
       key={index}

@@ -1,13 +1,15 @@
 import React from 'react'
 import { Form, Input, Button, Row, Col } from 'antd';
 import Logo from '../../assets/img/Evou-color.png'
+import { useTranslation } from "react-i18next";
+import { Link } from 'react-router-dom';
 
 import './Login.scss';
-import { Link } from 'react-router-dom';
+
 
 
 export default function RecoveryPassword() {
-
+    const [t, i18n] = useTranslation("global");
     const Send = () => {
         document.getElementById('sendTo').setAttribute('style', "display: none");
         document.getElementById('message').setAttribute('style', "display: flex");

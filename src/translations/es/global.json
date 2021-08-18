@@ -1,17 +1,17 @@
 {
     "login":{
         "h1-welcome" :"¡Bienvenido!",
-        "label-email":"Correo electrónico",
+        "label-email":"Usuario",
         "placeholder-user":"ejemplo@empresa.com",
         "label-password":"Contraseña",
         "placeholder-password" : "Contraseña",
         "check-box":"Mantener sesión abierta",
         "btn-start-sesion" : "Entrar",
         "btn-start-sesion-recovery":"Iniciar sesión",
-        "p-password-forgot" : "Olvide mi contraseña",
+        "p-password-forgot" : "Recuperar contraseña",
         "h2-password-restart" : "Reiniciar contraseña",
         "p-instructions-restart" : "Ingresa tu correo y te enviaremos una liga para reiniciar tu contraseña.",
-        "btn-recovery-password" :"Recuperar",
+        "btn-recovery-password" :"Recuperar contraseña",
         "p1-privacy":"Brivé Soluciones. All Rights Reserved.",
         "p2-privacy":"Legal",
         "p3-privacy":"Aviso de Privacidad",
@@ -19,7 +19,7 @@
         "label-new-password" :"Ingresa tu nueva contraseña",
         "label-repeat-password" :"Repite tu nueva contraseña",
         "btn-continue":"Continuar"
-    },
+    }, 
     "sidebar":{
         "organization-chart":"Organigrama",
         "evaluation360" : "Evaluación 360",

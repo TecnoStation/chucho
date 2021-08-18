@@ -1,7 +1,9 @@
 import { Col, Row } from "antd";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export default function DetailSuccess() {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
       <Row

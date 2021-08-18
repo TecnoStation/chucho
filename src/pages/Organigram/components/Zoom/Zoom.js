@@ -7,11 +7,13 @@ import { FaUsers } from "react-icons/fa";
 import { IoBusinessSharp } from "react-icons/io5";
 import MaterialIcon from "material-icons-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import "./Zoom.scss";
 import ModalErasersList from "../../../../components/Modals/ModalErasersList/ModalErasersList";
 
 export default function Zoom() {
+  const [t, i18n] = useTranslation("global");
   const menu = (
     <>
       <div className="menuToltip">

@@ -4,9 +4,12 @@ import More from "../../assets/img/icons/more_vert-24px.svg";
 import { Link } from "react-router-dom";
 import Avatar from "../../assets/img/avatar.png";
 import { SearchOutlined } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
+
 import "./Mybusiness.scss";
 
 export default function Mybusiness() {
+  const [t, i18n] = useTranslation("global");
   const menu = (
     <Menu>
       <Menu.Item key="0">

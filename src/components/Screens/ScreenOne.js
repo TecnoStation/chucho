@@ -1,8 +1,10 @@
 import { Button } from "antd";
 import React from "react";
 //import Screendefault from '../../../components/Screens/Screendefault'
+import { useTranslation } from "react-i18next";
 
 export default function ScreenOne(props) {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
       {/* <Screendefault> */}

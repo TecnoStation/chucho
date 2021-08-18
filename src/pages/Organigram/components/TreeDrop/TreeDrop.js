@@ -16,8 +16,10 @@ import ModalColor from "../../../../components/Modals/ModalColor/ModalColor";
 import ModalHistorialColaborator from "../../../../components/Modals/ModalHistorialColaborator/ModalHistorialColaborator";
 import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/ModalHistorialJob";
 import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
+import { useTranslation } from "react-i18next";
 
 export default function TreeDrop() {
+  const [t, i18n] = useTranslation("global");
   const [Permissions, setPermissions] = useState(false);
   const [Color, setColor] = useState(false);
 
