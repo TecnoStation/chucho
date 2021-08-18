@@ -1,8 +1,10 @@
 import React from "react";
 import { CloseOutlined } from "@ant-design/icons";
 import { Card, Col, Row, Form, Input, Button } from "antd";
+import { useTranslation } from "react-i18next";
 
 export default function Modalcustom(props) {
+  const [t, i18n] = useTranslation("global");
   const closeModal = () => {
     let screen = document.getElementById("screen");
     screen.setAttribute("style", "display: none;");

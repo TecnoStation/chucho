@@ -1,8 +1,10 @@
 import React from "react";
 import { Tree, TreeNode } from "react-organizational-chart";
 import CardNodeErase from "../CardNode/CardNodeErase";
+import { useTranslation } from "react-i18next";
 
 export default function TreeEraser() {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
       <Tree

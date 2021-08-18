@@ -2,10 +2,12 @@ import React from "react";
 import { Col, Dropdown, Menu } from "antd";
 import { Link } from "react-router-dom";
 import More from "../../assets/img/icons/more_vert-24px.svg";
+import { useTranslation } from "react-i18next";
 
 import "./Simplecard.scss";
 
 export default function Simplecard(props) {
+  const [t, i18n] = useTranslation("global");
   const { teams } = props;
 
   const menu = (

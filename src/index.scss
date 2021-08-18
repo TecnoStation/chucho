@@ -4,7 +4,6 @@ $contorno: #394a7626;
 $secuA: #dbfcff;
 $GreenMarker: #66bb6a;
 $color-orange: #fcb74d;
-$color-icon-gray: #5e6d88;
 
 //colores
 
@@ -15,7 +14,7 @@ $color-secu-c: #333f48;
 $color-secu-d: #c1c6c8;
 $color-base-b: #aadb1e;
 $color-principal-text: #00205b;
-$color-secondary-text: #ccd3e0;
+$color-secondary-text: #5e6d88;
 $color-input: #aab4c8;
 $color-margin: #e2e6ec;
 $color-hover: #f4f6fb;
@@ -26,35 +25,18 @@ $color-yellow: #d3c02c;
 $color-red: #d32c2c;
 $color-pendings: #ff5d5d;
 
-#ccd3e0 body {
+body {
   margin: 0;
-  font-family: "lato" !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: "lato" !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span,
-b,
-label,
-.ant-modal-title,
-.ant-col,
-.ant-form-item-label > label {
-  color: $color-principal-text;
-}
-
-.ant-dropdown-menu-item-disabled span {
-  color: $color-secondary-text;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 .square {
@@ -85,9 +67,6 @@ label,
   border-radius: 5px !important;
   height: 32px;
   width: auto;
-  span {
-    color: $color-white !important;
-  }
 }
 
 .primaryB {
@@ -130,8 +109,8 @@ label,
 
 .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab,
 .ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab {
-  background: $color-white !important;
-  color: $color-base !important;
+  background: $color-base;
+  color: $color-white;
   border-radius: 10px 10px 0px 0px !important;
   height: 35px;
   width: 100px;
@@ -140,20 +119,9 @@ label,
   justify-content: center;
 }
 
-.ant-tabs-tab .ant-tabs-tab-active {
-  background: $color-base !important;
-  color: $color-white !important;
-}
-
-.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active,
-.ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab-active {
-  background: $color-base !important;
-  color: $color-white !important;
-}
-
-.ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active .ant-tabs-tab-btn,
-.ant-tabs-card > div > .ant-tabs-nav .ant-tabs-tab-active {
-  color: $color-white !important;
+.ant-tabs-tab-active {
+  background: $color-white !important;
+  color: $color-base !important;
 }
 
 .tabPane {
@@ -195,7 +163,7 @@ label,
 }
 
 .third {
-  width: 13vw;
+  width: 180px;
   color: $color-link;
   border: 1px solid $color-link;
   font-weight: bold;
@@ -213,38 +181,29 @@ label,
 .thirdBtnTwo {
   width: 136px;
   height: 32px;
-  color: $color-link !important;
+  color: $color-link;
   border: 1px solid $color-link;
   font-size: 14px !important;
   font-weight: bold;
-}
-
-.thirdBtnTwo span {
-  color: $color-link !important;
 }
 
 .iconGreen {
   color: $color-base;
 }
 
-.iconGreenTwo,
-.ant-col .iconGreenTwo span {
-  color: $GreenMarker !important;
+.iconGreenTwo {
+  color: $GreenMarker;
 }
 
-.iconGray,
-.ant-col .iconGray span,
-.ant-col .iconGray img {
-  color: $color-icon-gray !important;
+.iconGray {
+  color: $color-secondary-text;
 }
 
-.iconRed,
-.ant-col .iconRed span {
-  color: $color-red !important;
+.iconRed {
+  color: $color-red;
 }
 
-.iconSureGray,
-.ant-col .iconSureGray {
+.iconSureGray {
   color: $color-input !important;
 }
 
@@ -252,43 +211,38 @@ label,
   color: $color-link !important;
 }
 
-.btnBlue,
-.btnBlue span {
+.iconBluehard .material-icons {
+  color: $color-principal-text !important;
+}
+
+.btnBlue {
   background: $color-link;
-  color: $color-white !important;
+  color: $color-white;
 }
 
 .iconAjust {
-  margin-top: -0.6vh;
-  font-size: 2vw;
+  margin-right: 20px;
+  margin-top: -5px;
+  font-size: 30px;
   position: absolute;
-  left: 0.8vw;
+  left: 10px;
 }
 
 .iconAjust2 {
-  font-size: 1.3vw;
+  margin-right: 20px;
+  margin-top: px;
+  font-size: 20px;
   position: absolute;
-  left: 0.8vw;
+  left: 10px;
 }
 
 .textAjust {
   float: right;
-  color: $color-white;
-  margin-right: -0.2vw !important;
-  font-size: 1vw;
-  margin-top: -0.3vh;
-}
-
-.textAjust:hover {
-  color: $color-link;
 }
 
 .textAjust2 {
   float: right;
-  margin-right: 1.5vw !important;
-  color: $color-link;
-  font-size: 1vw;
-  margin-top: -0.3vh;
+  margin-right: 20px !important;
 }
 
 .textAjust3 {
@@ -300,7 +254,6 @@ label,
   float: right;
   margin-right: 5px !important;
   font-weight: bold;
-  color: $color-white;
 }
 
 .textAjust5 {
@@ -324,6 +277,8 @@ label,
   .ant-modal-body {
     width: 110% !important;
     text-align: left;
+    // margin-left: -50px;
+    // padding-left: 75px;
   }
 }
 
@@ -363,7 +318,7 @@ label,
   border-left: 1px solid $color-margin;
 }
 
-.dividerLeftbold {
+.dividerLeftbold{
   border-left: 2px solid $color-margin;
 }
 
@@ -413,6 +368,6 @@ label,
   border: 1px solid $color-base !important;
 }
 
-.principalColorText {
+.principalColorText{
   color: $color-principal-text !important;
 }

@@ -23,11 +23,13 @@ import { MdDelete } from "react-icons/md";
 import { v4 as uuid } from "uuid";
 import "./AreasAndPositions.scss";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
+import { useTranslation } from "react-i18next";
 
 const { Option } = Select;
 const { TextArea } = Input;
 
 export default function Perfil() {
+  const [t, i18n] = useTranslation("global");
   const [flag, setFlag] = useState("gutter-row dividerLeft showBlock");
   const [flag2, setFlag2] = useState("gutter-row dividerLeft hide");
   const [flag3, setFlag3] = useState("gutter-row dividerLeft hide");

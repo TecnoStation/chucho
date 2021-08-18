@@ -2,9 +2,12 @@ import React from "react";
 import { Button } from "antd";
 import ScreenOrganigram from "../../components/Screens/ScreenOrganigram";
 import Start from "../../assets/img/icons/Grupo 262.svg";
+import { useTranslation } from "react-i18next";
+
 import "./Organigramstarted.scss";
 
 export default function Organigramstarted() {
+  const [t, i18n] = useTranslation("global");
   return (
     <div className="square custom">
       <div className="message">

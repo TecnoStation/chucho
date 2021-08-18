@@ -5,8 +5,10 @@ import {
   PlusOutlined,
   SearchOutlined,
 } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 
 export default function Modalcompetencies(props) {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
       <Modal

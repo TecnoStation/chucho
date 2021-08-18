@@ -2,10 +2,12 @@ import React from "react";
 import { Form, Button, Modal, Select, Row, Col } from "antd";
 
 import "./ModalColor.scss";
+import { useTranslation } from "react-i18next";
 
 const { Option } = Select;
 
 export default function ModalColor({ Color, setColor }) {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
       <Modal

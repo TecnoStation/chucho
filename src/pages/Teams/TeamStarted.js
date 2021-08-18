@@ -6,12 +6,15 @@ import { SearchOutlined } from "@ant-design/icons";
 
 import { BsFillGrid3X2GapFill, BsListUl } from "react-icons/bs";
 import { RiFilterFill } from "react-icons/ri";
+import { useTranslation } from "react-i18next";
+
 import "./Teams.scss";
 import CreateTeam from "./components/CreateTeam";
 
 const LOCAL_STORAGE_KEY = "list";
 
 export default function TeamStarted() {
+  const [t, i18n] = useTranslation("global");
   const [btn1, setBtn1] = useState("hidden");
   const [btn2, setBtn2] = useState("button");
   const [modalCreateTeam, setModalCreateTeam] = useState(false);

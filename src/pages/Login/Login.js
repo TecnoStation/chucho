@@ -16,14 +16,14 @@ export default function Login() {
         </div>
         <h2>{t("login.h1-welcome")}</h2>
         <Form name="form" layout="vertical">
-          <Form.Item name="username" label="Usuario">
-            <Input type="text" placeholder="ejemplo@empresa.com" />
+          <Form.Item name="username" label={t("login.label-email")}>
+            <Input type="text" placeholder={t("login.placeholder-user")} />
           </Form.Item>
-          <Form.Item name="password" label="Contraseña">
-            <Input type="password" placeholder="Contraseña" />
+          <Form.Item name="password" label={t("login.label-password")}>
+            <Input type="password" placeholder={t("login.placeholder-password")} />
           </Form.Item>
           <Form.Item style={{ textAlign: "left", marginTop: "-20px" }}>
-            <Checkbox>Mantener sesión abierta</Checkbox>
+            <Checkbox>{t("login.check-box")}</Checkbox>
           </Form.Item>
           <Form.Item style={{ textAlign: "left", marginTop: "-30px" }}>
             <Link to="/recoverypassword" className="linkText">

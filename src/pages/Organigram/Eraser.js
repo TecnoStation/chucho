@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import TreeEraser from "./components/TreeEraser/TreeEraser";
 import { Form, Button, Modal, Input } from "antd";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Eraser({ setEraser, setSave, save }) {
+  const [t, i18n] = useTranslation("global");
   useEffect(() => {
     setEraser("show");
   });

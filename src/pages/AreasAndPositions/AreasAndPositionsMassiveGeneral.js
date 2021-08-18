@@ -5,8 +5,10 @@ import React, { useState } from "react";
 //import { AiOutlineFileText } from 'react-icons/ai'
 import { Link } from "react-router-dom";
 import "./AreasAndPositions.scss";
+import { useTranslation } from "react-i18next";
 
 export default function AreasAndPositionsMassiveGeneral() {
+  const [t, i18n] = useTranslation("global");
   const [modalUpload, setModalUpload] = useState(false);
 
   const closeModalUpload = () => {

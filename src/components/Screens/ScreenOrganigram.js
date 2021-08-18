@@ -7,11 +7,14 @@ import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import Arrorup from "../../assets/img/icons/upload.svg";
 import Business from "../../assets/img/icons/empresa.svg";
 import Warning from "../../assets/img/icons/atencion.svg";
+import { useTranslation } from "react-i18next";
+
 import "./Screen.scss";
 
 let carusel = document.getElementsByTagName("Carousel");
 
 export default function ScreenOrganigram() {
+  const [t, i18n] = useTranslation("global");
   const titles = [
     "¿Por qué crear un Organigrama?",
     "¿Qué compone a mi organigrama?",

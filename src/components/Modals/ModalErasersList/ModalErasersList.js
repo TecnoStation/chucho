@@ -3,8 +3,11 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ModalMessage from "../ModalMessage/ModalMessage";
 import Warning from "../../../assets/img/icons/atencion.svg";
+import { useTranslation } from "react-i18next";
+
 
 function ModalErasersList({ historial, setHistorial }) {
+  const [t, i18n] = useTranslation("global");
   const [screen, setScreen] = useState("screen");
   return (
     <>

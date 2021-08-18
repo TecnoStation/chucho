@@ -25,12 +25,14 @@ import {
 } from "react-icons/ai";
 import { ImArrowUp } from "react-icons/im";
 //import {  } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 import "./AreasAndPositions.scss";
 
 const { TabPane } = Tabs;
 
 export default function AreasAndPositions() {
+  const [t, i18n] = useTranslation("global");
   const history = useHistory();
   const location = useLocation();
   const query = new URLSearchParams(location.search);

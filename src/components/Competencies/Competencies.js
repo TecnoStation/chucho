@@ -2,8 +2,10 @@ import React from "react";
 import { Button, Col, Row } from "antd";
 import Pencil from "../../assets/img/icons/edit-24px.svg";
 import Delete from "../../assets/img/icons/delete-24px.svg";
+import { useTranslation } from "react-i18next";
 
 export default function Competencies(props) {
+  const [t, i18n] = useTranslation("global");
   const { data } = props;
 
   return data.map((data, index) => (

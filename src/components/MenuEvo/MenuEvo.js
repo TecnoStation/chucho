@@ -8,10 +8,12 @@ import Insights from "../../assets/img/icons/insights-24px.svg";
 import Grupo from "../../assets/img/icons/Grupo 625.svg";
 import { IoMdArrowDropright, IoMdArrowDropdown } from "react-icons/io";
 import Brive from "../../assets/img/brive/BVC-blanco-largo.svg";
+import { useTranslation } from "react-i18next";
 
 import "./MenuEvo.scss";
 
 export default function MenuEvo() {
+  const [t, i18n] = useTranslation("global");
   const [drop, setDrop] = useState("showBlock");
   const [visible, seVisible] = useState("hide");
   const [brive, setBrive] = useState("brive hide");

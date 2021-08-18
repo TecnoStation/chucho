@@ -1,7 +1,9 @@
 import React from 'react'
 import Logo from '../assets/img/Evou-color.png'
+import { useTranslation } from "react-i18next";
 
 export default function Nofound() {
+    const [t, i18n] = useTranslation("global"); 
     return (
         <div>
             

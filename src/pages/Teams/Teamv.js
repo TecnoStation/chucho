@@ -20,11 +20,13 @@ import { Link } from "react-router-dom";
 import More from "../../assets/img/icons/more_vert-24px.svg";
 
 import CreateTeam from "./components/CreateTeam";
+import { useTranslation } from "react-i18next";
 
 import "./Teams.scss";
 const LOCAL_STORAGE_KEY = "lista";
 
 export default function Teamsv() {
+  const [t, i18n] = useTranslation("global");
   const [btn1, setBtn1] = useState("hidden");
   const [btn2, setBtn2] = useState("button");
 

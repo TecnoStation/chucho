@@ -4,10 +4,12 @@ import Avatar from "../../assets/img/avatar.png";
 import Form from "antd/lib/form/Form";
 import Checkbox from "antd/lib/checkbox/Checkbox";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const { Option } = Select;
 
 export default function TeamMembers() {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
       <Row

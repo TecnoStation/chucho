@@ -1,8 +1,10 @@
 import { Button, Col, Modal, Row } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function ModalHistorialJob({ HistorialP, setHistorialP }) {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
       <Modal

@@ -26,6 +26,7 @@ import Bien from "../../assets/img/icons/bien_hecho.svg";
 import "./MybusinessEdit.scss";
 import Modalcompetencies from "../../components/Modals/Modalcompetencies/Modalcompetencies";
 import Slidercompetencies from "../../components/Slider/Slidercompetencies";
+import { useTranslation } from "react-i18next";
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -34,6 +35,7 @@ const branchs = [];
 const competencies = [];
 
 export default function MybusinessEdit() {
+  const [t, i18n] = useTranslation("global");
   const { TabPane } = Tabs;
 
   const [modal, setModal] = useState(false);
@@ -415,12 +417,12 @@ export default function MybusinessEdit() {
                 className="gutter-row"
                 span={24}
               >
-                <Link to="/miempresa">
+                <Link to="/organigrama/mybusiness">
                   <Button className="secondary" style={{ marginRight: "15px" }}>
                     Cancelar
                   </Button>
                 </Link>
-                <Link to="/miempresa">
+                <Link to="/organigrama/mybusiness">
                   <Button className="primary">Guardar</Button>
                 </Link>
               </Col>
@@ -516,10 +518,13 @@ export default function MybusinessEdit() {
                 className="gutter-row"
                 span={24}
               >
+                <Link to="/organigrama/mybusiness">
                 <Button className="secondary" style={{ marginRight: "15px" }}>
                   Cancelar
                 </Button>
-                <Link to="/miempresa">
+                </Link>
+                
+                <Link to="/organigrama/mybusiness">
                   <Button className="primary">Guardar</Button>
                 </Link>
               </Col>

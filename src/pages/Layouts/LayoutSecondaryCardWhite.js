@@ -9,6 +9,7 @@ import { Link, Redirect, Route } from "react-router-dom";
 import MenuEvo from "../../components/MenuEvo/MenuEvo";
 import MaterialIcon from "material-icons-react";
 import { MdDeviceHub } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
 import { Layout } from "antd";
 import "./LayoutSecondary.scss";
@@ -22,6 +23,7 @@ export default function LayoutSecondaryCardWhite({
   component: Component,
   ...rest
 }) {
+  const [t, i18n] = useTranslation("global");
   const menu = (
     <Menu>
       <Menu.Item key="0">

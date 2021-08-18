@@ -5,8 +5,10 @@ import { SearchOutlined } from "@ant-design/icons";
 import TreeDrop from "./components/TreeDrop/TreeDrop";
 import { Link } from "react-router-dom";
 import ModalErasersList from "../../components/Modals/ModalErasersList/ModalErasersList";
+import { useTranslation } from "react-i18next";
 
 function OrganigramList() {
+  const [t, i18n] = useTranslation("global");
   const menu = (
     <>
       <div className="menuToltip">

@@ -9,9 +9,11 @@ import { Link, Redirect, Route } from "react-router-dom";
 import MenuEvo from "../../components/MenuEvo/MenuEvo";
 import MaterialIcon from "material-icons-react";
 import { MdDeviceHub } from "react-icons/md";
-
 import { Layout } from "antd";
+import { useTranslation } from "react-i18next";
+
 import "./LayoutSecondary.scss";
+
 
 //const user = null;
 const user = { id: 1, username: "Lupita Gamiño" };
@@ -22,6 +24,7 @@ export default function LayoutSecondary({
   component: Component,
   ...rest
 }) {
+  const [t, i18n] = useTranslation("global");
   const menu = (
     <Menu>
       <Menu.Item key="0">

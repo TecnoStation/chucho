@@ -23,10 +23,12 @@ import { IoMdSquare } from "react-icons/io";
 import Avatar from "../../assets/img/avatar.png";
 import Warning from "../../assets/img/icons/atencion.svg";
 import Treearea from "../../components/Tree/Treearea";
+import { useTranslation } from "react-i18next";
 
 const { Option } = Select;
 
 export default function AreasAndPositionsAddJob() {
+  const [t, i18n] = useTranslation("global");
   const treeData = [
     {
       title: "CEO",
@@ -520,10 +522,12 @@ export default function AreasAndPositionsAddJob() {
               <b>Los campos con * son obligatorios</b>
             </Col>
             <Col span={5}>
-              <Button className="secondary">Cancelar</Button>
+              <Link to="/organigrama/areasandpositions-collaborator">
+                <Button className="secondary">Cancelar</Button>
+              </Link>
             </Col>
             <Col span={5}>
-              <Link to="/areasandpositions-collaborator">
+              <Link to="/organigrama/areasandpositions-collaborator">
                 <Button className="primary">Guardar</Button>
               </Link>
             </Col>

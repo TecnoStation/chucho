@@ -18,9 +18,11 @@ import Bien from "../../assets/img/icons/bien_hecho.svg";
 import Screendefault from "../../components/Screens/Screendefault";
 import { PlusCircleOutlined } from "@ant-design/icons";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
+import { useTranslation } from "react-i18next";
 const { Option } = Select;
 
 export default function Collaborator() {
+  const [t, i18n] = useTranslation("global");
   const [Password, setPassword] = useState(false);
 
   const [Documets, setDocumets] = useState(false);

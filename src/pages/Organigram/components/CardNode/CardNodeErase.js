@@ -8,6 +8,7 @@ import { FaUserAlt } from "react-icons/fa";
 import Insings from "../../../../assets/img/icons/insights-24px.svg";
 import Trending from "../../../../assets/img/icons/trending_up-24px.svg";
 import { PlusCircleOutlined } from "@ant-design/icons";
+import { useTranslation } from "react-i18next";
 
 import { v4 as uuid } from "uuid";
 
@@ -19,6 +20,7 @@ import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/M
 import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
 
 export default function CardNodeErase({ setModalPassword }) {
+  const [t, i18n] = useTranslation("global");
   const [Permissions, setPermissions] = useState(false);
   const [Color, setColor] = useState(false);
 
