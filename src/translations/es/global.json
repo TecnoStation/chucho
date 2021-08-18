@@ -160,6 +160,7 @@
 
         "my-business-edit":{
             "information":{
+                "tab-name": "Información",
                 "title": "Información de Mi empresa",
                 "form":{
                     "business-name": "Nombre de mi empresa",
@@ -186,6 +187,7 @@
                 }
             },
             "culture":{
+                "tab-name": "Cultura",
                 "title": "Cultura de Mi empresa",
                 "mission": "Proposito / Misión",
                 "mission-placeholder": "Ej. “Organizar la información del mundo y hacerla universalmente accesible y útil - Google (1000)",
@@ -199,7 +201,238 @@
                 "level": "Nivel"
             }
         },
+
+        "add-branch-modal":{
+            "title": "Agregar sucursal",
+            "branch-name": "Nombre de la sucursal",
+            "branch-name-placeholder": "Agrega un nombre descriptivo para está sucursal",
+            "branch-direction": "Dirección de la sucursal",
+            "branch-direction-placeholder": "Agrega la dirección de la sucursal"
+        },
+
+        "add-competencies-modal":{
+            "title": "Agregar competencias institucionales",
+            "text": "Agrega las competencias institucionales que deben tener todos los colaboradores de tu organización,puedes elegir hasta un máximo de tres.",
+            "search-competencies-placeholder": "Buscar competencia",
+            "second-modal": {
+                "text1": "Los colaboradores que tienen un alto dominio de esta competencia, por lo general tienen la capacidad de:",
+                "text2": "Entiende los mensajes verbales.",
+                "text3": "Comprende los aspectos no verbales de la comunicación.",
+                "text4": "Expresa sus ideas con claridad y coherencia.",
+                "text5": "Genera el impacto deseado en sus interlocutores.",
+                "text6": "Aquí puedes consultar el significado de cada nivel",
+                "text7": "Dominio de competencia",
+                "competent": "Competente",
+                "btn-cancel": "Cancelar",
+                "btn-save": "Guardar",
+                "btn-edit": "Editar"
+            },
+            "password-modal":{
+                "title": "Editar competencias institucionales",
+                "text": "Al editar las competencias institucionales se verá reflejado en todos los colaboradores de tu empresa.",
+                "insert-password": "Ingresa tu contraseña de usuario",
+                "insert-password-placeholder": "Ej. Ghkcclsd23",
+                "btn-cancel": "Cancelar",
+                "btn-save": "Guardar"
+            }
+
+        },
         
+        "dialog2":{
+            "title1": "¡Excelente!",
+            "title2": "El siguiente paso es crear las áreas de tu empresa",
+            "text": "En esta parte debes crear un listado de las áreas que componen tu empresa, ya que con esta información definiremos una primera estructura de tu organigrama.",
+            "btn-dialog": "Continuar"
+        },
+
+        "areas-and-positions":{
+            "structure":{
+                "tab-name": "Estructura",
+                "title": "Crear áreas de Mi empresa",
+                "btn-load-masive": "Carga masiva",
+                "btn-download-file": "Carga masiva",
+                "text1": "Agrega áreas y subáreas para crear el esqueleto del organigrama de tu empresa",
+                "input-placeholder-area": "Ej. Agrega nueva área",
+                "input-placeholder-subarea": "Ej. Agrega nueva sub área",
+                "link-add-new-area": "Agregar nueva área",
+                "positions-in-area": "Puestos en el área: CEO",
+                "insert- your-positions": "Ingresa los puestos de tus áreas.",
+                "link-add-position": "Agregar puesto",
+                "btn-cancel": "Cancelar",
+                "btn-save": "Guardar"           
+            },
+            "puesto":{
+                "tab-name": "Puesto",
+                "title": "Lista de puestos en Mi empresa",
+                "btn-load-masive": "Carga masiva",
+                "btn-download-file": "Descargar archivo",
+                "placeholder-input": "Buscar puesto",
+                "position-name": "Nombre del puesto",
+                "basic-information": "Información Básica",
+                "profiling": "Nombre del puesto",
+                "skills": "Habilidades",
+                "actions": "Acciones",
+                "link-add-new-area": "Agregar puesto"
+            }
+        },
+        "areasandpositions-masivee":{
+            "title": "Carga masiva de estructura",
+            "text1": "En este apartado vas a poder realizar la carga masiva de información.",
+            "text2": "Para facilitar la carga de datos, proponemos subir la información en 3 partes, la",
+            "text3": "primera sería un archivo con todas tus áreas y todos los puestos en tu empresa,",
+            "text4": "para facilitar este paso hemos creado una plantilla que puedes descargar, llenar y volver a subir:",
+            "text5": "Descargar plantilla de Estructura",
+            "text6": "Antes de importar los datos, es esencial asegurarse de que la tabla cumple estos tres requisitos:",
+            "text7": "- Cada columna tiene un encabezado.",
+            "text8": "- Deberás llenar los todos los campos que se te piden.",
+            "text9": "- Solo se aceptan archivos de excel (cvs y xls)",
+            "text10": "Adjunta tu archivo y ¡listo!",
+            "text11": "Subir archivo de estructura:",
+            "link-attach": "Adjuntar archivo",
+            "history-loads": "Historial de Cargas",
+            "file": "archivo",
+            "date-load": "Fecha de carga",
+            "status": "Estatus",
+            "actions": "Acciones",
+            "btn-cancel": "Cancelar",
+            "btn-load-file": "Subir archivo"
+        },
+
+        "areasandpositions-masivep":{
+            "title": "Carga masiva de puestos",
+            "text1": "En este apartado vas a poder realizar la carga masiva de información.",
+            "text2": "Para facilitar la carga de datos, proponemos subir la información en 3 partes, la",
+            "text3": "primera sería un archivo con todas tus áreas y todos los puestos en tu empresa,",
+            "text4": "para facilitar este paso hemos creado una plantilla que puedes descargar, llenar y volver a subir:",
+            "text5": "Descargar plantilla de Información de puesto",
+            "text6": "Antes de importar los datos, es esencial asegurarse de que la tabla cumple estos tres requisitos:",
+            "text7": "- Cada columna tiene un encabezado.",
+            "text8": "- Deberás llenar los todos los campos que se te piden.",
+            "text9": "- Solo se aceptan archivos de excel (cvs y xls)",
+            "text10": "Adjunta tu archivo y ¡listo!",
+            "text11": "Subir archivo de estructura:",
+            "link-attach": "Adjuntar archivo",
+            "history-loads": "Historial de Cargas",
+            "file": "archivo",
+            "date-load": "Fecha de carga",
+            "status": "Estatus",
+            "actions": "Acciones",
+            "btn-cancel": "Cancelar",
+            "btn-load-file": "Subir archivo"
+        },
+        "collaborator-form":{
+            "title": "Información del Colaborador",
+            "menu":{
+                "add-permissions": "Agregar permisos",
+                "view-objetives": "Ver Objetivos",
+                "view-proceedings": "Ver Expediente",
+                "assign-documents": "Asignar documentos",
+                "delete-collaborator": "Eliminar Colaborador"
+            },
+            "position-label": "Puesto",
+            "position-placeholder": "Selecciona el puesto a ocupar",
+            "name-label": "Nombre (s)*",
+            "name-placeholder": "Nombre",
+            "first-name-label": "Primer apellido*",
+            "first-name-placeholder": "Apellido paterno",
+            "last-name-label": "Segundo apellido",
+            "last-name-placeholder": "Apellido materno",
+            "date-brithday-label": "Fecha de nacimiento*",
+            "date-brithday-placeholder": "DD/MM/AAAA",
+            "nationality-label": "Nacionalidad*",
+            "nationality-placeholder": "Nacionalidad",
+            "marital-status-label": "Estado civil",
+            "marital-status-placeholder": "Selecciona una opción",
+            "gender-label": "Género",
+            "gender-placeholder": "Selecciona una opción",
+            "email-collaborator-label": "Correo electrónico del colaborador*",
+            "email-collaborator-placeholder": "Ej. nombre@empresa.com",
+            "date-admission-label": "Fecha de ingreso*",
+            "date-admission-placeholder": "DD/MM/AAAA",
+            "id-colaborator-label": "ID de colaborador",
+            "id-colaborator-placeholder": "Auto generada",
+            "city-label": "Ciudad",
+            "city-placeholder": "Ciudad donde vive",
+            "salary-label": "Salario",
+            "salary-placeholder": "Ej. $28,000.00 MXN",
+            "area-label": "Área*",
+            "area-placeholder": "Ej. Dirección de Finanzas",
+            "branch-label": "Sucursal*",
+            "branch-placeholder": "Zona Centro CDMX",
+            "report-to-label": "Reporta a (Nombre del Cargo)*",
+            "report-to-placeholder": "Ej. CEO de la Organización",
+            "email-to-report":"Correo electrónico a quien reporta*",
+            "email-to-report-placeholder":"Ej. nombre@empresa.com",
+            "educational-level-label": "Nivel de estudios",
+            "educational-level-placeholder": "Ej. Educación Superior",
+            "years-experience-label": "Años de experiencia",
+            "years-experience-placeholder": "Selecciona una opción",
+            "skills-label": "Habilidades técnicas",
+            "skills-placeholder": "Ej. Microso􀁛 Word",
+            "languajes-label": "Idiomas",
+            "languajes-placeholder": "Ej. Ingles Avanzado",
+            "text-footer": "Los campos con * son obligatorios",
+            "btn-cancel": "Cancelar",
+            "btn-save": "Guardar"
+        },
+        "assign-documents": {
+            "title": "Asignar documentos al colaborador",
+            "curp": "Curp",
+            "proof-studies": "Comprobante de estudios",
+            "proof-address": "Comprobante de domicilio",
+            "official-identification": "Identificación oficial",
+            "birth-certificate": "Acta de nacimiento",
+            "add-new-document": "Agrega nuevo documento",
+            "link-add-document": "Agregar documento",
+            "btn-cancel": "Cancelar",
+            "btn-save": "Guardar"
+        },
+        "delete-collaborator":{
+            "title": "Eliminar Colaborador",
+            "text": "Al eliminar un colaborador de tu organización ya no formará parte de tu organizacion.",
+            "insert-password": "Ingresa tu contraseña de usuario",
+            "insert-password-placeholder": "Ej. Ghkcclsd23",
+            "btn-cancel": "Cancelar",
+            "btn-save": "Guardar",
+            "warning":{
+                "title": "¡Atención!",
+                "text": "Estás a punto de eliminar al colaborador",
+                "question": "¿Seguro deseas eliminarlo?",
+                "btn-cancel": "Cancelar",
+                "btn-save": "Guardar"
+            }
+        },
+        "areasandpositions-perfil":{
+            "tab1":{
+                "title": "Información Colabrador",
+                "birthday-date": "Fecha de nacimiento",
+                "entry-date": "Fecha de ingreso",
+                "gender": "Genero",
+                "marital-status": "Estado civil",
+                "nationality": "Nacionalidad",
+                "city": "Ciudad",
+                "teams-which": "Equipos a los que pertenece",
+                "proccess-result": "Resultados de procesos"
+            },
+            "tab2":{
+                "title": "Información del puesto",
+                "level-position": "Nivel del puesto"
+
+
+
+               
+            }  
+        },
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -309,7 +542,7 @@
             "placeholder-jobModal":"Ej. Home Office",
             "label-startDate":"Fecha de ingreso",
             "placeholder-startDate":"Ej. 26 noviembre 2020",
-            "label-gender":"Genero",
+            "label-gender":"Género",
             "label-keyCode":"Clave",
             "placeholder-keyCode":"0da5d2ED",
             "label-birthDate":"Fecha de nacimiento",
