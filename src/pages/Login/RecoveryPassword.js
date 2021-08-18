@@ -13,7 +13,7 @@ export default function RecoveryPassword() {
     const Send = () => {
         document.getElementById('sendTo').setAttribute('style', "display: none");
         document.getElementById('message').setAttribute('style', "display: flex");
-    }
+    } 
 
     return (
         <div>
@@ -21,13 +21,13 @@ export default function RecoveryPassword() {
                 <div className="img">
                     <img alt="logo" src={Logo} width="175" height="85"/>
                 </div>  
-                <h2>Recuperar contraseña</h2>
+                <h2>{t("login.title-recovery")}</h2>
                 <Form  name="form" layout="vertical">
-                    <Form.Item name="username" label="Ingresa el usuario" >
-                        <Input type="text" placeholder="ejemplo@empresa.com" />
+                    <Form.Item name="username" label={t("login.label-email-recovery")} >
+                        <Input type="text" placeholder={t("login.placeholder-user-recovery")} />
                     </Form.Item>
                     <Form.Item >
-                        <Button className="primary" onClick={Send}>Recuperar</Button>
+                        <Button className="primary" onClick={Send}>{t("login.btn-recovery")}</Button>
                     </Form.Item>
                 </Form>
             </div>

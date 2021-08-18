@@ -19,7 +19,7 @@
         "recovery-success": "¡Listo!",
         "p-recovery-message": "Hemos enviado un correo electrónico al registrado para el usuario, sigue ls instrucciones para recuperar tu contraseña",
         "btn-success": "ok",
-        "h1-welcome-recovery" :"¡Bienvenido!",
+        "h1-welcome-recovery" :"¡Bienvenido!", 
         "h1-user" :"Usuario",
         "text": "Por favor configura tu contraseña",
         "insert-password": "Ingresa tu nueva contraseña",
