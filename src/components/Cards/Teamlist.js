@@ -1,12 +1,12 @@
 import React from "react";
 import { Col, Dropdown, Menu, Row } from "antd";
 import { Link } from "react-router-dom";
-import More from "../../assets/img/iconos/more_vert-24px.svg";
+import More from "../../assets/img/icons/more_vert-24px.svg";
 
 import "./Simplecard.scss";
 
 export default function Teamlist(props) {
-  const { equipos } = props;
+  const { teams } = props;
 
   const menu = (
     <Menu>
@@ -40,7 +40,9 @@ export default function Teamlist(props) {
     </Menu>
   );
 
-  return equipos.map((data, index) => (
+  console.log(teams);
+
+  return teams.map((data, index) => (
     <Row
       id={data.id}
       key={index}
@@ -49,13 +51,13 @@ export default function Teamlist(props) {
     >
       <Col span={11}>
         <span>
-          <b id="nombreTeam">{data.nombre}</b>
+          <b id="nameTeam">{data.name}</b>
         </span>
         <br />
         <span>{data.subtitle}</span>
       </Col>
       <Col span={11}>
-        <p>{data.fecha}</p>
+        <p>{data.date}</p>
       </Col>
       <Col span={2}>
         <Dropdown overlay={menu} trigger={["click"]}>

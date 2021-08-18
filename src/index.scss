@@ -25,15 +25,16 @@ $color-white: #ffffff;
 $color-yellow: #d3c02c;
 $color-red: #d32c2c;
 $color-pendings: #ff5d5d;
+
 #ccd3e0 body {
   margin: 0;
-  font-family: "lato";
+  font-family: "lato" !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: "lato";
+  font-family: "lato" !important;
 }
 
 h1,

@@ -25,7 +25,7 @@ export default function LayoutSecondaryCardGlass({
   const menu = (
     <Menu>
       <Menu.Item key="0">
-        <Link to="/areasypuestos-perfil">Ver Perfil</Link>
+        <Link to="/areasandpositions-perfil">Ver Perfil</Link>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="2">Cerrar sesión</Menu.Item>

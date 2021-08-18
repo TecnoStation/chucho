@@ -1,22 +1,22 @@
 import React from "react";
 import { Form, Button, Modal, Checkbox } from "antd";
 
-export default function ModalPermissions({ setPermisos, Permisos }) {
+export default function ModalPermissions({ setPermissions, Permissions }) {
   return (
     <>
       <Modal
         title="Agregar permisos"
         className="smallModal"
-        visible={Permisos}
+        visible={Permissions}
         onCancel={() => {
-          setPermisos(false);
+          setPermissions(false);
         }}
         footer={[
           <Button
             style={{ marginRight: "15px" }}
             className="secondary"
             onClick={() => {
-              setPermisos(false);
+              setPermissions(false);
             }}
           >
             Cancelar
@@ -24,7 +24,7 @@ export default function ModalPermissions({ setPermisos, Permisos }) {
           <Button
             className="primary"
             onClick={() => {
-              setPermisos(false);
+              setPermissions(false);
             }}
           >
             Aplicar

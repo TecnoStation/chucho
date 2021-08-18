@@ -29,7 +29,7 @@ export default function Login() {
             </Link>
           </Form.Item>
           <Form.Item>
-            <Link to="organigramainicio">
+            <Link to="/organigrama/organigramstarted">
               <Button style={{ width: "100%" }} className="primary">
                 Entrar
               </Button>
