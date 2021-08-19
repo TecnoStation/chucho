@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Form,
   Tabs,
@@ -27,23 +27,54 @@ import "./MybusinessEdit.scss";
 import Modalcompetencies from "../../components/Modals/Modalcompetencies/Modalcompetencies";
 import Slidercompetencies from "../../components/Slider/Slidercompetencies";
 import { useTranslation } from "react-i18next";
-
+import { v4 as uuid } from "uuid";
 const { TextArea } = Input;
 const { Option } = Select;
 
-const branchs = [];
 const competencies = [];
 
 export default function MybusinessEdit() {
   const [t, i18n] = useTranslation("global");
+
+  const [editionmode, setEditionmode] = useState(false);
+  const [branchs, setBranchs] = useState([]);
+  const [valueTemporal, setValueTemporal] = useState({
+    idBranch: "",
+    name: "",
+    direction: "",
+  });
+
+  const [form] = Form.useForm();
+
+  const sendBranch = (values) => {
+    setBranchs([
+      ...branchs,
+      {
+        idBranch: uuid(),
+        name: values["name"],
+        direction: values["direction"],
+      },
+    ]);
+    form.resetFields();
+    setModal(false);
+  };
+
+  const editBranch = (Item) => {
+    // setValueTemporal(Item);
+    setEditionmode(true);
+    setModal(true);
+  };
+
+  const deleteBranch = (Item) => {
+    const arrFilter = branchs.filter((item) => item.idBranch !== Item.idBranch);
+    setBranchs(arrFilter);
+  };
+
   const { TabPane } = Tabs;
 
   const [modal, setModal] = useState(false);
   const openModal = () => {
     setModal(true);
-  };
-  const closeModal = () => {
-    setModal(false);
   };
 
   const [modalCrop, setModalCrop] = useState(false);
@@ -146,13 +177,6 @@ export default function MybusinessEdit() {
     let screen = document.getElementById("screen");
     screen.setAttribute("style", "display: none;");
     setModalComp(false);
-  };
-
-  const sendBranch = () => {
-    let nameBranch = document.getElementById("name").value;
-    let directionBranch = document.getElementById("direction").value;
-    branchs.push({ name: nameBranch, direction: directionBranch });
-    setModal(false);
   };
 
   const sendCrop = () => {
@@ -349,7 +373,13 @@ export default function MybusinessEdit() {
                     </Form>
                   </Col>
                   <Col className="gutter-row" span={12}>
-                    <Link to="#" onClick={openModal}>
+                    <Link
+                      to="#"
+                      onClick={() => {
+                        setModal(true);
+                        setEditionmode(false);
+                      }}
+                    >
                       {" "}
                       <PlusCircleOutlined className="iconGreen" /> Agregar
                       sucursal
@@ -371,42 +401,109 @@ export default function MybusinessEdit() {
                     <div className="dividerBottom"></div>
                   </div>
                 </Row>
-                <div id="sucursales" className="sucursales">
-                  <Branchs data={branchs} />
-                </div>
+
+                <Branchs
+                  branchs={branchs}
+                  setValueTemporal={setValueTemporal}
+                  setModal={setModal}
+                  setItem={setItem}
+                  Item={Item}
+                  editBranch={editBranch}
+                  deleteBranch={deleteBranch}
+                />
+
                 <Modal
-                  title="Agregar sucursal"
+                  title={editionmode ? "Editar Sucursal" : "Agregar sucursal"}
                   className="middleModal"
                   visible={modal}
-                  onCancel={closeModal}
-                  onOk={sendBranch}
-                  footer={[
-                    <Button onClick={closeModal} className="secondary">
-                      Cancelar
-                    </Button>,
-                    <Button onClick={sendBranch} className="primary">
-                      Guardar
-                    </Button>,
-                  ]}
+                  onCancel={() => {
+                    setModal(false);
+                    setValueTemporal({
+                      idBranch: "",
+                      name: "",
+                      direction: "",
+                    });
+                    form.resetFields();
+                  }}
+                  footer={false}
                 >
-                  <Form layout="vertical">
-                    <Form.Item name="empresa" label="Nombre de la sucursal">
+                  <Form
+                    onFinish={sendBranch}
+                    layout="vertical"
+                    form={form}
+                    initialValues={Item}
+                  >
+                    <Form.Item
+                      label="Nombre de la sucursal"
+                      name="name"
+                      rules={[
+                        {
+                          required: true,
+                          message: "Ingresa el nombre de la sucursal",
+                        },
+                      ]}
+                      style={{ textAlign: "left" }}
+                    >
                       <Input
                         type="text"
-                        id="name"
                         placeholder="Agrega un nombre descriptivo para está sucursal"
                       />
                     </Form.Item>
                     <Form.Item
-                      name="direction"
                       label="Dirección de la sucursal"
+                      name="direction"
+                      rules={[
+                        {
+                          required: true,
+                          message: "Ingresa la dirección de la sucursal",
+                        },
+                      ]}
+                      style={{ textAlign: "left" }}
                     >
                       <Input
                         addonAfter={<EnvironmentOutlined />}
-                        id="direction"
                         placeholder="Agrega la dirección de la sucursal"
                       />
                     </Form.Item>
+
+                    <div style={{ textAlign: "right" }}>
+                      <Form.Item
+                        style={{
+                          display: "inline-block",
+                          marginRight: "16px",
+                        }}
+                      >
+                        <Button
+                          onClick={() => {
+                            setValueTemporal({
+                              name: "",
+                              direction: "",
+                            });
+                            setModal(false);
+                            form.resetFields();
+                          }}
+                          className="secondary"
+                        >
+                          Cancelar
+                        </Button>
+                      </Form.Item>
+
+                      <Form.Item
+                        style={{
+                          display: "inline-block",
+                        }}
+                      >
+                        {editionmode ? (
+                          <Button className="primary" htmlType="submit">
+                            Editar
+                          </Button>
+                        ) : (
+                          <Button className="primary" htmlType="submit">
+                            Guardar
+                          </Button>
+                        )}
+                      </Form.Item>
+                    </div>
                   </Form>
                 </Modal>
               </Col>
@@ -519,11 +616,11 @@ export default function MybusinessEdit() {
                 span={24}
               >
                 <Link to="/organigrama/mybusiness">
-                <Button className="secondary" style={{ marginRight: "15px" }}>
-                  Cancelar
-                </Button>
+                  <Button className="secondary" style={{ marginRight: "15px" }}>
+                    Cancelar
+                  </Button>
                 </Link>
-                
+
                 <Link to="/organigrama/mybusiness">
                   <Button className="primary">Guardar</Button>
                 </Link>
