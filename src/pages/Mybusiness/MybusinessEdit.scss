@@ -1,104 +1,103 @@
 @import "../../index.scss";
 
-.info{
-    width: 100%;
-    text-align: center !important;
-    padding-top: 15px;
-    padding-bottom: 20px;
+.info {
+  width: 100%;
+  text-align: center !important;
+  padding-top: 15px;
+  padding-bottom: 20px;
 }
 
-.formWork{
-    text-align: left;
+.formWork {
+  text-align: left;
 }
 
-.selectForm{
-    display: flex;
-    align-items:center;
+.selectForm {
+  display: flex;
+  align-items: center;
 }
 
-.dividerLeft{
-    border-left: 1px solid $color-margin;
+.dividerLeft {
+  border-left: 1px solid $color-margin;
 }
 
-.divider{
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.divider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-.dividerBottom{
-    border-bottom: 1px solid $color-margin;
-    width: 90%;
+.dividerBottom {
+  border-bottom: 1px solid $color-margin;
+  width: 90%;
 }
 
-.dividerBottomFull{
-    border-bottom: 1px solid $color-margin;
-    width: 100%;
+.dividerBottomFull {
+  border-bottom: 1px solid $color-margin;
+  width: 100%;
 }
 
-.sucursales span{
-    font-size: 0.8vw; 
+.namesbranch span {
+  font-size: 0.8vw;
 }
 
-.nombresSucursal{
-    font-weight: bold !important;
+.namesbranch {
+  font-weight: bold !important;
 }
 
-.direccionSucursal{
-    text-align: justify;
-    color:$color-link !important;
+.directionbranch {
+  text-align: justify;
+  color: $color-link !important;
 }
 
-.rowSucursal{
-    margin-top: 20px;
+.rowbranch {
+  margin-top: 20px;
 }
 
-.tagList{
-    width: 100%;
+.tagList {
+  width: 100%;
 }
 
-.tag{
-    width: 100%;
-    background: $color-white;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    height: 25px;
+.tag {
+  width: 100%;
+  background: $color-white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  height: 25px;
 
-    .plusOutlined{
-        color: $color-base;
-        float: right;
-        margin-top: 4px;
-        margin-right: 5px;
-        font-size: 13px;
-        
-    }
+  .plusOutlined {
+    color: $color-base;
+    float: right;
+    margin-top: 4px;
+    margin-right: 5px;
+    font-size: 13px;
+  }
 
-    .CheckCircleFilled{
-        color: $color-base;
-        float: right;
-        margin-top: 4px;
-        margin-right: 5px;
-        font-size: 17px;
-    }
+  .CheckCircleFilled {
+    color: $color-base;
+    float: right;
+    margin-top: 4px;
+    margin-right: 5px;
+    font-size: 17px;
+  }
 }
 
-.tag:hover{
-    border-color: $color-base;
-    color: $color-secu-b;
-    font-weight: bold;
+.tag:hover {
+  border-color: $color-base;
+  color: $color-secu-b;
+  font-weight: bold;
 }
 
-.tag-active{
-    background: $secuA;
-    border: 0px solid #000;
-    color: $color-secu-b;
-    font-weight: bold;
+.tag-active {
+  background: $secuA;
+  border: 0px solid #000;
+  color: $color-secu-b;
+  font-weight: bold;
 }
 
-.tag-cefective{
-    border: 1px solid  $color-base;
-    background: $color-white;
-    text-align: center;
-    width: 60px;
-    height: 30px; 
+.tag-cefective {
+  border: 1px solid $color-base;
+  background: $color-white;
+  text-align: center;
+  width: 60px;
+  height: 30px;
 }
