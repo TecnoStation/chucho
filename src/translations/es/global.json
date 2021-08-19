@@ -32,7 +32,7 @@
         "organization-chart":"Organigrama",
         "evaluation360" : "Evaluación 360",
         "objectives" : "Objetivos",
-        "keyIndicators" : "Indicadores Clave",
+        "keyindicators" : "Indicadores",
         "nineBox" : "Nine Box",
         "copyright-brive" :"Brive Soluciones All Rights Reserved",
         "copyright-legal" : "Legal",
@@ -143,14 +143,15 @@
                 "subactivity": "Subactividad",
                 "business-size": "Tamaño de la empresa",
                 "site-web": "Sitio Web",
-                "from": "Pais",
+                "from": "País",
                 "name-headquartes": "Nombre de oficinas centrales",
                 "headquartes-direction": "Dirección de Oficinas Centrales",
                 "branch": "Sucursales"
             },
             "business-culture":{
+                "title": "Cultura de Mi empresa",
                 "mission": "Proposito / Misión",
-                "View": "Proposito / Misión",
+                "view": "Visión",
                 "business-description": "Descripción de la empresa",
                 "institutional-competences": "Competencias Institucionales",
                 "level": "Nivel"

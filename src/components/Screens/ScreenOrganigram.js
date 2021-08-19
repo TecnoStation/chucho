@@ -16,9 +16,9 @@ let carusel = document.getElementsByTagName("Carousel");
 export default function ScreenOrganigram() {
   const [t, i18n] = useTranslation("global");
   const titles = [
-    "¿Por qué crear un Organigrama?",
-    "¿Qué compone a mi organigrama?",
-    "¿Como puedo subir los datos?",
+    t("organigrama.org-chart-on-boarding.carousel-title0"),
+    t("organigrama.org-chart-on-boarding.carousel-title1"),
+    t("organigrama.org-chart-on-boarding.carousel-title2"),
     "",
   ];
 
@@ -37,29 +37,24 @@ export default function ScreenOrganigram() {
         headStyle={{ textAlign: "center" }}
       >
         <div>
-          <Carousel ref={(ref) => (carusel = ref)}>
+          <Carousel ref={(ref) => (carusel = ref)}> 
             <Item>
               <div className="carruselItem">
                 <p>
-                  <b>Podrás mejora la organización y definición</b> de los ejes
-                  principales en la toma de decisiones.
+                  <b>{t("organigrama.carousel-content0.text1-a")}</b> {t("organigrama.carousel-content0.text1-b")}
                 </p>
                 <p>
-                  <b>Divide y segmenta el trabajo</b> por unidades tácticas,
-                  mejorando la gestión de la estrategia.
+                  <b>{t("organigrama.carousel-content0.text2-a")}</b> {t("organigrama.carousel-content0.text2-b")}
                 </p>
                 <p>
                   <b>
-                    Visualiza el vínculo entre el alcance del puesto y el
-                    talento del colaborador
+                  {t("organigrama.carousel-content0.text3-a")}
                   </b>
-                  cerrando las brechas de las áreas de acción de la compañías
-                  así como las responsabilidades de los miembros que la forman.
+                  {t("organigrama.carousel-content0.text3-b")}
                 </p>
                 <p>
                   <b>
-                    Optimiza y facilita la gestión de los procesos entre EVOU y
-                    Evaluatest
+                  {t("organigrama.carousel-content0.text4-a")}
                   </b>
                 </p>
               </div>
@@ -67,41 +62,32 @@ export default function ScreenOrganigram() {
             <Item>
               <div className="carruselItem">
                 <p>
-                  Para poder implementar tu organigrama se necesita conocer:
+                {t("organigrama.carousel-content1.text1-a")}
                 </p>
                 <p>
-                  <b>Tu empresa,</b>su información básica y su cultura.
+                  <b>{t("organigrama.carousel-content1.text2-a")},</b>{t("organigrama.carousel-content1.text2-b")}
                 </p>
                 <p>
-                  <b>La estructura de tu empresa,</b>es decir que áreas la
-                  componen y que puestos existen dentro de ella.
+                  <b>{t("organigrama.carousel-content1.text3-a")}</b>{t("organigrama.carousel-content1.text3-b")}
                 </p>
                 <p>
-                  <b>El perfil de tus puestos,</b>lo que se traduce en los datos
-                  básicos, las habilidades requeridas y las competencias de cada
-                  uno.
+                  <b>{t("organigrama.carousel-content1.text4-a")}</b>{t("organigrama.carousel-content1.text4-b")}
                 </p>
                 <p>
-                  <b>El perfil de las personas</b> que ocupan estos puestos, lo
-                  que significa sus datos básicos y las habilidades de cada uno.
+                  <b>{t("organigrama.carousel-content1.text4-c")}</b> {t("organigrama.carousel-content1.text4-d")}
                 </p>
               </div>
             </Item>
             <Item>
               <div className="carruselItem">
                 <p>
-                  Siempre vas a poder subir los datos directamente de forma
-                  manual, sin embargo, entendemos que existen ocasiones en las
-                  que es tanta la información, que hemos habilitado la carga
-                  masiva.
+                {t("organigrama.carousel-content2.text1-a")}
                 </p>
                 <p>
-                  La carga masiva estará habilitada en los puntos donde hemos
-                  detectado esta necesidad dentro del organigrama.
+                {t("organigrama.carousel-content2.text2-a")}
                 </p>
                 <p>
-                  En el panel principal vas a poder encontrar este icono para
-                  poder acceder a esta función:
+                {t("organigrama.carousel-content2.text3-a")}
                 </p>
                 <p style={{ textAlign: "center" }}>
                   <img alt="ico" width="80" className="" src={Arrorup} />
@@ -111,19 +97,15 @@ export default function ScreenOrganigram() {
             <Item>
               <div className="carruselItem">
                 <h4 style={{ textAlign: "center" }}>
-                  Iniciemos la creación de tu organigrama
+                  {t("organigrama.started.title")}
                 </h4>
 
                 <p className={br}>
-                  Para iniciar la creación de tu organigrama, te sugerimos
-                  comenzar llenando la información de la sección de “Mi
-                  Empresa”.
+                {t("organigrama.started.text1-a")}
                 </p>
 
                 <p className={br}>
-                  Si te faltara información para completar lo que te pedimos,
-                  siempre vas a poder regresar dando click desde el menú
-                  principal o en este icono:
+                {t("organigrama.started.text2-a")}
                 </p>
 
                 <p className={br} style={{ textAlign: "center" }}>
@@ -135,7 +117,7 @@ export default function ScreenOrganigram() {
                       style={{ width: "176px", height: "32px" }}
                       className="primary"
                     >
-                      Comenzar
+                      {t("organigrama.started.btn-started")}
                     </Button>
                   </Link>
                 </div>
@@ -187,7 +169,7 @@ export default function ScreenOrganigram() {
         <div style={{ textAlign: "center", marginTop: "5px" }}>
           <p>
             <Link className={link} onClick={showWarning} to="#">
-              Omitir
+              {t("organigrama.skip")}
             </Link>
           </p>
         </div>
@@ -197,19 +179,19 @@ export default function ScreenOrganigram() {
         <p style={{ textAlign: "center" }}>
           <img alt="ico" width="120" className="" src={Warning} />
         </p>
-        <h1>¡Atención!</h1>
-        <p>Estás a punto de omitir el onboarding.</p>
-        <p>Recuerda que te orienta sobre el uso de la plataforma.</p>
-        <p>¿Estás seguro?</p>
+        <h1>{t("organigrama.dialog-warnin.atention")}</h1>
+        <p>{t("organigrama.dialog-warnin.text1")}</p>
+        <p>{t("organigrama.dialog-warnin.text2")}</p>
+        <p>{t("organigrama.dialog-warnin.question")}</p>
         <Button
           onClick={showCard}
           className="secondary"
           style={{ marginRight: "15px" }}
         >
-          Continuar
+          {t("organigrama.dialog-warnin.btn-continue")}
         </Button>
         <Link to="/organigrama/organigram">
-          <Button className="primary btn">Omitir</Button>
+          <Button className="primary btn">{t("organigrama.dialog-warnin.btn-skip")}</Button>
         </Link>
       </Card>
     </div>

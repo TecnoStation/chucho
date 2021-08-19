@@ -9,17 +9,15 @@ import "./Organigramstarted.scss";
 export default function Organigramstarted() {
   const [t, i18n] = useTranslation("global");
   return (
-    <div className="square custom">
+    <div className="square custom"> 
       <div className="message">
         <p>
           <img alt="ico" className="" src={Start} />
         </p>
         <br />
-        <h1>¡Bienvenido al Organigrama!</h1>
+        <h1>{t("organigrama.empty-organigram-layout.h1-welcome")}</h1>
         <p>
-          Aquí podrás visualizar todas las estructuras de la organización,
-          además de facilitar la evaluación 360 y la vista de los equipos para
-          alcanzar los Objetivos.
+        {t("organigrama.empty-organigram-layout.p-row1")}
         </p>
         <br />
         <p>
@@ -28,7 +26,7 @@ export default function Organigramstarted() {
             style={{ width: "100px" }}
             onClick={showMesage}
           >
-            Iniciar
+            {t("organigrama.empty-organigram-layout.btn-start")}
           </Button>
         </p>
       </div>

@@ -14,7 +14,7 @@ export default function Mybusiness() {
     <Menu>
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link to="/organigrama/mybusiness-edit">Editar datos</Link>
+          <Link to="/organigrama/mybusiness-edit">{t("organigrama.mybusiness-principal.menu")}</Link>
         </Menu.Item>
       </Menu.Item>
     </Menu>
@@ -26,7 +26,7 @@ export default function Mybusiness() {
         <Col className="gutter-row" span={10}>
           <Row>
             <Col span={22} style={{ textAlign: "center" }}>
-              <h1>Datos de Mi empresa</h1>
+              <h1>{t("organigrama.mybusiness-principal.data-general.title")}</h1>
             </Col>
             <Col span={2}>
               <Dropdown overlay={menu} trigger={["click"]}>
@@ -50,14 +50,14 @@ export default function Mybusiness() {
           <Row>
             <Col span={12}>
               <span className="span">
-                <b>Nombre de mi empresa</b>
+                <b>{t("organigrama.mybusiness-principal.data-general.business-name")}</b>
               </span>
               <br />
               <span className="span">Manpower Inc.</span>
             </Col>
             <Col span={12}>
               <span className="span">
-                <b>Actividad de la empresa</b>
+                <b>{t("organigrama.mybusiness-principal.data-general.business-activity")}</b>
               </span>
               <br />
               <span className="span">Capital Humano</span>
@@ -66,7 +66,7 @@ export default function Mybusiness() {
           <Row style={{ marginTop: "40px" }}>
             <Col span={12}>
               <span className="span">
-                <b>Subactividad</b>
+                <b>{t("organigrama.mybusiness-principal.data-general.subactivity")}</b>
               </span>
               <br />
               <span className="span">
@@ -75,7 +75,7 @@ export default function Mybusiness() {
             </Col>
             <Col span={12}>
               <span className="span">
-                <b>Tamaño de la empresa</b>
+                <b>{t("organigrama.mybusiness-principal.data-general.business-size")}</b>
               </span>
               <br />
               <span className="span">1,500 - 2,500 empleados</span>
@@ -84,14 +84,14 @@ export default function Mybusiness() {
           <Row style={{ marginTop: "40px" }}>
             <Col span={12}>
               <span className="span">
-                <b>Sitio Web</b>
+                <b>{t("organigrama.mybusiness-principal.data-general.site-web")}</b>
               </span>
               <br />
               <span className="link">https://www.manpower.com/</span>
             </Col>
             <Col span={12}>
               <span className="span">
-                <b>País</b>
+                <b>{t("organigrama.mybusiness-principal.data-general.from")}</b>
               </span>
               <br />
               <span className="span">México</span>
@@ -100,7 +100,7 @@ export default function Mybusiness() {
           <Row style={{ marginTop: "40px" }}>
             <Col span={12}>
               <span className="span">
-                <b>Nombre de oficinas centrales</b>
+                <b>{t("organigrama.mybusiness-principal.data-general.name-headquartes")}</b>
               </span>
               <br />
               <span className="link">Manpower Ciudad de México</span>
@@ -110,7 +110,7 @@ export default function Mybusiness() {
           <Row style={{ marginTop: "40px" }}>
             <Col span={24}>
               <span className="span">
-                <b>Dirección de Oficinas Centrales</b>
+                <b>{t("organigrama.mybusiness-principal.data-general.headquartes-direction")}</b>
               </span>
               <br />
               <span className="link">
@@ -135,13 +135,13 @@ export default function Mybusiness() {
         <Col span={14} className="dividerLeft gutter-row">
           <Row>
             <Col span={24} style={{ textAlign: "center" }}>
-              <h1>Cultura de Mi empresa</h1>
+              <h1>{t("organigrama.mybusiness-principal.business-culture.title")}</h1>
             </Col>
           </Row>
           <Row>
             <Col span={24}>
               <span className="span">
-                <b>Proposito / Misión</b>
+                <b>{t("organigrama.mybusiness-principal.business-culture.mission")}</b>
               </span>
             </Col>
           </Row>
@@ -155,7 +155,7 @@ export default function Mybusiness() {
           <Row style={{ marginTop: "10px" }}>
             <Col span={24}>
               <span className="span">
-                <b>Visión</b>
+                <b>{t("organigrama.mybusiness-principal.business-culture.view")}</b>
               </span>
             </Col>
           </Row>
@@ -172,7 +172,7 @@ export default function Mybusiness() {
           <Row style={{ marginTop: "10px" }}>
             <Col span={24}>
               <span className="span">
-                <b>Descripción de la empresa</b>
+                <b>{t("organigrama.mybusiness-principal.business-culture.business-description")}</b>
               </span>
             </Col>
           </Row>
@@ -190,11 +190,11 @@ export default function Mybusiness() {
             style={{ marginTop: "40px", width: "100%" }}
           >
             <Col span={18}>
-              <b>Competencias Institucionales</b>
+              <b>{t("organigrama.mybusiness-principal.business-culture.institutional-competences")}</b>
               <span className="span"></span>
             </Col>
             <Col span={6}>
-              <b>Nivel</b>
+              <b>{t("organigrama.mybusiness-principal.business-culture.level")}</b>
               <span className="span"></span>
             </Col>
           </Row>
