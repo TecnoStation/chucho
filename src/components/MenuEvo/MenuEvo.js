@@ -35,13 +35,13 @@ export default function MenuEvo() {
         }}
       >
         <img alt="ico" className="itemicon" src={Hub} />
-        <p className="itemtex">Organigrama</p>
+        <p className="itemtex">{t("sidebar.organization-chart")}</p>
         <div className="slideSide">
-          <span>Organigrama</span>
+          <span>{t("sidebar.organization-chart")}</span>
           <hr></hr>
           <ul>
             <li>
-              <Link to="/organigrama/mybusiness">Mi empresa</Link>
+              <Link to="/organigrama/mybusiness">{t("organization-chart.my-busines")}</Link>
             </li>
             <Link
               to="#"
@@ -52,7 +52,7 @@ export default function MenuEvo() {
               }}
             >
               <li>
-                Areas y puestos
+              {t("organization-chart.areas-and-positions")}
                 <IoMdArrowDropright
                   style={{
                     position: "absolute",
@@ -73,7 +73,7 @@ export default function MenuEvo() {
               }}
             >
               <li>
-                Areas y puestos
+                {t("organization-chart.areas-and-positions")}
                 <IoMdArrowDropdown
                   style={{
                     position: "absolute",
@@ -85,23 +85,23 @@ export default function MenuEvo() {
                 />
                 <ul className={visible}>
                   <Link to="/organigrama/areasandpositions?tab=1">
-                    <li>Crear área</li>
+                    <li>{t("areas-and-positions.create-area")}</li>
                   </Link>
                   <Link to="/organigrama/areasandpositions?tab=2">
-                    <li>Crear Puestos</li>
+                    <li>{t("areas-and-positions.create-position")}</li>
                   </Link>
                   <Link to="/organigrama/areasandpositions-collaborator">
-                    <li>Crear colaborador</li>
+                    <li>{t("areas-and-positions.create-collaborator")}</li>
                   </Link>
                 </ul>
               </li>
             </Link>
 
             <Link to="/organigrama/teamstarted">
-              <li>Mis equipos</li>
+              <li>{t("organization-chart.my-teams")}</li>
             </Link>
             <Link to="/organigrama/organigram">
-              <li>Organigrama general</li>
+              <li>{t("organization-chart.general-organigram")}</li>
             </Link>
           </ul>
         </div>
@@ -116,14 +116,14 @@ export default function MenuEvo() {
         }}
       >
         <img alt="ico" className="itemicon" src={Tres} />
-        <p className="itemtex">Evaluación 360</p>
+        <p className="itemtex">{t("sidebar.evaluation360")}</p>
         <div className="slideSide">
-          <span>Evaluación 360</span>
+          <span>{t("sidebar.evaluation360")}</span>
           <hr></hr>
           <ul>
-            <li>Crear perfil de puesto</li>
-            <li>Crear proceso</li>
-            <li>Evaluaciones</li>
+            <li>{t("evaluation-360.create-perfil-position")}</li>
+            <li>{t("evaluation-360.create-process")}</li>
+            <li>{t("evaluation-360.evaluations")}</li>
           </ul>
         </div>
       </div>
@@ -137,14 +137,14 @@ export default function MenuEvo() {
         }}
       >
         <img alt="ico" className="itemicon" src={Trending} />
-        <p className="itemtex">Objetivos</p>
+        <p className="itemtex">{t("sidebar.objectives")}</p>
         <div className="slideSide">
-          <span>Objetivos</span>
+          <span>{t("sidebar.objectives")}</span>
           <hr></hr>
           <ul>
-            <li>Árbol de objetivos</li>
-            <li>Bandeja de entrada</li>
-            <li>Resumen de evaluaciones</li>
+            <li>{t("objectives.tree-objetives")}</li>
+            <li>{t("objectives.inbox")}</li>
+            <li>{t("objectives.resume-evaluations")}</li>
           </ul>
         </div>
       </div>
@@ -158,14 +158,14 @@ export default function MenuEvo() {
         }}
       >
         <img alt="ico" className="itemicon" src={Insights} />
-        <p className="itemtex">Indicadores</p>
+        <p className="itemtex">{t("sidebar.keyindicators")}</p>
         <div className="slideSide">
-          <span>Indicadores clave</span>
+          <span>{t("sidebar.keyindicators")}</span>
           <hr></hr>
           <ul>
-            <li>Mis indicadores</li>
-            <li>Mis evaluaciones</li>
-            <li>Gestionar</li>
+            <li>{t("key-Indicators.my-indicators")}</li>
+            <li>{t("key-Indicators.my-evaluations")}</li>
+            <li>{t("key-Indicators.manage")}</li>
           </ul>
         </div>
       </div>
@@ -179,9 +179,9 @@ export default function MenuEvo() {
         }}
       >
         <img alt="ico" className="itemicon" src={Grupo} />
-        <p className="itemtex">Nine Box</p>
+        <p className="itemtex">{t("sidebar.nineBox")}</p>
         <div className="slideSide">
-          <span>Nine Box</span>
+          <span>{t("sidebar.nineBox")}</span>
           <hr></hr>
           <ul>
             <Link
@@ -193,7 +193,7 @@ export default function MenuEvo() {
               }}
             >
               <li>
-                Planes de desarrollo
+                {t("nineBox.developmentplans")}
                 <IoMdArrowDropright
                   style={{
                     position: "absolute",
@@ -214,7 +214,7 @@ export default function MenuEvo() {
               }}
             >
               <li>
-                Planes de desarrollo
+                {t("nineBox.developmentplans")}
                 <IoMdArrowDropdown
                   style={{
                     position: "absolute",
@@ -225,22 +225,22 @@ export default function MenuEvo() {
                   }}
                 />
                 <ul className={visible}>
-                  <li>Crear plan</li>
-                  <li>Mis planes</li>
-                  <li>Provedores</li>
+                  <li>{t("developmentplans.create-plan")}</li>
+                  <li>{t("developmentplans.my-plans")}</li>
+                  <li>{t("developmentplans.vendors")}</li>
                 </ul>
               </li>
             </Link>
-            <li>Ver Nine Box</li>
+            <li>{t("nineBox.see-nine-box")}</li>
           </ul>
         </div>
       </div>
       <div className={brive}>
         <img alt="" src={Brive} width="160" />
         <div className="allRigths">
-          <p>Brivé Soluciones. All Rigths Reserved</p>
+          <p>{t("sidebar.copyright-brive")}</p>
           <p className="link">
-            Legal <br /> Aviso de Privacidad
+            {t("sidebar.copyright-legal")} <br /> {t("sidebar.copyright-privacy")}
           </p>
         </div>
       </div>

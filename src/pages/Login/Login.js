@@ -15,15 +15,12 @@ export default function Login() {
           <img alt="logo" src={Logo} width="175" height="85" />
         </div>
         <h2>{t("login.h1-welcome")}</h2>
-        <Form name="formstart" layout="vertical">
-          <Form.Item name="username" label={t("login.label-email")}>
+        <Form name="form" layout="vertical">
+          <Form.Item name="username" label={t("login.label-user")}>
             <Input type="text" placeholder={t("login.placeholder-user")} />
           </Form.Item>
           <Form.Item name="password" label={t("login.label-password")}>
-            <Input
-              type="password"
-              placeholder={t("login.placeholder-password")}
-            />
+            <Input.Password placeholder={t("login.placeholder-password")} />
           </Form.Item>
           <Form.Item style={{ textAlign: "left", marginTop: "-20px" }}>
             <Checkbox>{t("login.check-box")}</Checkbox>
