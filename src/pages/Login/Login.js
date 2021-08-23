@@ -15,19 +15,22 @@ export default function Login() {
           <img alt="logo" src={Logo} width="175" height="85" />
         </div>
         <h2>{t("login.h1-welcome")}</h2>
-        <Form name="form" layout="vertical">
+        <Form name="formstart" layout="vertical">
           <Form.Item name="username" label={t("login.label-email")}>
             <Input type="text" placeholder={t("login.placeholder-user")} />
           </Form.Item>
           <Form.Item name="password" label={t("login.label-password")}>
-            <Input type="password" placeholder={t("login.placeholder-password")} />
+            <Input
+              type="password"
+              placeholder={t("login.placeholder-password")}
+            />
           </Form.Item>
           <Form.Item style={{ textAlign: "left", marginTop: "-20px" }}>
             <Checkbox>{t("login.check-box")}</Checkbox>
           </Form.Item>
           <Form.Item style={{ textAlign: "left", marginTop: "-30px" }}>
             <Link to="/recoverypassword" className="linkText">
-              {t("login.link-recovery")} 
+              {t("login.link-recovery")}
             </Link>
           </Form.Item>
           <Form.Item>
@@ -38,9 +41,7 @@ export default function Login() {
             </Link>
           </Form.Item>
         </Form>
-        <p className="legacyP grayText">
-          {t("login.p1-privacy")}
-        </p>
+        <p className="legacyP grayText">{t("login.p1-privacy")}</p>
         <p>
           <Checkbox className="terminos grayText">
             {t("login.check-privacy")}

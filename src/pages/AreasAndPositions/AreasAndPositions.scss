@@ -1,10 +1,16 @@
 @import "../../index.scss";
 
-.info {
+.row {
   width: 100%;
-  text-align: center !important;
-  padding-top: 15px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  .ant-row {
+    margin-top: 16px;
+  }
+}
+
+.part1 {
+  background: lightcoral;
+  padding-right: 0px !important;
 }
 
 .info2 {
@@ -32,22 +38,73 @@
   margin-left: 20px !important;
 }
 
+.tabsheet1 {
+  width: 100%;
+  padding-right: 16px !important;
+}
+
 .formWork {
   text-align: left;
+}
+
+.formPos {
+  width: 100vw !important;
+  margin-top: 20px;
+  height: 32px;
+}
+
+.tagNombre {
+  background: $color-input;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  // justify-content: flex-start;
+  color: $color-white !important;
+  font-size: 1.4vw !important;
+  padding-left: 10px;
+}
+
+.areasdiv {
+  width: 100%;
+  background: $color-hover;
+  height: 32px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  padding-left: 16px;
+}
+
+.iconsize {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.subareasdiv {
+  width: 100%;
+  background: $secuA;
+  height: 32px;
+  padding-top: 7px;
+  padding-left: 10px;
+  padding-right: 4px;
+  padding-bottom: 5px;
+  border-radius: 5px;
 }
 
 .tagTwo {
   width: 100%;
   background: $color-hover;
   border-radius: 5px;
-  margin-bottom: 5px;
   border: 0px;
-  height: 25px;
+  height: 32px;
   color: #000;
+  // display: flex;
+  // align-items: center;
+  // justify-content: flex-start;
 }
 
 .tagThree {
-  width: 90%;
+  width: 70%;
   background: $secuA;
   border-radius: 5px;
   margin-bottom: 5px;

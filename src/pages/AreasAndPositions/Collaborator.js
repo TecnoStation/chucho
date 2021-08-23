@@ -19,6 +19,7 @@ import Screendefault from "../../components/Screens/Screendefault";
 import { PlusCircleOutlined } from "@ant-design/icons";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import { useTranslation } from "react-i18next";
+import ModalPermissions from "../../components/Modals/ModalPermissions/ModalPermissions";
 const { Option } = Select;
 
 export default function Collaborator() {
@@ -108,9 +109,13 @@ export default function Collaborator() {
     let screen = document.getElementById("screen");
     screen.setAttribute("style", "display: flex;");
   };
+  const onFinish = (values) => {
+    showmessage();
+    console.log("Success:", values);
+  };
 
   return (
-    <Form name="form1" layout="vertical">
+    <Form name="form1" layout="vertical" onFinish={onFinish}>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col className="gutter-row" span={11}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
@@ -143,7 +148,16 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Form.Item name="size" label="Puesto">
+              <Form.Item
+                name="size"
+                label="Puesto"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Select placeholder="Selecciona el puesto a ocupar">
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
@@ -155,7 +169,16 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Form.Item name="bussines" label="Nombre* ">
+              <Form.Item
+                name="name"
+                label="Nombre*"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Input type="text" placeholder="Nombre " />
               </Form.Item>
             </Col>
@@ -163,12 +186,21 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="bussines" label="Primer apellido* ">
+              <Form.Item
+                name="firstname"
+                label="Primer apellido* "
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Input type="text" placeholder="Apellido paterno " />
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="bussines" label="Segundo apellido* ">
+              <Form.Item name="lastName" label="Segundo apellido ">
                 <Input type="text" placeholder="Apellido materno " />
               </Form.Item>
             </Col>
@@ -176,12 +208,30 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="bussines" label="Fecha de nacimiento* ">
+              <Form.Item
+                name="birthday"
+                label="Fecha de nacimiento* "
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Input type="date" placeholder="DD/MM/AAAA " />
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="bussines" label="Nacionalidad* ">
+              <Form.Item
+                name="noationality"
+                label="Nacionalidad* "
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Input type="text" placeholder="Nacionalidad " />
               </Form.Item>
             </Col>
@@ -189,7 +239,16 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="size" label="Estado civil">
+              <Form.Item
+                name="stateMarital"
+                label="Estado civil"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Select placeholder="Selecciona una opción">
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
@@ -198,7 +257,16 @@ export default function Collaborator() {
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="size" label="Género">
+              <Form.Item
+                name="gender"
+                label="Género"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Select placeholder="Selecciona una opción">
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
@@ -211,8 +279,14 @@ export default function Collaborator() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <Form.Item
-                name="bussines"
+                name="email"
                 label="Correo electronico del colaborador "
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
               >
                 <Input type="text" placeholder="Ej. nombre@empresa.com " />
               </Form.Item>
@@ -221,12 +295,30 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="bussines" label="Fecha de ingreso ">
+              <Form.Item
+                name="dateBegin"
+                label="Fecha de ingreso "
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Input type="date" placeholder="DD/MM/AAAA " />
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="size" label="ID de colaborador">
+              <Form.Item
+                name="idCollaborator"
+                label="ID de colaborador"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Select placeholder="Auto generada">
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
@@ -240,7 +332,16 @@ export default function Collaborator() {
         <Col className="dividerLeft gutter-row" span={13}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="size" label="Ciudad">
+              <Form.Item
+                name="city"
+                label="Ciudad"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Select placeholder="Ciudad donde vive ">
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
@@ -249,7 +350,16 @@ export default function Collaborator() {
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="bussines" label="Salario ">
+              <Form.Item
+                name="salary"
+                label="Salario "
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Input type="text" placeholder="Ej.$28,000.00 MXN " />
               </Form.Item>
             </Col>
@@ -257,7 +367,16 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="size" label="Area*">
+              <Form.Item
+                name="area"
+                label="Area*"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Select placeholder="Ej Dirección de Finanzas">
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
@@ -266,7 +385,16 @@ export default function Collaborator() {
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="size" label="Sucursal*">
+              <Form.Item
+                name="branch"
+                label="Sucursal*"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Select placeholder="Zona centro CDMX">
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
@@ -278,7 +406,16 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Form.Item name="bussines" label="Reporta a* ">
+              <Form.Item
+                name="reprotTo"
+                label="Reporta a* "
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Input
                   type="text"
                   placeholder="Abraham Guadarrama Rangel-Diseñador UX "
@@ -289,7 +426,16 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="size" label="Nivel de estudios">
+              <Form.Item
+                name="studyLevel"
+                label="Nivel de estudios"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Select placeholder="Ej. Educación Superior">
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
@@ -298,7 +444,16 @@ export default function Collaborator() {
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="size" label="años de experiencia">
+              <Form.Item
+                name="experience"
+                label="años de experiencia"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Select placeholder="Selecciona una opción">
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
@@ -310,7 +465,16 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Form.Item name="bussines" label="Habilidades técnicas ">
+              <Form.Item
+                name="skills"
+                label="Habilidades técnicas "
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Input type="text" placeholder="Ej. Microsoft Word " />
               </Form.Item>
             </Col>
@@ -318,7 +482,16 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Form.Item name="bussines" label="Idiomas ">
+              <Form.Item
+                name="languajes"
+                label="Idiomas "
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Input type="text" placeholder="Ej. Ingles Avanzado " />
               </Form.Item>
             </Col>
@@ -334,7 +507,11 @@ export default function Collaborator() {
               </Link>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Button onClick={showmessage} className="primary">
+              <Button
+                htmlType="submit"
+                // onClick={showmessage}
+                className="primary"
+              >
                 Guardar
               </Button>
             </Col>
@@ -352,46 +529,8 @@ export default function Collaborator() {
           </Link>
         </Screendefault>
       </Row>
-      <Modal
-        title="Agregar permisos"
-        className="smallModal"
-        visible={Permissions}
-        onCancel={closeModalPermissions}
-        onOk={sendPermissions}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalPermissions}
-          >
-            Cancelar
-          </Button>,
-          <Button className="primary" onClick={closeModalPermissions}>
-            Aplicar
-          </Button>,
-        ]}
-      >
-        <Form style={{ marginLeft: "10px" }}>
-          <Form.Item name="Administrador">
-            <Checkbox>Permisos de Administrador</Checkbox>
-          </Form.Item>
-          <Form.Item name="Nine" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para ver Nine Box</Checkbox>
-          </Form.Item>
-          <Form.Item name="remember" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos de Edición de Objetivos</Checkbox>
-          </Form.Item>
-          <Form.Item name="Organigrama" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para ver Organigrama</Checkbox>
-          </Form.Item>
-          <Form.Item name="editar" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para editar Organigrama</Checkbox>
-          </Form.Item>
-          <Form.Item name="Desarrollo" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para crear Plan de Desarrollo</Checkbox>
-          </Form.Item>
-        </Form>
-      </Modal>
+
+      <ModalPermissions />
 
       <Modal
         title="Asignar documentos al colaborador"

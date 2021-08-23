@@ -17,7 +17,7 @@ import Eraser from "./Organigram/Eraser";
 import Login from "./Login/Login";
 import Mybusiness from "./Mybusiness/Mybusiness";
 import MybusinessEdit from "./Mybusiness/MybusinessEdit";
-import AreasAndPositions from "./AreasAndPositions/AreasAndPositions";
+import AreasAndPositions from "./AreasAndPositions/AreasAndPosition";
 import AreasAndPositionsJob from "./AreasAndPositions/AreasAndPositionsAddJob";
 import AreasAndPositionsPerfil from "./AreasAndPositions/Perfil";
 import AreasAndPositionsMassiveE from "./AreasAndPositions/AreasAndPositionsMassiveE";
@@ -164,15 +164,11 @@ export default function Home() {
           path="/recoverypassword"
           component={RecoveryPassword}
         />
-         <LayoutPrimary
-          exact
-          path="/newpassword"
-          component={NewPassword}
-        />
+        <LayoutPrimary exact path="/newpassword" component={NewPassword} />
         <LayoutPrimary exact path="/login" component={Login} />
         <LayoutPrimary exact path="/" component={Login} />
         <LayoutPrimary path="*" component={Nofound} />
       </Switch>
-    </Router> 
+    </Router>
   );
 }

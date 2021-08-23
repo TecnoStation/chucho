@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Input, Form, Modal, Row, Col } from "antd";
 import Warning from "../../../assets/img/icons/atencion.svg";
+import Good from "../../../assets/img/icons/bien_hecho.svg";
 
 import "./ModalPassword.scss";
+import { Link } from "react-router-dom";
+
+//titleModal messageModal visible type messageWarning question function
 
 export default function ModalPassword({ Password, setPassword }) {
+  const [clearPassword, setclearPassword] = useState("");
+  const [form] = Form.useForm();
+  form.setFieldsValue({
+    password: "",
+  });
+
+  if (Password.titleWarning === "") {
+    Password.titleWarning = "¡Atención!";
+  }
   return (
     <>
       <Modal
@@ -31,43 +44,89 @@ export default function ModalPassword({ Password, setPassword }) {
             type="button"
             onClick={() => {
               setPassword(false);
-              const modal = Modal.info({
-                title: "",
-                content: (
-                  <Row>
-                    <Col span={24}>
-                      <p>
-                        <img alt="ico" className="" src={Warning} />
-                      </p>
-                    </Col>
-                    <Col span={24}>
-                      <h3>¡Atención!</h3>
-                    </Col>
-                    <Col span={24}>
-                      <h4>{Password.messageWarning}</h4>
-                    </Col>
-                    <Col span={24}>
-                      <h4>{Password.question}</h4>
-                      <br />
-                    </Col>
-                    <Col span={24}>
-                      <Button
-                        style={{ marginRight: "15px" }}
-                        onClick={() => modal.destroy()}
-                        className="secondary btn"
-                      >
-                        Cancelar
-                      </Button>
-                      <Button
-                        onClick={() => modal.destroy()}
-                        className="primary btn"
-                      >
-                        Eliminar
-                      </Button>
-                    </Col>
-                  </Row>
-                ),
-                onOk() {},
+              if (Password.type === 0) {
+                const modal = Modal.info({
+                  title: "",
+                  content: (
+                    <Row>
+                      <Col span={24}>
+                        <p>
+                          <img alt="ico" className="" src={Warning} />
+                        </p>
+                      </Col>
+                      <Col span={24}>
+                        <h3>¡Atención!</h3>
+                      </Col>
+                      <Col span={24}>
+                        <h4>{Password.messageWarning}</h4>
+                      </Col>
+                      <Col span={24}>
+                        <h4>{Password.question}</h4>
+                        <br />
+                      </Col>
+                      <Col span={24}>
+                        <Button
+                          style={{ marginRight: "15px" }}
+                          onClick={() => modal.destroy()}
+                          className="secondary btn"
+                        >
+                          Cancelar
+                        </Button>
+                        <Button
+                          onClick={() => {
+                            modal.destroy();
+                            Password.function();
+                          }}
+                          className="primary btn"
+                        >
+                          Eliminar
+                        </Button>
+                      </Col>
+                    </Row>
+                  ),
+                  onOk() {},
+                });
+              } else if (Password.type === 2) {
+                const modal = Modal.info({
+                  title: "",
+                  content: (
+                    <Row>
+                      <Col span={24}>
+                        <p>
+                          <img alt="ico" className="" src={Good} />
+                        </p>
+                      </Col>
+                      <Col span={24}>
+                        <h3>{Password.titleWarning}</h3>
+                      </Col>
+                      <Col span={24}>
+                        <h4>{Password.messageWarning}</h4>
+                      </Col>
+                      <Col span={24}>
+                        <h4>{Password.question}</h4>
+                        <br />
+                      </Col>
+                      <Col span={24}>
+                        <Button
+                          style={{ marginRight: "15px" }}
+                          onClick={() => {
+                            modal.destroy();
+                            Password.function();
+                          }}
+                          className="primary btn"
+                        >
+                          Hecho
+                        </Button>
+                      </Col>
+                    </Row>
+                  ),
+                  onOk() {},
+                });
+              } else if (Password.type === 1) {
+                Password.function();
+              }
+              form.setFieldsValue({
+                password: "",
               });
             }}
             className="primary"
@@ -77,9 +136,20 @@ export default function ModalPassword({ Password, setPassword }) {
       >
         <p style={{ textAlign: "left" }}>{Password.messageModal}</p>
         <br />
-        <Form layout="vertical">
+        <Form
+          form={form}
+          initialValues={{
+            password: "",
+          }}
+          layout="vertical"
+        >
           <Form.Item name="password" label="Ingresa tu contraseña de usuario">
-            <Input type="text" id="nombre" placeholder="Ej. Ghkcclsd23" />
+            <Input
+              type="password"
+              value={clearPassword}
+              id="nombre"
+              placeholder="Ej. Ghkcclsd23"
+            />
           </Form.Item>
         </Form>
       </Modal>

@@ -53,7 +53,6 @@ export default function Perfil() {
       setFlag5("showBlock");
       setFlag4("hide");
     }
-    console.log(key);
   }
 
   const editSkills = () => {
