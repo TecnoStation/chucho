@@ -240,7 +240,7 @@ export default function AreasAndPositionsAddJob() {
 
   return (
     <div>
-      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}> 
+      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col className="gutter-row" span={14}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col
@@ -297,10 +297,16 @@ export default function AreasAndPositionsAddJob() {
                       },
                     ]}
                     name="activity"
-                    label={t("organigrama.areasandpositions-addjob.label-levelposition")}
+                    label={t(
+                      "organigrama.areasandpositions-addjob.label-levelposition"
+                    )}
                     tooltip={info}
                   >
-                    <Select placeholder={t("organigrama.areasandpositions-addjob.placeholder-direction")}>
+                    <Select
+                      placeholder={t(
+                        "organigrama.areasandpositions-addjob.placeholder-direction"
+                      )}
+                    >
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
@@ -316,10 +322,16 @@ export default function AreasAndPositionsAddJob() {
                       },
                     ]}
                     name="subactivity"
-                    label={t("organigrama.areasandpositions-addjob.label-positionpersonalized")}
+                    label={t(
+                      "organigrama.areasandpositions-addjob.label-positionpersonalized"
+                    )}
                     tooltip={infosub}
                   >
-                    <Select placeholder={t("organigrama.areasandpositions-addjob.placeholder-personalized")}>
+                    <Select
+                      placeholder={t(
+                        "organigrama.areasandpositions-addjob.placeholder-personalized"
+                      )}
+                    >
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
@@ -377,7 +389,9 @@ export default function AreasAndPositionsAddJob() {
                   >
                     <Select
                       className="gutter-row"
-                      placeholder={t("organigrama.areasandpositions-addjob.placeholder-educationhigher")}
+                      placeholder={t(
+                        "organigrama.areasandpositions-addjob.placeholder-educationhigher"
+                      )}
                     >
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
@@ -398,7 +412,9 @@ export default function AreasAndPositionsAddJob() {
                   >
                     <Select
                       className="gutter-row"
-                      placeholder={t("organigrama.areasandpositions-addjob.placeholder-selec")}
+                      placeholder={t(
+                        "organigrama.areasandpositions-addjob.placeholder-selec"
+                      )}
                     >
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
@@ -432,16 +448,7 @@ export default function AreasAndPositionsAddJob() {
 
             <Row>
               <Col span={24}>
-                <Form.Item
-                  rules={[
-                    {
-                      required: true,
-                      message: "*Campo requerido",
-                    },
-                  ]}
-                  name="habilidades"
-                  label="Habilidades técnicas"
-                >
+                <Form.Item name="habilidades" label="Habilidades técnicas">
                   <Input
                     type="text"
                     id="habilidades"
@@ -474,20 +481,13 @@ export default function AreasAndPositionsAddJob() {
 
             <Row>
               <Col span={24}>
-                <Form.Item
-                  rules={[
-                    {
-                      required: true,
-                      message: "*Campo requerido",
-                    },
-                  ]}
-                  name="idiomas"
-                  label="Idiomas"
-                >
+                <Form.Item name="idiomas" label="Idiomas">
                   <Input
                     type="text"
                     id="idiomas"
-                    placeholder={t("organigrama.areasandpositions-addjob.placeholder-english")}
+                    placeholder={t(
+                      "organigrama.areasandpositions-addjob.placeholder-english"
+                    )}
                   />
                 </Form.Item>
               </Col>
@@ -627,7 +627,9 @@ export default function AreasAndPositionsAddJob() {
           <Row style={{ marginTop: "10px" }}>
             <Col span={24}>
               <p>
-                <b>{t("organigrama.areasandpositions-addjob.tex-colaborator")}</b>
+                <b>
+                  {t("organigrama.areasandpositions-addjob.tex-colaborator")}
+                </b>
               </p>
             </Col>
           </Row>

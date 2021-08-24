@@ -37,7 +37,7 @@ export default function CompetenciesList({
     <>
       {competenciesList.map((competence, index) =>
         competence.visible ? (
-          <>
+          <div className="rowC">
             <Tag
               className="tag"
               id={"competence" + component + index}
@@ -60,12 +60,14 @@ export default function CompetenciesList({
                 className="CheckCircleFilled"
               />
             </Tag>
-          </>
+          </div>
         ) : (
-          <Tag className="tag tag-active" key={index}>
-            {competence.name}
-            <CheckCircleFilled className="CheckCircleFilled" />
-          </Tag>
+          <div className="row">
+            <Tag className="tag tag-active" key={index}>
+              {competence.name}
+              <CheckCircleFilled className="CheckCircleFilled" />
+            </Tag>
+          </div>
         )
       )}
 

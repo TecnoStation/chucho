@@ -3,6 +3,7 @@ import { Form, Input, Button, Modal } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 //import { useTranslation } from "react-i18next";
 import CompetenciesList from "./components/CompetenciesList";
+const { Search } = Input;
 
 export default function Modalcompetencies({
   modalComp,
@@ -21,6 +22,28 @@ export default function Modalcompetencies({
 }) {
   //const [t, i18n] = useTranslation("global");
   console.log("componet: " + component);
+  //----------------- Filter Competencies ------------------------------------------
+  const filterCompetencies = () => {
+    const input = document.getElementById("filterComp");
+    const filter = input.value.toUpperCase();
+    const div = document.getElementById("tagList");
+    const row = div.getElementsByClassName("rowC");
+    let i;
+    for (i = 0; i < row.length; i++) {
+      let col = row[i].getElementsByClassName("tag")[0];
+      if (col) {
+        let txtValue = col.textContent || col.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          row[i].style.display = "";
+        } else {
+          row[i].style.display = "none";
+        }
+      }
+    }
+  };
+
+  //----------------- End Filter Competencies ------------------------------------------
+
   return (
     <>
       <Modal
@@ -45,13 +68,14 @@ export default function Modalcompetencies({
         </p>
         <Form name="seacrhCompetence" layout="vertical">
           <Form.Item name="empresa">
-            <Input
-              addonAfter={<SearchOutlined />}
+            <Search
+              id="filterComp"
+              onChange={filterCompetencies}
               placeholder="Buscar Competencia"
             />
           </Form.Item>
         </Form>
-        <div className="tagList">
+        <div id="tagList">
           <CompetenciesList
             component={component}
             setModalComp={setModalComp}
