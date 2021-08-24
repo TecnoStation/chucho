@@ -237,17 +237,19 @@
                 "btn-cancel": "Cancelar",
                 "btn-save": "Guardar",
                 "btn-edit": "Editar"
-            },
-            "password-modal":{
-                "title": "Editar competencias institucionales",
-                "text": "Al editar las competencias institucionales se verá reflejado en todos los colaboradores de tu empresa.",
-                "insert-password": "Ingresa tu contraseña de usuario",
-                "insert-password-placeholder": "Ej. Ghkcclsd23",
-                "btn-cancel": "Cancelar",
-                "btn-save": "Ingresar",
-                "btn-remove": "Eliminar"
             }
+        },
 
+        "password-modal":{
+            "title": "Editar competencias institucionales",
+            "text": "Al editar las competencias institucionales se verá reflejado en todos los colaboradores de tu empresa.",
+            "insert-password": "Ingresa tu contraseña de usuario",
+            "insert-password-placeholder": "Ej. Ghkcclsd234",
+            "btn-cancel": "Cancelar",
+            "btn-save": "Ingresar",
+            "btn-remove": "Eliminar",
+            "attention": "¡Atención!",
+            "btn-done": "Hecho"
         },
         
         "dialog2":{
