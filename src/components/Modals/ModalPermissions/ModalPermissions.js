@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next";
 export default function ModalPermissions({ Permissions, setPermissions }) {
   const [t, i18n] = useTranslation("global");
   return (
-    <>
+    <> 
       <Modal
-        title="Agregar permisos"
+        title={t("organigrama.collaborator-form.permissions-modal.title")}
         className="smallModal"
         visible={Permissions}
         onCancel={() => {
@@ -21,7 +21,7 @@ export default function ModalPermissions({ Permissions, setPermissions }) {
               setPermissions(false);
             }}
           >
-            Cancelar
+            {t("organigrama.collaborator-form.permissions-modal.btn-cancel")}
           </Button>,
           <Button
             className="primary"
@@ -29,28 +29,28 @@ export default function ModalPermissions({ Permissions, setPermissions }) {
               setPermissions(false);
             }}
           >
-            Aplicar
+            {t("organigrama.collaborator-form.permissions-modal.btn-appli")}
           </Button>,
         ]}
       >
         <Form style={{ marginLeft: "10px" }}>
           <Form.Item name="Administrador">
-            <Checkbox>Permisos de Administrador</Checkbox>
+            <Checkbox>{t("organigrama.collaborator-form.permissions-modal.permissions-adminitrator")}</Checkbox>
           </Form.Item>
           <Form.Item name="Nine" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para ver Nine Box</Checkbox>
+            <Checkbox>{t("organigrama.collaborator-form.permissions-modal.permissions-nine")}</Checkbox>
           </Form.Item>
           <Form.Item name="remember" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos de Edición de Objetivos</Checkbox>
+            <Checkbox>{t("organigrama.collaborator-form.permissions-modal.permissions-objectives")}</Checkbox>
           </Form.Item>
           <Form.Item name="Organigrama" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para ver Organigrama</Checkbox>
+            <Checkbox>{t("organigrama.collaborator-form.permissions-modal.permissions-organizatition")}</Checkbox>
           </Form.Item>
           <Form.Item name="editar" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para editar Organigrama</Checkbox>
+            <Checkbox>{t("organigrama.collaborator-form.permissions-modal.permissions-edit-organization")}</Checkbox>
           </Form.Item>
           <Form.Item name="Desarrollo" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para crear Plan de Desarrollo</Checkbox>
+            <Checkbox>{t("organigrama.collaborator-form.permissions-modal.permissions-plan-developing")}</Checkbox>
           </Form.Item>
         </Form>
       </Modal>

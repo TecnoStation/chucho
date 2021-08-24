@@ -26,7 +26,7 @@ function ModalDocument({ ModalDocumets, setModalDocumets }) {
 
   return (
     <Modal
-      title="Asignar documentos al colaborador"
+      title={t("organigrama.assign-documents.title")}
       className="smallModal"
       visible={ModalDocumets}
       onCancel={() => {
@@ -41,7 +41,7 @@ function ModalDocument({ ModalDocumets, setModalDocumets }) {
             setModalDocumets(false);
           }}
         >
-          Cancelar
+         {t("organigrama.assign-documents.btn-cancel")}
         </Button>,
         <Button
           className="primary"
@@ -49,32 +49,32 @@ function ModalDocument({ ModalDocumets, setModalDocumets }) {
             setModalDocumets(false);
           }}
         >
-          Guardar
+          {t("organigrama.assign-documents.btn-save")}
         </Button>,
       ]}
     >
       <Form style={{ marginLeft: "10px" }}>
         <Form.Item name="Administrador">
-          <Checkbox>CURP</Checkbox>
+          <Checkbox>{t("organigrama.assign-documents.curp")}</Checkbox>
         </Form.Item>
         <Form.Item name="Nine" style={{ marginTop: "-25px" }}>
-          <Checkbox>Comprobante de estudios</Checkbox>
+          <Checkbox>{t("organigrama.assign-documents.proof-studies")}</Checkbox>
         </Form.Item>
         <Form.Item name="remember" style={{ marginTop: "-25px" }}>
-          <Checkbox>Comprobante de domicilio</Checkbox>
+          <Checkbox>{t("organigrama.assign-documents.proof-address")}</Checkbox>
         </Form.Item>
         <Form.Item name="Organigrama" style={{ marginTop: "-25px" }}>
-          <Checkbox>Identificación oficia</Checkbox>
+          <Checkbox>{t("organigrama.assign-documents.official-identification")}</Checkbox>
         </Form.Item>
         <Form.Item name="editar" style={{ marginTop: "-25px" }}>
-          <Checkbox>Acta de nacimiento</Checkbox>
+          <Checkbox>{t("organigrama.assign-documents.birth-certificate")}</Checkbox>
         </Form.Item>
         <DocumentsList Documents={Documents} />
 
         <Form.Item name="Desarrollo" style={{ marginTop: "-25px" }}>
           <Link to="#" onClick={() => setFlag("show")}>
             {" "}
-            <PlusCircleOutlined onClick={() => {}} /> Agregar documento
+            <PlusCircleOutlined onClick={() => {}} /> {t("organigrama.assign-documents.link-add-document")}
           </Link>
         </Form.Item>
         <Row className={flag}>
@@ -82,7 +82,7 @@ function ModalDocument({ ModalDocumets, setModalDocumets }) {
             <Row style={{ marginTop: "-20px" }}>
               <Col span={24}>
                 <span>
-                  <b>Agrega un nuevo documento</b>
+                  <b>{t("organigrama.assign-documents.add-new-document")}</b>
                 </span>
                 <hr />
               </Col>

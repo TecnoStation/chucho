@@ -11,7 +11,7 @@ import {
   Modal,
   Checkbox,
 } from "antd";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import More from "../../assets/img/icons/more_vert-24px.svg";
 import Avatar from "../../assets/img/avatar.png";
 import Bien from "../../assets/img/icons/bien_hecho.svg";
@@ -25,28 +25,40 @@ const { Option } = Select;
 
 export default function Collaborator() {
   const [t, i18n] = useTranslation("global");
+  const [Password, setPassword] = useState(false);
 
-  //--------------------- permissions - Documents - password - etc -------------------z
+  const [Documets, setDocumets] = useState(false);
+  const closeModalDocuments = () => {
+    setDocumets(false);
+  };
+  const openModalDocuments = () => {
+    setDocumets(true);
+  };
 
   const [Permissions, setPermissions] = useState(false);
-  const [ModalDocumets, setModalDocumets] = useState(false);
-  const [Password, setPassword] = useState(false);
-  const history = useHistory();
-  const location = useLocation();
-  const query = new URLSearchParams(location.search);
+  const closeModalPermissions = () => {
+    setPermissions(false);
+  };
+  const sendPermissions = () => {
+    alert("permissions enviados");
+  };
+  const addPermissions = () => {
+    setPermissions(true);
+  };
 
-  //--------------------- end permissions -----------------------------------------------
+  const [flag, setFlag] = useState("hide");
+  const addDocument = () => {
+    setFlag("show");
+  };
+  const hiddeDocument = () => {
+    setFlag("hide");
+  };
 
   const menu = (
     <Menu>
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link
-            to="#"
-            onClick={() => {
-              setPermissions(true);
-            }}
-          >
+          <Link to="#" onClick={addPermissions}>
             {t("organigrama.collaborator-form.menu.add-permissions")}
           </Link>
         </Menu.Item>
@@ -54,29 +66,20 @@ export default function Collaborator() {
 
       <Menu.Item key="0">
         <Menu.Item key="3" disabled>
-          <Link to="#">
-            {t("organigrama.collaborator-form.menu.view-objetives")}
-          </Link>
+          <Link to="#">{t("organigrama.collaborator-form.menu.view-objetives")}</Link>
         </Menu.Item>
       </Menu.Item>
 
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link to="/organigrama/areasandpositions-perfil">
-            {t("organigrama.collaborator-form.menu.view-proceedings")}
-          </Link>
+          <Link to="/areasandpositions-perfil">{t("organigrama.collaborator-form.menu.view-proceedings")}</Link>
         </Menu.Item>
       </Menu.Item>
 
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link
-            onClick={() => {
-              setModalDocumets(true);
-            }}
-            to="#"
-          >
-            {t("organigrama.collaborator-form.menu.assign-documents")}
+          <Link onClick={openModalDocuments} to="#">
+          {t("organigrama.collaborator-form.menu.assign-documents")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -88,19 +91,11 @@ export default function Collaborator() {
             onClick={() => {
               setPassword({
                 visible: true,
-                type: 0,
                 titleModal: t("organigrama.delete-collaborator.title"),
-                messageModal: t("organigrama.delete-collaborator.text"),
-                messageWarning: t(
-                  "organigrama.delete-collaborator.warning.text"
-                ),
+                messageModal:
+                t("organigrama.delete-collaborator.text"),
+                messageWarning: t("organigrama.delete-collaborator.warning.text"),
                 question: t("organigrama.delete-collaborator.warning.question"),
-                function: () => {
-                  history.push({
-                    pathname: "/organigrama/areasandpositions",
-                    search: "?tab=1",
-                  });
-                },
               });
             }}
           >
@@ -124,7 +119,7 @@ export default function Collaborator() {
     <Form name="form1" layout="vertical" onFinish={onFinish}>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col className="gutter-row" span={11}>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}> 
             <Col span={22} style={{ textAlign: "left" }}>
               <h1>{t("organigrama.collaborator-form.title")}</h1>
             </Col>
@@ -294,12 +289,7 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Input
-                  type="text"
-                  placeholder={t(
-                    "organigrama.collaborator-form.email-collaborator-placeholder"
-                  )}
-                />
+                <Input type="text" placeholder={t("organigrama.collaborator-form.email-collaborator-placeholder")} />
               </Form.Item>
             </Col>
           </Row>
@@ -378,17 +368,14 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item
-                name="area"
-                label="Area*"
-                rules={[
+              <Form.Item name="area" rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-              >
-                <Select placeholder="Ej Dirección de Finanzas">
+                 label={t("organigrama.collaborator-form.area-label")}>
+                <Select placeholder={t("organigrama.collaborator-form.area-placeholder")}>
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -396,17 +383,14 @@ export default function Collaborator() {
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item
-                name="branch"
-                label="Sucursal*"
-                rules={[
+              <Form.Item name="branch" rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-              >
-                <Select placeholder="Zona centro CDMX">
+                 label={t("organigrama.collaborator-form.branch-label")}>
+                <Select placeholder={t("organigrama.collaborator-form.branch-placeholder")}>
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -417,21 +401,16 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Form.Item
-                name="reprotTo"
-                label="Reporta a* "
-                rules={[
+              <Form.Item name="reprotTo" rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-              >
+                 label={t("organigrama.collaborator-form.report-to-label")}>
                 <Input
                   type="text"
-                  placeholder={t(
-                    "organigrama.collaborator-form.report-to-placeholder"
-                  )}
+                  placeholder={t("organigrama.collaborator-form.report-to-placeholder")}
                 />
               </Form.Item>
             </Col>
@@ -439,17 +418,14 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item
-                name="studyLevel"
-                label="Nivel de estudios"
-                rules={[
+              <Form.Item name="studyLevel"rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-              >
-                <Select placeholder="Ej. Educación Superior">
+                  label={t("organigrama.collaborator-form.educational-level-label")}>
+                <Select placeholder={t("organigrama.collaborator-form.educational-level-placeholder")}>
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -457,17 +433,15 @@ export default function Collaborator() {
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item
-                name="experience"
-                label="años de experiencia"
-                rules={[
+              <Form.Item name="experience" rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-              >
-                <Select placeholder="Selecciona una opción">
+              
+                 label={t("organigrama.collaborator-form.years-experience-label")}>
+                <Select placeholder={t("organigrama.collaborator-form.years-experience-placeholder")}>
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -478,71 +452,66 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Form.Item
-                name="skills"
-                label="Habilidades técnicas "
-                rules={[
+              <Form.Item name="skills" rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-              >
-                <Input type="text" placeholder="Ej. Microsoft Word " />
+              
+                 label={t("organigrama.collaborator-form.skills-label")}>
+                <Input type="text" placeholder={t("organigrama.collaborator-form.skills-placeholder")} />
               </Form.Item>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Form.Item
-                name="languajes"
-                label="Idiomas "
-                rules={[
+              <Form.Item name="languajes" rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-              >
-                <Input type="text" placeholder="Ej. Ingles Avanzado " />
+              
+                 label={t("organigrama.collaborator-form.languajes-label")}>
+                <Input type="text" placeholder={t("organigrama.collaborator-form.languajes-placeholder")} />
               </Form.Item>
             </Col>
           </Row>
 
           <Row style={{ marginTop: "300px" }}>
             <Col className="gutter-row" span={15}>
-              {t("organigrama.collaborator-form.text-footer")}
+            {t("organigrama.collaborator-form.text-footer")}
             </Col>
             <Col className="gutter-row" span={5}>
               <Link to="/areasandpositions?tab=2">
-                <Button className="secondary">
-                  {t("organigrama.collaborator-form.btn-cancel")}
-                </Button>
+                <Button className="secondary">{t("organigrama.collaborator-form.btn-cancel")}</Button>
               </Link>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Button
-                htmlType="submit"
-                // onClick={showmessage}
-                className="primary"
-              >
-                Guardar
+              <Button  htmlType="submit" className="primary">
+              {t("organigrama.collaborator-form.btn-save")}
               </Button>
             </Col>
           </Row>
         </Col>
+        <Screendefault>
+          <p style={{ textAlign: "center" }}>
+            <img alt="ico" width="140" src={Bien} />
+          </p>
+          <h3>{t("organigrama.collaborator-form.well-done")}</h3>
+          <h3>{t("organigrama.collaborator-form.organization-created")}</h3>
+          <br />
+          <Link to="/organigrama">
+            <Button className="primary">{t("organigrama.collaborator-form.btn-done")}</Button>
+          </Link>
+        </Screendefault>
       </Row>
 
-      <ModalPermissions
-        Permissions={Permissions}
-        setPermissions={setPermissions}
-      />
-      <ModalDocument
-        ModalDocumets={ModalDocumets}
-        setModalDocumets={setModalDocumets}
-      />
+      <ModalPermissions />
 
+     <ModalDocument />
       <ModalPassword Password={Password} setPassword={setPassword} />
     </Form>
   );
