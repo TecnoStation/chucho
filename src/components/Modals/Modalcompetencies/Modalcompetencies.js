@@ -1,30 +1,49 @@
 import React from "react";
-import { Form, Input, Button, Modal, Tag } from "antd";
-import {
-  CheckCircleFilled,
-  PlusOutlined,
-  SearchOutlined,
-} from "@ant-design/icons";
-import { useTranslation } from "react-i18next";
+import { Form, Input, Button, Modal } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
+//import { useTranslation } from "react-i18next";
+import CompetenciesList from "./components/CompetenciesList";
 
-export default function Modalcompetencies(props) {
-  const [t, i18n] = useTranslation("global");
+export default function Modalcompetencies({
+  modalComp,
+  setModalComp,
+  competenciesList,
+  setCompetencies,
+  competencies,
+  setCompetenciesList,
+  setCompetenceName,
+  competenceName,
+  setSlider,
+  slider,
+  setEditionModeSlider,
+  editionModeSlider,
+  component,
+}) {
+  //const [t, i18n] = useTranslation("global");
+  console.log("componet: " + component);
   return (
     <>
       <Modal
         className="middleModal"
         title="Agregar competencias institucionales"
-        visible={props.modalComp}
-        onCancel={props.closeModalComp}
-        onOk={props.sendComp}
-        footer={<Button onClick={props.closeModalComp}>Cancelar</Button>}
+        visible={modalComp}
+        closable={false}
+        footer={
+          <Button
+            onClick={() => {
+              setModalComp(false);
+            }}
+          >
+            Cancelar
+          </Button>
+        }
       >
         <p>
           Agrega las competencias institucionales que deben tener todos los
           colaboradores de tu organización, puedes elegir hasta un máximo de
           tres.
         </p>
-        <Form name="form" layout="vertical">
+        <Form name="seacrhCompetence" layout="vertical">
           <Form.Item name="empresa">
             <Input
               addonAfter={<SearchOutlined />}
@@ -33,45 +52,20 @@ export default function Modalcompetencies(props) {
           </Form.Item>
         </Form>
         <div className="tagList">
-          <Tag
-            className="tag"
-            onClick={(e) => props.cefective("Actitud de Servicio", e)}
-          >
-            Actitud de Servicio <PlusOutlined className="plusOutlined" />
-          </Tag>
-          <Tag
-            className="tag"
-            onClick={(e) => props.cefective("Apego a Normas", e)}
-          >
-            Apego a Normas <PlusOutlined className="plusOutlined" />
-          </Tag>
-          <Tag
-            className="tag"
-            onClick={(e) => props.cefective("Capacidad para Aprender", e)}
-          >
-            Capacidad para Aprender <PlusOutlined className="plusOutlined" />
-          </Tag>
-          <Tag
-            className="tag"
-            onClick={(e) => props.cefective("Comunicación Efectiva", e)}
-          >
-            Comunicación Efectiva <PlusOutlined className="plusOutlined" />
-          </Tag>
-          <Tag
-            className="tag"
-            onClick={(e) =>
-              props.cefective("Control de Procesos - Administración", e)
-            }
-          >
-            Control de Procesos - Administración{" "}
-            <PlusOutlined className="plusOutlined" />
-          </Tag>
-          <Tag
-            className="tag tag-active"
-            onClick={(e) => props.cefective("Creatividad", e)}
-          >
-            Creatividad <CheckCircleFilled className="CheckCircleFilled" />
-          </Tag>
+          <CompetenciesList
+            component={component}
+            setModalComp={setModalComp}
+            competenciesList={competenciesList}
+            setCompetencies={setCompetencies}
+            competencies={competencies}
+            setCompetenciesList={setCompetenciesList}
+            setCompetenceName={setCompetenceName}
+            competenceName={competenceName}
+            setSlider={setSlider}
+            slider={slider}
+            setEditionModeSlider={setEditionModeSlider}
+            editionModeSlider={editionModeSlider}
+          />
         </div>
       </Modal>
     </>

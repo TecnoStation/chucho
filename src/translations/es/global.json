@@ -168,7 +168,7 @@
                     "business-name-placeholder": "Nombre",
                     "business-activity": "Actividad de la empresa",
                     "business-activity-placeholder": "Selecciona una opción",
-                    "subactivity": "Subactividad",
+                    "subactivity-busines": "Subactividad de la empresa",
                     "subactivity-placeholder": "Selecciona una opción",
                     "business-size": "Tamaño de la empresa",
                     "business-size-placeholder": "Selecciona una opción",
@@ -182,9 +182,12 @@
                     "headquartes-direction": "Dirección de Oficinas Centrales",
                     "headquartes-direction-placeholder": "Ubica en el mapa",
                     "add-branch-title": "Agregar sucursal",
+                    "search-branch-placeholder": "Buscar sucursal",
                     "add-branch-link": "Agregar sucursal",
                     "branches-added": "Sucursales agregadas",
-                    "direction": "dirección"
+                    "direction": "dirección",
+                    "btn-cancel": "Cancelar",
+                    "btn-save": "Guardar"
                 }
             },
             "culture":{
@@ -197,7 +200,7 @@
                 "business-description": "Descripción de la empresa",
                 "business-description-placeholder": "Ej. “Ser el motor de búsqueda más importante del mundo” - Google (1000 caracteres)",
                 "institutional-competencies": "Competencias Institucionales",
-                "add-competencies": "Agregar competencias",
+                "add-competencies-link": "Agregar competencias",
                 "competencies-added": "Competencias agregadas",
                 "level": "Nivel",
                 "btn-cancel": "Cancelar",

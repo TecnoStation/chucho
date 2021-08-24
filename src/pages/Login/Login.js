@@ -27,7 +27,7 @@ export default function Login() {
           </Form.Item>
           <Form.Item style={{ textAlign: "left", marginTop: "-30px" }}>
             <Link to="/recoverypassword" className="linkText">
-              {t("login.link-recovery")} 
+              {t("login.link-recovery")}
             </Link>
           </Form.Item>
           <Form.Item>
@@ -38,9 +38,7 @@ export default function Login() {
             </Link>
           </Form.Item>
         </Form>
-        <p className="legacyP grayText">
-          {t("login.p1-privacy")}
-        </p>
+        <p className="legacyP grayText">{t("login.p1-privacy")}</p>
         <p>
           <Checkbox className="terminos grayText">
             {t("login.check-privacy")}

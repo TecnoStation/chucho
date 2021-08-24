@@ -28,10 +28,12 @@ import { ImArrowUp } from "react-icons/im";
 import { useTranslation } from "react-i18next";
 
 import "./AreasAndPositions.scss";
+import ModalDownLoad from "../../components/Modals/ModalDownLoad/ModalDownLoad";
+import ModalMoveArea from "../../components/Modals/ModalMoveArea/ModalMoveArea";
 
 const { TabPane } = Tabs;
 
-export default function AreasAndPositions() {
+export default function AreasAndPositions2() {
   const [t, i18n] = useTranslation("global");
   const history = useHistory();
   const location = useLocation();
@@ -54,81 +56,12 @@ export default function AreasAndPositions() {
     }
   };
 
-  const options = [
-    { value: "CEO" },
-    { value: "Marketing" },
-    { value: "Ventas" },
-  ];
-
-  const [modalDelete, setModalDelete] = useState(false);
-
-  const deleteCollaborators = () => {
-    setModalDelete(true);
-  };
-  const closeModalDelete = () => {
-    setModalDelete(false);
-  };
-  const sendDelete = () => {
-    alert("ok");
-    setModalDelete(false);
-  };
-
-  const [modalPassword, setModalPassword] = useState(false);
-  const closeModalPassword = () => {
-    setModalPassword(false);
-    setModalDelete(false);
-  };
-  const sendPassword = () => {
-    setModalPassword(false);
-  };
-  const openModalPassword = () => {
-    setModalPassword(true);
-  };
-
-  const [modalMove, setModalMove] = useState(false);
-  const closeModalMove = () => {
-    setModalMove(false);
-    setModalDelete(false);
-  };
-  const sendMove = () => {
-    setModalMove(false);
-  };
-  const openModalMove = () => {
-    setModalMove(true);
-  };
-
+  //------------------------------------new code -----------------------------------
   const [modalDownload, setModalDownload] = useState(false);
-  const closeModalDownload = () => {
-    setModalDownload(false);
-  };
-  const sendDownload = () => {
-    setModalDownload(false);
-  };
-  const openModalDownload = () => {
-    setModalDownload(true);
-  };
+  const [Password, setPassword] = useState(false);
+  const [modalMove, setModalMove] = useState(false);
 
-  const closeGood = () => {
-    document.getElementById("screen").setAttribute("style", "display: none");
-    setModalDownload(false);
-  };
-
-  const ready = () => {
-    document.getElementById("screen").setAttribute("style", "display: flex");
-  };
-
-  const addJob = () => {
-    document.getElementById("showJob").setAttribute("style", "display: flex");
-  };
-
-  const cancelJob = () => {
-    document.getElementById("showJob").setAttribute("style", "display: none");
-  };
-
-  const saveJob = () => {
-    alert("Guardado");
-    document.getElementById("showJob").setAttribute("style", "display: none");
-  };
+  //-------------------------------end new code ---------------------------------------
 
   return (
     <>
@@ -140,8 +73,8 @@ export default function AreasAndPositions() {
       >
         <TabPane className="tabPane" tab={t("organigrama.areas-and-positions.structure.tab-name")} key="1">
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} className="info">
-            <Col className="gutter-row" span={12}>
-              <h3 style={{ textAlign: "left" }}>{t("organigrama.areas-and-positions.structure.title")}</h3>
+            <Col className="gutter-row tabsheet1" span={12}>
+              <h3 style={{ textAlign: "left" }}>Crear áreas de Mi empresa</h3>
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col
                   className="gutter-row"
@@ -166,7 +99,9 @@ export default function AreasAndPositions() {
                 >
                   <Button
                     className="btnBlue third"
-                    onClick={openModalDownload}
+                    onClick={() => {
+                      setModalDownload(true);
+                    }}
                     size="default"
                   >
                     {" "}
@@ -196,14 +131,11 @@ export default function AreasAndPositions() {
                 style={{ marginTop: "20px" }}
               >
                 <Col
-                  className="gutter-row"
+                  className="gutter-row tag"
                   span={24}
                   style={{ textAlign: "justify" }}
                 >
-                  <Tag className="tag">
-                    {" "}
-                    [ Nombre de la empresa ingresado en Mi empresa ]{" "}
-                  </Tag>
+                  [ Nombre de la empresa ingresado en Mi empresa ]
                 </Col>
               </Row>
 
@@ -212,47 +144,42 @@ export default function AreasAndPositions() {
                 style={{ marginTop: "20px" }}
               >
                 <Col
-                  className="gutter-row"
+                  className="gutter-row tagTwo"
                   span={24}
                   style={{ textAlign: "justify" }}
                 >
-                  <Tag className="tagTwo">
-                    {" "}
-                    <IoMdSquare className="iconGray" /> CEO{" "}
-                  </Tag>
+                  <IoMdSquare className="iconGray" /> CEO{" "}
                 </Col>
               </Row>
               <Row
                 gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
                 style={{ marginTop: "20px" }}
               >
-                <Col className="gutter-row" span={24}>
-                  <Tag className="tagThree">
-                    <Row>
-                      <Col span={12} style={{ textAlign: "left" }}>
-                        <IoMdSquare className="iconGreen" /> CEO
-                      </Col>
-                      <Col
-                        span={12}
-                        className="iconGreen"
-                        style={{ textAlign: "right" }}
-                      >
-                        <PlusCircleOutlined
-                          style={{ marginRight: "12px", marginTop: "5px" }}
-                        />
-                        <RiPencilFill
-                          style={{ marginRight: "10px", marginTop: "7px" }}
-                        />
-                        <BiGridVertical
-                          style={{ marginRight: "10px", marginTop: "7px" }}
-                        />
-                        <IoMdTrash
-                          onClick={deleteCollaborators}
-                          style={{ marginRight: "5px", marginTop: "7px" }}
-                        />
-                      </Col>
-                    </Row>
-                  </Tag>
+                <Col className="gutter-row tagThree" span={24}>
+                  <Row>
+                    <Col span={12} style={{ textAlign: "left" }}>
+                      <IoMdSquare className="iconGreen" /> CEO
+                    </Col>
+                    <Col
+                      span={12}
+                      className="iconGreen"
+                      style={{ textAlign: "right" }}
+                    >
+                      <PlusCircleOutlined
+                        style={{ marginRight: "12px", marginTop: "5px" }}
+                      />
+                      <RiPencilFill
+                        style={{ marginRight: "10px", marginTop: "7px" }}
+                      />
+                      <BiGridVertical
+                        style={{ marginRight: "10px", marginTop: "7px" }}
+                      />
+                      <IoMdTrash
+                        onClick={() => setModalMove(true)}
+                        style={{ marginRight: "5px", marginTop: "7px" }}
+                      />
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
 
@@ -267,16 +194,7 @@ export default function AreasAndPositions() {
                 >
                   <Form layout="vertical">
                     <Form.Item name="empresa" label="">
-                      <AutoComplete
-                        className="autoComplete"
-                        options={options}
-                        placeholder="Ej. Agrega nueva área"
-                        filterOption={(inputValue, option) =>
-                          option.value
-                            .toUpperCase()
-                            .indexOf(inputValue.toUpperCase()) !== -1
-                        }
-                      />
+                      <Input />
                     </Form.Item>
                   </Form>
                 </Col>
@@ -400,7 +318,9 @@ export default function AreasAndPositions() {
               <Button
                 className="btnBlue third"
                 style={{ textAlign: "left", marginRight: "20px" }}
-                onClick={openModalDownload}
+                onClick={() => {
+                  setModalDownload(true);
+                }}
                 size="default"
               >
                 {" "}
@@ -457,7 +377,7 @@ export default function AreasAndPositions() {
                   <RiPencilFill style={{ marginRight: "10px" }} />
                 </Link>
                 <IoMdTrash
-                  onClick={deleteCollaborators}
+                  onClick={() => setModalMove(true)}
                   style={{ marginRight: "5px" }}
                 />
               </Col>
@@ -496,7 +416,7 @@ export default function AreasAndPositions() {
                   <RiPencilFill style={{ marginRight: "10px" }} />
                 </Link>
                 <IoMdTrash
-                  onClick={deleteCollaborators}
+                  onClick={() => setModalMove(true)}
                   style={{ marginRight: "5px" }}
                 />
               </Col>
@@ -535,7 +455,7 @@ export default function AreasAndPositions() {
                   <RiPencilFill style={{ marginRight: "10px" }} />
                 </Link>
                 <IoMdTrash
-                  onClick={deleteCollaborators}
+                  onClick={() => setModalMove(true)}
                   style={{ marginRight: "5px" }}
                 />
               </Col>
@@ -574,7 +494,7 @@ export default function AreasAndPositions() {
                   <RiPencilFill style={{ marginRight: "10px" }} />
                 </Link>
                 <IoMdTrash
-                  onClick={deleteCollaborators}
+                  onClick={() => setModalMove(true)}
                   style={{ marginRight: "5px" }}
                 />
               </Col>
@@ -613,7 +533,7 @@ export default function AreasAndPositions() {
                   <RiPencilFill style={{ marginRight: "10px" }} />
                 </Link>
                 <IoMdTrash
-                  onClick={deleteCollaborators}
+                  onClick={() => setModalMove(true)}
                   style={{ marginRight: "5px" }}
                 />
               </Col>
@@ -631,14 +551,10 @@ export default function AreasAndPositions() {
                 <Input placeholder={t("organigrama.areas-and-positions.position.input-placeholder-position")} />
               </Col>
               <Col span={2} style={{ textAlign: "left", marginRight: "16px" }}>
-                <Button onClick={cancelJob} className="secondary">
-                {t("organigrama.areas-and-positions.position.btn-cancel")}
-                </Button>
+                <Button className="secondary">Cancelar</Button>
               </Col>
               <Col span={2} style={{ textAlign: "left" }}>
-                <Button onClick={saveJob} className="primary">
-                {t("organigrama.areas-and-positions.position.btn-save")}
-                </Button>
+                <Button className="primary">Guardar</Button>
               </Col>
               <Col span={10}></Col>
             </Row>
@@ -649,8 +565,8 @@ export default function AreasAndPositions() {
                 span={24}
                 style={{ textAlign: "left", marginLeft: "20px" }}
               >
-                <Link to="#" onClick={addJob}>
-                  <PlusCircleOutlined />{t("organigrama.areas-and-positions.position.link-add-new-position")}
+                <Link to="#">
+                  <PlusCircleOutlined /> Agregar nueva área
                 </Link>
               </Col>
             </Row>
@@ -672,204 +588,19 @@ export default function AreasAndPositions() {
               <br />
             </Col>
             <Col span={24}>
-              <Button onClick={closeGood} className="primary btn">
-                Hecho
-              </Button>
+              <Button className="primary btn">Hecho</Button>
             </Col>
           </Row>
         </div>
       </Screendefault>
 
-      <Modal
-        title="¿Qué deseas hacer con los colaboradores que pertenecen a esta área?"
-        className="modalCuztom"
-        visible={modalDelete}
-        onCancel={closeModalDelete}
-        onOk={sendDelete}
-        footer={[
-          <Button
-            style={{ width: "180px" }}
-            onClick={openModalPassword}
-            className="secondary"
-          >
-            Dar de baja{" "}
-          </Button>,
-          <Button
-            style={{ width: "180px" }}
-            onClick={openModalMove}
-            className="primary"
-          >
-            Mover a otra área
-          </Button>,
-        ]}
-      >
-        <Row>
-          <Col span={12}>
-            <Row>
-              <Col span={7}>
-                <p>
-                  <img alt="ico" width="50" src={Avatar} />
-                </p>
-              </Col>
-              <Col span={15}>
-                <span>
-                  <b>Laura Mendoza</b>
-                </span>
-                <br />
-                <span>Programador JR</span>
-              </Col>
-            </Row>
-            <Row>
-              <Col span={7}>
-                <p>
-                  <img alt="ico" width="50" src={Avatar} />
-                </p>
-              </Col>
-              <Col span={15}>
-                <span>
-                  <b>Laura Mendoza</b>
-                </span>
-                <br />
-                <span>Programador JR</span>
-              </Col>
-            </Row>
-            <Row>
-              <Col span={7}>
-                <p>
-                  <img alt="ico" width="50" src={Avatar} />
-                </p>
-              </Col>
-              <Col span={15}>
-                <span>
-                  <b>Laura Mendoza</b>
-                </span>
-                <br />
-                <span>Programador JR</span>
-              </Col>
-            </Row>
-            <br />
-          </Col>
-          <Col span={12}></Col>
-        </Row>
-      </Modal>
+      {/* */}
 
-      <Modal
-        title="Editar competencias institucionales"
-        visible={modalPassword}
-        onCancel={closeModalPassword}
-        onOk={sendPassword}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalPassword}
-          >
-            Cancelar
-          </Button>,
-          <input
-            type="button"
-            className="primary"
-            onClick={closeModalPassword}
-            value="Ingresar"
-          />,
-        ]}
-      >
-        <p>
-          Al editar las competencias institucionales se verá reflejado en todos
-          los colaboradores de tu empresa.
-        </p>
-        <br />
-        <Form layout="vertical">
-          <Form.Item name="password" label="Ingresa tu contraseña de usuario">
-            <Input type="text" id="nombre" placeholder="Ej. Ghkcclsd23" />
-          </Form.Item>
-        </Form>
-      </Modal>
-
-      <Modal
-        title="Selecciona el área al que los deseas mover"
-        visible={modalMove}
-        onCancel={closeModalMove}
-        onOk={sendMove}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalMove}
-          >
-            Cancelar
-          </Button>,
-          <input
-            type="button"
-            className="primary"
-            onClick={closeModalMove}
-            value="Mover"
-          />,
-        ]}
-      >
-        <Form layout="vertical">
-          <Form.Item name="password" label="">
-            <AutoComplete
-              className="autoComplete"
-              options={options}
-              placeholder="Buscar área"
-              filterOption={(inputValue, option) =>
-                option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !==
-                -1
-              }
-            />
-          </Form.Item>
-        </Form>
-        <Row>
-          <Col className="tagThree" span={24} style={{ textAlign: "left" }}>
-            <IoMdSquare className="iconGreen" /> Dirección de Finanzas
-          </Col>
-        </Row>
-      </Modal>
-
-      <Modal
-        className="middleModal"
-        title="Descarga el archivo"
-        visible={modalDownload}
-        onCancel={closeModalDownload}
-        onOk={sendDownload}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalDownload}
-          >
-            Cancelar
-          </Button>,
-          <input
-            type="button"
-            className="primary"
-            onClick={ready}
-            value="Descargar"
-          />,
-        ]}
-      >
-        <Row>
-          <Col span={12}>
-            <h3>Archivo</h3>
-          </Col>
-          <Col span={12}>
-            <h3>Fecha de creación</h3>
-          </Col>
-        </Row>
-        <Row style={{ marginTop: "20px" }}>
-          <Col span={3} style={{ textAlign: "right", marginTop: "-15px" }}>
-            <AiOutlineFileText
-              style={{ fontSize: "40px" }}
-              className="iconGreen"
-            />
-          </Col>
-          <Col span={10}>
-            <span>organigram2018.csv</span>
-          </Col>
-          <Col span={11}>10-julio-2021</Col>
-        </Row>
-      </Modal>
+      <ModalDownLoad
+        modalDownload={modalDownload}
+        setModalDownload={setModalDownload}
+      />
+      <ModalMoveArea modalMove={modalMove} setModalMove={setModalMove} />
     </>
   );
 }

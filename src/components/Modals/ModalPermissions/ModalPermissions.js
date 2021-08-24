@@ -2,7 +2,7 @@ import React from "react";
 import { Form, Button, Modal, Checkbox } from "antd";
 import { useTranslation } from "react-i18next";
 
-export default function ModalPermissions({ setPermissions, Permissions }) {
+export default function ModalPermissions({ Permissions, setPermissions }) {
   const [t, i18n] = useTranslation("global");
   return (
     <>

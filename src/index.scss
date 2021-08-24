@@ -307,6 +307,14 @@ code {
   }
 }
 
+.middleModal2 {
+  .ant-modal-content {
+    width: 500px !important;
+    height: 230px;
+    text-align: left !important;
+  }
+}
+
 .modalCuztom {
   .ant-modal-content {
     width: 400px !important;
@@ -318,7 +326,7 @@ code {
   border-left: 1px solid $color-margin;
 }
 
-.dividerLeftbold{
+.dividerLeftbold {
   border-left: 2px solid $color-margin;
 }
 
@@ -368,6 +376,6 @@ code {
   border: 1px solid $color-base !important;
 }
 
-.principalColorText{
+.principalColorText {
   color: $color-principal-text !important;
 }
