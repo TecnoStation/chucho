@@ -65,6 +65,14 @@
   padding-left: 10px;
 }
 
+.tagNormal {
+  background: #5e6d88;
+  color: $color-white !important;
+  border-radius: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
 .areasdiv {
   width: 100%;
   background: $color-hover;
@@ -135,14 +143,12 @@
 }
 
 .TagAreaGreen {
-  width: 130px;
   background: $color-base-b;
   color: $color-white !important;
   border-radius: 12px;
 }
 
 .TagAreaRed {
-  width: 130px;
   background: $color-red;
   color: $color-white !important;
   border-radius: 12px;

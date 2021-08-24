@@ -1,28 +1,23 @@
 import React from "react";
 import { Button, Col, Modal, Row } from "antd";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 
-export default function ModalHistorialJob({ HistorialJ, setHistorialJ }) {
-  const [t, i18n] = useTranslation("global");
+function ModalHistorialCollaborator({ modalHistorialC, setModalHistorialC }) {
   return (
     <>
       <Modal
-        title="Historial del Puesto"
+        title="Historial del Colaborador"
         className="largeModal"
-        visible={HistorialJ}
+        visible={modalHistorialC}
         onCancel={() => {
-          setHistorialJ(false);
-        }}
-        onOk={() => {
-          setHistorialJ(false);
+          setModalHistorialC(false);
         }}
         footer={[
           <Button
             style={{ marginRight: "15px" }}
             className="secondary"
             onClick={() => {
-              setHistorialJ(false);
+              setModalHistorialC(false);
             }}
           >
             Cancelar
@@ -30,7 +25,7 @@ export default function ModalHistorialJob({ HistorialJ, setHistorialJ }) {
           <Button
             className="primary"
             onClick={() => {
-              setHistorialJ(false);
+              setModalHistorialC(false);
             }}
           >
             Aceptar
@@ -45,13 +40,13 @@ export default function ModalHistorialJob({ HistorialJ, setHistorialJ }) {
             <b>Puesto</b>
           </Col>
           <Col span={6}>
-            <b>Creación</b>
+            <b>Periodo de inicio</b>
           </Col>
           <Col span={9}>
-            <b>Colaboradores que lo ocuparon</b>
+            <b>Periodo final</b>
           </Col>
           <Col span={4}>
-            <b>Acciones</b>
+            <b>Detalle</b>
           </Col>
         </Row>
 
@@ -64,8 +59,8 @@ export default function ModalHistorialJob({ HistorialJ, setHistorialJ }) {
           }}
         >
           <Col span={5}>Diseñador Gráfico</Col>
-          <Col span={6}>10 MAY 2016</Col>
-          <Col span={9}>2 colaboradores</Col>
+          <Col span={6}>15 MAY 2014</Col>
+          <Col span={9}>1 de ABR 2016</Col>
           <Col span={4}>
             <Link className="iconBlue" to="#">
               Ver Detalle
@@ -81,9 +76,9 @@ export default function ModalHistorialJob({ HistorialJ, setHistorialJ }) {
             paddingBottom: "15px",
           }}
         >
-          <Col span={5}>Diseñador web</Col>
-          <Col span={6}>12 MAY 2018</Col>
-          <Col span={9}>1 colaboradores</Col>
+          <Col span={5}>Lider de área</Col>
+          <Col span={6}>1 ABR 2016</Col>
+          <Col span={9}>30 OCT 2017</Col>
           <Col span={4}>
             <Link className="iconBlue" to="#">
               Ver Detalle
@@ -98,9 +93,9 @@ export default function ModalHistorialJob({ HistorialJ, setHistorialJ }) {
             paddingBottom: "15px",
           }}
         >
-          <Col span={5}>Diseñador UI</Col>
-          <Col span={6}>12 MAY 2020</Col>
-          <Col span={9}>1 colaboradores</Col>
+          <Col span={5}>Gerende de división</Col>
+          <Col span={6}>30 OCT 2017</Col>
+          <Col span={9}>A LA FECHA</Col>
           <Col span={4}>
             <Link className="iconBlue" to="#">
               Ver Detalle
@@ -111,3 +106,5 @@ export default function ModalHistorialJob({ HistorialJ, setHistorialJ }) {
     </>
   );
 }
+
+export default ModalHistorialCollaborator;
