@@ -31,6 +31,9 @@ import { useStore } from "react-redux";
 import ExperienceList from "../../components/Modals/ModalAddExperience/components/ExperienceList/ExperienceList";
 import { useForm } from "antd/lib/form/Form";
 import ListLevelStudy from "./Components/ListLevelStudy/ListLevelStudy";
+import ModalHistorialCollaborator from "../../components/Modals/ModalHistorialCollaborator/ModalHistorialCollaborator";
+import ModalHistorialJob from "../../components/Modals/ModalHistorialJob/ModalHistorialJob";
+import ModalExpedientUp from "../../components/Modals/ModalExpedientUp/ModalExpedientUp";
 
 const { Option } = Select;
 
@@ -93,7 +96,10 @@ export default function Perfil() {
   const [expedient, setExpedient] = useState(false);
   const [Permissions, setPermissions] = useState(false);
   const [ModalExperience, setModalExperience] = useState(false);
+  const [modalHistorialC, setModalHistorialC] = useState(false);
+  const [HistorialJ, setHistorialJ] = useState(false);
   const [Experiences, setExperiences] = useState([]);
+  const [expedientUp, setExpedientUp] = useState();
 
   //------------------ end Modals ------------------------------
 
@@ -115,21 +121,41 @@ export default function Perfil() {
 
   //----------------- Level study ----------------------------
 
-  const [HistorialP, setHistorialP] = useState(false);
-  const closeModalHistorialP = () => {
-    setHistorialP(false);
-  };
-  const sendHistorialP = () => {
-    alert("permisos enviados");
+  //-----------------  skills ----------------------------
+  const [Skills, setSkills] = useState([]);
+  const [formSkills] = useForm();
+  const skillstechniques = (values) => {
+    setSkills([
+      ...Skills,
+      {
+        idskill: uuid(),
+        skillName: values["techniqueskills"],
+      },
+    ]);
+    console.log(Skills);
+    formSkills.resetFields();
   };
 
-  const [HistorialC, setHistorialC] = useState(false);
-  const closeModalHistorialC = () => {
-    setHistorialC(false);
+  //----------------- End skills ----------------------------
+
+  //-----------------  Languajes ----------------------------
+
+  const [languajes, setlanguajes] = useState([]);
+  const [formLanguajes] = useForm();
+
+  const languanjes = (values) => {
+    setlanguajes([
+      ...languajes,
+      {
+        idLanguaje: uuid(),
+        LanguajesName: values["languajes"],
+      },
+    ]);
+    console.log(languajes);
+    formLanguajes.resetFields();
   };
-  const sendHistorialC = () => {
-    alert("permisos enviados");
-  };
+
+  //----------------- End Languajes ----------------------------
 
   // const closeModalExperience = () => {
   //   setFlag("gutter-row dividerLeft showBlock");
@@ -180,7 +206,7 @@ export default function Perfil() {
           <Link
             to="#"
             onClick={() => {
-              setHistorialC(true);
+              setModalHistorialC(true);
             }}
           >
             Historial del colaborador
@@ -192,7 +218,7 @@ export default function Perfil() {
           <Link
             to="#"
             onClick={() => {
-              setHistorialP(true);
+              setHistorialJ(true);
             }}
           >
             Historial del puesto
@@ -238,9 +264,9 @@ export default function Perfil() {
         <Menu.Item key="3">
           <Link
             to="#"
-            // onClick={() => {
-            //   setModalExperience(true);
-            // }}
+            onClick={() => {
+              setModalExperience(true);
+            }}
           >
             Editar mi experiencia
           </Link>
@@ -256,7 +282,7 @@ export default function Perfil() {
           <Link
             to="#"
             onClick={() => {
-              setExpedient(true);
+              setExpedientUp(true);
             }}
           >
             Agregar Archivos
@@ -268,7 +294,7 @@ export default function Perfil() {
           <Link
             to="#"
             onClick={() => {
-              setHistorialC(true);
+              setModalHistorialC(true);
             }}
           >
             Historial de puestos
@@ -619,17 +645,23 @@ export default function Perfil() {
               <span>
                 <b>Idiomas</b>
               </span>
+              <br />
             </Col>
           </Row>
-
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Ingles-Avanzado</Tag>
+          {
+            // ------ listado idiomas------------------
+          }
+          <Row
+            style={{ marginTop: "10px" }}
+            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+          >
+            <Col className="gutter-row" span={24}>
+              {languajes.map((languaje, index) => (
+                <Tag key={index} className="tagNormal">
+                  {languaje.LanguajesName}
+                </Tag>
+              ))}
             </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Chino-Básico</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}></Col>
           </Row>
 
           <Row
@@ -643,47 +675,16 @@ export default function Perfil() {
             </Col>
           </Row>
 
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Photoshop - Avanzado</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Illustrator - Medio</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}></Col>
-          </Row>
-
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Tweetdeck</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Hootsuite - Avanzado</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Microsoft Office </Tag>
-            </Col>
-          </Row>
-
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Uso de algoritmos</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Uso de fórmulas</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}></Col>
-          </Row>
-
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Uso de aparatos</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Prezi</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">After Effects</Tag>
+          <Row
+            style={{ marginTop: "10px" }}
+            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+          >
+            <Col className="gutter-row" span={24}>
+              {Skills.map((skill, item) => (
+                <Tag key={item} className="tagNormal">
+                  {skill.skillName}
+                </Tag>
+              ))}
             </Col>
           </Row>
 
@@ -766,13 +767,10 @@ export default function Perfil() {
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Ingles-Avanzado</Tag>
+            <Col className="gutter-row" span={24}>
+              <Tag className="tagNormal">Ingles-Avanzado</Tag>
+              <Tag className="tagNormal">Chino-Básico</Tag>
             </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Chino-Básico</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}></Col>
           </Row>
 
           <Row
@@ -785,46 +783,17 @@ export default function Perfil() {
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Photoshop - Avanzado</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Illustrator - Medio</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}></Col>
-          </Row>
-
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Tweetdeck</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagAreaGreen">Hootsuite - Avanzado</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Microsoft Office </Tag>
-            </Col>
-          </Row>
-
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Uso de algoritmos</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagAreaGreen">Uso de fórmulas</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}></Col>
-          </Row>
-
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Uso de aparatos</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagArea">Prezi</Tag>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <Tag className="TagAreaRed">After Effects</Tag>
+            <Col className="gutter-row" span={24}>
+              <Tag className="tagNormal">Photoshop - Avanzado</Tag>
+              <Tag className="tagNormal">Illustrator - Medio</Tag>
+              <Tag className="tagNormal">Tweetdeck</Tag>
+              <Tag className="tagNormal TagAreaGreen">Hootsuite - Avanzado</Tag>
+              <Tag className="tagNormal">Microsoft Office </Tag>
+              <Tag className="tagNormal">Uso de algoritmos</Tag>
+              <Tag className="tagNormal TagAreaGreen">Uso de fórmulas</Tag>
+              <Tag className="tagNormal">Uso de aparatos</Tag>
+              <Tag className="tagNormal">Prezi</Tag>
+              <Tag className="tagNormal TagAreaRed">After Effects</Tag>
             </Col>
           </Row>
 
@@ -946,6 +915,7 @@ export default function Perfil() {
             form={formlevel}
             layout="vertical"
             onFinish={sendlevelStudy}
+            key={uuid()}
           >
             <Row
               className="dividerBottomFull"
@@ -989,13 +959,13 @@ export default function Perfil() {
           </Form>
           <Form
             initialValues={{
-              document: "",
+              techniqueskills: "",
             }}
-            form={formlevel}
-            layout="vertical"
-            onFinish={sendlevelStudy}
+            form={formSkills}
+            onFinish={skillstechniques}
             name="formH2"
             layout="vertical"
+            key={uuid()}
           >
             <Row
               className="dividerBottomFull"
@@ -1003,13 +973,11 @@ export default function Perfil() {
               style={{ marginTop: "20px" }}
             >
               <Col className="gutter-row" span={18}>
-                <Form.Item name="bussines" label="Habilidades técnicas ">
+                <Form.Item name="techniqueskills" label="Habilidades técnicas ">
                   <Input type="text" placeholder="Ej. de camión de carga " />
                 </Form.Item>
               </Col>
-              {
-                //   --------------- aqui ----
-              }
+
               <Col
                 className="gutter-row"
                 style={{ marginTop: "30px" }}
@@ -1022,14 +990,23 @@ export default function Perfil() {
             </Row>
           </Form>
 
-          <Form name="formH3" layout="vertical">
+          <Form
+            name="formH3"
+            initialValues={{
+              languajes: "",
+            }}
+            form={formLanguajes}
+            onFinish={languanjes}
+            layout="vertical"
+            key={uuid()}
+          >
             <Row
               className="dividerBottomFull"
               gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
               style={{ marginTop: "20px" }}
             >
               <Col className="gutter-row" span={18}>
-                <Form.Item name="bussines" label="Idiomas">
+                <Form.Item name="languajes" label="Idiomas">
                   <Input type="text" placeholder="Ej. Ingles avanzado" />
                 </Form.Item>
               </Col>
@@ -1074,557 +1051,10 @@ export default function Perfil() {
         </Col>
       </Row>
 
-      <Modal
-        title="Historial del Puesto"
-        className="largeModal"
-        visible={HistorialP}
-        onCancel={closeModalHistorialP}
-        onOk={sendHistorialP}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalHistorialP}
-          >
-            Cancelar
-          </Button>,
-          <Button className="primary" onClick={closeModalHistorialP}>
-            Aceptar
-          </Button>,
-        ]}
-      >
-        <Row
-          className="dividerBottomFull"
-          style={{ textAlign: "center", paddingBottom: "15px" }}
-        >
-          <Col span={5}>
-            <b>Puesto</b>
-          </Col>
-          <Col span={6}>
-            <b>Creación</b>
-          </Col>
-          <Col span={9}>
-            <b>Colaboradores que lo ocuparon</b>
-          </Col>
-          <Col span={4}>
-            <b>Acciones</b>
-          </Col>
-        </Row>
-
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={5}>Diseñador Gráfico</Col>
-          <Col span={6}>10 MAY 2016</Col>
-          <Col span={9}>2 colaboradores</Col>
-          <Col span={4}>
-            <Link className="iconBlue" to="#">
-              Ver Detalle
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={5}>Diseñador web</Col>
-          <Col span={6}>12 MAY 2018</Col>
-          <Col span={9}>1 colaboradores</Col>
-          <Col span={4}>
-            <Link className="iconBlue" to="#">
-              Ver Detalle
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={5}>Diseñador UI</Col>
-          <Col span={6}>12 MAY 2020</Col>
-          <Col span={9}>1 colaboradores</Col>
-          <Col span={4}>
-            <Link className="iconBlue" to="#">
-              Ver Detalle
-            </Link>
-          </Col>
-        </Row>
-      </Modal>
-
-      <Modal
-        title="Historial del Colaborador"
-        className="largeModal"
-        visible={HistorialC}
-        onCancel={closeModalHistorialC}
-        onOk={sendHistorialC}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalHistorialC}
-          >
-            Cancelar
-          </Button>,
-          <Button className="primary" onClick={closeModalHistorialC}>
-            Aceptar
-          </Button>,
-        ]}
-      >
-        <Row
-          className="dividerBottomFull"
-          style={{ textAlign: "center", paddingBottom: "15px" }}
-        >
-          <Col span={5}>
-            <b>Puesto</b>
-          </Col>
-          <Col span={6}>
-            <b>Periodo de inicio</b>
-          </Col>
-          <Col span={9}>
-            <b>Periodo final</b>
-          </Col>
-          <Col span={4}>
-            <b>Detalle</b>
-          </Col>
-        </Row>
-
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={5}>Diseñador Gráfico</Col>
-          <Col span={6}>15 MAY 2014</Col>
-          <Col span={9}>1 de ABR 2016</Col>
-          <Col span={4}>
-            <Link className="iconBlue" to="#">
-              Ver Detalle
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={5}>Lider de área</Col>
-          <Col span={6}>1 ABR 2016</Col>
-          <Col span={9}>30 OCT 2017</Col>
-          <Col span={4}>
-            <Link className="iconBlue" to="#">
-              Ver Detalle
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={5}>Gerende de división</Col>
-          <Col span={6}>30 OCT 2017</Col>
-          <Col span={9}>A LA FECHA</Col>
-          <Col span={4}>
-            <Link className="iconBlue" to="#">
-              Ver Detalle
-            </Link>
-          </Col>
-        </Row>
-      </Modal>
-      {/* <Modal
-        className="middleModal"
-        title="Agregar experiencia"
-        visible={experience}
-        onCancel={closeModalExperience}
-        onOk={sendExperience}
-        footer={[
-          <Button className="primary" onClick={closeModalExperience}>
-            Agregar
-          </Button>,
-        ]}
-      >
-        <Form
-          name="formExperience"
-          layout="vertical"
-          style={{ marginLeft: "10px" }}
-        >
-          <Form.Item name="Administrador" label="Puesto">
-            <Input type="text" placeholder="Ej. Ejecutivo de ventas SR." />
-          </Form.Item>
-          <Form.Item name="Administrador" label="Empresa">
-            <Input type="text" placeholder="Ej. GPO comunicación" />
-          </Form.Item>
-          <Form.Item name="Actividades y logros" label="Puesto">
-            <TextArea
-              placeholder="Agrega una breve resumen de tus principales actividades y logros"
-              rows={6}
-            />
-          </Form.Item>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={12}>
-              <Form.Item name="start" label="Inicio">
-                <Input type="date" />
-              </Form.Item>
-            </Col>
-            <Col className="gutter-row" span={12}>
-              <Form.Item name="end" label="Fin">
-                <Input type="date" />
-              </Form.Item>
-            </Col>
-          </Row>
-        </Form>
-      </Modal> */}
-
-      <Modal
-        title="Expediente: Marco Antonio Remirez Perez"
-        className="largeModal"
-        visible={upload}
-        onCancel={closeModalUpload}
-        onOk={sendUpload}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalUpload}
-          >
-            Cancelar
-          </Button>,
-          <Button
-            className="primary"
-            onClick={() => {
-              setUpload(false);
-              setAdjunts(true);
-            }}
-          >
-            Adjuntar
-          </Button>,
-        ]}
-      >
-        <Row
-          className="dividerBottomFull"
-          style={{ textAlign: "center", paddingBottom: "15px" }}
-        >
-          <Col span={5}>
-            <b>Documento</b>
-          </Col>
-          <Col span={16}>
-            <b>peso</b>
-          </Col>
-          <Col span={3}>
-            <b>Acciones</b>
-          </Col>
-        </Row>
-
-        <Row className={flag6} style={{ textAlign: "center" }}>
-          <Col span={24}>
-            <Link
-              className="iconSureGray"
-              onClick={() => {
-                setFlag6("hide");
-                setFlag7("flex");
-              }}
-              style={{ fontSize: "100px" }}
-              to="#"
-            >
-              <FiUpload style={{ marginTop: "50px" }} />
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          className={flag6}
-          style={{
-            textAlign: "center",
-            paddingBottom: "30px",
-            marginTop: "-20px",
-          }}
-        >
-          <Col span={24}>
-            <Link
-              to="#"
-              onClick={() => {
-                setUpload(false);
-                setExpedient(true);
-              }}
-            >
-              {" "}
-              <PlusCircleOutlined /> Agregar uno o mas documentos
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          className={flag7}
-          style={{
-            textAlign: "center",
-            paddingBottom: "10px",
-            marginTop: "10px",
-          }}
-        >
-          <Col span={7}>
-            <span>comprobantededomicilio.pdf</span>
-          </Col>
-          <Col span={13}>
-            <span className="iconGreen">68 kbs.</span>
-          </Col>
-          <Col style={{ textAlign: "center" }} span={4}>
-            <MdDelete />
-          </Col>
-        </Row>
-
-        <Row
-          className={flag7}
-          style={{
-            textAlign: "center",
-            paddingBottom: "10px",
-            marginTop: "10px",
-          }}
-        >
-          <Col span={7}>
-            <span>curp.pdf</span>
-          </Col>
-          <Col span={13}>
-            <span className="iconGreen">68 kbs.</span>
-          </Col>
-          <Col style={{ textAlign: "center" }} span={4}>
-            <MdDelete />
-          </Col>
-        </Row>
-
-        <Row
-          className={flag7}
-          style={{
-            textAlign: "center",
-            paddingBottom: "10px",
-            marginTop: "10px",
-          }}
-        >
-          <Col span={7}>
-            <span>actadenacimiento.pdf</span>
-          </Col>
-          <Col span={13}>
-            <span className="iconGreen">68 kbs.</span>
-          </Col>
-          <Col style={{ textAlign: "center" }} span={4}>
-            <MdDelete />
-          </Col>
-        </Row>
-      </Modal>
-      <Modal
-        title="Expediente: Marco Antonio Remirez Perez"
-        className="largeModal"
-        visible={adjunts}
-        onCancel={closeModalAdjunts}
-        onOk={sendAdjunts}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalAdjunts}
-          >
-            Cancelar
-          </Button>,
-          <Button className="primary" onClick={closeModalAdjunts}>
-            Enviar
-          </Button>,
-        ]}
-      >
-        <Row
-          className="dividerBottomFull"
-          style={{ textAlign: "center", paddingBottom: "15px" }}
-        >
-          <Col span={7}>
-            <b>Documento</b>
-          </Col>
-          <Col span={8}>
-            <b>Estatus</b>
-          </Col>
-          <Col span={5}>
-            <b>Fecha de carga</b>
-          </Col>
-          <Col span={4}>
-            <b>Acciones</b>
-          </Col>
-        </Row>
-
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "left",
-            marginTop: "15px",
-            paddingBottom: "15px",
-            paddingLeft: "20px",
-          }}
-        >
-          <Col span={8}>Comprobante de Ingresos</Col>
-          <Col span={8}>
-            <span className="iconGreen">Adjuntado | Por autorizar</span>
-          </Col>
-          <Col span={6}>10 MAY 2016</Col>
-          <Col span={2}>
-            <Link
-              className="iconGray"
-              onClick={() => {
-                setUpload(true);
-                setExpedient(false);
-                setFlag6("showBlok");
-                setFlag7("hide");
-              }}
-              style={{ fontSize: "18px" }}
-              to="#"
-            >
-              <MdDelete style={{ position: "absolute" }} />
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "left",
-            marginTop: "15px",
-            paddingBottom: "15px",
-            paddingLeft: "20px",
-          }}
-        >
-          <Col span={8}>Comprobante de Estudios</Col>
-          <Col span={8}>
-            <span className="iconGreen">Adjuntado | Autorizado</span>
-          </Col>
-          <Col span={6}>10 MAY 2016</Col>
-          <Col span={2}>
-            <Link
-              className="iconGray"
-              onClick={() => {
-                setUpload(true);
-                setExpedient(false);
-                setFlag6("showBlok");
-                setFlag7("hide");
-              }}
-              style={{ fontSize: "18px" }}
-              to="#"
-            >
-              <MdDelete style={{ position: "absolute" }} />
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "left",
-            marginTop: "15px",
-            paddingBottom: "15px",
-            paddingLeft: "20px",
-          }}
-        >
-          <Col span={8}>Comprobante de Domicilio</Col>
-          <Col span={8}>
-            <span className="iconGreen">Adjuntado |No autorizado</span>
-          </Col>
-          <Col span={6}>10 MAY 2016</Col>
-          <Col span={2}>
-            <Link
-              className="iconGray"
-              onClick={() => {
-                setUpload(true);
-                setExpedient(false);
-                setFlag6("showBlok");
-                setFlag7("hide");
-              }}
-              style={{ fontSize: "18px" }}
-              to="#"
-            >
-              <MdDelete style={{ position: "absolute" }} />
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "left",
-            marginTop: "15px",
-            paddingBottom: "15px",
-            paddingLeft: "20px",
-          }}
-        >
-          <Col span={8}>Identificación Oficial</Col>
-          <Col span={8}>
-            <span className="iconGreen">Adjuntado | Por autorizar</span>
-          </Col>
-          <Col span={6}>10 MAY 2016</Col>
-          <Col span={2}>
-            <Link
-              className="iconGray"
-              onClick={() => {
-                setUpload(true);
-                setExpedient(false);
-                setFlag6("showBlok");
-                setFlag7("hide");
-              }}
-              style={{ fontSize: "18px" }}
-              to="#"
-            >
-              <MdDelete style={{ position: "absolute" }} />
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          style={{
-            textAlign: "left",
-            marginTop: "15px",
-            paddingBottom: "15px",
-            paddingLeft: "20px",
-          }}
-        >
-          <Col span={8}>Identificación Oficial</Col>
-          <Col span={8}>
-            <span className="iconGreen">Adjuntado | Autorizado</span>
-          </Col>
-          <Col span={6}>10 MAY 2016</Col>
-          <Col span={2}>
-            <Link
-              className="iconGray"
-              onClick={() => {
-                setUpload(true);
-                setExpedient(false);
-                setFlag6("showBlok");
-                setFlag7("hide");
-              }}
-              style={{ fontSize: "18px" }}
-              to="#"
-            >
-              <MdDelete style={{ position: "absolute" }} />
-            </Link>
-          </Col>
-        </Row>
-      </Modal>
+      <ModalExpedientUp
+        expedientUp={expedientUp}
+        setExpedientUp={setExpedientUp}
+      />
 
       <ModalDigitalExpedient
         expedient={expedient}
@@ -1634,13 +1064,24 @@ export default function Perfil() {
         Permissions={Permissions}
         setPermissions={setPermissions}
       />
-      <ModalPassword Password={Password} setPassword={setPassword} />
+
       <ModalAddExperience
         ModalExperience={ModalExperience}
         setModalExperience={setModalExperience}
         Experiences={Experiences}
         setExperiences={setExperiences}
       />
+      <ModalHistorialCollaborator
+        modalHistorialC={modalHistorialC}
+        setModalHistorialC={setModalHistorialC}
+      />
+
+      <ModalHistorialJob
+        HistorialJ={HistorialJ}
+        setHistorialJ={setHistorialJ}
+      />
+
+      <ModalPassword Password={Password} setPassword={setPassword} />
     </>
   );
 }
