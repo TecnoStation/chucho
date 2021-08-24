@@ -151,7 +151,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={24}>
               <Form.Item
                 name="size"
-                label="Puesto"
+                label={t("organigrama.collaborator-form.position-label")}
                 rules={[
                   {
                     required: true,
@@ -159,7 +159,7 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select placeholder="Selecciona el puesto a ocupar">
+                <Select placeholder={t("organigrama.collaborator-form.position-placeholder")}>
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -172,7 +172,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={24}>
               <Form.Item
                 name="name"
-                label="Nombre*"
+                label={t("organigrama.collaborator-form.name-label")}
                 rules={[
                   {
                     required: true,
@@ -180,7 +180,7 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Input type="text" placeholder="Nombre " />
+                <Input type="text" placeholder={t("organigrama.collaborator-form.name-placeholder")} />
               </Form.Item>
             </Col>
           </Row>
@@ -189,7 +189,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="firstname"
-                label="Primer apellido* "
+                label= {t("organigrama.collaborator-form.first-name-label")}
                 rules={[
                   {
                     required: true,
@@ -197,12 +197,12 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Input type="text" placeholder="Apellido paterno " />
+                <Input type="text" placeholder={t("organigrama.collaborator-form.first-name-placeholder")} />
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="lastName" label="Segundo apellido ">
-                <Input type="text" placeholder="Apellido materno " />
+              <Form.Item name="lastName" label={t("organigrama.collaborator-form.last-name-label")}>
+                <Input type="text" placeholder={t("organigrama.collaborator-form.last-name-placeholder")} />
               </Form.Item>
             </Col>
           </Row>
@@ -211,7 +211,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="birthday"
-                label="Fecha de nacimiento* "
+                label={t("organigrama.collaborator-form.date-brithday-label")}
                 rules={[
                   {
                     required: true,
@@ -225,7 +225,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="noationality"
-                label="Nacionalidad* "
+                label={t("organigrama.collaborator-form.nationality-label")}
                 rules={[
                   {
                     required: true,
@@ -233,7 +233,7 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Input type="text" placeholder="Nacionalidad " />
+                <Input type="text" placeholder={t("organigrama.collaborator-form.nationality-placeholder")} />
               </Form.Item>
             </Col>
           </Row>
@@ -242,7 +242,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="stateMarital"
-                label="Estado civil"
+                label={t("organigrama.collaborator-form.marital-status-label")}
                 rules={[
                   {
                     required: true,
@@ -250,7 +250,7 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select placeholder="Selecciona una opción">
+                <Select placeholder={t("organigrama.collaborator-form.marital-status-placeholder")}>
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -260,7 +260,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="gender"
-                label="Género"
+                label={t("organigrama.collaborator-form.gender-label")}
                 rules={[
                   {
                     required: true,
@@ -268,7 +268,7 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select placeholder="Selecciona una opción">
+                <Select placeholder={t("organigrama.collaborator-form.gender-placeholder")}>
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -281,7 +281,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={24}>
               <Form.Item
                 name="email"
-                label="Correo electronico del colaborador "
+                label={t("organigrama.collaborator-form.email-collaborator-label")}
                 rules={[
                   {
                     required: true,
@@ -298,7 +298,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="dateBegin"
-                label="Fecha de ingreso "
+                label={t("organigrama.collaborator-form.date-admission-label")}
                 rules={[
                   {
                     required: true,
@@ -312,7 +312,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="idCollaborator"
-                label="ID de colaborador"
+                label={t("organigrama.collaborator-form.id-colaborator-label")}
                 rules={[
                   {
                     required: true,
@@ -320,7 +320,7 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select placeholder="Auto generada">
+                <Select placeholder={t("organigrama.collaborator-form.id-colaborator-placeholder")}>
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -335,7 +335,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="city"
-                label="Ciudad"
+                label={t("organigrama.collaborator-form.city-label")}
                 rules={[
                   {
                     required: true,
@@ -343,7 +343,7 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select placeholder="Ciudad donde vive ">
+                <Select placeholder={t("organigrama.collaborator-form.city-placeholder")}>
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -352,8 +352,8 @@ export default function Collaborator() {
             </Col>
             <Col className="gutter-row" span={12}>
               <Form.Item
-                name="salary"
-                label="Salario "
+                name={t("organigrama.collaborator-form.salary-label")}
+                label={t("organigrama.collaborator-form.salary-placeholder")}
                 rules={[
                   {
                     required: true,
@@ -368,7 +368,7 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="area" rules={[
+              <Form.Item name="Área" rules={[
                   {
                     required: true,
                     message: "*Campo requerido",

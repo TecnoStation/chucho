@@ -80,7 +80,7 @@ export default function ModalPassword({ Password, setPassword }) {
                           }}
                           className="primary btn"
                         >
-                          {t("organigrama.delete-collaborator.btn-remo")}
+                          Eliminar
                         </Button>
                       </Col>
                     </Row>
