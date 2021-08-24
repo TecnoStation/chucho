@@ -62,7 +62,7 @@ export default function Collaborator() {
 
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link to="/areasandpositions-perfil">
+          <Link to="/organigrama/areasandpositions-perfil">
             {t("organigrama.collaborator-form.menu.view-proceedings")}
           </Link>
         </Menu.Item>
