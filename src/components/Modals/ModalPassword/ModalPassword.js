@@ -17,7 +17,7 @@ export default function ModalPassword({ Password, setPassword }) {
   });
 
   if (Password.titleWarning === "") {
-    Password.titleWarning = "¡Atención!";
+    Password.titleWarning = t("organigrama.password-modal.attention");
   }
   return (
     <>
@@ -26,7 +26,7 @@ export default function ModalPassword({ Password, setPassword }) {
         title={Password.titleModal}
         visible={Password.visible}
         onCancel={() => {
-          setPassword(false); 
+          setPassword(false);
         }}
         onOk={() => {
           setPassword(false);
@@ -39,7 +39,7 @@ export default function ModalPassword({ Password, setPassword }) {
               setPassword(false);
             }}
           >
-           {t("organigrama.delete-collaborator.btn-cancel")}
+            {t("organigrama.delete-collaborator.btn-cancel")}
           </Button>,
           <input
             type="button"
@@ -56,7 +56,7 @@ export default function ModalPassword({ Password, setPassword }) {
                         </p>
                       </Col>
                       <Col span={24}>
-                        <h3>¡Atención!</h3>
+                        <h3> {t("organigrama.password-modal.attention")}</h3>
                       </Col>
                       <Col span={24}>
                         <h4>{Password.messageWarning}</h4>
@@ -80,7 +80,7 @@ export default function ModalPassword({ Password, setPassword }) {
                           }}
                           className="primary btn"
                         >
-                          {t("organigrama.delete-collaborator.btn-remo")}
+                          {t("organigrama.password-modal.btn-remove")}
                         </Button>
                       </Col>
                     </Row>
@@ -116,7 +116,7 @@ export default function ModalPassword({ Password, setPassword }) {
                           }}
                           className="primary btn"
                         >
-                          Hecho
+                          {t("organigrama.password-modal.btn-Hecho")}
                         </Button>
                       </Col>
                     </Row>
@@ -144,12 +144,17 @@ export default function ModalPassword({ Password, setPassword }) {
           }}
           layout="vertical"
         >
-          <Form.Item name="password" label={t("organigrama.delete-collaborator.insert-password")}>
+          <Form.Item
+            name="password"
+            label={t("organigrama.password-modal.insert-password")}
+          >
             <Input
               type="password"
               value={clearPassword}
               id="nombre"
-              placeholder={t("organigrama.delete-collaborator.insert-password-placeholder")}
+              placeholder={t(
+                "organigrama.password-modal.insert-password-placeholder"
+              )}
             />
           </Form.Item>
         </Form>

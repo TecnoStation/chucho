@@ -66,20 +66,24 @@ export default function Collaborator() {
 
       <Menu.Item key="0">
         <Menu.Item key="3" disabled>
-          <Link to="#">{t("organigrama.collaborator-form.menu.view-objetives")}</Link>
+          <Link to="#">
+            {t("organigrama.collaborator-form.menu.view-objetives")}
+          </Link>
         </Menu.Item>
       </Menu.Item>
 
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link to="/areasandpositions-perfil">{t("organigrama.collaborator-form.menu.view-proceedings")}</Link>
+          <Link to="/organigrama/areasandpositions-perfil">
+            {t("organigrama.collaborator-form.menu.view-proceedings")}
+          </Link>
         </Menu.Item>
       </Menu.Item>
 
       <Menu.Item key="0">
         <Menu.Item key="3">
           <Link onClick={openModalDocuments} to="#">
-          {t("organigrama.collaborator-form.menu.assign-documents")}
+            {t("organigrama.collaborator-form.menu.assign-documents")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -92,9 +96,10 @@ export default function Collaborator() {
               setPassword({
                 visible: true,
                 titleModal: t("organigrama.delete-collaborator.title"),
-                messageModal:
-                t("organigrama.delete-collaborator.text"),
-                messageWarning: t("organigrama.delete-collaborator.warning.text"),
+                messageModal: t("organigrama.delete-collaborator.text"),
+                messageWarning: t(
+                  "organigrama.delete-collaborator.warning.text"
+                ),
                 question: t("organigrama.delete-collaborator.warning.question"),
               });
             }}
@@ -119,7 +124,7 @@ export default function Collaborator() {
     <Form name="form1" layout="vertical" onFinish={onFinish}>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col className="gutter-row" span={11}>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}> 
+          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col span={22} style={{ textAlign: "left" }}>
               <h1>{t("organigrama.collaborator-form.title")}</h1>
             </Col>
@@ -151,7 +156,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={24}>
               <Form.Item
                 name="size"
-                label="Puesto"
+                label={t("organigrama.collaborator-form.position-label")}
                 rules={[
                   {
                     required: true,
@@ -159,7 +164,11 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select placeholder="Selecciona el puesto a ocupar">
+                <Select
+                  placeholder={t(
+                    "organigrama.collaborator-form.position-placeholder"
+                  )}
+                >
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -172,7 +181,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={24}>
               <Form.Item
                 name="name"
-                label="Nombre*"
+                label={t("organigrama.collaborator-form.name-label")}
                 rules={[
                   {
                     required: true,
@@ -180,7 +189,12 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Input type="text" placeholder="Nombre " />
+                <Input
+                  type="text"
+                  placeholder={t(
+                    "organigrama.collaborator-form.name-placeholder"
+                  )}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -189,7 +203,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="firstname"
-                label="Primer apellido* "
+                label={t("organigrama.collaborator-form.first-name-label")}
                 rules={[
                   {
                     required: true,
@@ -197,12 +211,25 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Input type="text" placeholder="Apellido paterno " />
+                <Input
+                  type="text"
+                  placeholder={t(
+                    "organigrama.collaborator-form.first-name-placeholder"
+                  )}
+                />
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="lastName" label="Segundo apellido ">
-                <Input type="text" placeholder="Apellido materno " />
+              <Form.Item
+                name="lastName"
+                label={t("organigrama.collaborator-form.last-name-label")}
+              >
+                <Input
+                  type="text"
+                  placeholder={t(
+                    "organigrama.collaborator-form.last-name-placeholder"
+                  )}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -211,7 +238,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="birthday"
-                label="Fecha de nacimiento* "
+                label={t("organigrama.collaborator-form.date-brithday-label")}
                 rules={[
                   {
                     required: true,
@@ -225,7 +252,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="noationality"
-                label="Nacionalidad* "
+                label={t("organigrama.collaborator-form.nationality-label")}
                 rules={[
                   {
                     required: true,
@@ -233,7 +260,12 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Input type="text" placeholder="Nacionalidad " />
+                <Input
+                  type="text"
+                  placeholder={t(
+                    "organigrama.collaborator-form.nationality-placeholder"
+                  )}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -242,7 +274,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="stateMarital"
-                label="Estado civil"
+                label={t("organigrama.collaborator-form.marital-status-label")}
                 rules={[
                   {
                     required: true,
@@ -250,7 +282,11 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select placeholder="Selecciona una opción">
+                <Select
+                  placeholder={t(
+                    "organigrama.collaborator-form.marital-status-placeholder"
+                  )}
+                >
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -260,7 +296,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="gender"
-                label="Género"
+                label={t("organigrama.collaborator-form.gender-label")}
                 rules={[
                   {
                     required: true,
@@ -268,7 +304,11 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select placeholder="Selecciona una opción">
+                <Select
+                  placeholder={t(
+                    "organigrama.collaborator-form.gender-placeholder"
+                  )}
+                >
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -281,7 +321,9 @@ export default function Collaborator() {
             <Col className="gutter-row" span={24}>
               <Form.Item
                 name="email"
-                label="Correo electronico del colaborador "
+                label={t(
+                  "organigrama.collaborator-form.email-collaborator-label"
+                )}
                 rules={[
                   {
                     required: true,
@@ -289,7 +331,12 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Input type="text" placeholder={t("organigrama.collaborator-form.email-collaborator-placeholder")} />
+                <Input
+                  type="text"
+                  placeholder={t(
+                    "organigrama.collaborator-form.email-collaborator-placeholder"
+                  )}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -298,7 +345,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="dateBegin"
-                label="Fecha de ingreso "
+                label={t("organigrama.collaborator-form.date-admission-label")}
                 rules={[
                   {
                     required: true,
@@ -312,7 +359,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="idCollaborator"
-                label="ID de colaborador"
+                label={t("organigrama.collaborator-form.id-colaborator-label")}
                 rules={[
                   {
                     required: true,
@@ -320,7 +367,11 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select placeholder="Auto generada">
+                <Select
+                  placeholder={t(
+                    "organigrama.collaborator-form.id-colaborator-placeholder"
+                  )}
+                >
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -335,7 +386,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="city"
-                label="Ciudad"
+                label={t("organigrama.collaborator-form.city-label")}
                 rules={[
                   {
                     required: true,
@@ -343,7 +394,11 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select placeholder="Ciudad donde vive ">
+                <Select
+                  placeholder={t(
+                    "organigrama.collaborator-form.city-placeholder"
+                  )}
+                >
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -352,8 +407,8 @@ export default function Collaborator() {
             </Col>
             <Col className="gutter-row" span={12}>
               <Form.Item
-                name="salary"
-                label="Salario "
+                name={t("organigrama.collaborator-form.salary-label")}
+                label={t("organigrama.collaborator-form.salary-placeholder")}
                 rules={[
                   {
                     required: true,
@@ -368,14 +423,21 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="area" rules={[
+              <Form.Item
+                name="Área"
+                rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-                 label={t("organigrama.collaborator-form.area-label")}>
-                <Select placeholder={t("organigrama.collaborator-form.area-placeholder")}>
+                label={t("organigrama.collaborator-form.area-label")}
+              >
+                <Select
+                  placeholder={t(
+                    "organigrama.collaborator-form.area-placeholder"
+                  )}
+                >
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -383,14 +445,21 @@ export default function Collaborator() {
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="branch" rules={[
+              <Form.Item
+                name="branch"
+                rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-                 label={t("organigrama.collaborator-form.branch-label")}>
-                <Select placeholder={t("organigrama.collaborator-form.branch-placeholder")}>
+                label={t("organigrama.collaborator-form.branch-label")}
+              >
+                <Select
+                  placeholder={t(
+                    "organigrama.collaborator-form.branch-placeholder"
+                  )}
+                >
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -401,16 +470,21 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Form.Item name="reprotTo" rules={[
+              <Form.Item
+                name="reprotTo"
+                rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-                 label={t("organigrama.collaborator-form.report-to-label")}>
+                label={t("organigrama.collaborator-form.report-to-label")}
+              >
                 <Input
                   type="text"
-                  placeholder={t("organigrama.collaborator-form.report-to-placeholder")}
+                  placeholder={t(
+                    "organigrama.collaborator-form.report-to-placeholder"
+                  )}
                 />
               </Form.Item>
             </Col>
@@ -418,14 +492,23 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="studyLevel"rules={[
+              <Form.Item
+                name="studyLevel"
+                rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-                  label={t("organigrama.collaborator-form.educational-level-label")}>
-                <Select placeholder={t("organigrama.collaborator-form.educational-level-placeholder")}>
+                label={t(
+                  "organigrama.collaborator-form.educational-level-label"
+                )}
+              >
+                <Select
+                  placeholder={t(
+                    "organigrama.collaborator-form.educational-level-placeholder"
+                  )}
+                >
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -433,15 +516,23 @@ export default function Collaborator() {
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="experience" rules={[
+              <Form.Item
+                name="experience"
+                rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-              
-                 label={t("organigrama.collaborator-form.years-experience-label")}>
-                <Select placeholder={t("organigrama.collaborator-form.years-experience-placeholder")}>
+                label={t(
+                  "organigrama.collaborator-form.years-experience-label"
+                )}
+              >
+                <Select
+                  placeholder={t(
+                    "organigrama.collaborator-form.years-experience-placeholder"
+                  )}
+                >
                   <Option value="jack">Jack</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -452,46 +543,62 @@ export default function Collaborator() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Form.Item name="skills" rules={[
+              <Form.Item
+                name="skills"
+                rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-              
-                 label={t("organigrama.collaborator-form.skills-label")}>
-                <Input type="text" placeholder={t("organigrama.collaborator-form.skills-placeholder")} />
+                label={t("organigrama.collaborator-form.skills-label")}
+              >
+                <Input
+                  type="text"
+                  placeholder={t(
+                    "organigrama.collaborator-form.skills-placeholder"
+                  )}
+                />
               </Form.Item>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Form.Item name="languajes" rules={[
+              <Form.Item
+                name="languajes"
+                rules={[
                   {
                     required: true,
                     message: "*Campo requerido",
                   },
                 ]}
-              
-                 label={t("organigrama.collaborator-form.languajes-label")}>
-                <Input type="text" placeholder={t("organigrama.collaborator-form.languajes-placeholder")} />
+                label={t("organigrama.collaborator-form.languajes-label")}
+              >
+                <Input
+                  type="text"
+                  placeholder={t(
+                    "organigrama.collaborator-form.languajes-placeholder"
+                  )}
+                />
               </Form.Item>
             </Col>
           </Row>
 
           <Row style={{ marginTop: "300px" }}>
             <Col className="gutter-row" span={15}>
-            {t("organigrama.collaborator-form.text-footer")}
+              {t("organigrama.collaborator-form.text-footer")}
             </Col>
             <Col className="gutter-row" span={5}>
               <Link to="/areasandpositions?tab=2">
-                <Button className="secondary">{t("organigrama.collaborator-form.btn-cancel")}</Button>
+                <Button className="secondary">
+                  {t("organigrama.collaborator-form.btn-cancel")}
+                </Button>
               </Link>
             </Col>
             <Col className="gutter-row" span={3}>
-              <Button  htmlType="submit" className="primary">
-              {t("organigrama.collaborator-form.btn-save")}
+              <Button htmlType="submit" className="primary">
+                {t("organigrama.collaborator-form.btn-save")}
               </Button>
             </Col>
           </Row>
@@ -504,14 +611,16 @@ export default function Collaborator() {
           <h3>{t("organigrama.collaborator-form.organization-created")}</h3>
           <br />
           <Link to="/organigrama">
-            <Button className="primary">{t("organigrama.collaborator-form.btn-done")}</Button>
+            <Button className="primary">
+              {t("organigrama.collaborator-form.btn-done")}
+            </Button>
           </Link>
         </Screendefault>
       </Row>
 
       <ModalPermissions />
 
-     <ModalDocument />
+      <ModalDocument />
       <ModalPassword Password={Password} setPassword={setPassword} />
     </Form>
   );

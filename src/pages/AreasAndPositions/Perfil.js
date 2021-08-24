@@ -987,8 +987,16 @@ export default function Perfil() {
               </Col>
             </Row>
           </Form>
-
-          <Form name="formH2" layout="vertical">
+          <Form
+            initialValues={{
+              document: "",
+            }}
+            form={formlevel}
+            layout="vertical"
+            onFinish={sendlevelStudy}
+            name="formH2"
+            layout="vertical"
+          >
             <Row
               className="dividerBottomFull"
               gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
@@ -999,7 +1007,9 @@ export default function Perfil() {
                   <Input type="text" placeholder="Ej. de camión de carga " />
                 </Form.Item>
               </Col>
-
+              {
+                //   --------------- aqui ----
+              }
               <Col
                 className="gutter-row"
                 style={{ marginTop: "30px" }}
@@ -1035,7 +1045,6 @@ export default function Perfil() {
               </Col>
             </Row>
           </Form>
-
           <Row
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
             style={{ marginTop: "20px" }}
