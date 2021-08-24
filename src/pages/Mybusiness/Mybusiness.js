@@ -9,13 +9,13 @@ import { useTranslation } from "react-i18next";
 import "./Mybusiness.scss";
 
 export default function Mybusiness() {
-  const [t, i18n] = useTranslation("global");
+  const [t, i18n] = useTranslation("global"); 
   const menu = (
     <Menu>
       <Menu.Item key="0">
         <Menu.Item key="3">
           <Link to="/organigrama/mybusiness-edit">{t("organigrama.mybusiness-principal.menu")}</Link>
-        </Menu.Item>
+        </Menu.Item> 
       </Menu.Item>
     </Menu>
   );

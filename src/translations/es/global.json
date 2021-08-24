@@ -168,7 +168,7 @@
                     "business-name-placeholder": "Nombre",
                     "business-activity": "Actividad de la empresa",
                     "business-activity-placeholder": "Selecciona una opción",
-                    "subactivity": "Subactividad",
+                    "subactivity-busines": "Subactividad de la empresa",
                     "subactivity-placeholder": "Selecciona una opción",
                     "business-size": "Tamaño de la empresa",
                     "business-size-placeholder": "Selecciona una opción",
@@ -182,9 +182,12 @@
                     "headquartes-direction": "Dirección de Oficinas Centrales",
                     "headquartes-direction-placeholder": "Ubica en el mapa",
                     "add-branch-title": "Agregar sucursal",
+                    "search-branch-placeholder": "Buscar sucursal",
                     "add-branch-link": "Agregar sucursal",
                     "branches-added": "Sucursales agregadas",
-                    "direction": "dirección"
+                    "direction": "dirección",
+                    "btn-cancel": "Cancelar",
+                    "btn-save": "Guardar"
                 }
             },
             "culture":{
@@ -192,23 +195,30 @@
                 "title": "Cultura de Mi empresa",
                 "mission": "Proposito / Misión",
                 "mission-placeholder": "Ej. “Organizar la información del mundo y hacerla universalmente accesible y útil - Google (1000)",
-                "View": "Proposito / Misión",
+                "View": "Visión",
                 "View-placeholder": "Ej. “Ser el motor de búsqueda más importante del mundo” - Google (1000 caracteres)",
                 "business-description": "Descripción de la empresa",
                 "business-description-placeholder": "Ej. “Ser el motor de búsqueda más importante del mundo” - Google (1000 caracteres)",
                 "institutional-competencies": "Competencias Institucionales",
-                "add-competencies": "Agregar competencias",
+                "add-competencies-link": "Agregar competencias",
                 "competencies-added": "Competencias agregadas",
-                "level": "Nivel"
+                "level": "Nivel",
+                "btn-cancel": "Cancelar",
+                "btn-save": "Guardar"
             }
         },
 
         "add-branch-modal":{
             "title": "Agregar sucursal",
+            "title2": "Editar sucursal",
             "branch-name": "Nombre de la sucursal",
             "branch-name-placeholder": "Agrega un nombre descriptivo para está sucursal",
             "branch-direction": "Dirección de la sucursal",
-            "branch-direction-placeholder": "Agrega la dirección de la sucursal"
+            "branch-direction-placeholder": "Agrega la dirección de la sucursal",
+            "btn-cancel": "Cancelar",
+            "btn-edit": "Editar",
+            "btn-save": "Guardar"
+           
         },
 
         "add-competencies-modal":{
@@ -251,18 +261,18 @@
                 "tab-name": "Estructura",
                 "title": "Crear áreas de Mi empresa",
                 "btn-load-masive": "Carga masiva",
-                "btn-download-file": "Carga masiva",
+                "btn-download-file": "Descargar archivo",
                 "text1": "Agrega áreas y subáreas para crear el esqueleto del organigrama de tu empresa",
                 "input-placeholder-area": "Ej. Agrega nueva área",
                 "input-placeholder-subarea": "Ej. Agrega nueva sub área",
                 "link-add-new-area": "Agregar nueva área",
-                "positions-in-area": "Puestos en el área: CEO",
+                "positions-in-area": "Puestos en el área: Dirección de Finanzas",
                 "insert- your-positions": "Ingresa los puestos de tus áreas.",
                 "link-add-position": "Agregar puesto",
                 "btn-cancel": "Cancelar",
                 "btn-save": "Guardar"           
             },
-            "puesto":{
+            "position":{
                 "tab-name": "Puesto",
                 "title": "Lista de puestos en Mi empresa",
                 "btn-load-masive": "Carga masiva",
@@ -273,7 +283,10 @@
                 "profiling": "Nombre del puesto",
                 "skills": "Habilidades",
                 "actions": "Acciones",
-                "link-add-new-area": "Agregar puesto"
+                "link-add-new-position": "Agregar nuevo puesto",
+                "input-placeholder-position": "Ej. Agrega nuevo puesto",
+                "btn-cancel": "Cancelar",
+                "btn-save": "Guardar" 
             }
         },
         "areasandpositions-masivee":{
@@ -296,7 +309,12 @@
             "status": "Estatus",
             "actions": "Acciones",
             "btn-cancel": "Cancelar",
-            "btn-load-file": "Subir archivo"
+            "btn-load-file": "Subir archivo",
+            "up-load-file": "Sube el archivo",
+            "btn-rise": "subir",
+            "well-done": "¡Bien hecho!",
+            "organization-created": "Organigrama creado",
+            "btn-done": "hecho"
         },
 
         "areasandpositions-masivep":{
@@ -319,7 +337,13 @@
             "status": "Estatus",
             "actions": "Acciones",
             "btn-cancel": "Cancelar",
-            "btn-load-file": "Subir archivo"
+            "btn-load-file": "Subir archivo",
+            "up-load-file": "Sube el archivo",
+            "btn-rise": "subir",
+            "well-done": "¡Bien hecho!",
+            "organization-created": "Organigrama creado",
+            "btn-done": "hecho"
+            
         },
         "collaborator-form":{
             "title": "Información del Colaborador",
@@ -369,16 +393,32 @@
             "years-experience-label": "Años de experiencia",
             "years-experience-placeholder": "Selecciona una opción",
             "skills-label": "Habilidades técnicas",
-            "skills-placeholder": "Ej. Microso􀁛 Word",
+            "skills-placeholder": "Ej. Micrososoft Word",
             "languajes-label": "Idiomas",
             "languajes-placeholder": "Ej. Ingles Avanzado",
             "text-footer": "Los campos con * son obligatorios",
             "btn-cancel": "Cancelar",
-            "btn-save": "Guardar"
+            "btn-save": "Guardar",
+            "well-done": "¡Bien hecho!",
+            "organization-created": "Organigrama creado",
+            "btn-done": "hecho",
+            "permissions-modal":{
+                "title": "Agregar permisos",
+                "permissions-adminitrator": "Permisos de Administrador",
+                "permissions-nine": "Permisos para ver Nine Box",
+                "permissions-objectives": "Permisos de Edición de Objetivos",
+                "permissions-organizatition": "Permisos para ver Organigrama",
+                "permissions-edit-organization": "Permisos para editar Organigrama",
+                "permissions-plan-developing": "Permisos para crear Plan de Desarrollo",
+                "btn-cancel": "Cancelar",
+                "btn-appli": "Aplicar"
+            
+            }
+
         },
         "assign-documents": {
             "title": "Asignar documentos al colaborador",
-            "curp": "Curp",
+            "curp": "CURP",
             "proof-studies": "Comprobante de estudios",
             "proof-address": "Comprobante de domicilio",
             "official-identification": "Identificación oficial",
@@ -394,13 +434,14 @@
             "insert-password": "Ingresa tu contraseña de usuario",
             "insert-password-placeholder": "Ej. Ghkcclsd23",
             "btn-cancel": "Cancelar",
-            "btn-save": "Guardar",
+            "btn-save": "Ingresar",
             "warning":{
                 "title": "¡Atención!",
                 "text": "Estás a punto de eliminar al colaborador",
                 "question": "¿Seguro deseas eliminarlo?",
                 "btn-cancel": "Cancelar",
-                "btn-save": "Guardar"
+                "btn-save": "Guardar",
+                "btn-delete": "Eliminar"
             }
         },
         "areasandpositions-perfil":{
@@ -413,17 +454,304 @@
                 "nationality": "Nacionalidad",
                 "city": "Ciudad",
                 "teams-which": "Equipos a los que pertenece",
-                "proccess-result": "Resultados de procesos"
-            },
+                "proccess-result": "Resultados de procesos",
+                "menu-collaborator":{
+                 "add-file": "Agregar Archivos",
+                 "record-position": "Historial de puestos"   
+                },
+                "skills-collaborator": "Habilidades del colaborador",
+                "level-studies": "Nivel de Estudios",
+                "years": "Años",
+                "languages": "Idiomas",
+                "skills-techniques": "Habilidades técnicas",
+                "experience-labor": "Experiencia lavoral",
+                "add-experience": "Agregar otra experiencia",
+                "menu2-collaborator":{
+                    "edit-abilities": "Editar mis habilidades",
+                    "edit-experience": "Editar mi experiencia"
+                },
+                "add-file-modal":{
+                 "title": "Expediente",
+                 "document": "documento",
+                 "status": "Estatus",
+                 "date-load": "Fecha de carga",
+                 "actions": "Acciones",
+                 "btn-cancel": "Canselar",
+                 "btn-save": "Guardar"
+                },
+                "add-file-modal2":{
+                 "title": "Expediente",
+                 "document": "Documento",
+                 "weight": "Peso",
+                 "link-add-document": "Agrega uno o mas documentos",
+                 "btn-cancel": "Cancelar",
+                 "to attach": "Adjuntar"
+                },
+                "add-file-modal3":{
+                    "title": "Expediente",
+                    "document": "Documento",
+                    "weight": "Peso",
+                    "actions": "Acciones",
+                    "btn-cancel": "Cancelar",
+                    "to attach": "Adjuntar"  
+                },
+                "add-file-modal4":{
+                    "title": "Expediente",
+                    "document": "documento",
+                    "status": "Estatus",
+                    "date-load": "Fecha de carga",
+                    "actions": "Acciones",
+                    "btn-cancel": "Canselar",
+                    "btn-send": "Enviar"
+                },
+                "add-file-modal5":{
+                    "title": "Historial del Colaborador",
+                    "position": "puesto",
+                    "period-start": "Periodo de inicio",
+                    "period-final": "Periodo final",
+                    "detail": "Detalle"
+                },
+                
             "tab2":{
                 "title": "Información del puesto",
-                "level-position": "Nivel del puesto"
+                "level-position": "Nivel del puesto",
+                "level-post": "Nivel del cargo",
+                "taip-position": "Tipo de puesto",
+                "level-risk": "Nivel de riesgo",
+                "branch": "Sucursal",
+                "area": "Área",
+                "report-to": "Reporta a (Nombre del puesto)",
+                "mail-to": "Correo electronico a quien reporta",
+                "menu-positions":{
+                  "edit-collaborator": "Editar colaborador",
+                  "edit-position": "Editar puesto",
+                  "edit-structure": "Extrutura",
+                  "add-permissions": "Agregar permisos",
+                  "historial-collaborator": "Historial del colaborador",
+                  "historial-position": "Historial del puesto",
+                  "collaborator-down": "Dar de baja Colaborador",
+                  "remobe-collaborator": "Eliminar Colaborador"    
+                },
+                "add-permissions-modal":{
+                    "title": "Agregar permisos",
+                    "permissions-adminitrator": "Permisos de Administrador",
+                    "permissions-nine": "Permisos para ver Nine Box",
+                    "permissions-objectives": "Permisos de Edición de Objetivos",
+                    "permissions-organizatition": "Permisos para ver Organigrama",
+                    "permissions-edit-organization": "Permisos para editar Organigrama",
+                    "permissions-plan-developing": "Permisos para crear Plan de Desarrollo",
+                    "btn-cancel": "Cancelar",
+                    "btn-appli": "Aplicar" 
+                },
+                "historial-position-modal":{
+                  "title": "Historial de puesto",
+                  "position": "Puesto",
+                  "creation": "Creación",
+                  "collaborators-occupied": "Colaboradores que ocuparon",
+                  "actions": "Acciones",
+                  "btn-cancel": "Cancelar",
+                  "btn-accept": "Aceptar"  
+                }, 
+                "collaborator-down-modal":{
+                  "title": "Dar de baja a colaborador",
+                  "tex": "Al dar de baja a un colaborador de tu organización ya no se verá reflejado en tu organigrama.",
+                  "enter-password-label": "Ingresa tu contraseña de usuario"  
+                },
+                "collaborator-down-modal2":{
+                 "atenttion": "¡Atención!",
+                 "tex1": "Estás a punto de dar de baja al colaborador.",
+                 "tex2": "¿Seguro deseas eliminarlo?",
+                 "btn-cancel": "Cancelar",
+                 "btn-delete": "Eliminar"
+                },  
+                "skills-position": "Havilidades Necesarias para el puesto",
+                "level-study": "Nivel de Estudios",
+                "years": "Años",
+                "idiomas": "Idiomas",
+                "skills-techniques": "Havilidades técnicas",
+                "menu2-positions":{
+                    "edit-skills": "Editar mis habilidades",
+                    "edit-experience": "Editar mi Experiencia"  
+                },
+                "edit-skills-collaborator":{
+                  "title": "Habilidades de colaborador",
+                  "level-education-label": "Nivel de estudios",
+                  "education-superior-placeholder": "Ej. Educación superior",
+                  "years-experience-label": "Años de experiencia",
+                  "select-option-placeholder": "Selecciona una opción",
+                  "skills-techniques-label": "Habilidades técnicas",
+                  "languages-label": "Idiomas",
+                  "english-advanced-placeholder": "Ej. Ingles avanzado",
+                  "experience-professional": "Experiencia profesional",
+                  "link-add-experience": "Agregar otra experiencia"   
+                },
+                "experience-modal":{
+                  "title": "Agregar Experiencia",
+                  "position-label": "Puesto",
+                  "executives-sales-placeholder": "Ej. Ejecutivos de ventas SR.",
+                  "business-label": "Empresa",
+                  "communication-placeholder": "Ej. GPO comunicación",
+                  "position-label1": "Puesto",
+                  "add-abstract-placeholder": "Agrega un breve resumen de tus principales actividades y logros",
+                  "start-label": "Inicio",
+                  "aleta-label": "Fin",
+                  "btn-add": "Agregar"  
+                }
+            }
+        } 
+    },
+
+    "teams":{
+     "title": "¡Bienvenido a los equipos!",
+     "tex": "Aqui podrás visualizar todos los equipos de la organización, además de facilitar y fomentar el trabajo coopera ",
+     "btn-new-team": "Nuevo Equipo"     
+    },
+    "teams-modal":{
+     "title": "Crear Equipo",
+     "name-team-label": "Nombre del equipo",
+     "placeholder-imput-name": "Aqui puedes asignar el nombre de tu equipo",
+     "kind-team-label": "Tipo de equipo",
+     "placeholder-imput-selec": "Selecciona una opción",
+     "add-collaborators-label": "Agrega colaboradores",
+     "placeholder-imput-search": "Buscar colaboradores",
+     "modality-label": "Modalidad",
+     "placeholder-imput-option": "Selecciona una opción",
+     "members-team": "Miembros del equipo",
+     "leader": "Lider",
+     "role-team": "Rol en el equipo",
+     "actions": "Acciones",
+     "tex": "Aqui puedes ver buenas prácticas en equipos Agile",
+     "btn-cancel": "canselar",
+     "btn-create": "Crear",
+     "btn-edit": "Editar"   
+    },
+    "teams2":{
+     "tex": "Nombre del equipo",
+     "tex2": "Última modificación",
+     "tex3": "Acción"
+    },
+    "menu":{
+     "clone-team": "Clonar equipo",
+     "rename": "Renombrar",
+     "edit": "Editar",
+     "remove": "Eliminar"   
+    },
+    "rename-modal":{
+     "rename-team": "Rename de equipo",
+     "btn-cancel": "cancelar",
+     "btn-save": "Guardar"   
+    },
+    "teams2-modal":{
+     "kind-team": "Tipo de equipo",
+     "modality": "Modalidad",
+     "frame-job": "Marco de trabajo",
+     "tex": "SCRUM",
+     "members-team": "Miembros del equipo",
+     "leader": "Lider",
+     "roles": "Roles"   
+    },
+    "menu-modal":{
+     "edit-data": "Editar datos",
+     "remove": "Eliminar"   
+    },
+    "areasandpositions-addjob":{
+     "title": "Director General",
+     "tex": "Completa la información del puesto",
+     "label-nameposition": "Nombre del puesto*",
+     "placeholder-position": "Ej. Director General",
+     "label-levelposition": "Nivel del puesto*",
+     "placeholder-direction": "Ej. Dirección",
+     "label-positionpersonalized": "Nivel del puesto personalizado*",
+     "placeholder-personalized": "Ej. Dirección",
+     "label-kindposition": "Tipo de puesto*",
+     "placeholder-positionkey": "Ej.Puesto clave",
+     "label-levelrisk": "Nivel de riesgo*",
+     "placeholder-high": "Ej. Alto",
+     "label-levelstudies": "Nivel de Estudios*",
+     "placeholder-educationhigher": "Ej. Educación superior",
+     "label-yearsexperience": "Años de experiencia*",
+     "placeholder-selec": "Selecciona una opción",
+     "abilities-for-position": "Habilidades para el puesto",
+     "label-skilltech": "Habilidades técnicas",
+     "placeholder-word": "Ej. Microsoft word",
+     "label-languages": "Idiomas",
+     "placeholder-english": "Ej. Ingles avanzado",
+     "competences": "Competencias institucionales",
+     "level": "Nivel",
+     "competences2": "Competencias institucionales",
+     "link-addcompeten": "Agregar competencias",
+     "competen-position": "Competencias del puesto",
+     "link-addcompetens": "Agregar competencias",
+     "fields-obligatory": "Los campos con * son obligatorios",
+     "btn-cancel": "Cancelar",
+     "btn-save": "Guardar", 
+     "competens-modal":{
+      "add-competences": "Agregar competencias institucionales",
+      "tex1": "Agregar las competencias institucionales que deben tener todos los",
+      "tex2": "colaboradores de tu organización, puedes elegir hasta un máximo de tres.",
+      "placeholder-competens": "Buscar competencias",
+      "btn-cancel": "cancelar"   
+     },
+     "menu":{
+      "add-permissions": "Agregar permisos",
+      "remove-position": "Eliminar pusto"   
+     },
+     "add-positionmodal":{
+        "title": "Agregar permisos",
+        "permissions-adminitrator": "Permisos de Administrador",
+        "permissions-nine": "Permisos para ver Nine Box",
+        "permissions-objectives": "Permisos de Edición de Objetivos",
+        "permissions-organizatition": "Permisos para ver Organigrama",
+        "permissions-edit-organization": "Permisos para editar Organigrama",
+        "permissions-plan-developing": "Permisos para crear Plan de Desarrollo",
+        "btn-cancel": "Cancelar",
+        "btn-appli": "Aplicar"   
+     },   
+     "modal-positio":{
+        "atention": "¡Atención!",
+        "text1": "Estás a punto de eliminar esta competencia.",
+        "question": "¿seguro deseas eliminarla?",
+        "btn-cancel": "Cancelar",
+        "btn-remove": "Eliminar"   
+     },
+     "modal-competens":{
+      "title": "Editar competencias institucionales",
+      "tex": "Al editar las competencias institucionales se verá reflejado en todos los colaboradores de tu empresa.",
+      "label-enteruser": "Ingresa tu contraseña de usuario",
+      "placeholder-user": "Ej. Ghkcclsd23",
+      "btn-cancel": "cancelar",
+      "btn-enter": "Ingresar"   
+     },
+     "title1": "Areas en las que participa el puesto",
+     "tex-colaborator": "Colaboradores asignados al puesto de Director General"
+    },
+    "areasandpositions-general":{
+      "title": "Carga masiva",
+      "text-1": "En este apartado vas a poder realizar la carga masiva de información.",
+      "text-2": "para facilitar la carga de datos, proponemos subir la información en 3 partes, la",
+      "text-3": "primera sería un archivo con todas tu áreas y todos los puestos en tu empresa,"  
+    },
 
 
 
-               
-            }  
-        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

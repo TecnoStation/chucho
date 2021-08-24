@@ -28,9 +28,9 @@ export default function AreasAndPositionsMassiveGeneral() {
     <>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col className="gutter-row" span={12}>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}> 
             <Col className="gutter-row" span={24}>
-              <h3>Carga masiva</h3>
+              <h3>{t("organigrama.areasandpositions-masivee.")}</h3>
             </Col>
           </Row>
 

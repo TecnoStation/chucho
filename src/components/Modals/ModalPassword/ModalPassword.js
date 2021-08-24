@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { Button, Input, Form, Modal, Row, Col } from "antd";
 import Warning from "../../../assets/img/icons/atencion.svg";
 import Good from "../../../assets/img/icons/bien_hecho.svg";
-
+import { useTranslation } from "react-i18next";
 import "./ModalPassword.scss";
 import { Link } from "react-router-dom";
 
 //titleModal messageModal visible type messageWarning question function
 
 export default function ModalPassword({ Password, setPassword }) {
+  const [t, i18n] = useTranslation("global");
   const [clearPassword, setclearPassword] = useState("");
   const [form] = Form.useForm();
   form.setFieldsValue({
@@ -25,7 +26,7 @@ export default function ModalPassword({ Password, setPassword }) {
         title={Password.titleModal}
         visible={Password.visible}
         onCancel={() => {
-          setPassword(false);
+          setPassword(false); 
         }}
         onOk={() => {
           setPassword(false);
@@ -38,7 +39,7 @@ export default function ModalPassword({ Password, setPassword }) {
               setPassword(false);
             }}
           >
-            Cancelar
+           {t("organigrama.delete-collaborator.btn-cancel")}
           </Button>,
           <input
             type="button"
@@ -130,7 +131,7 @@ export default function ModalPassword({ Password, setPassword }) {
               });
             }}
             className="primary"
-            value="Ingresar"
+            value={t("organigrama.delete-collaborator.btn-save")}
           />,
         ]}
       >

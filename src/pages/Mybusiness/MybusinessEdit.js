@@ -9,12 +9,13 @@ import { Link } from "react-router-dom";
 import Branchs from "../../components/Branchs/Branchs";
 import Competencies from "../../components/Competencies/Competencies";
 import Avatar from "../../assets/img/avatar.png";
-import "./MybusinessEdit.scss";
 import Modalcompetencies from "../../components/Modals/Modalcompetencies/Modalcompetencies";
 import { useTranslation } from "react-i18next";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import Screens from "../../components/Screens/Screens";
 import ModalBranch from "../../components/Modals/ModalBranch/ModalBranch";
+import "./MybusinessEdit.scss";
+
 const { TextArea, Search } = Input;
 const { Option } = Select;
 
@@ -128,13 +129,13 @@ export default function MybusinessEdit() {
         onChange={changeActive}
         type="card"
       >
-        <TabPane className="tabPane" tab="Información" key="1">
+        <TabPane className="tabPane" tab={t("organigrama.my-business-edit.information.tab-name")} key="1">
           <div className="info">
             <Form name="formInformtion" onFinish={onFinish} layout="vertical">
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={12}>
                   <h2 style={{ textAlign: "left" }}>
-                    Información de Mi empresa
+                    {t("organigrama.my-business-edit.information.title")}
                   </h2>
                   <p>
                     <img alt="ico" width="140" src={Avatar} />
@@ -149,9 +150,9 @@ export default function MybusinessEdit() {
                         },
                       ]}
                       name="bussines"
-                      label="Nombre de Mi empresa"
+                      label={t("organigrama.my-business-edit.information.form.business-name")}
                     >
-                      <Input type="text" placeholder="Nombre" />
+                      <Input type="text" placeholder={t("organigrama.my-business-edit.information.form.business-name-placeholder")} />
                     </Form.Item>
                     <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                       <Col className="gutter-row" span={12}>
@@ -163,10 +164,10 @@ export default function MybusinessEdit() {
                             },
                           ]}
                           name="activity"
-                          label="Actividad de la empresa"
+                          label={t("organigrama.my-business-edit.information.form.business-activity")}
                           tooltip="info"
                         >
-                          <Select placeholder="Selecciona una opción">
+                          <Select placeholder={t("organigrama.my-business-edit.information.form.business-activity-placeholder")}>
                             <Option value="jack">Jack</Option>
                             <Option value="lucy">Lucy</Option>
                             <Option value="tom">Tom</Option>
@@ -182,10 +183,10 @@ export default function MybusinessEdit() {
                             },
                           ]}
                           name="subactivity"
-                          label="Subactividad de la empresa"
+                          label={t("organigrama.my-business-edit.information.form.subactivity-busines")}
                           tooltip="info"
                         >
-                          <Select placeholder="Selecciona una opción">
+                          <Select placeholder={t("organigrama.my-business-edit.information.form.subactivity-placeholder")}>
                             <Option value="jack">Jack</Option>
                             <Option value="lucy">Lucy</Option>
                             <Option value="tom">Tom</Option>
@@ -203,9 +204,9 @@ export default function MybusinessEdit() {
                             },
                           ]}
                           name="size"
-                          label="Tamaño de la empresa"
+                          label={t("organigrama.my-business-edit.information.form.business-size")}
                         >
-                          <Select placeholder="Selecciona una opción">
+                          <Select placeholder={t("organigrama.my-business-edit.information.form.business-size-placeholder")}>
                             <Option value="jack">Jack</Option>
                             <Option value="lucy">Lucy</Option>
                             <Option value="tom">Tom</Option>
@@ -221,11 +222,11 @@ export default function MybusinessEdit() {
                             },
                           ]}
                           name="from"
-                          label="Pais"
+                          label={t("organigrama.my-business-edit.information.form.from")}
                         >
                           <Select
                             className="gutter-row"
-                            placeholder="Selecciona una opción"
+                            placeholder={t("organigrama.my-business-edit.information.form.from-placeholder")}
                           >
                             <Option value="jack">Jack</Option>
                             <Option value="lucy">Lucy</Option>
@@ -242,9 +243,9 @@ export default function MybusinessEdit() {
                         },
                       ]}
                       name="site"
-                      label="Sitio web"
+                      label={t("organigrama.my-business-edit.information.form.site-web")}
                     >
-                      <Input type="text" placeholder="Nombre" />
+                      <Input type="text" placeholder={t("organigrama.my-business-edit.information.form.site-web-placeholder")} />
                     </Form.Item>
                     <Form.Item
                       rules={[
@@ -254,9 +255,9 @@ export default function MybusinessEdit() {
                         },
                       ]}
                       name="officesName"
-                      label="Nombre de las oficinas centrales"
+                      label={t("organigrama.my-business-edit.information.form.name-headquartes")}
                     >
-                      <Input type="text" placeholder="Nombre" />
+                      <Input type="text" placeholder={t("organigrama.my-business-edit.information.form.name-headquartes-placeholder")} />
                     </Form.Item>
                     <Form.Item
                       rules={[
@@ -266,21 +267,21 @@ export default function MybusinessEdit() {
                         },
                       ]}
                       name="officesfrom"
-                      label="Dirección de las oficinas centrales"
+                      label={t("organigrama.my-business-edit.information.form.headquartes-direction")}
                     >
                       <Input addonAfter={<EnvironmentOutlined />} />
                     </Form.Item>
                   </div>
                 </Col>
                 <Col className="gutter-row dividerLeft" span={12}>
-                  <h2 style={{ textAlign: "left" }}>Agregar sucursal</h2>
+                  <h2 style={{ textAlign: "left" }}>{t("organigrama.my-business-edit.information.form.add-branch-title")}</h2>
                   <br />
                   <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                     <Col className="gutter-row" span={12}>
                       <Search
                         id="filter"
                         onChange={filterBranchs}
-                        placeholder="Buscar Sucursal"
+                        placeholder={t("organigrama.my-business-edit.information.form.search-branch-placeholder")}
                       />
                     </Col>
                     <Col className="gutter-row" span={12}>
@@ -296,8 +297,8 @@ export default function MybusinessEdit() {
                           setModal(true);
                         }}
                       >
-                        <PlusCircleOutlined className="iconGreen" /> Agregar
-                        sucursal
+                        <PlusCircleOutlined className="iconGreen" /> 
+                        {t("organigrama.my-business-edit.information.form.add-branch-link")}
                       </Link>
                     </Col>
                   </Row>
@@ -306,14 +307,14 @@ export default function MybusinessEdit() {
                     gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <span>Sucursales Agregadas</span>
+                      <span>{t("organigrama.my-business-edit.information.form.branches-added")}</span>
                     </Col>
                     <Col
                       className="gutter-row"
                       style={{ textAlign: "left" }}
                       span={12}
                     >
-                      <span>Dirección</span>
+                      <span>{t("organigrama.my-business-edit.information.form.direction")}</span>
                     </Col>
                     <div className="divider">
                       <div className="dividerBottom"></div>
@@ -340,12 +341,12 @@ export default function MybusinessEdit() {
                       className="secondary"
                       style={{ marginRight: "15px" }}
                     >
-                      Cancelar
+                      {t("organigrama.my-business-edit.information.form.btn-cancel")}
                     </Button>
                   </Link>
                   {firtFlag ? (
                     <Button htmlType="submit" className="primary">
-                      Guardar
+                      {t("organigrama.my-business-edit.information.form.btn-save")}
                     </Button>
                   ) : (
                     <Link to="/organigrama/mybusiness">
@@ -363,7 +364,7 @@ export default function MybusinessEdit() {
           <div className="info">
             <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
               <Col className="gutter-row" span={12}>
-                <h2 style={{ textAlign: "left" }}>Cultura Mi empresa</h2>
+                <h2 style={{ textAlign: "left" }}>{t("organigrama.my-business-edit.culture.title")}</h2>
                 <br />
                 <Form name="formCulture" layout="vertical">
                   <div className="formWork">
@@ -373,23 +374,23 @@ export default function MybusinessEdit() {
                       tooltip="info"
                     >
                       <TextArea
-                        placeholder="Ej. “Organizar la información del mundo y hacerla universalmente accesible y útil.” - Google (1000 caracteres)"
+                        placeholder={t("organigrama.my-business-edit.culture.mission-placeholder")}
                         rows={6}
                       />
                     </Form.Item>
                     <Form.Item name="vision" label="Visión" tooltip="info">
                       <TextArea
-                        placeholder="Ej. “Ej. “Ser el motor de búsqueda más importante del mundo” - Google (1000 caracteres)"
+                        placeholder={t("organigrama.my-business-edit.culture.View-placeholder")}
                         rows={6}
                       />
                     </Form.Item>
                     <Form.Item
                       name="bussinesDescriptions"
-                      label="Descripción de la empresa"
+                      label={t("organigrama.my-business-edit.culture.business-description")}
                       tooltip="info"
                     >
                       <TextArea
-                        placeholder="Ej. “Ser el motor de búsqueda más importante del mundo” -Google (1000 caracteres)"
+                        placeholder={t("organigrama.my-business-edit.culture.business-description-placeholder")}
                         rows={6}
                       />
                     </Form.Item>
@@ -398,7 +399,7 @@ export default function MybusinessEdit() {
               </Col>
               <Col className="gutter-row dividerLeft" span={12}>
                 <h2 style={{ textAlign: "left" }}>
-                  Competencias institucionales
+                {t("organigrama.my-business-edit.culture.institutional-competencies")}
                 </h2>
                 <br />
                 <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
@@ -410,7 +411,7 @@ export default function MybusinessEdit() {
                         setSlider(50);
                       }}
                     >
-                      <PlusCircleOutlined /> Agregar competencia
+                      <PlusCircleOutlined /> {t("organigrama.my-business-edit.culture.add-competencies-link")}
                     </Link>
                   </Col>
                 </Row>
@@ -419,7 +420,7 @@ export default function MybusinessEdit() {
                 <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                   <Col className="gutter-row" span={11}>
                     <span>
-                      <b>Competencias agregadas</b>
+                      <b>{t("organigrama.my-business-edit.culture.competencies-added")}</b>
                     </span>
                   </Col>
                   <Col
@@ -428,7 +429,7 @@ export default function MybusinessEdit() {
                     span={10}
                   >
                     <span>
-                      <b>Nivel</b>
+                      <b>{t("organigrama.my-business-edit.culture.level")}</b>
                     </span>
                   </Col>
                   <div className="divider">
@@ -459,12 +460,12 @@ export default function MybusinessEdit() {
               >
                 <Link to="/organigrama/mybusiness">
                   <Button className="secondary" style={{ marginRight: "15px" }}>
-                    Cancelar
+                  {t("organigrama.my-business-edit.culture.btn-cancel")}
                   </Button>
                 </Link>
 
                 <Link to="/organigrama/mybusiness">
-                  <Button className="primary">Guardar</Button>
+                  <Button className="primary">{t("organigrama.my-business-edit.culture.btn-save")}</Button>
                 </Link>
               </Col>
               <br />

@@ -240,7 +240,7 @@ export default function AreasAndPositionsAddJob() {
 
   return (
     <div>
-      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}> 
         <Col className="gutter-row" span={14}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col
@@ -249,9 +249,9 @@ export default function AreasAndPositionsAddJob() {
               style={{ textAlign: "left", marginBottom: "30px" }}
             >
               <h3>
-                <b>Director Generals</b>
+                <b>{t("organigrama.areasandpositions-addjob.title")}</b>
               </h3>
-              <span>Completa la información del puesto</span>
+              <span>{t("organigrama.areasandpositions-addjob.tex")}</span>
             </Col>
             <Col className="gutter-row" span={2}>
               <Dropdown overlay={menu} trigger={["click"]}>
@@ -297,10 +297,10 @@ export default function AreasAndPositionsAddJob() {
                       },
                     ]}
                     name="activity"
-                    label="Nivel del puesto*"
+                    label={t("organigrama.areasandpositions-addjob.label-levelposition")}
                     tooltip={info}
                   >
-                    <Select placeholder="Ej.Dirección">
+                    <Select placeholder={t("organigrama.areasandpositions-addjob.placeholder-direction")}>
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
@@ -316,10 +316,10 @@ export default function AreasAndPositionsAddJob() {
                       },
                     ]}
                     name="subactivity"
-                    label="Nivel de puesto personalizado*"
+                    label={t("organigrama.areasandpositions-addjob.label-positionpersonalized")}
                     tooltip={infosub}
                   >
-                    <Select placeholder="Ej. Dirección">
+                    <Select placeholder={t("organigrama.areasandpositions-addjob.placeholder-personalized")}>
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
@@ -377,7 +377,7 @@ export default function AreasAndPositionsAddJob() {
                   >
                     <Select
                       className="gutter-row"
-                      placeholder="Ej. Educación superior"
+                      placeholder={t("organigrama.areasandpositions-addjob.placeholder-educationhigher")}
                     >
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
@@ -398,7 +398,7 @@ export default function AreasAndPositionsAddJob() {
                   >
                     <Select
                       className="gutter-row"
-                      placeholder="Selecciona una opción"
+                      placeholder={t("organigrama.areasandpositions-addjob.placeholder-selec")}
                     >
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
@@ -487,7 +487,7 @@ export default function AreasAndPositionsAddJob() {
                   <Input
                     type="text"
                     id="idiomas"
-                    placeholder="Ej. Ingles avanzado"
+                    placeholder={t("organigrama.areasandpositions-addjob.placeholder-english")}
                   />
                 </Form.Item>
               </Col>
@@ -609,7 +609,7 @@ export default function AreasAndPositionsAddJob() {
         <Col className="gutter-row dividerLeft" span={10}>
           <Row>
             <Col span={24}>
-              <h3>Areas en las que participa el puesto</h3>
+              <h3>{t("organigrama.areasandpositions-addjob.title1")}</h3>
             </Col>
           </Row>
           <Row>
@@ -627,7 +627,7 @@ export default function AreasAndPositionsAddJob() {
           <Row style={{ marginTop: "10px" }}>
             <Col span={24}>
               <p>
-                <b>Colaboradores asignados al puesto de Director General</b>
+                <b>{t("organigrama.areasandpositions-addjob.tex-colaborator")}</b>
               </p>
             </Col>
           </Row>

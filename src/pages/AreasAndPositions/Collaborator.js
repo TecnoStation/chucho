@@ -47,21 +47,23 @@ export default function Collaborator() {
               setPermissions(true);
             }}
           >
-            Agregar permisos
+            {t("organigrama.collaborator-form.menu.add-permissions")}
           </Link>
         </Menu.Item>
       </Menu.Item>
 
       <Menu.Item key="0">
         <Menu.Item key="3" disabled>
-          <Link to="#">Ver Objetivos</Link>
+          <Link to="#">
+            {t("organigrama.collaborator-form.menu.view-objetives")}
+          </Link>
         </Menu.Item>
       </Menu.Item>
 
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link to="/organigrama/areasandpositions-perfil">
-            Ver su Expediente
+          <Link to="/areasandpositions-perfil">
+            {t("organigrama.collaborator-form.menu.view-proceedings")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -74,7 +76,7 @@ export default function Collaborator() {
             }}
             to="#"
           >
-            Asignar documentos
+            {t("organigrama.collaborator-form.menu.assign-documents")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -87,11 +89,12 @@ export default function Collaborator() {
               setPassword({
                 visible: true,
                 type: 0,
-                titleModal: "Eliminar Colaborador",
-                messageModal:
-                  "Al eliminar un colaborador de tu organización ya no formará parte de tu organizacion.",
-                messageWarning: "Estás a punto de eliminar al colaborador",
-                question: "¿Seguro deseas eliminarlo?",
+                titleModal: t("organigrama.delete-collaborator.title"),
+                messageModal: t("organigrama.delete-collaborator.text"),
+                messageWarning: t(
+                  "organigrama.delete-collaborator.warning.text"
+                ),
+                question: t("organigrama.delete-collaborator.warning.question"),
                 function: () => {
                   history.push({
                     pathname: "/organigrama/areasandpositions",
@@ -101,7 +104,7 @@ export default function Collaborator() {
               });
             }}
           >
-            Eliminar Colaborador
+            {t("organigrama.collaborator-form.menu.delete-collaborator")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -123,7 +126,7 @@ export default function Collaborator() {
         <Col className="gutter-row" span={11}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col span={22} style={{ textAlign: "left" }}>
-              <h1>Información del Colaborador</h1>
+              <h1>{t("organigrama.collaborator-form.title")}</h1>
             </Col>
             <Col span={2}>
               <Dropdown overlay={menu} trigger={["click"]}>
@@ -291,7 +294,12 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Input type="text" placeholder="Ej. nombre@empresa.com " />
+                <Input
+                  type="text"
+                  placeholder={t(
+                    "organigrama.collaborator-form.email-collaborator-placeholder"
+                  )}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -421,7 +429,9 @@ export default function Collaborator() {
               >
                 <Input
                   type="text"
-                  placeholder="Abraham Guadarrama Rangel-Diseñador UX "
+                  placeholder={t(
+                    "organigrama.collaborator-form.report-to-placeholder"
+                  )}
                 />
               </Form.Item>
             </Col>
@@ -502,11 +512,13 @@ export default function Collaborator() {
 
           <Row style={{ marginTop: "300px" }}>
             <Col className="gutter-row" span={15}>
-              Los campos con * son obligatorios
+              {t("organigrama.collaborator-form.text-footer")}
             </Col>
             <Col className="gutter-row" span={5}>
               <Link to="/areasandpositions?tab=2">
-                <Button className="secondary">Cancelar</Button>
+                <Button className="secondary">
+                  {t("organigrama.collaborator-form.btn-cancel")}
+                </Button>
               </Link>
             </Col>
             <Col className="gutter-row" span={3}>
