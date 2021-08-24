@@ -11,7 +11,6 @@ import Competencies from "../../components/Competencies/Competencies";
 import Avatar from "../../assets/img/avatar.png";
 import Modalcompetencies from "../../components/Modals/Modalcompetencies/Modalcompetencies";
 import { useTranslation } from "react-i18next";
-import { v4 as uuid } from "uuid";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import Screens from "../../components/Screens/Screens";
 import ModalBranch from "../../components/Modals/ModalBranch/ModalBranch";
@@ -138,7 +137,6 @@ export default function MybusinessEdit() {
                   <h2 style={{ textAlign: "left" }}>
                     {t("organigrama.my-business-edit.information.title")}
                   </h2>
-
                   <p>
                     <img alt="ico" width="140" src={Avatar} />
                   </p>
