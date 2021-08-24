@@ -38,17 +38,16 @@ export default function AreasAndPositionsMassiveE() {
     <>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col className="gutter-row" span={12}>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}> 
             <Col className="gutter-row" span={24}>
-              <h3>Carga masiva de estructura</h3>
+              <h3>{t("organigrama.areasandpositions-masivee.title")}</h3>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                En este apartado vas a poder realizar la carga masiva de
-                información.
+              {t("organigrama.areasandpositions-masivee.text1")}
               </p>
             </Col>
           </Row>
@@ -56,21 +55,18 @@ export default function AreasAndPositionsMassiveE() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                Para facilitar la carga de datos, proponemos subir la
-                información en 3 partes, la{" "}
+              {t("organigrama.areasandpositions-masivee.text2")}
                 <b>
-                  primera sería un archivo con todas tus áreas y todos los
-                  puestos en tu empresa
+                {t("organigrama.areasandpositions-masivee.text3")}
                 </b>
-                , para facilitar este paso hemos creado una plantilla que puedes
-                descargar, llenar y volver a subir:
+                {t("organigrama.areasandpositions-masivee.text4")}
               </p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <p className="linkBold">Descargar plantilla de Estructura</p>
+              <p className="linkBold">{t("organigrama.areasandpositions-masivee.text5")}</p>
             </Col>
           </Row>
         </Col>
@@ -79,8 +75,7 @@ export default function AreasAndPositionsMassiveE() {
             <Col className="gutter-row" span={24}>
               <p>
                 <b>
-                  Antes de importar los datos, es esencial asegurarse de que la
-                  tabla cumple estos tres requisitos:
+                {t("organigrama.areasandpositions-masivee.text6")}
                 </b>
               </p>
             </Col>
@@ -88,13 +83,13 @@ export default function AreasAndPositionsMassiveE() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <span>- Cada columna tiene un encabezado.</span>
+              <span>{t("organigrama.areasandpositions-masivee.text7")}</span>
               <br />
               <span>
-                - Deberás llenar los todos los campos que se te piden.
+              {t("organigrama.areasandpositions-masivee.text8")}
               </span>
               <br />
-              <span>- Solo se aceptan archivos de excel (cvs y xls)</span>
+              <span>{t("organigrama.areasandpositions-masivee.text9")}</span>
               <br />
               <br />
             </Col>
@@ -102,14 +97,14 @@ export default function AreasAndPositionsMassiveE() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <p>Adjunta tu archivo y ¡listo!</p>
+              <p>{t("organigrama.areasandpositions-masivee.text10")}</p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b>Subir archivo de estructura:</b>
+                <b>{t("organigrama.areasandpositions-masivee.text11")}</b>
               </p>
             </Col>
           </Row>
@@ -118,7 +113,7 @@ export default function AreasAndPositionsMassiveE() {
             <Col className="gutter-row" span={24}>
               <Link to="#" onClick={openModalUpload}>
                 {" "}
-                <PlusCircleOutlined /> Adjuntar archivo{" "}
+                <PlusCircleOutlined />{t("organigrama.areasandpositions-masivee.link-attach")}
               </Link>
               <br />
               <br />
@@ -132,7 +127,7 @@ export default function AreasAndPositionsMassiveE() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={24}>
-          <h1>Historial de Cargas</h1>
+          <h1>{t("organigrama.areasandpositions-masivee.history-loads")}</h1>
         </Col>
       </Row>
 
@@ -142,16 +137,16 @@ export default function AreasAndPositionsMassiveE() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={6}>
-          <p>Archivo</p>
+          <p>{t("organigrama.areasandpositions-masivee.file")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>Fecha de carga</p>
+          <p>{t("organigrama.areasandpositions-masivee.date-load")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>Estatus</p>
+          <p>{t("organigrama.areasandpositions-masivee.status")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>Acciones</p>
+          <p>{t("organigrama.areasandpositions-masivee.actions")}</p>
         </Col>
       </Row>
 
@@ -203,10 +198,10 @@ export default function AreasAndPositionsMassiveE() {
       >
         <Col className="gutter-row" span={17}></Col>
         <Col className="gutter-row" span={3}>
-          <Button className="secondary">Cancelar</Button>
+          <Button className="secondary">{t("organigrama.areasandpositions-masivee.btn-cancel")}</Button>
         </Col>
         <Col className="gutter-row" span={3}>
-          <Button className="primary">Subir archivo</Button>
+          <Button className="primary">{t("organigrama.areasandpositions-masivee.btn-load-file")}</Button>
         </Col>
       </Row>
 
@@ -219,15 +214,15 @@ export default function AreasAndPositionsMassiveE() {
               </p>
             </Col>
             <Col span={24}>
-              <h3>Bien hecho!</h3>
+              <h3>{t("organigrama.areasandpositions-masivee.well-done")}</h3>
             </Col>
             <Col span={24}>
-              <h3>Organigrama creado</h3>
+              <h3>{t("organigrama.areasandpositions-masivee.organization-created")}</h3>
               <br />
             </Col>
             <Col span={24}>
               <Button onClick={endFn} className="primary btn">
-                Hecho
+              {t("organigrama.areasandpositions-masivee.btn-done")}
               </Button>
             </Col>
           </Row>
@@ -235,7 +230,7 @@ export default function AreasAndPositionsMassiveE() {
       </Screendefault>
 
       <Modal
-        title="Sube el archivo"
+        title={t("organigrama.areasandpositions-masivee.up-load-file")}
         visible={modalUpload}
         onCancel={closeModalUpload}
         onOk={sendUpload}
@@ -245,13 +240,13 @@ export default function AreasAndPositionsMassiveE() {
             className="secondary"
             onClick={closeModalUpload}
           >
-            Cancelar
+            {t("organigrama.areasandpositions-masivee.btn-cancel")}
           </Button>,
           <input
             type="button"
             className="primary"
             onClick={sendUpload}
-            value="Subir"
+            value={t("organigrama.areasandpositions-masivee.btn-rise")}
           />,
         ]}
       >

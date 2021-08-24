@@ -135,13 +135,13 @@ export default function AreasAndPositions() {
       <Tabs
         className="tab"
         activeKey={Active}
-        onChange={changeActive}
+        onChange={changeActive} 
         type="card"
       >
-        <TabPane className="tabPane" tab="Estructura" key="1">
+        <TabPane className="tabPane" tab={t("organigrama.areas-and-positions.structure.tab-name")} key="1">
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} className="info">
             <Col className="gutter-row" span={12}>
-              <h3 style={{ textAlign: "left" }}>Crear áreas de Mi empresa</h3>
+              <h3 style={{ textAlign: "left" }}>{t("organigrama.areas-and-positions.structure.title")}</h3>
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col
                   className="gutter-row"
@@ -155,7 +155,7 @@ export default function AreasAndPositions() {
                       icon={<ImArrowUp className="iconAjust2" />}
                     >
                       {" "}
-                      <span className="textAjust2">Carga masiva</span>
+                      <span className="textAjust2">{t("organigrama.areas-and-positions.structure.btn-load-masive")}</span>
                     </Button>
                   </Link>
                 </Col>
@@ -171,7 +171,7 @@ export default function AreasAndPositions() {
                   >
                     {" "}
                     <IoMdCloudDownload className="iconAjust" />{" "}
-                    <span className="textAjust">Descargar archivo</span>{" "}
+                    <span className="textAjust">{t("organigrama.areas-and-positions.structure.btn-download-file")}</span>{" "}
                   </Button>
                 </Col>
               </Row>
@@ -186,8 +186,7 @@ export default function AreasAndPositions() {
                   style={{ textAlign: "justify" }}
                 >
                   <span className="link">
-                    Agrega áreas y subáreas para crear el esqueleto del
-                    organigrama de tu empresa
+                  {t("organigrama.areas-and-positions.structure.text1")}
                   </span>
                 </Col>
               </Row>
@@ -291,7 +290,7 @@ export default function AreasAndPositions() {
                 >
                   <Link to="#">
                     {" "}
-                    <PlusCircleOutlined /> Agregar nueva área
+                    <PlusCircleOutlined /> {t("organigrama.areas-and-positions.structure.link-add-new-area")}
                   </Link>
                 </Col>
               </Row>
@@ -302,8 +301,8 @@ export default function AreasAndPositions() {
               style={{ textAlign: "left" }}
               span={12}
             >
-              <h3>Puestos en el área: Dirección de Finanzas</h3>
-              <p>Ingresa los puestos de tus áreas.</p>
+              <h3>{t("organigrama.areas-and-positions.structure.positions-in-area")}</h3>
+              <p>{t("organigrama.areas-and-positions.structure.insert- your-positions")}</p>
               <Row className="dividerBottom" style={{ paddingBottom: "15px" }}>
                 <Col span={14} style={{ marginLeft: "30px" }}>
                   <span>CEO</span>
@@ -354,7 +353,7 @@ export default function AreasAndPositions() {
                 >
                   <Link to="#">
                     {" "}
-                    <PlusCircleOutlined /> Agregar puesto
+                    <PlusCircleOutlined /> {t("organigrama.areas-and-positions.structure.link-add-position")}
                   </Link>
                 </Col>
               </Row>
@@ -367,18 +366,18 @@ export default function AreasAndPositions() {
                 span={24}
               >
                 <Button className="secondary" style={{ marginRight: "15px" }}>
-                  Cancelar
+                {t("organigrama.areas-and-positions.structure.btn-cancel")}
                 </Button>
-                <Button className="primary">Guardar</Button>
+                <Button className="primary"> {t("organigrama.areas-and-positions.structure.btn-save")}</Button>
               </Col>
             </Row>
           </Row>
         </TabPane>
-        <TabPane className="tabPane" tab="Puesto" key="2">
+        <TabPane className="tabPane" tab={t("organigrama.areas-and-positions.position.tab-name")} key="2">
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} className="info">
             <Col style={{ textAlign: "left" }} className="gutter-row" span={6}>
               <span>
-                <b>Lista de puestos en Mi empresa</b>
+                <b>{t("organigrama.areas-and-positions.position.title")}</b>
               </span>
               <br />
               <span className="iconGreen">(Total 2 puestos)</span>
@@ -395,7 +394,7 @@ export default function AreasAndPositions() {
                   icon={<ImArrowUp className="iconAjust2" />}
                 >
                   {" "}
-                  <span className="textAjust2">Carga masiva</span>
+                  <span className="textAjust2">{t("organigrama.areas-and-positions.position.btn-load-masive")}</span>
                 </Button>
               </Link>
               <Button
@@ -406,21 +405,21 @@ export default function AreasAndPositions() {
               >
                 {" "}
                 <IoMdCloudDownload className="iconAjust" />{" "}
-                <span className="textAjust">Descargar archivo</span>{" "}
+                <span className="textAjust">{t("organigrama.areas-and-positions.position.btn-download-file")}</span>{" "}
               </Button>
               <Input
                 style={{ width: "250px" }}
                 addonAfter={<SearchOutlined />}
-                placeholder="Buscar puesto"
+                placeholder={t("organigrama.areas-and-positions.position.placeholder-input")}
               />
             </Col>
 
             <Row className="info2 dividerBottomFull">
-              <Col span={8}>Nombre del puesto</Col>
-              <Col span={4}>Información Básica</Col>
-              <Col span={4}>Perfilamiento</Col>
-              <Col span={4}>Habilidades</Col>
-              <Col span={4}>Acciones</Col>
+              <Col span={8}>{t("organigrama.areas-and-positions.position.position-name")}</Col>
+              <Col span={4}>{t("organigrama.areas-and-positions.position.basic-information")}</Col>
+              <Col span={4}>{t("organigrama.areas-and-positions.position.profiling")}</Col>
+              <Col span={4}>{t("organigrama.areas-and-positions.position.skills")}</Col>
+              <Col span={4}>{t("organigrama.areas-and-positions.position.actions")}</Col>
             </Row>
             <Row
               className="info3Full tagThreeFull"
@@ -629,16 +628,16 @@ export default function AreasAndPositions() {
                   marginRight: "20px",
                 }}
               >
-                <Input placeholder="Ej. Agrega nombre de puesto" />
+                <Input placeholder={t("organigrama.areas-and-positions.position.input-placeholder-position")} />
               </Col>
               <Col span={2} style={{ textAlign: "left", marginRight: "16px" }}>
                 <Button onClick={cancelJob} className="secondary">
-                  Cancelar
+                {t("organigrama.areas-and-positions.position.btn-cancel")}
                 </Button>
               </Col>
               <Col span={2} style={{ textAlign: "left" }}>
                 <Button onClick={saveJob} className="primary">
-                  Guardar
+                {t("organigrama.areas-and-positions.position.btn-save")}
                 </Button>
               </Col>
               <Col span={10}></Col>
@@ -651,7 +650,7 @@ export default function AreasAndPositions() {
                 style={{ textAlign: "left", marginLeft: "20px" }}
               >
                 <Link to="#" onClick={addJob}>
-                  <PlusCircleOutlined /> Agregar nueva área
+                  <PlusCircleOutlined />{t("organigrama.areas-and-positions.position.link-add-new-position")}
                 </Link>
               </Col>
             </Row>

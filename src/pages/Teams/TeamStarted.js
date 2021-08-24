@@ -105,10 +105,9 @@ export default function TeamStarted() {
             <img alt="ico" className="" src={Inicio} />
           </p>
           <br />
-          <h1>¡Bienvenido a los equipos!</h1>
+          <h1>{t("organigrama.teams.title")}</h1>
           <p>
-            Aquí podrás visualizar todas las equipos de la organización, además
-            de facilitar y fomentar el trabajo coopera
+         {t("organigrama.teams.tex")}
           </p>
           <br />
           <p>
@@ -119,7 +118,7 @@ export default function TeamStarted() {
               icon={<IoMdAdd className="iconAjust2" />}
             >
               {" "}
-              <span className="textAjust4">Nuevo Equipo</span>
+              <span className="textAjust4">{t("organigrama.teams.btn-new-team")}</span>
             </Button>
           </p>
         </Col>

@@ -1,10 +1,12 @@
 import React from "react";
 import { Button, Input, Form, Modal, Row, Col } from "antd";
 import Warning from "../../../assets/img/icons/atencion.svg";
+import { useTranslation } from "react-i18next";
 
 import "./ModalPassword.scss";
 
 export default function ModalPassword({ Password, setPassword }) {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
       <Modal
@@ -12,7 +14,7 @@ export default function ModalPassword({ Password, setPassword }) {
         title={Password.titleModal}
         visible={Password.visible}
         onCancel={() => {
-          setPassword(false);
+          setPassword(false); 
         }}
         onOk={() => {
           setPassword(false);
@@ -25,7 +27,7 @@ export default function ModalPassword({ Password, setPassword }) {
               setPassword(false);
             }}
           >
-            Cancelar
+           {t("organigrama.delete-collaborator.btn-cancel")}
           </Button>,
           <input
             type="button"
@@ -41,7 +43,7 @@ export default function ModalPassword({ Password, setPassword }) {
                       </p>
                     </Col>
                     <Col span={24}>
-                      <h3>¡Atención!</h3>
+                      <h3>{t("organigrama.delete-collaborator.warning.title")}</h3>
                     </Col>
                     <Col span={24}>
                       <h4>{Password.messageWarning}</h4>
@@ -56,13 +58,13 @@ export default function ModalPassword({ Password, setPassword }) {
                         onClick={() => modal.destroy()}
                         className="secondary btn"
                       >
-                        Cancelar
+                        {t("organigrama.delete-collaborator.warning.btn-cancel")}
                       </Button>
                       <Button
                         onClick={() => modal.destroy()}
                         className="primary btn"
                       >
-                        Eliminar
+                       {t("organigrama.delete-collaborator.warning.btn-delete")}
                       </Button>
                     </Col>
                   </Row>
@@ -71,14 +73,14 @@ export default function ModalPassword({ Password, setPassword }) {
               });
             }}
             className="primary"
-            value="Ingresar"
+            value={t("organigrama.delete-collaborator.btn-save")}
           />,
         ]}
       >
         <p style={{ textAlign: "left" }}>{Password.messageModal}</p>
         <br />
         <Form layout="vertical">
-          <Form.Item name="password" label="Ingresa tu contraseña de usuario">
+          <Form.Item name="password" label={t("organigrama.delete-collaborator.insert-password")}>
             <Input type="text" id="nombre" placeholder="Ej. Ghkcclsd23" />
           </Form.Item>
         </Form>

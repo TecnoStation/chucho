@@ -257,7 +257,7 @@ export default function AreasAndPositionsAddJob() {
 
   return (
     <div>
-      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}> 
         <Col className="gutter-row" span={14}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col
@@ -266,9 +266,9 @@ export default function AreasAndPositionsAddJob() {
               style={{ textAlign: "left", marginBottom: "30px" }}
             >
               <h3>
-                <b>Director Generals</b>
+                <b>{t("organigrama.areasandpositions-addjob.title")}</b>
               </h3>
-              <span>Completa la información del puesto</span>
+              <span>{t("organigrama.areasandpositions-addjob.tex")}</span>
             </Col>
             <Col className="gutter-row" span={2}>
               <Dropdown overlay={menu} trigger={["click"]}>
@@ -284,17 +284,17 @@ export default function AreasAndPositionsAddJob() {
           </Row>
           <Form Formname="form1" layout="vertical">
             <div className="formWork">
-              <Form.Item name="bussines" label="Nombre del puesto*">
-                <Input type="text" placeholder="Ej.Director General" />
+              <Form.Item name="bussines" label={t("organigrama.areasandpositions-addjob.label-nameposition")}>
+                <Input type="text" placeholder={t("organigrama.areasandpositions-addjob.placeholder-position")} />
               </Form.Item>
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col className="gutter-row" span={12}>
                   <Form.Item
                     name="activity"
-                    label="Nivel del puesto*"
+                    label={t("organigrama.areasandpositions-addjob.label-levelposition")}
                     tooltip={info}
                   >
-                    <Select placeholder="Ej.Dirección">
+                    <Select placeholder={t("organigrama.areasandpositions-addjob.placeholder-direction")}>
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
@@ -304,10 +304,10 @@ export default function AreasAndPositionsAddJob() {
                 <Col className="gutter-row" span={12}>
                   <Form.Item
                     name="subactivity"
-                    label="Nivel de puesto personalizado*"
+                    label={t("organigrama.areasandpositions-addjob.label-positionpersonalized")}
                     tooltip={infosub}
                   >
-                    <Select placeholder="Ej. Dirección">
+                    <Select placeholder={t("organigrama.areasandpositions-addjob.placeholder-personalized")}>
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
@@ -317,8 +317,8 @@ export default function AreasAndPositionsAddJob() {
               </Row>
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col className="gutter-row" span={12}>
-                  <Form.Item name="size" label="Tipo de puesto*">
-                    <Select placeholder="Ej. Puesto clave">
+                  <Form.Item name="size" label={t("organigrama.areasandpositions-addjob.label-kindposition")}>
+                    <Select placeholder={t("organigrama.areasandpositions-addjob.placeholder-positionkey")}>
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
@@ -326,8 +326,8 @@ export default function AreasAndPositionsAddJob() {
                   </Form.Item>
                 </Col>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={12}>
-                  <Form.Item name="from" label="Nivel de riesgo*">
-                    <Select className="gutter-row" placeholder="Ej. Alto">
+                  <Form.Item name="from" label={t("organigrama.areasandpositions-addjob.label-levelrisk")}>
+                    <Select className="gutter-row" placeholder={t("organigrama.areasandpositions-addjob.placeholder-high")}>
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
@@ -335,10 +335,10 @@ export default function AreasAndPositionsAddJob() {
                   </Form.Item>
                 </Col>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={12}>
-                  <Form.Item name="from" label="Nivel de Estudios*">
+                  <Form.Item name="from" label={t("organigrama.areasandpositions-addjob.label-levelstudies")}>
                     <Select
                       className="gutter-row"
-                      placeholder="Ej. Educación superior"
+                      placeholder={t("organigrama.areasandpositions-addjob.placeholder-educationhigher")}
                     >
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
@@ -347,10 +347,10 @@ export default function AreasAndPositionsAddJob() {
                   </Form.Item>
                 </Col>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={12}>
-                  <Form.Item name="from" label="Años de experiencia*">
+                  <Form.Item name="from" label={t("organigrama.areasandpositions-addjob.label-yearsexperience")}>
                     <Select
                       className="gutter-row"
-                      placeholder="Selecciona una opción"
+                      placeholder={t("organigrama.areasandpositions-addjob.placeholder-selec")}
                     >
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
@@ -365,7 +365,7 @@ export default function AreasAndPositionsAddJob() {
               <Row style={{ marginTop: "20px" }}>
                 <Col span={24}>
                   <span>
-                    <b>Habilidades para el puesto</b>
+                    <b>{t("organigrama.areasandpositions-addjob.abilities-for-position")}</b>
                   </span>
                   <br />
                   <br />
@@ -385,11 +385,11 @@ export default function AreasAndPositionsAddJob() {
 
               <Row>
                 <Col span={24}>
-                  <Form.Item name="habilidades" label="Habilidades técnicas">
+                  <Form.Item name="habilidades" label={t("organigrama.areasandpositions-addjob.label-skilltech")}>
                     <Input
                       type="text"
                       id="habilidades"
-                      placeholder="Ej. Microsoft word"
+                      placeholder={t("organigrama.areasandpositions-addjob.placeholder-word")}
                     />
                   </Form.Item>
                 </Col>
@@ -398,7 +398,7 @@ export default function AreasAndPositionsAddJob() {
               <Row>
                 <Col span={24}>
                   <span>
-                    <b>Idiomas</b>
+                    <b>{t("organigrama.areasandpositions-addjob.label-languages")}</b>
                   </span>
                   <br />
                   <br />
@@ -419,11 +419,11 @@ export default function AreasAndPositionsAddJob() {
 
             <Row>
               <Col span={24}>
-                <Form.Item name="idiomas" label="Idiomas">
+                <Form.Item name="idiomas" label={t("organigrama.areasandpositions-addjob.label-languages")}>
                   <Input
                     type="text"
                     id="idiomas"
-                    placeholder="Ej. Ingles avanzado"
+                    placeholder={t("organigrama.areasandpositions-addjob.placeholder-english")}
                   />
                 </Form.Item>
               </Col>
@@ -432,10 +432,10 @@ export default function AreasAndPositionsAddJob() {
 
           <Row className="dividerBottomFull">
             <Col span={10}>
-              <b>Competencias institucionales</b>
+              <b>{t("organigrama.areasandpositions-addjob.competences")}</b>
             </Col>
             <Col style={{ textAlign: "center" }} span={14}>
-              <b>Nivel</b>
+              <b>{t("organigrama.areasandpositions-addjob.level")}</b>
             </Col>
           </Row>
 
@@ -459,12 +459,12 @@ export default function AreasAndPositionsAddJob() {
 
           <Row className="dividerBottomFull" style={{ marginTop: "20px" }}>
             <Col span={16}>
-              <b>Competencias institucionales</b>
+              <b>{t("organigrama.areasandpositions-addjob.competences2")}</b>
             </Col>
             <Col span={8}>
               <Link to="#" onClick={openModalComp}>
                 {" "}
-                <PlusCircleOutlined /> Agregar competencias
+                <PlusCircleOutlined /> {t("organigrama.areasandpositions-addjob.link-addcompeten")}
               </Link>
             </Col>
           </Row>
@@ -489,12 +489,12 @@ export default function AreasAndPositionsAddJob() {
 
           <Row className="dividerBottomFull" style={{ marginTop: "20px" }}>
             <Col span={16}>
-              <b>Competencias del puesto</b>
+              <b>{t("organigrama.areasandpositions-addjob.competen-position")}</b>
             </Col>
             <Col span={8}>
               <Link to="#" onClick={openModalComp}>
                 {" "}
-                <PlusCircleOutlined /> Agregar competencias
+                <PlusCircleOutlined /> {t("organigrama.areasandpositions-addjob.link-addcompetens")}
               </Link>
             </Col>
           </Row>
@@ -519,16 +519,16 @@ export default function AreasAndPositionsAddJob() {
 
           <Row style={{ marginTop: "30px" }}>
             <Col style={{ textAlign: "center" }} span={14}>
-              <b>Los campos con * son obligatorios</b>
+              <b>{t("organigrama.areasandpositions-addjob.fields-obligatory")}</b>
             </Col>
             <Col span={5}>
               <Link to="/organigrama/areasandpositions-collaborator">
-                <Button className="secondary">Cancelar</Button>
+                <Button className="secondary">{t("organigrama.areasandpositions-addjob.btn-cancel")}</Button>
               </Link>
             </Col>
             <Col span={5}>
               <Link to="/organigrama/areasandpositions-collaborator">
-                <Button className="primary">Guardar</Button>
+                <Button className="primary">{t("organigrama.areasandpositions-addjob.btn-save")}</Button>
               </Link>
             </Col>
           </Row>
@@ -537,7 +537,7 @@ export default function AreasAndPositionsAddJob() {
         <Col className="gutter-row dividerLeft" span={10}>
           <Row>
             <Col span={24}>
-              <h3>Areas en las que participa el puesto</h3>
+              <h3>{t("organigrama.areasandpositions-addjob.title1")}</h3>
             </Col>
           </Row>
           <Row>
@@ -555,7 +555,7 @@ export default function AreasAndPositionsAddJob() {
           <Row style={{ marginTop: "10px" }}>
             <Col span={24}>
               <p>
-                <b>Colaboradores asignados al puesto de Director General</b>
+                <b>{t("organigrama.areasandpositions-addjob.tex-colaborator")}</b>
               </p>
             </Col>
           </Row>
@@ -616,13 +616,13 @@ export default function AreasAndPositionsAddJob() {
               </p>
             </Col>
             <Col span={24}>
-              <h3>¡Atención!</h3>
+              <h3>{t("organigrama.areasandpositions-addjob.modal-positio.atention")}</h3>
             </Col>
             <Col span={24}>
-              <h3>Estás a punto de eliminar esta competencia.</h3>
+              <h3>{t("organigrama.areasandpositions-addjob.modal-positio.text1")}</h3>
             </Col>
             <Col span={24}>
-              <h3>¿Seguro deseas eliminarla?</h3>
+              <h3>{t("organigrama.areasandpositions-addjob.modal-positio.question")}</h3>
               <br />
             </Col>
             <Col span={24}>
@@ -631,10 +631,10 @@ export default function AreasAndPositionsAddJob() {
                 onClick={closeInfo}
                 className="secondary btn"
               >
-                Cancelar
+                {t("organigrama.areasandpositions-addjob.modal-positio.btn-cancel")}
               </Button>
               <Button onClick={deleteItem} className="primary btn">
-                Eliminar
+              {t("organigrama.areasandpositions-addjob.modal-positio.btn-remove")}
               </Button>
             </Col>
           </Row>
@@ -642,7 +642,7 @@ export default function AreasAndPositionsAddJob() {
       </Screendefault>
 
       <Modal
-        title="Agregar permisos"
+        title={t("organigrama.areasandpositions-addjob.add-positionmodal.title")}
         className="smallModal"
         visible={Permissions}
         onCancel={closeModalPermissions}
@@ -653,38 +653,38 @@ export default function AreasAndPositionsAddJob() {
             className="secondary"
             onClick={closeModalPermissions}
           >
-            Cancelar
+            {t("organigrama.areasandpositions-addjob.add-positionmodal.btn-cancel")}
           </Button>,
           <Button className="primary" onClick={closeModalPermissions}>
-            Aplicar
+            {t("organigrama.areasandpositions-addjob.add-positionmodal.btn-appli")}
           </Button>,
         ]}
       >
         <Form style={{ marginLeft: "10px" }}>
           <Form.Item name="Administrador">
-            <Checkbox>Permisos de Administrador</Checkbox>
+            <Checkbox>{t("organigrama.areasandpositions-addjob.add-positionmodal.permissions-adminitrator")}</Checkbox>
           </Form.Item>
           <Form.Item name="Nine" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para ver Nine Box</Checkbox>
+            <Checkbox>{t("organigrama.areasandpositions-addjob.add-positionmodal.permissions-nine")}</Checkbox>
           </Form.Item>
           <Form.Item name="remember" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos de Edición de Objetivos</Checkbox>
+            <Checkbox>{t("organigrama.areasandpositions-addjob.add-positionmodal.permissions-objectives")}</Checkbox>
           </Form.Item>
           <Form.Item name="Organigrama" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para ver Organigrama</Checkbox>
+            <Checkbox>{t("organigrama.areasandpositions-addjob.add-positionmodal.permissions-organizatition")}</Checkbox>
           </Form.Item>
           <Form.Item name="editar" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para editar Organigrama</Checkbox>
+            <Checkbox>{t("organigrama.areasandpositions-addjob.add-positionmodal.permissions-edit-organization")}</Checkbox>
           </Form.Item>
           <Form.Item name="Desarrollo" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para crear Plan de Desarrollo</Checkbox>
+            <Checkbox>{t("organigrama.areasandpositions-addjob.add-positionmodal.permissions-plan-developing")}</Checkbox>
           </Form.Item>
         </Form>
       </Modal>
 
       <Modal
         className="middleModal"
-        title="Editar competencias institucionales"
+        title={t("organigrama.areasandpositions-addjob.modal-competens.title")}
         visible={modalPassword}
         onCancel={closeModalPassword}
         onOk={sendPassword}
@@ -694,24 +694,23 @@ export default function AreasAndPositionsAddJob() {
             className="secondary"
             onClick={closeModalPassword}
           >
-            Cancelar
+            {t("organigrama.areasandpositions-addjob.modal-competens.btn-cancel")}
           </Button>,
           <input
             type="button"
             onClick={sendPassword}
             className="primary"
-            value="Ingresar"
+            value={t("organigrama.areasandpositions-addjob.modal-competens.btn-enter")}
           />,
         ]}
       >
         <p style={{ textAlign: "left" }}>
-          Al editar las competencias institucionales se verá reflejado en todos
-          los colaboradores de tu empresa.
+        {t("organigrama.areasandpositions-addjob.modal-competens.tex")}
         </p>
         <br />
         <Form layout="vertical">
-          <Form.Item name="password" label="Ingresa tu contraseña de usuario">
-            <Input type="text" id="nombre" placeholder="Ej. Ghkcclsd23" />
+          <Form.Item name="password" label={t("organigrama.areasandpositions-addjob.modal-competens.label-enteruser")}>
+            <Input type="text" id="nombre" placeholder={t("organigrama.areasandpositions-addjob.modal-competens.placeholder-user")} />
           </Form.Item>
         </Form>
       </Modal>
