@@ -244,7 +244,8 @@
                 "insert-password": "Ingresa tu contraseña de usuario",
                 "insert-password-placeholder": "Ej. Ghkcclsd23",
                 "btn-cancel": "Cancelar",
-                "btn-save": "Guardar"
+                "btn-save": "Ingresar",
+                "btn-remove": "Eliminar"
             }
 
         },

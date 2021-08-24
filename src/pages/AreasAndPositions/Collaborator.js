@@ -538,11 +538,11 @@ export default function Collaborator() {
         Permissions={Permissions}
         setPermissions={setPermissions}
       />
-
       <ModalDocument
         ModalDocumets={ModalDocumets}
         setModalDocumets={setModalDocumets}
       />
+
       <ModalPassword Password={Password} setPassword={setPassword} />
     </Form>
   );
