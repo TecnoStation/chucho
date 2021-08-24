@@ -26,9 +26,10 @@ import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import { useTranslation } from "react-i18next";
 import ModalDigitalExpedient from "../../components/Modals/ModalDigitalExpedient/ModalDigitalExpedient";
 import ModalPermissions from "../../components/Modals/ModalPermissions/ModalPermissions";
+import ModalAddExperience from "../../components/Modals/ModalAddExperience/ModalAddExperience";
+import { useStore } from "react-redux";
 
 const { Option } = Select;
-const { TextArea } = Input;
 
 export default function Perfil() {
   const [t, i18n] = useTranslation("global");
@@ -84,6 +85,8 @@ export default function Perfil() {
   //------------------ Modals ------------------------------
   const [expedient, setExpedient] = useState(false);
   const [Permissions, setPermissions] = useState(false);
+  const [ModalExperience, setModalExperience] = useState(false);
+  const [Experiences, setExperiences] = useState([]);
 
   //------------------ end Modals ------------------------------
 
@@ -103,16 +106,12 @@ export default function Perfil() {
     alert("permisos enviados");
   };
 
-  const [experience, setExperience] = useState(false);
-  const closeModalExperience = () => {
-    setFlag("gutter-row dividerLeft showBlock");
-    setFlag2("gutter-row dividerLeft hide");
-    setFlag3("gutter-row dividerLeft hide");
-    setExperience(false);
-  };
-  const sendExperience = () => {
-    alert("permisos enviados");
-  };
+  // const closeModalExperience = () => {
+  //   setFlag("gutter-row dividerLeft showBlock");
+  //   setFlag2("gutter-row dividerLeft hide");
+  //   setFlag3("gutter-row dividerLeft hide");
+  //   setExperience(false);
+  // };
 
   const menu3 = (
     <Menu>
@@ -214,9 +213,9 @@ export default function Perfil() {
         <Menu.Item key="3">
           <Link
             to="#"
-            onClick={() => {
-              setExperience(true);
-            }}
+            // onClick={() => {
+            //   setModalExperience(true);
+            // }}
           >
             Editar mi experiencia
           </Link>
@@ -669,7 +668,12 @@ export default function Perfil() {
               <span>Experiencia laboral</span>
             </Col>
             <Col className="gutter-row" span={12}>
-              <Link to="#">
+              <Link
+                to="#"
+                onClick={() => {
+                  setModalExperience(true);
+                }}
+              >
                 {" "}
                 <PlusCircleOutlined /> Agregar otra experiencia
               </Link>
@@ -1027,7 +1031,7 @@ export default function Perfil() {
                 <Link
                   to="#"
                   onClick={() => {
-                    setExperience(true);
+                    setModalExperience(true);
                   }}
                 >
                   {" "}
@@ -1220,7 +1224,7 @@ export default function Perfil() {
           </Col>
         </Row>
       </Modal>
-      <Modal
+      {/* <Modal
         className="middleModal"
         title="Agregar experiencia"
         visible={experience}
@@ -1262,7 +1266,7 @@ export default function Perfil() {
             </Col>
           </Row>
         </Form>
-      </Modal>
+      </Modal> */}
 
       <Modal
         title="Expediente: Marco Antonio Remirez Perez"
@@ -1600,6 +1604,12 @@ export default function Perfil() {
         setPermissions={setPermissions}
       />
       <ModalPassword Password={Password} setPassword={setPassword} />
+      <ModalAddExperience
+        ModalExperience={ModalExperience}
+        setModalExperience={setModalExperience}
+        Experiences={Experiences}
+        setExperiences={setExperiences}
+      />
     </>
   );
 }
