@@ -26,6 +26,7 @@ function ModalAddExperience({
       },
     ]);
     form.resetFields();
+    setModalExperience(false);
   };
 
   const parseMonth = (arr) => {
@@ -87,15 +88,51 @@ function ModalAddExperience({
         name="formExperience"
         layout="vertical"
         form={form}
-        style={{ marginLeft: "10px" }}
+        style={{ marginLeft: "10px", textAlign: "left" }}
       >
-        <Form.Item name="position" label="Puesto">
-          <Input type="text" placeholder="Ej. Ejecutivo de ventas SR." />
+        <Form.Item
+          name="position"
+          label="Puesto"
+          rules={[
+            {
+              required: true,
+              message: "*Campo requerido",
+            },
+          ]}
+        >
+          <Input
+            type="text"
+            placeholder="Ej. Ejecutivo de ventas SR."
+            rules={[
+              {
+                required: true,
+                message: "*Campo requerido",
+              },
+            ]}
+          />
         </Form.Item>
-        <Form.Item name="business" label="Empresa">
+        <Form.Item
+          name="business"
+          label="Empresa"
+          rules={[
+            {
+              required: true,
+              message: "*Campo requerido",
+            },
+          ]}
+        >
           <Input type="text" placeholder="Ej. GPO comunicación" />
         </Form.Item>
-        <Form.Item name="activity" label="Actividades y logros">
+        <Form.Item
+          name="activity"
+          label="Actividades y logros"
+          rules={[
+            {
+              required: true,
+              message: "*Campo requerido",
+            },
+          ]}
+        >
           <TextArea
             placeholder="Agrega una breve resumen de tus principales actividades y logros"
             rows={6}
@@ -103,24 +140,36 @@ function ModalAddExperience({
         </Form.Item>
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col className="gutter-row" span={12}>
-            <Form.Item name="start" label="Inicio">
+            <Form.Item
+              name="start"
+              label="Inicio"
+              rules={[
+                {
+                  required: true,
+                  message: "*Campo requerido",
+                },
+              ]}
+            >
               <Input type="date" />
             </Form.Item>
           </Col>
           <Col className="gutter-row" span={12}>
-            <Form.Item name="end" label="Fin">
+            <Form.Item
+              name="end"
+              label="Fin"
+              rules={[
+                {
+                  required: true,
+                  message: "*Campo requerido",
+                },
+              ]}
+            >
               <Input type="date" />
             </Form.Item>
           </Col>
         </Row>
         <Form.Item style={{ textAlign: "right" }}>
-          <Button
-            htmlType="submit"
-            className="primary"
-            onClick={() => {
-              setModalExperience(false);
-            }}
-          >
+          <Button htmlType="submit" className="primary">
             Agregar
           </Button>
         </Form.Item>

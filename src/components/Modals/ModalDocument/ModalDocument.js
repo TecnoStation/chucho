@@ -27,6 +27,7 @@ function ModalDocument({ ModalDocumets, setModalDocumets }) {
   const [form] = useForm();
 
   return (
+    
     <Modal
       title={t("organigrama.assign-documents.title")}
       className="smallModal"

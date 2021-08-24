@@ -29,6 +29,8 @@ import ModalPermissions from "../../components/Modals/ModalPermissions/ModalPerm
 import ModalAddExperience from "../../components/Modals/ModalAddExperience/ModalAddExperience";
 import { useStore } from "react-redux";
 import ExperienceList from "../../components/Modals/ModalAddExperience/components/ExperienceList/ExperienceList";
+import { useForm } from "antd/lib/form/Form";
+import ListLevelStudy from "./Components/ListLevelStudy/ListLevelStudy";
 
 const { Option } = Select;
 
@@ -48,20 +50,23 @@ export default function Perfil() {
   function callback(key) {
     if (key === "1") {
       setFlag("gutter-row dividerLeft showBlock");
-      setFlag2("gutter-row dividerLeft hide");
+
+      setFlag2("hide");
+      setFlag3("hide");
       setFlag5("hide");
       setFlag4("showBlock");
     } else {
-      setFlag("gutter-row dividerLeft hide");
+      setFlag("hide");
       setFlag2("gutter-row dividerLeft showBlock");
+      setFlag3("hide");
       setFlag5("showBlock");
       setFlag4("hide");
     }
   }
 
   const editSkills = () => {
-    setFlag("gutter-row dividerLeft hide");
-    setFlag2("gutter-row dividerLeft hide");
+    setFlag("hide");
+    setFlag2("hide");
     setFlag3("gutter-row dividerLeft showBlock");
     setFlag4("hide");
     setFlag5("showBlock");
@@ -83,6 +88,7 @@ export default function Perfil() {
     alert("permisos enviados");
   };
 
+  const [form] = useForm();
   //------------------ Modals ------------------------------
   const [expedient, setExpedient] = useState(false);
   const [Permissions, setPermissions] = useState(false);
@@ -90,6 +96,24 @@ export default function Perfil() {
   const [Experiences, setExperiences] = useState([]);
 
   //------------------ end Modals ------------------------------
+
+  //----------------- Level study ----------------------------
+  const [levels, setLevels] = useState([]);
+  const [formlevel] = useForm();
+  const sendlevelStudy = (values) => {
+    setLevels([
+      ...levels,
+      {
+        idLevel: uuid(),
+        stydyLevel: values["level"],
+        years: values["years"],
+      },
+    ]);
+    console.log(levels);
+    formlevel.resetFields();
+  };
+
+  //----------------- Level study ----------------------------
 
   const [HistorialP, setHistorialP] = useState(false);
   const closeModalHistorialP = () => {
@@ -574,27 +598,27 @@ export default function Perfil() {
             style={{ marginTop: "20px" }}
           >
             <Col className="gutter-row" span={12}>
-              <span>Nivel de Estudios</span>
-              <br></br>
               <span>
-                <b>Licenciatura</b>
+                <b>Nivel de Estudios</b>
               </span>
             </Col>
             <Col className="gutter-row" span={12}>
-              <span>Años</span>
-              <br></br>
               <span>
-                <b>8 años</b>
+                <b>Años</b>
               </span>
             </Col>
           </Row>
+
+          <ListLevelStudy levels={levels} />
 
           <Row
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
             style={{ marginTop: "20px" }}
           >
             <Col className="gutter-row" span={12}>
-              <span>Idiomas</span>
+              <span>
+                <b>Idiomas</b>
+              </span>
             </Col>
           </Row>
 
@@ -613,7 +637,9 @@ export default function Perfil() {
             style={{ marginTop: "20px" }}
           >
             <Col className="gutter-row" span={12}>
-              <span>Habilidades técnicas</span>
+              <span>
+                <b>Habilidades técnicas</b>
+              </span>
             </Col>
           </Row>
 
@@ -666,7 +692,9 @@ export default function Perfil() {
             style={{ marginTop: "20px" }}
           >
             <Col className="gutter-row" span={12}>
-              <span>Experiencia laboral</span>
+              <span>
+                <b>Experiencia laboral</b>
+              </span>
             </Col>
             <Col className="gutter-row" span={12}>
               <Link
@@ -910,73 +938,130 @@ export default function Perfil() {
               </Dropdown>
             </Col>
           </Row>
-          <Form name="form1" layout="vertical">
+          <Form
+            name="formH1"
+            initialValues={{
+              document: "",
+            }}
+            form={formlevel}
+            layout="vertical"
+            onFinish={sendlevelStudy}
+          >
             <Row
+              className="dividerBottomFull"
               gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
               style={{ marginTop: "20px" }}
             >
-              <Col className="gutter-row" span={12}>
-                <Form.Item name="size" label="Nivel de estudiosto">
+              <Col className="gutter-row" span={9}>
+                <Form.Item name="level" label="Nivel de estudios">
                   <Select placeholder="Ej. Educación superior">
-                    <Option value="jack">Jack</Option>
-                    <Option value="lucy">Lucy</Option>
-                    <Option value="tom">Tom</Option>
+                    <Option value="Educacion Medio Superior">
+                      Educacion Medio Superior
+                    </Option>
+                    <Option value="Educacion Superior">
+                      Educacion Superior
+                    </Option>
+                    <Option value="Maestria">Maestria</Option>
+                    <Option value="Diplomado">Diplomado</Option>
                   </Select>
                 </Form.Item>
               </Col>
 
-              <Col className="gutter-row" span={12}>
-                <Form.Item name="size" label="Años de experiencia">
+              <Col className="gutter-row" span={9}>
+                <Form.Item name="years" label="Años de experiencia">
                   <Select placeholder="Selecciona una opción">
-                    <Option value="jack">Jack</Option>
-                    <Option value="lucy">Lucy</Option>
-                    <Option value="tom">Tom</Option>
+                    <Option value="1 Año">1 Año</Option>
+                    <Option value="2 Años">2 Años</Option>
+                    <Option value="3 Años">3 Años</Option>
                   </Select>
                 </Form.Item>
+              </Col>
+              <Col
+                className="gutter-row"
+                style={{ marginTop: "30px" }}
+                span={2}
+              >
+                <Button htmlType="submit" className="primary">
+                  Guardar
+                </Button>
               </Col>
             </Row>
+          </Form>
 
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-              <Col className="gutter-row" span={24}>
+          <Form name="formH2" layout="vertical">
+            <Row
+              className="dividerBottomFull"
+              gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+              style={{ marginTop: "20px" }}
+            >
+              <Col className="gutter-row" span={18}>
                 <Form.Item name="bussines" label="Habilidades técnicas ">
                   <Input type="text" placeholder="Ej. de camión de carga " />
                 </Form.Item>
               </Col>
+
+              <Col
+                className="gutter-row"
+                style={{ marginTop: "30px" }}
+                span={2}
+              >
+                <Button htmlType="submit" className="primary">
+                  Guardar
+                </Button>
+              </Col>
             </Row>
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-              <Col className="gutter-row" span={24}>
+          </Form>
+
+          <Form name="formH3" layout="vertical">
+            <Row
+              className="dividerBottomFull"
+              gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+              style={{ marginTop: "20px" }}
+            >
+              <Col className="gutter-row" span={18}>
                 <Form.Item name="bussines" label="Idiomas">
                   <Input type="text" placeholder="Ej. Ingles avanzado" />
                 </Form.Item>
               </Col>
-            </Row>
-            <Row
-              gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-              style={{ marginTop: "20px" }}
-            >
-              <Col className="gutter-row" span={24}>
-                <span>
-                  <b>Experiencia profesional</b>
-                </span>
-              </Col>
-            </Row>
-            <Row
-              gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-              style={{ marginTop: "10px" }}
-            >
-              <Col className="gutter-row" span={24}>
-                <Link
-                  to="#"
-                  onClick={() => {
-                    setModalExperience(true);
-                  }}
-                >
-                  {" "}
-                  <PlusCircleOutlined /> Agregar otra experiencia
-                </Link>
+
+              <Col
+                className="gutter-row"
+                style={{ marginTop: "30px" }}
+                span={2}
+              >
+                <Button htmlType="submit" className="primary">
+                  Guardar
+                </Button>
               </Col>
             </Row>
           </Form>
+
+          <Row
+            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+            style={{ marginTop: "20px" }}
+          >
+            <Col className="gutter-row" span={24}>
+              <span>
+                <b>Experiencia profesional</b>
+              </span>
+            </Col>
+          </Row>
+          <Row
+            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+            style={{ marginTop: "10px" }}
+          >
+            <Col className="gutter-row" span={24}>
+              <Link
+                to="#"
+                onClick={() => {
+                  setModalExperience(true);
+                }}
+              >
+                {" "}
+                <PlusCircleOutlined /> Agregar otra experiencia
+              </Link>
+            </Col>
+          </Row>
         </Col>
       </Row>
 
