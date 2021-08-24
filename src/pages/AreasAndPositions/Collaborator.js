@@ -538,80 +538,11 @@ export default function Collaborator() {
         Permissions={Permissions}
         setPermissions={setPermissions}
       />
+      <ModalDocument
+        ModalDocumets={ModalDocumets}
+        setModalDocumets={setModalDocumets}
+      />
 
-      <Modal
-        title={t("organigrama.assign-documents.title")}
-        className="smallModal"
-        visible={Documets}
-        onCancel={closeModalDocuments}
-        onOk={openModalDocuments}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalDocuments}
-          >
-            {t("organigrama.assign-documents.btn-cancel")}
-          </Button>,
-          <Button className="primary" onClick={closeModalDocuments}>
-            {t("organigrama.assign-documents.btn-save")}
-          </Button>,
-        ]}
-      >
-        <Form style={{ marginLeft: "10px" }}>
-          <Form.Item name="Administrador">
-            <Checkbox>{t("organigrama.assign-documents.curp")}</Checkbox>
-          </Form.Item>
-          <Form.Item name="Nine" style={{ marginTop: "-25px" }}>
-            <Checkbox>{t("organigrama.assign-documents.proof-studies")}</Checkbox>
-          </Form.Item>
-          <Form.Item name="remember" style={{ marginTop: "-25px" }}>
-            <Checkbox>{t("organigrama.assign-documents.proof-address")}</Checkbox>
-          </Form.Item>
-          <Form.Item name="Organigrama" style={{ marginTop: "-25px" }}>
-            <Checkbox>{t("organigrama.assign-documents.official-identification")}</Checkbox>
-          </Form.Item>
-          <Form.Item name="editar" style={{ marginTop: "-25px" }}>
-            <Checkbox>{t("organigrama.assign-documents.birth-certificate")}</Checkbox>
-          </Form.Item>
-          <Form.Item name="Desarrollo" style={{ marginTop: "-25px" }}>
-            <Link to="#" onClick={addDocument}>
-              {" "}
-              <PlusCircleOutlined /> {t("organigrama.assign-documents.link-add-document")}
-            </Link>
-          </Form.Item>
-          <Row className={flag}>
-            <Col span={24}>
-              <Row style={{ marginTop: "-20px" }}>
-                <Col span={24}>
-                  <span>  
-                    <b>{t("organigrama.assign-documents.add-new-document")}</b>
-                  </span>
-                  <hr />
-                </Col>
-              </Row>
-              <Row>
-                <Col span={22}>
-                  <Input
-                    type="text"
-                    placeholder="Ej. Número de Seguridad Social NSS"
-                  />
-                </Col>
-                <Col style={{ textAlign: "right" }} span={2}>
-                  <Link
-                    onClick={hiddeDocument}
-                    to="#"
-                    style={{ fontSize: "20px", marginLeft: "10px" }}
-                  >
-                    {" "}
-                    <PlusCircleOutlined />{" "}
-                  </Link>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Form>
-      </Modal>
       <ModalPassword Password={Password} setPassword={setPassword} />
     </Form>
   );

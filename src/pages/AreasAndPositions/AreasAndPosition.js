@@ -247,6 +247,12 @@ export default function AreasAndPositions() {
                             area: "",
                           }}
                           form={formp}
+                          rules={[
+                            {
+                              required: true,
+                              message: "*Campo requerido",
+                            },
+                          ]}
                         >
                           <Form.Item name="area">
                             <Input
@@ -438,7 +444,16 @@ export default function AreasAndPositions() {
                       marginRight: "0px",
                     }}
                   >
-                    <Form.Item name="positionName">
+                    <Form.Item
+                      style={{ textAlign: "left" }}
+                      rules={[
+                        {
+                          required: true,
+                          message: "*Campo requerido",
+                        },
+                      ]}
+                      name="positionName"
+                    >
                       <Input
                         type="text"
                         value={PositionInfo}
