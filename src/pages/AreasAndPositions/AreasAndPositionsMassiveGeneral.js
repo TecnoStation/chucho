@@ -30,7 +30,7 @@ export default function AreasAndPositionsMassiveGeneral() {
         <Col className="gutter-row" span={12}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}> 
             <Col className="gutter-row" span={24}>
-              <h3>{t("organigrama.areasandpositions-masivee.")}</h3>
+              <h3>{t("organigrama.areasandpositions-general.title")}</h3>
             </Col>
           </Row>
 
@@ -40,8 +40,7 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p>
-                En este apartado vas a poder realizar la carga masiva de
-                información.
+              {t("organigrama.areasandpositions-general.text-1")}
               </p>
             </Col>
           </Row>
@@ -52,14 +51,11 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p>
-                Para facilitar la carga de datos, proponemos subir la
-                información en 3 partes, la{" "}
+              {t("organigrama.areasandpositions-general.text-2")}
                 <b>
-                  primera sería un archivo con todas tus áreas y todos los
-                  puestos en tu empresa
+                {t("organigrama.areasandpositions-general.text-3")}
                 </b>
-                , para facilitar este paso hemos creado una plantilla que puedes
-                descargar, llenar y volver a subir:
+                {t("organigrama.areasandpositions-general.text-4")}
               </p>
             </Col>
           </Row>
@@ -69,7 +65,7 @@ export default function AreasAndPositionsMassiveGeneral() {
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
           >
             <Col className="gutter-row" span={24}>
-              <p className="linkBold">Descargar plantilla de Estructura</p>
+              <p className="linkBold"> {t("organigrama.areasandpositions-general.downloads-template")}</p>
             </Col>
           </Row>
 
@@ -79,12 +75,9 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p>
-                La segunda parte está pensada para que puedas subir toda la{" "}
-                <b>información que conforma cada puesto en tu organización</b>,
-                lo que se traduce en los datos básicos, las habilidades
-                requeridas y las competencias de cada uno. Esta información debe
-                de cuadrar con la que previamente subiste de Estructura, por lo
-                que también preparamos una plantilla:
+              {t("organigrama.areasandpositions-general.text-5")}
+                <b>{t("organigrama.areasandpositions-general.text-6")}</b>,
+                {t("organigrama.areasandpositions-general.text-7")}
               </p>
             </Col>
           </Row>
@@ -95,7 +88,7 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p className="linkBold">
-                Descargar plantilla de Información de Puestos
+              {t("organigrama.areasandpositions-general.downloads-positions")}
               </p>
             </Col>
           </Row>
@@ -106,9 +99,9 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p>
-                Finalmente tenemos una tercera parte, donde vas a poder subir{" "}
-                <b>la información de las personas que ocupan esos puestos</b>,
-                por lo que también tenemos una plantilla:
+              {t("organigrama.areasandpositions-general.text-8")}
+                <b>{t("organigrama.areasandpositions-general.text-9")}</b>,
+                {t("organigrama.areasandpositions-general.text-10")}
               </p>
             </Col>
           </Row>
@@ -119,7 +112,7 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p className="linkBold">
-                Descargar plantilla de Información de Colaboradores
+              {t("organigrama.areasandpositions-general.downloads-collaborator")}
               </p>
             </Col>
           </Row>
@@ -132,8 +125,7 @@ export default function AreasAndPositionsMassiveGeneral() {
             <Col className="gutter-row" span={24}>
               <p>
                 <b>
-                  Antes de importar los datos, es esencial asegurarse de que la
-                  tabla cumple estos tres requisitos:
+                {t("organigrama.areasandpositions-general.title-2")}
                 </b>
               </p>
             </Col>
@@ -144,13 +136,13 @@ export default function AreasAndPositionsMassiveGeneral() {
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
           >
             <Col className="gutter-row" span={24}>
-              <span>- Cada columna tiene un encabezado.</span>
+              <span> {t("organigrama.areasandpositions-general.text-a")}</span>
               <br />
               <span>
-                - Deberás llenar los todos los campos que se te piden.
+              {t("organigrama.areasandpositions-general.text-b")}
               </span>
               <br />
-              <span>- Solo se aceptan archivos de excel (cvs y xls)</span>
+              <span> {t("organigrama.areasandpositions-general.text-c")}</span>
               <br />
               <br />
             </Col>
@@ -161,7 +153,7 @@ export default function AreasAndPositionsMassiveGeneral() {
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
           >
             <Col className="gutter-row" span={24}>
-              <p>Adjunta tu archivo y ¡listo!</p>
+              <p>{t("organigrama.areasandpositions-general.text-file")}</p>
             </Col>
           </Row>
 
@@ -171,7 +163,7 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p>
-                <b>Subir archivo de estructura:</b>
+                <b>{t("organigrama.areasandpositions-general.tex-file-a")}</b>
               </p>
             </Col>
           </Row>
@@ -183,7 +175,7 @@ export default function AreasAndPositionsMassiveGeneral() {
             <Col className="gutter-row" span={24}>
               <Link to="#" onClick={openModalUpload}>
                 {" "}
-                <PlusCircleOutlined /> Adjuntar archivo{" "}
+                <PlusCircleOutlined />{t("organigrama.areasandpositions-general.to attach-file-link")}
               </Link>
               <br />
               <br />
@@ -196,7 +188,7 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p>
-                <b>Subir archivo de información de puestos:</b>
+                <b>{t("organigrama.areasandpositions-general.text-file-b")}</b>
               </p>
             </Col>
           </Row>
@@ -208,7 +200,7 @@ export default function AreasAndPositionsMassiveGeneral() {
             <Col className="gutter-row" span={24}>
               <Link to="#" onClick={openModalUpload}>
                 {" "}
-                <PlusCircleOutlined /> Adjuntar archivo{" "}
+                <PlusCircleOutlined /> {t("organigrama.areasandpositions-general.to attach-link")}
               </Link>
               <br />
               <br />
@@ -221,7 +213,7 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p>
-                <b>Subir archivo de información de colaboradores:</b>
+                <b>{t("organigrama.areasandpositions-general.text-file-c")}</b>
               </p>
             </Col>
           </Row>
@@ -233,14 +225,14 @@ export default function AreasAndPositionsMassiveGeneral() {
             <Col className="gutter-row" span={24}>
               <Link to="#" onClick={openModalUpload}>
                 {" "}
-                <PlusCircleOutlined /> Adjuntar archivo{" "}
+                <PlusCircleOutlined />{t("organigrama.areasandpositions-general.to attach-link-a")}
               </Link>
             </Col>
           </Row>
         </Col>
       </Row>
       <Modal
-        title="Sube el archivo"
+        title={t("organigrama.areasandpositions-general.modal-upload-file.upload-file")}
         visible={modalUpload}
         onCancel={closeModalUpload}
         onOk={sendUpload}
@@ -250,13 +242,13 @@ export default function AreasAndPositionsMassiveGeneral() {
             className="secondary"
             onClick={closeModalUpload}
           >
-            Cancelar
+            {t("organigrama.areasandpositions-general.modal-upload-file.btn-casel")}
           </Button>,
           <input
             type="button"
             className="primary"
             onClick={sendUpload}
-            value="Subir"
+            value={t("organigrama.areasandpositions-general.modal-upload-file.btn-upload")}
           />,
         ]}
       >
