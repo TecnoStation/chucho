@@ -577,7 +577,7 @@ export default function Collaborator() {
             <Col span={24}>
               <Row style={{ marginTop: "-20px" }}>
                 <Col span={24}>
-                  <span>
+                  <span>  
                     <b>{t("organigrama.assign-documents.add-new-document")}</b>
                   </span>
                   <hr />

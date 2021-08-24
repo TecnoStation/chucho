@@ -71,7 +71,7 @@ export default function ModalPassword({ Password, setPassword }) {
                           onClick={() => modal.destroy()}
                           className="secondary btn"
                         >
-                          Cancelar
+                          {t("organigrama.delete-collaborator.btn-cancel")}
                         </Button>
                         <Button
                           onClick={() => {
@@ -80,7 +80,7 @@ export default function ModalPassword({ Password, setPassword }) {
                           }}
                           className="primary btn"
                         >
-                          Eliminar
+                          {t("organigrama.delete-collaborator.btn-remove")}
                         </Button>
                       </Col>
                     </Row>
@@ -144,12 +144,12 @@ export default function ModalPassword({ Password, setPassword }) {
           }}
           layout="vertical"
         >
-          <Form.Item name="password" label="Ingresa tu contraseña de usuario">
+          <Form.Item name="password" label={t("organigrama.delete-collaborator.insert-password")}>
             <Input
               type="password"
               value={clearPassword}
               id="nombre"
-              placeholder="Ej. Ghkcclsd23"
+              placeholder={t("organigrama.delete-collaborator.insert-password-placeholder")}
             />
           </Form.Item>
         </Form>
