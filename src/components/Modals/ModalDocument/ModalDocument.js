@@ -5,8 +5,10 @@ import { PlusCircleOutlined } from "@ant-design/icons";
 import { useForm } from "antd/lib/form/Form";
 import { v4 as uuid } from "uuid";
 import DocumentsList from "./components/DocumentsList/DocumentsList";
+import { useTranslation } from "react-i18next";
 
 function ModalDocument({ ModalDocumets, setModalDocumets }) {
+  const [t, i18n] = useTranslation("global");
   const [flag, setFlag] = useState("hide");
   const [Documents, setDocuments] = useState([]);
   const [Document, setDocument] = useState("");
@@ -25,6 +27,7 @@ function ModalDocument({ ModalDocumets, setModalDocumets }) {
   const [form] = useForm();
 
   return (
+    
     <Modal
       title={t("organigrama.assign-documents.title")}
       className="smallModal"
