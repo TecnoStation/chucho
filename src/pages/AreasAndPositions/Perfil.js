@@ -24,6 +24,8 @@ import { v4 as uuid } from "uuid";
 import "./AreasAndPositions.scss";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import { useTranslation } from "react-i18next";
+import ModalDigitalExpedient from "../../components/Modals/ModalDigitalExpedient/ModalDigitalExpedient";
+import ModalPermissions from "../../components/Modals/ModalPermissions/ModalPermissions";
 
 const { Option } = Select;
 const { TextArea } = Input;
@@ -63,14 +65,6 @@ export default function Perfil() {
     setFlag5("showBlock");
   };
 
-  const [Permissions, setPermissions] = useState(false);
-  const closeModalPermissions = () => {
-    setPermissions(false);
-  };
-  const sendPermissions = () => {
-    alert("permisos enviados");
-  };
-
   const [adjunts, setAdjunts] = useState(false);
   const closeModalAdjunts = () => {
     setAdjunts(false);
@@ -87,13 +81,11 @@ export default function Perfil() {
     alert("permisos enviados");
   };
 
+  //------------------ Modals ------------------------------
   const [expedient, setExpedient] = useState(false);
-  const closeModalExpedient = () => {
-    setExpedient(false);
-  };
-  const sendExpedient = () => {
-    alert("permisos enviados");
-  };
+  const [Permissions, setPermissions] = useState(false);
+
+  //------------------ end Modals ------------------------------
 
   const [HistorialP, setHistorialP] = useState(false);
   const closeModalHistorialP = () => {
@@ -126,19 +118,21 @@ export default function Perfil() {
     <Menu>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-collaborator">Editar colaborador</Link>
+          <Link to="/organigrama/areasandpositions-collaborator">
+            Editar colaborador
+          </Link>
         </Menu.Item>
       </Menu.Item>
 
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-addjob">Editar puesto</Link>
+          <Link to="/organigrama/areasandpositions-addjob">Editar puesto</Link>
         </Menu.Item>
       </Menu.Item>
 
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/organigrama">Editar estructura</Link>
+          <Link to="/organigrama/eraser">Editar estructura</Link>
         </Menu.Item>
       </Menu.Item>
 
@@ -201,25 +195,6 @@ export default function Perfil() {
             }}
           >
             Dar de baja Colaborador
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setPassword({
-                visible: true,
-                titleModal: "Eliminar Colaborador",
-                messageModal:
-                  "Al eliminar un colaborador de tu organización ya no formará parte de tu organizacion.",
-                messageWarning: "Estás a punto de eliminar al colaborador",
-                question: "¿Seguro deseas eliminarlo?",
-              });
-            }}
-          >
-            Eliminar Colaborador
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -470,7 +445,14 @@ export default function Perfil() {
                     style={{ marginTop: "8px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <span className="link">Expediente digital</span>
+                      <Link
+                        to="#"
+                        onClick={() => {
+                          setExpedient(true);
+                        }}
+                      >
+                        <span className="link">Expediente digital</span>
+                      </Link>
                     </Col>
                   </Row>
                 </TabPane>
@@ -1056,46 +1038,7 @@ export default function Perfil() {
           </Form>
         </Col>
       </Row>
-      <Modal
-        title="Agregar permisos"
-        className="smallModal"
-        visible={Permissions}
-        onCancel={closeModalPermissions}
-        onOk={sendPermissions}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalPermissions}
-          >
-            Cancelar
-          </Button>,
-          <Button className="primary" onClick={closeModalPermissions}>
-            Aplicar
-          </Button>,
-        ]}
-      >
-        <Form style={{ marginLeft: "10px" }}>
-          <Form.Item name="Administrador">
-            <Checkbox>Permisos de Administrador</Checkbox>
-          </Form.Item>
-          <Form.Item name="Nine" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para ver Nine Box</Checkbox>
-          </Form.Item>
-          <Form.Item name="remember" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos de Edición de Objetivos</Checkbox>
-          </Form.Item>
-          <Form.Item name="Organigrama" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para ver Organigrama</Checkbox>
-          </Form.Item>
-          <Form.Item name="editar" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para editar Organigrama</Checkbox>
-          </Form.Item>
-          <Form.Item name="Desarrollo" style={{ marginTop: "-25px" }}>
-            <Checkbox>Permisos para crear Plan de Desarrollo</Checkbox>
-          </Form.Item>
-        </Form>
-      </Modal>
+
       <Modal
         title="Historial del Puesto"
         className="largeModal"
@@ -1319,223 +1262,6 @@ export default function Perfil() {
             </Col>
           </Row>
         </Form>
-      </Modal>
-
-      <Modal
-        title="Expediente: Marco Antonio Remirez Perez"
-        className="largeModal"
-        visible={expedient}
-        onCancel={closeModalExpedient}
-        onOk={sendExpedient}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalExpedient}
-          >
-            Cancelar
-          </Button>,
-          <Button className="primary" onClick={closeModalExpedient}>
-            Guardar
-          </Button>,
-        ]}
-      >
-        <Row
-          className="dividerBottomFull"
-          style={{ textAlign: "center", paddingBottom: "15px" }}
-        >
-          <Col span={7}>
-            <b>Documento</b>
-          </Col>
-          <Col span={6}>
-            <b>Estatus</b>
-          </Col>
-          <Col span={7}>
-            <b>Fecha de carga</b>
-          </Col>
-          <Col span={4}>
-            <b>Acciones</b>
-          </Col>
-        </Row>
-
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
-            Comprobante de Ingresos
-          </Col>
-          <Col style={{ paddingLeft: "15px" }} span={6}>
-            No adjuntado
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={7}>
-            10 MAY 2016
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={3}>
-            <Link
-              className="iconGreen"
-              onClick={() => {
-                setUpload(true);
-                setExpedient(false);
-                setFlag6("showBlok");
-                setFlag7("hide");
-              }}
-              style={{ fontSize: "26px" }}
-              to="#"
-            >
-              <CgSoftwareUpload
-                style={{ position: "absolute", marginTop: "-3px" }}
-              />
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
-            Comprobante de Estudios
-          </Col>
-          <Col style={{ paddingLeft: "15px" }} span={6}>
-            No adjuntado
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={7}>
-            10 MAY 2016
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={3}>
-            <Link
-              className="iconGreen"
-              onClick={() => {
-                setUpload(true);
-                setExpedient(false);
-                setFlag6("showBlok");
-                setFlag7("hide");
-              }}
-              style={{ fontSize: "26px" }}
-              to="#"
-            >
-              <CgSoftwareUpload
-                style={{ position: "absolute", marginTop: "-3px" }}
-              />
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
-            Comprobante de Domicilio
-          </Col>
-          <Col style={{ paddingLeft: "15px" }} span={6}>
-            No adjuntado
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={7}>
-            10 MAY 2016
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={3}>
-            <Link
-              className="iconGreen"
-              onClick={() => {
-                setUpload(true);
-                setExpedient(false);
-                setFlag6("showBlok");
-                setFlag7("hide");
-              }}
-              style={{ fontSize: "26px" }}
-              to="#"
-            >
-              <CgSoftwareUpload
-                style={{ position: "absolute", marginTop: "-3px" }}
-              />
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
-            Identificación Oficial
-          </Col>
-          <Col style={{ paddingLeft: "15px" }} span={6}>
-            No adjuntado
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={7}>
-            10 MAY 2016
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={3}>
-            <Link
-              className="iconGreen"
-              onClick={() => {
-                setUpload(true);
-                setExpedient(false);
-                setFlag6("showBlok");
-                setFlag7("hide");
-              }}
-              style={{ fontSize: "26px" }}
-              to="#"
-            >
-              <CgSoftwareUpload
-                style={{ position: "absolute", marginTop: "-3px" }}
-              />
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
-            Identificación Oficial
-          </Col>
-          <Col style={{ paddingLeft: "15px" }} span={6}>
-            No adjuntado
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={7}>
-            10 MAY 2016
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={3}>
-            <Link
-              className="iconGreen"
-              onClick={() => {
-                setUpload(true);
-                setExpedient(false);
-                setFlag6("showBlok");
-                setFlag7("hide");
-              }}
-              style={{ fontSize: "26px" }}
-              to="#"
-            >
-              <CgSoftwareUpload
-                style={{ position: "absolute", marginTop: "-3px" }}
-              />
-            </Link>
-          </Col>
-        </Row>
       </Modal>
 
       <Modal
@@ -1864,6 +1590,15 @@ export default function Perfil() {
           </Col>
         </Row>
       </Modal>
+
+      <ModalDigitalExpedient
+        expedient={expedient}
+        setExpedient={setExpedient}
+      />
+      <ModalPermissions
+        Permissions={Permissions}
+        setPermissions={setPermissions}
+      />
       <ModalPassword Password={Password} setPassword={setPassword} />
     </>
   );

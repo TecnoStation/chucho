@@ -11,7 +11,7 @@ import {
   Modal,
   Checkbox,
 } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import More from "../../assets/img/icons/more_vert-24px.svg";
 import Avatar from "../../assets/img/avatar.png";
 import Bien from "../../assets/img/icons/bien_hecho.svg";
@@ -20,44 +20,33 @@ import { PlusCircleOutlined } from "@ant-design/icons";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import { useTranslation } from "react-i18next";
 import ModalPermissions from "../../components/Modals/ModalPermissions/ModalPermissions";
+import ModalDocument from "../../components/Modals/ModalDocument/ModalDocument";
 const { Option } = Select;
 
 export default function Collaborator() {
   const [t, i18n] = useTranslation("global");
-  const [Password, setPassword] = useState(false);
 
-  const [Documets, setDocumets] = useState(false);
-  const closeModalDocuments = () => {
-    setDocumets(false);
-  };
-  const openModalDocuments = () => {
-    setDocumets(true);
-  };
+  //--------------------- permissions - Documents - password - etc -------------------z
 
   const [Permissions, setPermissions] = useState(false);
-  const closeModalPermissions = () => {
-    setPermissions(false);
-  };
-  const sendPermissions = () => {
-    alert("permissions enviados");
-  };
-  const addPermissions = () => {
-    setPermissions(true);
-  };
+  const [ModalDocumets, setModalDocumets] = useState(false);
+  const [Password, setPassword] = useState(false);
+  const history = useHistory();
+  const location = useLocation();
+  const query = new URLSearchParams(location.search);
 
-  const [flag, setFlag] = useState("hide");
-  const addDocument = () => {
-    setFlag("show");
-  };
-  const hiddeDocument = () => {
-    setFlag("hide");
-  };
+  //--------------------- end permissions -----------------------------------------------
 
   const menu = (
     <Menu>
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link to="#" onClick={addPermissions}>
+          <Link
+            to="#"
+            onClick={() => {
+              setPermissions(true);
+            }}
+          >
             Agregar permisos
           </Link>
         </Menu.Item>
@@ -71,13 +60,20 @@ export default function Collaborator() {
 
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link to="/areasandpositions-perfil">Ver su Expediente</Link>
+          <Link to="/organigrama/areasandpositions-perfil">
+            Ver su Expediente
+          </Link>
         </Menu.Item>
       </Menu.Item>
 
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link onClick={openModalDocuments} to="#">
+          <Link
+            onClick={() => {
+              setModalDocumets(true);
+            }}
+            to="#"
+          >
             Asignar documentos
           </Link>
         </Menu.Item>
@@ -90,11 +86,18 @@ export default function Collaborator() {
             onClick={() => {
               setPassword({
                 visible: true,
+                type: 0,
                 titleModal: "Eliminar Colaborador",
                 messageModal:
                   "Al eliminar un colaborador de tu organización ya no formará parte de tu organizacion.",
                 messageWarning: "Estás a punto de eliminar al colaborador",
                 question: "¿Seguro deseas eliminarlo?",
+                function: () => {
+                  history.push({
+                    pathname: "/organigrama/areasandpositions",
+                    search: "?tab=1",
+                  });
+                },
               });
             }}
           >
@@ -517,94 +520,17 @@ export default function Collaborator() {
             </Col>
           </Row>
         </Col>
-        <Screendefault>
-          <p style={{ textAlign: "center" }}>
-            <img alt="ico" width="140" src={Bien} />
-          </p>
-          <h3>¡Bien hecho!</h3>
-          <h3>Organigrama creado</h3>
-          <br />
-          <Link to="/organigrama">
-            <Button className="primary">Hecho</Button>
-          </Link>
-        </Screendefault>
       </Row>
 
-      <ModalPermissions />
+      <ModalPermissions
+        Permissions={Permissions}
+        setPermissions={setPermissions}
+      />
 
-      <Modal
-        title="Asignar documentos al colaborador"
-        className="smallModal"
-        visible={Documets}
-        onCancel={closeModalDocuments}
-        onOk={openModalDocuments}
-        footer={[
-          <Button
-            style={{ marginRight: "15px" }}
-            className="secondary"
-            onClick={closeModalDocuments}
-          >
-            Cancelar
-          </Button>,
-          <Button className="primary" onClick={closeModalDocuments}>
-            Guardar
-          </Button>,
-        ]}
-      >
-        <Form style={{ marginLeft: "10px" }}>
-          <Form.Item name="Administrador">
-            <Checkbox>CURP</Checkbox>
-          </Form.Item>
-          <Form.Item name="Nine" style={{ marginTop: "-25px" }}>
-            <Checkbox>Comprobante de estudios</Checkbox>
-          </Form.Item>
-          <Form.Item name="remember" style={{ marginTop: "-25px" }}>
-            <Checkbox>Comprobante de domicilio</Checkbox>
-          </Form.Item>
-          <Form.Item name="Organigrama" style={{ marginTop: "-25px" }}>
-            <Checkbox>Identificación oficia</Checkbox>
-          </Form.Item>
-          <Form.Item name="editar" style={{ marginTop: "-25px" }}>
-            <Checkbox>Acta de nacimiento</Checkbox>
-          </Form.Item>
-          <Form.Item name="Desarrollo" style={{ marginTop: "-25px" }}>
-            <Link to="#" onClick={addDocument}>
-              {" "}
-              <PlusCircleOutlined /> Agregar documento
-            </Link>
-          </Form.Item>
-          <Row className={flag}>
-            <Col span={24}>
-              <Row style={{ marginTop: "-20px" }}>
-                <Col span={24}>
-                  <span>
-                    <b>Agrega un nuevo documento</b>
-                  </span>
-                  <hr />
-                </Col>
-              </Row>
-              <Row>
-                <Col span={22}>
-                  <Input
-                    type="text"
-                    placeholder="Ej. Número de Seguridad Social NSS"
-                  />
-                </Col>
-                <Col style={{ textAlign: "right" }} span={2}>
-                  <Link
-                    onClick={hiddeDocument}
-                    to="#"
-                    style={{ fontSize: "20px", marginLeft: "10px" }}
-                  >
-                    {" "}
-                    <PlusCircleOutlined />{" "}
-                  </Link>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Form>
-      </Modal>
+      <ModalDocument
+        ModalDocumets={ModalDocumets}
+        setModalDocumets={setModalDocumets}
+      />
       <ModalPassword Password={Password} setPassword={setPassword} />
     </Form>
   );

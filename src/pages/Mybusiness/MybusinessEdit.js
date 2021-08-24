@@ -12,7 +12,6 @@ import Avatar from "../../assets/img/avatar.png";
 import "./MybusinessEdit.scss";
 import Modalcompetencies from "../../components/Modals/Modalcompetencies/Modalcompetencies";
 import { useTranslation } from "react-i18next";
-import { v4 as uuid } from "uuid";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import Screens from "../../components/Screens/Screens";
 import ModalBranch from "../../components/Modals/ModalBranch/ModalBranch";
@@ -137,7 +136,6 @@ export default function MybusinessEdit() {
                   <h2 style={{ textAlign: "left" }}>
                     Información de Mi empresa
                   </h2>
-
                   <p>
                     <img alt="ico" width="140" src={Avatar} />
                   </p>
