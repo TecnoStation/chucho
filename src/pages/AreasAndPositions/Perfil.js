@@ -28,6 +28,7 @@ import ModalDigitalExpedient from "../../components/Modals/ModalDigitalExpedient
 import ModalPermissions from "../../components/Modals/ModalPermissions/ModalPermissions";
 import ModalAddExperience from "../../components/Modals/ModalAddExperience/ModalAddExperience";
 import { useStore } from "react-redux";
+import ExperienceList from "../../components/Modals/ModalAddExperience/components/ExperienceList/ExperienceList";
 
 const { Option } = Select;
 
@@ -680,71 +681,7 @@ export default function Perfil() {
             </Col>
           </Row>
 
-          <Row
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-            style={{ marginTop: "20px" }}
-          >
-            <Col className="gutter-row" span={24}>
-              <span>
-                <b>Ejecutivo de ventas Sr</b>
-              </span>
-              <br></br>
-              <span className="iconSureGray">
-                Enero 2015 - Diciembre 2020 (5 años)
-              </span>
-            </Col>
-          </Row>
-
-          <Row
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-            style={{ marginTop: "20px" }}
-          >
-            <Col className="gutter-row" span={24}>
-              <p>
-                De las imprentas y archivos de texto. Lorem Ipsum ha sido el
-                texto de relleno estándar de las industrias desde el año 1500,
-                cuando un impresor (N. del T. persona que se dedica a la
-                imprenta) desconocido usó una galería de textos y los mezcló de
-                tal manera que logró hacer un libro de textos especimen. No sólo
-                sobrevivió 500 años, sino que tambien ingresó como texto de
-                relleno en documentos electrónicos, quedando esencialmente igual
-                al original.
-              </p>
-            </Col>
-          </Row>
-
-          <Row
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-            style={{ marginTop: "20px" }}
-          >
-            <Col className="gutter-row" span={24}>
-              <span>
-                <b>Ejecutivo de ventas Sr</b>
-              </span>
-              <br></br>
-              <span className="iconSureGray">
-                Enero 2015 - Diciembre 2020 (5 años)
-              </span>
-            </Col>
-          </Row>
-
-          <Row
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-            style={{ marginTop: "20px" }}
-          >
-            <Col className="gutter-row" span={24}>
-              <p>
-                De las imprentas y archivos de texto. Lorem Ipsum ha sido el
-                texto de relleno estándar de las industrias desde el año 1500,
-                cuando un impresor (N. del T. persona que se dedica a la
-                imprenta) desconocido usó una galería de textos y los mezcló de
-                tal manera que logró hacer un libro de textos especimen. No sólo
-                sobrevivió 500 años, sino que tambien ingresó como texto de
-                relleno en documentos electrónicos, quedando esencialmente igual
-                al original.
-              </p>
-            </Col>
-          </Row>
+          <ExperienceList Experiences={Experiences} />
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}></Col>

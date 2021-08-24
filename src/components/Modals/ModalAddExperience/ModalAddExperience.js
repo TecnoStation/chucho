@@ -10,7 +10,10 @@ function ModalAddExperience({
   setModalExperience,
   ModalExperience,
 }) {
+  const [form] = Form.useForm();
   const onFinish = (values) => {
+    const arr = values["start"].split("-");
+    const arr2 = values["end"].split("-");
     setExperiences([
       ...Experiences,
       {
@@ -18,10 +21,56 @@ function ModalAddExperience({
         position: values["position"],
         business: values["business"],
         activity: values["activity"],
-        start: values["start"],
-        end: values["end"],
+        start: parseMonth(arr[1]) + " " + arr[0],
+        end: parseMonth(arr2[1]) + " " + arr2[0],
       },
     ]);
+    form.resetFields();
+  };
+
+  const parseMonth = (arr) => {
+    let Month;
+    switch (arr) {
+      case "01":
+        Month = "Enero";
+        break;
+      case "02":
+        Month = "Febrero";
+        break;
+      case "03":
+        Month = "Marzo";
+        break;
+      case "04":
+        Month = "Abril";
+        break;
+      case "05":
+        Month = "Mayo";
+        break;
+      case "06":
+        Month = "Junio";
+        break;
+      case "07":
+        Month = "Julio";
+        break;
+      case "08":
+        Month = "Agosto";
+        break;
+      case "09":
+        Month = "Septiembre";
+        break;
+      case "10":
+        Month = "Octubre";
+        break;
+      case "11":
+        Month = "Noviembre";
+        break;
+      case "12":
+        Month = "Diciembre";
+        break;
+      default:
+      // code block
+    }
+    return Month;
   };
   return (
     <Modal
@@ -31,21 +80,13 @@ function ModalAddExperience({
       onCancel={() => {
         setModalExperience(false);
       }}
-      footer={[
-        <Button
-          className="primary"
-          onClick={() => {
-            setModalExperience(false);
-          }}
-        >
-          Agregar
-        </Button>,
-      ]}
+      footer={false}
     >
       <Form
         onFinish={onFinish}
         name="formExperience"
         layout="vertical"
+        form={form}
         style={{ marginLeft: "10px" }}
       >
         <Form.Item name="position" label="Puesto">
@@ -72,6 +113,17 @@ function ModalAddExperience({
             </Form.Item>
           </Col>
         </Row>
+        <Form.Item style={{ textAlign: "right" }}>
+          <Button
+            htmlType="submit"
+            className="primary"
+            onClick={() => {
+              setModalExperience(false);
+            }}
+          >
+            Agregar
+          </Button>
+        </Form.Item>
       </Form>
     </Modal>
   );

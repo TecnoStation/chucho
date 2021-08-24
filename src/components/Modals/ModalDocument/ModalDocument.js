@@ -5,8 +5,10 @@ import { PlusCircleOutlined } from "@ant-design/icons";
 import { useForm } from "antd/lib/form/Form";
 import { v4 as uuid } from "uuid";
 import DocumentsList from "./components/DocumentsList/DocumentsList";
+import { useTranslation } from "react-i18next";
 
 function ModalDocument({ ModalDocumets, setModalDocumets }) {
+  const [t, i18n] = useTranslation("global");
   const [flag, setFlag] = useState("hide");
   const [Documents, setDocuments] = useState([]);
   const [Document, setDocument] = useState("");
@@ -41,7 +43,7 @@ function ModalDocument({ ModalDocumets, setModalDocumets }) {
             setModalDocumets(false);
           }}
         >
-         {t("organigrama.assign-documents.btn-cancel")}
+          {t("organigrama.assign-documents.btn-cancel")}
         </Button>,
         <Button
           className="primary"
@@ -64,17 +66,22 @@ function ModalDocument({ ModalDocumets, setModalDocumets }) {
           <Checkbox>{t("organigrama.assign-documents.proof-address")}</Checkbox>
         </Form.Item>
         <Form.Item name="Organigrama" style={{ marginTop: "-25px" }}>
-          <Checkbox>{t("organigrama.assign-documents.official-identification")}</Checkbox>
+          <Checkbox>
+            {t("organigrama.assign-documents.official-identification")}
+          </Checkbox>
         </Form.Item>
         <Form.Item name="editar" style={{ marginTop: "-25px" }}>
-          <Checkbox>{t("organigrama.assign-documents.birth-certificate")}</Checkbox>
+          <Checkbox>
+            {t("organigrama.assign-documents.birth-certificate")}
+          </Checkbox>
         </Form.Item>
         <DocumentsList Documents={Documents} />
 
         <Form.Item name="Desarrollo" style={{ marginTop: "-25px" }}>
           <Link to="#" onClick={() => setFlag("show")}>
             {" "}
-            <PlusCircleOutlined onClick={() => {}} /> {t("organigrama.assign-documents.link-add-document")}
+            <PlusCircleOutlined onClick={() => {}} />{" "}
+            {t("organigrama.assign-documents.link-add-document")}
           </Link>
         </Form.Item>
         <Row className={flag}>
