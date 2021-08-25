@@ -437,10 +437,10 @@ export default function AreasAndPositionsAddJob() {
 
             <Row style={{ marginBottom: "10px" }}>
               <Col span={24}>
-                <Tag className="TagArea" closable>
+                <Tag className="tagNormal" closable>
                   QuickBooks
                 </Tag>{" "}
-                <Tag className="TagArea" closable>
+                <Tag className="tagNormal" closable>
                   Suite Office
                 </Tag>
               </Col>
@@ -470,10 +470,10 @@ export default function AreasAndPositionsAddJob() {
 
             <Row style={{ marginBottom: "10px" }}>
               <Col span={24}>
-                <Tag className="TagArea" closable>
+                <Tag className="tagNormal" closable>
                   Ingles avanzado
                 </Tag>{" "}
-                <Tag className="TagArea" closable>
+                <Tag className="tagNormal" closable>
                   Frances
                 </Tag>
               </Col>
