@@ -9,17 +9,12 @@ import {
   Tabs,
   Tag,
   Form,
-  Modal,
   Input,
   Select,
 } from "antd";
-import Checkbox from "antd/lib/checkbox/Checkbox";
 import { Link } from "react-router-dom";
 import Avatar from "../../assets/img/avatar.png";
 import More from "../../assets/img/icons/more_vert-24px.svg";
-import { CgSoftwareUpload } from "react-icons/cg";
-import { FiUpload } from "react-icons/fi";
-import { MdDelete } from "react-icons/md";
 import { v4 as uuid } from "uuid";
 import "./AreasAndPositions.scss";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
@@ -27,7 +22,6 @@ import { useTranslation } from "react-i18next";
 import ModalDigitalExpedient from "../../components/Modals/ModalDigitalExpedient/ModalDigitalExpedient";
 import ModalPermissions from "../../components/Modals/ModalPermissions/ModalPermissions";
 import ModalAddExperience from "../../components/Modals/ModalAddExperience/ModalAddExperience";
-import { useStore } from "react-redux";
 import ExperienceList from "../../components/Modals/ModalAddExperience/components/ExperienceList/ExperienceList";
 import { useForm } from "antd/lib/form/Form";
 import ListLevelStudy from "./Components/ListLevelStudy/ListLevelStudy";
@@ -44,8 +38,6 @@ export default function Perfil() {
   const [flag3, setFlag3] = useState("gutter-row dividerLeft hide");
   const [flag4, setFlag4] = useState("showBlock");
   const [flag5, setFlag5] = useState("hide");
-  const [flag6, setFlag6] = useState("showBlock");
-  const [flag7, setFlag7] = useState("hide");
   const [Password, setPassword] = useState(false);
 
   const { TabPane } = Tabs;
@@ -75,23 +67,6 @@ export default function Perfil() {
     setFlag5("showBlock");
   };
 
-  const [adjunts, setAdjunts] = useState(false);
-  const closeModalAdjunts = () => {
-    setAdjunts(false);
-  };
-  const sendAdjunts = () => {
-    alert("permisos enviados");
-  };
-
-  const [upload, setUpload] = useState(false);
-  const closeModalUpload = () => {
-    setUpload(false);
-  };
-  const sendUpload = () => {
-    alert("permisos enviados");
-  };
-
-  const [form] = useForm();
   //------------------ Modals ------------------------------
   const [expedient, setExpedient] = useState(false);
   const [Permissions, setPermissions] = useState(false);
@@ -157,149 +132,121 @@ export default function Perfil() {
 
   //----------------- End Languajes ----------------------------
 
-  // const closeModalExperience = () => {
-  //   setFlag("gutter-row dividerLeft showBlock");
-  //   setFlag2("gutter-row dividerLeft hide");
-  //   setFlag3("gutter-row dividerLeft hide");
-  //   setExperience(false);
-  // };
-
   const menu3 = (
     <Menu>
       <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link to="/organigrama/areasandpositions-collaborator">
-            Editar colaborador
-          </Link>
-        </Menu.Item>
+        <Link to="/organigrama/areasandpositions-collaborator">
+          Editar colaborador
+        </Link>
+      </Menu.Item>
+      <Menu.Item key={uuid()}>
+        <Link to="/organigrama/areasandpositions-addjob">Editar puesto</Link>
       </Menu.Item>
 
       <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link to="/organigrama/areasandpositions-addjob">Editar puesto</Link>
-        </Menu.Item>
+        <Link to="/organigrama/eraser">Editar estructura</Link>
       </Menu.Item>
 
       <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link to="/organigrama/eraser">Editar estructura</Link>
-        </Menu.Item>
-      </Menu.Item>
-
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            onClick={() => {
-              setPermissions(true);
-            }}
-            to="#"
-          >
-            Agregar permisos
-          </Link>
-        </Menu.Item>
+        <Link
+          onClick={() => {
+            setPermissions(true);
+          }}
+          to="#"
+        >
+          Agregar permisos
+        </Link>
       </Menu.Item>
 
       <Menu.Divider />
 
       <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setModalHistorialC(true);
-            }}
-          >
-            Historial del colaborador
-          </Link>
-        </Menu.Item>
+        <Link
+          to="#"
+          onClick={() => {
+            setModalHistorialC(true);
+          }}
+        >
+          Historial del colaborador
+        </Link>
       </Menu.Item>
+
       <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setHistorialJ(true);
-            }}
-          >
-            Historial del puesto
-          </Link>
-        </Menu.Item>
+        <Link
+          to="#"
+          onClick={() => {
+            setHistorialJ(true);
+          }}
+        >
+          Historial del puesto
+        </Link>
       </Menu.Item>
 
       <Menu.Divider />
 
       <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setPassword({
-                visible: true,
-                titleModal: "Dar de baja a colaborador",
-                messageModal:
-                  "Al dar de baja a un colaborador de tu organización ya no se verá reflejada en tu organigrama.",
-                messageWarning:
-                  "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
-                question: "¿Seguro deseas eliminarlo?",
-              });
-            }}
-          >
-            Dar de baja Colaborador
-          </Link>
-        </Menu.Item>
+        <Link
+          to="#"
+          onClick={() => {
+            setPassword({
+              visible: true,
+              titleModal: "Dar de baja a colaborador",
+              messageModal:
+                "Al dar de baja a un colaborador de tu organización ya no se verá reflejada en tu organigrama.",
+              messageWarning:
+                "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
+              question: "¿Seguro deseas eliminarlo?",
+            });
+          }}
+        >
+          Dar de baja Colaborador
+        </Link>
       </Menu.Item>
     </Menu>
   );
 
   const menu2 = (
     <Menu>
-      <Menu.Item key="0">
-        <Menu.Item key="3">
-          <Link to="#" onClick={editSkills}>
-            Editar mis habilidades
-          </Link>
-        </Menu.Item>
+      <Menu.Item key="3">
+        <Link to="#" onClick={editSkills}>
+          Editar mis habilidades
+        </Link>
       </Menu.Item>
-      <Menu.Item key="0">
-        <Menu.Item key="3">
-          <Link
-            to="#"
-            onClick={() => {
-              setModalExperience(true);
-            }}
-          >
-            Editar mi experiencia
-          </Link>
-        </Menu.Item>
+
+      <Menu.Item key="3">
+        <Link
+          to="#"
+          onClick={() => {
+            setModalExperience(true);
+          }}
+        >
+          Editar mi experiencia
+        </Link>
       </Menu.Item>
     </Menu>
   );
 
   const menu = (
     <Menu>
-      <Menu.Item key="0">
-        <Menu.Item key="3">
-          <Link
-            to="#"
-            onClick={() => {
-              setExpedientUp(true);
-            }}
-          >
-            Agregar Archivos
-          </Link>
-        </Menu.Item>
+      <Menu.Item key="3">
+        <Link
+          to="#"
+          onClick={() => {
+            setExpedientUp(true);
+          }}
+        >
+          Agregar Archivos
+        </Link>
       </Menu.Item>
-      <Menu.Item key="0">
-        <Menu.Item key="3">
-          <Link
-            to="#"
-            onClick={() => {
-              setModalHistorialC(true);
-            }}
-          >
-            Historial de puestos
-          </Link>
-        </Menu.Item>
+      <Menu.Item key="3">
+        <Link
+          to="#"
+          onClick={() => {
+            setModalHistorialC(true);
+          }}
+        >
+          Historial de puestos
+        </Link>
       </Menu.Item>
     </Menu>
   );
