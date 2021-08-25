@@ -9,19 +9,13 @@ import {
   Select,
   Button,
   Tag,
-  Modal,
-  Checkbox,
 } from "antd";
 import More from "../../assets/img/icons/more_vert-24px.svg";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import { RiPencilFill } from "react-icons/ri";
 import { PlusCircleOutlined } from "@ant-design/icons";
-
-import Screendefault from "../../components/Screens/Screendefault";
-import Slidercompetencies from "../../components/Slider/Slidercompetencies";
 import { IoMdSquare } from "react-icons/io";
 import Avatar from "../../assets/img/avatar.png";
-import Warning from "../../assets/img/icons/atencion.svg";
 import Treearea from "../../components/Tree/Treearea";
 import { useTranslation } from "react-i18next";
 import Modalcompetencies from "../../components/Modals/Modalcompetencies/Modalcompetencies";
@@ -107,19 +101,6 @@ export default function AreasAndPositionsAddJob() {
 
   const tabs = ["1", "2"];
   const [Active, setActive] = useState(tabState);
-
-  const changeActive = () => {
-    query.set("tab", 2);
-    if (Active === "1") {
-      query.set("tab", 2);
-      setActive(tabs[1]);
-      history.push({ search: "?tab=2" });
-    } else {
-      query.set("tab", 1);
-      setActive(tabs[0]);
-      history.push({ search: "?tab=1" });
-    }
-  };
 
   const menu = (
     <Menu>
