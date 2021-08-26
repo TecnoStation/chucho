@@ -621,7 +621,7 @@ export default function Collaborator() {
       <ModalPermissions />
 
       <ModalDocument />
-      <ModalPassword Password={Password} setPassword={setPassword} />
+      <ModalPassword Password={Password} setPassword={setPassword} /> 
     </Form>
   );
 }

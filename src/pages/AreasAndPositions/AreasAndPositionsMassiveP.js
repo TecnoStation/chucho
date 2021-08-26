@@ -261,7 +261,7 @@ export default function AreasAndPositionsMassiveP() {
               </Form.Item>
             </Form>
           </Col>
-        </Row>
+        </Row> 
       </Modal>
     </>
   );

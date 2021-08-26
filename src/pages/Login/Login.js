@@ -40,7 +40,7 @@ export default function Login() {
         </Form>
         <p className="legacyP grayText">{t("login.p1-privacy")}</p>
         <p>
-          <Checkbox className="terminos grayText">
+          <Checkbox className="terminos grayText"> 
             {t("login.check-privacy")}
           </Checkbox>
         </p>

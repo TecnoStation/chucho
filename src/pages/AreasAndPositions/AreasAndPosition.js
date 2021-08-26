@@ -173,7 +173,7 @@ export default function AreasAndPositions() {
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={11}>
                   <h2 style={{ textAlign: "left" }}>
-                    Crea áreas de mi empresa
+                    {t("organigrama.areas-and-positions.structure.title")}
                   </h2>
 
                   <div style={{ marginTop: "20px" }} className="formWork">
@@ -190,7 +190,7 @@ export default function AreasAndPositions() {
                             icon={<ImArrowUp className="iconAjust2" />}
                           >
                             {" "}
-                            <span className="textAjust2">Carga masiva</span>
+                            <span className="textAjust2">{t("organigrama.areas-and-positions.structure.btn-load-masive")}</span>
                           </Button>
                         </Link>
                       </Col>
@@ -208,15 +208,14 @@ export default function AreasAndPositions() {
                         >
                           {" "}
                           <IoMdCloudDownload className="iconAjust" />{" "}
-                          <span className="textAjust">Descargar archivo</span>{" "}
+                          <span className="textAjust">{t("organigrama.areas-and-positions.structure.btn-download-file")}</span>{" "}
                         </Button>
                       </Col>
                     </Row>
                     <Row style={{ marginTop: "20px" }}>
                       <Col>
                         <p>
-                          Agrega áreas y subáreas para crear el esqueleto del
-                          organigrama de tu empresa
+                        {t("organigrama.areas-and-positions.structure.text1")}
                         </p>
                       </Col>
                     </Row>
@@ -273,7 +272,7 @@ export default function AreasAndPositions() {
                           }}
                         >
                           {" "}
-                          <PlusCircleOutlined /> Agregar nueva área
+                          <PlusCircleOutlined /> {t("organigrama.areas-and-positions.structure.link-add-new-area")}
                         </Link>
                       </Col>
                     </Row>
@@ -285,8 +284,8 @@ export default function AreasAndPositions() {
                   style={{ textAlign: "left" }}
                   span={13}
                 >
-                  <h2>Puestos en el area: CEO</h2>
-                  <p>Ingresa los puestos de tus áreas.</p>
+                  <h2>{t("organigrama.areas-and-positions.structure.positions-in-area")}</h2>
+                  <p>{t("organigrama.areas-and-positions.structure.insert- your-positions")}</p>
 
                   <PositionsLis
                     Positions={Positions}
@@ -326,7 +325,7 @@ export default function AreasAndPositions() {
                           SetInputPosition("show");
                         }}
                       >
-                        <PlusCircleOutlined /> Agregar puesto
+                        <PlusCircleOutlined /> {t("organigrama.areas-and-positions.structure.link-add-position")}
                       </Link>
                     </Col>
                   </Row>
@@ -346,12 +345,12 @@ export default function AreasAndPositions() {
                       className="secondary"
                       style={{ marginRight: "15px" }}
                     >
-                      Cancelar
+                      {t("organigrama.areas-and-positions.structure.btn-cancel")}
                     </Button>
                   </Link>
                   {firtFlag ? (
                     <Button htmlType="submit" className="primary">
-                      Guardar
+                     {t("organigrama.areas-and-positions.structure.btn-save")}
                     </Button>
                   ) : (
                     <Link to="/organigrama/mybusiness">
@@ -374,10 +373,10 @@ export default function AreasAndPositions() {
                 span={6}
               >
                 <span>
-                  <b>Lista de puestos en Mi empresa</b>
+                  <b>{t("organigrama.areas-and-positions.position.title-position")}</b>
                 </span>
                 <br />
-                <span className="iconGreen">(Total 2 puestos)</span>
+                <span className="iconGreen">{t("organigrama.areas-and-positions.position.total-positions")}</span>
               </Col>
 
               <Col
@@ -392,7 +391,7 @@ export default function AreasAndPositions() {
                     icon={<ImArrowUp className="iconAjust2" />}
                   >
                     {" "}
-                    <span className="textAjust2">Carga masiva</span>
+                    <span className="textAjust2">{t("organigrama.areas-and-positions.position.btn-load-masive")}</span>
                   </Button>
                 </Link>
                 <Button
@@ -405,22 +404,22 @@ export default function AreasAndPositions() {
                 >
                   {" "}
                   <IoMdCloudDownload className="iconAjust" />{" "}
-                  <span className="textAjust">Descargar archivo</span>{" "}
+                  <span className="textAjust">{t("organigrama.areas-and-positions.position.btn-download-file")}</span>{" "}
                 </Button>
                 <Input
                   id="filter"
                   style={{ width: "250px" }}
                   addonAfter={<SearchOutlined />}
-                  placeholder="Buscar puesto"
+                  placeholder={t("organigrama.areas-and-positions.position.placeholder-input")}
                   onKeyUp={filterJob}
                 />
               </Col>
               <Row className="info2 dividerBottomFull">
-                <Col span={8}>Nombre del puesto</Col>
-                <Col span={4}>Información Básica</Col>
-                <Col span={4}>Perfilamiento</Col>
-                <Col span={4}>Habilidades</Col>
-                <Col span={4}>Acciones</Col>
+                <Col span={8}>{t("organigrama.areas-and-positions.position.position-name")}</Col>
+                <Col span={4}>{t("organigrama.areas-and-positions.position.basic-information")}</Col>
+                <Col span={4}>{t("organigrama.areas-and-positions.position.profiling")}</Col>
+                <Col span={4}>{t("organigrama.areas-and-positions.position.skills")}</Col>
+                <Col span={4}>{t("organigrama.areas-and-positions.position.actions")}</Col>
               </Row>
 
               <div style={{ width: "100vw" }} id="positionList">
@@ -457,7 +456,7 @@ export default function AreasAndPositions() {
                       <Input
                         type="text"
                         value={PositionInfo}
-                        placeholder="Ej. Agrega nombre de puesto"
+                        placeholder={t("organigrama.areas-and-positions.position.input-placeholder-position")}
                       />
                     </Form.Item>
                   </Col>
@@ -471,12 +470,12 @@ export default function AreasAndPositions() {
                       }}
                       className="secondary"
                     >
-                      Cancelar
+                      {t("organigrama.areas-and-positions.position.btn-cancel")}
                     </Button>
                   </Col>
                   <Col span={2} style={{ textAlign: "left" }}>
                     <Button htmlType="submit" className="primary">
-                      Guardar
+                    {t("organigrama.areas-and-positions.position.btn-save")}
                     </Button>
                   </Col>
                   <Col span={10}></Col>
@@ -497,7 +496,7 @@ export default function AreasAndPositions() {
                       setAddJob("show formPos");
                     }}
                   >
-                    <PlusCircleOutlined className="iconsize" /> Agregar Nombre
+                    <PlusCircleOutlined className="iconsize" /> {t("organigrama.areas-and-positions.position.link-add-new-position")}
                     del puesto
                   </Link>
                 </Col>
@@ -512,12 +511,12 @@ export default function AreasAndPositions() {
               >
                 <Link to="/organigrama/mybusiness">
                   <Button className="secondary" style={{ marginRight: "15px" }}>
-                    Cancelar
+                  {t("organigrama.areas-and-positions.position.btn-cancel")}
                   </Button>
                 </Link>
 
                 <Link to="/organigrama/mybusiness">
-                  <Button className="primary">Guardar</Button>
+                  <Button className="primary">{t("organigrama.areas-and-positions.position.btn-save")}</Button>
                 </Link>
               </Col>
               <br />

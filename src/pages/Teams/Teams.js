@@ -159,14 +159,14 @@ export default function Teams() {
       <Menu.Item key="0">
         <Menu.Item key="3">
           <Link onClick={edit} to="#">
-            Editar datos
+            {t("organigrama.menu-modal.edit-data")}
           </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link to="#">Eliminar</Link>
+          <Link to="#">{t("organigrama.menu-modal.remove")}</Link>
         </Menu.Item>
       </Menu.Item>
     </Menu>
@@ -291,12 +291,12 @@ export default function Teams() {
         <Row>
           <Col span={6}>
             <p>
-              <b>Tipo de equipo</b>
+              <b>{t("organigrama.teams2-modal.kind-team")}</b>
             </p>
           </Col>
           <Col span={16}>
             <p>
-              <b>Modalidad</b>
+              <b>{t("organigrama.teams2-modal.modality")}</b>
             </p>
           </Col>
           <Col span={2}>
@@ -322,7 +322,7 @@ export default function Teams() {
         <Row>
           <Col style={{ textAlign: "left", paddingLeft: "5px" }} span={24}>
             <p>
-              <b>Marco de trabajo</b>
+              <b>{t("organigrama.teams2-modal.frame-job")}</b>
             </p>
           </Col>
         </Row>
@@ -332,9 +332,9 @@ export default function Teams() {
           </Col>
         </Row>
         <Row style={{ textAlign: "center" }}>
-          <Col span={8}>Miembros del Equipo</Col>
-          <Col span={8}>Líder</Col>
-          <Col span={8}>Roles</Col>
+          <Col span={8}>{t("organigrama.teams2-modal.members-team")}</Col>
+          <Col span={8}>{t("organigrama.teams2-modal.leader")}</Col>
+          <Col span={8}>{t("organigrama.teams2-modal.roles")}</Col>
         </Row>
         <Row
           gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}

@@ -13,10 +13,12 @@ import { Link } from "react-router-dom";
 import { UserOutlined } from "@ant-design/icons";
 import { v4 as uuid } from "uuid";
 import TeamMembers from "./TeamMembers";
+import { useTranslation } from "react-i18next";
 
 const { Option } = Select;
 
 export default function CreateTeam(props) {
+  const [t, i18n] = useTranslation("global");
   const info = () => {
     return (
       <>
@@ -101,8 +103,8 @@ export default function CreateTeam(props) {
 
   return (
     <Modal
-      title="Crear Equipo"
-      className="largeModal"
+      title={t("organigrama.teams-modal.title")}
+      className="largeModal" 
       visible={props.modalCreateTeam}
       onCancel={closeModalCreateTeam}
       onOk={props.sendCreateTeam}
@@ -138,16 +140,16 @@ export default function CreateTeam(props) {
       <Form name="form" layout="vertical">
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col className="gutter-row" span={12}>
-            <Form.Item name="site" label="Nombre del equipo">
+            <Form.Item name="site" label={t("organigrama.teams-modal.name-team-label")}>
               <Input
                 type="text"
-                placeholder="Aqui puedes asignar el nombre de tu equipo"
+                placeholder={t("organigrama.teams-modal.placeholder-imput-name")}
               />
             </Form.Item>
           </Col>
           <Col className="gutter-row" span={12}>
-            <Form.Item name="activity" label="Tipo de equipo" tooltip={info}>
-              <Select placeholder="Selecciona una opción" onChange={showFrame}>
+            <Form.Item name="activity" label={t("organigrama.teams-modal.kind-team-label")} tooltip={info}>
+              <Select placeholder={t("organigrama.teams-modal.placeholder-imput-selec")} onChange={showFrame}>
                 <Option value="0">Personalizado</Option>
                 <Option value="1">Modo Opertaivo Agile</Option>
               </Select>
@@ -157,7 +159,7 @@ export default function CreateTeam(props) {
 
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col className="gutter-row" span={12}>
-            <Form.Item name="empresa" label="Agregar colaboradores">
+            <Form.Item name="empresa" label={t("organigrama.teams-modal.add-collaborators-label")}>
               <AutoComplete
                 dropdownClassName="certain-category-search-dropdown"
                 dropdownMatchSelectWidth={300}
@@ -165,13 +167,13 @@ export default function CreateTeam(props) {
                 value={valueTemporal.title}
                 onChange={onChange2}
               >
-                <Input.Search placeholder="Buscar colaboradores" />
+                <Input.Search placeholder={t("organigrama.teams-modal.placeholder-imput-search")} />
               </AutoComplete>
             </Form.Item>
           </Col>
           <Col className="gutter-row" span={12}>
-            <Form.Item name="modalidad" label="Modalidad" tooltip={info}>
-              <Select placeholder="Selecciona una opción">
+            <Form.Item name="modalidad" label={t("organigrama.teams-modal.modality-label")} tooltip={info}>
+              <Select placeholder={t("organigrama.teams-modal.placeholder-imput-option")}>
                 <Option value="jack">Funcional</Option>
                 <Option value="lucy">Lucy</Option>
                 <Option value="tom">Tom</Option>

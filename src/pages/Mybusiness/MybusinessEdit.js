@@ -502,7 +502,7 @@ export default function MybusinessEdit() {
 
       <Screens
         message={message}
-        setMessage={setMessage}
+        setMessage={setMessage} 
         messageType={0}
         setActive={setActive}
       />

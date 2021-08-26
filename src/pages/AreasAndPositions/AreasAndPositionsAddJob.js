@@ -283,9 +283,9 @@ export default function AreasAndPositionsAddJob() {
                   },
                 ]}
                 name="bussines"
-                label="Nombre del puesto*"
+                label={t("organigrama.areasandpositions-addjob.label-nameposition")}
               >
-                <Input type="text" placeholder="Ej.Director General" />
+                <Input type="text" placeholder={t("organigrama.areasandpositions-addjob.placeholder-position")} />
               </Form.Item>
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col className="gutter-row" span={12}>
@@ -349,9 +349,9 @@ export default function AreasAndPositionsAddJob() {
                       },
                     ]}
                     name="size"
-                    label="Tipo de puesto*"
+                    label={t("organigrama.areasandpositions-addjob.label-kindposition")}
                   >
-                    <Select placeholder="Ej. Puesto clave">
+                    <Select placeholder={t("organigrama.areasandpositions-addjob.placeholder-positionkey")}>
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
@@ -367,9 +367,9 @@ export default function AreasAndPositionsAddJob() {
                       },
                     ]}
                     name="levelRisk"
-                    label="Nivel de riesgo*"
+                    label={t("organigrama.areasandpositions-addjob.label-levelrisk")}
                   >
-                    <Select className="gutter-row" placeholder="Ej. Alto">
+                    <Select className="gutter-row" placeholder={t("organigrama.areasandpositions-addjob.placeholder-high")}>
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
@@ -385,7 +385,7 @@ export default function AreasAndPositionsAddJob() {
                       },
                     ]}
                     name="studyLevel"
-                    label="Nivel de Estudios*"
+                    label={t("organigrama.areasandpositions-addjob.label-levelstudies")}
                   >
                     <Select
                       className="gutter-row"
@@ -408,7 +408,7 @@ export default function AreasAndPositionsAddJob() {
                       },
                     ]}
                     name="yearsExperencie"
-                    label="Años de experiencia*"
+                    label={t("organigrama.areasandpositions-addjob.label-yearsexperience")}
                   >
                     <Select
                       className="gutter-row"
@@ -428,7 +428,7 @@ export default function AreasAndPositionsAddJob() {
             <Row style={{ marginTop: "20px" }}>
               <Col span={24}>
                 <span>
-                  <b>Habilidades para el puesto</b>
+                  <b>{t("organigrama.areasandpositions-addjob.abilities-for-position")}</b>
                 </span>
                 <br />
                 <br />
@@ -448,11 +448,11 @@ export default function AreasAndPositionsAddJob() {
 
             <Row>
               <Col span={24}>
-                <Form.Item name="habilidades" label="Habilidades técnicas">
+                <Form.Item name="habilidades" label={t("organigrama.areasandpositions-addjob.label-skilltech")}>
                   <Input
                     type="text"
                     id="habilidades"
-                    placeholder="Ej. Microsoft word"
+                    placeholder={t("organigrama.areasandpositions-addjob.placeholder-word")}
                   />
                 </Form.Item>
               </Col>
@@ -461,7 +461,7 @@ export default function AreasAndPositionsAddJob() {
             <Row>
               <Col span={24}>
                 <span>
-                  <b>Idiomas</b>
+                  <b>{t("organigrama.areasandpositions-addjob.languages")}</b>
                 </span>
                 <br />
                 <br />
@@ -481,7 +481,7 @@ export default function AreasAndPositionsAddJob() {
 
             <Row>
               <Col span={24}>
-                <Form.Item name="idiomas" label="Idiomas">
+                <Form.Item name="idiomas" label={t("organigrama.areasandpositions-addjob.lavel-languages")}>
                   <Input
                     type="text"
                     id="idiomas"
@@ -495,10 +495,10 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull">
               <Col span={10}>
-                <b>Competencias institucionales</b>
+                <b>{t("organigrama.areasandpositions-addjob.competences")}</b>
               </Col>
               <Col style={{ textAlign: "center" }} span={14}>
-                <b>Nivel</b>
+                <b>{t("organigrama.areasandpositions-addjob.level")}</b>
               </Col>
             </Row>
 
@@ -535,7 +535,7 @@ export default function AreasAndPositionsAddJob() {
                     setComponent(2);
                   }}
                 >
-                  <PlusCircleOutlined /> Agregar competencias
+                  <PlusCircleOutlined /> {t("organigrama.areasandpositions-addjob.link-addcompeten")}
                 </Link>
               </Col>
             </Row>
@@ -568,7 +568,7 @@ export default function AreasAndPositionsAddJob() {
                     setComponent(1);
                   }}
                 >
-                  <PlusCircleOutlined /> Agregar competencias
+                  <PlusCircleOutlined /> {t("organigrama.areasandpositions-addjob.link-addcompetens")}
                 </Link>
               </Col>
             </Row>
@@ -590,16 +590,16 @@ export default function AreasAndPositionsAddJob() {
 
             <Row style={{ marginTop: "30px" }}>
               <Col style={{ textAlign: "center" }} span={14}>
-                <b>Los campos con * son obligatorios</b>
+                <b>{t("organigrama.areasandpositions-addjob.fields-obligatory")}</b>
               </Col>
               <Col span={5}>
                 <Link to="/organigrama/areasandpositions-collaborator">
-                  <Button className="secondary">Cancelar</Button>
+                  <Button className="secondary">{t("organigrama.areasandpositions-addjob.btn-cancel")}</Button>
                 </Link>
               </Col>
               <Col span={5}>
                 <Button htmlType="submit" className="primary">
-                  Guardar
+                {t("organigrama.areasandpositions-addjob.btn-save")}
                 </Button>
               </Col>
             </Row>

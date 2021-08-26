@@ -149,7 +149,7 @@ export default function Home() {
         />
         <LayoutSecondaryCardBack
           exact
-          path="/organigrama/areasandpositions-masivac"
+          path="/organigrama/areasandpositions-massivec"
           title="Áreas y puestos"
           component={AreasAndPositionsMassiveC}
         />

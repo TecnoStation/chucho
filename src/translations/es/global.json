@@ -269,21 +269,21 @@
                 "input-placeholder-area": "Ej. Agrega nueva área",
                 "input-placeholder-subarea": "Ej. Agrega nueva sub área",
                 "link-add-new-area": "Agregar nueva área",
-                "positions-in-area": "Puestos en el área: Dirección de Finanzas",
+                "positions-in-area": "Puestos en el area: CEO",
                 "insert- your-positions": "Ingresa los puestos de tus áreas.",
                 "link-add-position": "Agregar puesto",
                 "btn-cancel": "Cancelar",
                 "btn-save": "Guardar"           
             },
             "position":{
-                "tab-name": "Puesto",
-                "title": "Lista de puestos en Mi empresa",
+                "title-position": "Puesto",
+                "total-positions": "(Total 2 puestos)",
                 "btn-load-masive": "Carga masiva",
                 "btn-download-file": "Descargar archivo",
                 "placeholder-input": "Buscar puesto",
                 "position-name": "Nombre del puesto",
                 "basic-information": "Información Básica",
-                "profiling": "Nombre del puesto",
+                "profiling": "Perfilamiento",
                 "skills": "Habilidades",
                 "actions": "Acciones",
                 "link-add-new-position": "Agregar nuevo puesto",
@@ -449,6 +449,9 @@
         },
         "areasandpositions-perfil":{
             "tab1":{
+                "text1": "Marco Antonio Ramirez Perez",
+                "text2": "Director de Mercadotecnia y Publicidad",
+                "positions-mail": "mramirez@empresa.org",
                 "title": "Información Colabrador",
                 "birthday-date": "Fecha de nacimiento",
                 "entry-date": "Fecha de ingreso",
@@ -457,6 +460,15 @@
                 "nationality": "Nacionalidad",
                 "city": "Ciudad",
                 "teams-which": "Equipos a los que pertenece",
+                "team": "Equipo EVOU",
+                "master": "SCRUM Master",
+                "team-Evaluast-lik": "Equipo Evaluatest",
+                "dev-team": "Dev Team",
+                "evaluation": "Evaluación de Desempeño",
+                "evaluation-a": "Evaluaciones Psicométricas",
+                "evaluation-b": "Evaluación 360",
+                "plans-developing": "Planes de Desarrollo",
+                "proccedings": "Expediente digital", 
                 "proccess-result": "Resultados de procesos",
                 "menu-collaborator":{
                  "add-file": "Agregar Archivos",
@@ -518,13 +530,21 @@
             "tab2":{
                 "title": "Información del puesto",
                 "level-position": "Nivel del puesto",
+                "manager": "Gerente",
                 "level-post": "Nivel del cargo",
+                "manager-a": "Gerente A",
                 "taip-position": "Tipo de puesto",
+                "position-key": "Puesto clave",
                 "level-risk": "Nivel de riesgo",
+                "half": "Medio",
                 "branch": "Sucursal",
+                "town": "CDMX",
                 "area": "Área",
+                "marketing": "Marketing",
                 "report-to": "Reporta a (Nombre del puesto)",
+                "direction-corporate": "Dirección General del Corporativo",
                 "mail-to": "Correo electronico a quien reporta",
+                "name-mail": "nombre@empresa.com",
                 "menu-positions":{
                   "edit-collaborator": "Editar colaborador",
                   "edit-position": "Editar puesto",
@@ -567,10 +587,12 @@
                  "btn-cancel": "Cancelar",
                  "btn-delete": "Eliminar"
                 },  
-                "skills-position": "Havilidades Necesarias para el puesto",
+                "skills-position": "Habilidades necesarias para el puesto",
                 "level-study": "Nivel de Estudios",
+                "bachelor": "Licenciatura",
                 "years": "Años",
-                "idiomas": "Idiomas",
+                "eight-years": "8 años",
+                "languages": "Idiomas",
                 "skills-techniques": "Havilidades técnicas",
                 "menu2-positions":{
                     "edit-skills": "Editar mis habilidades",
@@ -582,11 +604,15 @@
                   "education-superior-placeholder": "Ej. Educación superior",
                   "years-experience-label": "Años de experiencia",
                   "select-option-placeholder": "Selecciona una opción",
-                  "skills-techniques-label": "Habilidades técnicas",
+                  "btn-save0": "Guardar",
+                  "techniques-label": "Habilidades técnicas",
+                  "truck-load-placeholder": "Ej. de camión de carga",
+                  "btn-save": "Guardar",
                   "languages-label": "Idiomas",
                   "english-advanced-placeholder": "Ej. Ingles avanzado",
+                  "btn-save2": "Guardar",
                   "experience-professional": "Experiencia profesional",
-                  "link-add-experience": "Agregar otra experiencia"   
+                  "add-experience": "Agregar otra experiencia"   
                 },
                 "experience-modal":{
                   "title": "Agregar Experiencia",
@@ -601,7 +627,29 @@
                   "btn-add": "Agregar"  
                 }
             }
+        },
+        "areasandpositions-detailerror":{
+         "title-detailfile": "Detalle del archivo:",
+         "abstract": "Resumen",
+         "file": "Archivo:",
+         "username": "Usuario:",
+         "status": "Estatus:",
+         "total-mistakes": "Total de errores:",
+         "date-load": "Fecha de carga:",
+         "mistakes": "Errores",
+         "column": "Columna",
+         "row": "Fila",
+         "error": "Error"   
         } 
+    },
+    "areasandpositions-detailSuccess":{
+     "title-detailfile": "Detalle del archivo:",
+     "abstract": "Resumen",
+     "file": "Archivo:",
+     "username": "Usuario:",
+     "status": "Estatus:",
+     "total-mistakes": "Total de errores:",
+     "date-load": "Fecha de carga:"   
     },
 
     "teams":{
@@ -677,7 +725,8 @@
      "abilities-for-position": "Habilidades para el puesto",
      "label-skilltech": "Habilidades técnicas",
      "placeholder-word": "Ej. Microsoft word",
-     "label-languages": "Idiomas",
+     "languages": "Idiomas",
+     "lavel-languages": "Idiomas",
      "placeholder-english": "Ej. Ingles avanzado",
      "competences": "Competencias institucionales",
      "level": "Nivel",
@@ -761,7 +810,37 @@
       }
     },
 
-
+    "areasandpositions-E":{
+        "title": "Carga masiva de colaboradores",
+        "text-1": "En este apartado vas a poder realizar la carga masiva de información.",
+        "text-2": "para facilitar la carga de datos, proponemos subir la información en 3 partes, la",
+        "text-3": "primera sería un archivo con todas tu áreas y todos los puestos en tu empresa,",
+        "text-4": ",para facilitar este paso hemos creado una plantilla que pudes descargar,llenar y subir:",
+        "collaborator-template": "Descargar plantilla de Información de Colaboradores",
+        "text-5": "Antes de importar los datos, es esencial asegurarse de que la tabla cumple estos tres requisitos:",
+        "text-a": "- Cada columna tiene un encabezado.",
+        "text-b": "- Deberás llenar los todos los campos que se te piden.",
+        "text-c": "- Solo se aceptan archivos de excel (cvs y xls)",
+        "text-file": "Adjunta tu archivo y ¡listo!",
+        "tex-file-a": "Subir archivo de información de colaboradores:",
+        "to attach-file-link": "Adjuntar archivo",
+        "text-file-b": "Historial de Cargas",
+        "file": "Archivo",
+        "date-load": "Fecha de carga",
+        "status": "Estatus",
+        "actions": "Acciones",
+        "btn-cancel": "Cancelar",
+        "btn-upload-file": "Subir archivo",
+        "modal-file":{
+        "goes-file": "Sube el archivo",
+        "btn-cancel": "Canceler",
+        "btn-upload": "Subir",
+        "well-done": "¡Bien hecho!",
+        "text": "Organigrama creado",
+        "btn-done": "Hecho"
+        }
+      },
+  
 
 
 

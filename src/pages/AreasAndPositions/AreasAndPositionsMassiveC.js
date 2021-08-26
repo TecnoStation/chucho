@@ -40,15 +40,14 @@ export default function AreasAndPositionsMassiveC() {
         <Col className="gutter-row" span={12}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <h3>Carga masiva de colaboradores</h3>
+              <h3>{t("organigrama.areasandpositions-E.title")}</h3> 
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                En este apartado vas a poder realizar la carga masiva de
-                información.
+              {t("organigrama.areasandpositions-E.text-1")}
               </p>
             </Col>
           </Row>
@@ -56,14 +55,11 @@ export default function AreasAndPositionsMassiveC() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                Para facilitar la carga de datos, proponemos subir la
-                información en 3 partes, la{" "}
+              {t("organigrama.areasandpositions-E.text-2")}
                 <b>
-                  primera sería un archivo con todas tus áreas y todos los
-                  puestos en tu empresa
+                {t("organigrama.areasandpositions-E.text-3")}
                 </b>
-                , para facilitar este paso hemos creado una plantilla que puedes
-                descargar, llenar y volver a subir:
+                {t("organigrama.areasandpositions-E.text-4")}
               </p>
             </Col>
           </Row>
@@ -71,7 +67,7 @@ export default function AreasAndPositionsMassiveC() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p className="linkBold">
-                Descargar plantilla de Información de Colaboradores
+              {t("organigrama.areasandpositions-E.collaborator-template")}
               </p>
             </Col>
           </Row>
@@ -81,8 +77,7 @@ export default function AreasAndPositionsMassiveC() {
             <Col className="gutter-row" span={24}>
               <p>
                 <b>
-                  Antes de importar los datos, es esencial asegurarse de que la
-                  tabla cumple estos tres requisitos:
+                {t("organigrama.areasandpositions-E.text-5")}
                 </b>
               </p>
             </Col>
@@ -90,13 +85,13 @@ export default function AreasAndPositionsMassiveC() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <span>- Cada columna tiene un encabezado.</span>
+              <span>{t("organigrama.areasandpositions-E.text-a")}</span>
               <br />
               <span>
-                - Deberás llenar los todos los campos que se te piden.
+              {t("organigrama.areasandpositions-E.text-b")}
               </span>
               <br />
-              <span>- Solo se aceptan archivos de excel (cvs y xls)</span>
+              <span>{t("organigrama.areasandpositions-E.text-c")}</span>
               <br />
               <br />
             </Col>
@@ -104,14 +99,14 @@ export default function AreasAndPositionsMassiveC() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <p>Adjunta tu archivo y ¡listo!</p>
+              <p>{t("organigrama.areasandpositions-E.text-file")}</p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b>Subir archivo de información de colaboradores:</b>
+                <b>{t("organigrama.areasandpositions-E.tex-file-a")}</b>
               </p>
             </Col>
           </Row>
@@ -120,7 +115,7 @@ export default function AreasAndPositionsMassiveC() {
             <Col className="gutter-row" span={24}>
               <Link to="#" onClick={openModalUpload}>
                 {" "}
-                <PlusCircleOutlined /> Adjuntar archivo{" "}
+                <PlusCircleOutlined /> {t("organigrama.areasandpositions-E.to attach-file-link")}
               </Link>
               <br />
               <br />
@@ -134,7 +129,7 @@ export default function AreasAndPositionsMassiveC() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={24}>
-          <h1>Historial de Cargas</h1>
+          <h1>{t("organigrama.areasandpositions-E.text-file-")}</h1>
         </Col>
       </Row>
 
@@ -144,16 +139,16 @@ export default function AreasAndPositionsMassiveC() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={6}>
-          <p>Archivo</p>
+          <p>{t("organigrama.areasandpositions-E.file")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>Fecha de carga</p>
+          <p>{t("organigrama.areasandpositions-E.date-load")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>Estatus</p>
+          <p>{t("organigrama.areasandpositions-E.status")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>Acciones</p>
+          <p>{t("organigrama.areasandpositions-E.actions")}</p>
         </Col>
       </Row>
 
@@ -205,10 +200,10 @@ export default function AreasAndPositionsMassiveC() {
       >
         <Col className="gutter-row" span={17}></Col>
         <Col className="gutter-row" span={3}>
-          <Button className="secondary">Cancelar</Button>
+          <Button className="secondary">{t("organigrama.areasandpositions-E.btn-cancel")}</Button>
         </Col>
         <Col className="gutter-row" span={3}>
-          <Button className="primary">Subir archivo</Button>
+          <Button className="primary">{t("organigrama.areasandpositions-E.btn-upload-file")}</Button>
         </Col>
       </Row>
 
@@ -221,15 +216,15 @@ export default function AreasAndPositionsMassiveC() {
               </p>
             </Col>
             <Col span={24}>
-              <h3>Bien hecho!</h3>
+              <h3>{t("organigrama.areasandpositions-E.modal-file.well-done")}</h3>
             </Col>
             <Col span={24}>
-              <h3>Organigrama creado</h3>
+              <h3>{t("organigrama.areasandpositions-E.modal-file.text")}</h3>
               <br />
             </Col>
             <Col span={24}>
               <Button onClick={endFn} className="primary btn">
-                Hecho
+              {t("organigrama.areasandpositions-E.modal-file.btn-done")}
               </Button>
             </Col>
           </Row>
@@ -237,7 +232,7 @@ export default function AreasAndPositionsMassiveC() {
       </Screendefault>
 
       <Modal
-        title="Sube el archivo"
+        title={t("organigrama.areasandpositions-E.modal-file.goes-file")}
         visible={modalUpload}
         onCancel={closeModalUpload}
         onOk={sendUpload}
@@ -247,13 +242,13 @@ export default function AreasAndPositionsMassiveC() {
             className="secondary"
             onClick={closeModalUpload}
           >
-            Cancelar
+            {t("organigrama.areasandpositions-E.modal-file.btn-cancel")}
           </Button>,
           <input
             type="button"
             className="primary"
             onClick={sendUpload}
-            value="Subir"
+            value={t("organigrama.areasandpositions-E.modal-file.btn-upload")}
           />,
         ]}
       >

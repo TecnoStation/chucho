@@ -42,7 +42,7 @@ export default function AreasAndPositionsMassiveE() {
             <Col className="gutter-row" span={24}>
               <h3>{t("organigrama.areasandpositions-masivee.title")}</h3>
             </Col>
-          </Row>
+          </Row> 
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>

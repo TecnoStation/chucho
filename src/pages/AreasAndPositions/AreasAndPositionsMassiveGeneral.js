@@ -256,7 +256,7 @@ export default function AreasAndPositionsMassiveGeneral() {
           <Col span={12}>
             <Form>
               <Form.Item>
-                <input type="file" />
+                <input type="file" /> 
               </Form.Item>
             </Form>
           </Col>

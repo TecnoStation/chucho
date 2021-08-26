@@ -204,7 +204,7 @@ export default function Mybusiness() {
               Creatividad<span className="span"></span>
             </Col>
             <Col span={6} style={{ paddingLeft: "15px" }}>
-              3<span className="span"></span>
+              3<span className="span"></span> 
             </Col>
           </Row>
           <Row style={{ marginTop: "20px", background: "#F4F6FB" }}>
