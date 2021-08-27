@@ -61,6 +61,12 @@ export default function Member({
                 name={"rol" + item}
                 key={1}
                 placeholder="Product Owner"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
               >
                 <Select
                   defaultValue={collaborator.rol}
@@ -77,6 +83,12 @@ export default function Member({
                 defaultValue={collaborator.rol}
                 key={1}
                 placeholder="Product Owner"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
               >
                 <Input placeholder="Product Owner" />
               </Form.Item>

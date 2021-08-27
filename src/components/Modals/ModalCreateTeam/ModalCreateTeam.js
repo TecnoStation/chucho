@@ -152,8 +152,6 @@ function ModalCreateTeam({
       collaborator.rol = values["rol" + index];
     });
 
-    // setCollaboratorsList([{ collaboratorsList }]);
-    // console.log(collaboratorsList);
     let d = new Date();
     let months = [
       "Enero",
@@ -241,7 +239,17 @@ function ModalCreateTeam({
         >
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="teamName" label="Nombre del equipo">
+              <Form.Item
+                style={{ textAlign: "left" }}
+                name="teamName"
+                label="Nombre del equipo"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Input
                   type="text"
                   placeholder="Aqui puedes asignar el nombre de tu equipo"
@@ -254,6 +262,12 @@ function ModalCreateTeam({
                 name="type"
                 label="Tipo de equipo"
                 tooltip="info"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
               >
                 <Select
                   placeholder="Selecciona una opción"
@@ -281,7 +295,17 @@ function ModalCreateTeam({
               </Form.Item>
             </Col>
             <Col className="gutter-row" style={{ textAlign: "left" }} span={12}>
-              <Form.Item name="Modality" label="Modalidad" tooltip="info">
+              <Form.Item
+                name="Modality"
+                label="Modalidad"
+                tooltip="info"
+                rules={[
+                  {
+                    required: true,
+                    message: "*Campo requerido",
+                  },
+                ]}
+              >
                 <Select placeholder="Selecciona una opción">
                   <Option value="jack">Funcional</Option>
                   <Option value="lucy">Lucy</Option>
