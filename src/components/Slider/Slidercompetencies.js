@@ -4,16 +4,6 @@ import { useTranslation } from "react-i18next";
 
 export default function Slidercompetencies(props) {
   const [t, i18n] = useTranslation("global");
-  // console.log(props);
-
-  // props.Competence
-  // props.slider
-  // props.marks
-  // props.onChange
-  // props.onChangeInput
-  // props.closecefective
-  // props.closeInfo
-  // props.editInfo
 
   return (
     <>

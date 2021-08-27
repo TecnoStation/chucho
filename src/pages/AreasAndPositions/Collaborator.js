@@ -117,7 +117,6 @@ export default function Collaborator() {
   };
   const onFinish = (values) => {
     showmessage();
-    console.log("Success:", values);
   };
 
   return (

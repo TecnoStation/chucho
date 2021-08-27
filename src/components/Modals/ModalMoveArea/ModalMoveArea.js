@@ -39,7 +39,6 @@ function ModalMoveArea({
                 question: "¿Estás seguro?",
                 function: () => {
                   if (modalMove.mode === 1) {
-                    console.log(modalMove);
                     const arrayFilter = modalMove.subAreas.filter(
                       (item) => item.idSubArea !== modalMove.idSubArea
                     );

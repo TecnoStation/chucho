@@ -144,8 +144,6 @@ export default function AreasAndPositionsAddJob() {
 
   //--------------- competences-----------------------------------------
   const [component, setComponent] = useState("");
-
-  console.log(component);
   const [modalComp, setModalComp] = useState(false);
   const [slider, setSlider] = useState(50);
   const [editionModeSlider, setEditionModeSlider] = useState(false);

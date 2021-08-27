@@ -9,7 +9,6 @@ import { RiPencilFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 function PositionListInformation({ PositionsInfo, setModalMove }) {
-  console.log(PositionsInfo);
   return PositionsInfo.map((position, index) => (
     <Row className="info3Full subareasdiv row" style={{ marginTop: "10px" }}>
       <Col className="gutter-row col" style={{ textAlign: "left" }} span={8}>

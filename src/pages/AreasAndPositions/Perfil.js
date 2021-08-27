@@ -90,7 +90,6 @@ export default function Perfil() {
         years: values["years"],
       },
     ]);
-    console.log(levels);
     formlevel.resetFields();
   };
 
@@ -107,7 +106,6 @@ export default function Perfil() {
         skillName: values["techniqueskills"],
       },
     ]);
-    console.log(Skills);
     formSkills.resetFields();
   };
 
@@ -126,7 +124,6 @@ export default function Perfil() {
         LanguajesName: values["languajes"],
       },
     ]);
-    console.log(languajes);
     formLanguajes.resetFields();
   };
 
