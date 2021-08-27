@@ -3,47 +3,33 @@ import { Button, Col, Input, Row } from "antd";
 import Inicio from "../../assets/img/icons/Grupo 1182.svg";
 import { IoMdAdd } from "react-icons/io";
 import { SearchOutlined } from "@ant-design/icons";
-
 import { BsFillGrid3X2GapFill, BsListUl } from "react-icons/bs";
 import { RiFilterFill } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
-
+import { Link } from "react-router-dom";
+import ModalCreateTeam from "../../components/Modals/ModalCreateTeam/ModalCreateTeam";
 import "./Teams.scss";
-import CreateTeam from "./components/CreateTeam";
-
-const LOCAL_STORAGE_KEY = "list";
+import { useForm } from "antd/lib/form/Form";
 
 export default function TeamStarted() {
   const [t, i18n] = useTranslation("global");
-  const [btn1, setBtn1] = useState("hidden");
-  const [btn2, setBtn2] = useState("button");
-  const [modalCreateTeam, setModalCreateTeam] = useState(false);
-  const openModalCreateTeam = () => {
-    setModalCreateTeam(true);
-    setBtn1("hidden");
-    setBtn2("button");
-  };
-
-  const [data, setData] = useState([]);
+  const [createTeamModal, setCreateTeamModal] = useState(false);
+  const [teamList, setTeamList] = useState([]);
+  const [inputType, setInputType] = useState(false);
+  const [typeTeam, setTypeTeam] = useState("hide");
+  const [collaboratorsList, setCollaboratorsList] = useState([]);
+  const [form] = useForm();
 
   useEffect(() => {
-    const storageTeams = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    const storageTeams = JSON.parse(localStorage.getItem("teamList"));
     if (storageTeams) {
-      setData(storageTeams);
+      setTeamList(storageTeams);
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
-  }, [data]);
-
-  const add = (fact) => {
-    setData([fact, ...data]);
-  };
-
-  function removeFact(id) {
-    setData(data.filter((fact) => fact.id !== id));
-  }
+    localStorage.setItem("teamList", JSON.stringify(teamList));
+  }, [teamList]);
 
   return (
     <>
@@ -56,19 +42,23 @@ export default function TeamStarted() {
           <RiFilterFill />
         </Col>
         <Col className="gutter-row rigth" span={1}>
-          <span className="iconBlue" style={{ fontSize: "17px" }}>
-            <BsFillGrid3X2GapFill />
-          </span>
+          <Link to="/organigrama/teams">
+            <span style={{ fontSize: "17px" }}>
+              <BsFillGrid3X2GapFill className="iconBlue" />
+            </span>
+          </Link>
         </Col>
         <Col
           className="gutter-row iconGray"
           span={3}
           style={{ textAlign: "left" }}
         >
-          <BsListUl
-            className="dividerLeft"
-            style={{ paddingLeft: "5px", fontSize: "22px" }}
-          />
+          <Link to="/organigrama/teamsv">
+            <BsListUl
+              className="dividerLeft"
+              style={{ paddingLeft: "5px", fontSize: "22px" }}
+            />
+          </Link>
         </Col>
         <Col className="gutter-row" span={15}>
           <Input
@@ -80,7 +70,9 @@ export default function TeamStarted() {
         <Col className="gutter-row" span={4}>
           <Button
             className="primaryB"
-            onClick={openModalCreateTeam}
+            onClick={() => {
+              setCreateTeamModal(true);
+            }}
             style={{
               textAlign: "left",
               marginRight: "20px",
@@ -89,7 +81,6 @@ export default function TeamStarted() {
             }}
             icon={<IoMdAdd className="iconAjust2" />}
           >
-            {" "}
             <span className="textAjust4">Nuevo Equipo</span>
           </Button>
         </Col>
@@ -106,34 +97,38 @@ export default function TeamStarted() {
           </p>
           <br />
           <h1>{t("organigrama.teams.title")}</h1>
-          <p>
-         {t("organigrama.teams.tex")}
-          </p>
+          <p>{t("organigrama.teams.tex")}</p>
           <br />
           <p>
             <Button
               className="primaryB"
-              onClick={openModalCreateTeam}
+              onClick={() => {
+                setCreateTeamModal(true);
+              }}
               style={{ textAlign: "left", marginRight: "20px" }}
               icon={<IoMdAdd className="iconAjust2" />}
             >
               {" "}
-              <span className="textAjust4">{t("organigrama.teams.btn-new-team")}</span>
+              <span className="textAjust4">
+                {t("organigrama.teams.btn-new-team")}
+              </span>
             </Button>
           </p>
         </Col>
         <Col className="gutter-row" span={8}></Col>
       </Row>
-
-      <CreateTeam
-        btn1={btn1}
-        btn2={btn2}
-        modalCreateTeam={modalCreateTeam}
-        setModalCreateTeam={setModalCreateTeam}
-        openModalCreateTeam={openModalCreateTeam}
-        add={add}
-        data={data}
-        removeFact={removeFact}
+      <ModalCreateTeam
+        collaboratorsList={collaboratorsList}
+        setCollaboratorsList={setCollaboratorsList}
+        inputType={inputType}
+        setInputType={setInputType}
+        typeTeam={typeTeam}
+        setTypeTeam={setTypeTeam}
+        createTeamModal={createTeamModal}
+        setCreateTeamModal={setCreateTeamModal}
+        setTeamList={setTeamList}
+        teamList={teamList}
+        form={form}
       />
     </>
   );

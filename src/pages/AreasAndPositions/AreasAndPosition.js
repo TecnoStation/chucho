@@ -1,37 +1,21 @@
 import React, { useState } from "react";
-import { Form, Tabs, Input, Select, Col, Row, Button } from "antd";
-import {
-  EnvironmentOutlined,
-  PlusCircleOutlined,
-  SearchOutlined,
-} from "@ant-design/icons";
+import { Form, Tabs, Input, Col, Row, Button } from "antd";
+import { PlusCircleOutlined, SearchOutlined } from "@ant-design/icons";
 import { Link, useHistory, useLocation } from "react-router-dom";
-import Competencies from "../../components/Competencies/Competencies";
 import { useTranslation } from "react-i18next";
 import { v4 as uuid } from "uuid";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import Screens from "../../components/Screens/Screens";
-
-import { IoMdCloudDownload, IoMdSquare, IoMdTrash } from "react-icons/io";
-
+import { IoMdCloudDownload } from "react-icons/io";
 import { ImArrowUp } from "react-icons/im";
-
-import "./AreasAndPositions.scss";
-
 import AreasList from "./Components/AreasList/AreasList";
 import { useForm } from "antd/lib/form/Form";
 import ModalMoveArea from "../../components/Modals/ModalMoveArea/ModalMoveArea";
-import { BiMinusCircle, BiPlusCircle } from "react-icons/bi";
 import PositionsLis from "./Components/PositionsLis/PositionsLis";
-import { RiPencilFill } from "react-icons/ri";
-import {
-  AiOutlineCheckCircle,
-  AiOutlineExclamationCircle,
-} from "react-icons/ai";
 import PositionListInformation from "./Components/PositionListInformation/PositionListInformation";
 import ModalDownLoad from "../../components/Modals/ModalDownLoad/ModalDownLoad";
 
-const { TextArea, Search } = Input;
+import "./AreasAndPositions.scss";
 
 export default function AreasAndPositions() {
   const [t, i18n] = useTranslation("global");
@@ -123,7 +107,6 @@ export default function AreasAndPositions() {
   const [forminfo] = useForm();
 
   const sendPositionInfo = (values) => {
-    console.log(values);
     setPositionsInfo([
       ...PositionsInfo,
       {

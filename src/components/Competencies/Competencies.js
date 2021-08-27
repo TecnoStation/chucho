@@ -20,8 +20,6 @@ export default function Competencies({
   const [Password, setPassword] = useState(false);
   const [modalSlide, setModalSlide] = useState(false);
   const openModalPassword = (index, action, comp, e) => {
-    console.log(comp);
-    console.log(competencies);
     if (action === 0) {
       setPassword({
         titleModal: "Eliminar competencias institucionales",

@@ -21,7 +21,7 @@ export default function Modalcompetencies({
   component,
 }) {
   //const [t, i18n] = useTranslation("global");
-  console.log("componet: " + component);
+
   //----------------- Filter Competencies ------------------------------------------
   const filterCompetencies = () => {
     const input = document.getElementById("filterComp");

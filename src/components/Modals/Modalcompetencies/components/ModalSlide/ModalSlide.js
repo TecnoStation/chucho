@@ -1,5 +1,5 @@
 import { Button, Col, InputNumber, Row, Modal, Slider } from "antd";
-import React, { useState } from "react";
+import React from "react";
 import { v4 as uuid } from "uuid";
 import "./Slider/ModalSlide.scss";
 

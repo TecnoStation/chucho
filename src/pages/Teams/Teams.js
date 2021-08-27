@@ -1,176 +1,91 @@
 import React, { useEffect, useState } from "react";
-import {
-  Button,
-  Col,
-  Input,
-  Row,
-  Form,
-  Modal,
-  Checkbox,
-  Dropdown,
-  Menu,
-} from "antd";
+import { Button, Col, Input, Row } from "antd";
 import { IoMdAdd } from "react-icons/io";
-import { SearchOutlined } from "@ant-design/icons";
 import { BsFillGrid3X2GapFill, BsListUl } from "react-icons/bs";
 import { RiFilterFill } from "react-icons/ri";
-import Avatar from "../../assets/img/avatar.png";
 import Simplecard from "../../components/Cards/Simplecard";
 import { Link } from "react-router-dom";
-import More from "../../assets/img/icons/more_vert-24px.svg";
-
-import CreateTeam from "./components/CreateTeam";
 import { useTranslation } from "react-i18next";
-
+import ModalCreateTeam from "../../components/Modals/ModalCreateTeam/ModalCreateTeam";
+import { useForm } from "antd/lib/form/Form";
 import "./Teams.scss";
-const LOCAL_STORAGE_KEY = "list";
+
+const { Search } = Input;
 
 export default function Teams() {
   const [t, i18n] = useTranslation("global");
-  const [btn1, setBtn1] = useState("hidden");
-  const [btn2, setBtn2] = useState("button");
+  const [createTeamModal, setCreateTeamModal] = useState(false);
 
-  const teams = [
-    {
-      id: 1,
-      name: "Equipo - Proyecto EVOU",
-      subtitle: "Mandos Medios",
-      Type: 0,
-      members: [
-        {
-          id: 1,
-          name: "Giovanni Funentes",
-          position: "Director RH",
-          leader: true,
-          rol: "",
-        },
-        {
-          id: 2,
-          name: "Panchita Lopez",
-          position: "Directora de Arguendes",
-          leader: false,
-          rol: "",
-        },
-        {
-          id: 3,
-          name: "Jose Flores",
-          position: "Director seguridad",
-          leader: false,
-          rol: "",
-        },
-      ],
-      modalidad: 0,
-      frame: 0,
-      date: "15-JUN-2021",
-    },
-  ];
+  //-------------------- Set - Get teamlist ------------------
 
-  const [Item, setItem] = useState("");
-
-  const [value, setValue] = useState("");
-
-  const [key, setKey] = useState(0);
-
-  const setDates = (item, e) => {
-    setItem(item);
-    setValue(teams[item].name);
-    setKey(item);
-  };
-
-  const clone = () => {};
-
-  const rename = () => {
-    teams[Item].name = value;
-    document.getElementById("nameTeam").innerHTML = value;
-    setmodalRename(false);
-  };
-
-  const edit = () => {
-    setModalTarget(false);
-    setModalCreateTeam(true);
-    setBtn1("button");
-    setBtn2("hidden");
-  };
-
-  const deleteTeam = () => {};
-
-  const [modalRename, setmodalRename] = useState(false);
-
-  const closeModalRename = () => {
-    setmodalRename(false);
-  };
-
-  const openModalRename = () => {
-    setmodalRename(true);
-    setValue(teams[Item].name);
-  };
-
-  const onchange = (e) => {
-    setValue(e.target.value);
-    setKey(key);
-  };
-
-  // ------------ modal target ----------------
-  const [modalTarget, setModalTarget] = useState();
-
-  const openModalTarget = (index, data, e) => {
-    setValue(data.name);
-    setModalTarget(true);
-  };
-
-  const closeModalTarget = () => {
-    setModalTarget(false);
-  };
-
-  //----------------- CREATE TEAM ----------
-
-  const [modalCreateTeam, setModalCreateTeam] = useState(false);
-  const openModalCreateTeam = () => {
-    setModalCreateTeam(true);
-    setBtn1("hidden");
-    setBtn2("button");
-  };
-
-  const [data, setData] = useState([]);
+  const [teamList, setTeamList] = useState([]);
 
   useEffect(() => {
-    // fires when app component mounts to the DOM
-    const storageTeams = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    const storageTeams = JSON.parse(localStorage.getItem("teamList"));
     if (storageTeams) {
-      setData(storageTeams);
+      setTeamList(storageTeams);
     }
   }, []);
 
   useEffect(() => {
-    // fires when todos array gets updated
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(data));
-  }, [data]);
+    localStorage.setItem("teamList", JSON.stringify(teamList));
+  }, [teamList]);
 
-  const add = (fact) => {
-    setData([fact, ...data]);
+  //-------------------- End  Set - Get teamlist ------------------
+
+  //-------------------- Edit teamlist ------------------
+
+  const [editionMode, setEditionMode] = useState(false);
+  const [inputType, setInputType] = useState(false);
+  const [typeTeam, setTypeTeam] = useState("hide");
+  const [collaboratorsList, setCollaboratorsList] = useState([]);
+  const [item, setItem] = useState();
+  const [form] = useForm();
+
+  const edit = (team, item) => {
+    console.log(team);
+    setEditionMode(true);
+    setCreateTeamModal(true);
+    form.setFieldsValue({
+      teamName: team.name,
+      type: team.type,
+      Modality: team.modality,
+      frameWork: team.frameWork,
+    });
+
+    if (team.type === "0") {
+      setTypeTeam("hide");
+      setInputType(false);
+    } else {
+      setTypeTeam("show");
+      setInputType(true);
+    }
+    setItem(item);
+    setCollaboratorsList(team.collaborators);
+  };
+  //--------------------End Edit teamlist ------------------
+
+  //----------------- Filter Teams ------------------------------------------
+  const filterTeams = () => {
+    const input = document.getElementById("filter");
+    const filter = input.value.toUpperCase();
+    const div = document.getElementById("teamList");
+    const row = div.getElementsByClassName("rowTeam");
+    let i;
+    for (i = 0; i < row.length; i++) {
+      let col = row[i].getElementsByClassName("TeamNames")[0];
+      if (col) {
+        let txtValue = col.textContent || col.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          row[i].style.display = "";
+        } else {
+          row[i].style.display = "none";
+        }
+      }
+    }
   };
 
-  function removeFact(id) {
-    setData(data.filter((fact) => fact.id !== id));
-  }
-
-  const menu = (
-    <Menu>
-      <Menu.Item key="0">
-        <Menu.Item key="3">
-          <Link onClick={edit} to="#">
-            Editar datos
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Divider />
-      <Menu.Item key="0">
-        <Menu.Item key="3">
-          <Link to="#">Eliminar</Link>
-        </Menu.Item>
-      </Menu.Item>
-    </Menu>
-  );
+  //----------------- End Filter Teams ------------------------------------------
 
   return (
     <>
@@ -195,17 +110,21 @@ export default function Teams() {
             />
           </Link>
         </Col>
-        <Col className="gutter-row" span={15}>
-          <Input
-            style={{ width: "200px", marginTop: "-5px" }}
-            addonAfter={<SearchOutlined />}
+        <Col className="gutter-row" span={6}>
+          <Search
+            size="small"
+            id="filter"
+            onChange={filterTeams}
             placeholder="Buscar puesto"
           />
         </Col>
+        <Col span={9}></Col>
         <Col className="gutter-row" span={4}>
           <Button
             className="primaryB"
-            onClick={openModalCreateTeam}
+            onClick={() => {
+              setCreateTeamModal(true);
+            }}
             style={{
               textAlign: "left",
               marginRight: "20px",
@@ -219,206 +138,28 @@ export default function Teams() {
         </Col>
       </Row>
 
-      <Row style={{ marginTop: "10px", paddingLeft: "15px" }}>
-        <Simplecard
-          openModalTarget={openModalTarget}
-          delete={deleteTeam}
-          edit={edit}
-          clone={clone}
-          openModalRename={openModalRename}
-          setDates={setDates}
-          teams={teams}
-        />
+      <Row id="teamList" style={{ marginTop: "10px", paddingLeft: "15px" }}>
+        <Simplecard setTeamList={setTeamList} teamList={teamList} edit={edit} />
       </Row>
-
       <div style={{ height: "50px" }}></div>
 
-      <CreateTeam
-        btn1={btn1}
-        btn2={btn2}
-        modalCreateTeam={modalCreateTeam}
-        setModalCreateTeam={setModalCreateTeam}
-        openModalCreateTeam={openModalCreateTeam}
-        add={add}
-        data={data}
-        removeFact={removeFact}
+      <ModalCreateTeam
+        collaboratorsList={collaboratorsList}
+        setCollaboratorsList={setCollaboratorsList}
+        inputType={inputType}
+        setInputType={setInputType}
+        typeTeam={typeTeam}
+        setTypeTeam={setTypeTeam}
+        editionMode={editionMode}
+        setEditionMode={setEditionMode}
+        createTeamModal={createTeamModal}
+        setCreateTeamModal={setCreateTeamModal}
+        setTeamList={setTeamList}
+        teamList={teamList}
+        form={form}
+        item={item}
+        setItem={setItem}
       />
-
-      <Modal
-        title="Rename de equipo"
-        className="smallModal2"
-        visible={modalRename}
-        onCancel={closeModalRename}
-        footer={[
-          <Button
-            style={{ marginRight: "20px", width: "100px" }}
-            className="secondary"
-            onClick={closeModalRename}
-          >
-            Cancelar
-          </Button>,
-          <Link to="/organigrama/teams">
-            <input
-              type="button"
-              className="primary"
-              style={{ width: "100px", marginRight: "40px" }}
-              onClick={rename}
-              value="Guardar"
-            />{" "}
-          </Link>,
-        ]}
-      >
-        <Form name="form1" layout="vertical">
-          <Form.Item name="nameTeam">
-            <Input
-              key={key}
-              type="text"
-              onChange={onchange}
-              defaultValue={value}
-              value={value}
-            />
-          </Form.Item>
-        </Form>
-      </Modal>
-
-      <Modal
-        title={value}
-        className="middleModal"
-        visible={modalTarget}
-        onCancel={closeModalTarget}
-        footer=""
-      >
-        <Row>
-          <Col span={6}>
-            <p>
-              <b>Tipo de equipo</b>
-            </p>
-          </Col>
-          <Col span={16}>
-            <p>
-              <b>Modalidad</b>
-            </p>
-          </Col>
-          <Col span={2}>
-            <Dropdown overlay={menu} trigger={["click"]}>
-              <Link
-                to="#"
-                className="ant-dropdown-link"
-                onClick={(e) => e.preventDefault()}
-              >
-                <img alt="logo" src={More} width="25" height="25" />
-              </Link>
-            </Dropdown>
-          </Col>
-        </Row>
-        <Row>
-          <Col span={6}>
-            <p>Personalizado</p>
-          </Col>
-          <Col span={18}>
-            <p>Multifuncional</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col style={{ textAlign: "left", paddingLeft: "5px" }} span={24}>
-            <p>
-              <b>Marco de trabajo</b>
-            </p>
-          </Col>
-        </Row>
-        <Row>
-          <Col style={{ textAlign: "left", paddingLeft: "5px" }} span={24}>
-            <p>SCRUM</p>
-          </Col>
-        </Row>
-        <Row style={{ textAlign: "center" }}>
-          <Col span={8}>Miembros del Equipo</Col>
-          <Col span={8}>Líder</Col>
-          <Col span={8}>Roles</Col>
-        </Row>
-        <Row
-          gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-          style={{ textAlign: "center", marginTop: "10px" }}
-        >
-          <Col className="gutter-row" span={11}>
-            <Row>
-              <Col span={2}>
-                <p>
-                  <img alt="ico" width="45" src={Avatar} />
-                </p>
-              </Col>
-              <Col span={20}>
-                <span>
-                  <b>Laura Mendoza</b>
-                </span>
-                <br />
-                <span>Programador JR</span>
-              </Col>
-            </Row>
-          </Col>
-          <Col className="gutter-row" span={2}>
-            <Form.Item style={{ textAlign: "center" }}>
-              <Checkbox />
-            </Form.Item>
-          </Col>
-
-          <Col style={{ textAlign: "right" }} className="gutter-row" span={10}>
-            <p className="iconSureGray">Product Owner</p>
-          </Col>
-        </Row>
-        <Row
-          gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-          style={{ textAlign: "center", marginTop: "10px" }}
-        >
-          <Col className="gutter-row" span={11}>
-            <Row>
-              <Col span={2}>
-                <p>
-                  <img alt="ico" width="45" src={Avatar} />
-                </p>
-              </Col>
-              <Col span={20}>
-                <span>
-                  <b>Laura Mendoza</b>
-                </span>
-                <br />
-                <span>Programador JR</span>
-              </Col>
-            </Row>
-          </Col>
-          <Col className="gutter-row" span={2}></Col>
-
-          <Col style={{ textAlign: "right" }} className="gutter-row" span={10}>
-            <p className="iconSureGray">Product Owner</p>
-          </Col>
-        </Row>
-        <Row
-          gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-          style={{ textAlign: "center", marginTop: "10px" }}
-        >
-          <Col className="gutter-row" span={11}>
-            <Row>
-              <Col span={2}>
-                <p>
-                  <img alt="ico" width="45" src={Avatar} />
-                </p>
-              </Col>
-              <Col span={20}>
-                <span>
-                  <b>Laura Mendoza</b>
-                </span>
-                <br />
-                <span>Programador JR</span>
-              </Col>
-            </Row>
-          </Col>
-          <Col className="gutter-row" span={2}></Col>
-
-          <Col style={{ textAlign: "right" }} className="gutter-row" span={10}>
-            <p className="iconSureGray">Product Owner</p>
-          </Col>
-        </Row>
-      </Modal>
     </>
   );
 }
