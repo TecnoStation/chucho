@@ -653,6 +653,7 @@
     },
 
     "teams":{
+     "search-positions": "Buscar puesto",   
      "title": "¡Bienvenido a los equipos!",
      "tex": "Aqui podrás visualizar todos los equipos de la organización, además de facilitar y fomentar el trabajo coopera ",
      "btn-new-team": "Nuevo Equipo"     
@@ -840,8 +841,113 @@
         "btn-done": "Hecho"
         }
       },
-  
 
+      "indicators":{
+       "title": "¡Bienvenido a tus indicadores clave!",
+       "tex-a": "Aquí podrás actualizar, tener retroalimentación y ver la tendencia de tu desempeño",
+       "tex-b": "¿Cómo deseas actualizar tu indicador por primera vez?",
+       "btn-direct": "directo",
+       "btn-guide": "con guia"   
+      },
+
+      "indicators-evaluations":{
+       "tab-indicators": "Mis indicadores clave",
+       "tab-evaluated": "Mis evaluaciones",
+       "name-frequency": "Nombre y frecuencia",
+       "kind": "Tipo",
+       "upgrade-indicator": "Actualizar indicador",
+       "objective": "Objetivo",
+       "trend": "Tendencia",
+       "actions": "Acciones",
+       "modal-indicators":{
+        "upgrade": "Actualizar indicador",
+        "current": "Actual",
+        "adjective": "Objetivo",
+        "trend": "Tendencia",
+        "add-context": "Agregar contexto:",
+        "attach-evidence": "Adjuntar Evidencia",
+        "btn-cancel": "Cancelar",
+        "btn-upgrade": "Actualizar"   
+       },
+       "modal-objectives":{
+        "title": "Objetivo: Volumen de tráfico en la página web",
+        "updates": "Historial de actualizaciones",
+        "placeholder-upgrade": "Buscar actualización",
+        "upgrade": "Actualización",
+        "objective": "Objetivo",
+        "trend": "Tendencia",
+        "evidences": "Evidencia adjunta",
+        "contex-upgrade": "Contexto de actualización",
+        "like": "Like",
+        "answer": "Responder",
+        "recognize": "Reconocer",
+        "attach-evidence": "Adjuntar Evidencia"   
+       }    
+     },
+     "indicator-panel":{
+     "tab-indicators": "Mis indicadores clave",
+     "tab-evaluated": "Mis evaluaciones",
+     "title": "Panel principal",
+     "kpl1-upgrade": "Actualización",
+     "kpl1-objective": "Objetivo",
+     "kpl1-trend": "Tendencia",
+     "kpl2-upgrade": "Actualización",
+     "kpl2-objective": "Objetivo",
+     "kpl2-trend": "Tendencia",
+     "kpl3-upgrade": "Actualización",
+     "kpl3-objective": "Objetivo",
+     "kpl3-trend": "Tendencia"
+     },
+
+     "my-evaluations":{
+       "tab-1": "Mis indicadores clave",
+       "tab-2": "Mis evaluaciones",
+       "title": "Mis evaluaciones",
+       "result-performance": "Resultado de desempeño:",
+       "recognitions-medals": "Reconocimientos y medallas",
+       "evaluation": "Evolución del desempeño",
+       "performamance": "Desempeño",
+       "weeks": "Semanas",
+       "compliance-expectations": "Cumplimiento de expectativas",
+       "watch-detail": "Ver detalle",
+       "download-report": "Descargar reporte"
+     },
+     
+     "management-indicators":{
+      "tab-1": "Mis indicadores clave",
+      "tab-2": "Mis evaluaciones",
+      "tab-3": "Gestión de indicadores clave",
+      "btn-indicators": "Crear un Indicador Clave",
+      "search-placeholder": "Buscar",
+      "name-frequency": "Nombre y frecuencia",
+      "duration-court": "Duración y corte",
+      "kind": "Tipo",
+      "accumulated": "Acumulado",
+      "objective": "Objetivo",
+      "trend": "Tendencia",
+      "assigned": "Asignado a",
+      "actions": "Acciones",
+      "tex-1": "Indicador clave  - Cada martes",
+      "tex-2": "Tráfico en la página web",
+      "tex-3": "Indicador clave  - Cada martes",
+      "tex-4": "Tráfico en Facebook",
+      "tex-5": "Indicador clave  - Histórico",
+      "tex6": "Tráfico en MySpace",
+      "menu-2":{
+       "indicator": "Todos los indicadores",
+       "indicator-assest": "Indicadores activos",
+       "collaborators": "Colaboradores a cargo"   
+      },
+      "menu-3":{
+       "collaborator": "colaborador",
+       "new-temporality": "Nueva temporalidad",
+       "upgrade": "Actualizar",
+       "edit": "Editar",
+       "remove": "Eliminar"   
+      }    
+     },
+   
+      
 
 
 

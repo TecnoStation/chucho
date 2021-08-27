@@ -407,8 +407,8 @@ export default function Collaborator() {
             </Col>
             <Col className="gutter-row" span={12}>
               <Form.Item
-                name={t("organigrama.collaborator-form.salary-label")}
-                label={t("organigrama.collaborator-form.salary-placeholder")}
+                name={t("organigrama.collaborator-form.salari-placeholde")}
+                label={t("organigrama.collaborator-form.salary-label")}
                 rules={[
                   {
                     required: true,
@@ -416,7 +416,7 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Input type="text" placeholder="Ej.$28,000.00 MXN " />
+                <Input type="text" placeholder={t("organigrama.collaborator-form.salary-placeholder")} />
               </Form.Item>
             </Col>
           </Row>

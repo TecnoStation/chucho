@@ -74,7 +74,7 @@ export default function TeamStarted() {
           <Input
             style={{ width: "200px", marginTop: "-5px" }}
             addonAfter={<SearchOutlined />}
-            placeholder="Buscar puesto"
+            placeholder={t("organigrama.teams.search-positions")}
           />
         </Col>
         <Col className="gutter-row" span={4}>

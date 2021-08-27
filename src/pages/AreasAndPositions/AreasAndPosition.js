@@ -167,7 +167,7 @@ export default function AreasAndPositions() {
         onChange={changeActive}
         type="card"
       >
-        <TabPane className="tabPane" tab="Estructura" key="1">
+        <TabPane className="tabPane" tab={t("organigrama.areas-and-positions.structure.tab-name")} key="1">
           <div className="info">
             <Form name="formInformtion" onFinish={onFinish} layout="vertical">
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
