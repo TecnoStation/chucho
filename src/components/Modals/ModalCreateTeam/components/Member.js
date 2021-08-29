@@ -15,7 +15,6 @@ export default function Member({
   const leader = (e, id) => {
     collaboratorsList[id].leader = e.target.checked;
   };
-  console.log(collaboratorsList);
   return collaboratorsList.map((collaborator, item) => (
     <Row
       key={item}
@@ -68,10 +67,7 @@ export default function Member({
                   },
                 ]}
               >
-                <Select
-                  defaultValue={collaborator.rol}
-                  placeholder="Product Owner"
-                >
+                <Select placeholder="Product Owner">
                   <Option value="SCRUM1">SCRUM1</Option>
                   <Option value="SCRUM2">SCRUM2</Option>
                   <Option value="SCRUM3">SCRUM3</Option>
@@ -80,7 +76,6 @@ export default function Member({
             ) : (
               <Form.Item
                 name={"rol" + item}
-                defaultValue={collaborator.rol}
                 key={1}
                 placeholder="Product Owner"
                 rules={[
@@ -105,26 +100,30 @@ export default function Member({
               (item) => item.id !== collaborator.id
             );
             setCollaboratorsList(arrayFilter);
-            document
-              .getElementById("collaborator" + collaborator.id)
-              .setAttribute("style", "display: ");
+            console.log(collaborator.id);
+            if (
+              document.getElementById("collaborator" + collaborator.id) !== null
+            ) {
+              document
+                .getElementById("collaborator" + collaborator.id)
+                .setAttribute("style", "display: ");
 
-            const rootElement = document.getElementById(
-              "col" + collaborator.id
-            );
-            const element = (
-              <>
-                <span id={"text" + collaborator.id}>{collaborator.name}</span>
-                <span id={"avatar" + collaborator.id}>
-                  <UserOutlined />
-                </span>
-              </>
-            );
-            ReactDOM.render(element, rootElement);
-            document.getElementById("text" + collaborator.id).innerHTML =
-              collaborator.name;
+              const rootElement = document.getElementById(
+                "col" + collaborator.id
+              );
+              const element = (
+                <>
+                  <span id={"text" + collaborator.id}>{collaborator.name}</span>
+                  <span id={"avatar" + collaborator.id}>
+                    <UserOutlined />
+                  </span>
+                </>
+              );
+              ReactDOM.render(element, rootElement);
+              document.getElementById("text" + collaborator.id).innerHTML =
+                collaborator.name;
+            }
           }}
-          href="#"
         >
           Eliminar
         </Link>

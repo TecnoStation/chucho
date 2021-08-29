@@ -7,7 +7,7 @@ import { RiPencilFill } from "react-icons/ri";
 import { BiGridVertical } from "react-icons/bi";
 import ModalMoveArea from "../../../../components/Modals/ModalMoveArea/ModalMoveArea";
 
-function SubAreasList({
+function SubAreasList2({
   subArea,
   setModalMove,
   setSubArea,
@@ -112,4 +112,4 @@ function SubAreasList({
   );
 }
 
-export default SubAreasList;
+export default SubAreasList2;

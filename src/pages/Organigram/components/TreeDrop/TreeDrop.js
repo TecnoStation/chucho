@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Dropdown, Menu, Row } from "antd";
+import { Col, Dropdown, Menu, Row, Input } from "antd";
 import { Link } from "react-router-dom";
 import Avatar from "../../../../assets/img/avatar.png";
 import More from "../../../../assets/img/icons/more_vert-24px.svg";
@@ -18,7 +18,7 @@ import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/M
 import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
 import { useTranslation } from "react-i18next";
 
-export default function TreeDrop() {
+export default function TreeDrop({ name }) {
   const [t, i18n] = useTranslation("global");
   const [Permissions, setPermissions] = useState(false);
   const [Color, setColor] = useState(false);
@@ -157,7 +157,10 @@ export default function TreeDrop() {
 
   return (
     <>
-      <Row style={{ height: "50px", paddingBottom: "50px", marginTop: "20px" }}>
+      <Row
+        className="rowOrganigram"
+        style={{ height: "50px", paddingBottom: "50px", marginTop: "20px" }}
+      >
         <Col style={{ textAlign: "right", marginRight: "-5px" }} span={1}>
           <Link
             to="#"
@@ -195,7 +198,7 @@ export default function TreeDrop() {
           </p>
         </Col>
         <Col style={{ paddingLeft: "15px" }} span={5}>
-          <span>Panchita Lopez</span>
+          <span className="OrganigramNames">{name}</span>
           <br />
           <span>
             <b>Directora de marketing</b>

@@ -43,9 +43,21 @@ export default function Teams() {
   const [form] = useForm();
 
   const edit = (team, item) => {
-    console.log(team);
+    //console.log(team);
     setEditionMode(true);
+
+    setItem(item);
+    setCollaboratorsList(team.collaborators);
+    const collaborators = team.collaborators;
+
+    collaborators.forEach((collaborator, index) => {
+      form.setFieldsValue({
+        ["rol" + index]: collaborator.rol,
+      });
+    });
+
     setCreateTeamModal(true);
+
     form.setFieldsValue({
       teamName: team.name,
       type: team.type,
@@ -60,8 +72,11 @@ export default function Teams() {
       setTypeTeam("show");
       setInputType(true);
     }
-    setItem(item);
-    setCollaboratorsList(team.collaborators);
+
+    document.getElementById("collaborator4");
+    // .setAttribute("style", "display: none");
+
+    console.log(document.getElementById("collaborator4"));
   };
   //--------------------End Edit teamlist ------------------
 
@@ -124,6 +139,9 @@ export default function Teams() {
             className="primaryB"
             onClick={() => {
               setCreateTeamModal(true);
+              setCollaboratorsList([]);
+              form.resetFields();
+              setEditionMode(false);
             }}
             style={{
               textAlign: "left",

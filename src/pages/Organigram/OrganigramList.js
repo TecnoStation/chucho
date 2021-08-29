@@ -6,6 +6,10 @@ import TreeDrop from "./components/TreeDrop/TreeDrop";
 import { Link } from "react-router-dom";
 import ModalErasersList from "../../components/Modals/ModalErasersList/ModalErasersList";
 import { useTranslation } from "react-i18next";
+import { FaUsers } from "react-icons/fa";
+import { IoBusinessSharp } from "react-icons/io5";
+import { FiUpload } from "react-icons/fi";
+import { AiOutlineHistory } from "react-icons/ai";
 
 function OrganigramList() {
   const [t, i18n] = useTranslation("global");
@@ -49,7 +53,7 @@ function OrganigramList() {
         >
           <Tooltip title="Crear equipo" placement="bottom" color="#2cccd3">
             <Link to="/organigrama/teams">
-              <MaterialIcon icon="groups" />
+              <FaUsers className="iconGray iconsize2" />
             </Link>
           </Tooltip>
         </Col>
@@ -60,7 +64,7 @@ function OrganigramList() {
         >
           <Tooltip title="Mi empresa" placement="bottom" color="#2cccd3">
             <Link to="/organigrama/mybisiness">
-              <MaterialIcon icon="domain" />
+              <IoBusinessSharp className="iconGray iconsize2" />
             </Link>
           </Tooltip>
         </Col>
@@ -71,12 +75,17 @@ function OrganigramList() {
         >
           <Tooltip title={menu} placement="bottom" color="#2cccd3">
             <Link to="#">
-              <MaterialIcon icon="publish" />
+              <FiUpload className="iconGray iconsize2" />
             </Link>
           </Tooltip>
         </Col>
         <Col
-          style={{ marginTop: "5px", height: "25px", textAlign: "left" }}
+          style={{
+            marginTop: "5px",
+            height: "25px",
+            paddingLeft: "8px",
+            textAlign: "left",
+          }}
           className="dividerLeft"
           span={15}
         >
@@ -91,7 +100,7 @@ function OrganigramList() {
                 setHistorial(true);
               }}
             >
-              <MaterialIcon icon="rotate_left" />
+              <AiOutlineHistory className="iconGray iconsize2" />
             </Link>
           </Tooltip>
         </Col>
@@ -99,10 +108,13 @@ function OrganigramList() {
           <Input addonAfter={<SearchOutlined />} placeholder="Buscar puesto" />
         </Col>
       </Row>
-      <br />
-      <TreeDrop />
-      <br />
-      <TreeDrop />
+      <div id="organigramList">
+        <br />
+        <TreeDrop name={"Panchita Lopez"} />
+        <br />
+        <TreeDrop name={"Juan Camaney"} />
+      </div>
+
       <ModalErasersList historial={historial} setHistorial={setHistorial} />
     </>
   );
