@@ -225,6 +225,15 @@ code {
   cursor: pointer;
 }
 
+.iconsize2 {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.iconsize2:hover {
+  color: $color-base;
+}
+
 .iconAjust {
   margin-right: 20px;
   margin-top: -5px;

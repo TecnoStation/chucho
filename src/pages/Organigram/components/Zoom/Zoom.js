@@ -2,12 +2,13 @@ import { Button, Col, Row, Tooltip } from "antd";
 import React, { useState } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import TreeOffice from "../TreeOffice/TreeOffice";
-import { FiZoomIn, FiZoomOut } from "react-icons/fi";
+import { FiUpload, FiZoomIn, FiZoomOut } from "react-icons/fi";
 import { FaUsers } from "react-icons/fa";
 import { IoBusinessSharp } from "react-icons/io5";
 import MaterialIcon from "material-icons-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { AiOutlineHistory } from "react-icons/ai";
 
 import "./Zoom.scss";
 import ModalErasersList from "../../../../components/Modals/ModalErasersList/ModalErasersList";
@@ -101,12 +102,9 @@ export default function Zoom() {
                     <Button
                       className="secondary iconGray roundBtn"
                       style={{ width: "40px" }}
+                      icon={<FiUpload />}
                       size="large"
-                    >
-                      <span style={{ marginLeft: "-8px" }}>
-                        <MaterialIcon icon="publish" />
-                      </span>
-                    </Button>
+                    ></Button>
                   </Tooltip>
                 </Col>
               </Row>
@@ -122,14 +120,11 @@ export default function Zoom() {
                       className="secondary iconGray roundBtn"
                       style={{ width: "40px" }}
                       size="large"
+                      icon={<AiOutlineHistory />}
                       onClick={() => {
                         setHistorial(true);
                       }}
-                    >
-                      <span style={{ marginLeft: "-8px" }}>
-                        <MaterialIcon icon="rotate_left" />
-                      </span>
-                    </Button>
+                    ></Button>
                   </Tooltip>
                 </Col>
               </Row>

@@ -180,7 +180,6 @@ function ModalCreateTeam({
         date: d.getDate() + "-" + months[d.getMonth()] + "-" + d.getFullYear(),
       },
     ]);
-    //console.log(teamList);
     setCollaboratorsList([]);
     setCreateTeamModal(false);
     sessionStorage.setItem("teamList", JSON.stringify(teamList));
@@ -191,8 +190,6 @@ function ModalCreateTeam({
 
   //----------------- Edit Teams ------------------------------------------
   const editTeam = (values) => {
-    console.log(values);
-
     collaboratorsList.forEach((collaborator, index) => {
       if (values["rol" + index] !== undefined) {
         collaborator.rol = values["rol" + index];
@@ -366,7 +363,7 @@ function ModalCreateTeam({
                 style={{ marginRight: "20px", width: "100px" }}
                 className="secondary"
                 onClick={() => {
-                  setCreateTeamModal(true);
+                  setCreateTeamModal(false);
                 }}
               >
                 Cancelar

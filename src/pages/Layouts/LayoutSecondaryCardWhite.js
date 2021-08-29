@@ -12,7 +12,10 @@ import { MdDeviceHub } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
 import { Layout } from "antd";
+
 import "./LayoutSecondary.scss";
+
+const { Search } = Input;
 
 //const user = null;
 const user = { id: 1, username: "Lupita Gamiño" };
@@ -33,7 +36,27 @@ export default function LayoutSecondaryCardWhite({
       <Menu.Item key="2">Cerrar sesión</Menu.Item>
     </Menu>
   );
+  //----------------- Filter Teams ------------------------------------------
+  const filterTeams = () => {
+    const input = document.getElementById("filter");
+    const filter = input.value.toUpperCase();
+    const div = document.getElementById("organigramList");
+    const row = div.getElementsByClassName("rowOrganigram");
+    let i;
+    for (i = 0; i < row.length; i++) {
+      let col = row[i].getElementsByClassName("OrganigramNames")[0];
+      if (col) {
+        let txtValue = col.textContent || col.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          row[i].style.display = "";
+        } else {
+          row[i].style.display = "none";
+        }
+      }
+    }
+  };
 
+  //----------------- End Filter Teams ------------------------------------------
   return (
     <Route {...rest}>
       {user ? (
@@ -83,8 +106,10 @@ export default function LayoutSecondaryCardWhite({
                       span={5}
                       style={{ textAlign: "center", marginTop: "15px" }}
                     >
-                      <Input
-                        addonAfter={<SearchOutlined />}
+                      <Search
+                        size="small"
+                        id="filter"
+                        onChange={filterTeams}
                         placeholder="Buscar puesto"
                       />
                     </Col>
