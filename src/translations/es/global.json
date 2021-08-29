@@ -660,6 +660,7 @@
     },
     "teams-modal":{
      "title": "Crear Equipo",
+     "title2": "Editar Equipo",
      "name-team-label": "Nombre del equipo",
      "placeholder-imput-name": "Aqui puedes asignar el nombre de tu equipo",
      "kind-team-label": "Tipo de equipo",
@@ -669,13 +670,18 @@
      "modality-label": "Modalidad",
      "placeholder-imput-option": "Selecciona una opción",
      "members-team": "Miembros del equipo",
+     "placeholder-imput-optiona": "Selecciona una opción",
+     "members-team-2": "Miembros del equipo",
      "leader": "Lider",
      "role-team": "Rol en el equipo",
      "actions": "Acciones",
-     "tex": "Aqui puedes ver buenas prácticas en equipos Agile",
-     "btn-cancel": "canselar",
+     "text-link": "Aqui",
+     "text": "puedes ver buenas prácticas en equipos Agile",
+     "btn-cancel": "Cancelar",
      "btn-create": "Crear",
-     "btn-edit": "Editar"   
+     "btn-edit": "Editar",
+     "personalized": "Personalizado",
+     "mode-operative": "Modo Operativo Agile"   
     },
     "teams2":{
      "tex": "Nombre del equipo",
