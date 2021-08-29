@@ -684,6 +684,8 @@
      "mode-operative": "Modo Operativo Agile"   
     },
     "teams2":{
+     "search-position": "Buscar puesto",   
+     "new-team": "Nuevo Equipo",   
      "tex": "Nombre del equipo",
      "tex2": "Última modificación",
      "tex3": "Acción"
