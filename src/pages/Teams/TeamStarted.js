@@ -81,7 +81,7 @@ export default function TeamStarted() {
             }}
             icon={<IoMdAdd className="iconAjust2" />}
           >
-            <span className="textAjust4">Nuevo Equipo</span>
+            <span className="textAjust4">{t("organigrama.teams.btn-new-team")}</span>
           </Button>
         </Col>
       </Row>
