@@ -31,7 +31,7 @@ export default function AreasAndPositionsMassiveE() {
   const endFn = () => {
     let screen = document.getElementById("screen");
     screen.setAttribute("style", "display: none;");
-    history.push({ pathname: "/organigrama" });
+    history.push({ pathname: "/" + t("routes.organigram") + "/" + t("paths_organigram.areasandpositions") });
   };
 
   return (

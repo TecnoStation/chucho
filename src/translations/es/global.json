@@ -2,7 +2,8 @@
         "organigram": "organigrama",
         "recoverypassword": "recuperar-contraseña",
         "newpassword": "nueva-contraseña",
-        "login": "login"
+        "login": "login",
+        "messages": "mensajes"
     },
     "paths_organigram": {
         "mybusiness-edit": "miempresa-edit",
@@ -18,7 +19,6 @@
         "teamstarted": "equiposinicio",
         "areasandpositions-collaborator": "areasypuestos-colaborador",
         "areasandpositions-general": "areasypuestos-general",
-        "messages": "mensajes",
         "areasandpositions-addjob": "areasypuestos-agregapuesto",
         "areasandpositions-detailerror": "areasypuestos-detalleerror",
         "areasandpositions-detailsuccess": "areasypuestos-detalleexito",
