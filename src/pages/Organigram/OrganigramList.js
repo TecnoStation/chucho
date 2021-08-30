@@ -51,8 +51,16 @@ function OrganigramList() {
           className="dividerLeft"
           span={1}
         >
-          <Tooltip title={t("organigram.organigramlist.menu-1.create-team")} placement="bottom" color="#2cccd3">
-            <Link to="/organigrama/teams">
+          <Tooltip
+            title={t("organigram.organigramlist.menu-1.create-team")}
+            placement="bottom"
+            color="#2cccd3"
+          >
+            <Link
+              to={
+                "/" + t("routes.organigram") + "/" + t("paths_organigram.teams")
+              }
+            >
               <FaUsers className="iconGray iconsize2" />
             </Link>
           </Tooltip>
@@ -62,8 +70,19 @@ function OrganigramList() {
           className="dividerLeft"
           span={1}
         >
-          <Tooltip title={t("organigram.organigramlist.menu-1.me-business")} placement="bottom" color="#2cccd3">
-            <Link to="/organigrama/mybisiness">
+          <Tooltip
+            title={t("organigram.organigramlist.menu-1.me-business")}
+            placement="bottom"
+            color="#2cccd3"
+          >
+            <Link
+              to={
+                "/" +
+                t("routes.organigram") +
+                "/" +
+                t("paths_organigram.mybusiness")
+              }
+            >
               <IoBusinessSharp className="iconGray iconsize2" />
             </Link>
           </Tooltip>
@@ -105,7 +124,12 @@ function OrganigramList() {
           </Tooltip>
         </Col>
         <Col span={5}>
-          <Input addonAfter={<SearchOutlined />} placeholder={t("organigram.organigramlist.search-position-placeholder")} />
+          <Input
+            addonAfter={<SearchOutlined />}
+            placeholder={t(
+              "organigram.organigramlist.search-position-placeholder"
+            )}
+          />
         </Col>
       </Row>
       <div id="organigramList">

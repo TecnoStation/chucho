@@ -28,7 +28,16 @@ export default function LayoutSecondaryCardGlass({
   const menu = (
     <Menu>
       <Menu.Item key="0">
-        <Link to="/areasandpositions-perfil">Ver Perfil</Link>
+        <Link
+          to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-perfil")
+          }
+        >
+          Ver Perfil
+        </Link>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="2">Cerrar sesión</Menu.Item>
@@ -63,7 +72,15 @@ export default function LayoutSecondaryCardGlass({
                         cursor: "pointer",
                       }}
                     >
-                      <Link className="iconBlue" to="/organigrama">
+                      <Link
+                        className="iconBlue"
+                        to={
+                          "/" +
+                          t("routes.organigram") +
+                          "/" +
+                          t("paths_organigram.organigram")
+                        }
+                      >
                         <MdDeviceHub />{" "}
                       </Link>
                     </Col>
@@ -79,7 +96,14 @@ export default function LayoutSecondaryCardGlass({
                       }}
                     >
                       {" "}
-                      <Link to="/organigram">
+                      <Link
+                        to={
+                          "/" +
+                          t("routes.organigram") +
+                          "/" +
+                          t("paths_organigram.organigramlist")
+                        }
+                      >
                         <MaterialIcon icon="format_list_bulleted" />
                       </Link>{" "}
                     </Col>
@@ -171,7 +195,14 @@ export default function LayoutSecondaryCardGlass({
                       <span>Dirección de marketing</span>
                     </Col>
                     <Col style={{ textAlign: "right" }} span={4}>
-                      <Link to="./organigrama">
+                      <Link
+                        to={
+                          "/" +
+                          t("routes.organigram") +
+                          "/" +
+                          t("paths_organigram.organigram")
+                        }
+                      >
                         <Button
                           className="thirdBtnTwo"
                           style={{

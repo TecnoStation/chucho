@@ -99,14 +99,22 @@ export default function Teamsv() {
           <RiFilterFill />
         </Col>
         <Col className="gutter-row rigth" span={1}>
-          <Link to="/organigrama/teams">
+          <Link
+            to={
+              "/" + t("routes.organigram") + "/" + t("paths_organigram.teams")
+            }
+          >
             <span className="iconGray" style={{ fontSize: "17px" }}>
               <BsFillGrid3X2GapFill />
             </span>
           </Link>
         </Col>
         <Col className="gutter-row " span={3} style={{ textAlign: "left" }}>
-          <Link to="/organigrama/teamsv">
+          <Link
+            to={
+              "/" + t("routes.organigram") + "/" + t("paths_organigram.teamsv")
+            }
+          >
             <BsListUl
               className="dividerLeft iconBlue"
               style={{ paddingLeft: "5px", fontSize: "22px" }}
@@ -136,7 +144,9 @@ export default function Teamsv() {
             icon={<IoMdAdd className="iconAjust2" />}
           >
             {" "}
-            <span className="textAjust4">{t("organigram.teams2.new-team")}</span>
+            <span className="textAjust4">
+              {t("organigram.teams2.new-team")}
+            </span>
           </Button>
         </Col>
       </Row>

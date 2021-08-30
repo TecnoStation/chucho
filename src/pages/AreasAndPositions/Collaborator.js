@@ -11,7 +11,7 @@ import {
   Modal,
   Checkbox,
 } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import More from "../../assets/img/icons/more_vert-24px.svg";
 import Avatar from "../../assets/img/avatar.png";
 import Bien from "../../assets/img/icons/bien_hecho.svg";
@@ -26,39 +26,23 @@ const { Option } = Select;
 export default function Collaborator() {
   const [t, i18n] = useTranslation("global");
   const [Password, setPassword] = useState(false);
-
-  const [Documets, setDocumets] = useState(false);
-  const closeModalDocuments = () => {
-    setDocumets(false);
-  };
-  const openModalDocuments = () => {
-    setDocumets(true);
-  };
-
+  const [ModalDocumets, setModalDocumets] = useState(false);
   const [Permissions, setPermissions] = useState(false);
-  const closeModalPermissions = () => {
-    setPermissions(false);
-  };
-  const sendPermissions = () => {
-    alert("permissions enviados");
-  };
-  const addPermissions = () => {
-    setPermissions(true);
-  };
-
   const [flag, setFlag] = useState("hide");
-  const addDocument = () => {
-    setFlag("show");
-  };
-  const hiddeDocument = () => {
-    setFlag("hide");
-  };
+  const history = useHistory();
+  const location = useLocation();
+  const query = new URLSearchParams(location.search);
 
   const menu = (
     <Menu>
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link to="#" onClick={addPermissions}>
+          <Link
+            to="#"
+            onClick={() => {
+              setPermissions(true);
+            }}
+          >
             {t("organigram.collaborator-form.menu.add-permissions")}
           </Link>
         </Menu.Item>
@@ -74,7 +58,14 @@ export default function Collaborator() {
 
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link to="/organigrama/areasandpositions-perfil">
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-perfil")
+            }
+          >
             {t("organigram.collaborator-form.menu.view-proceedings")}
           </Link>
         </Menu.Item>
@@ -82,7 +73,12 @@ export default function Collaborator() {
 
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link onClick={openModalDocuments} to="#">
+          <Link
+            onClick={() => {
+              setModalDocumets(true);
+            }}
+            to="#"
+          >
             {t("organigram.collaborator-form.menu.assign-documents")}
           </Link>
         </Menu.Item>
@@ -101,6 +97,16 @@ export default function Collaborator() {
                   "organigram.delete-collaborator.warning.text"
                 ),
                 question: t("organigram.delete-collaborator.warning.question"),
+                type: 0,
+                function: () => {
+                  history.push({
+                    pathname:
+                      "/" +
+                      t("routes.organigram") +
+                      "/" +
+                      t("paths_organigram.areasandpositions"),
+                  });
+                },
               });
             }}
           >
@@ -528,9 +534,7 @@ export default function Collaborator() {
                     message: "*Campo requerido",
                   },
                 ]}
-                label={t(
-                  "organigram.collaborator-form.years-experience-label"
-                )}
+                label={t("organigram.collaborator-form.years-experience-label")}
               >
                 <Select
                   placeholder={t(
@@ -614,7 +618,14 @@ export default function Collaborator() {
           <h3>{t("organigram.collaborator-form.well-done")}</h3>
           <h3>{t("organigram.collaborator-form.organization-created")}</h3>
           <br />
-          <Link to="/organigrama/organigram">
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.organigram")
+            }
+          >
             <Button className="primary">
               {t("organigram.collaborator-form.btn-done")}
             </Button>
@@ -622,9 +633,15 @@ export default function Collaborator() {
         </Screendefault>
       </Row>
 
-      <ModalPermissions />
+      <ModalPermissions
+        Permissions={Permissions}
+        setPermissions={setPermissions}
+      />
 
-      <ModalDocument />
+      <ModalDocument
+        ModalDocumets={ModalDocumets}
+        setModalDocumets={setModalDocumets}
+      />
       <ModalPassword Password={Password} setPassword={setPassword} />
     </Form>
   );

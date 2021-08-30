@@ -5,7 +5,6 @@ import ModalMessage from "../ModalMessage/ModalMessage";
 import Warning from "../../../assets/img/icons/atencion.svg";
 import { useTranslation } from "react-i18next";
 
-
 function ModalErasersList({ historial, setHistorial }) {
   const [t, i18n] = useTranslation("global");
   const [screen, setScreen] = useState("screen");
@@ -67,12 +66,28 @@ function ModalErasersList({ historial, setHistorial }) {
           <Col span={6}>Área MKT</Col>
           <Col span={8}>10 MAY 2016</Col>
           <Col span={2}>
-            <Link className="iconBlue" to="/organigrama/eraser">
+            <Link
+              className="iconBlue"
+              to={
+                "/" +
+                t("routes.organigram") +
+                "/" +
+                t("paths_organigram.eraser")
+              }
+            >
               Ver
             </Link>
           </Col>
           <Col className="dividerLeft" span={2}>
-            <Link className="iconBlue" to="/organigrama/eraser">
+            <Link
+              className="iconBlue"
+              to={
+                "/" +
+                t("routes.organigram") +
+                "/" +
+                t("paths_organigram.eraser")
+              }
+            >
               Editar
             </Link>
           </Col>
@@ -111,12 +126,28 @@ function ModalErasersList({ historial, setHistorial }) {
           <Col span={6}>Área de TI A</Col>
           <Col span={8}>12 MAY 2016</Col>
           <Col span={2}>
-            <Link className="iconBlue" to="/organigrama/eraser">
+            <Link
+              className="iconBlue"
+              to={
+                "/" +
+                t("routes.organigram") +
+                "/" +
+                t("paths_organigram.eraser")
+              }
+            >
               Ver
             </Link>
           </Col>
           <Col className="dividerLeft" span={2}>
-            <Link className="iconBlue" to="/organigrama/eraser">
+            <Link
+              className="iconBlue"
+              to={
+                "/" +
+                t("routes.organigram") +
+                "/" +
+                t("paths_organigram.eraser")
+              }
+            >
               Editar
             </Link>
           </Col>
@@ -148,12 +179,28 @@ function ModalErasersList({ historial, setHistorial }) {
           <Col span={6}>Sucursal CUH</Col>
           <Col span={8}>12 MAY 2016</Col>
           <Col span={2}>
-            <Link className="iconBlue" to="/organigrama/eraser">
+            <Link
+              className="iconBlue"
+              to={
+                "/" +
+                t("routes.organigram") +
+                "/" +
+                t("paths_organigram.eraser")
+              }
+            >
               Ver
             </Link>
           </Col>
           <Col className="dividerLeft" span={2}>
-            <Link className="iconBlue" to="/organigrama/eraser">
+            <Link
+              className="iconBlue"
+              to={
+                "/" +
+                t("routes.organigram") +
+                "/" +
+                t("paths_organigram.eraser")
+              }
+            >
               Editar
             </Link>
           </Col>

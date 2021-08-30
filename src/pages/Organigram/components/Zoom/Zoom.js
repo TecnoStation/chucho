@@ -17,22 +17,50 @@ export default function Zoom() {
   const menu = (
     <>
       <div className="menuToltip">
-        <Link to="/areasandpositions-general">
+        <Link
+          to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-general")
+          }
+        >
           <span>{t("organigram.organigramlist.menu-1.load-massive")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to="/areasandpositions-general">
+        <Link
+          to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-general")
+          }
+        >
           <span>{t("organigram.organigramlist.menu-1.areas-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to="/areasandpositions-general">
+        <Link
+          to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-general")
+          }
+        >
           <span>{t("organigram.organigramlist.menu-1.profile-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to="/areasandpositions-general">
+        <Link
+          to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-general")
+          }
+        >
           <span>{t("organigram.organigramlist.menu-1.Collaborators")}</span>
         </Link>
       </div>
@@ -42,11 +70,6 @@ export default function Zoom() {
   const [historial, setHistorial] = useState(false);
 
   return (
-    // <TransformWrapper>
-    //   <TransformComponent>
-    //     <TreeOffice/>
-    //   </TransformComponent>
-    // </TransformWrapper>
     <>
       <TransformWrapper
         className="zoom"
@@ -62,7 +85,14 @@ export default function Zoom() {
             <div className="tools">
               <Row style={{ marginTop: "5px" }}>
                 <Col span={24}>
-                  <Link to="/organigrama/teams">
+                  <Link
+                    to={
+                      "/" +
+                      t("routes.organigram") +
+                      "/" +
+                      t("paths_organigram.teams")
+                    }
+                  >
                     <Tooltip
                       title={t("organigram.organigramlist.menu-1.create-team")}
                       placement="left"
@@ -79,7 +109,14 @@ export default function Zoom() {
               </Row>
               <Row style={{ marginTop: "5px" }}>
                 <Col span={24}>
-                  <Link to="/organigrama/mybusiness">
+                  <Link
+                    to={
+                      "/" +
+                      t("routes.organigram") +
+                      "/" +
+                      t("paths_organigram.mybusiness")
+                    }
+                  >
                     <Tooltip
                       title={t("organigram.organigramlist.menu-1.me-business")}
                       placement="left"
