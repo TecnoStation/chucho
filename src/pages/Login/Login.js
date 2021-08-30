@@ -26,12 +26,19 @@ export default function Login() {
             <Checkbox>{t("login.check-box")}</Checkbox>
           </Form.Item>
           <Form.Item style={{ textAlign: "left", marginTop: "-30px" }}>
-            <Link to="/recoverypassword" className="linkText">
+            <Link to={"/" + t("routes.recoverypassword")} className="linkText">
               {t("login.link-recovery")}
             </Link>
           </Form.Item>
           <Form.Item>
-            <Link to="/organigrama/organigramstarted">
+            <Link
+              to={
+                "/" +
+                t("routes.organigram") +
+                "/" +
+                t("paths_organigram.organigramstarted")
+              }
+            >
               <Button style={{ width: "100%" }} className="primary">
                 {t("login.btn-start-sesion")}
               </Button>
@@ -40,7 +47,7 @@ export default function Login() {
         </Form>
         <p className="legacyP grayText">{t("login.p1-privacy")}</p>
         <p>
-          <Checkbox className="terminos grayText"> 
+          <Checkbox className="terminos grayText">
             {t("login.check-privacy")}
           </Checkbox>
         </p>

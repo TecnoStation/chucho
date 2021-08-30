@@ -8,10 +8,6 @@ import "./Login.scss";
 
 export default function NewPassword() {
   const [t, i18n] = useTranslation("global");
-  // const Send = () => {
-  //   document.getElementById("sendTo").setAttribute("style", "display: none");
-  //   document.getElementById("message").setAttribute("style", "display: flex");
-  // };
 
   return (
     <div>
@@ -28,13 +24,13 @@ export default function NewPassword() {
               placeholder={t("login.insert-password-placeholders")}
             />
           </Form.Item>
-          <Form.Item name="password1" label={t("login.repeat-password")}> 
+          <Form.Item name="password1" label={t("login.repeat-password")}>
             <Input.Password
               placeholder={t("login.repeat-password-placeholder")}
             />
           </Form.Item>
           <Form.Item>
-            <Link to="/login">
+            <Link to={"/" + t("routes.login")}>
               <Button className="primary">{t("login.btn-next")}</Button>
             </Link>
           </Form.Item>
