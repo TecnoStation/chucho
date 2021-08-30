@@ -180,7 +180,14 @@ export default function ScreenOrganigram() {
         >
           {t("organigram.dialog-warnin.btn-continue")}
         </Button>
-        <Link to="/organigrama/organigram">
+        <Link
+          to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.organigrammain")
+          }
+        >
           <Button className="primary btn">
             {t("organigram.dialog-warnin.btn-skip")}
           </Button>
