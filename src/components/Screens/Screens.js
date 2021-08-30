@@ -31,6 +31,41 @@ function Screens({ message, setMessage, messageType, setActive }) {
         });
       },
     },
+    {
+      title: "¡Excelente!",
+      subTitle: "El siguiente paso es crear las áreas de tu empresa",
+      text: "En esta parte debes de crear un listado de las áreas que componen tu empresa, ya que con esta información definiremos una primera estructura de tu organigrama",
+      btn: "Continuar",
+      url: () => {
+        history.push({
+          pathname: "/organigrama/areasandpositions",
+        });
+      },
+    },
+    {
+      title: "Vamos muy bien!",
+      subTitle:
+        "Ahora, crearemos la lista con los nombres de los puestos en tu empresa",
+      text: "En esta sección debes de agregar solo los nombres de los puestos en tu empresa, esto ayuda a tener claridad de todos los puestos necesarios en tu empresa y ayudará a la cración de la estructura de tu organigrama",
+      btn: "Continuar",
+      url: () => {
+        setActive(tabs[1]);
+        setMessage(false);
+      },
+    },
+    {
+      title: "¡Perfecto!",
+      subTitle: "Vamos a ingresar el perfil de cada puesto",
+      text: "Nuestro siguiente paso consiste en agregar la información necesaria de cada puesto. esta base de datos sirve para fortalecer el proceso productivo de la empresa.",
+      text2:
+        "Esta parte la puedes realizar al cargar de forma masiva o manual los datos. Con el fin de que conozcas qué datos se necesitan para cada puesto vamos a realizar uno de forma manual.",
+      btn: "Continuar",
+      url: () => {
+        history.push({
+          pathname: "/organigrama/areasandpositions-addJob",
+        });
+      },
+    },
   ];
 
   return (

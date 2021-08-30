@@ -62,7 +62,7 @@ export default function CompetenciesList({
             </Tag>
           </div>
         ) : (
-          <div className="row">
+          <div className="rowC">
             <Tag className="tag tag-active" key={index}>
               {competence.name}
               <CheckCircleFilled className="CheckCircleFilled" />

@@ -4,19 +4,20 @@ import { Link } from "react-router-dom";
 import Avatar from "../../../../assets/img/avatar.png";
 import More from "../../../../assets/img/icons/more_vert-24px.svg";
 import { GiOfficeChair } from "react-icons/gi";
-import { FaUserAlt } from "react-icons/fa";
+import { FaUserAlt, FaUserCircle } from "react-icons/fa";
 import Insings from "../../../../assets/img/icons/insights-24px.svg";
 import Trending from "../../../../assets/img/icons/trending_up-24px.svg";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
+
 import { v4 as uuid } from "uuid";
+
+import "./CardNode.scss";
 import ModalPermissions from "../../../../components/Modals/ModalPermissions/ModalPermissions";
 import ModalColor from "../../../../components/Modals/ModalColor/ModalColor";
 import ModalHistorialColaborator from "../../../../components/Modals/ModalHistorialColaborator/ModalHistorialColaborator";
 import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/ModalHistorialJob";
 import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
-
-import "./CardNode.scss";
 
 export default function CardNode({ setModalPassword }) {
   const [t, i18n] = useTranslation("global");
@@ -128,15 +129,11 @@ export default function CardNode({ setModalPassword }) {
               setPassword({
                 visible: true,
                 titleModal: "Dar de baja a colaborador",
-                type: 0,
                 messageModal:
                   "Al dar de baja a un colaborador de tu organización ya no se verá reflejada en tu organigrama.",
                 messageWarning:
                   "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
                 question: "¿Seguro deseas eliminarlo?",
-                function: () => {
-                  return false;
-                },
               });
             }}
           >
@@ -152,14 +149,10 @@ export default function CardNode({ setModalPassword }) {
               setPassword({
                 visible: true,
                 titleModal: "Eliminar puesto",
-                type: 0,
                 messageModal:
                   "Al eliminar un puesto de tu organización ya no se verá reflejada en tu organigrama.",
                 messageWarning: "Estás a punto de eliminar el puesto",
                 question: "¿Seguro deseas eliminarlo?",
-                function: () => {
-                  return false;
-                },
               });
             }}
           >
@@ -174,28 +167,27 @@ export default function CardNode({ setModalPassword }) {
     <>
       <div>
         <div>
-          <p className="showBlock">Área de Marketing</p>
+          <p className="showBlock">Nombre del Área</p>
         </div>
-        <div className="CardNodeChild">
+        <div className="CardNode">
           <Row
             style={{ textAlign: "left", height: "50px", paddingBottom: "50px" }}
             className="dividerBottomFull"
           >
             <Col span={5}>
               <p>
-                <img
-                  style={{ marginTop: "-5px" }}
+                <FaUserCircle
+                  className="iconGray"
+                  style={{ marginTop: "5px", fontSize: "40px" }}
                   alt="ico"
-                  width="55"
-                  src={Avatar}
                 />
               </p>
             </Col>
             <Col span={16}>
-              <span>Panchita Lopez</span>
+              <span>Nombre del colaborador</span>
               <br />
               <span>
-                <b>Directora de marketing</b>
+                <b>Nombre del cargo</b>
               </span>
             </Col>
             <Col span={3}>
@@ -226,7 +218,7 @@ export default function CardNode({ setModalPassword }) {
               />
             </Col>
             <Col span={3} className="iconGreenTwo">
-              <span>42%</span>
+              <span>0%</span>
             </Col>
             <Col className="iconGray" span={3}>
               <img
@@ -237,44 +229,23 @@ export default function CardNode({ setModalPassword }) {
               />
             </Col>
             <Col span={3} className="iconGreenTwo">
-              <span>35%</span>
+              <span>0%</span>
             </Col>
             <Col span={3} className="iconRed" style={{ fontSize: "18px" }}>
               <GiOfficeChair />
             </Col>
             <Col span={3} className="iconRed">
-              <span>8</span>
+              <span>0</span>
             </Col>
             <Col span={3} className="iconGray" style={{ fontSize: "16px" }}>
               <FaUserAlt />
             </Col>
             <Col span={3}>
-              <span>18</span>
+              <span>0</span>
             </Col>
           </Row>
         </div>
-        <div style={{ marginTop: "-10px", marginLeft: "50px" }}>
-          <Button
-            className={flag}
-            onClick={() => {
-              setActive("CardNodeGrandChildShow");
-              setFalg("primary roundBtnFull hide");
-              setFalg2("primaryInvert roundBtnFull showInline");
-            }}
-            icon={<DownOutlined />}
-            size="small"
-          />
-          <Button
-            className={flag2}
-            onClick={() => {
-              setActive("CardNodeGrandChildhide");
-              setFalg("primary roundBtnFull showInline");
-              setFalg2("primaryInvert roundBtnFull hide");
-            }}
-            icon={<UpOutlined />}
-            size="small"
-          />
-        </div>
+
         <div className={active}>
           <div style={{ marginTop: "10px" }} className="CardNodeGrandChild">
             <Row
@@ -456,7 +427,6 @@ export default function CardNode({ setModalPassword }) {
             <svg
               className="line"
               version="1.1"
-              xmlns="http://www.w3.org/2000/svg"
               width="50"
               height="120"
               viewBox="0 0 140 90"

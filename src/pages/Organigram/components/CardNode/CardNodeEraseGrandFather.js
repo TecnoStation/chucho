@@ -1,5 +1,6 @@
-import { Col, Dropdown, Menu, Row } from "antd";
 import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import { Col, Dropdown, Menu, Row, Tree } from "antd";
 import { Link } from "react-router-dom";
 import Avatar from "../../../../assets/img/avatar.png";
 import More from "../../../../assets/img/icons/more_vert-24px.svg";
@@ -18,15 +19,15 @@ import ModalColor from "../../../../components/Modals/ModalColor/ModalColor";
 import ModalHistorialColaborator from "../../../../components/Modals/ModalHistorialColaborator/ModalHistorialColaborator";
 import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/ModalHistorialJob";
 import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
-import CardNodeGrandChild from "./CardNodeGrandChild";
+import { TreeNode } from "antd/lib/tree-select";
+import CardNodeErase from "./CardNodeErase";
+import TreeEraser from "../TreeEraser/TreeEraser";
 
-export default function CardNodeErase({
+export default function CardNodeEraseGrandFather({
   setModalPassword,
   fathers,
   setFathers,
-  father,
-  childrens,
-  setChildrens,
+  index,
 }) {
   const [t, i18n] = useTranslation("global");
   const [Permissions, setPermissions] = useState(false);
@@ -141,39 +142,17 @@ export default function CardNodeErase({
 
   return (
     <>
-      <div id={"father" + father.idFather} style={{ width: "350px" }}>
+      <div id="GrandFather">
         <div>
           <p className="showBlock">Área de Marketing</p>
         </div>
 
-        <div className="CardNodeChild">
+        <div className="CardNode">
           <Row
             style={{ textAlign: "left", height: "50px", paddingBottom: "50px" }}
             className="dividerBottomFull"
           >
             <Col span={5}>
-              <div
-                style={{
-                  position: "absolute",
-                  left: "-53px",
-                  top: "25px",
-                }}
-              >
-                <Link
-                  to="#"
-                  onClick={() => {
-                    setFathers([
-                      ...fathers,
-                      {
-                        idFather: fathers.length,
-                      },
-                    ]);
-                    console.log(fathers);
-                  }}
-                >
-                  <PlusCircleOutlined style={{ fontSize: "20px" }} />
-                </Link>
-              </div>
               <p>
                 <img
                   style={{ marginTop: "-5px" }}
@@ -191,29 +170,6 @@ export default function CardNodeErase({
               </span>
             </Col>
             <Col span={3}>
-              <div
-                style={{
-                  position: "absolute",
-                  right: "-45px",
-                  top: "25px",
-                }}
-              >
-                <Link
-                  to="#"
-                  onClick={() => {
-                    setFathers([
-                      ...fathers,
-                      {
-                        idFather: fathers.length,
-                      },
-                    ]);
-                    console.log(fathers);
-                  }}
-                >
-                  <PlusCircleOutlined style={{ fontSize: "20px" }} />
-                </Link>
-              </div>
-
               <Dropdown overlay={menu} trigger={["click"]}>
                 <Link
                   to="#"
@@ -231,7 +187,6 @@ export default function CardNodeErase({
               </Dropdown>
             </Col>
           </Row>
-
           <Row style={{ marginTop: "3px" }}>
             <Col span={3} className="iconGray" style={{ fontSize: "20px" }}>
               <img
@@ -271,33 +226,27 @@ export default function CardNodeErase({
         </div>
         <div
           style={{
-            marginTop: "20px",
-            marginLeft: "60px",
+            marginTop: "10px",
+            marginLeft: "0px",
             paddingBottom: "15px",
           }}
         >
           <Link
             to="#"
             onClick={() => {
-              setChildrens([
-                ...childrens,
+              setFathers([
+                ...fathers,
                 {
-                  idChild: childrens.length,
-                  idFather: father.idFather,
+                  idFather: fathers.length,
                 },
               ]);
-              console.log(childrens);
+              console.log(fathers);
             }}
           >
             <PlusCircleOutlined style={{ fontSize: "20px" }} />
           </Link>
         </div>
-        {childrens.map(
-          (children, index) =>
-            children.idFather === father.idFather && <CardNodeGrandChild />
-        )}
       </div>
-
       <ModalPermissions
         Permissions={Permissions}
         setPermissions={setPermissions}

@@ -54,7 +54,13 @@
 }
 
 .tagList {
-  width: 100%;
+  width: 470px;
+  height: 180px !important;
+  overflow: auto;
+}
+
+.rowC {
+  width: 98%;
 }
 
 .tag {

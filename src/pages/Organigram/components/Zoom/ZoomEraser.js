@@ -1,19 +1,19 @@
 import { Button, Col, Row, Tooltip } from "antd";
 import React, { useState } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import TreeOffice from "../TreeOffice/TreeOffice";
 import { FiUpload, FiZoomIn, FiZoomOut } from "react-icons/fi";
 import { FaUsers } from "react-icons/fa";
 import { IoBusinessSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { AiOutlineHistory } from "react-icons/ai";
 
 import "./Zoom.scss";
+import TreeStarted from "../TreeStarted/TreeStarted";
 import ModalErasersList from "../../../../components/Modals/ModalErasersList/ModalErasersList";
+import TreeEraser from "../TreeEraser/TreeEraser";
 
-export default function Zoom() {
-  const [t, i18n] = useTranslation("global");
+function ZoomEraser() {
+  const [historial, setHistorial] = useState(false);
   const menu = (
     <>
       <div className="menuToltip">
@@ -38,22 +38,14 @@ export default function Zoom() {
       </div>
     </>
   );
-
-  const [historial, setHistorial] = useState(false);
-
   return (
-    // <TransformWrapper>
-    //   <TransformComponent>
-    //     <TreeOffice/>
-    //   </TransformComponent>
-    // </TransformWrapper>
     <>
       <TransformWrapper
         className="zoom"
         initialScale={1}
         minScale={0.5}
         maxScale={1.2}
-        initialPositionX={-200}
+        initialPositionX={400}
         centerContent={true}
         wheelEnabled={false}
       >
@@ -150,7 +142,7 @@ export default function Zoom() {
               </Row>
             </div>
             <TransformComponent>
-              <TreeOffice />
+              <TreeEraser />
             </TransformComponent>
           </React.Fragment>
         )}
@@ -159,3 +151,5 @@ export default function Zoom() {
     </>
   );
 }
+
+export default ZoomEraser;

@@ -25,3 +25,19 @@
     font-weight: bold;
   }
 }
+
+.messageOrg {
+  position: absolute;
+  top: 23vh;
+  right: 5vw;
+  width: 273px;
+  height: 128px;
+  background: $color-base;
+  padding: 5px 5px 5px 5px;
+  border-radius: 10px;
+}
+
+.question {
+  font-size: 90px;
+  color: rgba(255, 255, 255, 0.23);
+}

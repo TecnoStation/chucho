@@ -75,7 +75,7 @@ export default function Modalcompetencies({
             />
           </Form.Item>
         </Form>
-        <div id="tagList">
+        <div id="tagList" className="tagList">
           <CompetenciesList
             component={component}
             setModalComp={setModalComp}
