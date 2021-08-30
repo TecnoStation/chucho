@@ -38,35 +38,33 @@ export default function AreasAndPositionsMassiveE() {
     <>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col className="gutter-row" span={12}>
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}> 
+          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <h3>{t("organigrama.areasandpositions-masivee.title")}</h3>
+              <h3>{t("organigram.areasandpositions-masivee.title")}</h3>
             </Col>
-          </Row> 
+          </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <p>
-              {t("organigrama.areasandpositions-masivee.text1")}
-              </p>
+              <p>{t("organigram.areasandpositions-masivee.text1")}</p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-              {t("organigrama.areasandpositions-masivee.text2")}
-                <b>
-                {t("organigrama.areasandpositions-masivee.text3")}
-                </b>
-                {t("organigrama.areasandpositions-masivee.text4")}
+                {t("organigram.areasandpositions-masivee.text2")}
+                <b>{t("organigram.areasandpositions-masivee.text3")}</b>
+                {t("organigram.areasandpositions-masivee.text4")}
               </p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <p className="linkBold">{t("organigrama.areasandpositions-masivee.text5")}</p>
+              <p className="linkBold">
+                {t("organigram.areasandpositions-masivee.text5")}
+              </p>
             </Col>
           </Row>
         </Col>
@@ -74,22 +72,18 @@ export default function AreasAndPositionsMassiveE() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b>
-                {t("organigrama.areasandpositions-masivee.text6")}
-                </b>
+                <b>{t("organigram.areasandpositions-masivee.text6")}</b>
               </p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <span>{t("organigrama.areasandpositions-masivee.text7")}</span>
+              <span>{t("organigram.areasandpositions-masivee.text7")}</span>
               <br />
-              <span>
-              {t("organigrama.areasandpositions-masivee.text8")}
-              </span>
+              <span>{t("organigram.areasandpositions-masivee.text8")}</span>
               <br />
-              <span>{t("organigrama.areasandpositions-masivee.text9")}</span>
+              <span>{t("organigram.areasandpositions-masivee.text9")}</span>
               <br />
               <br />
             </Col>
@@ -97,14 +91,14 @@ export default function AreasAndPositionsMassiveE() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <p>{t("organigrama.areasandpositions-masivee.text10")}</p>
+              <p>{t("organigram.areasandpositions-masivee.text10")}</p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b>{t("organigrama.areasandpositions-masivee.text11")}</b>
+                <b>{t("organigram.areasandpositions-masivee.text11")}</b>
               </p>
             </Col>
           </Row>
@@ -113,7 +107,8 @@ export default function AreasAndPositionsMassiveE() {
             <Col className="gutter-row" span={24}>
               <Link to="#" onClick={openModalUpload}>
                 {" "}
-                <PlusCircleOutlined />{t("organigrama.areasandpositions-masivee.link-attach")}
+                <PlusCircleOutlined />
+                {t("organigram.areasandpositions-masivee.link-attach")}
               </Link>
               <br />
               <br />
@@ -127,7 +122,7 @@ export default function AreasAndPositionsMassiveE() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={24}>
-          <h1>{t("organigrama.areasandpositions-masivee.history-loads")}</h1>
+          <h1>{t("organigram.areasandpositions-masivee.history-loads")}</h1>
         </Col>
       </Row>
 
@@ -137,16 +132,16 @@ export default function AreasAndPositionsMassiveE() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={6}>
-          <p>{t("organigrama.areasandpositions-masivee.file")}</p>
+          <p>{t("organigram.areasandpositions-masivee.file")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>{t("organigrama.areasandpositions-masivee.date-load")}</p>
+          <p>{t("organigram.areasandpositions-masivee.date-load")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>{t("organigrama.areasandpositions-masivee.status")}</p>
+          <p>{t("organigram.areasandpositions-masivee.status")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>{t("organigrama.areasandpositions-masivee.actions")}</p>
+          <p>{t("organigram.areasandpositions-masivee.actions")}</p>
         </Col>
       </Row>
 
@@ -165,7 +160,14 @@ export default function AreasAndPositionsMassiveE() {
           <p className="iconRed">Error</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <Link to="/areasandpositions-detailerror">
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-detailerror")
+            }
+          >
             <p>Ver Detalle</p>
           </Link>
         </Col>
@@ -186,7 +188,14 @@ export default function AreasAndPositionsMassiveE() {
           <p className="iconGreen">Éxito</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <Link to="/areasandpositions-detailsuccess">
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-detailsuccess")
+            }
+          >
             <p>Ver Detalle</p>
           </Link>
         </Col>
@@ -198,10 +207,14 @@ export default function AreasAndPositionsMassiveE() {
       >
         <Col className="gutter-row" span={17}></Col>
         <Col className="gutter-row" span={3}>
-          <Button className="secondary">{t("organigrama.areasandpositions-masivee.btn-cancel")}</Button>
+          <Button className="secondary">
+            {t("organigram.areasandpositions-masivee.btn-cancel")}
+          </Button>
         </Col>
         <Col className="gutter-row" span={3}>
-          <Button className="primary">{t("organigrama.areasandpositions-masivee.btn-load-file")}</Button>
+          <Button className="primary">
+            {t("organigram.areasandpositions-masivee.btn-load-file")}
+          </Button>
         </Col>
       </Row>
 
@@ -214,15 +227,19 @@ export default function AreasAndPositionsMassiveE() {
               </p>
             </Col>
             <Col span={24}>
-              <h3>{t("organigrama.areasandpositions-masivee.well-done")}</h3>
+              <h3>{t("organigram.areasandpositions-masivee.well-done")}</h3>
             </Col>
             <Col span={24}>
-              <h3>{t("organigrama.areasandpositions-masivee.organization-created")}</h3>
+              <h3>
+                {t(
+                  "organigram.areasandpositions-masivee.organization-created"
+                )}
+              </h3>
               <br />
             </Col>
             <Col span={24}>
               <Button onClick={endFn} className="primary btn">
-              {t("organigrama.areasandpositions-masivee.btn-done")}
+                {t("organigram.areasandpositions-masivee.btn-done")}
               </Button>
             </Col>
           </Row>
@@ -230,7 +247,7 @@ export default function AreasAndPositionsMassiveE() {
       </Screendefault>
 
       <Modal
-        title={t("organigrama.areasandpositions-masivee.up-load-file")}
+        title={t("organigram.areasandpositions-masivee.up-load-file")}
         visible={modalUpload}
         onCancel={closeModalUpload}
         onOk={sendUpload}
@@ -240,13 +257,13 @@ export default function AreasAndPositionsMassiveE() {
             className="secondary"
             onClick={closeModalUpload}
           >
-            {t("organigrama.areasandpositions-masivee.btn-cancel")}
+            {t("organigram.areasandpositions-masivee.btn-cancel")}
           </Button>,
           <input
             type="button"
             className="primary"
             onClick={sendUpload}
-            value={t("organigrama.areasandpositions-masivee.btn-rise")}
+            value={t("organigram.areasandpositions-masivee.btn-rise")}
           />,
         ]}
       >

@@ -40,14 +40,14 @@ export default function AreasAndPositionsMassiveC() {
         <Col className="gutter-row" span={12}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <h3>{t("organigrama.areasandpositions-E.title")}</h3> 
+              <h3>{t("organigram.areasandpositions-E.title")}</h3> 
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-              {t("organigrama.areasandpositions-E.text-1")}
+              {t("organigram.areasandpositions-E.text-1")}
               </p>
             </Col>
           </Row>
@@ -55,11 +55,11 @@ export default function AreasAndPositionsMassiveC() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-              {t("organigrama.areasandpositions-E.text-2")}
+              {t("organigram.areasandpositions-E.text-2")}
                 <b>
-                {t("organigrama.areasandpositions-E.text-3")}
+                {t("organigram.areasandpositions-E.text-3")}
                 </b>
-                {t("organigrama.areasandpositions-E.text-4")}
+                {t("organigram.areasandpositions-E.text-4")}
               </p>
             </Col>
           </Row>
@@ -67,7 +67,7 @@ export default function AreasAndPositionsMassiveC() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p className="linkBold">
-              {t("organigrama.areasandpositions-E.collaborator-template")}
+              {t("organigram.areasandpositions-E.collaborator-template")}
               </p>
             </Col>
           </Row>
@@ -77,7 +77,7 @@ export default function AreasAndPositionsMassiveC() {
             <Col className="gutter-row" span={24}>
               <p>
                 <b>
-                {t("organigrama.areasandpositions-E.text-5")}
+                {t("organigram.areasandpositions-E.text-5")}
                 </b>
               </p>
             </Col>
@@ -85,13 +85,13 @@ export default function AreasAndPositionsMassiveC() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <span>{t("organigrama.areasandpositions-E.text-a")}</span>
+              <span>{t("organigram.areasandpositions-E.text-a")}</span>
               <br />
               <span>
-              {t("organigrama.areasandpositions-E.text-b")}
+              {t("organigram.areasandpositions-E.text-b")}
               </span>
               <br />
-              <span>{t("organigrama.areasandpositions-E.text-c")}</span>
+              <span>{t("organigram.areasandpositions-E.text-c")}</span>
               <br />
               <br />
             </Col>
@@ -99,14 +99,14 @@ export default function AreasAndPositionsMassiveC() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <p>{t("organigrama.areasandpositions-E.text-file")}</p>
+              <p>{t("organigram.areasandpositions-E.text-file")}</p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b>{t("organigrama.areasandpositions-E.tex-file-a")}</b>
+                <b>{t("organigram.areasandpositions-E.tex-file-a")}</b>
               </p>
             </Col>
           </Row>
@@ -115,7 +115,7 @@ export default function AreasAndPositionsMassiveC() {
             <Col className="gutter-row" span={24}>
               <Link to="#" onClick={openModalUpload}>
                 {" "}
-                <PlusCircleOutlined /> {t("organigrama.areasandpositions-E.to attach-file-link")}
+                <PlusCircleOutlined /> {t("organigram.areasandpositions-E.to attach-file-link")}
               </Link>
               <br />
               <br />
@@ -129,7 +129,7 @@ export default function AreasAndPositionsMassiveC() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={24}>
-          <h1>{t("organigrama.areasandpositions-E.text-file-")}</h1>
+          <h1>{t("organigram.areasandpositions-E.text-file-")}</h1>
         </Col>
       </Row>
 
@@ -139,16 +139,16 @@ export default function AreasAndPositionsMassiveC() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={6}>
-          <p>{t("organigrama.areasandpositions-E.file")}</p>
+          <p>{t("organigram.areasandpositions-E.file")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>{t("organigrama.areasandpositions-E.date-load")}</p>
+          <p>{t("organigram.areasandpositions-E.date-load")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>{t("organigrama.areasandpositions-E.status")}</p>
+          <p>{t("organigram.areasandpositions-E.status")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>{t("organigrama.areasandpositions-E.actions")}</p>
+          <p>{t("organigram.areasandpositions-E.actions")}</p>
         </Col>
       </Row>
 
@@ -200,10 +200,10 @@ export default function AreasAndPositionsMassiveC() {
       >
         <Col className="gutter-row" span={17}></Col>
         <Col className="gutter-row" span={3}>
-          <Button className="secondary">{t("organigrama.areasandpositions-E.btn-cancel")}</Button>
+          <Button className="secondary">{t("organigram.areasandpositions-E.btn-cancel")}</Button>
         </Col>
         <Col className="gutter-row" span={3}>
-          <Button className="primary">{t("organigrama.areasandpositions-E.btn-upload-file")}</Button>
+          <Button className="primary">{t("organigram.areasandpositions-E.btn-upload-file")}</Button>
         </Col>
       </Row>
 
@@ -216,15 +216,15 @@ export default function AreasAndPositionsMassiveC() {
               </p>
             </Col>
             <Col span={24}>
-              <h3>{t("organigrama.areasandpositions-E.modal-file.well-done")}</h3>
+              <h3>{t("organigram.areasandpositions-E.modal-file.well-done")}</h3>
             </Col>
             <Col span={24}>
-              <h3>{t("organigrama.areasandpositions-E.modal-file.text")}</h3>
+              <h3>{t("organigram.areasandpositions-E.modal-file.text")}</h3>
               <br />
             </Col>
             <Col span={24}>
               <Button onClick={endFn} className="primary btn">
-              {t("organigrama.areasandpositions-E.modal-file.btn-done")}
+              {t("organigram.areasandpositions-E.modal-file.btn-done")}
               </Button>
             </Col>
           </Row>
@@ -232,7 +232,7 @@ export default function AreasAndPositionsMassiveC() {
       </Screendefault>
 
       <Modal
-        title={t("organigrama.areasandpositions-E.modal-file.goes-file")}
+        title={t("organigram.areasandpositions-E.modal-file.goes-file")}
         visible={modalUpload}
         onCancel={closeModalUpload}
         onOk={sendUpload}
@@ -242,13 +242,13 @@ export default function AreasAndPositionsMassiveC() {
             className="secondary"
             onClick={closeModalUpload}
           >
-            {t("organigrama.areasandpositions-E.modal-file.btn-cancel")}
+            {t("organigram.areasandpositions-E.modal-file.btn-cancel")}
           </Button>,
           <input
             type="button"
             className="primary"
             onClick={sendUpload}
-            value={t("organigrama.areasandpositions-E.modal-file.btn-upload")}
+            value={t("organigram.areasandpositions-E.modal-file.btn-upload")}
           />,
         ]}
       >

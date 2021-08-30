@@ -32,17 +32,17 @@ export default function TreeDrop({ name }) {
     <Menu>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-collaborator">{t("organigrama.menu-treedrop.edit-colaborator")}</Link>
+          <Link to="/areasandpositions-collaborator">{t("organigram.menu-treedrop.edit-colaborator")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-addjob">{t("organigrama.menu-treedrop.edit-position")}</Link>
+          <Link to="/areasandpositions-addjob">{t("organigram.menu-treedrop.edit-position")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/eraser">{t("organigrama.menu-treedrop.edit-extructure")}</Link>
+          <Link to="/eraser">{t("organigram.menu-treedrop.edit-extructure")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -53,7 +53,7 @@ export default function TreeDrop({ name }) {
               setPermissions(true);
             }}
           >
-            {t("organigrama.menu-treedrop.add-permissions")}
+            {t("organigram.menu-treedrop.add-permissions")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -65,24 +65,24 @@ export default function TreeDrop({ name }) {
               setColor(true);
             }}
           >
-            {t("organigrama.menu-treedrop.define-colour")}
+            {t("organigram.menu-treedrop.define-colour")}
           </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-perfil">{t("organigrama.menu-treedrop.watch-proceedings")}</Link>
+          <Link to="/areasandpositions-perfil">{t("organigram.menu-treedrop.watch-proceedings")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()} disabled>
-          <Link to="#">{t("organigrama.menu-treedrop.watch-vacancies")}</Link>
+          <Link to="#">{t("organigram.menu-treedrop.watch-vacancies")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()} disabled>
-          <Link to="#">{t("organigrama.menu-treedrop.watch-objectives")}</Link>
+          <Link to="#">{t("organigram.menu-treedrop.watch-objectives")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -93,7 +93,7 @@ export default function TreeDrop({ name }) {
               setHistorialP(true);
             }}
           >
-           {t("organigrama.menu-treedrop.record-position")}
+           {t("organigram.menu-treedrop.record-position")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -105,7 +105,7 @@ export default function TreeDrop({ name }) {
               setHistorialC(true);
             }}
           >
-            {t("organigrama.menu-treedrop.record-collaborators")}
+            {t("organigram.menu-treedrop.record-collaborators")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -117,18 +117,18 @@ export default function TreeDrop({ name }) {
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: t("organigrama.menu-treedrop.modal-collaborator.drop-collaborators"),
+                titleModal: t("organigram.menu-treedrop.modal-collaborator.drop-collaborators"),
                 type: 0,
                 messageModal:
-                t("organigrama.menu-treedrop.modal-collaborator.text"),
+                t("organigram.menu-treedrop.modal-collaborator.text"),
                 messageWarning:
-                t("organigrama.menu-treedrop.modal-collaborator.text2"),
-                question: t("organigrama.menu-treedrop.modal-collaborator.safe-want-remove"),
+                t("organigram.menu-treedrop.modal-collaborator.text2"),
+                question: t("organigram.menu-treedrop.modal-collaborator.safe-want-remove"),
                 function: () => {return false;}
               });
             }}
           >
-             {t("organigrama.menu-treedrop.give-drop-collaborators")}
+             {t("organigram.menu-treedrop.give-drop-collaborators")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -139,17 +139,17 @@ export default function TreeDrop({ name }) {
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: t("organigrama.menu-treedrop.modal-position.remove-position"),
+                titleModal: t("organigram.menu-treedrop.modal-position.remove-position"),
                 type: 0,
                 messageModal:
-                t("organigrama.menu-treedrop.modal-position.text"),
-                messageWarning: t("organigrama.menu-treedrop.modal-position.text2"),
-                question:  t("organigrama.menu-treedrop.modal-position.safe-want-remove"),
+                t("organigram.menu-treedrop.modal-position.text"),
+                messageWarning: t("organigram.menu-treedrop.modal-position.text2"),
+                question:  t("organigram.menu-treedrop.modal-position.safe-want-remove"),
                 function: () => {return false;}
               });
             }}
           >
-           {t("organigrama.menu-treedrop.remove-position")}
+           {t("organigram.menu-treedrop.remove-position")}
           </Link>
         </Menu.Item>
       </Menu.Item>

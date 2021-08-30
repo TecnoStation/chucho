@@ -134,19 +134,19 @@ export default function Perfil() {
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
           <Link to="/organigrama/areasandpositions-collaborator">
-            {t("organigrama.areasandpositions-perfil.tab1.tab2.menu-positions.edit-collaborator")}
+            {t("organigram.areasandpositions-perfil.tab1.tab2.menu-positions.edit-collaborator")}
           </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/organigrama/areasandpositions-addjob">{t("organigrama.areasandpositions-perfil.tab1.tab2.menu-positions.edit-position")}</Link>
+          <Link to="/organigrama/areasandpositions-addjob">{t("organigram.areasandpositions-perfil.tab1.tab2.menu-positions.edit-position")}</Link>
         </Menu.Item>
       </Menu.Item>
 
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/organigrama/eraser">{t("organigrama.areasandpositions-perfil.tab1.tab2.menu-positions.edit-structure")}</Link>
+          <Link to="/organigrama/eraser">{t("organigram.areasandpositions-perfil.tab1.tab2.menu-positions.edit-structure")}</Link>
         </Menu.Item>
       </Menu.Item>
 
@@ -158,7 +158,7 @@ export default function Perfil() {
             }}
             to="#"
           >
-            {t("organigrama.areasandpositions-perfil.tab1.tab2.menu-positions.add-permissions")}
+            {t("organigram.areasandpositions-perfil.tab1.tab2.menu-positions.add-permissions")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -173,7 +173,7 @@ export default function Perfil() {
               setModalHistorialC(true);
             }}
           >
-            {t("organigrama.areasandpositions-perfil.tab1.tab2.menu-positions.historial-collaborator")}
+            {t("organigram.areasandpositions-perfil.tab1.tab2.menu-positions.historial-collaborator")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -186,7 +186,7 @@ export default function Perfil() {
               setHistorialJ(true);
             }}
           >
-            {t("organigrama.areasandpositions-perfil.tab1.tab2.menu-positions.historial-position")}
+            {t("organigram.areasandpositions-perfil.tab1.tab2.menu-positions.historial-position")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -209,7 +209,7 @@ export default function Perfil() {
               });
             }}
           >
-             {t("organigrama.areasandpositions-perfil.tab1.tab2.menu-positions.collaborator-down")}
+             {t("organigram.areasandpositions-perfil.tab1.tab2.menu-positions.collaborator-down")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -221,7 +221,7 @@ export default function Perfil() {
       <Menu.Item key="0">
         <Menu.Item key="3">
           <Link to="#" onClick={editSkills}>
-          {t("organigrama.areasandpositions-perfil.tab1.tab2.menu2-positions.edit-skills")}
+          {t("organigram.areasandpositions-perfil.tab1.tab2.menu2-positions.edit-skills")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -233,7 +233,7 @@ export default function Perfil() {
               setModalExperience(true);
             }}
           >
-           {t("organigrama.areasandpositions-perfil.tab1.tab2.menu2-positions.edit-experience")}
+           {t("organigram.areasandpositions-perfil.tab1.tab2.menu2-positions.edit-experience")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -250,7 +250,7 @@ export default function Perfil() {
               setExpedientUp(true);
             }}
           >
-             {t("organigrama.areasandpositions-perfil.tab1.menu-collaborator.add-file")}
+             {t("organigram.areasandpositions-perfil.tab1.menu-collaborator.add-file")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -262,7 +262,7 @@ export default function Perfil() {
               setModalHistorialC(true);
             }}
           >
-            {t("organigrama.areasandpositions-perfil.tab1.menu-collaborator.record-position")}
+            {t("organigram.areasandpositions-perfil.tab1.menu-collaborator.record-position")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -280,11 +280,11 @@ export default function Perfil() {
               </p>
             </Col>
             <Col className="gutter-row" span={18}>
-              <span>{t("organigrama.areasandpositions-perfil.tab1.text1")}</span>
+              <span>{t("organigram.areasandpositions-perfil.tab1.text1")}</span>
               <br></br>
-              <span>{t("organigrama.areasandpositions-perfil.tab1.text2")}</span>
+              <span>{t("organigram.areasandpositions-perfil.tab1.text2")}</span>
               <br></br>
-              <span className="iconGreen">{t("organigrama.areasandpositions-perfil.tab1.positions-mail")}</span>
+              <span className="iconGreen">{t("organigram.areasandpositions-perfil.tab1.positions-mail")}</span>
               <br></br>
             </Col>
             <Col className="gutter-row" span={2}>
@@ -316,14 +316,14 @@ export default function Perfil() {
                 <TabPane tab="Información colaborador" key="1">
                   <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                     <Col className="gutter-row" span={12}>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.birthday-date")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.birthday-date")}</b>
                       <br></br>
                       <span>
                       29-jun-1987
                       </span>
                     </Col>
                     <Col className="gutter-row" span={12}>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.entry-date")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.entry-date")}</b>
                       <br></br>
                       <span>
                       01-ENE-2015
@@ -336,14 +336,14 @@ export default function Perfil() {
                     style={{ marginTop: "20px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.gender")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.gender")}</b>
                       <br></br>
                       <span>
                       Masculino
                       </span>
                     </Col>
                     <Col className="gutter-row" span={12}>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.marital-status")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.marital-status")}</b>
                       <br></br>
                       <span>
                       Soltero
@@ -356,14 +356,14 @@ export default function Perfil() {
                     style={{ marginTop: "20px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.nationality")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.nationality")}</b>
                       <br></br>
                       <span>
                       Mexicana
                       </span>
                     </Col>
                     <Col className="gutter-row" span={12}>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.city")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.city")}</b>
                       <br></br>
                       <span>
                       Ciudad de México
@@ -376,7 +376,7 @@ export default function Perfil() {
                     style={{ marginTop: "20px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                     <b>{t("organigrama.areasandpositions-perfil.tab1.teams-which")}</b>
+                     <b>{t("organigram.areasandpositions-perfil.tab1.teams-which")}</b>
                     </Col>
                   </Row>
 
@@ -386,11 +386,11 @@ export default function Perfil() {
                     className="dividerBottomFull"
                   >
                     <Col className="gutter-row" span={12}>
-                      <span className="link">{t("organigrama.areasandpositions-perfil.tab1.team")}</span>
+                      <span className="link">{t("organigram.areasandpositions-perfil.tab1.team")}</span>
                     </Col>
                     <Col className="gutter-row" span={12}>
                       <span>
-                        <b>{t("organigrama.areasandpositions-perfil.tab1.master")}</b>
+                        <b>{t("organigram.areasandpositions-perfil.tab1.master")}</b>
                       </span>
                     </Col>
                   </Row>
@@ -400,7 +400,7 @@ export default function Perfil() {
                     style={{ marginTop: "10px" }}
                   >
                     <Col className="gutter-row" span={11}>
-                      <span className="link">{t("organigrama.areasandpositions-perfil.tab1.team-Evaluast-lik")}</span>
+                      <span className="link">{t("organigram.areasandpositions-perfil.tab1.team-Evaluast-lik")}</span>
                     </Col>
                     <Col className="gutter-row" span={13}>
                       <span>
@@ -415,7 +415,7 @@ export default function Perfil() {
                   >
                     <Col className="gutter-row" span={12}>
                       <span>
-                        <b>{t("organigrama.areasandpositions-perfil.tab1.proccess-result")}</b>
+                        <b>{t("organigram.areasandpositions-perfil.tab1.proccess-result")}</b>
                       </span>
                     </Col>
                   </Row>
@@ -425,7 +425,7 @@ export default function Perfil() {
                     style={{ marginTop: "8px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <span className="link">{t("organigrama.areasandpositions-perfil.tab1.evaluation")}</span>
+                      <span className="link">{t("organigram.areasandpositions-perfil.tab1.evaluation")}</span>
                     </Col>
                   </Row>
 
@@ -434,7 +434,7 @@ export default function Perfil() {
                     style={{ marginTop: "8px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <span className="link">{t("organigrama.areasandpositions-perfil.tab1.evaluation-a")}</span>
+                      <span className="link">{t("organigram.areasandpositions-perfil.tab1.evaluation-a")}</span>
                     </Col>
                   </Row>
                   <Row
@@ -442,7 +442,7 @@ export default function Perfil() {
                     style={{ marginTop: "8px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <span className="link">{t("organigrama.areasandpositions-perfil.tab1.evaluation-b")}</span>
+                      <span className="link">{t("organigram.areasandpositions-perfil.tab1.evaluation-b")}</span>
                     </Col>
                   </Row>
 
@@ -451,7 +451,7 @@ export default function Perfil() {
                     style={{ marginTop: "8px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <span className="link">{t("organigrama.areasandpositions-perfil.tab1.plans-developing")}</span>
+                      <span className="link">{t("organigram.areasandpositions-perfil.tab1.plans-developing")}</span>
                     </Col>
                   </Row>
 
@@ -466,29 +466,29 @@ export default function Perfil() {
                           setExpedient(true);
                         }}
                       >
-                        <span className="link">{t("organigrama.areasandpositions-perfil.tab1.proccedings")}</span>
+                        <span className="link">{t("organigram.areasandpositions-perfil.tab1.proccedings")}</span>
                       </Link>
                     </Col>
                   </Row>
                 </TabPane>
 
-                <TabPane tab={t("organigrama.areasandpositions-perfil.tab1.tab2.title")}key="2">
+                <TabPane tab={t("organigram.areasandpositions-perfil.tab1.tab2.title")}key="2">
                   <Row
                     gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
                     style={{ marginTop: "10px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.tab2.level-position")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.tab2.level-position")}</b>
                       <br></br>
                       <span>
-                      {t("organigrama.areasandpositions-perfil.tab1.tab2.manager")}
+                      {t("organigram.areasandpositions-perfil.tab1.tab2.manager")}
                       </span>
                     </Col>
                     <Col>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.tab2.level-post")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.tab2.level-post")}</b>
                       <br></br>
                       <span>
-                      {t("organigrama.areasandpositions-perfil.tab1.tab2.manager-a")}
+                      {t("organigram.areasandpositions-perfil.tab1.tab2.manager-a")}
                       </span>
                     </Col>
                   </Row>
@@ -498,17 +498,17 @@ export default function Perfil() {
                     style={{ marginTop: "10px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.tab2.taip-position")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.tab2.taip-position")}</b>
                       <br></br>
                       <span>
-                      {t("organigrama.areasandpositions-perfil.tab1.tab2.position-key")}
+                      {t("organigram.areasandpositions-perfil.tab1.tab2.position-key")}
                       </span>
                     </Col>
                     <Col>
-                     <b>{t("organigrama.areasandpositions-perfil.tab1.tab2.level-risk")}</b>
+                     <b>{t("organigram.areasandpositions-perfil.tab1.tab2.level-risk")}</b>
                       <br></br>
                       <span>
-                      {t("organigrama.areasandpositions-perfil.tab1.tab2.half")}
+                      {t("organigram.areasandpositions-perfil.tab1.tab2.half")}
                       </span>
                     </Col>
                   </Row>
@@ -518,17 +518,17 @@ export default function Perfil() {
                     style={{ marginTop: "10px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.tab2.branch")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.tab2.branch")}</b>
                       <br></br>
                       <span>
-                      {t("organigrama.areasandpositions-perfil.tab1.tab2.town")}
+                      {t("organigram.areasandpositions-perfil.tab1.tab2.town")}
                       </span>
                     </Col>
                     <Col>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.tab2.area")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.tab2.area")}</b>
                       <br></br>
                       <span>
-                      {t("organigrama.areasandpositions-perfil.tab1.tab2.marketing")}
+                      {t("organigram.areasandpositions-perfil.tab1.tab2.marketing")}
                       </span>
                     </Col>
                   </Row>
@@ -538,10 +538,10 @@ export default function Perfil() {
                     style={{ marginTop: "10px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.tab2.report-to")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.tab2.report-to")}</b>
                       <br></br>
                       <span>
-                      {t("organigrama.areasandpositions-perfil.tab1.tab2.direction-corporate")}
+                      {t("organigram.areasandpositions-perfil.tab1.tab2.direction-corporate")}
                       </span>
                     </Col>
                   </Row>
@@ -551,10 +551,10 @@ export default function Perfil() {
                     style={{ marginTop: "10px" }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <b>{t("organigrama.areasandpositions-perfil.tab1.tab2.mail-to")}</b>
+                      <b>{t("organigram.areasandpositions-perfil.tab1.tab2.mail-to")}</b>
                       <br></br>
                       <span>
-                      {t("organigrama.areasandpositions-perfil.tab1.tab2.name-mail")}
+                      {t("organigram.areasandpositions-perfil.tab1.tab2.name-mail")}
                       </span>
                     </Col>
                   </Row>
@@ -569,7 +569,7 @@ export default function Perfil() {
         <Col className={flag} span={12} style={{ paddingLeft: "30px" }}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={22}>
-              <h3>{t("organigrama.areasandpositions-perfil.tab1.skills-collaborator")}</h3>
+              <h3>{t("organigram.areasandpositions-perfil.tab1.skills-collaborator")}</h3>
             </Col>
             <Col className="gutter-row" span={2}>
               <Dropdown overlay={menu2} trigger={["click"]}>
@@ -590,12 +590,12 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={12}>
               <span>
-                <b>{t("organigrama.areasandpositions-perfil.tab1.level-studies")}</b>
+                <b>{t("organigram.areasandpositions-perfil.tab1.level-studies")}</b>
               </span>
             </Col>
             <Col className="gutter-row" span={12}>
               <span>
-                <b>{t("organigrama.areasandpositions-perfil.tab1.years")}</b>
+                <b>{t("organigram.areasandpositions-perfil.tab1.years")}</b>
               </span>
             </Col>
           </Row>
@@ -608,7 +608,7 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={12}>
               <span>
-                <b>{t("organigrama.areasandpositions-perfil.tab1.languages")}</b>
+                <b>{t("organigram.areasandpositions-perfil.tab1.languages")}</b>
               </span>
               <br />
             </Col>
@@ -635,7 +635,7 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={12}>
               <span>
-                <b>{t("organigrama.areasandpositions-perfil.tab1.skills-techniques")}</b>
+                <b>{t("organigram.areasandpositions-perfil.tab1.skills-techniques")}</b>
               </span>
             </Col>
           </Row>
@@ -659,7 +659,7 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={12}>
               <span>
-                <b>{t("organigrama.areasandpositions-perfil.tab1.experience-labor")}</b>
+                <b>{t("organigram.areasandpositions-perfil.tab1.experience-labor")}</b>
               </span>
             </Col>
             <Col className="gutter-row" span={12}>
@@ -670,7 +670,7 @@ export default function Perfil() {
                 }}
               >
                 {" "}
-                <PlusCircleOutlined /> {t("organigrama.areasandpositions-perfil.tab1.add-experience")}
+                <PlusCircleOutlined /> {t("organigram.areasandpositions-perfil.tab1.add-experience")}
               </Link>
             </Col>
           </Row>
@@ -687,7 +687,7 @@ export default function Perfil() {
         <Col className={flag2} span={12} style={{ paddingLeft: "30px" }}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={22}>
-              <h3>{t("organigrama.areasandpositions-perfil.tab1.tab2.skills-position")}</h3>
+              <h3>{t("organigram.areasandpositions-perfil.tab1.tab2.skills-position")}</h3>
             </Col>
             <Col className="gutter-row" span={2}>
               <Dropdown overlay={menu2} trigger={["click"]}>
@@ -707,17 +707,17 @@ export default function Perfil() {
             style={{ marginTop: "20px" }}
           >
             <Col className="gutter-row" span={12}>
-              <b>{t("organigrama.areasandpositions-perfil.tab1.tab2.level-study")}</b>
+              <b>{t("organigram.areasandpositions-perfil.tab1.tab2.level-study")}</b>
               <br></br>
               <span>
-              {t("organigrama.areasandpositions-perfil.tab1.tab2.bachelor")}
+              {t("organigram.areasandpositions-perfil.tab1.tab2.bachelor")}
               </span>
             </Col>
             <Col className="gutter-row" span={12}>
-             <b>{t("organigrama.areasandpositions-perfil.tab1.tab2.years")}</b>
+             <b>{t("organigram.areasandpositions-perfil.tab1.tab2.years")}</b>
               <br></br>
               <span>
-              {t("organigrama.areasandpositions-perfil.tab1.tab2.eight-years")}
+              {t("organigram.areasandpositions-perfil.tab1.tab2.eight-years")}
               </span>
             </Col>
           </Row>
@@ -727,7 +727,7 @@ export default function Perfil() {
             style={{ marginTop: "20px" }}
           >
             <Col className="gutter-row" span={12}>
-              <span>{t("organigrama.areasandpositions-perfil.tab1.tab2.languages")}</span>
+              <span>{t("organigram.areasandpositions-perfil.tab1.tab2.languages")}</span>
             </Col>
           </Row>
 
@@ -743,7 +743,7 @@ export default function Perfil() {
             style={{ marginTop: "20px" }}
           >
             <Col className="gutter-row" span={12}>
-              <span>{t("organigrama.areasandpositions-perfil.tab1.tab2.skills-techniques")}</span>
+              <span>{t("organigram.areasandpositions-perfil.tab1.tab2.skills-techniques")}</span>
             </Col>
           </Row>
 
@@ -858,7 +858,7 @@ export default function Perfil() {
         <Col className={flag3} span={12} style={{ paddingLeft: "30px" }}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={22}>
-              <h3>{t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.title")}</h3>
+              <h3>{t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.title")}</h3>
             </Col>
             <Col className="gutter-row" span={2}>
               <Dropdown overlay={menu2} trigger={["click"]}>
@@ -888,8 +888,8 @@ export default function Perfil() {
               style={{ marginTop: "20px" }}
             >
               <Col className="gutter-row" span={9}>
-                <Form.Item name="level" label={t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.level-education-label")}>
-                  <Select placeholder={t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.education-superior-placeholder")}>
+                <Form.Item name="level" label={t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.level-education-label")}>
+                  <Select placeholder={t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.education-superior-placeholder")}>
                     <Option value="Educacion Medio Superior">
                       Educacion Medio Superior
                     </Option>
@@ -903,8 +903,8 @@ export default function Perfil() {
               </Col>
 
               <Col className="gutter-row" span={9}>
-                <Form.Item name="years" label={t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.years-experience-label")}>
-                  <Select placeholder={t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.select-option-placeholder")}>
+                <Form.Item name="years" label={t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.years-experience-label")}>
+                  <Select placeholder={t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.select-option-placeholder")}>
                     <Option value="1 Año">1 Año</Option>
                     <Option value="2 Años">2 Años</Option>
                     <Option value="3 Años">3 Años</Option>
@@ -917,7 +917,7 @@ export default function Perfil() {
                 span={2}
               >
                 <Button htmlType="submit" className="primary">
-                {t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.btn-save0")}
+                {t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.btn-save0")}
                 </Button>
               </Col>
             </Row>
@@ -938,8 +938,8 @@ export default function Perfil() {
               style={{ marginTop: "20px" }}
             >
               <Col className="gutter-row" span={18}>
-                <Form.Item name="techniqueskills" label={t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.techniques-label")}>
-                  <Input type="text" placeholder={t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.truck-load-placeholder")} />
+                <Form.Item name="techniqueskills" label={t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.techniques-label")}>
+                  <Input type="text" placeholder={t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.truck-load-placeholder")} />
                 </Form.Item>
               </Col>
 
@@ -949,7 +949,7 @@ export default function Perfil() {
                 span={2}
               >
                 <Button htmlType="submit" className="primary">
-                {t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.btn-save")}
+                {t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.btn-save")}
                 </Button>
               </Col>
             </Row>
@@ -971,8 +971,8 @@ export default function Perfil() {
               style={{ marginTop: "20px" }}
             >
               <Col className="gutter-row" span={18}>
-                <Form.Item name="languajes" label={t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.languages-label")}>
-                  <Input type="text" placeholder={t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.english-advanced-placeholder")} />
+                <Form.Item name="languajes" label={t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.languages-label")}>
+                  <Input type="text" placeholder={t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.english-advanced-placeholder")} />
                 </Form.Item>
               </Col>
 
@@ -982,7 +982,7 @@ export default function Perfil() {
                 span={2}
               >
                 <Button htmlType="submit" className="primary">
-                {t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.btn-save2")}
+                {t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.btn-save2")}
                 </Button>
               </Col>
             </Row>
@@ -993,7 +993,7 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={24}>
               <span>
-                <b>{t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.experience-professional")}</b>
+                <b>{t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.experience-professional")}</b>
               </span>
             </Col>
           </Row>
@@ -1009,7 +1009,7 @@ export default function Perfil() {
                 }}
               >
                 {" "}
-                <PlusCircleOutlined /> {t("organigrama.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.add-experience")}
+                <PlusCircleOutlined /> {t("organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.add-experience")}
               </Link>
             </Col>
           </Row>

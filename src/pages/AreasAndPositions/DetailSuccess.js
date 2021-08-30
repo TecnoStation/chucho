@@ -11,7 +11,9 @@ export default function DetailSuccess() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={24}>
-          <h3>{t("organigrama.areasandpositions-detailSuccess.title-detailfile")}</h3>
+          <h3>
+            {t("organigram.areasandpositions-detailsuccess.title-detailfile")}
+          </h3>
         </Col>
       </Row>
 
@@ -22,7 +24,9 @@ export default function DetailSuccess() {
         <Col className="gutter-row" span={8}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <h3>{t("organigrama.areasandpositions-detailSuccess.abstract")}</h3>
+              <h3>
+                {t("organigram.areasandpositions-detailSuccess.abstract")}
+              </h3>
             </Col>
           </Row>
 
@@ -32,7 +36,9 @@ export default function DetailSuccess() {
           >
             <Col className="gutter-row" span={3}></Col>
             <Col className="gutter-row" span={7}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>{t("organigrama.areasandpositions-detailSuccess.file")}</p>
+              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+                {t("organigram.areasandpositions-detailSuccess.file")}
+              </p>
             </Col>
             <Col className="gutter-row" span={13}>
               <p>organigrama2018.csv</p>
@@ -45,7 +51,9 @@ export default function DetailSuccess() {
           >
             <Col className="gutter-row" span={3}></Col>
             <Col className="gutter-row" span={7}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>{t("organigrama.areasandpositions-detailSuccess.username")}</p>
+              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+                {t("organigram.areasandpositions-detailSuccess.username")}
+              </p>
             </Col>
             <Col className="gutter-row" span={13}>
               <p>Demo Soporte TI</p>
@@ -58,7 +66,9 @@ export default function DetailSuccess() {
           >
             <Col className="gutter-row" span={3}></Col>
             <Col className="gutter-row" span={7}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>{t("organigrama.areasandpositions-detailSuccess.status")}</p>
+              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+                {t("organigram.areasandpositions-detailSuccess.status")}
+              </p>
             </Col>
             <Col className="gutter-row" span={13}>
               <p className="iconGreen" style={{ fontWeight: "bold" }}>
@@ -74,7 +84,7 @@ export default function DetailSuccess() {
             <Col className="gutter-row" span={3}></Col>
             <Col className="gutter-row" span={7}>
               <p style={{ fontWeight: "bold", textAlign: "right" }}>
-              {t("organigrama.areasandpositions-detailSuccess.total-mistakes")}
+                {t("organigram.areasandpositions-detailSuccess.total-mistakes")}
               </p>
             </Col>
             <Col className="gutter-row" span={12}>
@@ -88,7 +98,7 @@ export default function DetailSuccess() {
           >
             <Col className="gutter-row" span={10}>
               <p style={{ fontWeight: "bold", textAlign: "right" }}>
-              {t("organigrama.areasandpositions-detailSuccess.date-load")}
+                {t("organigram.areasandpositions-detailSuccess.date-load")}
               </p>
             </Col>
             <Col className="gutter-row" span={13}>

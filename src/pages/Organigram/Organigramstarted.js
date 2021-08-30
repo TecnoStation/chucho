@@ -15,9 +15,9 @@ export default function Organigramstarted() {
           <img alt="ico" className="" src={Start} />
         </p>
         <br />
-        <h1>{t("organigrama.empty-organigram-layout.h1-welcome")}</h1>
+        <h1>{t("organigram.empty-organigram-layout.h1-welcome")}</h1>
         <p>
-        {t("organigrama.empty-organigram-layout.p-row1")}
+        {t("organigram.empty-organigram-layout.p-row1")}
         </p>
         <br />
         <p>
@@ -26,7 +26,7 @@ export default function Organigramstarted() {
             style={{ width: "100px" }}
             onClick={showMesage}
           >
-            {t("organigrama.empty-organigram-layout.btn-start")}
+            {t("organigram.empty-organigram-layout.btn-start")}
           </Button>
         </p>
       </div>

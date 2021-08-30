@@ -59,7 +59,7 @@ export default function Collaborator() {
       <Menu.Item key="0">
         <Menu.Item key="3">
           <Link to="#" onClick={addPermissions}>
-            {t("organigrama.collaborator-form.menu.add-permissions")}
+            {t("organigram.collaborator-form.menu.add-permissions")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -67,7 +67,7 @@ export default function Collaborator() {
       <Menu.Item key="0">
         <Menu.Item key="3" disabled>
           <Link to="#">
-            {t("organigrama.collaborator-form.menu.view-objetives")}
+            {t("organigram.collaborator-form.menu.view-objetives")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -75,7 +75,7 @@ export default function Collaborator() {
       <Menu.Item key="0">
         <Menu.Item key="3">
           <Link to="/organigrama/areasandpositions-perfil">
-            {t("organigrama.collaborator-form.menu.view-proceedings")}
+            {t("organigram.collaborator-form.menu.view-proceedings")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -83,7 +83,7 @@ export default function Collaborator() {
       <Menu.Item key="0">
         <Menu.Item key="3">
           <Link onClick={openModalDocuments} to="#">
-            {t("organigrama.collaborator-form.menu.assign-documents")}
+            {t("organigram.collaborator-form.menu.assign-documents")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -95,16 +95,16 @@ export default function Collaborator() {
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: t("organigrama.delete-collaborator.title"),
-                messageModal: t("organigrama.delete-collaborator.text"),
+                titleModal: t("organigram.delete-collaborator.title"),
+                messageModal: t("organigram.delete-collaborator.text"),
                 messageWarning: t(
-                  "organigrama.delete-collaborator.warning.text"
+                  "organigram.delete-collaborator.warning.text"
                 ),
-                question: t("organigrama.delete-collaborator.warning.question"),
+                question: t("organigram.delete-collaborator.warning.question"),
               });
             }}
           >
-            {t("organigrama.collaborator-form.menu.delete-collaborator")}
+            {t("organigram.collaborator-form.menu.delete-collaborator")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -125,7 +125,7 @@ export default function Collaborator() {
         <Col className="gutter-row" span={11}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col span={22} style={{ textAlign: "left" }}>
-              <h1>{t("organigrama.collaborator-form.title")}</h1>
+              <h1>{t("organigram.collaborator-form.title")}</h1>
             </Col>
             <Col span={2}>
               <Dropdown overlay={menu} trigger={["click"]}>
@@ -155,7 +155,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={24}>
               <Form.Item
                 name="size"
-                label={t("organigrama.collaborator-form.position-label")}
+                label={t("organigram.collaborator-form.position-label")}
                 rules={[
                   {
                     required: true,
@@ -165,7 +165,7 @@ export default function Collaborator() {
               >
                 <Select
                   placeholder={t(
-                    "organigrama.collaborator-form.position-placeholder"
+                    "organigram.collaborator-form.position-placeholder"
                   )}
                 >
                   <Option value="jack">Jack</Option>
@@ -180,7 +180,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={24}>
               <Form.Item
                 name="name"
-                label={t("organigrama.collaborator-form.name-label")}
+                label={t("organigram.collaborator-form.name-label")}
                 rules={[
                   {
                     required: true,
@@ -191,7 +191,7 @@ export default function Collaborator() {
                 <Input
                   type="text"
                   placeholder={t(
-                    "organigrama.collaborator-form.name-placeholder"
+                    "organigram.collaborator-form.name-placeholder"
                   )}
                 />
               </Form.Item>
@@ -202,7 +202,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="firstname"
-                label={t("organigrama.collaborator-form.first-name-label")}
+                label={t("organigram.collaborator-form.first-name-label")}
                 rules={[
                   {
                     required: true,
@@ -213,7 +213,7 @@ export default function Collaborator() {
                 <Input
                   type="text"
                   placeholder={t(
-                    "organigrama.collaborator-form.first-name-placeholder"
+                    "organigram.collaborator-form.first-name-placeholder"
                   )}
                 />
               </Form.Item>
@@ -221,12 +221,12 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="lastName"
-                label={t("organigrama.collaborator-form.last-name-label")}
+                label={t("organigram.collaborator-form.last-name-label")}
               >
                 <Input
                   type="text"
                   placeholder={t(
-                    "organigrama.collaborator-form.last-name-placeholder"
+                    "organigram.collaborator-form.last-name-placeholder"
                   )}
                 />
               </Form.Item>
@@ -237,7 +237,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="birthday"
-                label={t("organigrama.collaborator-form.date-brithday-label")}
+                label={t("organigram.collaborator-form.date-brithday-label")}
                 rules={[
                   {
                     required: true,
@@ -251,7 +251,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="noationality"
-                label={t("organigrama.collaborator-form.nationality-label")}
+                label={t("organigram.collaborator-form.nationality-label")}
                 rules={[
                   {
                     required: true,
@@ -262,7 +262,7 @@ export default function Collaborator() {
                 <Input
                   type="text"
                   placeholder={t(
-                    "organigrama.collaborator-form.nationality-placeholder"
+                    "organigram.collaborator-form.nationality-placeholder"
                   )}
                 />
               </Form.Item>
@@ -273,7 +273,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="stateMarital"
-                label={t("organigrama.collaborator-form.marital-status-label")}
+                label={t("organigram.collaborator-form.marital-status-label")}
                 rules={[
                   {
                     required: true,
@@ -283,7 +283,7 @@ export default function Collaborator() {
               >
                 <Select
                   placeholder={t(
-                    "organigrama.collaborator-form.marital-status-placeholder"
+                    "organigram.collaborator-form.marital-status-placeholder"
                   )}
                 >
                   <Option value="jack">Jack</Option>
@@ -295,7 +295,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="gender"
-                label={t("organigrama.collaborator-form.gender-label")}
+                label={t("organigram.collaborator-form.gender-label")}
                 rules={[
                   {
                     required: true,
@@ -305,7 +305,7 @@ export default function Collaborator() {
               >
                 <Select
                   placeholder={t(
-                    "organigrama.collaborator-form.gender-placeholder"
+                    "organigram.collaborator-form.gender-placeholder"
                   )}
                 >
                   <Option value="jack">Jack</Option>
@@ -321,7 +321,7 @@ export default function Collaborator() {
               <Form.Item
                 name="email"
                 label={t(
-                  "organigrama.collaborator-form.email-collaborator-label"
+                  "organigram.collaborator-form.email-collaborator-label"
                 )}
                 rules={[
                   {
@@ -333,7 +333,7 @@ export default function Collaborator() {
                 <Input
                   type="text"
                   placeholder={t(
-                    "organigrama.collaborator-form.email-collaborator-placeholder"
+                    "organigram.collaborator-form.email-collaborator-placeholder"
                   )}
                 />
               </Form.Item>
@@ -344,7 +344,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="dateBegin"
-                label={t("organigrama.collaborator-form.date-admission-label")}
+                label={t("organigram.collaborator-form.date-admission-label")}
                 rules={[
                   {
                     required: true,
@@ -358,7 +358,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="idCollaborator"
-                label={t("organigrama.collaborator-form.id-colaborator-label")}
+                label={t("organigram.collaborator-form.id-colaborator-label")}
                 rules={[
                   {
                     required: true,
@@ -368,7 +368,7 @@ export default function Collaborator() {
               >
                 <Select
                   placeholder={t(
-                    "organigrama.collaborator-form.id-colaborator-placeholder"
+                    "organigram.collaborator-form.id-colaborator-placeholder"
                   )}
                 >
                   <Option value="jack">Jack</Option>
@@ -385,7 +385,7 @@ export default function Collaborator() {
             <Col className="gutter-row" span={12}>
               <Form.Item
                 name="city"
-                label={t("organigrama.collaborator-form.city-label")}
+                label={t("organigram.collaborator-form.city-label")}
                 rules={[
                   {
                     required: true,
@@ -395,7 +395,7 @@ export default function Collaborator() {
               >
                 <Select
                   placeholder={t(
-                    "organigrama.collaborator-form.city-placeholder"
+                    "organigram.collaborator-form.city-placeholder"
                   )}
                 >
                   <Option value="jack">Jack</Option>
@@ -406,8 +406,8 @@ export default function Collaborator() {
             </Col>
             <Col className="gutter-row" span={12}>
               <Form.Item
-                name={t("organigrama.collaborator-form.salari-placeholde")}
-                label={t("organigrama.collaborator-form.salary-label")}
+                name={t("organigram.collaborator-form.salari-placeholde")}
+                label={t("organigram.collaborator-form.salary-label")}
                 rules={[
                   {
                     required: true,
@@ -418,7 +418,7 @@ export default function Collaborator() {
                 <Input
                   type="text"
                   placeholder={t(
-                    "organigrama.collaborator-form.salary-placeholder"
+                    "organigram.collaborator-form.salary-placeholder"
                   )}
                 />
               </Form.Item>
@@ -435,11 +435,11 @@ export default function Collaborator() {
                     message: "*Campo requerido",
                   },
                 ]}
-                label={t("organigrama.collaborator-form.area-label")}
+                label={t("organigram.collaborator-form.area-label")}
               >
                 <Select
                   placeholder={t(
-                    "organigrama.collaborator-form.area-placeholder"
+                    "organigram.collaborator-form.area-placeholder"
                   )}
                 >
                   <Option value="jack">Jack</Option>
@@ -457,11 +457,11 @@ export default function Collaborator() {
                     message: "*Campo requerido",
                   },
                 ]}
-                label={t("organigrama.collaborator-form.branch-label")}
+                label={t("organigram.collaborator-form.branch-label")}
               >
                 <Select
                   placeholder={t(
-                    "organigrama.collaborator-form.branch-placeholder"
+                    "organigram.collaborator-form.branch-placeholder"
                   )}
                 >
                   <Option value="jack">Jack</Option>
@@ -482,12 +482,12 @@ export default function Collaborator() {
                     message: "*Campo requerido",
                   },
                 ]}
-                label={t("organigrama.collaborator-form.report-to-label")}
+                label={t("organigram.collaborator-form.report-to-label")}
               >
                 <Input
                   type="text"
                   placeholder={t(
-                    "organigrama.collaborator-form.report-to-placeholder"
+                    "organigram.collaborator-form.report-to-placeholder"
                   )}
                 />
               </Form.Item>
@@ -505,12 +505,12 @@ export default function Collaborator() {
                   },
                 ]}
                 label={t(
-                  "organigrama.collaborator-form.educational-level-label"
+                  "organigram.collaborator-form.educational-level-label"
                 )}
               >
                 <Select
                   placeholder={t(
-                    "organigrama.collaborator-form.educational-level-placeholder"
+                    "organigram.collaborator-form.educational-level-placeholder"
                   )}
                 >
                   <Option value="jack">Jack</Option>
@@ -529,12 +529,12 @@ export default function Collaborator() {
                   },
                 ]}
                 label={t(
-                  "organigrama.collaborator-form.years-experience-label"
+                  "organigram.collaborator-form.years-experience-label"
                 )}
               >
                 <Select
                   placeholder={t(
-                    "organigrama.collaborator-form.years-experience-placeholder"
+                    "organigram.collaborator-form.years-experience-placeholder"
                   )}
                 >
                   <Option value="jack">Jack</Option>
@@ -555,12 +555,12 @@ export default function Collaborator() {
                     message: "*Campo requerido",
                   },
                 ]}
-                label={t("organigrama.collaborator-form.skills-label")}
+                label={t("organigram.collaborator-form.skills-label")}
               >
                 <Input
                   type="text"
                   placeholder={t(
-                    "organigrama.collaborator-form.skills-placeholder"
+                    "organigram.collaborator-form.skills-placeholder"
                   )}
                 />
               </Form.Item>
@@ -577,12 +577,12 @@ export default function Collaborator() {
                     message: "*Campo requerido",
                   },
                 ]}
-                label={t("organigrama.collaborator-form.languajes-label")}
+                label={t("organigram.collaborator-form.languajes-label")}
               >
                 <Input
                   type="text"
                   placeholder={t(
-                    "organigrama.collaborator-form.languajes-placeholder"
+                    "organigram.collaborator-form.languajes-placeholder"
                   )}
                 />
               </Form.Item>
@@ -591,18 +591,18 @@ export default function Collaborator() {
 
           <Row style={{ marginTop: "300px" }}>
             <Col className="gutter-row" span={15}>
-              {t("organigrama.collaborator-form.text-footer")}
+              {t("organigram.collaborator-form.text-footer")}
             </Col>
             <Col className="gutter-row" span={5}>
               <Link to="/areasandpositions?tab=2">
                 <Button className="secondary">
-                  {t("organigrama.collaborator-form.btn-cancel")}
+                  {t("organigram.collaborator-form.btn-cancel")}
                 </Button>
               </Link>
             </Col>
             <Col className="gutter-row" span={3}>
               <Button htmlType="submit" className="primary">
-                {t("organigrama.collaborator-form.btn-save")}
+                {t("organigram.collaborator-form.btn-save")}
               </Button>
             </Col>
           </Row>
@@ -611,12 +611,12 @@ export default function Collaborator() {
           <p style={{ textAlign: "center" }}>
             <img alt="ico" width="140" src={Bien} />
           </p>
-          <h3>{t("organigrama.collaborator-form.well-done")}</h3>
-          <h3>{t("organigrama.collaborator-form.organization-created")}</h3>
+          <h3>{t("organigram.collaborator-form.well-done")}</h3>
+          <h3>{t("organigram.collaborator-form.organization-created")}</h3>
           <br />
           <Link to="/organigrama/organigram">
             <Button className="primary">
-              {t("organigrama.collaborator-form.btn-done")}
+              {t("organigram.collaborator-form.btn-done")}
             </Button>
           </Link>
         </Screendefault>

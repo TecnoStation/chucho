@@ -159,7 +159,7 @@ export default function AreasAndPositions() {
       >
         <TabPane
           className="tabPane"
-          tab={t("organigrama.areas-and-positions.structure.tab-name")}
+          tab={t("organigram.areas-and-positions.structure.tab-name")}
           key="1"
         >
           <div className="info">
@@ -167,7 +167,7 @@ export default function AreasAndPositions() {
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={11}>
                   <h2 style={{ textAlign: "left" }}>
-                    {t("organigrama.areas-and-positions.structure.title")}
+                    {t("organigram.areas-and-positions.structure.title")}
                   </h2>
 
                   <div style={{ marginTop: "20px" }} className="formWork">
@@ -177,16 +177,27 @@ export default function AreasAndPositions() {
                         span={10}
                         style={{ textAlign: "left" }}
                       >
-                        <Link to="/organigrama/areasandpositions-massivee">
+                        <Link
+                          to={
+                            "/" +
+                            t("routes.organigram") +
+                            "/" +
+                            t("paths_organigram.areasandpositions-massivee")
+                          }
+                        >
                           <Button
                             className="third"
-                            style={{ textAlign: "left", marginRight: "16px" }}
+                            style={{
+                              textAlign: "left",
+                              marginRight: "16px",
+                              pointerEvents: "none",
+                            }}
                             icon={<ImArrowUp className="iconAjust2" />}
                           >
                             {" "}
                             <span className="textAjust2">
                               {t(
-                                "organigrama.areas-and-positions.structure.btn-load-masive"
+                                "organigram.areas-and-positions.structure.btn-load-masive"
                               )}
                             </span>
                           </Button>
@@ -195,29 +206,32 @@ export default function AreasAndPositions() {
                       <Col
                         className="gutter-row"
                         span={14}
-                        style={{ textAlign: "left" }}
+                        style={{
+                          textAlign: "left",
+                        }}
                       >
-                        <Button
-                          className="btnBlue third"
-                          onClick={() => {
-                            setModalDownload(true);
-                          }}
-                          size="default"
-                        >
-                          {" "}
-                          <IoMdCloudDownload className="iconAjust" />{" "}
-                          <span className="textAjust">
-                            {t(
-                              "organigrama.areas-and-positions.structure.btn-download-file"
-                            )}
-                          </span>{" "}
-                        </Button>
+                        <Link to="#">
+                          <Button
+                            onClick={() => {
+                              setModalDownload(true);
+                            }}
+                            className="btnBlue third"
+                            size="default"
+                          >
+                            <IoMdCloudDownload className="iconAjust" />{" "}
+                            <span className="textAjust">
+                              {t(
+                                "organigram.areas-and-positions.structure.btn-download-file"
+                              )}
+                            </span>{" "}
+                          </Button>
+                        </Link>
                       </Col>
                     </Row>
                     <Row style={{ marginTop: "20px" }}>
                       <Col>
                         <p>
-                          {t("organigrama.areas-and-positions.structure.text1")}
+                          {t("organigram.areas-and-positions.structure.text1")}
                         </p>
                       </Col>
                     </Row>
@@ -276,7 +290,7 @@ export default function AreasAndPositions() {
                           {" "}
                           <PlusCircleOutlined />{" "}
                           {t(
-                            "organigrama.areas-and-positions.structure.link-add-new-area"
+                            "organigram.areas-and-positions.structure.link-add-new-area"
                           )}
                         </Link>
                       </Col>
@@ -291,12 +305,12 @@ export default function AreasAndPositions() {
                 >
                   <h2>
                     {t(
-                      "organigrama.areas-and-positions.structure.positions-in-area"
+                      "organigram.areas-and-positions.structure.positions-in-area"
                     )}
                   </h2>
                   <p>
                     {t(
-                      "organigrama.areas-and-positions.structure.insert- your-positions"
+                      "organigram.areas-and-positions.structure.insert- your-positions"
                     )}
                   </p>
 
@@ -340,7 +354,7 @@ export default function AreasAndPositions() {
                       >
                         <PlusCircleOutlined />{" "}
                         {t(
-                          "organigrama.areas-and-positions.structure.link-add-position"
+                          "organigram.areas-and-positions.structure.link-add-position"
                         )}
                       </Link>
                     </Col>
@@ -362,13 +376,13 @@ export default function AreasAndPositions() {
                       style={{ marginRight: "15px" }}
                     >
                       {t(
-                        "organigrama.areas-and-positions.structure.btn-cancel"
+                        "organigram.areas-and-positions.structure.btn-cancel"
                       )}
                     </Button>
                   </Link>
                   {firtFlag ? (
                     <Button htmlType="submit" className="primary">
-                      {t("organigrama.areas-and-positions.structure.btn-save")}
+                      {t("organigram.areas-and-positions.structure.btn-save")}
                     </Button>
                   ) : (
                     <Link to="/organigrama/mybusiness">
@@ -393,14 +407,14 @@ export default function AreasAndPositions() {
                 <span>
                   <b>
                     {t(
-                      "organigrama.areas-and-positions.position.title-position"
+                      "organigram.areas-and-positions.position.title-position"
                     )}
                   </b>
                 </span>
                 <br />
                 <span className="iconGreen">
                   {t(
-                    "organigrama.areas-and-positions.position.total-positions"
+                    "organigram.areas-and-positions.position.total-positions"
                   )}
                 </span>
               </Col>
@@ -410,16 +424,27 @@ export default function AreasAndPositions() {
                 className="gutter-row"
                 span={18}
               >
-                <Link to="/organigrama/areasandpositions-massivep">
+                <Link
+                  to={
+                    "/" +
+                    t("routes.organigram") +
+                    "/" +
+                    t("paths_organigram.areasandpositions-massivep")
+                  }
+                >
                   <Button
                     className="third"
-                    style={{ textAlign: "left", marginRight: "20px" }}
+                    style={{
+                      textAlign: "left",
+                      marginRight: "20px",
+                      pointerEvents: "none",
+                    }}
                     icon={<ImArrowUp className="iconAjust2" />}
                   >
                     {" "}
                     <span className="textAjust2">
                       {t(
-                        "organigrama.areas-and-positions.position.btn-load-masive"
+                        "organigram.areas-and-positions.position.btn-load-masive"
                       )}
                     </span>
                   </Button>
@@ -436,7 +461,7 @@ export default function AreasAndPositions() {
                   <IoMdCloudDownload className="iconAjust" />{" "}
                   <span className="textAjust">
                     {t(
-                      "organigrama.areas-and-positions.position.btn-download-file"
+                      "organigram.areas-and-positions.position.btn-download-file"
                     )}
                   </span>{" "}
                 </Button>
@@ -445,28 +470,28 @@ export default function AreasAndPositions() {
                   style={{ width: "250px" }}
                   addonAfter={<SearchOutlined />}
                   placeholder={t(
-                    "organigrama.areas-and-positions.position.placeholder-input"
+                    "organigram.areas-and-positions.position.placeholder-input"
                   )}
                   onKeyUp={filterJob}
                 />
               </Col>
               <Row className="info2 dividerBottomFull">
                 <Col span={8}>
-                  {t("organigrama.areas-and-positions.position.position-name")}
+                  {t("organigram.areas-and-positions.position.position-name")}
                 </Col>
                 <Col span={4}>
                   {t(
-                    "organigrama.areas-and-positions.position.basic-information"
+                    "organigram.areas-and-positions.position.basic-information"
                   )}
                 </Col>
                 <Col span={4}>
-                  {t("organigrama.areas-and-positions.position.profiling")}
+                  {t("organigram.areas-and-positions.position.profiling")}
                 </Col>
                 <Col span={4}>
-                  {t("organigrama.areas-and-positions.position.skills")}
+                  {t("organigram.areas-and-positions.position.skills")}
                 </Col>
                 <Col span={4}>
-                  {t("organigrama.areas-and-positions.position.actions")}
+                  {t("organigram.areas-and-positions.position.actions")}
                 </Col>
               </Row>
 
@@ -505,7 +530,7 @@ export default function AreasAndPositions() {
                         type="text"
                         value={PositionInfo}
                         placeholder={t(
-                          "organigrama.areas-and-positions.position.input-placeholder-position"
+                          "organigram.areas-and-positions.position.input-placeholder-position"
                         )}
                       />
                     </Form.Item>
@@ -520,12 +545,12 @@ export default function AreasAndPositions() {
                       }}
                       className="secondary"
                     >
-                      {t("organigrama.areas-and-positions.position.btn-cancel")}
+                      {t("organigram.areas-and-positions.position.btn-cancel")}
                     </Button>
                   </Col>
                   <Col span={2} style={{ textAlign: "left" }}>
                     <Button htmlType="submit" className="primary">
-                      {t("organigrama.areas-and-positions.position.btn-save")}
+                      {t("organigram.areas-and-positions.position.btn-save")}
                     </Button>
                   </Col>
                   <Col span={10}></Col>
@@ -548,7 +573,7 @@ export default function AreasAndPositions() {
                   >
                     <PlusCircleOutlined className="iconsize" />{" "}
                     {t(
-                      "organigrama.areas-and-positions.position.link-add-new-position"
+                      "organigram.areas-and-positions.position.link-add-new-position"
                     )}
                     del puesto
                   </Link>
@@ -567,13 +592,13 @@ export default function AreasAndPositions() {
                       className="secondary"
                       style={{ marginRight: "15px" }}
                     >
-                      {t("organigrama.areas-and-positions.position.btn-cancel")}
+                      {t("organigram.areas-and-positions.position.btn-cancel")}
                     </Button>
                   </Link>
 
                   {firtFlag ? (
                     <Button htmlType="submit" className="primary">
-                      {t("organigrama.areas-and-positions.structure.btn-save")}
+                      {t("organigram.areas-and-positions.structure.btn-save")}
                     </Button>
                   ) : (
                     <Link to="/organigrama/mybusiness">

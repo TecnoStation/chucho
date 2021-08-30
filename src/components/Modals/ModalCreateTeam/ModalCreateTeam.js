@@ -218,7 +218,7 @@ function ModalCreateTeam({
   return (
     <>
       <Modal
-        title={editionMode ? t("organigrama.teams-modal.title2") : t("organigrama.teams-modal.title")}
+        title={editionMode ? t("organigram.teams-modal.title2") : t("organigram.teams-modal.title")}
         className="largeModal"
         visible={createTeamModal}
         onCancel={() => {
@@ -241,7 +241,7 @@ function ModalCreateTeam({
               <Form.Item
                 style={{ textAlign: "left" }}
                 name="teamName"
-                label={t("organigrama.teams-modal.name-team-label")}
+                label={t("organigram.teams-modal.name-team-label")}
              rules={[
                   {
                     required: true,
@@ -251,7 +251,7 @@ function ModalCreateTeam({
               >
                 <Input
                   type="text"
-                  placeholder={t("organigrama.teams-modal.placeholder-imput-name")}
+                  placeholder={t("organigram.teams-modal.placeholder-imput-name")}
                 />
               </Form.Item>
             </Col>
@@ -259,7 +259,7 @@ function ModalCreateTeam({
               <Form.Item
                 style={{ textAlign: "left" }}
                 name="type"
-                label={t("organigrama.teams-modal.kind-team-label")}
+                label={t("organigram.teams-modal.kind-team-label")}
                 tooltip="info"
                 rules={[
                   {
@@ -269,7 +269,7 @@ function ModalCreateTeam({
                 ]}
               >
                 <Select
-                  placeholder={t("organigrama.teams-modal.placeholder-imput-selec")}
+                  placeholder={t("organigram.teams-modal.placeholder-imput-selec")}
                   onChange={showInput}
                 >
                   <Option value="0">Personalizado</Option>
@@ -280,7 +280,7 @@ function ModalCreateTeam({
           </Row>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={12}>
-              <Form.Item name="addCollaborators" label={t("organigrama.teams-modal.add-collaborators-label")}>
+              <Form.Item name="addCollaborators" label={t("organigram.teams-modal.add-collaborators-label")}>
                 <AutoComplete
                   id="filter"
                   dropdownClassName="certain-category-search-dropdown"
@@ -289,14 +289,14 @@ function ModalCreateTeam({
                   onChange={onchange}
                   onKeyUp={filter}
                 >
-                  <Input.Search placeholder={t("organigrama.teams-modal.placeholder-imput-search")}/>
+                  <Input.Search placeholder={t("organigram.teams-modal.placeholder-imput-search")}/>
                 </AutoComplete>
               </Form.Item>
             </Col>
             <Col className="gutter-row" style={{ textAlign: "left" }} span={12}>
               <Form.Item
                 name="Modality"
-                label={t("organigrama.teams-modal.modality-label")}
+                label={t("organigram.teams-modal.modality-label")}
                 tooltip="info"
                 rules={[
                   {
@@ -305,7 +305,7 @@ function ModalCreateTeam({
                   },
                 ]}
               >
-                <Select placeholder={t("organigrama.teams-modal.placeholder-imput-option")}>
+                <Select placeholder={t("organigram.teams-modal.placeholder-imput-option")}>
                   <Option value="jack">Funcional</Option>
                   <Option value="lucy">Lucy</Option>
                   <Option value="tom">Tom</Option>
@@ -318,10 +318,10 @@ function ModalCreateTeam({
             <Col style={{ paddingLeft: "20px", textAlign: "left" }} span={12}>
               <Form.Item
                 name="frameWork"
-                label={t("organigrama.teams-modal.members-team")}
+                label={t("organigram.teams-modal.members-team")}
                 tooltip="info"
               >
-                <Select placeholder={t("organigrama.teams-modal.placeholder-imput-optiona")}>
+                <Select placeholder={t("organigram.teams-modal.placeholder-imput-optiona")}>
                   <Option value="SCRUM">SCRUM</Option>
                   <Option value="SCRUM2">SCRUM2</Option>
                   <Option value="SCRUM3">SCRUM3</Option>
@@ -337,16 +337,16 @@ function ModalCreateTeam({
             }}
           >
             <Col className="gutter-row" span={8}>
-            {t("organigrama.teams-modal.members-team-2")}
+            {t("organigram.teams-modal.members-team-2")}
             </Col>
             <Col className="gutter-row" span={4}>
-            {t("organigrama.teams-modal.leader")}
+            {t("organigram.teams-modal.leader")}
             </Col>
             <Col className="gutter-row" span={6}>
-            {t("organigrama.teams-modal.role-team")}
+            {t("organigram.teams-modal.role-team")}
             </Col>
             <Col className="gutter-row" span={6}>
-            {t("organigrama.teams-modal.actions")}
+            {t("organigram.teams-modal.actions")}
             </Col>
           </Row>
           <Member
@@ -358,7 +358,7 @@ function ModalCreateTeam({
           <Row style={{ marginTop: "30px" }}>
             <Col span={24}>
               <span style={{ marginRight: "120px" }}>
-                <Link to="#"> {t("organigrama.teams-modal.text-link")}</Link> {t("organigrama.teams-modal.text")}
+                <Link to="#"> {t("organigram.teams-modal.text-link")}</Link> {t("organigram.teams-modal.text")}
               </span>
               <Button
                 style={{ marginRight: "20px", width: "100px" }}
@@ -367,7 +367,7 @@ function ModalCreateTeam({
                   setCreateTeamModal(false);
                 }}
               >
-                {t("organigrama.teams-modal.btn-cancel")}
+                {t("organigram.teams-modal.btn-cancel")}
               </Button>
               {editionMode ? (
                 <Button
@@ -375,7 +375,7 @@ function ModalCreateTeam({
                   style={{ marginRight: "20px", width: "100px" }}
                   className="primary"
                 >
-                  {t("organigrama.teams-modal.btn-edit")}
+                  {t("organigram.teams-modal.btn-edit")}
                 </Button>
               ) : (
                 <Button
@@ -383,7 +383,7 @@ function ModalCreateTeam({
                   style={{ marginRight: "20px", width: "100px" }}
                   className="primary"
                 >
-                  {t("organigrama.teams-modal.btn-create")}
+                  {t("organigram.teams-modal.btn-create")}
                 </Button>
               )}
             </Col>
