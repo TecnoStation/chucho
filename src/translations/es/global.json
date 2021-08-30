@@ -640,6 +640,7 @@
             }
             
         },
+        
         "areasandpositions-detailerror":{
          "title-detailfile": "Detalle del archivo:",
          "abstract": "Resumen",
@@ -652,18 +653,20 @@
          "column": "Columna",
          "row": "Fila",
          "error": "Error"   
-        } 
+        },
+        
+        "areasandpositions-detailsuccess":{
+            "title-detailfile": "Detalle del archivo:",
+            "abstract": "Resumen",
+            "file": "Archivo:",
+            "username": "Usuario:",
+            "status": "Estatus:",
+            "total-mistakes": "Total de errores:",
+            "date-load": "Fecha de carga:"   
+           }
     },
+
     
-    "areasandpositions-detailsuccess":{
-     "title-detailfile": "Detalle del archivo:",
-     "abstract": "Resumen",
-     "file": "Archivo:",
-     "username": "Usuario:",
-     "status": "Estatus:",
-     "total-mistakes": "Total de errores:",
-     "date-load": "Fecha de carga:"   
-    },
 
     "teams":{
      "search-positions": "Buscar puesto",   
