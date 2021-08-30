@@ -7,7 +7,7 @@ export default function ModalPermissions({ Permissions, setPermissions }) {
   return (
     <> 
       <Modal
-        title={t("organigrama.collaborator-form.permissions-modal.title")}
+        title={t("organigram.collaborator-form.permissions-modal.title")}
         className="smallModal"
         visible={Permissions}
         onCancel={() => {
@@ -21,7 +21,7 @@ export default function ModalPermissions({ Permissions, setPermissions }) {
               setPermissions(false);
             }}
           >
-            {t("organigrama.collaborator-form.permissions-modal.btn-cancel")}
+            {t("organigram.collaborator-form.permissions-modal.btn-cancel")}
           </Button>,
           <Button
             className="primary"
@@ -29,28 +29,28 @@ export default function ModalPermissions({ Permissions, setPermissions }) {
               setPermissions(false);
             }}
           >
-            {t("organigrama.collaborator-form.permissions-modal.btn-appli")}
+            {t("organigram.collaborator-form.permissions-modal.btn-appli")}
           </Button>,
         ]}
       >
         <Form style={{ marginLeft: "10px" }}>
           <Form.Item name="Administrador">
-            <Checkbox>{t("organigrama.collaborator-form.permissions-modal.permissions-adminitrator")}</Checkbox>
+            <Checkbox>{t("organigram.collaborator-form.permissions-modal.permissions-adminitrator")}</Checkbox>
           </Form.Item>
           <Form.Item name="Nine" style={{ marginTop: "-25px" }}>
-            <Checkbox>{t("organigrama.collaborator-form.permissions-modal.permissions-nine")}</Checkbox>
+            <Checkbox>{t("organigram.collaborator-form.permissions-modal.permissions-nine")}</Checkbox>
           </Form.Item>
           <Form.Item name="remember" style={{ marginTop: "-25px" }}>
-            <Checkbox>{t("organigrama.collaborator-form.permissions-modal.permissions-objectives")}</Checkbox>
+            <Checkbox>{t("organigram.collaborator-form.permissions-modal.permissions-objectives")}</Checkbox>
           </Form.Item>
-          <Form.Item name="Organigrama" style={{ marginTop: "-25px" }}>
-            <Checkbox>{t("organigrama.collaborator-form.permissions-modal.permissions-organizatition")}</Checkbox>
+          <Form.Item name="organigram" style={{ marginTop: "-25px" }}>
+            <Checkbox>{t("organigram.collaborator-form.permissions-modal.permissions-organizatition")}</Checkbox>
           </Form.Item>
           <Form.Item name="editar" style={{ marginTop: "-25px" }}>
-            <Checkbox>{t("organigrama.collaborator-form.permissions-modal.permissions-edit-organization")}</Checkbox>
+            <Checkbox>{t("organigram.collaborator-form.permissions-modal.permissions-edit-organization")}</Checkbox>
           </Form.Item>
           <Form.Item name="Desarrollo" style={{ marginTop: "-25px" }}>
-            <Checkbox>{t("organigrama.collaborator-form.permissions-modal.permissions-plan-developing")}</Checkbox>
+            <Checkbox>{t("organigram.collaborator-form.permissions-modal.permissions-plan-developing")}</Checkbox>
           </Form.Item>
         </Form>
       </Modal>

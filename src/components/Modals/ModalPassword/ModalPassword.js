@@ -17,7 +17,7 @@ export default function ModalPassword({ Password, setPassword }) {
   });
 
   if (Password.titleWarning === "") {
-    Password.titleWarning = t("organigrama.password-modal.attention");
+    Password.titleWarning = t("organigram.password-modal.attention");
   }
   return (
     <>
@@ -39,7 +39,7 @@ export default function ModalPassword({ Password, setPassword }) {
               setPassword(false);
             }}
           >
-            {t("organigrama.delete-collaborator.btn-cancel")}
+            {t("organigram.delete-collaborator.btn-cancel")}
           </Button>,
           <input
             type="button"
@@ -56,7 +56,7 @@ export default function ModalPassword({ Password, setPassword }) {
                         </p>
                       </Col>
                       <Col span={24}>
-                        <h3> {t("organigrama.password-modal.attention")}</h3>
+                        <h3> {t("organigram.password-modal.attention")}</h3>
                       </Col>
                       <Col span={24}>
                         <h4>{Password.messageWarning}</h4>
@@ -71,7 +71,7 @@ export default function ModalPassword({ Password, setPassword }) {
                           onClick={() => modal.destroy()}
                           className="secondary btn"
                         >
-                          {t("organigrama.delete-collaborator.btn-cancel")}
+                          {t("organigram.delete-collaborator.btn-cancel")}
                         </Button>
                         <Button
                           onClick={() => {
@@ -80,7 +80,7 @@ export default function ModalPassword({ Password, setPassword }) {
                           }}
                           className="primary btn"
                         >
-                          {t("organigrama.password-modal.btn-remove")}
+                          {t("organigram.password-modal.btn-remove")}
                         </Button>
                       </Col>
                     </Row>
@@ -116,7 +116,7 @@ export default function ModalPassword({ Password, setPassword }) {
                           }}
                           className="primary btn"
                         >
-                          {t("organigrama.password-modal.btn-Hecho")}
+                          {t("organigram.password-modal.btn-Hecho")}
                         </Button>
                       </Col>
                     </Row>
@@ -131,7 +131,7 @@ export default function ModalPassword({ Password, setPassword }) {
               });
             }}
             className="primary"
-            value={t("organigrama.delete-collaborator.btn-save")}
+            value={t("organigram.delete-collaborator.btn-save")}
           />,
         ]}
       >
@@ -146,14 +146,14 @@ export default function ModalPassword({ Password, setPassword }) {
         >
           <Form.Item
             name="password"
-            label={t("organigrama.password-modal.insert-password")}
+            label={t("organigram.password-modal.insert-password")}
           >
             <Input
               type="password"
               value={clearPassword}
               id="nombre"
               placeholder={t(
-                "organigrama.password-modal.insert-password-placeholder"
+                "organigram.password-modal.insert-password-placeholder"
               )}
             />
           </Form.Item>

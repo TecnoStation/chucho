@@ -228,9 +228,9 @@ export default function AreasAndPositionsAddJob() {
               style={{ textAlign: "left", marginBottom: "30px" }}
             >
               <h3>
-                <b>{t("organigrama.areasandpositions-addjob.title")}</b>
+                <b>{t("organigram.areasandpositions-addjob.title")}</b>
               </h3>
-              <span>{t("organigrama.areasandpositions-addjob.tex")}</span>
+              <span>{t("organigram.areasandpositions-addjob.tex")}</span>
             </Col>
             <Col className="gutter-row" span={2}>
               <Dropdown overlay={menu} trigger={["click"]}>
@@ -262,9 +262,16 @@ export default function AreasAndPositionsAddJob() {
                   },
                 ]}
                 name="bussines"
-                label={t("organigrama.areasandpositions-addjob.label-nameposition")}
+                label={t(
+                  "organigram.areasandpositions-addjob.label-nameposition"
+                )}
               >
-                <Input type="text" placeholder={t("organigrama.areasandpositions-addjob.placeholder-position")} />
+                <Input
+                  type="text"
+                  placeholder={t(
+                    "organigram.areasandpositions-addjob.placeholder-position"
+                  )}
+                />
               </Form.Item>
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col className="gutter-row" span={12}>
@@ -277,13 +284,13 @@ export default function AreasAndPositionsAddJob() {
                     ]}
                     name="activity"
                     label={t(
-                      "organigrama.areasandpositions-addjob.label-levelposition"
+                      "organigram.areasandpositions-addjob.label-levelposition"
                     )}
                     tooltip={info}
                   >
                     <Select
                       placeholder={t(
-                        "organigrama.areasandpositions-addjob.placeholder-direction"
+                        "organigram.areasandpositions-addjob.placeholder-direction"
                       )}
                     >
                       <Option value="jack">Jack</Option>
@@ -302,13 +309,13 @@ export default function AreasAndPositionsAddJob() {
                     ]}
                     name="subactivity"
                     label={t(
-                      "organigrama.areasandpositions-addjob.label-positionpersonalized"
+                      "organigram.areasandpositions-addjob.label-positionpersonalized"
                     )}
                     tooltip={infosub}
                   >
                     <Select
                       placeholder={t(
-                        "organigrama.areasandpositions-addjob.placeholder-personalized"
+                        "organigram.areasandpositions-addjob.placeholder-personalized"
                       )}
                     >
                       <Option value="jack">Jack</Option>
@@ -328,9 +335,15 @@ export default function AreasAndPositionsAddJob() {
                       },
                     ]}
                     name="size"
-                    label={t("organigrama.areasandpositions-addjob.label-kindposition")}
+                    label={t(
+                      "organigram.areasandpositions-addjob.label-kindposition"
+                    )}
                   >
-                    <Select placeholder={t("organigrama.areasandpositions-addjob.placeholder-positionkey")}>
+                    <Select
+                      placeholder={t(
+                        "organigram.areasandpositions-addjob.placeholder-positionkey"
+                      )}
+                    >
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
@@ -346,9 +359,16 @@ export default function AreasAndPositionsAddJob() {
                       },
                     ]}
                     name="levelRisk"
-                    label={t("organigrama.areasandpositions-addjob.label-levelrisk")}
+                    label={t(
+                      "organigram.areasandpositions-addjob.label-levelrisk"
+                    )}
                   >
-                    <Select className="gutter-row" placeholder={t("organigrama.areasandpositions-addjob.placeholder-high")}>
+                    <Select
+                      className="gutter-row"
+                      placeholder={t(
+                        "organigram.areasandpositions-addjob.placeholder-high"
+                      )}
+                    >
                       <Option value="jack">Jack</Option>
                       <Option value="lucy">Lucy</Option>
                       <Option value="tom">Tom</Option>
@@ -364,12 +384,14 @@ export default function AreasAndPositionsAddJob() {
                       },
                     ]}
                     name="studyLevel"
-                    label={t("organigrama.areasandpositions-addjob.label-levelstudies")}
+                    label={t(
+                      "organigram.areasandpositions-addjob.label-levelstudies"
+                    )}
                   >
                     <Select
                       className="gutter-row"
                       placeholder={t(
-                        "organigrama.areasandpositions-addjob.placeholder-educationhigher"
+                        "organigram.areasandpositions-addjob.placeholder-educationhigher"
                       )}
                     >
                       <Option value="jack">Jack</Option>
@@ -387,12 +409,14 @@ export default function AreasAndPositionsAddJob() {
                       },
                     ]}
                     name="yearsExperencie"
-                    label={t("organigrama.areasandpositions-addjob.label-yearsexperience")}
+                    label={t(
+                      "organigram.areasandpositions-addjob.label-yearsexperience"
+                    )}
                   >
                     <Select
                       className="gutter-row"
                       placeholder={t(
-                        "organigrama.areasandpositions-addjob.placeholder-selec"
+                        "organigram.areasandpositions-addjob.placeholder-selec"
                       )}
                     >
                       <Option value="jack">Jack</Option>
@@ -407,7 +431,11 @@ export default function AreasAndPositionsAddJob() {
             <Row style={{ marginTop: "20px" }}>
               <Col span={24}>
                 <span>
-                  <b>{t("organigrama.areasandpositions-addjob.abilities-for-position")}</b>
+                  <b>
+                    {t(
+                      "organigram.areasandpositions-addjob.abilities-for-position"
+                    )}
+                  </b>
                 </span>
                 <br />
                 <br />
@@ -427,11 +455,18 @@ export default function AreasAndPositionsAddJob() {
 
             <Row>
               <Col span={24}>
-                <Form.Item name="habilidades" label={t("organigrama.areasandpositions-addjob.label-skilltech")}>
+                <Form.Item
+                  name="habilidades"
+                  label={t(
+                    "organigram.areasandpositions-addjob.label-skilltech"
+                  )}
+                >
                   <Input
                     type="text"
                     id="habilidades"
-                    placeholder={t("organigrama.areasandpositions-addjob.placeholder-word")}
+                    placeholder={t(
+                      "organigram.areasandpositions-addjob.placeholder-word"
+                    )}
                   />
                 </Form.Item>
               </Col>
@@ -440,7 +475,7 @@ export default function AreasAndPositionsAddJob() {
             <Row>
               <Col span={24}>
                 <span>
-                  <b>{t("organigrama.areasandpositions-addjob.languages")}</b>
+                  <b>{t("organigram.areasandpositions-addjob.languages")}</b>
                 </span>
                 <br />
                 <br />
@@ -460,12 +495,17 @@ export default function AreasAndPositionsAddJob() {
 
             <Row>
               <Col span={24}>
-                <Form.Item name="idiomas" label={t("organigrama.areasandpositions-addjob.lavel-languages")}>
+                <Form.Item
+                  name="idiomas"
+                  label={t(
+                    "organigram.areasandpositions-addjob.lavel-languages"
+                  )}
+                >
                   <Input
                     type="text"
                     id="idiomas"
                     placeholder={t(
-                      "organigrama.areasandpositions-addjob.placeholder-english"
+                      "organigram.areasandpositions-addjob.placeholder-english"
                     )}
                   />
                 </Form.Item>
@@ -474,10 +514,10 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull">
               <Col span={10}>
-                <b>{t("organigrama.areasandpositions-addjob.competences")}</b>
+                <b>{t("organigram.areasandpositions-addjob.competences")}</b>
               </Col>
               <Col style={{ textAlign: "center" }} span={14}>
-                <b>{t("organigrama.areasandpositions-addjob.level")}</b>
+                <b>{t("organigram.areasandpositions-addjob.level")}</b>
               </Col>
             </Row>
 
@@ -514,7 +554,8 @@ export default function AreasAndPositionsAddJob() {
                     setComponent(2);
                   }}
                 >
-                  <PlusCircleOutlined /> {t("organigrama.areasandpositions-addjob.link-addcompeten")}
+                  <PlusCircleOutlined />{" "}
+                  {t("organigram.areasandpositions-addjob.link-addcompeten")}
                 </Link>
               </Col>
             </Row>
@@ -547,7 +588,8 @@ export default function AreasAndPositionsAddJob() {
                     setComponent(1);
                   }}
                 >
-                  <PlusCircleOutlined /> {t("organigrama.areasandpositions-addjob.link-addcompetens")}
+                  <PlusCircleOutlined />{" "}
+                  {t("organigram.areasandpositions-addjob.link-addcompetens")}
                 </Link>
               </Col>
             </Row>
@@ -569,16 +611,20 @@ export default function AreasAndPositionsAddJob() {
 
             <Row style={{ marginTop: "30px" }}>
               <Col style={{ textAlign: "center" }} span={14}>
-                <b>{t("organigrama.areasandpositions-addjob.fields-obligatory")}</b>
+                <b>
+                  {t("organigram.areasandpositions-addjob.fields-obligatory")}
+                </b>
               </Col>
               <Col span={5}>
                 <Link to="/organigrama/areasandpositions-collaborator">
-                  <Button className="secondary">{t("organigrama.areasandpositions-addjob.btn-cancel")}</Button>
+                  <Button className="secondary">
+                    {t("organigram.areasandpositions-addjob.btn-cancel")}
+                  </Button>
                 </Link>
               </Col>
               <Col span={5}>
                 <Button htmlType="submit" className="primary">
-                {t("organigrama.areasandpositions-addjob.btn-save")}
+                  {t("organigram.areasandpositions-addjob.btn-save")}
                 </Button>
               </Col>
             </Row>
@@ -588,7 +634,7 @@ export default function AreasAndPositionsAddJob() {
         <Col className="gutter-row dividerLeft" span={10}>
           <Row>
             <Col span={24}>
-              <h3>{t("organigrama.areasandpositions-addjob.title1")}</h3>
+              <h3>{t("organigram.areasandpositions-addjob.title1")}</h3>
             </Col>
           </Row>
           <Row>
@@ -607,7 +653,7 @@ export default function AreasAndPositionsAddJob() {
             <Col span={24}>
               <p>
                 <b>
-                  {t("organigrama.areasandpositions-addjob.tex-colaborator")}
+                  {t("organigram.areasandpositions-addjob.tex-colaborator")}
                 </b>
               </p>
             </Col>

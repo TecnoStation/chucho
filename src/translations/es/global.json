@@ -101,7 +101,7 @@
         "my-plans": "Mis planes",
         "vendors": "Proveedores"
     },
-    "organigrama": {
+    "organigram": {
         "empty-organigram-layout": {
             "h1-welcome": "¡Bienvenido al Organigrama!",
             "p-row1": "Aquí podrás visualizar todas las estructuras de la organización, además de facilitar la evaluación 360 y la vista de los equipos para alcanzar los Objetivos.",
@@ -637,20 +637,8 @@
                         "btn-add": "Agregar"
                     }
                 }
-            },
-            "areasandpositions-detailerror": {
-                "title-detailfile": "Detalle del archivo:",
-                "abstract": "Resumen",
-                "file": "Archivo:",
-                "username": "Usuario:",
-                "status": "Estatus:",
-                "total-mistakes": "Total de errores:",
-                "date-load": "Fecha de carga:",
-                "mistakes": "Errores",
-                "column": "Columna",
-                "row": "Fila",
-                "error": "Error"
             }
+            
         },
         "areasandpositions-detailerror":{
          "title-detailfile": "Detalle del archivo:",
@@ -666,7 +654,8 @@
          "error": "Error"   
         } 
     },
-    "areasandpositions-detailSuccess":{
+    
+    "areasandpositions-detailsuccess":{
      "title-detailfile": "Detalle del archivo:",
      "abstract": "Resumen",
      "file": "Archivo:",
@@ -874,17 +863,17 @@
         }
       },
 
-      "organigram":{
+      "organigram-page":{
        "title": "Organigrama",
        "menu-organigram":{
-       "search-position": "Buscar puesto",
-       "create-team": "Crear equipo",
-       "my-business": "Mi empresa",
-       "bulk-load": "Carga masiva",
-       "areas-position": "Areas y puestos",
-       "profile-position": "Perfil de puesto",
-       "collaborators": "Colaboradores",
-       "change-history": "Historial de cambios"  
+            "search-position": "Buscar puesto",
+            "create-team": "Crear equipo",
+            "my-business": "Mi empresa",
+            "bulk-load": "Carga masiva",
+            "areas-position": "Areas y puestos",
+            "profile-position": "Perfil de puesto",
+            "collaborators": "Colaboradores",
+            "change-history": "Historial de cambios"  
        },
        "munu-2":{
         "edit-colaborator": "Editar colaborador",

@@ -16,9 +16,9 @@ let carusel = document.getElementsByTagName("Carousel");
 export default function ScreenOrganigram() {
   const [t, i18n] = useTranslation("global");
   const titles = [
-    t("organigrama.org-chart-on-boarding.carousel-title0"),
-    t("organigrama.org-chart-on-boarding.carousel-title1"),
-    t("organigrama.org-chart-on-boarding.carousel-title2"),
+    t("organigram.org-chart-on-boarding.carousel-title0"),
+    t("organigram.org-chart-on-boarding.carousel-title1"),
+    t("organigram.org-chart-on-boarding.carousel-title2"),
     "",
   ];
 
@@ -41,48 +41,48 @@ export default function ScreenOrganigram() {
             <Item>
               <div className="carruselItem">
                 <p>
-                  <b>{t("organigrama.carousel-content0.text1-a")}</b>{" "}
-                  {t("organigrama.carousel-content0.text1-b")}
+                  <b>{t("organigram.carousel-content0.text1-a")}</b>{" "}
+                  {t("organigram.carousel-content0.text1-b")}
                 </p>
                 <p>
-                  <b>{t("organigrama.carousel-content0.text2-a")}</b>{" "}
-                  {t("organigrama.carousel-content0.text2-b")}
+                  <b>{t("organigram.carousel-content0.text2-a")}</b>{" "}
+                  {t("organigram.carousel-content0.text2-b")}
                 </p>
                 <p>
-                  <b>{t("organigrama.carousel-content0.text3-a")}</b>
-                  {t("organigrama.carousel-content0.text3-b")}
+                  <b>{t("organigram.carousel-content0.text3-a")}</b>
+                  {t("organigram.carousel-content0.text3-b")}
                 </p>
                 <p>
-                  <b>{t("organigrama.carousel-content0.text4-a")}</b>
+                  <b>{t("organigram.carousel-content0.text4-a")}</b>
                 </p>
               </div>
             </Item>
             <Item>
               <div className="carruselItem">
-                <p>{t("organigrama.carousel-content1.text1-a")}</p>
+                <p>{t("organigram.carousel-content1.text1-a")}</p>
                 <p>
-                  <b>{t("organigrama.carousel-content1.text2-a")},</b>
-                  {t("organigrama.carousel-content1.text2-b")}
+                  <b>{t("organigram.carousel-content1.text2-a")},</b>
+                  {t("organigram.carousel-content1.text2-b")}
                 </p>
                 <p>
-                  <b>{t("organigrama.carousel-content1.text3-a")}</b>
-                  {t("organigrama.carousel-content1.text3-b")}
+                  <b>{t("organigram.carousel-content1.text3-a")}</b>
+                  {t("organigram.carousel-content1.text3-b")}
                 </p>
                 <p>
-                  <b>{t("organigrama.carousel-content1.text4-a")}</b>
-                  {t("organigrama.carousel-content1.text4-b")}
+                  <b>{t("organigram.carousel-content1.text4-a")}</b>
+                  {t("organigram.carousel-content1.text4-b")}
                 </p>
                 <p>
-                  <b>{t("organigrama.carousel-content1.text4-c")}</b>{" "}
-                  {t("organigrama.carousel-content1.text4-d")}
+                  <b>{t("organigram.carousel-content1.text4-c")}</b>{" "}
+                  {t("organigram.carousel-content1.text4-d")}
                 </p>
               </div>
             </Item>
             <Item>
               <div className="carruselItem">
-                <p>{t("organigrama.carousel-content2.text1-a")}</p>
-                <p>{t("organigrama.carousel-content2.text2-a")}</p>
-                <p>{t("organigrama.carousel-content2.text3-a")}</p>
+                <p>{t("organigram.carousel-content2.text1-a")}</p>
+                <p>{t("organigram.carousel-content2.text2-a")}</p>
+                <p>{t("organigram.carousel-content2.text3-a")}</p>
                 <p style={{ textAlign: "center" }}>
                   <img alt="ico" width="80" className="" src={Arrorup} />
                 </p>
@@ -91,12 +91,12 @@ export default function ScreenOrganigram() {
             <Item>
               <div className="carruselItem">
                 <h4 style={{ textAlign: "center" }}>
-                  {t("organigrama.started.title")}
+                  {t("organigram.started.title")}
                 </h4>
 
-                <p className={br}>{t("organigrama.started.text1-a")}</p>
+                <p className={br}>{t("organigram.started.text1-a")}</p>
 
-                <p className={br}>{t("organigrama.started.text2-a")}</p>
+                <p className={br}>{t("organigram.started.text2-a")}</p>
 
                 <p className={br} style={{ textAlign: "center" }}>
                   <img alt="ico" width={visible} src={Business} />
@@ -107,7 +107,7 @@ export default function ScreenOrganigram() {
                       style={{ width: "176px", height: "32px" }}
                       className="primary"
                     >
-                      {t("organigrama.started.btn-started")}
+                      {t("organigram.started.btn-started")}
                     </Button>
                   </Link>
                 </div>
@@ -159,7 +159,7 @@ export default function ScreenOrganigram() {
         <div style={{ textAlign: "center", marginTop: "5px" }}>
           <p>
             <Link className={link} onClick={showWarning} to="#">
-              {t("organigrama.skip")}
+              {t("organigram.skip")}
             </Link>
           </p>
         </div>
@@ -169,20 +169,20 @@ export default function ScreenOrganigram() {
         <p style={{ textAlign: "center" }}>
           <img alt="ico" width="120" className="" src={Warning} />
         </p>
-        <h1>{t("organigrama.dialog-warnin.atention")}</h1>
-        <p>{t("organigrama.dialog-warnin.text1")}</p>
-        <p>{t("organigrama.dialog-warnin.text2")}</p>
-        <p>{t("organigrama.dialog-warnin.question")}</p>
+        <h1>{t("organigram.dialog-warnin.atention")}</h1>
+        <p>{t("organigram.dialog-warnin.text1")}</p>
+        <p>{t("organigram.dialog-warnin.text2")}</p>
+        <p>{t("organigram.dialog-warnin.question")}</p>
         <Button
           onClick={showCard}
           className="secondary"
           style={{ marginRight: "15px" }}
         >
-          {t("organigrama.dialog-warnin.btn-continue")}
+          {t("organigram.dialog-warnin.btn-continue")}
         </Button>
         <Link to="/organigrama/organigram">
           <Button className="primary btn">
-            {t("organigrama.dialog-warnin.btn-skip")}
+            {t("organigram.dialog-warnin.btn-skip")}
           </Button>
         </Link>
       </Card>

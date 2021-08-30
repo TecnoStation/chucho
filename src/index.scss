@@ -220,6 +220,12 @@ code {
   color: $color-white;
 }
 
+.btnBlue:hover {
+  background: $color-link;
+  color: $color-white;
+  border: 0px;
+}
+
 .iconsize {
   font-size: 16px;
   cursor: pointer;

@@ -36,30 +36,26 @@ export default function AreasAndPositionsMassiveP() {
 
   return (
     <>
-      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}> 
+      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col className="gutter-row" span={12}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <h3>{t("organigrama.areasandpositions-masivep.title")}</h3>
+              <h3>{t("organigram.areasandpositions-masivep.title")}</h3>
+            </Col>
+          </Row>
+
+          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+            <Col className="gutter-row" span={24}>
+              <p>{t("organigram.areasandpositions-masivep.text1")}</p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-              {t("organigrama.areasandpositions-masivep.text1")}
-              </p>
-            </Col>
-          </Row>
-
-          <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={24}>
-              <p>
-              {t("organigrama.areasandpositions-masivep.text2")}
-                <b>
-                {t("organigrama.areasandpositions-masivep.text3")}
-                </b>
-                {t("organigrama.areasandpositions-masivep.text4")}
+                {t("organigram.areasandpositions-masivep.text2")}
+                <b>{t("organigram.areasandpositions-masivep.text3")}</b>
+                {t("organigram.areasandpositions-masivep.text4")}
               </p>
             </Col>
           </Row>
@@ -67,7 +63,7 @@ export default function AreasAndPositionsMassiveP() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p className="linkBold">
-              {t("organigrama.areasandpositions-masivep.text5")}
+                {t("organigram.areasandpositions-masivep.text5")}
               </p>
             </Col>
           </Row>
@@ -76,22 +72,18 @@ export default function AreasAndPositionsMassiveP() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b>
-                {t("organigrama.areasandpositions-masivep.text6")}
-                </b>
+                <b>{t("organigram.areasandpositions-masivep.text6")}</b>
               </p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <span> {t("organigrama.areasandpositions-masivep.text7")}</span>
+              <span> {t("organigram.areasandpositions-masivep.text7")}</span>
               <br />
-              <span>
-              {t("organigrama.areasandpositions-masivep.text8")}
-              </span>
+              <span>{t("organigram.areasandpositions-masivep.text8")}</span>
               <br />
-              <span> {t("organigrama.areasandpositions-masivep.text9")}</span>
+              <span> {t("organigram.areasandpositions-masivep.text9")}</span>
               <br />
               <br />
             </Col>
@@ -99,14 +91,14 @@ export default function AreasAndPositionsMassiveP() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <p> {t("organigrama.areasandpositions-masivep.text10")}</p>
+              <p> {t("organigram.areasandpositions-masivep.text10")}</p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b> {t("organigrama.areasandpositions-masivep.text11")}</b>
+                <b> {t("organigram.areasandpositions-masivep.text11")}</b>
               </p>
             </Col>
           </Row>
@@ -115,7 +107,8 @@ export default function AreasAndPositionsMassiveP() {
             <Col className="gutter-row" span={24}>
               <Link to="#" onClick={openModalUpload}>
                 {" "}
-                <PlusCircleOutlined />  {t("organigrama.areasandpositions-masivep.link-attach")}
+                <PlusCircleOutlined />{" "}
+                {t("organigram.areasandpositions-masivep.link-attach")}
               </Link>
               <br />
               <br />
@@ -129,7 +122,7 @@ export default function AreasAndPositionsMassiveP() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={24}>
-          <h1>{t("organigrama.areasandpositions-masivep.history-loads")}</h1>
+          <h1>{t("organigram.areasandpositions-masivep.history-loads")}</h1>
         </Col>
       </Row>
 
@@ -139,16 +132,16 @@ export default function AreasAndPositionsMassiveP() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={6}>
-          <p>{t("organigrama.areasandpositions-masivep.file")}</p>
+          <p>{t("organigram.areasandpositions-masivep.file")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>{t("organigrama.areasandpositions-masivep.date-load")}</p>
+          <p>{t("organigram.areasandpositions-masivep.date-load")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>{t("organigrama.areasandpositions-masivep.status")}</p>
+          <p>{t("organigram.areasandpositions-masivep.status")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>{t("organigrama.areasandpositions-masivep.actions")}</p>
+          <p>{t("organigram.areasandpositions-masivep.actions")}</p>
         </Col>
       </Row>
 
@@ -167,7 +160,14 @@ export default function AreasAndPositionsMassiveP() {
           <p className="iconRed">Error</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <Link to="/areasandpositions-detailerror">
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-detailerror")
+            }
+          >
             <p>Ver Detalle</p>
           </Link>
         </Col>
@@ -188,7 +188,14 @@ export default function AreasAndPositionsMassiveP() {
           <p className="iconGreen">Éxito</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <Link to="/areasandpositions-detailsuccess">
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-detailsuccess")
+            }
+          >
             <p>Ver Detalle</p>
           </Link>
         </Col>
@@ -200,10 +207,14 @@ export default function AreasAndPositionsMassiveP() {
       >
         <Col className="gutter-row" span={17}></Col>
         <Col className="gutter-row" span={3}>
-          <Button className="secondary">{t("organigrama.areasandpositions-masivep.btn-cancel")}</Button>
+          <Button className="secondary">
+            {t("organigram.areasandpositions-masivep.btn-cancel")}
+          </Button>
         </Col>
         <Col className="gutter-row" span={3}>
-          <Button className="primary">{t("organigrama.areasandpositions-masivep.btn-load-file")}</Button>
+          <Button className="primary">
+            {t("organigram.areasandpositions-masivep.btn-load-file")}
+          </Button>
         </Col>
       </Row>
 
@@ -216,15 +227,19 @@ export default function AreasAndPositionsMassiveP() {
               </p>
             </Col>
             <Col span={24}>
-              <h3>{t("organigrama.areasandpositions-masivep.well-done")}</h3>
+              <h3>{t("organigram.areasandpositions-masivep.well-done")}</h3>
             </Col>
             <Col span={24}>
-              <h3>{t("organigrama.areasandpositions-masivep.organization-created")}</h3>
+              <h3>
+                {t(
+                  "organigram.areasandpositions-masivep.organization-created"
+                )}
+              </h3>
               <br />
             </Col>
             <Col span={24}>
               <Button onClick={endFn} className="primary btn">
-              {t("organigrama.areasandpositions-masivep.btn-done")}
+                {t("organigram.areasandpositions-masivep.btn-done")}
               </Button>
             </Col>
           </Row>
@@ -233,7 +248,7 @@ export default function AreasAndPositionsMassiveP() {
 
       <Modal
         className="middleModal"
-        title={t("organigrama.areasandpositions-masivep.up-load-file")}
+        title={t("organigram.areasandpositions-masivep.up-load-file")}
         visible={modalUpload}
         onCancel={closeModalUpload}
         onOk={sendUpload}
@@ -243,13 +258,13 @@ export default function AreasAndPositionsMassiveP() {
             className="secondary"
             onClick={closeModalUpload}
           >
-            {t("organigrama.areasandpositions-masivep.btn-cancel")}
+            {t("organigram.areasandpositions-masivep.btn-cancel")}
           </Button>,
           <input
             type="button"
             className="primary"
             onClick={sendUpload}
-            value= {t("organigrama.areasandpositions-masivep.btn-rise")}
+            value={t("organigram.areasandpositions-masivep.btn-rise")}
           />,
         ]}
       >
@@ -261,7 +276,7 @@ export default function AreasAndPositionsMassiveP() {
               </Form.Item>
             </Form>
           </Col>
-        </Row> 
+        </Row>
       </Modal>
     </>
   );
