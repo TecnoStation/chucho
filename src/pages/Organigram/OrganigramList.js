@@ -17,7 +17,7 @@ function OrganigramList() {
     <>
       <div className="menuToltip">
         <Link to="/areasandpositions-general">
-          <span>{t("organigram.organigramlist.menu-1.load-massive")}</span>
+          <span>{t("organigram.organigramlist.menu-1.create-team")}</span>
         </Link>
       </div>
       <div className="menuToltip">
