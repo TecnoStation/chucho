@@ -42,79 +42,86 @@ export default function Home() {
       <Switch>
         <LayoutSecondary
           exact
-          path="/organigrama/mybusiness-edit"
+          path={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.mybusiness-edit")
+          }
           title="Mi Empresa"
           component={MybusinessEdit}
         />
         <LayoutSecondary
           exact
-          path="/organigrama/areasandpositions"
+          path={"/" + t("routes.organigram") + "/areasandpositions"}
           title="Áreas y puestos"
           component={AreasAndPositions}
         />
         <LayoutSecondary
           exact
-          path="/organigrama/organigramstarted"
+          path={"/" + t("routes.organigram") + "/organigramstarted"}
           title="Organigrama"
           component={Organigramstarted}
         />
         <LayoutSecondaryCardGlass
           exact
-          path="/organigrama/organigram"
+          path={"/" + t("routes.organigram") + "/organigram"}
           title="Organigrama"
           component={Organigram}
         />
         <LayoutSecondaryCardGlass
           exact
-          path="/organigrama/eraser"
+          path={"/" + t("routes.organigram") + "/eraser"}
           title="Organigrama"
           component={Eraser}
         />
         <LayoutSecondaryCardGlass
           exact
-          path="/organigrama/organigrammain"
+          path={"/" + t("routes.organigram") + "/organigrammain"}
           title="Organigrama"
           component={OrganigramMain}
         />
         <LayoutSecondaryCardWhite
           exact
-          path="/organigrama/organigramlist"
+          path={"/" + t("routes.organigram") + "/organigramlist"}
           title="Organigrama"
           component={OrganigramList}
         />
         <LayoutSecondaryCard
           exact
-          path="/organigrama/teams"
+          path={"/" + t("routes.organigram") + "/teams"}
           title="Equipos"
           component={Teams}
         />
         <LayoutSecondaryCard
           exact
-          path="/organigrama/teamsv"
+          path={"/" + t("routes.organigram") + "/teamsv"}
           title="Equipos"
           component={Teamv}
         />
         <LayoutSecondaryCard
           exact
-          path="/organigrama/mybusiness"
+          path={"/" + t("routes.organigram") + "/mybusiness"}
           title="Mi Empresa"
           component={Mybusiness}
         />
         <LayoutSecondaryCard
           exact
-          path="/organigrama/teamstarted"
+          path={"/" + t("routes.organigram") + "/teamstarted"}
           title="Equipos"
           component={TeamStarted}
         />
         <LayoutSecondaryCard
           exact
-          path="/organigrama/areasandpositions-collaborator"
+          path={
+            "/" + t("routes.organigram") + "/areasandpositions-collaborator"
+          }
           title="Colaborador"
           component={Collaborator}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/organigrama/areasandpositions-general"
+          path={"/" + t("routes.organigram") + "/areasandpositions-general"}
           title="Áreas y puestos"
           component={AreasAndPositionsMassiveGeneral}
         />
@@ -126,43 +133,45 @@ export default function Home() {
         />
         <LayoutSecondaryCardBack
           exact
-          path="/organigrama/areasandpositions-addjob"
+          path={"/" + t("routes.organigram") + "/areasandpositions-addjob"}
           title="Áreas y puestos"
           component={AreasAndPositionsJob}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/organigrama/areasandpositions-detailerror"
+          path={"/" + t("routes.organigram") + "/areasandpositions-detailerror"}
           title="Áreas y puestos"
           component={DetailError}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/organigrama/areasandpositions-detailsuccess"
+          path={
+            "/" + t("routes.organigram") + "/areasandpositions-detailsuccess"
+          }
           title="Áreas y puestos"
           component={DetailSuccess}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/organigrama/areasandpositions-massivee"
+          path={"/" + t("routes.organigram") + "/areasandpositions-massivee"}
           title="Áreas y puestos"
           component={AreasAndPositionsMassiveE}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/organigrama/areasandpositions-massivep"
+          path={"/" + t("routes.organigram") + "/areasandpositions-massivep"}
           title="Áreas y puestos"
           component={AreasAndPositionsMassiveP}
         />
         <LayoutSecondaryCardBack
           exact
-          path="/organigrama/areasandpositions-massivec"
+          path={"/" + t("routes.organigram") + "/areasandpositions-massivec"}
           title="Áreas y puestos"
           component={AreasAndPositionsMassiveC}
         />
         <LayoutSecondaryCardBackSmall
           exact
-          path="/organigrama/areasandpositions-perfil"
+          path={"/" + t("routes.organigram") + "/areasandpositions-perfil"}
           title="Perfil"
           component={AreasAndPositionsPerfil}
         />
