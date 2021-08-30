@@ -408,7 +408,7 @@ export default function MybusinessEdit() {
                   className="gutter-row"
                   span={24}
                 >
-                  <Link to="/organigrama/mybusiness">
+                  <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.mybusiness")}>
                     <Button
                       className="secondary"
                       style={{ marginRight: "15px" }}
@@ -425,7 +425,7 @@ export default function MybusinessEdit() {
                       )}
                     </Button>
                   ) : (
-                    <Link to="/organigrama/mybusiness">
+                    <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.mybusiness")}>
                       <Button className="primary">
                         {t(
                           "organigram.my-business-edit.information.form.btn-save"
@@ -585,7 +585,7 @@ export default function MybusinessEdit() {
                   className="gutter-row"
                   span={24}
                 >
-                  <Link to="/organigrama/mybusiness">
+                  <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.mybusiness")}>
                     <Button
                       className="secondary"
                       style={{ marginRight: "15px" }}
@@ -601,7 +601,7 @@ export default function MybusinessEdit() {
                       )}
                     </Button>
                   ) : (
-                    <Link to="/organigrama/mybusiness">
+                    <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.mybusiness")}>
                       <Button className="primary">
                         {t(
                           "organigram.my-business-edit.information.form.btn-save"
