@@ -640,7 +640,7 @@
             }
             
         },
-        
+
         "areasandpositions-detailerror":{
          "title-detailfile": "Detalle del archivo:",
          "abstract": "Resumen",
@@ -663,315 +663,319 @@
             "status": "Estatus:",
             "total-mistakes": "Total de errores:",
             "date-load": "Fecha de carga:"   
-           }
-    },
+           },
 
-    
-
-    "teams":{
-     "search-positions": "Buscar puesto",   
-     "title": "¡Bienvenido a los equipos!",
-     "tex": "Aqui podrás visualizar todos los equipos de la organización, además de facilitar y fomentar el trabajo coopera ",
-     "btn-new-team": "Nuevo Equipo"     
-    },
-    "teams-modal":{
-     "title": "Crear Equipo",
-     "title2": "Editar Equipo",
-     "name-team-label": "Nombre del equipo",
-     "placeholder-imput-name": "Aqui puedes asignar el nombre de tu equipo",
-     "kind-team-label": "Tipo de equipo",
-     "placeholder-imput-selec": "Selecciona una opción",
-     "add-collaborators-label": "Agrega colaboradores",
-     "placeholder-imput-search": "Buscar colaboradores",
-     "modality-label": "Modalidad",
-     "placeholder-imput-option": "Selecciona una opción",
-     "members-team": "Miembros del equipo",
-     "placeholder-imput-optiona": "Selecciona una opción",
-     "members-team-2": "Miembros del equipo",
-     "leader": "Lider",
-     "role-team": "Rol en el equipo",
-     "actions": "Acciones",
-     "text-link": "Aqui",
-     "text": "puedes ver buenas prácticas en equipos Agile",
-     "btn-cancel": "Cancelar",
-     "btn-create": "Crear",
-     "btn-edit": "Editar",
-     "personalized": "Personalizado",
-     "mode-operative": "Modo Operativo Agile"   
-    },
-    "teams2":{
-     "search-position": "Buscar puesto",   
-     "new-team": "Nuevo Equipo",   
-     "tex": "Nombre del equipo",
-     "tex2": "Última modificación",
-     "tex3": "Acción"
-    },
-    "menu":{
-     "clone-team": "Clonar equipo",
-     "rename": "Renombrar",
-     "edit": "Editar",
-     "remove": "Eliminar"   
-    },
-    "rename-modal":{
-     "rename-team": "Rename de equipo",
-     "btn-cancel": "cancelar",
-     "btn-save": "Guardar"   
-    },
-    "teams2-modal":{
-     "kind-team": "Tipo de equipo",
-     "modality": "Modalidad",
-     "frame-job": "Marco de trabajo",
-     "tex": "SCRUM",
-     "members-team": "Miembros del equipo",
-     "leader": "Lider",
-     "roles": "Roles"   
-    },
-    "menu-modal":{
-     "edit-data": "Editar datos",
-     "remove": "Eliminar"   
-    },
-    "areasandpositions-addjob":{
-     "title": "Director General",
-     "tex": "Completa la información del puesto",
-     "label-nameposition": "Nombre del puesto*",
-     "placeholder-position": "Ej. Director General",
-     "label-levelposition": "Nivel del puesto*",
-     "placeholder-direction": "Ej. Dirección",
-     "label-positionpersonalized": "Nivel del puesto personalizado*",
-     "placeholder-personalized": "Ej. Dirección",
-     "label-kindposition": "Tipo de puesto*",
-     "placeholder-positionkey": "Ej.Puesto clave",
-     "label-levelrisk": "Nivel de riesgo*",
-     "placeholder-high": "Ej. Alto",
-     "label-levelstudies": "Nivel de Estudios*",
-     "placeholder-educationhigher": "Ej. Educación superior",
-     "label-yearsexperience": "Años de experiencia*",
-     "placeholder-selec": "Selecciona una opción",
-     "abilities-for-position": "Habilidades para el puesto",
-     "label-skilltech": "Habilidades técnicas",
-     "placeholder-word": "Ej. Microsoft word",
-     "languages": "Idiomas",
-     "lavel-languages": "Idiomas",
-     "placeholder-english": "Ej. Ingles avanzado",
-     "competences": "Competencias institucionales",
-     "level": "Nivel",
-     "competences2": "Competencias institucionales",
-     "link-addcompeten": "Agregar competencias",
-     "competen-position": "Competencias del puesto",
-     "link-addcompetens": "Agregar competencias",
-     "fields-obligatory": "Los campos con * son obligatorios",
-     "btn-cancel": "Cancelar",
-     "btn-save": "Guardar", 
-     "competens-modal":{
-      "add-competences": "Agregar competencias institucionales",
-      "tex1": "Agregar las competencias institucionales que deben tener todos los",
-      "tex2": "colaboradores de tu organización, puedes elegir hasta un máximo de tres.",
-      "placeholder-competens": "Buscar competencias",
-      "btn-cancel": "cancelar"   
-     },
-     "menu":{
-      "add-permissions": "Agregar permisos",
-      "remove-position": "Eliminar pusto"   
-     },
-     "add-positionmodal":{
-        "title": "Agregar permisos",
-        "permissions-adminitrator": "Permisos de Administrador",
-        "permissions-nine": "Permisos para ver Nine Box",
-        "permissions-objectives": "Permisos de Edición de Objetivos",
-        "permissions-organizatition": "Permisos para ver Organigrama",
-        "permissions-edit-organization": "Permisos para editar Organigrama",
-        "permissions-plan-developing": "Permisos para crear Plan de Desarrollo",
-        "btn-cancel": "Cancelar",
-        "btn-appli": "Aplicar"   
-     },   
-     "modal-positio":{
-        "atention": "¡Atención!",
-        "text1": "Estás a punto de eliminar esta competencia.",
-        "question": "¿seguro deseas eliminarla?",
-        "btn-cancel": "Cancelar",
-        "btn-remove": "Eliminar"   
-     },
-     "modal-competens":{
-      "title": "Editar competencias institucionales",
-      "tex": "Al editar las competencias institucionales se verá reflejado en todos los colaboradores de tu empresa.",
-      "label-enteruser": "Ingresa tu contraseña de usuario",
-      "placeholder-user": "Ej. Ghkcclsd23",
-      "btn-cancel": "cancelar",
-      "btn-enter": "Ingresar"   
-     },
-     "title1": "Areas en las que participa el puesto",
-     "tex-colaborator": "Colaboradores asignados al puesto de Director General"
-    },
-    "areasandpositions-general":{
-      "title": "Carga masiva",
-      "text-1": "En este apartado vas a poder realizar la carga masiva de información.",
-      "text-2": "para facilitar la carga de datos, proponemos subir la información en 3 partes, la",
-      "text-3": "primera sería un archivo con todas tu áreas y todos los puestos en tu empresa,",
-      "text-4": ",para facilitar este paso hemos creado una plantilla que pudes descargar,llenar y subir:",
-      "downloads-template": "Descargar plantilla de Estructura",
-      "text-5": "La segunda parte está pensada para que puedas subir toda la",
-      "text-6": " información que conforma cada puesto en tu organización,",
-      "text-7": "lo que se traduce en los datos básicos,las habilidades requeridas y las competencias de cada uno. Esta información debe decuadrar con la que previamente subiste de Estructura, por lo que tambiénpreparamos una plantilla:",
-      "downloads-positions": "Descargar plantilla de Información de Puestos",
-      "text-8": "Finalmente tenemos una tercera parte, donde vas a poder subir ",
-      "text-9": " la información de las personas que ocupan esos puestos,",
-      "text-10": "por lo que también tenemos una plantilla:",
-      "downloads-collaborator": "Descargar plantilla de Información de Colaboradores",
-      "title-2": "Antes de importar los datos, es esencial asegurarse de que la tabla cumple estos tres requisitos:",
-      "text-a": "- Cada columna tiene un encabezado.",
-      "text-b": "- Deberás llenar los todos los campos que se te piden.",
-      "text-c": "- Solo se aceptan archivos de excel (cvs y xls)",
-      "text-file": "Adjunta tu archivo y ¡listo!",
-      "tex-file-a": "Subir archivo de estructura:",
-      "to attach-file-link": "Adjuntar archivo",
-      "text-file-b": "Subir archivo de información de puestos:",
-      "to attach-link": "Adjutar archivo",
-      "text-file-c": "Subir archivo de información de colaboradores:",
-      "to attach-link-a": "Adjuntar archivo",
-      "modal-upload-file":{
-       "upload-file": "Sube es archivo",
-       "btn-casel": "Canselar",
-       "btn-upload": "Subir"   
-      }
-    },
-
-    "areasandpositions-E":{
-        "title": "Carga masiva de colaboradores",
-        "text-1": "En este apartado vas a poder realizar la carga masiva de información.",
-        "text-2": "para facilitar la carga de datos, proponemos subir la información en 3 partes, la",
-        "text-3": "primera sería un archivo con todas tu áreas y todos los puestos en tu empresa,",
-        "text-4": ",para facilitar este paso hemos creado una plantilla que pudes descargar,llenar y subir:",
-        "collaborator-template": "Descargar plantilla de Información de Colaboradores",
-        "text-5": "Antes de importar los datos, es esencial asegurarse de que la tabla cumple estos tres requisitos:",
-        "text-a": "- Cada columna tiene un encabezado.",
-        "text-b": "- Deberás llenar los todos los campos que se te piden.",
-        "text-c": "- Solo se aceptan archivos de excel (cvs y xls)",
-        "text-file": "Adjunta tu archivo y ¡listo!",
-        "tex-file-a": "Subir archivo de información de colaboradores:",
-        "to attach-file-link": "Adjuntar archivo",
-        "text-file-b": "Historial de Cargas",
-        "file": "Archivo",
-        "date-load": "Fecha de carga",
-        "status": "Estatus",
-        "actions": "Acciones",
-        "btn-cancel": "Cancelar",
-        "btn-upload-file": "Subir archivo",
-        "modal-file":{
-        "goes-file": "Sube el archivo",
-        "btn-cancel": "Canceler",
-        "btn-upload": "Subir",
-        "well-done": "¡Bien hecho!",
-        "text": "Organigrama creado",
-        "btn-done": "Hecho"
-        }
-      },
-
-      "organigram-page":{
-       "title": "Organigrama",
-       "menu-organigram":{
-            "search-position": "Buscar puesto",
-            "create-team": "Crear equipo",
-            "my-business": "Mi empresa",
-            "bulk-load": "Carga masiva",
-            "areas-position": "Areas y puestos",
-            "profile-position": "Perfil de puesto",
-            "collaborators": "Colaboradores",
-            "change-history": "Historial de cambios"  
-       },
-       "munu-2":{
-        "edit-colaborator": "Editar colaborador",
-        "dit-position": "Editar puesto",
-        "edit-extructure": "Editar extructura",
-        "add-permissions": "Agregar permisos",
-        "define-colour": "Definir color de área",
-        "watch-proceedings": "Ver expediente",
-        "watch-vacancies": "Ver Vacantes",
-        "watch-objectives": "Ver Ovjetivos",
-        "record-position": "Historial puesto",
-        "record-collaborators": "Historial colaborador",
-        "give-drop-collaborators": "Dar de baja colaborador",
-        "remove-position": "Eliminar puesto"   
-       },
-
-      "modal-history":{
-       "ready-tsdraf": "Lista de borradores",
-       "name": "Nombre",
-       "modification": "Modificación",
-       "actions": "Acciones",
-       "watch": "Ver",
-       "edit": "Editar",
-       "remove": "Eliminar",
-       "apply": "Aplicar",
-       "btn-cancel": "Cancelar",
-       "btn-accept": "Aceptar"   
-      }  
-      },
-
-      "organigramlist":{
-       "search-position-placeholder": "Buscar puesto",   
-       "menu-1":{   
-       "create-team": "Crear equipo",
-       "me-business": "Mi empresa",
-       "load-massive": "Carga masiva",
-       "areas-positions": "Áreas y puestos",
-       "profile-positions": "Perfil de puestos",
-       "Collaborators": "Colaboradores",
-       "record-changes": "Historial de cambios"
-       }
-      },
-      "menu-treedrop":{
-        "edit-colaborator": "Editar colaborador",
-        "edit-position": "Editar puesto",
-        "edit-extructure": "Editar extructura",
-        "add-permissions": "Agregar permisos",
-        "define-colour": "Definir color de área",
-        "watch-proceedings": "Ver expediente",
-        "watch-vacancies": "Ver Vacantes",
-        "watch-objectives": "Ver Ovjetivos",
-        "record-position": "Historial puesto",
-        "record-collaborators": "Historial colaborador",
-        "give-drop-collaborators": "Dar de baja colaborador",
-        "remove-position": "Eliminar puesto",
-        "modal-collaborator":{
-         "drop-collaborators": "Dar de baja a colaborador",
-         "text": "Al dar de baja a un colaborador de tu organización ya no se verá reflejada en tu organigrama.",
-         "password-label": "Ingresa tu contra seña de usuario",
-         "placeholder-password": "Ej.Ghkcclsd234",
-         "btn-cancel": "Cancelar",
-         "btn-enterokay": "Ingresar",
-         "text2": "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
-         "safe-want-remove": "¿Seguro deseas eliminarlo?"   
+        "teams":{
+        "search-positions": "Buscar puesto",   
+        "title": "¡Bienvenido a los equipos!",
+        "tex": "Aqui podrás visualizar todos los equipos de la organización, además de facilitar y fomentar el trabajo coopera ",
+        "btn-new-team": "Nuevo Equipo"     
         },
-        "modal-position":{
-         "remove-position": "Eliminar puesto",
-         "text": "Al eliminar un puesto de tu organización ya no se verá reflejada en tu organigrama.",
-         "btn-cancel": "Cancelar",
-         "btn-enterokay": "Ingresar",
-         "text2": "Estás a punto de eliminar el puesto",
-         "safe-want-remove": "¿Seguro deseas eliminarlo?"      
-        }     
-      }, 
 
-      "organigram-eraser":{
-       "btn-apply-changes": "Aplicar cambios",
-       "btn-save-draft": "Guardar como borrador"   
-      },
-      "modal-organigram":{
-       "save-draft": "Guardar como borrador",
-       "name-draft-label": "Nombre del borrador",
-       "direction-placeholder": "Dirección de Marketing",
-       "btn-cancel": "Cancelar",
-       "btn-save": "Guardar"   
-      },
+        "teams-modal":{
+            "title": "Crear Equipo",
+            "title2": "Editar Equipo",
+            "name-team-label": "Nombre del equipo",
+            "placeholder-imput-name": "Aqui puedes asignar el nombre de tu equipo",
+            "kind-team-label": "Tipo de equipo",
+            "placeholder-imput-selec": "Selecciona una opción",
+            "add-collaborators-label": "Agrega colaboradores",
+            "placeholder-imput-search": "Buscar colaboradores",
+            "modality-label": "Modalidad",
+            "placeholder-imput-option": "Selecciona una opción",
+            "members-team": "Miembros del equipo",
+            "placeholder-imput-optiona": "Selecciona una opción",
+            "members-team-2": "Miembros del equipo",
+            "leader": "Lider",
+            "role-team": "Rol en el equipo",
+            "actions": "Acciones",
+            "text-link": "Aqui",
+            "text": "puedes ver buenas prácticas en equipos Agile",
+            "btn-cancel": "Cancelar",
+            "btn-create": "Crear",
+            "btn-edit": "Editar",
+            "personalized": "Personalizado",
+            "mode-operative": "Modo Operativo Agile"   
+           },
 
-      "indicators":{
-       "title": "¡Bienvenido a tus indicadores clave!",
-       "tex-a": "Aquí podrás actualizar, tener retroalimentación y ver la tendencia de tu desempeño",
-       "tex-b": "¿Cómo deseas actualizar tu indicador por primera vez?",
-       "btn-direct": "directo",
-       "btn-guide": "con guia"   
-      },
+            "teams2":{
+            "search-position": "Buscar puesto",   
+            "new-team": "Nuevo Equipo",   
+            "tex": "Nombre del equipo",
+            "tex2": "Última modificación",
+            "tex3": "Acción"
+            },
+           "menu":{
+            "clone-team": "Clonar equipo",
+            "rename": "Renombrar",
+            "edit": "Editar",
+            "remove": "Eliminar"   
+           },
+           "rename-modal":{
+            "rename-team": "Rename de equipo",
+            "btn-cancel": "cancelar",
+            "btn-save": "Guardar"   
+           },
 
+           "teams2-modal":{
+            "kind-team": "Tipo de equipo",
+            "modality": "Modalidad",
+            "frame-job": "Marco de trabajo",
+            "tex": "SCRUM",
+            "members-team": "Miembros del equipo",
+            "leader": "Lider",
+            "roles": "Roles"   
+           },
+           "menu-modal":{
+            "edit-data": "Editar datos",
+            "remove": "Eliminar"   
+           },
+
+           "areasandpositions-addjob":{
+            "title": "Director General",
+            "tex": "Completa la información del puesto",
+            "label-nameposition": "Nombre del puesto*",
+            "placeholder-position": "Ej. Director General",
+            "label-levelposition": "Nivel del puesto*",
+            "placeholder-direction": "Ej. Dirección",
+            "label-positionpersonalized": "Nivel del puesto personalizado*",
+            "placeholder-personalized": "Ej. Dirección",
+            "label-kindposition": "Tipo de puesto*",
+            "placeholder-positionkey": "Ej.Puesto clave",
+            "label-levelrisk": "Nivel de riesgo*",
+            "placeholder-high": "Ej. Alto",
+            "label-levelstudies": "Nivel de Estudios*",
+            "placeholder-educationhigher": "Ej. Educación superior",
+            "label-yearsexperience": "Años de experiencia*",
+            "placeholder-selec": "Selecciona una opción",
+            "abilities-for-position": "Habilidades para el puesto",
+            "label-skilltech": "Habilidades técnicas",
+            "placeholder-word": "Ej. Microsoft word",
+            "languages": "Idiomas",
+            "lavel-languages": "Idiomas",
+            "placeholder-english": "Ej. Ingles avanzado",
+            "competences": "Competencias institucionales",
+            "level": "Nivel",
+            "competences2": "Competencias institucionales",
+            "link-addcompeten": "Agregar competencias",
+            "competen-position": "Competencias del puesto",
+            "link-addcompetens": "Agregar competencias",
+            "fields-obligatory": "Los campos con * son obligatorios",
+            "btn-cancel": "Cancelar",
+            "btn-save": "Guardar", 
+            "competens-modal":{
+             "add-competences": "Agregar competencias institucionales",
+             "tex1": "Agregar las competencias institucionales que deben tener todos los",
+             "tex2": "colaboradores de tu organización, puedes elegir hasta un máximo de tres.",
+             "placeholder-competens": "Buscar competencias",
+             "btn-cancel": "cancelar"   
+            },
+            "menu":{
+             "add-permissions": "Agregar permisos",
+             "remove-position": "Eliminar pusto"   
+            },
+            "add-positionmodal":{
+               "title": "Agregar permisos",
+               "permissions-adminitrator": "Permisos de Administrador",
+               "permissions-nine": "Permisos para ver Nine Box",
+               "permissions-objectives": "Permisos de Edición de Objetivos",
+               "permissions-organizatition": "Permisos para ver Organigrama",
+               "permissions-edit-organization": "Permisos para editar Organigrama",
+               "permissions-plan-developing": "Permisos para crear Plan de Desarrollo",
+               "btn-cancel": "Cancelar",
+               "btn-appli": "Aplicar"   
+            },   
+            "modal-positio":{
+               "atention": "¡Atención!",
+               "text1": "Estás a punto de eliminar esta competencia.",
+               "question": "¿seguro deseas eliminarla?",
+               "btn-cancel": "Cancelar",
+               "btn-remove": "Eliminar"   
+            },
+            "modal-competens":{
+             "title": "Editar competencias institucionales",
+             "tex": "Al editar las competencias institucionales se verá reflejado en todos los colaboradores de tu empresa.",
+             "label-enteruser": "Ingresa tu contraseña de usuario",
+             "placeholder-user": "Ej. Ghkcclsd23",
+             "btn-cancel": "cancelar",
+             "btn-enter": "Ingresar"   
+            },
+            "title1": "Areas en las que participa el puesto",
+            "tex-colaborator": "Colaboradores asignados al puesto de Director General"
+           },
+           "areasandpositions-general":{
+            "title": "Carga masiva",
+            "text-1": "En este apartado vas a poder realizar la carga masiva de información.",
+            "text-2": "para facilitar la carga de datos, proponemos subir la información en 3 partes, la",
+            "text-3": "primera sería un archivo con todas tu áreas y todos los puestos en tu empresa,",
+            "text-4": ",para facilitar este paso hemos creado una plantilla que pudes descargar,llenar y subir:",
+            "downloads-template": "Descargar plantilla de Estructura",
+            "text-5": "La segunda parte está pensada para que puedas subir toda la",
+            "text-6": " información que conforma cada puesto en tu organización,",
+            "text-7": "lo que se traduce en los datos básicos,las habilidades requeridas y las competencias de cada uno. Esta información debe decuadrar con la que previamente subiste de Estructura, por lo que tambiénpreparamos una plantilla:",
+            "downloads-positions": "Descargar plantilla de Información de Puestos",
+            "text-8": "Finalmente tenemos una tercera parte, donde vas a poder subir ",
+            "text-9": " la información de las personas que ocupan esos puestos,",
+            "text-10": "por lo que también tenemos una plantilla:",
+            "downloads-collaborator": "Descargar plantilla de Información de Colaboradores",
+            "title-2": "Antes de importar los datos, es esencial asegurarse de que la tabla cumple estos tres requisitos:",
+            "text-a": "- Cada columna tiene un encabezado.",
+            "text-b": "- Deberás llenar los todos los campos que se te piden.",
+            "text-c": "- Solo se aceptan archivos de excel (cvs y xls)",
+            "text-file": "Adjunta tu archivo y ¡listo!",
+            "tex-file-a": "Subir archivo de estructura:",
+            "to attach-file-link": "Adjuntar archivo",
+            "text-file-b": "Subir archivo de información de puestos:",
+            "to attach-link": "Adjutar archivo",
+            "text-file-c": "Subir archivo de información de colaboradores:",
+            "to attach-link-a": "Adjuntar archivo",
+            "modal-upload-file":{
+             "upload-file": "Sube es archivo",
+             "btn-casel": "Canselar",
+             "btn-upload": "Subir"   
+            }
+          },
+      
+          "areasandpositions-E":{
+            "title": "Carga masiva de colaboradores",
+            "text-1": "En este apartado vas a poder realizar la carga masiva de información.",
+            "text-2": "para facilitar la carga de datos, proponemos subir la información en 3 partes, la",
+            "text-3": "primera sería un archivo con todas tu áreas y todos los puestos en tu empresa,",
+            "text-4": ",para facilitar este paso hemos creado una plantilla que pudes descargar,llenar y subir:",
+            "collaborator-template": "Descargar plantilla de Información de Colaboradores",
+            "text-5": "Antes de importar los datos, es esencial asegurarse de que la tabla cumple estos tres requisitos:",
+            "text-a": "- Cada columna tiene un encabezado.",
+            "text-b": "- Deberás llenar los todos los campos que se te piden.",
+            "text-c": "- Solo se aceptan archivos de excel (cvs y xls)",
+            "text-file": "Adjunta tu archivo y ¡listo!",
+            "tex-file-a": "Subir archivo de información de colaboradores:",
+            "to attach-file-link": "Adjuntar archivo",
+            "text-file-b": "Historial de Cargas",
+            "file": "Archivo",
+            "date-load": "Fecha de carga",
+            "status": "Estatus",
+            "actions": "Acciones",
+            "btn-cancel": "Cancelar",
+            "btn-upload-file": "Subir archivo",
+            "modal-file":{
+            "goes-file": "Sube el archivo",
+            "btn-cancel": "Canceler",
+            "btn-upload": "Subir",
+            "well-done": "¡Bien hecho!",
+            "text": "Organigrama creado",
+            "btn-done": "Hecho"
+            }
+          },
+
+
+          "organigram-page":{
+            "title": "Organigrama",
+            "menu-organigram":{
+                 "search-position": "Buscar puesto",
+                 "create-team": "Crear equipo",
+                 "my-business": "Mi empresa",
+                 "bulk-load": "Carga masiva",
+                 "areas-position": "Areas y puestos",
+                 "profile-position": "Perfil de puesto",
+                 "collaborators": "Colaboradores",
+                 "change-history": "Historial de cambios"  
+            },
+            "munu-2":{
+             "edit-colaborator": "Editar colaborador",
+             "dit-position": "Editar puesto",
+             "edit-extructure": "Editar extructura",
+             "add-permissions": "Agregar permisos",
+             "define-colour": "Definir color de área",
+             "watch-proceedings": "Ver expediente",
+             "watch-vacancies": "Ver Vacantes",
+             "watch-objectives": "Ver Ovjetivos",
+             "record-position": "Historial puesto",
+             "record-collaborators": "Historial colaborador",
+             "give-drop-collaborators": "Dar de baja colaborador",
+             "remove-position": "Eliminar puesto"   
+            },
+     
+             "modal-history":{
+             "ready-tsdraf": "Lista de borradores",
+             "name": "Nombre",
+             "modification": "Modificación",
+             "actions": "Acciones",
+             "watch": "Ver",
+             "edit": "Editar",
+             "remove": "Eliminar",
+             "apply": "Aplicar",
+             "btn-cancel": "Cancelar",
+             "btn-accept": "Aceptar"   
+             }  
+           },
+
+        "organigramlist":{
+            "search-position-placeholder": "Buscar puesto",   
+            "menu-1":{   
+            "create-team": "Crear equipo",
+            "me-business": "Mi empresa",
+            "load-massive": "Carga masiva",
+            "areas-positions": "Áreas y puestos",
+            "profile-positions": "Perfil de puestos",
+            "Collaborators": "Colaboradores",
+            "record-changes": "Historial de cambios"
+            }
+        },
+           "menu-treedrop":{
+             "edit-colaborator": "Editar colaborador",
+             "edit-position": "Editar puesto",
+             "edit-extructure": "Editar extructura",
+             "add-permissions": "Agregar permisos",
+             "define-colour": "Definir color de área",
+             "watch-proceedings": "Ver expediente",
+             "watch-vacancies": "Ver Vacantes",
+             "watch-objectives": "Ver Ovjetivos",
+             "record-position": "Historial puesto",
+             "record-collaborators": "Historial colaborador",
+             "give-drop-collaborators": "Dar de baja colaborador",
+             "remove-position": "Eliminar puesto",
+             "modal-collaborator":{
+              "drop-collaborators": "Dar de baja a colaborador",
+              "text": "Al dar de baja a un colaborador de tu organización ya no se verá reflejada en tu organigrama.",
+              "password-label": "Ingresa tu contra seña de usuario",
+              "placeholder-password": "Ej.Ghkcclsd234",
+              "btn-cancel": "Cancelar",
+              "btn-enterokay": "Ingresar",
+              "text2": "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
+              "safe-want-remove": "¿Seguro deseas eliminarlo?"   
+             },
+             "modal-position":{
+              "remove-position": "Eliminar puesto",
+              "text": "Al eliminar un puesto de tu organización ya no se verá reflejada en tu organigrama.",
+              "btn-cancel": "Cancelar",
+              "btn-enterokay": "Ingresar",
+              "text2": "Estás a punto de eliminar el puesto",
+              "safe-want-remove": "¿Seguro deseas eliminarlo?"      
+             }     
+           }, 
+     
+           "organigram-eraser":{
+            "btn-apply-changes": "Aplicar cambios",
+            "btn-save-draft": "Guardar como borrador"   
+           },
+           "modal-organigram":{
+            "save-draft": "Guardar como borrador",
+            "name-draft-label": "Nombre del borrador",
+            "direction-placeholder": "Dirección de Marketing",
+            "btn-cancel": "Cancelar",
+            "btn-save": "Guardar"   
+           },
+     
+           "indicators":{
+            "title": "¡Bienvenido a tus indicadores clave!",
+            "tex-a": "Aquí podrás actualizar, tener retroalimentación y ver la tendencia de tu desempeño",
+            "tex-b": "¿Cómo deseas actualizar tu indicador por primera vez?",
+            "btn-direct": "directo",
+            "btn-guide": "con guia"   
+           }
+           
+    },    
+   
       "indicators-evaluations":{
        "tab-indicators": "Mis indicadores clave",
        "tab-evaluated": "Mis evaluaciones",

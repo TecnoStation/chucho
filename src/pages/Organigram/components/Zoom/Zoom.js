@@ -69,7 +69,7 @@ export default function Zoom() {
                       color="#2cccd3"
                     >
                       <Button
-                        className="secondary iconGray roundBtn" 
+                        className="secondary iconGray roundBtn"
                         icon={<FaUsers />}
                         size="large"
                       />

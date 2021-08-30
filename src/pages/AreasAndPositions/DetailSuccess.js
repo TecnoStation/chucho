@@ -25,7 +25,7 @@ export default function DetailSuccess() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <h3>
-                {t("organigram.areasandpositions-detailSuccess.abstract")}
+                {t("organigram.areasandpositions-detailsuccess.abstract")}
               </h3>
             </Col>
           </Row>
@@ -37,7 +37,7 @@ export default function DetailSuccess() {
             <Col className="gutter-row" span={3}></Col>
             <Col className="gutter-row" span={7}>
               <p style={{ fontWeight: "bold", textAlign: "right" }}>
-                {t("organigram.areasandpositions-detailSuccess.file")}
+                {t("organigram.areasandpositions-detailsuccess.file")}
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
@@ -52,7 +52,7 @@ export default function DetailSuccess() {
             <Col className="gutter-row" span={3}></Col>
             <Col className="gutter-row" span={7}>
               <p style={{ fontWeight: "bold", textAlign: "right" }}>
-                {t("organigram.areasandpositions-detailSuccess.username")}
+                {t("organigram.areasandpositions-detailsuccess.username")}
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
@@ -67,7 +67,7 @@ export default function DetailSuccess() {
             <Col className="gutter-row" span={3}></Col>
             <Col className="gutter-row" span={7}>
               <p style={{ fontWeight: "bold", textAlign: "right" }}>
-                {t("organigram.areasandpositions-detailSuccess.status")}
+                {t("organigram.areasandpositions-detailsuccess.status")}
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
@@ -84,7 +84,7 @@ export default function DetailSuccess() {
             <Col className="gutter-row" span={3}></Col>
             <Col className="gutter-row" span={7}>
               <p style={{ fontWeight: "bold", textAlign: "right" }}>
-                {t("organigram.areasandpositions-detailSuccess.total-mistakes")}
+                {t("organigram.areasandpositions-detailsuccess.total-mistakes")}
               </p>
             </Col>
             <Col className="gutter-row" span={12}>
@@ -98,7 +98,7 @@ export default function DetailSuccess() {
           >
             <Col className="gutter-row" span={10}>
               <p style={{ fontWeight: "bold", textAlign: "right" }}>
-                {t("organigram.areasandpositions-detailSuccess.date-load")}
+                {t("organigram.areasandpositions-detailsuccess.date-load")}
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
