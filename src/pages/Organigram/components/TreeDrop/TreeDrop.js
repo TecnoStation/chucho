@@ -32,17 +32,17 @@ export default function TreeDrop({ name }) {
     <Menu>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-collaborator">Editar colaborador</Link>
+          <Link to="/areasandpositions-collaborator">{t("organigrama.menu-treedrop.edit-colaborator")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-addjob">Editar puesto</Link>
+          <Link to="/areasandpositions-addjob">{t("organigrama.menu-treedrop.edit-position")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/eraser">Editar estructura</Link>
+          <Link to="/eraser">{t("organigrama.menu-treedrop.edit-extructure")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -53,7 +53,7 @@ export default function TreeDrop({ name }) {
               setPermissions(true);
             }}
           >
-            Agregar permisos
+            {t("organigrama.menu-treedrop.add-permissions")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -65,24 +65,24 @@ export default function TreeDrop({ name }) {
               setColor(true);
             }}
           >
-            Difinir color de área
+            {t("organigrama.menu-treedrop.define-colour")}
           </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-perfil">Ver expediente</Link>
+          <Link to="/areasandpositions-perfil">{t("organigrama.menu-treedrop.watch-proceedings")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()} disabled>
-          <Link to="#">Ver Vacantes</Link>
+          <Link to="#">{t("organigrama.menu-treedrop.watch-vacancies")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()} disabled>
-          <Link to="#">Ver Ovjetivos</Link>
+          <Link to="#">{t("organigrama.menu-treedrop.watch-objectives")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -93,7 +93,7 @@ export default function TreeDrop({ name }) {
               setHistorialP(true);
             }}
           >
-            Historial puesto
+           {t("organigrama.menu-treedrop.record-position")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -105,7 +105,7 @@ export default function TreeDrop({ name }) {
               setHistorialC(true);
             }}
           >
-            Historial colaborador
+            {t("organigrama.menu-treedrop.record-collaborators")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -117,16 +117,18 @@ export default function TreeDrop({ name }) {
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: "Dar de baja a colaborador",
+                titleModal: t("organigrama.menu-treedrop.modal-collaborator.drop-collaborators"),
+                type: 0,
                 messageModal:
-                  "Al dar de baja a un colaborador de tu organización ya no se verá reflejada en tu organigrama.",
+                t("organigrama.menu-treedrop.modal-collaborator.text"),
                 messageWarning:
-                  "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
-                question: "¿Seguro deseas eliminarlo?",
+                t("organigrama.menu-treedrop.modal-collaborator.text2"),
+                question: t("organigrama.menu-treedrop.modal-collaborator.safe-want-remove"),
+                function: () => {return false;}
               });
             }}
           >
-            Dar de baja colaborador
+             {t("organigrama.menu-treedrop.give-drop-collaborators")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -137,15 +139,17 @@ export default function TreeDrop({ name }) {
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: "Eliminar puesto",
+                titleModal: t("organigrama.menu-treedrop.modal-position.remove-position"),
+                type: 0,
                 messageModal:
-                  "Al eliminar un puesto de tu organización ya no se verá reflejada en tu organigrama.",
-                messageWarning: "Estás a punto de eliminar el puesto",
-                question: "¿Seguro deseas eliminarlo?",
+                t("organigrama.menu-treedrop.modal-position.text"),
+                messageWarning: t("organigrama.menu-treedrop.modal-position.text2"),
+                question:  t("organigrama.menu-treedrop.modal-position.safe-want-remove"),
+                function: () => {return false;}
               });
             }}
           >
-            Eliminar puesto
+           {t("organigrama.menu-treedrop.remove-position")}
           </Link>
         </Menu.Item>
       </Menu.Item>
