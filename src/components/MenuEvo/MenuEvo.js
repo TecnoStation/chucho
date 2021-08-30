@@ -41,7 +41,16 @@ export default function MenuEvo() {
           <hr></hr>
           <ul>
             <li>
-              <Link to="/organigrama/mybusiness">{t("organization-chart.my-busines")}</Link>
+              <Link
+                to={
+                  "/" +
+                  t("routes.organigram") +
+                  "/" +
+                  t("paths_organigram.mybusiness")
+                }
+              >
+                {t("organization-chart.my-busines")}
+              </Link>
             </li>
             <Link
               to="#"
@@ -52,7 +61,7 @@ export default function MenuEvo() {
               }}
             >
               <li>
-              {t("organization-chart.areas-and-positions")}
+                {t("organization-chart.areas-and-positions")}
                 <IoMdArrowDropright
                   style={{
                     position: "absolute",
@@ -84,23 +93,60 @@ export default function MenuEvo() {
                   }}
                 />
                 <ul className={visible}>
-                  <Link to="/organigrama/areasandpositions?tab=1">
+                  <Link
+                    to={
+                      "/" +
+                      t("routes.organigram") +
+                      "/" +
+                      t("paths_organigram.areasandpositions") +
+                      "?tab=1"
+                    }
+                  >
                     <li>{t("areas-and-positions.create-area")}</li>
                   </Link>
-                  <Link to="/organigrama/areasandpositions?tab=2">
+                  <Link
+                    to={
+                      "/" +
+                      t("routes.organigram") +
+                      "/" +
+                      t("paths_organigram.areasandpositions") +
+                      "?tab=2"
+                    }
+                  >
                     <li>{t("areas-and-positions.create-position")}</li>
                   </Link>
-                  <Link to="/organigrama/areasandpositions-collaborator">
+                  <Link
+                    to={
+                      "/" +
+                      t("routes.organigram") +
+                      "/" +
+                      t("paths_organigram.areasandpositions-collaborator")
+                    }
+                  >
                     <li>{t("areas-and-positions.create-collaborator")}</li>
                   </Link>
                 </ul>
               </li>
             </Link>
 
-            <Link to="/organigrama/teamstarted">
+            <Link
+              to={
+                "/" +
+                t("routes.organigram") +
+                "/" +
+                t("paths_organigram.teamstarted")
+              }
+            >
               <li>{t("organization-chart.my-teams")}</li>
             </Link>
-            <Link to="/organigrama/organigram">
+            <Link
+              to={
+                "/" +
+                t("routes.organigram") +
+                "/" +
+                t("paths_organigram.organigram")
+              }
+            >
               <li>{t("organization-chart.general-organigram")}</li>
             </Link>
           </ul>
@@ -240,7 +286,8 @@ export default function MenuEvo() {
         <div className="allRigths">
           <p>{t("sidebar.copyright-brive")}</p>
           <p className="link">
-            {t("sidebar.copyright-legal")} <br /> {t("sidebar.copyright-privacy")}
+            {t("sidebar.copyright-legal")} <br />{" "}
+            {t("sidebar.copyright-privacy")}
           </p>
         </div>
       </div>
