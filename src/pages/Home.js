@@ -13,6 +13,7 @@ import NewPassword from "./Login/NewPassword";
 import Organigramstarted from "./Organigram/Organigramstarted";
 import Organigram from "./Organigram/Organigram";
 import OrganigramList from "./Organigram/OrganigramList";
+import OrganigramMain from "./Organigram/OrganigramMain";
 import Eraser from "./Organigram/Eraser";
 import Login from "./Login/Login";
 import Mybusiness from "./Mybusiness/Mybusiness";
@@ -68,6 +69,12 @@ export default function Home() {
           path="/organigrama/eraser"
           title="Organigrama"
           component={Eraser}
+        />
+        <LayoutSecondaryCardGlass
+          exact
+          path="/organigrama/organigrammain"
+          title="Organigrama"
+          component={OrganigramMain}
         />
         <LayoutSecondaryCardWhite
           exact

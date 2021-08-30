@@ -1,19 +1,18 @@
 import { Button, Col, Row, Tooltip } from "antd";
 import React, { useState } from "react";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
-import TreeOffice from "../TreeOffice/TreeOffice";
 import { FiUpload, FiZoomIn, FiZoomOut } from "react-icons/fi";
-import { FaUsers } from "react-icons/fa";
+import { FaRegQuestionCircle, FaUsers } from "react-icons/fa";
 import { IoBusinessSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next";
 import { AiOutlineHistory } from "react-icons/ai";
 
 import "./Zoom.scss";
+import TreeStarted from "../TreeStarted/TreeStarted";
 import ModalErasersList from "../../../../components/Modals/ModalErasersList/ModalErasersList";
 
-export default function Zoom() {
-  const [t, i18n] = useTranslation("global");
+function ZoomStarted() {
+  const [historial, setHistorial] = useState(false);
   const menu = (
     <>
       <div className="menuToltip">
@@ -38,22 +37,14 @@ export default function Zoom() {
       </div>
     </>
   );
-
-  const [historial, setHistorial] = useState(false);
-
   return (
-    // <TransformWrapper>
-    //   <TransformComponent>
-    //     <TreeOffice/>
-    //   </TransformComponent>
-    // </TransformWrapper>
     <>
       <TransformWrapper
         className="zoom"
         initialScale={1}
         minScale={0.5}
         maxScale={1.2}
-        initialPositionX={-200}
+        initialPositionX={400}
         centerContent={true}
         wheelEnabled={false}
       >
@@ -148,9 +139,39 @@ export default function Zoom() {
                   ></Button>
                 </Col>
               </Row>
+              <div className="messageOrg">
+                <Row>
+                  <Col span={9}>
+                    <FaRegQuestionCircle className="question" />
+                  </Col>
+                  <Col
+                    className="dividerLeft"
+                    span={15}
+                    style={{ paddingLeft: "10px" }}
+                  >
+                    <p
+                      style={{
+                        fontSize: "12px",
+                        color: "#fff",
+                      }}
+                    >
+                      Si ya llenaste tu archivo de excel, lo puedes subir con el
+                      ícono de carga masiva
+                    </p>
+                    <p style={{ textAlign: "center" }}>
+                      <Button
+                        className="secondary iconGray roundBtn"
+                        style={{ width: "40px" }}
+                        icon={<FiUpload />}
+                        size="large"
+                      ></Button>
+                    </p>
+                  </Col>
+                </Row>
+              </div>
             </div>
             <TransformComponent>
-              <TreeOffice />
+              <TreeStarted />
             </TransformComponent>
           </React.Fragment>
         )}
@@ -159,3 +180,5 @@ export default function Zoom() {
     </>
   );
 }
+
+export default ZoomStarted;

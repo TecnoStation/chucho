@@ -44,8 +44,15 @@ export default function AreasAndPositions() {
 
   const [firtFlag, setFirtFlag] = useState(true);
   const [message, setMessage] = useState(false);
+  const [messageType, setMessageType] = useState(0);
 
   const onFinish = (values) => {
+    setMessageType(3);
+    firtFlag ? setMessage(true) : console.log("Success:", values);
+  };
+
+  const onFinish2 = (values) => {
+    setMessageType(4);
     firtFlag ? setMessage(true) : console.log("Success:", values);
   };
 
@@ -548,27 +555,35 @@ export default function AreasAndPositions() {
                 </Col>
               </Row>
             </Row>
+            <Form onFinish={onFinish2}>
+              <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                <Col
+                  style={{ textAlign: "right" }}
+                  className="gutter-row"
+                  span={24}
+                >
+                  <Link to="/organigrama/mybusiness">
+                    <Button
+                      className="secondary"
+                      style={{ marginRight: "15px" }}
+                    >
+                      {t("organigrama.areas-and-positions.position.btn-cancel")}
+                    </Button>
+                  </Link>
 
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-              <Col
-                style={{ textAlign: "right" }}
-                className="gutter-row"
-                span={24}
-              >
-                <Link to="/organigrama/mybusiness">
-                  <Button className="secondary" style={{ marginRight: "15px" }}>
-                    {t("organigrama.areas-and-positions.position.btn-cancel")}
-                  </Button>
-                </Link>
-
-                <Link to="/organigrama/mybusiness">
-                  <Button className="primary">
-                    {t("organigrama.areas-and-positions.position.btn-save")}
-                  </Button>
-                </Link>
-              </Col>
-              <br />
-            </Row>
+                  {firtFlag ? (
+                    <Button htmlType="submit" className="primary">
+                      {t("organigrama.areas-and-positions.structure.btn-save")}
+                    </Button>
+                  ) : (
+                    <Link to="/organigrama/mybusiness">
+                      <Button className="primary">Guardar</Button>
+                    </Link>
+                  )}
+                </Col>
+                <br />
+              </Row>
+            </Form>
           </div>
         </TabPane>
       </Tabs>
@@ -590,7 +605,7 @@ export default function AreasAndPositions() {
       <Screens
         message={message}
         setMessage={setMessage}
-        messageType={0}
+        messageType={messageType}
         setActive={setActive}
       />
     </>

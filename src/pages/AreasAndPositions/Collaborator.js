@@ -415,7 +415,12 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Input type="text" placeholder={t("organigrama.collaborator-form.salary-placeholder")} />
+                <Input
+                  type="text"
+                  placeholder={t(
+                    "organigrama.collaborator-form.salary-placeholder"
+                  )}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -609,7 +614,7 @@ export default function Collaborator() {
           <h3>{t("organigrama.collaborator-form.well-done")}</h3>
           <h3>{t("organigrama.collaborator-form.organization-created")}</h3>
           <br />
-          <Link to="/organigrama">
+          <Link to="/organigrama/organigram">
             <Button className="primary">
               {t("organigrama.collaborator-form.btn-done")}
             </Button>
@@ -620,7 +625,7 @@ export default function Collaborator() {
       <ModalPermissions />
 
       <ModalDocument />
-      <ModalPassword Password={Password} setPassword={setPassword} /> 
+      <ModalPassword Password={Password} setPassword={setPassword} />
     </Form>
   );
 }

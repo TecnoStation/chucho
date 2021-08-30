@@ -36,8 +36,15 @@ export default function MybusinessEdit() {
 
   const [firtFlag, setFirtFlag] = useState(true);
   const [message, setMessage] = useState(false);
+  const [messageType, setMessageType] = useState(0);
 
   const onFinish = (values) => {
+    setMessageType(0);
+    firtFlag ? setMessage(true) : console.log("Success:", values);
+  };
+
+  const onFinish2 = (values) => {
+    setMessageType(2);
     firtFlag ? setMessage(true) : console.log("Success:", values);
   };
 
@@ -435,18 +442,25 @@ export default function MybusinessEdit() {
 
         <TabPane className="tabPane" tab="Cultura" key="2">
           <div className="info">
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-              <Col className="gutter-row" span={12}>
-                <h2 style={{ textAlign: "left" }}>
-                  {t("organigrama.my-business-edit.culture.title")}
-                </h2>
-                <br />
-                <Form name="formCulture" layout="vertical">
+            <Form name="formCulture" onFinish={onFinish2} layout="vertical">
+              <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                <Col className="gutter-row" span={12}>
+                  <h2 style={{ textAlign: "left" }}>
+                    {t("organigrama.my-business-edit.culture.title")}
+                  </h2>
+                  <br />
+
                   <div className="formWork">
                     <Form.Item
                       name="propose"
                       label="Proposito / mision"
                       tooltip="info"
+                      rules={[
+                        {
+                          required: true,
+                          message: "*Campo requerido",
+                        },
+                      ]}
                     >
                       <TextArea
                         placeholder={t(
@@ -455,7 +469,17 @@ export default function MybusinessEdit() {
                         rows={6}
                       />
                     </Form.Item>
-                    <Form.Item name="vision" label="Visión" tooltip="info">
+                    <Form.Item
+                      name="vision"
+                      label="Visión"
+                      tooltip="info"
+                      rules={[
+                        {
+                          required: true,
+                          message: "*Campo requerido",
+                        },
+                      ]}
+                    >
                       <TextArea
                         placeholder={t(
                           "organigrama.my-business-edit.culture.View-placeholder"
@@ -469,101 +493,126 @@ export default function MybusinessEdit() {
                         "organigrama.my-business-edit.culture.business-description"
                       )}
                       tooltip="info"
+                      rules={[
+                        {
+                          required: true,
+                          message: "*Campo requerido",
+                        },
+                      ]}
                     >
                       <TextArea
                         placeholder={t(
                           "organigrama.my-business-edit.culture.business-description-placeholder"
                         )}
                         rows={6}
+                        rules={[
+                          {
+                            required: true,
+                            message: "*Campo requerido",
+                          },
+                        ]}
                       />
                     </Form.Item>
                   </div>
-                </Form>
-              </Col>
-              <Col className="gutter-row dividerLeft" span={12}>
-                <h2 style={{ textAlign: "left" }}>
-                  {t(
-                    "organigrama.my-business-edit.culture.institutional-competencies"
-                  )}
-                </h2>
-                <br />
-                <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                  <Col className="gutter-row" span={10}>
-                    <Link
-                      to="#"
-                      onClick={() => {
-                        setModalComp(true);
-                        setSlider(50);
-                      }}
-                    >
-                      <PlusCircleOutlined />{" "}
-                      {t(
-                        "organigrama.my-business-edit.culture.add-competencies-link"
-                      )}
-                    </Link>
-                  </Col>
-                </Row>
-
-                <br />
-                <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                  <Col className="gutter-row" span={11}>
-                    <span>
-                      <b>
+                </Col>
+                <Col className="gutter-row dividerLeft" span={12}>
+                  <h2 style={{ textAlign: "left" }}>
+                    {t(
+                      "organigrama.my-business-edit.culture.institutional-competencies"
+                    )}
+                  </h2>
+                  <br />
+                  <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                    <Col className="gutter-row" span={10}>
+                      <Link
+                        to="#"
+                        onClick={() => {
+                          setModalComp(true);
+                          setSlider(50);
+                        }}
+                      >
+                        <PlusCircleOutlined />{" "}
                         {t(
-                          "organigrama.my-business-edit.culture.competencies-added"
+                          "organigrama.my-business-edit.culture.add-competencies-link"
                         )}
-                      </b>
-                    </span>
-                  </Col>
-                  <Col
-                    className="gutter-row"
-                    style={{ textAlign: "center" }}
-                    span={10}
-                  >
-                    <span>
-                      <b>{t("organigrama.my-business-edit.culture.level")}</b>
-                    </span>
-                  </Col>
-                  <div className="divider">
-                    <div className="dividerBottom"></div>
-                  </div>
-                </Row>
-                <div id="competencies" className="competencies">
-                  <Competencies
-                    competencies={competencies}
-                    setCompetencies={setCompetencies}
-                    competenciesList={competenciesList}
-                    setCompetenciesList={setCompetenciesList}
-                    competenceName={competenceName}
-                    setCompetenceName={setCompetenceName}
-                    setSlider={setSlider}
-                    slider={slider}
-                    setEditionModeSlider={setEditionModeSlider}
-                    editionModeSlider={editionModeSlider}
-                  />
-                </div>
-              </Col>
-            </Row>
-            <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-              <Col
-                style={{ textAlign: "right" }}
-                className="gutter-row"
-                span={24}
-              >
-                <Link to="/organigrama/mybusiness">
-                  <Button className="secondary" style={{ marginRight: "15px" }}>
-                    {t("organigrama.my-business-edit.culture.btn-cancel")}
-                  </Button>
-                </Link>
+                      </Link>
+                    </Col>
+                  </Row>
 
-                <Link to="/organigrama/mybusiness">
-                  <Button className="primary">
-                    {t("organigrama.my-business-edit.culture.btn-save")}
-                  </Button>
-                </Link>
-              </Col>
-              <br />
-            </Row>
+                  <br />
+                  <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                    <Col className="gutter-row" span={11}>
+                      <span>
+                        <b>
+                          {t(
+                            "organigrama.my-business-edit.culture.competencies-added"
+                          )}
+                        </b>
+                      </span>
+                    </Col>
+                    <Col
+                      className="gutter-row"
+                      style={{ textAlign: "center" }}
+                      span={10}
+                    >
+                      <span>
+                        <b>{t("organigrama.my-business-edit.culture.level")}</b>
+                      </span>
+                    </Col>
+                    <div className="divider">
+                      <div className="dividerBottom"></div>
+                    </div>
+                  </Row>
+                  <div id="competencies" className="competencies">
+                    <Competencies
+                      competencies={competencies}
+                      setCompetencies={setCompetencies}
+                      competenciesList={competenciesList}
+                      setCompetenciesList={setCompetenciesList}
+                      competenceName={competenceName}
+                      setCompetenceName={setCompetenceName}
+                      setSlider={setSlider}
+                      slider={slider}
+                      setEditionModeSlider={setEditionModeSlider}
+                      editionModeSlider={editionModeSlider}
+                    />
+                  </div>
+                </Col>
+              </Row>
+              <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                <Col
+                  style={{ textAlign: "right" }}
+                  className="gutter-row"
+                  span={24}
+                >
+                  <Link to="/organigrama/mybusiness">
+                    <Button
+                      className="secondary"
+                      style={{ marginRight: "15px" }}
+                    >
+                      {t("organigrama.my-business-edit.culture.btn-cancel")}
+                    </Button>
+                  </Link>
+
+                  {firtFlag ? (
+                    <Button htmlType="submit" className="primary">
+                      {t(
+                        "organigrama.my-business-edit.information.form.btn-save"
+                      )}
+                    </Button>
+                  ) : (
+                    <Link to="/organigrama/mybusiness">
+                      <Button className="primary">
+                        {t(
+                          "organigrama.my-business-edit.information.form.btn-save"
+                        )}
+                      </Button>
+                    </Link>
+                  )}
+                </Col>
+                <br />
+              </Row>
+            </Form>
           </div>
         </TabPane>
       </Tabs>
@@ -596,8 +645,8 @@ export default function MybusinessEdit() {
 
       <Screens
         message={message}
-        setMessage={setMessage} 
-        messageType={0}
+        setMessage={setMessage}
+        messageType={messageType}
         setActive={setActive}
       />
     </>
