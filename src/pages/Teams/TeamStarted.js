@@ -81,7 +81,7 @@ export default function TeamStarted() {
             }}
             icon={<IoMdAdd className="iconAjust2" />}
           >
-            <span className="textAjust4">Nuevo Equipo</span>
+            <span className="textAjust4">{t("organigrama.teams.btn-new-team")}</span>
           </Button>
         </Col>
       </Row>
@@ -93,7 +93,7 @@ export default function TeamStarted() {
         <Col className="gutter-row" span={8}></Col>
         <Col className="gutter-row" span={8}>
           <p>
-            <img alt="ico" className="" src={Inicio} />
+            <img alt="ico" className="" src={Inicio} /> 
           </p>
           <br />
           <h1>{t("organigrama.teams.title")}</h1>

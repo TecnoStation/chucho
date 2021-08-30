@@ -118,7 +118,7 @@ export default function Teamsv() {
             size="small"
             id="filter"
             onChange={filterTeams}
-            placeholder="Buscar puesto"
+            placeholder={t("organigrama.teams2.search-position")}
           />
         </Col>
         <Col span={9}></Col>
@@ -136,7 +136,7 @@ export default function Teamsv() {
             icon={<IoMdAdd className="iconAjust2" />}
           >
             {" "}
-            <span className="textAjust4">Nuevo Equipo</span>
+            <span className="textAjust4">{t("organigrama.teams2.new-team")}</span>
           </Button>
         </Col>
       </Row>
@@ -144,13 +144,13 @@ export default function Teamsv() {
       <Row style={{ marginTop: "50px" }}>
         <Col span={2}></Col>
         <Col span={6}>
-          <p>Nombre del equipo</p>
+          <p>{t("organigrama.teams2.tex")}</p>
         </Col>
         <Col style={{ paddingLeft: "15px" }} span={9}>
-          <p>Última modificación </p>
+          <p>{t("organigrama.teams2.tex2")} </p>
         </Col>
         <Col style={{ paddingLeft: "15px" }} span={2}>
-          <p>Acción</p>
+          <p>{t("organigrama.teams2.tex3")}</p>
         </Col>
       </Row>
 
