@@ -116,7 +116,7 @@ export default function ModalPassword({ Password, setPassword }) {
                           }}
                           className="primary btn"
                         >
-                          {t("organigram.password-modal.btn-Hecho")}
+                          {t("organigram.password-modal.btn-done")}
                         </Button>
                       </Col>
                     </Row>

@@ -118,7 +118,11 @@ export default function Teams() {
           </span>
         </Col>
         <Col className="gutter-row " span={3} style={{ textAlign: "left" }}>
-          <Link to="/organigrama/teamsv">
+          <Link
+            to={
+              "/" + t("routes.organigram") + "/" + t("paths_organigram.teamsv")
+            }
+          >
             <BsListUl
               className="dividerLeft iconGray"
               style={{ paddingLeft: "5px", fontSize: "22px" }}
@@ -151,7 +155,9 @@ export default function Teams() {
             icon={<IoMdAdd className="iconAjust2" />}
           >
             {" "}
-            <span className="textAjust4">{t("organigram.teams2.new-team")}</span>
+            <span className="textAjust4">
+              {t("organigram.teams2.new-team")}
+            </span>
           </Button>
         </Col>
       </Row>

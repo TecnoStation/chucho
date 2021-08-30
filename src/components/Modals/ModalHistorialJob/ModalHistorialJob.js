@@ -3,26 +3,26 @@ import { Button, Col, Modal, Row } from "antd";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-export default function ModalHistorialJob({ HistorialJ, setHistorialJ }) {
+export default function ModalHistorialJob({ HistorialP, setHistorialP }) {
   const [t, i18n] = useTranslation("global");
   return (
     <>
       <Modal
         title="Historial del Puesto"
         className="largeModal"
-        visible={HistorialJ}
+        visible={HistorialP}
         onCancel={() => {
-          setHistorialJ(false);
+          setHistorialP(false);
         }}
         onOk={() => {
-          setHistorialJ(false);
+          setHistorialP(false);
         }}
         footer={[
           <Button
             style={{ marginRight: "15px" }}
             className="secondary"
             onClick={() => {
-              setHistorialJ(false);
+              setHistorialP(false);
             }}
           >
             Cancelar
@@ -30,7 +30,7 @@ export default function ModalHistorialJob({ HistorialJ, setHistorialJ }) {
           <Button
             className="primary"
             onClick={() => {
-              setHistorialJ(false);
+              setHistorialP(false);
             }}
           >
             Aceptar

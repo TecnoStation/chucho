@@ -32,17 +32,41 @@ export default function TreeDrop({ name }) {
     <Menu>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-collaborator">{t("organigram.menu-treedrop.edit-colaborator")}</Link>
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-collaborator")
+            }
+          >
+            {t("organigram.menu-treedrop.edit-colaborator")}
+          </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-addjob">{t("organigram.menu-treedrop.edit-position")}</Link>
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-addjob")
+            }
+          >
+            {t("organigram.menu-treedrop.edit-position")}
+          </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/eraser">{t("organigram.menu-treedrop.edit-extructure")}</Link>
+          <Link
+            to={
+              "/" + t("routes.organigram") + "/" + t("paths_organigram.eraser")
+            }
+          >
+            {t("organigram.menu-treedrop.edit-estructure")}
+          </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -72,7 +96,16 @@ export default function TreeDrop({ name }) {
       <Menu.Divider />
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-perfil">{t("organigram.menu-treedrop.watch-proceedings")}</Link>
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-perfil")
+            }
+          >
+            {t("organigram.menu-treedrop.watch-proceedings")}
+          </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -93,7 +126,7 @@ export default function TreeDrop({ name }) {
               setHistorialP(true);
             }}
           >
-           {t("organigram.menu-treedrop.record-position")}
+            {t("organigram.menu-treedrop.record-position")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -117,18 +150,26 @@ export default function TreeDrop({ name }) {
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: t("organigram.menu-treedrop.modal-collaborator.drop-collaborators"),
+                titleModal: t(
+                  "organigram.menu-treedrop.modal-collaborator.drop-collaborators"
+                ),
                 type: 0,
-                messageModal:
-                t("organigram.menu-treedrop.modal-collaborator.text"),
-                messageWarning:
-                t("organigram.menu-treedrop.modal-collaborator.text2"),
-                question: t("organigram.menu-treedrop.modal-collaborator.safe-want-remove"),
-                function: () => {return false;}
+                messageModal: t(
+                  "organigram.menu-treedrop.modal-collaborator.text"
+                ),
+                messageWarning: t(
+                  "organigram.menu-treedrop.modal-collaborator.text2"
+                ),
+                question: t(
+                  "organigram.menu-treedrop.modal-collaborator.safe-want-remove"
+                ),
+                function: () => {
+                  return false;
+                },
               });
             }}
           >
-             {t("organigram.menu-treedrop.give-drop-collaborators")}
+            {t("organigram.menu-treedrop.give-drop-collaborators")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -139,17 +180,24 @@ export default function TreeDrop({ name }) {
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: t("organigram.menu-treedrop.modal-position.remove-position"),
+                titleModal: t(
+                  "organigram.menu-treedrop.modal-position.remove-position"
+                ),
                 type: 0,
-                messageModal:
-                t("organigram.menu-treedrop.modal-position.text"),
-                messageWarning: t("organigram.menu-treedrop.modal-position.text2"),
-                question:  t("organigram.menu-treedrop.modal-position.safe-want-remove"),
-                function: () => {return false;}
+                messageModal: t("organigram.menu-treedrop.modal-position.text"),
+                messageWarning: t(
+                  "organigram.menu-treedrop.modal-position.text2"
+                ),
+                question: t(
+                  "organigram.menu-treedrop.modal-position.safe-want-remove"
+                ),
+                function: () => {
+                  return false;
+                },
               });
             }}
           >
-           {t("organigram.menu-treedrop.remove-position")}
+            {t("organigram.menu-treedrop.remove-position")}
           </Link>
         </Menu.Item>
       </Menu.Item>

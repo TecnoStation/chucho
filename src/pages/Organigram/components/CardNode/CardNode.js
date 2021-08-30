@@ -23,7 +23,7 @@ export default function CardNode({ setModalPassword }) {
   const [active, setActive] = useState("CardNodeGrandChildhide");
   const [flag, setFalg] = useState("primary roundBtnFull showInline");
   const [flag2, setFalg2] = useState("primaryInvert roundBtnFull hide");
-  const [Permisions, setPermissions] = useState(false);
+  const [Permissions, setPermissions] = useState(false);
   const [Color, setColor] = useState(false);
 
   const [HistorialC, setHistorialC] = useState(false);
@@ -40,19 +40,41 @@ export default function CardNode({ setModalPassword }) {
     <Menu>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/organigrama/areasandpositions-collaborator">
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-collaborator")
+            }
+          >
             Editar colaborador
           </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/organigrama/areasandpositions-addjob">Editar puesto</Link>
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-addjob")
+            }
+          >
+            Editar puesto
+          </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/organigrama/eraser">Editar estructura</Link>
+          <Link
+            to={
+              "/" + t("routes.organigram") + "/" + t("paths_organigram.eraser")
+            }
+          >
+            Editar estructura
+          </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -82,7 +104,16 @@ export default function CardNode({ setModalPassword }) {
       <Menu.Divider />
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/organigrama/areasandpositions-perfil">Ver expediente</Link>
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-perfil")
+            }
+          >
+            Ver expediente
+          </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -472,7 +503,7 @@ export default function CardNode({ setModalPassword }) {
         </div>
       </div>
       <ModalPermissions
-        Permisions={Permisions}
+        Permissions={Permissions}
         setPermissions={setPermissions}
       />
       <ModalColor Color={Color} setColor={setColor} />

@@ -7,8 +7,10 @@ import {
 import { IoMdSquare, IoMdTrash } from "react-icons/io";
 import { RiPencilFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function PositionListInformation({ PositionsInfo, setModalMove }) {
+  const [t, i18n] = useTranslation("global");
   return PositionsInfo.map((position, index) => (
     <Row className="info3Full subareasdiv row" style={{ marginTop: "10px" }}>
       <Col className="gutter-row col" style={{ textAlign: "left" }} span={8}>
@@ -28,7 +30,15 @@ function PositionListInformation({ PositionsInfo, setModalMove }) {
         <AiOutlineExclamationCircle className="iconRed iconsize" />
       </Col>
       <Col className="gutter-row iconGray iconsize" span={4}>
-        <Link to="/organigrama/areasandpositions-addjob" className="iconGray">
+        <Link
+          to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-addjob")
+          }
+          className="iconGray"
+        >
           <RiPencilFill className="iconsize" style={{ marginRight: "10px" }} />
         </Link>
         <IoMdTrash

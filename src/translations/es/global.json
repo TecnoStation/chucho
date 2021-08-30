@@ -2,7 +2,8 @@
         "organigram": "organigrama",
         "recoverypassword": "recuperar-contraseña",
         "newpassword": "nueva-contraseña",
-        "login": "login"
+        "login": "login",
+        "messages": "mensajes"
     },
     "paths_organigram": {
         "mybusiness-edit": "miempresa-edit",
@@ -18,7 +19,6 @@
         "teamstarted": "equiposinicio",
         "areasandpositions-collaborator": "areasypuestos-colaborador",
         "areasandpositions-general": "areasypuestos-general",
-        "messages": "mensajes",
         "areasandpositions-addjob": "areasypuestos-agregapuesto",
         "areasandpositions-detailerror": "areasypuestos-detalleerror",
         "areasandpositions-detailsuccess": "areasypuestos-detalleexito",
@@ -558,7 +558,7 @@
                     "menu-positions": {
                         "edit-collaborator": "Editar colaborador",
                         "edit-position": "Editar puesto",
-                        "edit-structure": "Extrutura",
+                        "edit-structure": "Estrutura",
                         "add-permissions": "Agregar permisos",
                         "historial-collaborator": "Historial del colaborador",
                         "historial-position": "Historial del puesto",
@@ -883,12 +883,12 @@
             "munu-2":{
              "edit-colaborator": "Editar colaborador",
              "dit-position": "Editar puesto",
-             "edit-extructure": "Editar extructura",
+             "edit-estructure": "Editar estructura",
              "add-permissions": "Agregar permisos",
              "define-colour": "Definir color de área",
              "watch-proceedings": "Ver expediente",
              "watch-vacancies": "Ver Vacantes",
-             "watch-objectives": "Ver Ovjetivos",
+             "watch-objectives": "Ver Objetivos",
              "record-position": "Historial puesto",
              "record-collaborators": "Historial colaborador",
              "give-drop-collaborators": "Dar de baja colaborador",
@@ -924,12 +924,12 @@
            "menu-treedrop":{
              "edit-colaborator": "Editar colaborador",
              "edit-position": "Editar puesto",
-             "edit-extructure": "Editar extructura",
+             "edit-estructure": "Editar estructura",
              "add-permissions": "Agregar permisos",
              "define-colour": "Definir color de área",
              "watch-proceedings": "Ver expediente",
              "watch-vacancies": "Ver Vacantes",
-             "watch-objectives": "Ver Ovjetivos",
+             "watch-objectives": "Ver Objetivos",
              "record-position": "Historial puesto",
              "record-collaborators": "Historial colaborador",
              "give-drop-collaborators": "Dar de baja colaborador",

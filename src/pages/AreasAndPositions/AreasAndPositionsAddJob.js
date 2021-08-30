@@ -124,11 +124,15 @@ export default function AreasAndPositionsAddJob() {
                 "Al eliminar un puesto de tu organización ya no se verá reflejado en tu organigrama",
               visible: true,
               type: 2,
-              messageWarning: "Has Eliminado el puesto",
+              messageWarning: "Has eliminado el puesto",
               titleWarning: "¡Completado!",
               function: () => {
                 history.push({
-                  pathname: "/organigrama/areasandpositions",
+                  pathname:
+                    "/" +
+                    t("routes.organigram") +
+                    "/" +
+                    t("paths_organigram.areasandpositions"),
                   search: "?tab=2",
                 });
               },
@@ -616,7 +620,14 @@ export default function AreasAndPositionsAddJob() {
                 </b>
               </Col>
               <Col span={5}>
-                <Link to="/organigrama/areasandpositions-collaborator">
+                <Link
+                  to={
+                    "/" +
+                    t("routes.organigram") +
+                    "/" +
+                    t("paths_organigram.areasandpositions-collaborator")
+                  }
+                >
                   <Button className="secondary">
                     {t("organigram.areasandpositions-addjob.btn-cancel")}
                   </Button>

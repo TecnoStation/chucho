@@ -82,7 +82,15 @@ export default function LayoutSecondaryCardWhite({
                         cursor: "pointer",
                       }}
                     >
-                      <Link className="iconBlue" to="/organigrama">
+                      <Link
+                        className="iconBlue"
+                        to={
+                          "/" +
+                          t("routes.organigram") +
+                          "/" +
+                          t("paths_organigram.organigram")
+                        }
+                      >
                         <MdDeviceHub />{" "}
                       </Link>
                     </Col>
@@ -98,7 +106,14 @@ export default function LayoutSecondaryCardWhite({
                       }}
                     >
                       {" "}
-                      <Link to="/organigram">
+                      <Link
+                        to={
+                          "/" +
+                          t("routes.organigram") +
+                          "/" +
+                          t("paths_organigram.organigramlist")
+                        }
+                      >
                         <MaterialIcon icon="format_list_bulleted" />
                       </Link>{" "}
                     </Col>
