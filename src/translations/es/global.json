@@ -949,7 +949,7 @@
         }     
       }, 
 
-      "organigrama-eraser":{
+      "organigram-eraser":{
        "btn-apply-changes": "Aplicar cambios",
        "btn-save-draft": "Guardar como borrador"   
       },

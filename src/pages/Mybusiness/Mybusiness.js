@@ -14,16 +14,12 @@ export default function Mybusiness() {
     <Menu>
       <Menu.Item key="0">
         <Menu.Item key="3">
-<<<<<<< HEAD
           <Link to={
             "/" +
             t("routes.organigram") +
             "/" +
             t("paths_organigram.mybusiness-edit")
-          }>{t("organigrama.mybusiness-principal.menu")}</Link>
-=======
-          <Link to="/organigrama/mybusiness-edit">{t("organigram.mybusiness-principal.menu")}</Link>
->>>>>>> 77b7a69043b10d36a4404247851be6b253c1b096
+          }>{t("organigram.mybusiness-principal.menu")}</Link>
         </Menu.Item> 
       </Menu.Item>
     </Menu>
