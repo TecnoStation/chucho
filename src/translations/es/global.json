@@ -101,7 +101,7 @@
         "my-plans": "Mis planes",
         "vendors": "Proveedores"
     },
-    "organigrama": {
+    "organigram": {
         "empty-organigram-layout": {
             "h1-welcome": "¡Bienvenido al Organigrama!",
             "p-row1": "Aquí podrás visualizar todas las estructuras de la organización, además de facilitar la evaluación 360 y la vista de los equipos para alcanzar los Objetivos.",
@@ -874,7 +874,7 @@
         }
       },
 
-      "organigram":{
+      "organigram-page":{
        "title": "Organigrama",
        "menu-organigram":{
        "search-position": "Buscar puesto",

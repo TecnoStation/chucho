@@ -64,7 +64,7 @@ export default function TeamStarted() {
           <Input
             style={{ width: "200px", marginTop: "-5px" }}
             addonAfter={<SearchOutlined />}
-            placeholder={t("organigrama.teams.search-positions")}
+            placeholder={t("organigram.teams.search-positions")}
           />
         </Col>
         <Col className="gutter-row" span={4}>
@@ -81,7 +81,7 @@ export default function TeamStarted() {
             }}
             icon={<IoMdAdd className="iconAjust2" />}
           >
-            <span className="textAjust4">{t("organigrama.teams.btn-new-team")}</span>
+            <span className="textAjust4">{t("organigram.teams.btn-new-team")}</span>
           </Button>
         </Col>
       </Row>
@@ -96,8 +96,8 @@ export default function TeamStarted() {
             <img alt="ico" className="" src={Inicio} /> 
           </p>
           <br />
-          <h1>{t("organigrama.teams.title")}</h1>
-          <p>{t("organigrama.teams.tex")}</p>
+          <h1>{t("organigram.teams.title")}</h1>
+          <p>{t("organigram.teams.tex")}</p>
           <br />
           <p>
             <Button
@@ -110,7 +110,7 @@ export default function TeamStarted() {
             >
               {" "}
               <span className="textAjust4">
-                {t("organigrama.teams.btn-new-team")}
+                {t("organigram.teams.btn-new-team")}
               </span>
             </Button>
           </p>

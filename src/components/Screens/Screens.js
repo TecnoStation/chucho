@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Button, Input, Form, Modal, Row, Col } from "antd";
 import { useHistory, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function Screens({ message, setMessage, messageType, setActive }) {
+  const [t, i18n] = useTranslation("global");
   const history = useHistory();
   const location = useLocation();
   const query = new URLSearchParams(location.search);
@@ -26,9 +28,7 @@ function Screens({ message, setMessage, messageType, setActive }) {
         "Igualmente esta parte la puedes realizar al cargar de forma masiva los datos o de forma manual. Con el fin de que conozcas qué datos se necesitan para cada puesto vamos a realizar uno de forma manual.",
       btn: "Continuar",
       url: () => {
-        history.push({
-          pathname: "/organigrama/areasandpositions-collaborator",
-        });
+        history.push({ pathname: "/" + t("routes.organigram") + "/" + t("paths_organigram.areasandpositions-collaborator") });
       },
     },
     {
@@ -38,7 +38,7 @@ function Screens({ message, setMessage, messageType, setActive }) {
       btn: "Continuar",
       url: () => {
         history.push({
-          pathname: "/organigrama/areasandpositions",
+          pathname:"/" + t("routes.organigram") + "/" + t("paths_organigram.areasandpositions")
         });
       },
     },
@@ -62,8 +62,8 @@ function Screens({ message, setMessage, messageType, setActive }) {
       btn: "Continuar",
       url: () => {
         history.push({
-          pathname: "/organigrama/areasandpositions-addJob",
-        });
+          pathname:"/" + t("routes.organigram") + "/" + t("paths_organigram.areasandpositions-addjob")})
+        
       },
     },
   ];

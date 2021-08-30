@@ -17,22 +17,22 @@ function OrganigramList() {
     <>
       <div className="menuToltip">
         <Link to="/areasandpositions-general">
-          <span>{t("organigrama.organigramlist.menu-1.load-massive")}</span>
+          <span>{t("organigram.organigramlist.menu-1.load-massive")}</span>
         </Link>
       </div>
       <div className="menuToltip">
         <Link to="/areasandpositions-general">
-          <span>{t("organigrama.organigramlist.menu-1.areas-positions")}</span>
+          <span>{t("organigram.organigramlist.menu-1.areas-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
         <Link to="/areasandpositions-general">
-          <span>{t("organigrama.organigramlist.menu-1.profile-positions")}</span>
+          <span>{t("organigram.organigramlist.menu-1.profile-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
         <Link to="/areasandpositions-general">
-          <span>{t("organigrama.organigramlist.menu-1.Collaborators")}</span>
+          <span>{t("organigram.organigramlist.menu-1.Collaborators")}</span>
         </Link>
       </div>
     </>
@@ -51,7 +51,7 @@ function OrganigramList() {
           className="dividerLeft"
           span={1}
         >
-          <Tooltip title={t("organigrama.organigramlist.menu-1.create-team")} placement="bottom" color="#2cccd3">
+          <Tooltip title={t("organigram.organigramlist.menu-1.create-team")} placement="bottom" color="#2cccd3">
             <Link to="/organigrama/teams">
               <FaUsers className="iconGray iconsize2" />
             </Link>
@@ -62,7 +62,7 @@ function OrganigramList() {
           className="dividerLeft"
           span={1}
         >
-          <Tooltip title={t("organigrama.organigramlist.menu-1.me-business")} placement="bottom" color="#2cccd3">
+          <Tooltip title={t("organigram.organigramlist.menu-1.me-business")} placement="bottom" color="#2cccd3">
             <Link to="/organigrama/mybisiness">
               <IoBusinessSharp className="iconGray iconsize2" />
             </Link>
@@ -90,7 +90,7 @@ function OrganigramList() {
           span={15}
         >
           <Tooltip
-            title={t("organigrama.organigramlist.menu-1.record-changes")}
+            title={t("organigram.organigramlist.menu-1.record-changes")}
             placement="bottom"
             color="#2cccd3"
           >
@@ -105,7 +105,7 @@ function OrganigramList() {
           </Tooltip>
         </Col>
         <Col span={5}>
-          <Input addonAfter={<SearchOutlined />} placeholder={t("organigrama.organigramlist.search-position-placeholder")} />
+          <Input addonAfter={<SearchOutlined />} placeholder={t("organigram.organigramlist.search-position-placeholder")} />
         </Col>
       </Row>
       <div id="organigramList">

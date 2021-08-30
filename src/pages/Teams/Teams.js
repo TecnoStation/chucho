@@ -130,7 +130,7 @@ export default function Teams() {
             size="small"
             id="filter"
             onChange={filterTeams}
-            placeholder={t("organigrama.teams2.search-position")}
+            placeholder={t("organigram.teams2.search-position")}
           />
         </Col>
         <Col span={9}></Col>
@@ -151,7 +151,7 @@ export default function Teams() {
             icon={<IoMdAdd className="iconAjust2" />}
           >
             {" "}
-            <span className="textAjust4">{t("organigrama.teams2.new-team")}</span>
+            <span className="textAjust4">{t("organigram.teams2.new-team")}</span>
           </Button>
         </Col>
       </Row>
