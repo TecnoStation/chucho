@@ -17,23 +17,23 @@ export default function Zoom() {
   const menu = (
     <>
       <div className="menuToltip">
-        <Link to="/organigrama/areasandpositions-general">
-          <span>Carga masiva</span>
+        <Link to="/areasandpositions-general">
+          <span>{t("organigrama.organigramlist.menu-1.load-massive")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to="/organigrama/areasandpositions-general">
-          <span>Áreas y puestos</span>
+        <Link to="/areasandpositions-general">
+          <span>{t("organigrama.organigramlist.menu-1.areas-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to="/organigrama/areasandpositions-general">
-          <span>Perfil de puestos</span>
+        <Link to="/areasandpositions-general">
+          <span>{t("organigrama.organigramlist.menu-1.profile-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to="/organigrama/areasandpositions-general">
-          <span>Colaboradores</span>
+        <Link to="/areasandpositions-general">
+          <span>{t("organigrama.organigramlist.menu-1.Collaborators")}</span>
         </Link>
       </div>
     </>
@@ -64,12 +64,12 @@ export default function Zoom() {
                 <Col span={24}>
                   <Link to="/organigrama/teams">
                     <Tooltip
-                      title="Crear equipo"
+                      title={t("organigrama.organigramlist.menu-1.create-team")}
                       placement="left"
                       color="#2cccd3"
                     >
                       <Button
-                        className="secondary iconGray roundBtn"
+                        className="secondary iconGray roundBtn" 
                         icon={<FaUsers />}
                         size="large"
                       />
@@ -81,7 +81,7 @@ export default function Zoom() {
                 <Col span={24}>
                   <Link to="/organigrama/mybusiness">
                     <Tooltip
-                      title="Mi empresa"
+                      title={t("organigrama.organigramlist.menu-1.me-business")}
                       placement="left"
                       color="#2cccd3"
                     >
@@ -111,7 +111,7 @@ export default function Zoom() {
               <Row style={{ marginTop: "5px" }}>
                 <Col span={24}>
                   <Tooltip
-                    title="Historial de cambios"
+                    title={t("organigrama.organigramlist.menu-1.record-changes")}
                     placement="left"
                     color="#2cccd3"
                   >
