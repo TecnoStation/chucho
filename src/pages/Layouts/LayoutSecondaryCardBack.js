@@ -80,7 +80,7 @@ export default function LayoutSecondaryCardBack({
                         textAlign: "center",
                       }}
                     >
-                      <Link to="/mensajes">
+                      <Link to={"/" + t("routes.messages")}>
                         <MaterialIcon icon="notifications" />
                       </Link>
                     </Col>

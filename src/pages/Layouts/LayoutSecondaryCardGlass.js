@@ -156,7 +156,7 @@ export default function LayoutSecondaryCardGlass({
                       span={1}
                       style={{ marginTop: "5px", textAlign: "left" }}
                     >
-                      <Link to="/mensajes">
+                      <Link to={"/" + t("routes.messages")}>
                         <MaterialIcon icon="notifications" />
                       </Link>
                     </Col>

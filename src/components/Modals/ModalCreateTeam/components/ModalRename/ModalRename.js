@@ -15,7 +15,7 @@ function ModalRename({ modalRename, teamList, setModalRename }) {
   return (
     <>
       <Modal
-        title="Rename de equipo"
+        title="Renombre de equipo"
         className="smallModal"
         visible={modalRename.visible}
         onCancel={() => {

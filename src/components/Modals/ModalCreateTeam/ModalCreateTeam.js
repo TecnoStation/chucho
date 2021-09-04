@@ -226,8 +226,9 @@ function ModalCreateTeam({
             ? t("organigram.teams-modal.title2")
             : t("organigram.teams-modal.title")
         }
-        className="largeModal"
+        className="TeamModal"
         visible={createTeamModal}
+        // centered={true}
         onCancel={() => {
           setCreateTeamModal(false);
         }}
@@ -235,6 +236,7 @@ function ModalCreateTeam({
       >
         <Form
           name="form"
+          id="formTeams"
           form={form}
           initialValues={{
             teamName: "",
@@ -375,13 +377,27 @@ function ModalCreateTeam({
               {t("organigram.teams-modal.actions")}
             </Col>
           </Row>
-          <Member
-            collaboratorsList={collaboratorsList}
-            setCollaboratorsList={setCollaboratorsList}
-            inputType={inputType}
-          />
-
-          <Row style={{ marginTop: "30px" }}>
+          <div
+            style={{
+              height: "300px",
+              overflowY: "scroll",
+              overflowX: "hidden",
+            }}
+          >
+            <Member
+              collaboratorsList={collaboratorsList}
+              setCollaboratorsList={setCollaboratorsList}
+              inputType={inputType}
+            />
+          </div>
+          <Row
+            style={{
+              marginTop: "30px",
+              position: "absolute",
+              bottom: "10px",
+              padding: "16px 16px 16px 16px",
+            }}
+          >
             <Col span={24}>
               <span style={{ marginRight: "120px" }}>
                 <Link to="#"> {t("organigram.teams-modal.text-link")}</Link>{" "}

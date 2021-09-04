@@ -19,7 +19,11 @@ export default function Member({
     <Row
       key={item}
       gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-      style={{ textAlign: "left", marginTop: "10px", marginLeft: "10px" }}
+      style={{
+        textAlign: "left",
+        marginTop: "10px",
+        marginLeft: "10px",
+      }}
     >
       <Col key={collaborator.id} className="gutter-row" span={8}>
         <Row>

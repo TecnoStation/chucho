@@ -8,6 +8,7 @@ import LayoutSecondaryCardBackSmall from "./Layouts/LayoutSecondaryCardBackSmall
 import LayoutSecondaryCardGlass from "./Layouts/LayoutSecondaryCardGlass";
 import LayoutSecondaryCardWhite from "./Layouts/LayoutSecondaryCardWhite";
 import LayoutSecondaryCardBackGlass from "./Layouts/LayoutSecondaryCardBackGlass";
+import LayoutSecondaryMenu from "./Layouts/LayoutSecondaryMenu";
 import RecoveryPassword from "./Login/RecoveryPassword";
 import NewPassword from "./Login/NewPassword";
 import Organigramstarted from "./Organigram/Organigramstarted";
@@ -34,12 +35,19 @@ import Teamv from "./Teams/Teamv";
 import TeamStarted from "./Teams/TeamStarted";
 import Collaborator from "./AreasAndPositions/Collaborator";
 import { useTranslation } from "react-i18next";
+import Indicators from "./Indicators/Indicators";
 
 export default function Home() {
   const [t, i18n] = useTranslation("global");
   return (
     <Router>
       <Switch>
+        <LayoutSecondaryMenu
+          exact
+          path={"/" + t("routes.indicators") + "/" + t("path_indicator")}
+          component={Indicators}
+        />
+
         <LayoutSecondary
           exact
           path={
@@ -176,7 +184,7 @@ export default function Home() {
         />
         <LayoutSecondaryCardBackGlass
           exact
-          path={"/" + t("routes.mensajes")}
+          path={"/" + t("routes.messages")}
           title="Bandeja de entrada"
           component={Messages}
         />

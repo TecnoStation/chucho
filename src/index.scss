@@ -188,7 +188,7 @@ code {
 }
 
 .iconGreen {
-  color: $color-base;
+  color: $color-base !important;
 }
 
 .iconGreenTwo {
@@ -238,6 +238,11 @@ code {
 
 .iconsize2:hover {
   color: $color-base;
+}
+
+.iconsize3 {
+  font-size: 32px;
+  cursor: pointer;
 }
 
 .iconAjust {
@@ -342,6 +347,21 @@ code {
   }
 }
 
+.TeamModal {
+  width: 760px !important;
+  height: 656px !important;
+  .ant-modal-content {
+    width: 760px !important;
+    height: 656px !important;
+    text-align: left;
+    box-shadow: -1px 1px 16px #3d4f8060 !important;
+    border-radius: 8px;
+  }
+  .ant-modal-header {
+    border-radius: 8px 8px 0px 0px;
+  }
+}
+
 .dividerLeft {
   border-left: 1px solid $color-margin;
 }
@@ -398,4 +418,10 @@ code {
 
 .principalColorText {
   color: $color-principal-text !important;
+}
+
+.cardDefault2 {
+  width: 100%;
+  padding: 10px 0px 10px 0px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
 }

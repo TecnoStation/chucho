@@ -1,0 +1,29 @@
+@import "../../index.scss";
+
+#tabHead {
+  .ant-tabs-nav-list {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .ant-tabs-tab {
+    width: 15vw !important;
+    background: rgba(255, 255, 255, 0) !important;
+    text-align: center !important;
+    padding-bottom: 5px !important;
+    display: flex;
+    justify-content: center;
+    color: $color-secondary-text;
+  }
+
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: $color-principal-text !important;
+    font-weight: bold;
+  }
+  .ant-tabs-content {
+    position: absolute;
+    width: 82vw;
+  }
+  span {
+    color: $color-principal-text;
+  }
+}

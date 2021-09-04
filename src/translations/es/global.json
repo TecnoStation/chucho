@@ -1,10 +1,12 @@
 {   "routes":{
-        "organigram": "organigrama",
         "recoverypassword": "recuperar-contraseña",
         "newpassword": "nueva-contraseña",
         "login": "login",
-        "messages": "mensajes"
-    },
+        "messages": "mensajes",
+        "organigram": "organigrama",
+        "indicators": "Indicadores"
+        
+    }, 
     "paths_organigram": {
         "mybusiness-edit": "miempresa-edit",
         "areasandpositions": "areasypuestos",
@@ -27,6 +29,10 @@
         "areasandpositions-massivec": "areasypuestos-masivoc",
         "areasandpositions-perfil": "areasypuestos-perfil"
     },
+    "path_indicator": "indicadores-clave",
+
+
+
     "login": {
         "h1-welcome": "¡Bienvenido!",
         "label-user": "Usuario",

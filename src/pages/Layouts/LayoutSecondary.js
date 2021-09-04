@@ -14,7 +14,6 @@ import { useTranslation } from "react-i18next";
 
 import "./LayoutSecondary.scss";
 
-
 //const user = null;
 const user = { id: 1, username: "Lupita Gamiño" };
 const { Header, Content } = Layout;
@@ -73,7 +72,7 @@ export default function LayoutSecondary({
                         textAlign: "center",
                       }}
                     >
-                      <Link to="/mensajes">
+                      <Link to={"/" + t("routes.messages")}>
                         <MaterialIcon icon="notifications" />
                       </Link>
                     </Col>

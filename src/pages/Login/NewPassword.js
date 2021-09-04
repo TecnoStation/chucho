@@ -21,7 +21,7 @@ export default function NewPassword() {
         <Form name="form" layout="vertical">
           <Form.Item name="password" label={t("login.insert-password")}>
             <Input.Password
-              placeholder={t("login.insert-password-placeholders")}
+              placeholder={t("login.insert-password-placeholder")}
             />
           </Form.Item>
           <Form.Item name="password1" label={t("login.repeat-password")}>
