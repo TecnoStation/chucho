@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Col, Row, Form, Modal, Input } from "antd";
 import { v4 as uuid } from "uuid";
+import { useTranslation } from "react-i18next";
 
 const { TextArea } = Input;
 
@@ -10,6 +11,7 @@ function ModalAddExperience({
   setModalExperience,
   ModalExperience,
 }) {
+  const [t, i18n] = useTranslation("global");
   const [form] = Form.useForm();
   const onFinish = (values) => {
     const arr = values["start"].split("-");

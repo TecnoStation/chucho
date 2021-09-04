@@ -1,8 +1,10 @@
 import React from "react";
 import { Button, Col, Modal, Row } from "antd";
 import { AiOutlineFileText } from "react-icons/ai";
+import { useTranslation } from "react-i18next";
 
 function ModalDownLoad({ ModalDownload, setModalDownload }) {
+  const [t, i18n] = useTranslation("global");
   return (
     <Modal
       className="middleModal"

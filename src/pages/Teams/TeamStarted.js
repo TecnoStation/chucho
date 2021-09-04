@@ -53,7 +53,7 @@ export default function TeamStarted() {
           span={3}
           style={{ textAlign: "left" }}
         >
-          <Link to="/organigrama/teamsv">
+          <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.teamsv")}>
             <BsListUl
               className="dividerLeft"
               style={{ paddingLeft: "5px", fontSize: "22px" }}
@@ -61,7 +61,7 @@ export default function TeamStarted() {
           </Link>
         </Col>
         <Col className="gutter-row" span={15}>
-          <Input
+          <Input 
             style={{ width: "200px", marginTop: "-5px" }}
             addonAfter={<SearchOutlined />}
             placeholder={t("organigram.teams.search-positions")}

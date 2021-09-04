@@ -5,18 +5,20 @@ import Delete from "../../assets/img/icons/delete-24px.svg";
 import ModalPassword from "../Modals/ModalPassword/ModalPassword";
 import { each } from "lodash";
 import ModalSlide from "../Modals/Modalcompetencies/components/ModalSlide/ModalSlide";
+import { useTranslation } from "react-i18next";
 
 export default function Competencies({
   competencies,
   setCompetencies,
   competenciesList,
   competenceName,
-  setCompetenceName,
+  setCompetenceName, 
   setSlider,
   slider,
   setEditionModeSlider,
   editionModeSlider,
 }) {
+  const [t, i18n] = useTranslation("global");
   const [Password, setPassword] = useState(false);
   const [modalSlide, setModalSlide] = useState(false);
   const openModalPassword = (index, action, comp, e) => {

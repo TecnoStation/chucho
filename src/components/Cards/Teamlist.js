@@ -11,7 +11,7 @@ import "./Simplecard.scss";
 
 export default function Teamlist({ teamList, setTeamList, edit }) {
   const [t, i18n] = useTranslation("global");
-  const [modalRename, setModalRename] = useState(false);
+  const [modalRename, setModalRename] = useState(false); 
   const [modalCard, setModalCard] = useState(false);
 
   return teamList.map((team, index) => (

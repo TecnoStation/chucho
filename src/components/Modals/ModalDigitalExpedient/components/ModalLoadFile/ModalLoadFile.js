@@ -3,9 +3,11 @@ import { Button, Col, Row, Modal } from "antd";
 import { Link } from "react-router-dom";
 import { CgSoftwareUpload } from "react-icons/cg";
 import { IoMdTrash } from "react-icons/io";
+import { useTranslation } from "react-i18next";
 import Good from "../../../../../assets/img/icons/bien_hecho.svg";
 
 function ModalLoadFile({ modalLoadFile, setModalLoadFile }) {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
       <Modal
