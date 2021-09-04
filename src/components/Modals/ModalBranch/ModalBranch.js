@@ -2,6 +2,7 @@ import React from "react";
 import { Form, Input, Button, Modal } from "antd";
 import { EnvironmentOutlined } from "@ant-design/icons";
 import { v4 as uuid } from "uuid";
+import { useTranslation } from "react-i18next";
 
 export default function ModalBranch({
   modal,
@@ -14,6 +15,7 @@ export default function ModalBranch({
   index,
 }) {
   const sendBranch = (values) => {
+    
     setBranchs([
       ...branchs,
       {

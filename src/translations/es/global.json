@@ -184,8 +184,7 @@
                 "business-description": "Descripción de la empresa",
                 "institutional-competences": "Competencias Institucionales",
                 "level": "Nivel"
-            },
-            "menu": "Editar datos"
+            }
         },
         "my-business-edit": {
             "information": {
@@ -689,7 +688,7 @@
             "placeholder-imput-search": "Buscar colaboradores",
             "modality-label": "Modalidad",
             "placeholder-imput-option": "Selecciona una opción",
-            "members-team": "Miembros del equipo",
+            "members-team": "Marco de trabajo",
             "placeholder-imput-optiona": "Selecciona una opción",
             "members-team-2": "Miembros del equipo",
             "leader": "Lider",
@@ -970,17 +969,87 @@
             "direction-placeholder": "Dirección de Marketing",
             "btn-cancel": "Cancelar",
             "btn-save": "Guardar"   
-           },
-     
-           "indicators":{
-            "title": "¡Bienvenido a tus indicadores clave!",
-            "tex-a": "Aquí podrás actualizar, tener retroalimentación y ver la tendencia de tu desempeño",
-            "tex-b": "¿Cómo deseas actualizar tu indicador por primera vez?",
-            "btn-direct": "directo",
-            "btn-guide": "con guia"   
            }
            
-    },    
+    },
+    
+    "indicators":{
+        "title": "¡Bienvenido a tus indicadores clave!",
+        "tex-a": "Aquí podrás actualizar, tener retroalimentación y ver la tendencia de tu desempeño",
+        "tex-b": "¿Cómo deseas actualizar tu indicador por primera vez?",
+        "btn-direct": "directo",
+        "btn-guide": "con guia",
+        "modal-indicators":{
+        "idicators-key": "¿Qué son los indicadores clave?",
+        "tex": "Este video te ayudará a entender que son los indicadores clave.",
+        "btn-continue": "Continuar"   
+        }   
+       },
+       "evaluations":{
+        "tab-1": "Mis indicadores clave",
+        "tab-2": "Mis evaluaciones",
+        "tab-3": "Gestión de indicadores clave",
+        "title": "Mis Evaluaciones",
+        "result-performance": "Resultado de desempeño:",
+        "last-evaluation": "Última Evaluación (Q-2)",
+        "btn-massive": "Descargar reporte",
+        "evolution-calculated": "Evolución calculada del Q2:",
+        "recognitions-medals": "Reconocimientos y  medallas",
+        "comments-leader": "Comentarios del lider",
+        "performance": "Desempeño",
+        "tex": "Cumplimiento de expectativas",
+        "weeks": "Semanas",
+        "detail-link": "Ver detalle",
+        "depict": "Describe tu autoevaluación",
+        "btn-assess": "Autoevaluar"   
+       },
+
+      "indicators-key":{
+        "tab-1": "Mis indicadores clave",
+        "tab-2": "Mis evaluaciones",
+        "tab-3": "Gestión de indicadores clave",
+        "btn-indicator": "+ Crear un Indicador Clave",
+        "search-placeholder": "Buscar",
+        "name-frequency": "Nombre y frecuencia",
+        "duration-court": "Duración y corte",
+        "kind": "Tipo",
+        "accumulated": "Acumulado",
+        "objective": "Objetivo",
+        "trend": "Tendencia",
+        "assigned": "Asignado a",
+        "actions": "Acciones",
+        "tex-1": "Indicador clave  - Cada martes",
+        "tex-2": "Tráfico en la página web",
+        "menu":{
+         "personalize": "Personalizar",
+         "evaluate": "Evaluar",
+         "idndicators": "Ver sus indicadores",
+         "proccedings": "Ver expediente Brivé",
+         "remove": "Quitar del indicador"   
+        },
+        
+        "modal-1":{
+         "title": "Crear Indicador Clave",
+         "what-measure-label": "¿Qué vas a medir? (Nombre del indicador clave)",
+         "temporaliti-label": "Temporalidad:",
+         "placeholder-quarterly": "Trimestral (Q)",
+         "duration-label": "Duración:",
+         "placeholder-months": "6 meses",
+         "upgrade-lebel": "Actualizar:",
+         "days-placeholder": "Cada miércoles",
+         "temporality-lebel": "Temporalidad de creación:",
+         "priority-lebel": "Prioridad:",
+         "weight-label": "Peso:",
+         "assign-lebel": "Asignar indicador clave",
+         "kindaction-lebel": "Tipo de acción:",
+         "scale-lebel": "Escala:",
+         "from-lebel": "Desde:",
+         "until-lebel": "Hasta:",
+         "goal-lebel": "Meta calculada:",
+         "btn-cancel": "Cancelar",
+         "btn-create": "Crear"   
+        }
+      }, 
    
       "indicators-evaluations":{
        "tab-indicators": "Mis indicadores clave",
@@ -1012,8 +1081,7 @@
         "contex-upgrade": "Contexto de actualización",
         "like": "Like",
         "answer": "Responder",
-        "recognize": "Reconocer",
-        "attach-evidence": "Adjuntar Evidencia"   
+        "recognize": "Reconocer"  
        }    
      },
      "indicator-panel":{
@@ -1036,16 +1104,22 @@
        "tab-2": "Mis evaluaciones",
        "title": "Mis evaluaciones",
        "result-performance": "Resultado de desempeño:",
-       "recognitions-medals": "Reconocimientos y medallas",
        "evaluation": "Evolución del desempeño",
+       "recognitions-medals": "Reconocimientos y medallas",
        "performamance": "Desempeño",
        "weeks": "Semanas",
        "compliance-expectations": "Cumplimiento de expectativas",
        "watch-detail": "Ver detalle",
-       "download-report": "Descargar reporte"
+       "download-report": "Descargar reporte",
+       "self appraisal": "Autoevaluación-Q3",
+       "evaluation-calculated": "Evaluación calculada del Q3:",
+       "recognition": "Reconocimientos y medallas",
+       "depict-self appraisal": "Describe tu autoevaluación",
+       "to attatch": "Adjuntar",
+       "btn-validate": "Validar"
      },
      
-     "management-indicators":{
+    "management-indicators":{
       "tab-1": "Mis indicadores clave",
       "tab-2": "Mis evaluaciones",
       "tab-3": "Gestión de indicadores clave",
@@ -1071,11 +1145,13 @@
        "collaborators": "Colaboradores a cargo"   
       },
       "menu-3":{
-       "collaborator": "colaborador",
+       "collaborator": "colaborador indicador",
        "new-temporality": "Nueva temporalidad",
        "upgrade": "Actualizar",
        "edit": "Editar",
        "remove": "Eliminar"   
-      }    
+      }
+      
+      
     }        
 }

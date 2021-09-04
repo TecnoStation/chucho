@@ -186,7 +186,7 @@ export default function AreasAndPositionsMassiveC() {
         </Col>
         <Col className="gutter-row" span={6}>
           <p className="iconGreen">Éxito</p>
-        </Col>
+        </Col> 
         <Col className="gutter-row" span={6}>
           <Link to="/areasandpositions-detailsuccess">
             <p>Ver Detalle</p>
