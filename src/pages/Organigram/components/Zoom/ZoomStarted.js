@@ -18,23 +18,43 @@ function ZoomStarted() {
   const menu = (
     <>
       <div className="menuToltip">
-        <Link to="/organigrama/areasandpositions-general">
-          <span>Carga masiva</span>
+        <Link to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-general")
+          }>
+          <span>{t("organigram.organigramlist.menu-1.load-massive")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to="/organigrama/areasandpositions-general">
-          <span>Áreas y puestos</span>
+        <Link to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-general")
+          }>
+          <span>{t("organigram.organigramlist.menu-1.areas-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to="/organigrama/areasandpositions-general">
-          <span>Perfil de puestos</span>
+        <Link to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-general")
+          }>
+          <span>{t("organigram.organigramlist.menu-1.profile-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to="/organigrama/areasandpositions-general">
-          <span>Colaboradores</span>
+        <Link to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-general")
+          }>
+          <span>{t("organigram.organigramlist.menu-1.Collaborators")}</span>
         </Link>
       </div>
     </>
@@ -55,9 +75,14 @@ function ZoomStarted() {
             <div className="tools">
               <Row style={{ marginTop: "5px" }}>
                 <Col span={24}>
-                  <Link to="/organigrama/teams">
+                  <Link to={
+                      "/" +
+                      t("routes.organigram") +
+                      "/" +
+                      t("paths_organigram.teams")
+                    }>
                     <Tooltip
-                      title="Crear equipo"
+                      title={t("organigram.organigramlist.menu-1.create-team")}
                       placement="left"
                       color="#2cccd3"
                     >
@@ -72,9 +97,14 @@ function ZoomStarted() {
               </Row>
               <Row style={{ marginTop: "5px" }}>
                 <Col span={24}>
-                  <Link to="/organigrama/mybusiness">
+                  <Link to={
+                      "/" +
+                      t("routes.organigram") +
+                      "/" +
+                      t("paths_organigram.mybusiness")
+                    }>
                     <Tooltip
-                      title="Mi empresa"
+                      title={t("organigram.organigramlist.menu-1.me-business")}
                       placement="left"
                       color="#2cccd3"
                     >
