@@ -11,7 +11,7 @@ function ModalErasersList({ historial, setHistorial }) {
   return (
     <>
       <Modal
-        title="Lista de borradores"
+        title={t("organigram.organigram-page.modal-history.ready-tsdraf")}
         className="largeModal"
         visible={historial}
         onCancel={() => {
@@ -28,7 +28,7 @@ function ModalErasersList({ historial, setHistorial }) {
               setHistorial(false);
             }}
           >
-            Cancelar
+            {t("organigram.organigram-page.modal-history.btn-cancel")}
           </Button>,
           <Button
             className="primary"
@@ -36,7 +36,7 @@ function ModalErasersList({ historial, setHistorial }) {
               setHistorial(false);
             }}
           >
-            Aceptar
+            {t("organigram.organigram-page.modal-history.btn-accept")}
           </Button>,
         ]}
       >
@@ -45,14 +45,14 @@ function ModalErasersList({ historial, setHistorial }) {
           style={{ textAlign: "center", paddingBottom: "15px" }}
         >
           <Col span={6}>
-            <b>Nombre</b>
+            <b>{t("organigram.organigram-page.modal-history.name")}</b>
           </Col>
           <Col span={7}>
-            <b>Modificación</b>
+            <b>{t("organigram.organigram-page.modal-history.modification")}</b>
           </Col>
 
           <Col span={11}>
-            <b>Acciones</b>
+            <b>{t("organigram.organigram-page.modal-history.actions")}</b>
           </Col>
         </Row>
         <Row
@@ -75,7 +75,7 @@ function ModalErasersList({ historial, setHistorial }) {
                 t("paths_organigram.eraser")
               }
             >
-              Ver
+              {t("organigram.organigram-page.modal-history.watch")}
             </Link>
           </Col>
           <Col className="dividerLeft" span={2}>
@@ -88,7 +88,7 @@ function ModalErasersList({ historial, setHistorial }) {
                 t("paths_organigram.eraser")
               }
             >
-              Editar
+              {t("organigram.organigram-page.modal-history.edit")}
             </Link>
           </Col>
           <Col className="dividerLeft" span={3}>
@@ -99,7 +99,7 @@ function ModalErasersList({ historial, setHistorial }) {
               }}
               to="#"
             >
-              Eliminar
+              {t("organigram.organigram-page.modal-history.remove")}
             </Link>
           </Col>
           <Col className="dividerLeft" span={3}>
@@ -110,7 +110,7 @@ function ModalErasersList({ historial, setHistorial }) {
                 setHistorial(false);
               }}
             >
-              Aplicar
+              {t("organigram.organigram-page.modal-history.apply")}
             </Link>
           </Col>
         </Row>
@@ -135,7 +135,7 @@ function ModalErasersList({ historial, setHistorial }) {
                 t("paths_organigram.eraser")
               }
             >
-              Ver
+              {t("organigram.organigram-page.modal-history.watch")}
             </Link>
           </Col>
           <Col className="dividerLeft" span={2}>
@@ -148,12 +148,12 @@ function ModalErasersList({ historial, setHistorial }) {
                 t("paths_organigram.eraser")
               }
             >
-              Editar
+              {t("organigram.organigram-page.modal-history.edit")}
             </Link>
           </Col>
           <Col className="dividerLeft" span={3}>
             <Link className="iconBlue" to="#">
-              Eliminar
+            {t("organigram.organigram-page.modal-history.remove")}
             </Link>
           </Col>
           <Col className="dividerLeft" span={3}>
@@ -164,7 +164,7 @@ function ModalErasersList({ historial, setHistorial }) {
                 setHistorial(false);
               }}
             >
-              Aplicar
+              {t("organigram.organigram-page.modal-history.apply")}
             </Link>
           </Col>
         </Row>
@@ -188,7 +188,7 @@ function ModalErasersList({ historial, setHistorial }) {
                 t("paths_organigram.eraser")
               }
             >
-              Ver
+              {t("organigram.organigram-page.modal-history.watch")}
             </Link>
           </Col>
           <Col className="dividerLeft" span={2}>
@@ -201,12 +201,12 @@ function ModalErasersList({ historial, setHistorial }) {
                 t("paths_organigram.eraser")
               }
             >
-              Editar
+              {t("organigram.organigram-page.modal-history.edit")}
             </Link>
           </Col>
           <Col className="dividerLeft" span={3}>
             <Link className="iconBlue" to="#">
-              Eliminar
+            {t("organigram.organigram-page.modal-history.remove")}
             </Link>
           </Col>
           <Col className="dividerLeft" span={3}>
@@ -217,7 +217,7 @@ function ModalErasersList({ historial, setHistorial }) {
                 setHistorial(false);
               }}
             >
-              Aplicar
+              {t("organigram.organigram-page.modal-history.apply")}
             </Link>
           </Col>
         </Row>
@@ -230,13 +230,13 @@ function ModalErasersList({ historial, setHistorial }) {
             </p>
           </Col>
           <Col span={24}>
-            <h3>¡Atención!</h3>
+            <h3>{t("organigram.organigram-page.modal-remove.attention")}</h3>
           </Col>
           <Col span={24}>
-            <h3>Estás a punto de eliminar el borrador.</h3>
+            <h3>{t("organigram.organigram-page.modal-remove.text")}</h3>
           </Col>
           <Col span={24}>
-            <h3>¿Seguro deseas eliminarlo?</h3>
+            <h3>{t("organigram.organigram-page.modal-remove.text2")}</h3>
             <br />
           </Col>
           <Col span={24}>
@@ -247,7 +247,7 @@ function ModalErasersList({ historial, setHistorial }) {
               }}
               className="secondary btn"
             >
-              Cancelar
+              {t("organigram.organigram-page.modal-remove.btn-cancel")}
             </Button>
             <Button
               className="primary btn"
@@ -256,7 +256,7 @@ function ModalErasersList({ historial, setHistorial }) {
                 setHistorial(false);
               }}
             >
-              Eliminar
+              {t("organigram.organigram-page.modal-remove.btn-remove")}
             </Button>
           </Col>
         </Row>
