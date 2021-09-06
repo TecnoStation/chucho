@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Tree, TreeNode } from "react-organizational-chart";
-import CardNodeErase from "../CardNode/CardNodeErase";
 import { useTranslation } from "react-i18next";
 import CardNodeEraseGrandFather from "../CardNode/CardNodeEraseGrandFather";
-import CardNodeGrandChild from "../CardNode/CardNodeGrandChild";
+import CardNodeEraseFather from "../CardNode/CardNodeEraseFather";
 
 export default function TreeEraser() {
   const [t, i18n] = useTranslation("global");
@@ -31,7 +30,7 @@ export default function TreeEraser() {
         {fathers.map((father, index) => (
           <TreeNode
             label={
-              <CardNodeErase
+              <CardNodeEraseFather
                 father={father}
                 setFathers={setFathers}
                 fathers={fathers}

@@ -1,4 +1,4 @@
-import { Col, Dropdown, Menu, Row } from "antd";
+import { Button, Col, Dropdown, Menu, Row } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Avatar from "../../../../assets/img/avatar.png";
@@ -7,35 +7,36 @@ import { GiOfficeChair } from "react-icons/gi";
 import { FaUserAlt } from "react-icons/fa";
 import Insings from "../../../../assets/img/icons/insights-24px.svg";
 import Trending from "../../../../assets/img/icons/trending_up-24px.svg";
-import { PlusCircleOutlined } from "@ant-design/icons";
+import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
-
 import { v4 as uuid } from "uuid";
-
-import "./CardNode.scss";
 import ModalPermissions from "../../../../components/Modals/ModalPermissions/ModalPermissions";
 import ModalColor from "../../../../components/Modals/ModalColor/ModalColor";
 import ModalHistorialColaborator from "../../../../components/Modals/ModalHistorialColaborator/ModalHistorialColaborator";
 import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/ModalHistorialJob";
 import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
-import CardNodeGrandChild from "./CardNodeGrandChild";
 
-export default function CardNodeErase({
-  setModalPassword,
-  fathers,
-  setFathers,
-  father,
-  childrens,
-  setChildrens,
-}) {
+import "./CardNode.scss";
+
+function CardNodeGrandFather({ data }) {
+  console.log(data);
+
   const [t, i18n] = useTranslation("global");
+  const [active, setActive] = useState("CardNodeGrandChildhide");
+  const [flag, setFalg] = useState("primary roundBtnFull showInline");
+  const [flag2, setFalg2] = useState("primaryInvert roundBtnFull hide");
   const [Permissions, setPermissions] = useState(false);
   const [Color, setColor] = useState(false);
 
   const [HistorialC, setHistorialC] = useState(false);
   const [HistorialP, setHistorialP] = useState(false);
   // implementar array
-  const [Password, setPassword] = useState(false);
+  const [Password, setPassword] = useState({
+    visible: false,
+    titleModal: "",
+    messageModal: "",
+    actionWarning: "",
+  });
 
   const menu = (
     <Menu>
@@ -49,7 +50,7 @@ export default function CardNodeErase({
               t("paths_organigram.areasandpositions-collaborator")
             }
           >
-            {t("organigram.organigram-page.munu-2.edit-colaborator")}
+            Editar colaborador
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -61,9 +62,9 @@ export default function CardNodeErase({
               t("routes.organigram") +
               "/" +
               t("paths_organigram.areasandpositions-addjob")
-            } 
+            }
           >
-            {t("organigram.organigram-page.munu-2.dit-position")}
+            Editar puesto
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -74,7 +75,7 @@ export default function CardNodeErase({
               "/" + t("routes.organigram") + "/" + t("paths_organigram.eraser")
             }
           >
-            {t("organigram.organigram-page.munu-2.edit-estructure")}
+            Editar estructura
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -86,7 +87,7 @@ export default function CardNodeErase({
               setPermissions(true);
             }}
           >
-            {t("organigram.organigram-page.munu-2.add-permissions")}
+            Agregar permisos
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -98,7 +99,7 @@ export default function CardNodeErase({
               setColor(true);
             }}
           >
-            {t("organigram.organigram-page.munu-2.define-colour")}
+            Difinir color de área
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -113,18 +114,18 @@ export default function CardNodeErase({
               t("paths_organigram.areasandpositions-perfil")
             }
           >
-            {t("organigram.organigram-page.munu-2.watch-proceedings")}
+            Ver expediente
           </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()} disabled>
-          <Link to="#">{t("organigram.organigram-page.munu-2.watch-vacancies")}</Link>
+          <Link to="#">Ver Vacantes</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()} disabled>
-          <Link to="#">{t("organigram.organigram-page.munu-2.watch-objectives")}</Link>
+          <Link to="#">Ver Ovjetivos</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -135,7 +136,7 @@ export default function CardNodeErase({
               setHistorialP(true);
             }}
           >
-            {t("organigram.organigram-page.munu-2.record-position")}
+            Historial puesto
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -147,7 +148,7 @@ export default function CardNodeErase({
               setHistorialC(true);
             }}
           >
-            {t("organigram.organigram-page.munu-2.record-collaborators")}
+            Historial colaborador
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -159,20 +160,20 @@ export default function CardNodeErase({
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: t("organigram.menu-treedrop.modal-collaborator.drop-collaborators"),
+                titleModal: "Dar de baja a colaborador",
                 type: 0,
                 messageModal:
-                t("organigram.menu-treedrop.modal-collaborator.text"),
+                  "Al dar de baja a un colaborador de tu organización ya no se verá reflejada en tu organigrama.",
                 messageWarning:
-                t("organigram.menu-treedrop.modal-collaborator.text2"),
-                question: t("organigram.menu-treedrop.modal-collaborator.safe-want-remove"),
+                  "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
+                question: "¿Seguro deseas eliminarlo?",
                 function: () => {
                   return false;
                 },
               });
             }}
           >
-            {t("organigram.organigram-page.munu-2.give-drop-collaborators")}
+            Dar de baja colaborador
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -183,19 +184,19 @@ export default function CardNodeErase({
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: t("organigram.menu-treedrop.modal-position.remove-position"),
+                titleModal: "Eliminar puesto",
                 type: 0,
                 messageModal:
-                t("organigram.menu-treedrop.modal-position.text"),
-                messageWarning: t("organigram.menu-treedrop.modal-position.text2"),
-                question: t("organigram.menu-treedrop.modal-position.safe-want-remove"),
+                  "Al eliminar un puesto de tu organización ya no se verá reflejada en tu organigrama.",
+                messageWarning: "Estás a punto de eliminar el puesto",
+                question: "¿Seguro deseas eliminarlo?",
                 function: () => {
                   return false;
                 },
               });
             }}
           >
-            {t("organigram.organigram-page.munu-2.remove-position")}
+            Eliminar puesto
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -204,39 +205,19 @@ export default function CardNodeErase({
 
   return (
     <>
-      <div id={"father" + father.idFather} style={{ width: "350px" }}>
+      <div>
         <div>
           <p className="showBlock">Área de Marketing</p>
         </div>
-
-        <div className="CardNodeChild">
+        <div
+          className="CardNodeGrandFather"
+          style={{ borderColor: data[0].color }}
+        >
           <Row
             style={{ textAlign: "left", height: "50px", paddingBottom: "50px" }}
             className="dividerBottomFull"
           >
             <Col span={5}>
-              <div
-                style={{
-                  position: "absolute",
-                  left: "-53px",
-                  top: "25px",
-                }}
-              >
-                <Link
-                  to="#"
-                  onClick={() => {
-                    setFathers([
-                      ...fathers,
-                      {
-                        idFather: fathers.length,
-                      },
-                    ]);
-                    console.log(fathers);
-                  }}
-                >
-                  <PlusCircleOutlined style={{ fontSize: "20px" }} />
-                </Link>
-              </div>
               <p>
                 <img
                   style={{ marginTop: "-5px" }}
@@ -254,29 +235,6 @@ export default function CardNodeErase({
               </span>
             </Col>
             <Col span={3}>
-              <div
-                style={{
-                  position: "absolute",
-                  right: "-45px",
-                  top: "25px",
-                }}
-              >
-                <Link
-                  to="#"
-                  onClick={() => {
-                    setFathers([
-                      ...fathers,
-                      {
-                        idFather: fathers.length,
-                      },
-                    ]);
-                    console.log(fathers);
-                  }}
-                >
-                  <PlusCircleOutlined style={{ fontSize: "20px" }} />
-                </Link>
-              </div>
-
               <Dropdown overlay={menu} trigger={["click"]}>
                 <Link
                   to="#"
@@ -294,7 +252,6 @@ export default function CardNodeErase({
               </Dropdown>
             </Col>
           </Row>
-
           <Row style={{ marginTop: "3px" }}>
             <Col span={3} className="iconGray" style={{ fontSize: "20px" }}>
               <img
@@ -305,9 +262,9 @@ export default function CardNodeErase({
               />
             </Col>
             <Col span={3} className="iconGreenTwo">
-              <span>0%</span>
+              <span>42%</span>
             </Col>
-            <Col span={3}>
+            <Col className="iconGray" span={3}>
               <img
                 style={{ marginTop: "-5px" }}
                 alt="ico"
@@ -316,49 +273,22 @@ export default function CardNodeErase({
               />
             </Col>
             <Col span={3} className="iconGreenTwo">
-              <span>0%</span>
+              <span>35%</span>
             </Col>
-            <Col span={3} className="iconRed" style={{ fontSize: "16px" }}>
+            <Col span={3} className="iconRed" style={{ fontSize: "18px" }}>
               <GiOfficeChair />
             </Col>
             <Col span={3} className="iconRed">
-              <span>0</span>
+              <span>8</span>
             </Col>
             <Col span={3} className="iconGray" style={{ fontSize: "16px" }}>
               <FaUserAlt />
             </Col>
             <Col span={3}>
-              <span>0</span>
+              <span>18</span>
             </Col>
           </Row>
         </div>
-        <div
-          style={{
-            marginTop: "20px",
-            marginLeft: "60px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Link
-            to="#"
-            onClick={() => {
-              setChildrens([
-                ...childrens,
-                {
-                  idChild: childrens.length,
-                  idFather: father.idFather,
-                },
-              ]);
-              console.log(childrens);
-            }}
-          >
-            <PlusCircleOutlined style={{ fontSize: "20px" }} />
-          </Link>
-        </div>
-        {childrens.map(
-          (children, index) =>
-            children.idFather === father.idFather && <CardNodeGrandChild />
-        )}
       </div>
 
       <ModalPermissions
@@ -378,3 +308,5 @@ export default function CardNodeErase({
     </>
   );
 }
+
+export default CardNodeGrandFather;

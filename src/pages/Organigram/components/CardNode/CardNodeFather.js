@@ -17,8 +17,10 @@ import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/M
 import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
 
 import "./CardNode.scss";
+import CardNodeGrandFather from "./CardNodeGrandFather";
+import CardNodeGrandChild from "./CardNodeGrandChild";
 
-export default function CardNode({ data }) {
+function CardNodeFather({ data }) {
   console.log(data);
 
   const [t, i18n] = useTranslation("global");
@@ -50,7 +52,7 @@ export default function CardNode({ data }) {
               t("paths_organigram.areasandpositions-collaborator")
             }
           >
-            {t("organigram.organigram-page.munu-2.edit-colaborator")}
+            Editar colaborador
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -62,9 +64,9 @@ export default function CardNode({ data }) {
               t("routes.organigram") +
               "/" +
               t("paths_organigram.areasandpositions-addjob")
-            } 
+            }
           >
-            {t("organigram.organigram-page.munu-2.dit-position")}
+            Editar puesto
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -75,7 +77,7 @@ export default function CardNode({ data }) {
               "/" + t("routes.organigram") + "/" + t("paths_organigram.eraser")
             }
           >
-            {t("organigram.organigram-page.munu-2.edit-estructure")}
+            Editar estructura
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -87,7 +89,7 @@ export default function CardNode({ data }) {
               setPermissions(true);
             }}
           >
-            {t("organigram.organigram-page.munu-2.add-permissions")}
+            Agregar permisos
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -99,7 +101,7 @@ export default function CardNode({ data }) {
               setColor(true);
             }}
           >
-            {t("organigram.organigram-page.munu-2.define-colour")}
+            Difinir color de área
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -114,18 +116,18 @@ export default function CardNode({ data }) {
               t("paths_organigram.areasandpositions-perfil")
             }
           >
-            {t("organigram.organigram-page.munu-2.watch-proceedings")}
+            Ver expediente
           </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()} disabled>
-          <Link to="#">{t("organigram.organigram-page.munu-2.watch-vacancies")}</Link>
+          <Link to="#">Ver Vacantes</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()} disabled>
-          <Link to="#">{t("organigram.organigram-page.munu-2.watch-objectives")}</Link>
+          <Link to="#">Ver Ovjetivos</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -136,7 +138,7 @@ export default function CardNode({ data }) {
               setHistorialP(true);
             }}
           >
-            {t("organigram.organigram-page.munu-2.record-position")}
+            Historial puesto
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -148,7 +150,7 @@ export default function CardNode({ data }) {
               setHistorialC(true);
             }}
           >
-            {t("organigram.organigram-page.munu-2.record-collaborators")}
+            Historial colaborador
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -160,20 +162,20 @@ export default function CardNode({ data }) {
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: t("organigram.menu-treedrop.modal-collaborator.drop-collaborators"),
+                titleModal: "Dar de baja a colaborador",
                 type: 0,
                 messageModal:
-                t("organigram.menu-treedrop.modal-collaborator.text"),
+                  "Al dar de baja a un colaborador de tu organización ya no se verá reflejada en tu organigrama.",
                 messageWarning:
-                t("organigram.menu-treedrop.modal-collaborator.text2"),
-                question: t("organigram.menu-treedrop.modal-collaborator.safe-want-remove"),
+                  "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
+                question: "¿Seguro deseas eliminarlo?",
                 function: () => {
                   return false;
                 },
               });
             }}
           >
-            {t("organigram.organigram-page.munu-2.give-drop-collaborators")}
+            Dar de baja colaborador
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -184,19 +186,19 @@ export default function CardNode({ data }) {
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: t("organigram.menu-treedrop.modal-position.remove-position"),
+                titleModal: "Eliminar puesto",
                 type: 0,
                 messageModal:
-                t("organigram.menu-treedrop.modal-position.text"),
-                messageWarning: t("organigram.menu-treedrop.modal-position.text2"),
-                question: t("organigram.menu-treedrop.modal-position.safe-want-remove"),
+                  "Al eliminar un puesto de tu organización ya no se verá reflejada en tu organigrama.",
+                messageWarning: "Estás a punto de eliminar el puesto",
+                question: "¿Seguro deseas eliminarlo?",
                 function: () => {
                   return false;
                 },
               });
             }}
           >
-            {t("organigram.organigram-page.munu-2.remove-position")}
+            Eliminar puesto
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -209,7 +211,7 @@ export default function CardNode({ data }) {
         <div>
           <p className="showBlock">Área de Marketing</p>
         </div>
-        <div className={data.className} style={{ borderColor: data.color }}>
+        <div className="CardNodeFather" style={{ borderColor: data.color }}>
           <Row
             style={{ textAlign: "left", height: "50px", paddingBottom: "50px" }}
             className="dividerBottomFull"
@@ -302,8 +304,8 @@ export default function CardNode({ data }) {
             className={flag2}
             onClick={() => {
               setActive("CardNodeGrandChildhide");
-              setFalg("primary roundBtnFull showInline");
-              setFalg2("primaryInvert roundBtnFull hide");
+              setFalg("roundBtnFull showInline");
+              setFalg2("roundBtnFull hide");
             }}
             icon={<UpOutlined />}
             style={{
@@ -315,7 +317,11 @@ export default function CardNode({ data }) {
           />
         </div>
         <div className={active}>
-          <div style={{ marginTop: "10px" }} className="CardNodeGrandChild">
+          {data.childrens.map((child, index) => (
+            <CardNodeGrandChild data={child} color={data.color} />
+          ))}
+
+          {/* <div style={{ marginTop: "10px" }} className="CardNodeGrandChild">
             <Row
               style={{
                 textAlign: "left",
@@ -410,7 +416,7 @@ export default function CardNode({ data }) {
                 stroke-width="5"
               />
             </svg>
-          </div>
+          </div> */}
         </div>
       </div>
       <ModalPermissions
@@ -430,3 +436,5 @@ export default function CardNode({ data }) {
     </>
   );
 }
+
+export default CardNodeFather;

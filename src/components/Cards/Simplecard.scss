@@ -1,7 +1,7 @@
 @import "../../index.scss";
 
 .Simplecard {
-  width: 200px;
+  width: 240px;
   height: 120px;
   padding: 5px 15px 10px 10px !important;
   border: 1px solid $color-margin !important;
@@ -10,8 +10,16 @@
   margin-top: 20px;
   display: flex;
   justify-content: center;
+  color: $color-principal-text;
+  h4 {
+    color: $color-principal-text;
+  }
   span {
     font-size: 12px;
     margin-top: -5px;
   }
+}
+
+.teamList {
+  color: $color-principal-text;
 }

@@ -18,6 +18,7 @@ export default function TeamStarted() {
   const [inputType, setInputType] = useState(false);
   const [typeTeam, setTypeTeam] = useState("hide");
   const [collaboratorsList, setCollaboratorsList] = useState([]);
+  const [memberScroll, setMemberScroll] = useState("memberScroll1");
   const [form] = useForm();
 
   useEffect(() => {
@@ -30,6 +31,58 @@ export default function TeamStarted() {
   useEffect(() => {
     localStorage.setItem("teamList", JSON.stringify(teamList));
   }, [teamList]);
+
+  //----------------- Selects Dinamic Data ------------------------------------
+
+  const typeTeamData = [
+    {
+      id: 0,
+      name: "Personalizado",
+    },
+    {
+      id: 1,
+      name: "Modo Opertaivo Agile",
+    },
+  ];
+
+  const modallityData = [
+    {
+      id: 0,
+      name: "Funcional",
+    },
+    {
+      id: 1,
+      name: "Funcional 2",
+    },
+  ];
+
+  const frameWorkData = [
+    {
+      id: 0,
+      name: "Marco",
+    },
+    {
+      id: 1,
+      name: "Marco 1",
+    },
+  ];
+
+  const dataSelects = [
+    {
+      id: 0,
+      name: "Select",
+    },
+    {
+      id: 1,
+      name: "Select 1",
+    },
+    {
+      id: 2,
+      name: "Select 2",
+    },
+  ];
+
+  //----------------- End Selects Dinamic Data --------------------------------
 
   return (
     <>
@@ -53,7 +106,11 @@ export default function TeamStarted() {
           span={3}
           style={{ textAlign: "left" }}
         >
-          <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.teamsv")}>
+          <Link
+            to={
+              "/" + t("routes.organigram") + "/" + t("paths_organigram.teamsv")
+            }
+          >
             <BsListUl
               className="dividerLeft"
               style={{ paddingLeft: "5px", fontSize: "22px" }}
@@ -61,7 +118,7 @@ export default function TeamStarted() {
           </Link>
         </Col>
         <Col className="gutter-row" span={15}>
-          <Input 
+          <Input
             style={{ width: "200px", marginTop: "-5px" }}
             addonAfter={<SearchOutlined />}
             placeholder={t("organigram.teams.search-positions")}
@@ -81,7 +138,9 @@ export default function TeamStarted() {
             }}
             icon={<IoMdAdd className="iconAjust2" />}
           >
-            <span className="textAjust4">{t("organigram.teams.btn-new-team")}</span>
+            <span className="textAjust4">
+              {t("organigram.teams.btn-new-team")}
+            </span>
           </Button>
         </Col>
       </Row>
@@ -93,7 +152,7 @@ export default function TeamStarted() {
         <Col className="gutter-row" span={8}></Col>
         <Col className="gutter-row" span={8}>
           <p>
-            <img alt="ico" className="" src={Inicio} /> 
+            <img alt="ico" className="" src={Inicio} />
           </p>
           <br />
           <h1>{t("organigram.teams.title")}</h1>
@@ -129,6 +188,12 @@ export default function TeamStarted() {
         setTeamList={setTeamList}
         teamList={teamList}
         form={form}
+        memberScroll={memberScroll}
+        setMemberScroll={setMemberScroll}
+        dataSelects={dataSelects}
+        frameWorkData={frameWorkData}
+        modallityData={modallityData}
+        typeTeamData={typeTeamData}
       />
     </>
   );

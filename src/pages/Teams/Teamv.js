@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Input, Row } from "antd";
+import { AutoComplete, Button, Col, Input, Row } from "antd";
 import { IoMdAdd } from "react-icons/io";
 import { BsFillGrid3X2GapFill, BsListUl } from "react-icons/bs";
 import { RiFilterFill } from "react-icons/ri";
@@ -14,12 +14,18 @@ const { Search } = Input;
 
 export default function Teamsv() {
   const [t, i18n] = useTranslation("global");
-
+  const [memberScroll, setMemberScroll] = useState("memberScroll1");
   const [createTeamModal, setCreateTeamModal] = useState(false);
 
   //-------------------- Set - Get teamlist ------------------
 
   const [teamList, setTeamList] = useState([]);
+  const [listTeamName, setListTeamName] = useState([
+    { value: "Array desde backend" },
+    { value: "Burns Bay Road" },
+    { value: "Downing Street" },
+    { value: "Wall Street" },
+  ]);
 
   useEffect(() => {
     const storageTeams = JSON.parse(localStorage.getItem("teamList"));
@@ -44,8 +50,18 @@ export default function Teamsv() {
   const [form] = useForm();
 
   const edit = (team, item) => {
-    console.log(team);
     setEditionMode(true);
+
+    setItem(item);
+    setCollaboratorsList(team.collaborators);
+    const collaborators = team.collaborators;
+
+    collaborators.forEach((collaborator, index) => {
+      form.setFieldsValue({
+        ["rol" + index]: collaborator.rol,
+      });
+    });
+
     setCreateTeamModal(true);
     form.setFieldsValue({
       teamName: team.name,
@@ -54,16 +70,17 @@ export default function Teamsv() {
       frameWork: team.frameWork,
     });
 
-    if (team.type === "0") {
+    if (team.type === "Personalizado") {
       setTypeTeam("hide");
       setInputType(false);
+      setMemberScroll("memberScroll1");
     } else {
       setTypeTeam("show");
       setInputType(true);
+      setMemberScroll("memberScroll2");
     }
-    setItem(item);
-    setCollaboratorsList(team.collaborators);
   };
+
   //--------------------End Edit teamlist ------------------
 
   //----------------- Filter Teams ------------------------------------------
@@ -122,12 +139,20 @@ export default function Teamsv() {
           </Link>
         </Col>
         <Col className="gutter-row" span={6}>
-          <Search
-            size="small"
+          <AutoComplete
             id="filter"
+            options={listTeamName}
+            filterOption={(inputValue, option) =>
+              option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !==
+              -1
+            }
             onChange={filterTeams}
-            placeholder={t("organigram.teams2.search-position")}
-          />
+          >
+            <Input.Search
+              size="small"
+              placeholder={t("organigram.teams2.search-position")}
+            />
+          </AutoComplete>
         </Col>
         <Col span={9}></Col>
         <Col className="gutter-row" span={4}>
@@ -151,7 +176,7 @@ export default function Teamsv() {
         </Col>
       </Row>
 
-      <Row style={{ marginTop: "50px" }}>
+      <Row className="secondaryText" style={{ marginTop: "50px" }}>
         <Col span={2}></Col>
         <Col span={6}>
           <p>{t("organigram.teams2.tex")}</p>
@@ -164,7 +189,7 @@ export default function Teamsv() {
         </Col>
       </Row>
 
-      <div id="teamList">
+      <div className="teamList" id="teamList">
         <Teamlist setTeamList={setTeamList} teamList={teamList} edit={edit} />
       </div>
 

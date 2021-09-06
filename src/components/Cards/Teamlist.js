@@ -11,7 +11,7 @@ import "./Simplecard.scss";
 
 export default function Teamlist({ teamList, setTeamList, edit }) {
   const [t, i18n] = useTranslation("global");
-  const [modalRename, setModalRename] = useState(false); 
+  const [modalRename, setModalRename] = useState(false);
   const [modalCard, setModalCard] = useState(false);
 
   return teamList.map((team, index) => (
@@ -22,7 +22,7 @@ export default function Teamlist({ teamList, setTeamList, edit }) {
         style={{ marginTop: "30px", width: "80%", paddingBottom: "20px" }}
         className="dividerBottomFull rowTeam"
       >
-        <Col span={11}>
+        <Col style={{ paddingLeft: "16px" }} span={11}>
           <span>
             <b className="TeamNames" id="nameTeam">
               {team.name}
