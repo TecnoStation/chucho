@@ -4,15 +4,39 @@ import { Link } from "react-router-dom";
 import ModalMessage from "../ModalMessage/ModalMessage";
 import Warning from "../../../assets/img/icons/atencion.svg";
 import { useTranslation } from "react-i18next";
+import EraserData from "./components/EraserData/EraserData";
 
 function ModalErasersList({ historial, setHistorial }) {
   const [t, i18n] = useTranslation("global");
-  const [screen, setScreen] = useState("screen");
+
+  const [erasersList, setErasersList] = useState([
+    {
+      id: 0,
+      name: "Área MKT",
+      date: "10 MAY 2016",
+    },
+    {
+      id: 1,
+      name: "Área de TI A",
+      date: "12 MAY 2016",
+    },
+    {
+      id: 2,
+      name: "Sucursal CUH",
+      date: "12 MAY 2016",
+    },
+  ]);
+
   return (
     <>
       <Modal
+<<<<<<< HEAD
         title={t("organigram.organigram-page.modal-history.ready-tsdraf")}
         className="largeModal"
+=======
+        title="Lista de borradores"
+        className="eraserList"
+>>>>>>> 50811ca0fceaed8fde63fa0b4bcd77cba1b96cb0
         visible={historial}
         onCancel={() => {
           setHistorial(false);
@@ -55,6 +79,7 @@ function ModalErasersList({ historial, setHistorial }) {
             <b>{t("organigram.organigram-page.modal-history.actions")}</b>
           </Col>
         </Row>
+<<<<<<< HEAD
         <Row
           className="dividerBottomFull"
           style={{
@@ -261,6 +286,13 @@ function ModalErasersList({ historial, setHistorial }) {
           </Col>
         </Row>
       </ModalMessage>
+=======
+
+        {erasersList.map((eraser, index) => (
+          <EraserData setHistorial={setHistorial} eraser={eraser} />
+        ))}
+      </Modal>
+>>>>>>> 50811ca0fceaed8fde63fa0b4bcd77cba1b96cb0
     </>
   );
 }
