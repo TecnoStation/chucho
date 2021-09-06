@@ -15,7 +15,7 @@ import { v4 as uuid } from "uuid";
 import "./CardNode.scss";
 import ModalPermissions from "../../../../components/Modals/ModalPermissions/ModalPermissions";
 import ModalColor from "../../../../components/Modals/ModalColor/ModalColor";
-import ModalHistorialColaborator from "../../../../components/Modals/ModalHistorialColaborator/ModalHistorialColaborator";
+import ModalHistorialCollaborator from "../../../../components/Modals/ModalHistorialCollaborator/ModalHistorialCollaborator";
 import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/ModalHistorialJob";
 import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
 import CardNodeEraseGrandChild from "./CardNodeEraseGrandChild";
@@ -32,7 +32,7 @@ export default function CardNodeEraseFather({
   const [Permissions, setPermissions] = useState(false);
   const [Color, setColor] = useState(false);
 
-  const [HistorialC, setHistorialC] = useState(false);
+  const [modalHistorialC, setModalHistorialC] = useState(false);
   const [HistorialP, setHistorialP] = useState(false);
   // implementar array
   const [Password, setPassword] = useState(false);
@@ -144,7 +144,7 @@ export default function CardNodeEraseFather({
           <Link
             to="#"
             onClick={() => {
-              setHistorialC(true);
+              setModalHistorialC(true);
             }}
           >
             {t("organigram.organigram-page.munu-2.record-collaborators")}
@@ -366,9 +366,9 @@ export default function CardNodeEraseFather({
         setPermissions={setPermissions}
       />
       <ModalColor Color={Color} setColor={setColor} />
-      <ModalHistorialColaborator
-        HistorialC={HistorialC}
-        setHistorialC={setHistorialC}
+      <ModalHistorialCollaborator
+        modalHistorialC={modalHistorialC}
+        setModalHistorialC={setModalHistorialC}
       />
       <ModalHistorialJob
         HistorialP={HistorialP}

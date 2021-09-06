@@ -1,8 +1,10 @@
 import React from "react";
 import { Button, Col, Modal, Row } from "antd";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function ModalHistorialCollaborator({ modalHistorialC, setModalHistorialC }) {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
       <Modal

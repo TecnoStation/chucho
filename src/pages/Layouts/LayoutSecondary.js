@@ -19,7 +19,7 @@ const user = { id: 1, username: "Lupita Gamiño" };
 const { Header, Content } = Layout;
 
 export default function LayoutSecondary({
-  title: Title,
+  title: Title, 
   component: Component,
   ...rest
 }) {
@@ -28,7 +28,12 @@ export default function LayoutSecondary({
     <Menu>
       <Menu.Item key="0">
         <Menu.Item key="3">
-          <Link to="/areasandpositions-perfil">Ver Perfil</Link>
+          <Link to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-perfil")
+          }>Ver Perfil</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Divider />
