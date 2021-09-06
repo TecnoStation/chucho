@@ -12,48 +12,57 @@ import "./Zoom.scss";
 import TreeStarted from "../TreeStarted/TreeStarted";
 import ModalErasersList from "../../../../components/Modals/ModalErasersList/ModalErasersList";
 
-function ZoomStarted() {
+function ZoomStarted({ setEraser }) {
   const [t, i18n] = useTranslation("global");
   const [historial, setHistorial] = useState(false);
+  const [messageOrg, setMessageOrg] = useState("messageOrg");
   const menu = (
     <>
       <div className="menuToltip">
-        <Link to={
+        <Link
+          to={
             "/" +
             t("routes.organigram") +
             "/" +
             t("paths_organigram.areasandpositions-general")
-          }>
+          }
+        >
           <span>{t("organigram.organigramlist.menu-1.load-massive")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to={
+        <Link
+          to={
             "/" +
             t("routes.organigram") +
             "/" +
             t("paths_organigram.areasandpositions-general")
-          }>
+          }
+        >
           <span>{t("organigram.organigramlist.menu-1.areas-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to={
+        <Link
+          to={
             "/" +
             t("routes.organigram") +
             "/" +
             t("paths_organigram.areasandpositions-general")
-          }>
+          }
+        >
           <span>{t("organigram.organigramlist.menu-1.profile-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to={
+        <Link
+          to={
             "/" +
             t("routes.organigram") +
             "/" +
             t("paths_organigram.areasandpositions-general")
-          }>
+          }
+        >
           <span>{t("organigram.organigramlist.menu-1.Collaborators")}</span>
         </Link>
       </div>
@@ -75,12 +84,14 @@ function ZoomStarted() {
             <div className="tools">
               <Row style={{ marginTop: "5px" }}>
                 <Col span={24}>
-                  <Link to={
+                  <Link
+                    to={
                       "/" +
                       t("routes.organigram") +
                       "/" +
                       t("paths_organigram.teams")
-                    }>
+                    }
+                  >
                     <Tooltip
                       title={t("organigram.organigramlist.menu-1.create-team")}
                       placement="left"
@@ -97,12 +108,14 @@ function ZoomStarted() {
               </Row>
               <Row style={{ marginTop: "5px" }}>
                 <Col span={24}>
-                  <Link to={
+                  <Link
+                    to={
                       "/" +
                       t("routes.organigram") +
                       "/" +
                       t("paths_organigram.mybusiness")
-                    }>
+                    }
+                  >
                     <Tooltip
                       title={t("organigram.organigramlist.menu-1.me-business")}
                       placement="left"
@@ -171,7 +184,7 @@ function ZoomStarted() {
                   ></Button>
                 </Col>
               </Row>
-              <div className="messageOrg">
+              <div className={messageOrg}>
                 <Row>
                   <Col span={9}>
                     <FaRegQuestionCircle className="question" />
@@ -203,7 +216,10 @@ function ZoomStarted() {
               </div>
             </div>
             <TransformComponent>
-              <TreeStarted />
+              <TreeStarted
+                setEraser={setEraser}
+                setMessageOrg={setMessageOrg}
+              />
             </TransformComponent>
           </React.Fragment>
         )}

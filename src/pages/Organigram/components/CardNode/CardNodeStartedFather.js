@@ -19,7 +19,7 @@ import ModalHistorialCollaborator from "../../../../components/Modals/ModalHisto
 import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/ModalHistorialJob";
 import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
 
-export default function CardNode({ setModalPassword }) {
+export default function CardNodeStartedFather({ setModalPassword }) {
   const [t, i18n] = useTranslation("global");
   const [active, setActive] = useState("CardNodeGrandChildhide");
   const [flag, setFalg] = useState("primary roundBtnFull showInline");
@@ -165,7 +165,7 @@ export default function CardNode({ setModalPassword }) {
 
   return (
     <>
-      <div>
+      <div style={{ marginTop: "30px", width: "380px" }}>
         <div>
           <p className="showBlock">Nombre del Área</p>
         </div>
