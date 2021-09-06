@@ -21,7 +21,7 @@ export default function Organigramstarted() {
         </p>
         <br />
         <p>
-          <Button
+          <Button 
             className="primary"
             style={{ width: "100px" }}
             onClick={showMesage}

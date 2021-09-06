@@ -926,6 +926,20 @@
             "record-changes": "Historial de cambios"
             }
         },
+        "organigramdraft":{
+            "title": "Borradores Dirección de marketing",
+            "btn-apply-changes": "Aplicar cambios",
+            "btn-save-draft": "Guardar como borrador",
+            "menu-3":{   
+            "create-team": "Crear equipo",
+            "me-business": "Mi empresa",
+            "load-massive": "Carga masiva",
+            "areas-positions": "Áreas y puestos",
+            "profile-positions": "Perfil de puestos",
+            "Collaborators": "Colaboradores",
+            "record-changes": "Historial de cambios"
+            }
+        },
            "menu-treedrop":{
              "edit-colaborator": "Editar colaborador",
              "edit-position": "Editar puesto",
@@ -959,11 +973,20 @@
              }     
            }, 
      
-           "organigram-eraser":{
+           "org-eraser":{
             "btn-apply-changes": "Aplicar cambios",
-            "btn-save-draft": "Guardar como borrador"   
+            "btn-save-draft": "Guardar como borrador",
+              "menu-3":{   
+              "create-team": "Crear equipo",
+              "me-business": "Mi empresa",
+              "load-massive": "Carga masiva",
+              "areas-positions": "Áreas y puestos",
+              "profile-positions": "Perfil de puestos",
+              "Collaborators": "Colaboradores",
+              "record-changes": "Historial de cambios"
+             }   
            },
-           "modal-organigram":{
+           "modal-org":{
             "save-draft": "Guardar como borrador",
             "name-draft-label": "Nombre del borrador",
             "direction-placeholder": "Dirección de Marketing",

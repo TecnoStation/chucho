@@ -95,7 +95,7 @@ export default function TeamStarted() {
           <RiFilterFill />
         </Col>
         <Col className="gutter-row rigth" span={1}>
-          <Link to="/organigrama/teams">
+          <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.teams")}>
             <span style={{ fontSize: "17px" }}>
               <BsFillGrid3X2GapFill className="iconBlue" />
             </span>
