@@ -5,6 +5,7 @@ import { FiUpload, FiZoomIn, FiZoomOut } from "react-icons/fi";
 import { FaRegQuestionCircle, FaUsers } from "react-icons/fa";
 import { IoBusinessSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { AiOutlineHistory } from "react-icons/ai";
 
 import "./Zoom.scss";
@@ -12,6 +13,7 @@ import TreeStarted from "../TreeStarted/TreeStarted";
 import ModalErasersList from "../../../../components/Modals/ModalErasersList/ModalErasersList";
 
 function ZoomStarted() {
+  const [t, i18n] = useTranslation("global");
   const [historial, setHistorial] = useState(false);
   const menu = (
     <>

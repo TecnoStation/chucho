@@ -48,7 +48,7 @@ export default function CardNode({ setModalPassword }) {
               t("paths_organigram.areasandpositions-collaborator")
             }
           >
-            Editar colaborador
+            {t("organigram.organigram-page.munu-2.edit-colaborator")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -60,9 +60,9 @@ export default function CardNode({ setModalPassword }) {
               t("routes.organigram") +
               "/" +
               t("paths_organigram.areasandpositions-addjob")
-            }
+            } 
           >
-            Editar puesto
+            {t("organigram.organigram-page.munu-2.dit-position")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -73,7 +73,7 @@ export default function CardNode({ setModalPassword }) {
               "/" + t("routes.organigram") + "/" + t("paths_organigram.eraser")
             }
           >
-            Editar estructura
+            {t("organigram.organigram-page.munu-2.edit-estructure")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -85,7 +85,7 @@ export default function CardNode({ setModalPassword }) {
               setPermissions(true);
             }}
           >
-            Agregar permisos
+            {t("organigram.organigram-page.munu-2.add-permissions")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -97,7 +97,7 @@ export default function CardNode({ setModalPassword }) {
               setColor(true);
             }}
           >
-            Difinir color de área
+            {t("organigram.organigram-page.munu-2.define-colour")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -112,18 +112,18 @@ export default function CardNode({ setModalPassword }) {
               t("paths_organigram.areasandpositions-perfil")
             }
           >
-            Ver expediente
+            {t("organigram.organigram-page.munu-2.watch-proceedings")}
           </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()} disabled>
-          <Link to="#">Ver Vacantes</Link>
+          <Link to="#">{t("organigram.organigram-page.munu-2.watch-vacancies")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()} disabled>
-          <Link to="#">Ver Ovjetivos</Link>
+          <Link to="#">{t("organigram.organigram-page.munu-2.watch-objectives")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -134,7 +134,7 @@ export default function CardNode({ setModalPassword }) {
               setHistorialP(true);
             }}
           >
-            Historial puesto
+            {t("organigram.organigram-page.munu-2.record-position")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -146,7 +146,7 @@ export default function CardNode({ setModalPassword }) {
               setHistorialC(true);
             }}
           >
-            Historial colaborador
+            {t("organigram.organigram-page.munu-2.record-collaborators")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -158,20 +158,20 @@ export default function CardNode({ setModalPassword }) {
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: "Dar de baja a colaborador",
+                titleModal: t("organigram.menu-treedrop.modal-collaborator.drop-collaborators"),
                 type: 0,
                 messageModal:
-                  "Al dar de baja a un colaborador de tu organización ya no se verá reflejada en tu organigrama.",
+                t("organigram.menu-treedrop.modal-collaborator.text"),
                 messageWarning:
-                  "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
-                question: "¿Seguro deseas eliminarlo?",
+                t("organigram.menu-treedrop.modal-collaborator.text2"),
+                question: t("organigram.menu-treedrop.modal-collaborator.safe-want-remove"),
                 function: () => {
                   return false;
                 },
               });
             }}
           >
-            Dar de baja colaborador
+            {t("organigram.organigram-page.munu-2.give-drop-collaborators")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -182,19 +182,19 @@ export default function CardNode({ setModalPassword }) {
             onClick={() => {
               setPassword({
                 visible: true,
-                titleModal: "Eliminar puesto",
+                titleModal: t("organigram.menu-treedrop.modal-position.remove-position"),
                 type: 0,
                 messageModal:
-                  "Al eliminar un puesto de tu organización ya no se verá reflejada en tu organigrama.",
-                messageWarning: "Estás a punto de eliminar el puesto",
-                question: "¿Seguro deseas eliminarlo?",
+                t("organigram.menu-treedrop.modal-position.text"),
+                messageWarning: t("organigram.menu-treedrop.modal-position.text2"),
+                question: t("organigram.menu-treedrop.modal-position.safe-want-remove"),
                 function: () => {
                   return false;
                 },
               });
             }}
           >
-            Eliminar puesto
+            {t("organigram.organigram-page.munu-2.remove-position")}
           </Link>
         </Menu.Item>
       </Menu.Item>

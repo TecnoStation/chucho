@@ -18,7 +18,7 @@ export default function Eraser({ setEraser, setSave, save }) {
 
       <Modal
         className="middleModal"
-        title="Guardar como borrador"
+        title={t("organigram.modal-org.save-draft")}
         visible={save}
         onCancel={() => {
           setSave(false);
@@ -31,25 +31,25 @@ export default function Eraser({ setEraser, setSave, save }) {
               setSave(false);
             }}
           >
-            Cancelar
+            {t("organigram.modal-org.btn-cancel")}
           </Button>,
-          <Link to="/organigrama">
+          <Link to={ "/" + t("routes.organigram") + "/" + t("paths_organigram.eraser")}>
             <Button
               className="primary"
               onClick={() => {
                 setSave(false);
               }}
             >
-              Guardar
+              {t("organigram.modal-org.btn-save")}
             </Button>
           </Link>,
-        ]}
+        ]} 
       >
         <Form layout="vertical">
-          <Form.Item name="color" label="Nombre del borrador">
+          <Form.Item name="color" label={t("organigram.modal-org.name-draft-label")}>
             <Input
               style={{ textAlign: "" }}
-              placeholder="Direeción de Marketing"
+              placeholder={t("organigram.modal-org.direction-placeholder")}
             />
           </Form.Item>
         </Form>

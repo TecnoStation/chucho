@@ -37,22 +37,46 @@ export default function CardNodeEraseGrandFather({
   const [HistorialP, setHistorialP] = useState(false);
   // implementar array
   const [Password, setPassword] = useState(false);
-
+ 
   const menu = (
     <Menu>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-collaborator">Editar colaborador</Link>
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-collaborator")
+            }
+          >
+            {t("organigram.organigram-page.munu-2.edit-colaborator")}
+          </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-addjob">Editar puesto</Link>
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-addjob")
+            } 
+          >
+            {t("organigram.organigram-page.munu-2.dit-position")}
+          </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="#">Editar estructura</Link>
+          <Link
+            to={
+              "/" + t("routes.organigram") + "/" + t("paths_organigram.eraser")
+            }
+          >
+            {t("organigram.organigram-page.munu-2.edit-estructure")}
+          </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -63,7 +87,7 @@ export default function CardNodeEraseGrandFather({
               setPermissions(true);
             }}
           >
-            Agregar permisos
+            {t("organigram.organigram-page.munu-2.add-permissions")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -75,24 +99,33 @@ export default function CardNodeEraseGrandFather({
               setColor(true);
             }}
           >
-            Difinir color de área
+            {t("organigram.organigram-page.munu-2.define-colour")}
           </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="/areasandpositions-perfil">Ver expediente</Link>
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-perfil")
+            }
+          >
+            {t("organigram.organigram-page.munu-2.watch-proceedings")}
+          </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()} disabled>
-          <Link to="#">Ver Vacantes</Link>
+          <Link to="#">{t("organigram.organigram-page.munu-2.watch-vacancies")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()} disabled>
-          <Link to="#">Ver Ovjetivos</Link>
+          <Link to="#">{t("organigram.organigram-page.munu-2.watch-objectives")}</Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
@@ -103,7 +136,7 @@ export default function CardNodeEraseGrandFather({
               setHistorialP(true);
             }}
           >
-            Historial puesto
+            {t("organigram.organigram-page.munu-2.record-position")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -115,7 +148,7 @@ export default function CardNodeEraseGrandFather({
               setHistorialC(true);
             }}
           >
-            Historial colaborador
+            {t("organigram.organigram-page.munu-2.record-collaborators")}
           </Link>
         </Menu.Item>
       </Menu.Item>
@@ -125,20 +158,51 @@ export default function CardNodeEraseGrandFather({
           <Link
             to="#"
             onClick={() => {
-              setPassword(true);
+              setPassword({
+                visible: true,
+                titleModal: t("organigram.menu-treedrop.modal-collaborator.drop-collaborators"),
+                type: 0,
+                messageModal:
+                t("organigram.menu-treedrop.modal-collaborator.text"),
+                messageWarning:
+                t("organigram.menu-treedrop.modal-collaborator.text2"),
+                question: t("organigram.menu-treedrop.modal-collaborator.safe-want-remove"),
+                function: () => {
+                  return false;
+                },
+              });
             }}
           >
-            Dar de baja colaborador
+            {t("organigram.organigram-page.munu-2.give-drop-collaborators")}
           </Link>
         </Menu.Item>
       </Menu.Item>
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
-          <Link to="#">Eliminar puesto</Link>
+          <Link
+            to="#"
+            onClick={() => {
+              setPassword({
+                visible: true,
+                titleModal: t("organigram.menu-treedrop.modal-position.remove-position"),
+                type: 0,
+                messageModal:
+                t("organigram.menu-treedrop.modal-position.text"),
+                messageWarning: t("organigram.menu-treedrop.modal-position.text2"),
+                question: t("organigram.menu-treedrop.modal-position.safe-want-remove"),
+                function: () => {
+                  return false;
+                },
+              });
+            }}
+          >
+            {t("organigram.organigram-page.munu-2.remove-position")}
+          </Link>
         </Menu.Item>
       </Menu.Item>
     </Menu>
   );
+
 
   return (
     <>

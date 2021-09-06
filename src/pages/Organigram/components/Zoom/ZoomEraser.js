@@ -5,6 +5,7 @@ import { FiUpload, FiZoomIn, FiZoomOut } from "react-icons/fi";
 import { FaUsers } from "react-icons/fa";
 import { IoBusinessSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { AiOutlineHistory } from "react-icons/ai";
 
 import "./Zoom.scss";
@@ -13,27 +14,48 @@ import ModalErasersList from "../../../../components/Modals/ModalErasersList/Mod
 import TreeEraser from "../TreeEraser/TreeEraser";
 
 function ZoomEraser() {
+  const [t, i18n] = useTranslation("global");
   const [historial, setHistorial] = useState(false);
   const menu = (
     <>
       <div className="menuToltip">
-        <Link to="/organigrama/areasandpositions-general">
-          <span>Carga masiva</span>
+        <Link to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-general")
+          }>
+          <span>{t("organigram.org-eraser.menu-3.load-massive")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to="/organigrama/areasandpositions-general">
-          <span>Áreas y puestos</span>
+        <Link to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-general")
+          }>
+          <span>{t("organigram.org-eraser.menu-3.areas-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to="/organigrama/areasandpositions-general">
-          <span>Perfil de puestos</span>
+        <Link to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-general")
+          }>
+          <span>{t("organigram.org-eraser.menu-3.profile-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to="/organigrama/areasandpositions-general">
-          <span>Colaboradores</span>
+        <Link to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-general")
+          }>
+          <span>{t("organigram.org-eraser.menu-3.Collaborators")}</span>
         </Link>
       </div>
     </>
@@ -54,9 +76,14 @@ function ZoomEraser() {
             <div className="tools">
               <Row style={{ marginTop: "5px" }}>
                 <Col span={24}>
-                  <Link to="/organigrama/teams">
+                  <Link to={
+                      "/" +
+                      t("routes.organigram") +
+                      "/" +
+                      t("paths_organigram.teams")
+                    }>
                     <Tooltip
-                      title="Crear equipo"
+                      title={t("organigram.org-eraser.menu-3.create-team")}
                       placement="left"
                       color="#2cccd3"
                     >
@@ -71,9 +98,14 @@ function ZoomEraser() {
               </Row>
               <Row style={{ marginTop: "5px" }}>
                 <Col span={24}>
-                  <Link to="/organigrama/mybusiness">
+                  <Link to={
+                      "/" +
+                      t("routes.organigram") +
+                      "/" +
+                      t("paths_organigram.mybusiness")
+                    }>
                     <Tooltip
-                      title="Mi empresa"
+                      title={t("organigram.org-eraser.menu-3.me-business")}
                       placement="left"
                       color="#2cccd3"
                     >
@@ -103,7 +135,7 @@ function ZoomEraser() {
               <Row style={{ marginTop: "5px" }}>
                 <Col span={24}>
                   <Tooltip
-                    title="Historial de cambios"
+                    title={t("organigram.org-eraser.menu-3.record-changes")}
                     placement="left"
                     color="#2cccd3"
                   >

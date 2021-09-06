@@ -102,7 +102,7 @@ export default function ScreenOrganigram() {
                   <img alt="ico" width={visible} src={Business} />
                 </p>
                 <div className={br} style={{ textAlign: "center" }}>
-                  <Link to="/organigrama/mybusiness-edit">
+                  <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.mybusiness-edit")}>
                     <Button
                       style={{ width: "176px", height: "32px" }}
                       className="primary"
