@@ -108,7 +108,7 @@ export default function Zoom() {
                 </Col>
               </Row>
               <Row style={{ marginTop: "5px" }}>
-                <Col span={24}> 
+                <Col span={24}>
                   <Link
                     to={
                       "/" +

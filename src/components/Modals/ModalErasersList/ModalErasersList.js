@@ -4,15 +4,34 @@ import { Link } from "react-router-dom";
 import ModalMessage from "../ModalMessage/ModalMessage";
 import Warning from "../../../assets/img/icons/atencion.svg";
 import { useTranslation } from "react-i18next";
+import EraserData from "./components/EraserData/EraserData";
 
 function ModalErasersList({ historial, setHistorial }) {
   const [t, i18n] = useTranslation("global");
-  const [screen, setScreen] = useState("screen");
+
+  const [erasersList, setErasersList] = useState([
+    {
+      id: 0,
+      name: "Área MKT",
+      date: "10 MAY 2016",
+    },
+    {
+      id: 1,
+      name: "Área de TI A",
+      date: "12 MAY 2016",
+    },
+    {
+      id: 2,
+      name: "Sucursal CUH",
+      date: "12 MAY 2016",
+    },
+  ]);
+
   return (
     <>
       <Modal
         title="Lista de borradores"
-        className="largeModal"
+        className="eraserList"
         visible={historial}
         onCancel={() => {
           setHistorial(false);
@@ -55,212 +74,11 @@ function ModalErasersList({ historial, setHistorial }) {
             <b>Acciones</b>
           </Col>
         </Row>
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={6}>Área MKT</Col>
-          <Col span={8}>10 MAY 2016</Col>
-          <Col span={2}>
-            <Link
-              className="iconBlue"
-              to={
-                "/" +
-                t("routes.organigram") +
-                "/" +
-                t("paths_organigram.eraser")
-              }
-            >
-              Ver
-            </Link>
-          </Col>
-          <Col className="dividerLeft" span={2}>
-            <Link
-              className="iconBlue"
-              to={
-                "/" +
-                t("routes.organigram") +
-                "/" +
-                t("paths_organigram.eraser")
-              }
-            >
-              Editar
-            </Link>
-          </Col>
-          <Col className="dividerLeft" span={3}>
-            <Link
-              className="iconBlue"
-              onClick={() => {
-                setScreen("screen show");
-              }}
-              to="#"
-            >
-              Eliminar
-            </Link>
-          </Col>
-          <Col className="dividerLeft" span={3}>
-            <Link
-              className="iconBlue"
-              to="#"
-              onClick={() => {
-                setHistorial(false);
-              }}
-            >
-              Aplicar
-            </Link>
-          </Col>
-        </Row>
 
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={6}>Área de TI A</Col>
-          <Col span={8}>12 MAY 2016</Col>
-          <Col span={2}>
-            <Link
-              className="iconBlue"
-              to={
-                "/" +
-                t("routes.organigram") +
-                "/" +
-                t("paths_organigram.eraser")
-              }
-            >
-              Ver
-            </Link>
-          </Col>
-          <Col className="dividerLeft" span={2}>
-            <Link
-              className="iconBlue"
-              to={
-                "/" +
-                t("routes.organigram") +
-                "/" +
-                t("paths_organigram.eraser")
-              }
-            >
-              Editar
-            </Link>
-          </Col>
-          <Col className="dividerLeft" span={3}>
-            <Link className="iconBlue" to="#">
-              Eliminar
-            </Link>
-          </Col>
-          <Col className="dividerLeft" span={3}>
-            <Link
-              className="iconBlue"
-              to="#"
-              onClick={() => {
-                setHistorial(false);
-              }}
-            >
-              Aplicar
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={6}>Sucursal CUH</Col>
-          <Col span={8}>12 MAY 2016</Col>
-          <Col span={2}>
-            <Link
-              className="iconBlue"
-              to={
-                "/" +
-                t("routes.organigram") +
-                "/" +
-                t("paths_organigram.eraser")
-              }
-            >
-              Ver
-            </Link>
-          </Col>
-          <Col className="dividerLeft" span={2}>
-            <Link
-              className="iconBlue"
-              to={
-                "/" +
-                t("routes.organigram") +
-                "/" +
-                t("paths_organigram.eraser")
-              }
-            >
-              Editar
-            </Link>
-          </Col>
-          <Col className="dividerLeft" span={3}>
-            <Link className="iconBlue" to="#">
-              Eliminar
-            </Link>
-          </Col>
-          <Col className="dividerLeft" span={3}>
-            <Link
-              className="iconBlue"
-              to="#"
-              onClick={() => {
-                setHistorial(false);
-              }}
-            >
-              Aplicar
-            </Link>
-          </Col>
-        </Row>
+        {erasersList.map((eraser, index) => (
+          <EraserData setHistorial={setHistorial} eraser={eraser} />
+        ))}
       </Modal>
-      <ModalMessage screen={screen}>
-        <Row>
-          <Col span={24}>
-            <p style={{ textAlign: "center" }}>
-              <img alt="ico" className="" src={Warning} />
-            </p>
-          </Col>
-          <Col span={24}>
-            <h3>¡Atención!</h3>
-          </Col>
-          <Col span={24}>
-            <h3>Estás a punto de eliminar el borrador.</h3>
-          </Col>
-          <Col span={24}>
-            <h3>¿Seguro deseas eliminarlo?</h3>
-            <br />
-          </Col>
-          <Col span={24}>
-            <Button
-              style={{ marginRight: "15px" }}
-              onClick={() => {
-                setScreen("screen");
-              }}
-              className="secondary btn"
-            >
-              Cancelar
-            </Button>
-            <Button
-              className="primary btn"
-              onClick={() => {
-                setScreen("screen");
-                setHistorial(false);
-              }}
-            >
-              Eliminar
-            </Button>
-          </Col>
-        </Row>
-      </ModalMessage>
     </>
   );
 }

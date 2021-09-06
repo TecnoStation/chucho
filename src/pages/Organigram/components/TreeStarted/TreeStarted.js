@@ -1,8 +1,13 @@
-import { Tree, TreeNode } from "react-organizational-chart";
-import React from "react";
+import { Tree } from "react-organizational-chart";
+import React, { useState } from "react";
 import CardNodeStarted from "../CardNode/CardNodeStarted";
 
 function TreeStarted() {
+  const [fathers, setFathers] = useState([
+    {
+      idFather: 0,
+    },
+  ]);
   return (
     <Tree
       className="tree"
@@ -10,7 +15,7 @@ function TreeStarted() {
       lineColor={"#AAB4C8"}
       lineBorderRadius={"5px"}
       lineHeight={"30px"}
-      label={<CardNodeStarted>Root</CardNodeStarted>}
+      label={<CardNodeStarted setFathers={setFathers} fathers={fathers} />}
     ></Tree>
   );
 }

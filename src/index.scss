@@ -363,6 +363,19 @@ code {
   }
 }
 
+.eraserList {
+  width: 864px !important;
+  height: 584px !important;
+  .ant-modal-content {
+    width: 864px !important;
+    height: 584px !important;
+    text-align: left;
+  }
+  .ant-modal-body {
+    height: 470px !important;
+  }
+}
+
 .middleModal {
   .ant-modal-content {
     width: 500px !important;

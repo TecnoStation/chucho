@@ -169,7 +169,7 @@ export default function CardNode({ setModalPassword }) {
         <div>
           <p className="showBlock">Nombre del Área</p>
         </div>
-        <div className="CardNode">
+        <div className="CardNodeGrandFather">
           <Row
             style={{ textAlign: "left", height: "50px", paddingBottom: "50px" }}
             className="dividerBottomFull"
