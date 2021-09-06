@@ -7,12 +7,11 @@ import { GiOfficeChair } from "react-icons/gi";
 import { FaUserAlt } from "react-icons/fa";
 import Insings from "../../../../assets/img/icons/insights-24px.svg";
 import Trending from "../../../../assets/img/icons/trending_up-24px.svg";
-import { DownOutlined, UpOutlined } from "@ant-design/icons";
 
-function CardNodeGrandChild({ data, color }) {
+function CardNodeEraseGrandChild() {
   return (
     <div
-      style={{ marginTop: "15px", borderColor: color }}
+      style={{ marginTop: "15px", borderColor: "#2cccd3", marginLeft: "105px" }}
       className="CardNodeGrandChild"
     >
       <Row
@@ -106,7 +105,7 @@ function CardNodeGrandChild({ data, color }) {
         <path
           d="m 5,-300 v 480 h 95"
           fill="none"
-          stroke={color}
+          stroke="#2cccd3"
           stroke-width="5"
         />
       </svg>
@@ -114,4 +113,4 @@ function CardNodeGrandChild({ data, color }) {
   );
 }
 
-export default CardNodeGrandChild;
+export default CardNodeEraseGrandChild;

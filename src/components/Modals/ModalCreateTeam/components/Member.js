@@ -4,6 +4,8 @@ import { Col, Row, Select, Form, Checkbox, Input } from "antd";
 import Avatar from "../../../../assets/img/avatar.png";
 import { Link } from "react-router-dom";
 import { UserOutlined } from "@ant-design/icons";
+import SelectDinamic from "../../../SelectDinamic/SelectDinamic";
+import { useTranslation } from "react-i18next";
 
 const { Option } = Select;
 
@@ -11,10 +13,13 @@ export default function Member({
   collaboratorsList,
   setCollaboratorsList,
   inputType,
+  dataSelects,
 }) {
+  const [t, i18n] = useTranslation("global");
   const leader = (e, id) => {
     collaboratorsList[id].leader = e.target.checked;
   };
+
   return collaboratorsList.map((collaborator, item) => (
     <Row
       key={item}
@@ -23,6 +28,7 @@ export default function Member({
         textAlign: "left",
         marginTop: "10px",
         marginLeft: "10px",
+        width: "100%",
       }}
     >
       <Col key={collaborator.id} className="gutter-row" span={8}>
@@ -43,7 +49,7 @@ export default function Member({
       </Col>
       <Col
         className="gutter-row"
-        style={{ textAlign: "right", marginLeft: "10px" }}
+        style={{ textAlign: "right", paddingLeft: "45px" }}
         span={2}
       >
         <Form.Item name={"leader" + item}>
@@ -55,7 +61,7 @@ export default function Member({
           />
         </Form.Item>
       </Col>
-      <Col className="gutter-row" span={8}>
+      <Col className="gutter-row" span={10}>
         <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
           <Col span={4}></Col>
           <Col className="gutter-row" span={20}>
@@ -71,11 +77,17 @@ export default function Member({
                   },
                 ]}
               >
-                <Select placeholder="Product Owner">
+                <SelectDinamic
+                  placeholder={t(
+                    "organigram.teams-modal.placeholder-imput-optiona"
+                  )}
+                  data={dataSelects}
+                />
+                {/* <Select placeholder="Product Owner">
                   <Option value="SCRUM1">SCRUM1</Option>
                   <Option value="SCRUM2">SCRUM2</Option>
                   <Option value="SCRUM3">SCRUM3</Option>
-                </Select>
+                </Select> */}
               </Form.Item>
             ) : (
               <Form.Item
@@ -95,7 +107,7 @@ export default function Member({
           </Col>
         </Row>
       </Col>
-      <Col className="gutter-row" style={{ textAlign: "center" }} span={5}>
+      <Col className="gutter-row" style={{ textAlign: "center" }} span={3}>
         <Link
           to="#"
           className="link"

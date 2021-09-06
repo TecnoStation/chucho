@@ -81,9 +81,7 @@ function ModalCardTeam({
         </Row>
         <Row>
           <Col span={8}>
-            <p>
-              {modalCard.type === 0 ? "Personalizado" : "Modo Operativo Agile"}
-            </p>
+            <p>{modalCard.type}</p>
           </Col>
           <Col span={12}>
             <p>{modalCard.modality} </p>

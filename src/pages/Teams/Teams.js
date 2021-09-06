@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Input, Row } from "antd";
+import { Button, Col, Input, Row, AutoComplete } from "antd";
 import { IoMdAdd } from "react-icons/io";
 import { BsFillGrid3X2GapFill, BsListUl } from "react-icons/bs";
 import { RiFilterFill } from "react-icons/ri";
@@ -10,15 +10,20 @@ import ModalCreateTeam from "../../components/Modals/ModalCreateTeam/ModalCreate
 import { useForm } from "antd/lib/form/Form";
 import "./Teams.scss";
 
-const { Search } = Input;
-
 export default function Teams() {
   const [t, i18n] = useTranslation("global");
   const [createTeamModal, setCreateTeamModal] = useState(false);
+  const [memberScroll, setMemberScroll] = useState("memberScroll1");
 
   //-------------------- Set - Get teamlist ------------------
 
   const [teamList, setTeamList] = useState([]);
+  const [listTeamName, setListTeamName] = useState([
+    { value: "Array desde backend" },
+    { value: "Burns Bay Road" },
+    { value: "Downing Street" },
+    { value: "Wall Street" },
+  ]);
 
   useEffect(() => {
     const storageTeams = JSON.parse(localStorage.getItem("teamList"));
@@ -43,7 +48,6 @@ export default function Teams() {
   const [form] = useForm();
 
   const edit = (team, item) => {
-    //console.log(team);
     setEditionMode(true);
 
     setItem(item);
@@ -57,7 +61,6 @@ export default function Teams() {
     });
 
     setCreateTeamModal(true);
-
     form.setFieldsValue({
       teamName: team.name,
       type: team.type,
@@ -65,22 +68,22 @@ export default function Teams() {
       frameWork: team.frameWork,
     });
 
-    if (team.type === "0") {
+    if (team.type === "Personalizado") {
       setTypeTeam("hide");
       setInputType(false);
+      setMemberScroll("memberScroll1");
     } else {
       setTypeTeam("show");
       setInputType(true);
+      setMemberScroll("memberScroll2");
     }
-
-    document.getElementById("collaborator4");
-    // .setAttribute("style", "display: none");
-
-    console.log(document.getElementById("collaborator4"));
   };
   //--------------------End Edit teamlist ------------------
 
   //----------------- Filter Teams ------------------------------------------
+
+  let col;
+
   const filterTeams = () => {
     const input = document.getElementById("filter");
     const filter = input.value.toUpperCase();
@@ -88,7 +91,7 @@ export default function Teams() {
     const row = div.getElementsByClassName("rowTeam");
     let i;
     for (i = 0; i < row.length; i++) {
-      let col = row[i].getElementsByClassName("TeamNames")[0];
+      col = row[i].getElementsByClassName("TeamNames")[0];
       if (col) {
         let txtValue = col.textContent || col.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -130,12 +133,20 @@ export default function Teams() {
           </Link>
         </Col>
         <Col className="gutter-row" span={6}>
-          <Search
-            size="small"
+          <AutoComplete
             id="filter"
+            options={listTeamName}
+            filterOption={(inputValue, option) =>
+              option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !==
+              -1
+            }
             onChange={filterTeams}
-            placeholder={t("organigram.teams2.search-position")}
-          />
+          >
+            <Input.Search
+              size="small"
+              placeholder={t("organigram.teams2.search-position")}
+            />
+          </AutoComplete>
         </Col>
         <Col span={9}></Col>
         <Col className="gutter-row" span={4}>
@@ -183,6 +194,8 @@ export default function Teams() {
         form={form}
         item={item}
         setItem={setItem}
+        memberScroll={memberScroll}
+        setMemberScroll={setMemberScroll}
       />
     </>
   );

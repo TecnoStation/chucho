@@ -1,54 +1,45 @@
 @import "../../../../index.scss";
-
-.CardNode{
-    width: 270px;
-    height: 90px;
-    background: $color-white;
-    display: inline-block;
-    border-radius: 8px;
-    border: 1px solid $color-base;
-    padding: 3px 10px 0px 7px;
+@mixin size {
+  width: 304px;
+  height: 96px;
+  background: $color-white;
+  display: inline-block;
+  border-radius: 8px;
+  padding: 3px 10px 0px 7px;
+  box-shadow: 0px 3px 6px #00000029;
 }
 
-.CardNodeChild{
-    width: 270px;
-    height: 90px;
-    background: $color-white;
-    display: inline-block;
-    border-radius: 8px;
-    border: 1px solid $color-base;
-    padding: 3px 10px 0px 7px;
-    border-left: 15px solid $color-base;
-    margin-left: 50px;
+.CardNodeGrandFather {
+  @include size;
+  border: 1px solid;
 }
 
-.CardNodeGrandChild{
-    width: 270px;
-    height: 90px;
-    background: $color-white;
-    display: inline-block;
-    border-radius: 8px;
-    border: 1px solid $color-base;
-    padding: 3px 10px 0px 7px;
-    border-left: 8px solid $color-base;
+.CardNodeFather {
+  @include size;
+  border-left: 15px solid $color-base;
+  margin-left: 50px;
 }
 
-
-.CardNodeGrandChildhide{
-    width: 270px;
-    height: 200px; 
-    display: none;
+.CardNodeGrandChild {
+  @include size;
+  border-left: 8px solid $color-base;
 }
 
-.CardNodeGrandChildShow{
-    width: 350px;
-    height: 200px; 
-    display: inline-block;
-    margin-left: 130px;
+.CardNodeGrandChildhide {
+  width: 270px;
+  height: 200px;
+  display: none;
 }
 
-.line{
-    float: left;
-    margin-left: -50px;
-    margin-top: -150px;
+.CardNodeGrandChildShow {
+  width: 350px;
+  height: 200px;
+  display: inline-block;
+  margin-left: 130px;
+}
+
+.line {
+  float: left;
+  margin-left: -50px;
+  margin-top: -150px;
 }

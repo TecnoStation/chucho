@@ -35,9 +35,9 @@ export default function Simplecard({ teamList, setTeamList, edit }) {
             className="gutter-row"
             span={22}
           >
-            <h5 className="TeamNames" id="nameTeam">
-              {team.name}
-            </h5>
+            <h4 className="TeamNames" id="nameTeam">
+              <b> {team.name}</b>
+            </h4>
             <span>{team.subtitle}</span>
             <br />
             <span>{team.date}</span>

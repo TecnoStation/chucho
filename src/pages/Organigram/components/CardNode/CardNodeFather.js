@@ -17,8 +17,10 @@ import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/M
 import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
 
 import "./CardNode.scss";
+import CardNodeGrandFather from "./CardNodeGrandFather";
+import CardNodeGrandChild from "./CardNodeGrandChild";
 
-export default function CardNode({ data }) {
+function CardNodeFather({ data }) {
   console.log(data);
 
   const [t, i18n] = useTranslation("global");
@@ -209,7 +211,7 @@ export default function CardNode({ data }) {
         <div>
           <p className="showBlock">Área de Marketing</p>
         </div>
-        <div className={data.className} style={{ borderColor: data.color }}>
+        <div className="CardNodeFather" style={{ borderColor: data.color }}>
           <Row
             style={{ textAlign: "left", height: "50px", paddingBottom: "50px" }}
             className="dividerBottomFull"
@@ -302,8 +304,8 @@ export default function CardNode({ data }) {
             className={flag2}
             onClick={() => {
               setActive("CardNodeGrandChildhide");
-              setFalg("primary roundBtnFull showInline");
-              setFalg2("primaryInvert roundBtnFull hide");
+              setFalg("roundBtnFull showInline");
+              setFalg2("roundBtnFull hide");
             }}
             icon={<UpOutlined />}
             style={{
@@ -315,7 +317,11 @@ export default function CardNode({ data }) {
           />
         </div>
         <div className={active}>
-          <div style={{ marginTop: "10px" }} className="CardNodeGrandChild">
+          {data.childrens.map((child, index) => (
+            <CardNodeGrandChild data={child} color={data.color} />
+          ))}
+
+          {/* <div style={{ marginTop: "10px" }} className="CardNodeGrandChild">
             <Row
               style={{
                 textAlign: "left",
@@ -410,7 +416,7 @@ export default function CardNode({ data }) {
                 stroke-width="5"
               />
             </svg>
-          </div>
+          </div> */}
         </div>
       </div>
       <ModalPermissions
@@ -430,3 +436,5 @@ export default function CardNode({ data }) {
     </>
   );
 }
+
+export default CardNodeFather;

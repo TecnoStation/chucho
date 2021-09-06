@@ -1,5 +1,4 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
+import { useState } from "react";
 import {
   Button,
   Col,
@@ -11,10 +10,13 @@ import {
   AutoComplete,
 } from "antd";
 import { Link, useHistory, useLocation } from "react-router-dom";
-import { useState } from "react";
 import { UserOutlined } from "@ant-design/icons";
 import { v4 as uuid } from "uuid";
 import Member from "./components/Member";
+import { useTranslation } from "react-i18next";
+import SelectDinamic from "../../SelectDinamic/SelectDinamic";
+
+import "./ModalCreateTeam.scss";
 
 const { Option } = Select;
 
@@ -33,11 +35,74 @@ function ModalCreateTeam({
   setEditionMode,
   form,
   item,
+  memberScroll,
+  setMemberScroll,
 }) {
   const [t, i18n] = useTranslation("global");
   const history = useHistory();
   const location = useLocation();
   const query = new URLSearchParams(location.search);
+
+  //----------------- Selects Dinamic Data ------------------------------------
+
+  const typeTeamData = [
+    {
+      id: 0,
+      value: "Personalizado",
+      name: "Personalizado",
+    },
+    {
+      id: 1,
+      value: "Modo Opertaivo Agile",
+      name: "Modo Opertaivo Agile",
+    },
+  ];
+
+  const modallityData = [
+    {
+      id: 0,
+      value: "Funcional",
+      name: "Funcional",
+    },
+    {
+      id: 1,
+      value: "Funcional 2",
+      name: "Funcional 2",
+    },
+  ];
+
+  const frameWorkData = [
+    {
+      id: 0,
+      value: "Marco",
+      name: "Marco",
+    },
+    {
+      id: 1,
+      value: "Marco 1",
+      name: "Marco 1",
+    },
+  ];
+
+  const dataSelects = [
+    {
+      id: 0,
+      value: "Rol",
+      name: "Rol",
+    },
+    {
+      id: 1,
+      value: "Rol 1",
+      name: "Rol 1",
+    },
+    {
+      id: 2,
+      value: "Rol 2",
+      name: "Rol 2",
+    },
+  ];
+
+  //----------------- End Selects Dinamic Data --------------------------------
 
   //----------------- Create And Render Collaborators ------------------------------------------
 
@@ -115,12 +180,14 @@ function ModalCreateTeam({
   //----------------- FrameWork change ------------------------------------------
 
   const showInput = (value) => {
-    if (value === "0") {
+    if (value === "Personalizado") {
       setTypeTeam("hide");
       setInputType(false);
+      setMemberScroll("memberScroll1");
     } else {
       setTypeTeam("show");
       setInputType(true);
+      setMemberScroll("memberScroll2");
     }
   };
   //----------------- End FrameWork change ------------------------------------------
@@ -156,18 +223,18 @@ function ModalCreateTeam({
 
     let d = new Date();
     let months = [
-      "Enero",
-      "Febrero",
-      "Marzo",
-      "Abril",
-      "Mayo",
-      "Junio",
-      "Julio",
-      "Agosto",
-      "Septiembre",
-      "Octubre",
-      "Noviembre",
-      "Diciembre",
+      "ENE",
+      "FEB",
+      "MAR",
+      "ABR",
+      "MAY",
+      "JUN",
+      "JUL",
+      "AGO",
+      "SEP",
+      "OCT",
+      "NOV",
+      "DIC",
     ];
 
     setTeamList([
@@ -279,15 +346,13 @@ function ModalCreateTeam({
                   },
                 ]}
               >
-                <Select
+                <SelectDinamic
                   placeholder={t(
                     "organigram.teams-modal.placeholder-imput-selec"
                   )}
                   onChange={showInput}
-                >
-                  <Option value="0">Personalizado</Option>
-                  <Option value="1">Modo Opertaivo Agile</Option>
-                </Select>
+                  data={typeTeamData}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -325,15 +390,12 @@ function ModalCreateTeam({
                   },
                 ]}
               >
-                <Select
+                <SelectDinamic
                   placeholder={t(
                     "organigram.teams-modal.placeholder-imput-option"
                   )}
-                >
-                  <Option value="jack">Funcional</Option>
-                  <Option value="lucy">Lucy</Option>
-                  <Option value="tom">Tom</Option>
-                </Select>
+                  data={modallityData}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -345,15 +407,12 @@ function ModalCreateTeam({
                 label={t("organigram.teams-modal.members-team")}
                 tooltip="info"
               >
-                <Select
+                <SelectDinamic
                   placeholder={t(
                     "organigram.teams-modal.placeholder-imput-optiona"
                   )}
-                >
-                  <Option value="SCRUM">SCRUM</Option>
-                  <Option value="SCRUM2">SCRUM2</Option>
-                  <Option value="SCRUM3">SCRUM3</Option>
-                </Select>
+                  data={frameWorkData}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -377,17 +436,12 @@ function ModalCreateTeam({
               {t("organigram.teams-modal.actions")}
             </Col>
           </Row>
-          <div
-            style={{
-              height: "300px",
-              overflowY: "scroll",
-              overflowX: "hidden",
-            }}
-          >
+          <div className={memberScroll}>
             <Member
               collaboratorsList={collaboratorsList}
               setCollaboratorsList={setCollaboratorsList}
               inputType={inputType}
+              dataSelects={dataSelects}
             />
           </div>
           <Row
