@@ -30,7 +30,12 @@ export default function LayoutSecondaryCardWhite({
   const menu = (
     <Menu>
       <Menu.Item key="0">
-        <Link to="/areasandpositions-perfil">Ver Perfil</Link>
+        <Link to={
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-perfil")
+          }>Ver Perfil</Link>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="2">Cerrar sesión</Menu.Item>

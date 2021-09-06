@@ -92,7 +92,7 @@ export default function Home() {
           title="Organigrama"
           component={Organigram}
         />
-        <LayoutSecondaryCardGlass
+        <LayoutSecondaryCardGlass 
           exact
           path={
             "/" + t("routes.organigram") + "/" + t("paths_organigram.eraser")
