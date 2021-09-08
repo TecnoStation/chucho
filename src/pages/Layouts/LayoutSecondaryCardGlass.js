@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 import { Layout } from "antd";
 import "./LayoutSecondary.scss";
 import { IoIosArrowForward } from "react-icons/io";
+import SelectLevel from "./components/SelectLevel/SelectLevel";
 
 //const user = null;
 const user = { id: 1, username: "Lupita Gamiño" };
@@ -46,6 +47,28 @@ export default function LayoutSecondaryCardGlass({
 
   const [eraser, setEraser] = useState("show");
   const [save, setSave] = useState(false);
+  const [levels, setLevels] = useState([
+    {
+      id: 0,
+      name: "Ver 1 nivel",
+    },
+    {
+      id: 1,
+      name: "Ver 2 niveles",
+    },
+    {
+      id: 2,
+      name: "Ver 3 niveles",
+    },
+    {
+      id: 3,
+      name: "Ver 4 niveles",
+    },
+    {
+      id: 4,
+      name: "Ver 5 niveles",
+    },
+  ]);
 
   return (
     <Route {...rest}>
@@ -124,15 +147,7 @@ export default function LayoutSecondaryCardGlass({
                     </Col>
                     <Col span={6}></Col>
                     <Col span={2} style={{ textAlign: "center" }}>
-                      <Dropdown overlay={menu} trigger={["click"]}>
-                        <Link
-                          to="#"
-                          className="iconGray"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Ver 5 niveles <CaretDownOutlined />
-                        </Link>
-                      </Dropdown>
+                      <SelectLevel levels={levels} />
                     </Col>
                     <Col
                       style={{

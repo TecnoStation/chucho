@@ -4,10 +4,11 @@ import ModalMessage from "../../../ModalMessage/ModalMessage";
 import Warning from "../../../../../assets/img/icons/atencion.svg";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import ModalMessages from "../../../ModalMessages/ModalMessages";
 
 function EraserData({ setHistorial, eraser }) {
   const [t, i18n] = useTranslation("global");
-  const [screen, setScreen] = useState("screen");
+  const [message, setMessage] = useState(false);
   return (
     <>
       <Row
@@ -51,7 +52,8 @@ function EraserData({ setHistorial, eraser }) {
           <Link
             className="iconBlue"
             onClick={() => {
-              setScreen("screen show");
+              setHistorial(false);
+              setMessage(true);
             }}
             to="#"
           >
@@ -70,45 +72,11 @@ function EraserData({ setHistorial, eraser }) {
           </Link>
         </Col>
       </Row>
-      <ModalMessage screen={screen}>
-        <Row>
-          <Col span={24}>
-            <p style={{ textAlign: "center" }}>
-              <img alt="ico" className="" src={Warning} />
-            </p>
-          </Col>
-          <Col span={24}>
-            <h3>¡Atención!</h3>
-          </Col>
-          <Col span={24}>
-            <h3>Estás a punto de eliminar el borrador.</h3>
-          </Col>
-          <Col span={24}>
-            <h3>¿Seguro deseas eliminarlo?</h3>
-            <br />
-          </Col>
-          <Col span={24}>
-            <Button
-              style={{ marginRight: "15px" }}
-              onClick={() => {
-                setScreen("screen");
-              }}
-              className="secondary btn"
-            >
-              Cancelar
-            </Button>
-            <Button
-              className="primary btn"
-              onClick={() => {
-                setScreen("screen");
-                setHistorial(false);
-              }}
-            >
-              Eliminar
-            </Button>
-          </Col>
-        </Row>
-      </ModalMessage>
+      <ModalMessages
+        message={message}
+        setMessage={setMessage}
+        setHistorial={setHistorial}
+      />
     </>
   );
 }

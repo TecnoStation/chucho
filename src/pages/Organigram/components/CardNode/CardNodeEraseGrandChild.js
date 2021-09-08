@@ -7,8 +7,10 @@ import { GiOfficeChair } from "react-icons/gi";
 import { FaUserAlt } from "react-icons/fa";
 import Insings from "../../../../assets/img/icons/insights-24px.svg";
 import Trending from "../../../../assets/img/icons/trending_up-24px.svg";
+import MenuOrganigram from "../MenuOrganigram/MenuOrganigram";
 
 function CardNodeEraseGrandChild() {
+  const [visible, setVisible] = useState(false);
   return (
     <div
       style={{ marginTop: "15px", borderColor: "#2cccd3", marginLeft: "105px" }}
@@ -40,11 +42,20 @@ function CardNodeEraseGrandChild() {
           </span>
         </Col>
         <Col span={3}>
-          <Dropdown overlay="" trigger={["click"]}>
+          <Dropdown
+            overlay={<MenuOrganigram setVisible={setVisible} />}
+            visible={visible}
+            onVisibleChange={(e) => {
+              setVisible(e);
+            }}
+            trigger={["click"]}
+          >
             <Link
               to="#"
               className="ant-dropdown-link"
-              onClick={(e) => e.preventDefault()}
+              onClick={(e) => {
+                e.preventDefault();
+              }}
             >
               <img
                 style={{ marginTop: "5px" }}

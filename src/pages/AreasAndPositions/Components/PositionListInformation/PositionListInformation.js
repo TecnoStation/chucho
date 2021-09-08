@@ -49,6 +49,8 @@ function PositionListInformation({ PositionsInfo, setModalMove }) {
               mode: 2,
               idPositionInfo: position.idPositionInfo,
               PositionsInfo: PositionsInfo,
+              modalTitle:
+                "¿Qué deseas hacer con los colaboradores que pertenecen a esta área?",
             });
           }}
           style={{ marginRight: "5px" }}

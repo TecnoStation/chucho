@@ -1,4 +1,4 @@
-import { Button, Col, Dropdown, Menu, Row } from "antd";
+import { Col, Dropdown, Row } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Avatar from "../../../../assets/img/avatar.png";
@@ -7,9 +7,10 @@ import { GiOfficeChair } from "react-icons/gi";
 import { FaUserAlt } from "react-icons/fa";
 import Insings from "../../../../assets/img/icons/insights-24px.svg";
 import Trending from "../../../../assets/img/icons/trending_up-24px.svg";
-import { DownOutlined, UpOutlined } from "@ant-design/icons";
+import MenuOrganigram from "../MenuOrganigram/MenuOrganigram";
 
 function CardNodeGrandChild({ data, color }) {
+  const [visible, setVisible] = useState(false);
   return (
     <div
       style={{ marginTop: "15px", borderColor: color }}
@@ -41,11 +42,20 @@ function CardNodeGrandChild({ data, color }) {
           </span>
         </Col>
         <Col span={3}>
-          <Dropdown overlay="" trigger={["click"]}>
+          <Dropdown
+            overlay={<MenuOrganigram setVisible={setVisible} />}
+            visible={visible}
+            onVisibleChange={(e) => {
+              setVisible(e);
+            }}
+            trigger={["click"]}
+          >
             <Link
               to="#"
               className="ant-dropdown-link"
-              onClick={(e) => e.preventDefault()}
+              onClick={(e) => {
+                e.preventDefault();
+              }}
             >
               <img
                 style={{ marginTop: "5px" }}

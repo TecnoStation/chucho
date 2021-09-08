@@ -1,12 +1,10 @@
 import { Button, Col, Modal, Row } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ModalMessage from "../ModalMessage/ModalMessage";
-import Warning from "../../../assets/img/icons/atencion.svg";
 import { useTranslation } from "react-i18next";
 import EraserData from "./components/EraserData/EraserData";
 
-function ModalErasersList({ historial, setHistorial }) {
+function ModalErasersList({ historial, setHistorial, data }) {
   const [t, i18n] = useTranslation("global");
 
   const [erasersList, setErasersList] = useState([
@@ -30,9 +28,10 @@ function ModalErasersList({ historial, setHistorial }) {
   return (
     <>
       <Modal
-        title="Lista de borradores"
+        title={t("organigram.organigram-page.modal-history.ready-tsdraf")}
         className="eraserList"
         visible={historial}
+        centered={true}
         onCancel={() => {
           setHistorial(false);
         }}
@@ -47,7 +46,7 @@ function ModalErasersList({ historial, setHistorial }) {
               setHistorial(false);
             }}
           >
-            Cancelar
+            {t("organigram.organigram-page.modal-history.btn-cancel")}
           </Button>,
           <Button
             className="primary"
@@ -55,7 +54,7 @@ function ModalErasersList({ historial, setHistorial }) {
               setHistorial(false);
             }}
           >
-            Aceptar
+            {t("organigram.organigram-page.modal-history.btn-accept")}
           </Button>,
         ]}
       >
@@ -64,14 +63,14 @@ function ModalErasersList({ historial, setHistorial }) {
           style={{ textAlign: "center", paddingBottom: "15px" }}
         >
           <Col span={6}>
-            <b>Nombre</b>
+            <b>{t("organigram.organigram-page.modal-history.name")}</b>
           </Col>
           <Col span={7}>
-            <b>Modificación</b>
+            <b>{t("organigram.organigram-page.modal-history.modification")}</b>
           </Col>
 
           <Col span={11}>
-            <b>Acciones</b>
+            <b>{t("organigram.organigram-page.modal-history.actions")}</b>
           </Col>
         </Row>
 

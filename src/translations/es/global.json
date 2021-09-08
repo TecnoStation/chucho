@@ -911,6 +911,13 @@
              "apply": "Aplicar",
              "btn-cancel": "Cancelar",
              "btn-accept": "Aceptar"   
+             },
+             "modal-remove":{
+              "attention": "¡Atención!",
+              "text": "Estás a punto de eliminar el borrador.",
+              "text2": "¿Seguro deseas eliminarlo?",
+              "btn-cancel": "Cancelar",
+              "btn-remove": "Eliminar"   
              }  
            },
 
