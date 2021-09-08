@@ -193,7 +193,7 @@ export default function Mybusiness() {
           <Row style={{ marginTop: "40px" }}>
             <Col span={24}>
               <Form layout="vertical">
-                <Form.Item name="empresa" label="Sucursales">
+                <Form.Item name="empresa" label={t("organigram.mybusiness-principal.data-general.branch")}>
                   <AutoComplete
                     options={data.branchs}
                     filterOption={(inputValue, option) =>
@@ -203,7 +203,7 @@ export default function Mybusiness() {
                     }
                     addonAfter={<SearchOutlined />}
                   >
-                    <Input.Search size="middle" placeholder="input here" />
+                    <Input.Search size="middle" placeholder={t("organigram.mybusiness-principal.data-general.branch-placeholder")}/>
                   </AutoComplete>
                 </Form.Item>
               </Form>

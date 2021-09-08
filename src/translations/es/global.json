@@ -180,7 +180,8 @@
                 "from": "País",
                 "name-headquartes": "Nombre de oficinas centrales",
                 "headquartes-direction": "Dirección de Oficinas Centrales",
-                "branch": "Sucursales"
+                "branch": "Sucursales",
+                "branch-placeholder": "Buscar sucursales"
             },
             "business-culture": {
                 "title": "Cultura de Mi empresa",
