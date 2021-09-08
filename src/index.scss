@@ -43,14 +43,15 @@ code {
 
 .ant-modal-header {
   border-radius: 8px 8px 0px 0px;
-} 
+}
 .ant-modal-title {
   color: $color-principal-text !important;
   font-weight: bold;
 }
 
-.secondaryText {
-  color: $color-secondary-text;
+.secondaryText,
+label {
+  color: $color-secondary-text !important;
 }
 
 .square {
@@ -315,7 +316,6 @@ code {
   .ant-modal-body {
     width: 110% !important;
     text-align: left;
-   
   }
 }
 
@@ -329,6 +329,20 @@ code {
   }
   input {
     border-radius: 8px !important;
+    height: 32px !important;
+  }
+}
+
+.branchModal {
+  width: 584px !important;
+  height: 288px !important;
+  .ant-modal-content {
+    width: 584px !important;
+    height: 288px !important;
+    text-align: left;
+  }
+  input {
+    border-radius: 4px !important;
     height: 32px !important;
   }
 }
@@ -380,7 +394,6 @@ code {
   }
 }
 
-<<<<<<< HEAD
 .ColorModal {
   width: 360px !important;
   height: 208px !important;
@@ -401,11 +414,16 @@ code {
     height: 384px !important;
     text-align: left;
   }
-  .ant-modal-body{padding: 10px 10px 10px 75px;}
-  #PermissionsList span{
+  .ant-modal-body {
+    padding: 10px 10px 10px 75px;
+  }
+
+  #PermissionsList span {
     font-size: 14px;
     color: $color-secondary-text;
-=======
+  }
+}
+
 .MessagesModal {
   width: 368px !important;
   height: 312px !important;
@@ -432,7 +450,6 @@ code {
   }
   .ant-modal-body {
     height: 180px;
->>>>>>> 01c90cd638eebb4f1c475f9df59ca342cf2034ab
   }
 }
 
@@ -478,8 +495,9 @@ code {
   .ant-modal-body {
     height: 470px !important;
   }
- #historialjob b, #historialjob span{
-    color:$color-secondary-text;
+  #historialjob b,
+  #historialjob span {
+    color: $color-secondary-text;
   }
 }
 
@@ -494,8 +512,9 @@ code {
   .ant-modal-body {
     height: 470px !important;
   }
- #historialjob b, #historialjob span{
-    color:$color-secondary-text;
+  #historialjob b,
+  #historialjob span {
+    color: $color-secondary-text;
   }
 }
 

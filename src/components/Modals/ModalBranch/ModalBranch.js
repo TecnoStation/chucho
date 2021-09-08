@@ -15,7 +15,6 @@ export default function ModalBranch({
   index,
 }) {
   const sendBranch = (values) => {
-    
     setBranchs([
       ...branchs,
       {
@@ -43,7 +42,7 @@ export default function ModalBranch({
   return (
     <Modal
       title={editionmode ? "Editar Sucursal" : "Agregar sucursal"}
-      className="middleModal"
+      className="branchModal"
       visible={modal}
       onCancel={() => {
         setModal(false);
@@ -64,10 +63,11 @@ export default function ModalBranch({
           direction: "",
         }}
         form={form}
-        style={{ textAlign: "left" }}
+        style={{ textAlign: "left", marginTop: "-10px" }}
       >
         <Form.Item
           name="name"
+          label="Nombre de la sucursal"
           rules={[
             {
               required: true,
@@ -83,6 +83,7 @@ export default function ModalBranch({
 
         <Form.Item
           name="direction"
+          label="Dirección de la sucursal"
           rules={[
             {
               required: true,
@@ -96,7 +97,7 @@ export default function ModalBranch({
           />
         </Form.Item>
 
-        <div style={{ textAlign: "right", marginTop: "20px" }}>
+        <div style={{ textAlign: "right" }}>
           <Button
             onClick={() => {
               setModal(false);

@@ -25,7 +25,13 @@ export default function Branchs({ branchs, edit, deleteBranch }) {
       <Col className="gutter-row" span={4}>
         <Dropdown
           overlay={
-            <Menu>
+            <Menu
+              style={{
+                position: "absolute",
+                marginLeft: "-90px",
+                marginTop: "-20px",
+              }}
+            >
               <Menu.Item key={uuid()}>
                 <Link
                   to="#"

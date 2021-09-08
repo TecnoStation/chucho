@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { Form, Tabs, Input, Select, Col, Row, Button } from "antd";
-import {
-  EnvironmentOutlined,
-  PlusCircleOutlined,
-  SearchOutlined,
-} from "@ant-design/icons";
+import { EnvironmentOutlined, PlusCircleOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import Branchs from "../../components/Branchs/Branchs";
 import Competencies from "../../components/Competencies/Competencies";
@@ -14,7 +10,9 @@ import { useTranslation } from "react-i18next";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import Screens from "../../components/Screens/Screens";
 import ModalBranch from "../../components/Modals/ModalBranch/ModalBranch";
+
 import "./MybusinessEdit.scss";
+import SelectDinamic from "../../components/SelectDinamic/SelectDinamic";
 
 const { TextArea, Search } = Input;
 const { Option } = Select;
@@ -128,6 +126,23 @@ export default function MybusinessEdit() {
 
   //--------------- End competences-----------------------------------------
 
+  //----------------- Selects Dinamic Data ------------------------------------
+
+  const data = [
+    {
+      id: 0,
+      value: "dato1",
+      name: "dato1",
+    },
+    {
+      id: 1,
+      value: "dato2",
+      name: "dato2",
+    },
+  ];
+
+  //----------------- End Selects Dinamic Data --------------------------------
+
   return (
     <>
       <Tabs
@@ -187,15 +202,12 @@ export default function MybusinessEdit() {
                           )}
                           tooltip="info"
                         >
-                          <Select
+                          <SelectDinamic
                             placeholder={t(
                               "organigram.my-business-edit.information.form.business-activity-placeholder"
                             )}
-                          >
-                            <Option value="jack">Jack</Option>
-                            <Option value="lucy">Lucy</Option>
-                            <Option value="tom">Tom</Option>
-                          </Select>
+                            data={data}
+                          />
                         </Form.Item>
                       </Col>
                       <Col className="gutter-row" span={12}>
@@ -212,15 +224,12 @@ export default function MybusinessEdit() {
                           )}
                           tooltip="info"
                         >
-                          <Select
+                          <SelectDinamic
                             placeholder={t(
-                              "organigram.my-business-edit.information.form.subactivity-placeholder"
+                              "organigram.my-business-edit.information.form.business-activity-placeholder"
                             )}
-                          >
-                            <Option value="jack">Jack</Option>
-                            <Option value="lucy">Lucy</Option>
-                            <Option value="tom">Tom</Option>
-                          </Select>
+                            data={data}
+                          />
                         </Form.Item>
                       </Col>
                     </Row>
@@ -238,15 +247,12 @@ export default function MybusinessEdit() {
                             "organigram.my-business-edit.information.form.business-size"
                           )}
                         >
-                          <Select
+                          <SelectDinamic
                             placeholder={t(
-                              "organigram.my-business-edit.information.form.business-size-placeholder"
+                              "organigram.my-business-edit.information.form.business-activity-placeholder"
                             )}
-                          >
-                            <Option value="jack">Jack</Option>
-                            <Option value="lucy">Lucy</Option>
-                            <Option value="tom">Tom</Option>
-                          </Select>
+                            data={data}
+                          />
                         </Form.Item>
                       </Col>
                       <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={12}>
@@ -262,16 +268,12 @@ export default function MybusinessEdit() {
                             "organigram.my-business-edit.information.form.from"
                           )}
                         >
-                          <Select
-                            className="gutter-row"
+                          <SelectDinamic
                             placeholder={t(
-                              "organigram.my-business-edit.information.form.from-placeholder"
+                              "organigram.my-business-edit.information.form.business-activity-placeholder"
                             )}
-                          >
-                            <Option value="jack">Jack</Option>
-                            <Option value="lucy">Lucy</Option>
-                            <Option value="tom">Tom</Option>
-                          </Select>
+                            data={data}
+                          />
                         </Form.Item>
                       </Col>
                     </Row>
@@ -408,7 +410,14 @@ export default function MybusinessEdit() {
                   className="gutter-row"
                   span={24}
                 >
-                  <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.mybusiness")}>
+                  <Link
+                    to={
+                      "/" +
+                      t("routes.organigram") +
+                      "/" +
+                      t("paths_organigram.mybusiness")
+                    }
+                  >
                     <Button
                       className="secondary"
                       style={{ marginRight: "15px" }}
@@ -425,7 +434,14 @@ export default function MybusinessEdit() {
                       )}
                     </Button>
                   ) : (
-                    <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.mybusiness")}>
+                    <Link
+                      to={
+                        "/" +
+                        t("routes.organigram") +
+                        "/" +
+                        t("paths_organigram.mybusiness")
+                      }
+                    >
                       <Button className="primary">
                         {t(
                           "organigram.my-business-edit.information.form.btn-save"
@@ -585,7 +601,14 @@ export default function MybusinessEdit() {
                   className="gutter-row"
                   span={24}
                 >
-                  <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.mybusiness")}>
+                  <Link
+                    to={
+                      "/" +
+                      t("routes.organigram") +
+                      "/" +
+                      t("paths_organigram.mybusiness")
+                    }
+                  >
                     <Button
                       className="secondary"
                       style={{ marginRight: "15px" }}
@@ -601,7 +624,14 @@ export default function MybusinessEdit() {
                       )}
                     </Button>
                   ) : (
-                    <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.mybusiness")}>
+                    <Link
+                      to={
+                        "/" +
+                        t("routes.organigram") +
+                        "/" +
+                        t("paths_organigram.mybusiness")
+                      }
+                    >
                       <Button className="primary">
                         {t(
                           "organigram.my-business-edit.information.form.btn-save"
