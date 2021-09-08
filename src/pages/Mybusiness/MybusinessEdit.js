@@ -212,7 +212,7 @@ export default function MybusinessEdit() {
                       rules={[
                         {
                           required: true,
-                          message: "*Campo requerido",
+                          message: t("field-requiered"),
                         },
                       ]}
                       name="bussines"
@@ -233,7 +233,7 @@ export default function MybusinessEdit() {
                           rules={[
                             {
                               required: true,
-                              message: "*Campo requerido",
+                              message: t("field-requiered"),
                             },
                           ]}
                           name="activity"
@@ -255,7 +255,7 @@ export default function MybusinessEdit() {
                           rules={[
                             {
                               required: true,
-                              message: "*Campo requerido",
+                              message: t("field-requiered"),
                             },
                           ]}
                           name="subactivity"
@@ -279,7 +279,7 @@ export default function MybusinessEdit() {
                           rules={[
                             {
                               required: true,
-                              message: "*Campo requerido",
+                              message: t("field-requiered"),
                             },
                           ]}
                           name="size"
@@ -300,7 +300,7 @@ export default function MybusinessEdit() {
                           rules={[
                             {
                               required: true,
-                              message: "*Campo requerido",
+                              message: t("field-requiered"),
                             },
                           ]}
                           name="from"
@@ -321,7 +321,7 @@ export default function MybusinessEdit() {
                       rules={[
                         {
                           required: true,
-                          message: "*Campo requerido",
+                          message: t("field-requiered"),
                         },
                       ]}
                       name="site"
@@ -340,7 +340,7 @@ export default function MybusinessEdit() {
                       rules={[
                         {
                           required: true,
-                          message: "*Campo requerido",
+                          message: t("field-requiered"),
                         },
                       ]}
                       name="officesName"
@@ -359,7 +359,7 @@ export default function MybusinessEdit() {
                       rules={[
                         {
                           required: true,
-                          message: "*Campo requerido",
+                          message: t("field-requiered"),
                         },
                       ]}
                       name="officesfrom"
@@ -514,7 +514,7 @@ export default function MybusinessEdit() {
                       rules={[
                         {
                           required: true,
-                          message: "*Campo requerido",
+                          message: t("field-requiered"),
                         },
                       ]}
                     >
@@ -532,7 +532,7 @@ export default function MybusinessEdit() {
                       rules={[
                         {
                           required: true,
-                          message: "*Campo requerido",
+                          message: t("field-requiered"),
                         },
                       ]}
                     >
@@ -552,7 +552,7 @@ export default function MybusinessEdit() {
                       rules={[
                         {
                           required: true,
-                          message: "*Campo requerido",
+                          message: t("field-requiered"),
                         },
                       ]}
                     >
@@ -564,7 +564,7 @@ export default function MybusinessEdit() {
                         rules={[
                           {
                             required: true,
-                            message: "*Campo requerido",
+                            message: t("field-requiered"),
                           },
                         ]}
                       />
