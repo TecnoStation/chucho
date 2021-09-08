@@ -28,11 +28,7 @@ function ModalErasersList({ historial, setHistorial, data }) {
   return (
     <>
       <Modal
-<<<<<<< HEAD
-        title="Lista de borradores"
-=======
         title={t("organigram.organigram-page.modal-history.ready-tsdraf")}
->>>>>>> 01c90cd638eebb4f1c475f9df59ca342cf2034ab
         className="eraserList"
         visible={historial}
         centered={true}

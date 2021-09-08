@@ -173,14 +173,14 @@ function MenuOrganigram({ visible, setVisible }) {
                           </Col>
                           <Col style={{ marginTop: "0px" }} span={24}>
                             <h2>
-                              <b>¡Completado!</b>
+                              <b>{t("organigram.menu-treedrop.modal-message.complette")}</b>
                             </h2>
                           </Col>
                           <Col span={24}>
-                            <h3>Has dado de baja al colaborador</h3>
+                            <h3></h3>
                           </Col>
                           <Col span={24}>
-                            <h3></h3>
+                            <h3>{t("organigram.menu-treedrop.modal-message.text")}</h3>
                             <br />
                           </Col>
                           <Col span={24}>
@@ -232,7 +232,7 @@ function MenuOrganigram({ visible, setVisible }) {
                       mode: 5,
 
                       modalTitle:
-                        "¿Qué deseas hacer con los colaboradores que pertenecen a este puesto?",
+                      t("organigram.menu-treedrop.modalposition.tex1"),
                     });
                   },
                 });
