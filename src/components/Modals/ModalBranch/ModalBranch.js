@@ -14,7 +14,9 @@ export default function ModalBranch({
   setEditionmode,
   index,
 }) {
+  const [t, i18n] = useTranslation("global");
   const sendBranch = (values) => {
+   
     setBranchs([
       ...branchs,
       {
@@ -41,7 +43,7 @@ export default function ModalBranch({
 
   return (
     <Modal
-      title={editionmode ? "Editar Sucursal" : "Agregar sucursal"}
+      title={editionmode ? "Editar Sucursal" :t("organigram.add-branch-modal.title")}
       className="branchModal"
       visible={modal}
       onCancel={() => {
@@ -67,33 +69,33 @@ export default function ModalBranch({
       >
         <Form.Item
           name="name"
-          label="Nombre de la sucursal"
+          label={t("organigram.add-branch-modal.branch-name")}
           rules={[
             {
               required: true,
-              message: "Campo requerido",
+              message: t("field-requiered"),
             },
           ]}
         >
           <Input
             type="text"
-            placeholder="Agrega un nombre descriptivo para está sucursal"
+            placeholder={t("organigram.add-branch-modal.branch-name-placeholder")}
           />
         </Form.Item>
 
         <Form.Item
           name="direction"
-          label="Dirección de la sucursal"
+          label={t("organigram.add-branch-modal.branch-direction")}
           rules={[
             {
               required: true,
-              message: "Campo requerido",
+              message: t("field-requiered"),
             },
           ]}
         >
           <Input
             addonAfter={<EnvironmentOutlined />}
-            placeholder="Agrega la dirección de la sucursal"
+            placeholder={t("organigram.add-branch-modal.branch-direction-placeholder")}
           />
         </Form.Item>
 
@@ -105,16 +107,16 @@ export default function ModalBranch({
             className="secondary"
             style={{ marginRight: "16px" }}
           >
-            Cancelar
+            {t("organigram.add-branch-modal.btn-cancel")}
           </Button>
 
           {editionmode ? (
             <Button className="primary" htmlType="submit">
-              Editar
+              {t("organigram.add-branch-modal.btn-edit")}
             </Button>
           ) : (
             <Button className="primary" htmlType="submit">
-              Guardar
+              {t("organigram.add-branch-modal.btn-save")}
             </Button>
           )}
         </div>

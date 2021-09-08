@@ -1,4 +1,6 @@
-{   "routes":{
+{   "field-requiered": "*Campo requerido",
+
+    "routes":{
         "recoverypassword": "recuperar-contraseña",
         "newpassword": "nueva-contraseña",
         "login": "login",
