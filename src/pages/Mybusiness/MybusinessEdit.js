@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Tabs, Input, Select, Col, Row, Button } from "antd";
+import { Form, Tabs, Input, Select, Col, Row, Button, Modal } from "antd";
 import { EnvironmentOutlined, PlusCircleOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import Branchs from "../../components/Branchs/Branchs";
@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import Screens from "../../components/Screens/Screens";
 import ModalBranch from "../../components/Modals/ModalBranch/ModalBranch";
+import Good from "../../assets/img/icons/bien_hecho.svg";
 
 import "./MybusinessEdit.scss";
 import SelectDinamic from "../../components/SelectDinamic/SelectDinamic";
@@ -77,6 +78,45 @@ export default function MybusinessEdit() {
       function: () => {
         const arrayFilter = branchs.filter((item) => item.idBranch !== id);
         setBranchs(arrayFilter);
+
+        const modal = Modal.info({
+          title: "",
+          className: "MessagesModal",
+          centered: true,
+          content: (
+            <Row>
+              <Col span={24}>
+                <p>
+                  <img alt="ico" className="" src={Good} />
+                </p>
+              </Col>
+              <Col span={24}>
+                <h2>
+                  <b>Sucursal eliminada</b>
+                </h2>
+              </Col>
+              <Col span={24}>
+                <h3></h3>
+              </Col>
+              <Col span={24}>
+                <h3></h3>
+                <br />
+              </Col>
+              <Col span={24}>
+                <Button
+                  style={{ width: "50%" }}
+                  onClick={() => {
+                    modal.destroy();
+                  }}
+                  className="primary btn"
+                >
+                  {t("organigram.password-modal.btn-done")}
+                </Button>
+              </Col>
+            </Row>
+          ),
+          onOk() {},
+        });
       },
     });
   };

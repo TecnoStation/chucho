@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Button, Col, Row } from "antd";
+import { Button, Col, Modal, Row } from "antd";
 import Pencil from "../../assets/img/icons/edit-24px.svg";
+import Good from "../../assets/img/icons/bien_hecho.svg";
 import Delete from "../../assets/img/icons/delete-24px.svg";
 import ModalPassword from "../Modals/ModalPassword/ModalPassword";
-import { each } from "lodash";
 import ModalSlide from "../Modals/Modalcompetencies/components/ModalSlide/ModalSlide";
 import { useTranslation } from "react-i18next";
 
@@ -12,7 +12,7 @@ export default function Competencies({
   setCompetencies,
   competenciesList,
   competenceName,
-  setCompetenceName, 
+  setCompetenceName,
   setSlider,
   slider,
   setEditionModeSlider,
@@ -40,6 +40,45 @@ export default function Competencies({
             if (competence.name === comp.name) {
               competence.visible = true;
             }
+          });
+
+          const modal = Modal.info({
+            title: "",
+            className: "MessagesModal",
+            centered: true,
+            content: (
+              <Row>
+                <Col span={24}>
+                  <p>
+                    <img alt="ico" className="" src={Good} />
+                  </p>
+                </Col>
+                <Col span={24}>
+                  <h2>
+                    <b>Competencia eliminada</b>
+                  </h2>
+                </Col>
+                <Col span={24}>
+                  <h3></h3>
+                </Col>
+                <Col span={24}>
+                  <h3></h3>
+                  <br />
+                </Col>
+                <Col span={24}>
+                  <Button
+                    style={{ width: "50%" }}
+                    onClick={() => {
+                      modal.destroy();
+                    }}
+                    className="primary btn"
+                  >
+                    {t("organigram.password-modal.btn-done")}
+                  </Button>
+                </Col>
+              </Row>
+            ),
+            onOk() {},
           });
         },
       });
