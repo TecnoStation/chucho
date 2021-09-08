@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Dropdown, Input, Menu, Row, Form } from "antd";
+import { Col, Dropdown, Input, Menu, Row, Form, AutoComplete } from "antd";
 import More from "../../assets/img/icons/more_vert-24px.svg";
 import { Link } from "react-router-dom";
 import Avatar from "../../assets/img/avatar.png";
@@ -54,6 +54,16 @@ export default function Mybusiness() {
       {
         name: "Solución de Problemas - Desarrolla Alternativas",
         level: 3,
+      },
+    ],
+    branchs: [
+      {
+        id: 0,
+        value: "Zona Centro CDMX",
+      },
+      {
+        id: 1,
+        value: "Zona Centro 2",
       },
     ],
   });
@@ -184,10 +194,17 @@ export default function Mybusiness() {
             <Col span={24}>
               <Form layout="vertical">
                 <Form.Item name="empresa" label="Sucursales">
-                  <Input
-                    placeholder="Buscar sucursales"
+                  <AutoComplete
+                    options={data.branchs}
+                    filterOption={(inputValue, option) =>
+                      option.value
+                        .toUpperCase()
+                        .indexOf(inputValue.toUpperCase()) !== -1
+                    }
                     addonAfter={<SearchOutlined />}
-                  />
+                  >
+                    <Input.Search size="middle" placeholder="input here" />
+                  </AutoComplete>
                 </Form.Item>
               </Form>
             </Col>
