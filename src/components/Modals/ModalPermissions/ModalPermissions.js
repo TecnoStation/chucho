@@ -1,20 +1,54 @@
-import React from "react";
-import { Form, Button, Modal, Checkbox } from "antd";
+import React, { useState } from "react";
+import { Form, Button, Modal } from "antd";
 import { useTranslation } from "react-i18next";
+import CheckboxList from "./components/CheckboxList/CheckboxList";
 
 export default function ModalPermissions({ Permissions, setPermissions }) {
   const [t, i18n] = useTranslation("global");
+  const [PermissionsList, setPermissionsList] = useState([
+    {
+      id: 0,
+      name: "Permisos de Administrador",
+      checked: false,
+    },
+    {
+      id: 1,
+      name: 'Permisos para ver Nine Box',
+      checked: false,
+    },
+    {
+      id: 2,
+      name: 'Permisos de Edición de Objetivos',
+      checked: true,
+    },
+    {
+      id: 3,
+      name: 'Permisos para ver Organigrama',
+      checked: true,
+    },
+    {
+      id: 4,
+      name: 'Permisos para editar Organigrama',
+      checked: false,
+    },
+    {
+      id: 5,
+      name: 'Permisos para crear Plan de Desarrollo',
+      checked: false,
+    }
+  ])
   return (
     <>
       <Modal
         title={t("organigram.collaborator-form.permissions-modal.title")}
-        className="smallModal"
+        className="PermissionsModal"
         visible={Permissions}
         onCancel={() => {
           setPermissions(false);
         }}
         footer={[
-          <Button
+          <div style={{marginTop: "0px"}}>
+            <Button
             style={{ marginRight: "15px" }}
             className="secondary"
             onClick={() => {
@@ -22,7 +56,7 @@ export default function ModalPermissions({ Permissions, setPermissions }) {
             }}
           >
             {t("organigram.collaborator-form.permissions-modal.btn-cancel")}
-          </Button>,
+          </Button>
           <Button
             className="primary"
             onClick={() => {
@@ -30,53 +64,18 @@ export default function ModalPermissions({ Permissions, setPermissions }) {
             }}
           >
             {t("organigram.collaborator-form.permissions-modal.btn-appli")}
-          </Button>,
+          </Button>
+          </div>
         ]}
       >
-        <Form style={{ marginLeft: "10px" }}>
-          <Form.Item name="Administrador">
-            <Checkbox>
-              {t(
-                "organigram.collaborator-form.permissions-modal.permissions-adminitrator"
-              )}
-            </Checkbox>
-          </Form.Item>
-          <Form.Item name="Nine" style={{ marginTop: "-25px" }}>
-            <Checkbox>
-              {t(
-                "organigram.collaborator-form.permissions-modal.permissions-nine"
-              )}
-            </Checkbox>
-          </Form.Item>
-          <Form.Item name="remember" style={{ marginTop: "-25px" }}>
-            <Checkbox>
-              {t(
-                "organigram.collaborator-form.permissions-modal.permissions-objectives"
-              )}
-            </Checkbox>
-          </Form.Item>
-          <Form.Item name="organigram" style={{ marginTop: "-25px" }}>
-            <Checkbox>
-              {t(
-                "organigram.collaborator-form.permissions-modal.permissions-organizatition"
-              )}
-            </Checkbox>
-          </Form.Item>
-          <Form.Item name="editar" style={{ marginTop: "-25px" }}>
-            <Checkbox>
-              {t(
-                "organigram.collaborator-form.permissions-modal.permissions-edit-organization"
-              )}
-            </Checkbox>
-          </Form.Item>
-          <Form.Item name="Desarrollo" style={{ marginTop: "-25px" }}>
-            <Checkbox>
-              {t(
-                "organigram.collaborator-form.permissions-modal.permissions-plan-developing"
-              )}
-            </Checkbox>
-          </Form.Item>
+       
+        <Form id="PermissionsList" style={{textAlign: "left", marginTop: "10px"}} >
+          <CheckboxList PermissionsList={PermissionsList} />
         </Form>
+
+
+
+         
       </Modal>
     </>
   );

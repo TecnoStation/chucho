@@ -1,16 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Modal, Row } from "antd";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import HistorialData from "./components/HistorialData";
 
 export default function ModalHistorialJob({ HistorialP, setHistorialP }) {
   const [t, i18n] = useTranslation("global");
+
+   const [historialjobs, setHistorialjob] = useState([
+      {
+        id: 0,
+        name: "Diseñador Gráfico",
+        date: "10 MAY 2016",
+        collaborators: "2 colaboradores"
+      },
+      {
+        id: 1,
+        name: "Diseñador web",
+        date: "12 MAY 2018",
+        collaborators: "1 colaboradores"
+      },
+      {
+        id: 2,
+        name: "Diseñador UI",
+        date: "12 MAY 2020",
+        collaborators: "2 colaboradores"
+      },
+    ]);
+
   return (
     <>
       <Modal
         title="Historial del Puesto"
-        className="largeModal"
+        className="HistorialJobModal"
         visible={HistorialP}
+        centered={true}
         onCancel={() => {
           setHistorialP(false);
         }}
@@ -28,9 +52,11 @@ export default function ModalHistorialJob({ HistorialP, setHistorialP }) {
             Cancelar
           </Button>,
           <Button
-            className="primary"
+          style={{color: "#fff !important"}} 
+          className="primary"
             onClick={() => {
               setHistorialP(false);
+
             }}
           >
             Aceptar
@@ -47,66 +73,21 @@ export default function ModalHistorialJob({ HistorialP, setHistorialP }) {
           <Col span={6}>
             <b>Creación</b>
           </Col>
-          <Col span={9}>
+          <Col style={{paddingLeft: "80px", paddingRight: "70px"}} span={9}>
             <b>Colaboradores que lo ocuparon</b>
           </Col>
-          <Col span={4}>
+          <Col style={{paddingLeft: "5px"}} span={4}>
             <b>Acciones</b>
           </Col>
         </Row>
 
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={5}>Diseñador Gráfico</Col>
-          <Col span={6}>10 MAY 2016</Col>
-          <Col span={9}>2 colaboradores</Col>
-          <Col span={4}>
-            <Link className="iconBlue" to="#">
-              Ver Detalle
-            </Link>
-          </Col>
-        </Row>
+         <div id="historialjob">
+         {historialjobs.map((historialjob, index) => (
+            <HistorialData  historialjob={historialjob} />
+          ))}
+         </div>
 
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={5}>Diseñador web</Col>
-          <Col span={6}>12 MAY 2018</Col>
-          <Col span={9}>1 colaboradores</Col>
-          <Col span={4}>
-            <Link className="iconBlue" to="#">
-              Ver Detalle
-            </Link>
-          </Col>
-        </Row>
 
-        <Row
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={5}>Diseñador UI</Col>
-          <Col span={6}>12 MAY 2020</Col>
-          <Col span={9}>1 colaboradores</Col>
-          <Col span={4}>
-            <Link className="iconBlue" to="#">
-              Ver Detalle
-            </Link>
-          </Col>
-        </Row>
       </Modal>
     </>
   );

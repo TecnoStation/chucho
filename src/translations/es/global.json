@@ -899,6 +899,12 @@
              "give-drop-collaborators": "Dar de baja colaborador",
              "remove-position": "Eliminar puesto"   
             },
+            "modal-color":{
+             "title": "Seleccionar color para el área",
+             "placeholder-color": "Selecciona un color",
+             "btn-cancel": "Cancelar",
+             "btn-apply": "Aplicar"   
+            },
      
              "modal-history":{
              "ready-tsdraf": "Lista de borradores",

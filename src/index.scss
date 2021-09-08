@@ -43,7 +43,7 @@ code {
 
 .ant-modal-header {
   border-radius: 8px 8px 0px 0px;
-}
+} 
 .ant-modal-title {
   color: $color-principal-text !important;
   font-weight: bold;
@@ -316,8 +316,7 @@ code {
   .ant-modal-body {
     width: 110% !important;
     text-align: left;
-    // margin-left: -50px;
-    // padding-left: 75px;
+   
   }
 }
 
@@ -342,6 +341,33 @@ code {
     width: 760px !important;
     height: 656px !important;
     text-align: left;
+  }
+}
+
+.ColorModal {
+  width: 360px !important;
+  height: 208px !important;
+  text-align: left;
+  .ant-modal-content {
+    width: 360px !important;
+    height: 208px !important;
+    text-align: left;
+  }
+}
+
+.PermissionsModal {
+  width: 320px !important;
+  height: 384px !important;
+  text-align: left;
+  .ant-modal-content {
+    width: 320px !important;
+    height: 384px !important;
+    text-align: left;
+  }
+  .ant-modal-body{padding: 10px 10px 10px 75px;}
+  #PermissionsList span{
+    font-size: 14px;
+    color: $color-secondary-text;
   }
 }
 
@@ -373,6 +399,38 @@ code {
   }
   .ant-modal-body {
     height: 470px !important;
+  }
+}
+
+.HistorialJobModal {
+  width: 864px !important;
+  height: 584px !important;
+  .ant-modal-content {
+    width: 864px !important;
+    height: 584px !important;
+    text-align: left;
+  }
+  .ant-modal-body {
+    height: 470px !important;
+  }
+ #historialjob b, #historialjob span{
+    color:$color-secondary-text;
+  }
+}
+
+.ModalHistorialCollaborator {
+  width: 864px !important;
+  height: 584px !important;
+  .ant-modal-content {
+    width: 864px !important;
+    height: 584px !important;
+    text-align: left;
+  }
+  .ant-modal-body {
+    height: 470px !important;
+  }
+ #historialjob b, #historialjob span{
+    color:$color-secondary-text;
   }
 }
 

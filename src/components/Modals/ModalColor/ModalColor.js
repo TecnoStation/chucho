@@ -1,76 +1,81 @@
-import React from "react";
-import { Form, Button, Modal, Select, Row, Col } from "antd";
+import React, { useEffect, useState } from "react";
+import { Form, Button, Modal } from "antd";
 
 import "./ModalColor.scss";
 import { useTranslation } from "react-i18next";
+import SelectColor from "./components/SelectColor/SelectColor";
+import { useForm } from "antd/lib/form/Form";
 
-const { Option } = Select;
+
 
 export default function ModalColor({ Color, setColor }) {
   const [t, i18n] = useTranslation("global");
+  const [form] = useForm();
+  const [colors, setColors] = useState([
+    {
+      value: 0,
+      name: 'Rojo',
+      color: "#d32c2c"
+    },
+    {
+      value: 1,
+      name: 'Naranja',
+      color: "#ff5d5d"
+    },
+    {
+      value: 2,
+      name: 'Cyan',
+      color: "#2cccd3"
+    }
+  ])
+
+  
+  
   return (
     <>
       <Modal
-        title="Seleccionar color para el área"
-        className="smallModal"
+        title={t("organigram.organigram-page.modal-color.title")}
+        className="ColorModal"
+        centered={true}
         visible={Color}
         onCancel={() => {
           setColor(false);
         }}
         footer={[
-          <Button
+          <div style={{position: "fixed", marginTop:"-5px",marginLeft: "70px" }}>
+            <Button 
             style={{ marginRight: "15px" }}
             className="secondary"
             onClick={() => {
               setColor(false);
             }}
           >
-            Cancelar
-          </Button>,
+            {t("organigram.organigram-page.modal-color.btn-cancel")}
+          </Button>
           <Button
             className="primary"
             onClick={() => {
               setColor(false);
+              form.resetFields();
             }}
           >
-            Aplicar
-          </Button>,
+            {t("organigram.organigram-page.modal-color.btn-apply")}
+          </Button>
+          </div>
         ]}
       >
+        <Form form={form} 
+        
+        style={{textAlign: "left"}} >
         <Form.Item name="color">
-          <Select placeholder="Selecciona un color">
-            <Option value="0">
-              <Row>
-                <Col span={6}>
-                  <div className="Red"></div>
-                </Col>
-                <Col style={{ textAlign: "center" }} span={18}>
-                  Rojo
-                </Col>
-              </Row>
-            </Option>
-            <Option value="1">
-              <Row>
-                <Col span={6}>
-                  <div className="Orange"></div>
-                </Col>
-                <Col style={{ textAlign: "center" }} span={18}>
-                  Naranja
-                </Col>
-              </Row>
-            </Option>
-            <Option value="2">
-              <Row>
-                <Col span={6}>
-                  <div className="Cyan"></div>
-                </Col>
-                <Col style={{ textAlign: "center" }} span={18}>
-                  Cyan
-                </Col>
-              </Row>
-            </Option>
-          </Select>
+          <SelectColor 
+          colors={colors}
+          placeholder={t("organigram.organigram-page.modal-color.placeholder-color")}
+          data={colors}
+           />
+         
         </Form.Item>
+        </Form>
       </Modal>
     </>
   );

@@ -1,15 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Col, Modal, Row } from "antd";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import CollaboratorList from "./components/CollaboratorList/CollaboratorList";
 
 function ModalHistorialCollaborator({ modalHistorialC, setModalHistorialC }) {
   const [t, i18n] = useTranslation("global");
+
+  const [Collaboratorslist, setCollaboratorslist] = useState([
+    {
+      id: 0,
+      position: "Diseñador Gráfico",
+      start: "15 MAY 2014",
+      end: "1 de ABR 2016"
+    },
+    {
+      id: 1,
+      position: "Lider de área",
+      start: "1 ABR 2016",
+      end: "30 OCT 2017"
+    },
+    {
+      id: 2,
+      position: "Gerente de división",
+      start: "30 OCT 2017",
+      end: "A LA FECHA"
+    },
+  ]);
   return (
     <>
       <Modal
         title="Historial del Colaborador"
-        className="largeModal"
+        className="ModalHistorialCollaborator"
         visible={modalHistorialC}
         onCancel={() => {
           setModalHistorialC(false);
@@ -52,59 +74,13 @@ function ModalHistorialCollaborator({ modalHistorialC, setModalHistorialC }) {
           </Col>
         </Row>
 
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={5}>Diseñador Gráfico</Col>
-          <Col span={6}>15 MAY 2014</Col>
-          <Col span={9}>1 de ABR 2016</Col>
-          <Col span={4}>
-            <Link className="iconBlue" to="#">
-              Ver Detalle
-            </Link>
-          </Col>
-        </Row>
+        <div id="collaboratorlist">
+         {Collaboratorslist.map((Collaborator, index) => (
+            <CollaboratorList  Collaborator={Collaborator} />
+          ))}
+         </div>
 
-        <Row
-          className="dividerBottomFull"
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={5}>Lider de área</Col>
-          <Col span={6}>1 ABR 2016</Col>
-          <Col span={9}>30 OCT 2017</Col>
-          <Col span={4}>
-            <Link className="iconBlue" to="#">
-              Ver Detalle
-            </Link>
-          </Col>
-        </Row>
-
-        <Row
-          style={{
-            textAlign: "center",
-            marginTop: "15px",
-            paddingBottom: "15px",
-          }}
-        >
-          <Col span={5}>Gerende de división</Col>
-          <Col span={6}>30 OCT 2017</Col>
-          <Col span={9}>A LA FECHA</Col>
-          <Col span={4}>
-            <Link className="iconBlue" to="#">
-              Ver Detalle
-            </Link>
-          </Col>
-        </Row>
-      </Modal>
+              </Modal>
     </>
   );
 }
