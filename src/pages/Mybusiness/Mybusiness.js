@@ -19,7 +19,7 @@ export default function Mybusiness() {
             t("routes.organigram") +
             "/" +
             t("paths_organigram.mybusiness-edit")
-          }>{t("organigram.mybusiness-principal.menu")}</Link>
+          }>{t("organigram.mybusiness-principal.menu.edit-data")}</Link>
         </Menu.Item> 
       </Menu.Item>
     </Menu>

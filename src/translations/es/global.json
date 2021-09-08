@@ -165,6 +165,9 @@
             "btn-started": "Comenzar"
         },
         "mybusiness-principal": {
+            "menu":{
+             "edit-data": "Editar datos"   
+            }, 
             "data-general": {
                 "title": "Datos de Mi empresa",
                 "business-name": "Nombre de mi empresa",
@@ -211,7 +214,7 @@
                     "search-branch-placeholder": "Buscar sucursal",
                     "add-branch-link": "Agregar sucursal",
                     "branches-added": "Sucursales agregadas",
-                    "direction": "dirección",
+                    "direction": "Dirección",
                     "btn-cancel": "Cancelar",
                     "btn-save": "Guardar"
                 }
@@ -976,6 +979,11 @@
               "text2": "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
               "safe-want-remove": "¿Seguro deseas eliminarlo?"   
              },
+             "modal-message":{
+              "complette": "¡Completado!",
+              "text": "Has dado de baja al colaborador",
+              "btn-done": "Hecho"  
+             },
              "modal-position":{
               "remove-position": "Eliminar puesto",
               "text": "Al eliminar un puesto de tu organización ya no se verá reflejada en tu organigrama.",
@@ -983,7 +991,12 @@
               "btn-enterokay": "Ingresar",
               "text2": "Estás a punto de eliminar el puesto",
               "safe-want-remove": "¿Seguro deseas eliminarlo?"      
-             }     
+             },
+             "modalposition":{
+              "tex1": "¿Qué deseas hacer con los colaboradores que pertenecen a este puesto?",
+              "btn-down": "Dar de baja",
+              "btn-meve": "Mover a otra área"    
+             }      
            }, 
      
            "org-eraser":{
