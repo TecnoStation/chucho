@@ -3,6 +3,7 @@ import { Tag } from "antd";
 import { PlusOutlined, CheckCircleFilled } from "@ant-design/icons";
 import { v4 as uuid } from "uuid";
 import ModalSlide from "./ModalSlide/ModalSlide";
+import Form from "rc-field-form/es/Form";
 
 export default function CompetenciesList({
   competenciesList,
@@ -18,6 +19,7 @@ export default function CompetenciesList({
   editionModeSlider,
   setEditionModeSlider,
   component,
+  form,
 }) {
   const [Competence, setCompetence] = useState(false);
   const [modalSlide, setModalSlide] = useState(false);
@@ -31,6 +33,18 @@ export default function CompetenciesList({
     activeTagV.setAttribute("class", "ant-tag tag tag-active");
     setCompetenceName(name);
     setModalSlide(true);
+    const div = document.getElementById("tagList");
+    const row = div.getElementsByClassName("rowC");
+    let i;
+    for (i = 0; i < row.length; i++) {
+      let col = row[i].getElementsByClassName("tag")[0];
+      if (col) {
+        row[i].style.display = "";
+      }
+    }
+    form.setFieldsValue({
+      competence: "",
+    });
   };
 
   return (

@@ -142,7 +142,6 @@ export default function ModalPassword({ Password, setPassword }) {
                         </Col>
                         <Col span={24}>
                           <Button
-                            style={{ marginRight: "15px" }}
                             onClick={() => {
                               modal.destroy();
                               Password.function();
