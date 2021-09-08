@@ -31,34 +31,32 @@ export default function Mybusiness() {
   );
   //-------------------------------- company data ---------------------
 
-  const [data, setData] = useState([
-    {
-      companyName: "Manpower Inc.",
-      activity: "Capital Humano",
-      subActivity: "Reclutamiento y tercerización de personal",
-      businessZise: "1,500 - 2,500 empleados",
-      siteWeb: "https://www.manpower.com/",
-      from: "México",
-      centralBranchs: "Manpower Ciudad de México",
-      branchsDirection:
-        "Av. Revolución No. 1877, Esq.Altamirano, Col. Barrio Loreto, Tizapán,Álvaro Obregón, 03930 Ciudad de México, CDMX",
-      mission: "Nuestro objetivo: ayudar a desarrollar el mundo del trabajo.",
-      vision:
-        "Somos líderes en la creación y ejecución de servicios y soluciones innovadoras en la Estrategia de Talento que permitan a nuestros clientes triunfar en el cambiante mundo del trabajo.",
-      description:
-        "Somos líderes en la creación y ejecución de servicios y soluciones innovadoras en la Estrategia de Talento que permitan a nuestros clientes triunfar en el cambiante mundo del trabajo.",
-      competencies: [
-        {
-          name: "Creatividad",
-          level: 3,
-        },
-        {
-          name: "Solución de Problemas - Desarrolla Alternativas",
-          level: 3,
-        },
-      ],
-    },
-  ]);
+  const [data, setData] = useState({
+    companyName: "Manpower Inc.",
+    activity: "Capital Humano",
+    subActivity: "Reclutamiento y tercerización de personal",
+    businessZise: "1,500 - 2,500 empleados",
+    siteWeb: "https://www.manpower.com/",
+    from: "México",
+    centralBranchs: "Manpower Ciudad de México",
+    branchsDirection:
+      "Av. Revolución No. 1877, Esq.Altamirano, Col. Barrio Loreto, Tizapán,Álvaro Obregón, 03930 Ciudad de México, CDMX",
+    mission: "Nuestro objetivo: ayudar a desarrollar el mundo del trabajo.",
+    vision:
+      "Somos líderes en la creación y ejecución de servicios y soluciones innovadoras en la Estrategia de Talento que permitan a nuestros clientes triunfar en el cambiante mundo del trabajo.",
+    description:
+      "Somos líderes en la creación y ejecución de servicios y soluciones innovadoras en la Estrategia de Talento que permitan a nuestros clientes triunfar en el cambiante mundo del trabajo.",
+    competencies: [
+      {
+        name: "Creatividad",
+        level: 3,
+      },
+      {
+        name: "Solución de Problemas - Desarrolla Alternativas",
+        level: 3,
+      },
+    ],
+  });
 
   //-------------------------------- End company data ---------------------
 
@@ -264,27 +262,9 @@ export default function Mybusiness() {
             </Col>
           </Row>
 
-          {data[0].competencies.map((competence, index) => (
+          {data.competencies.map((competence, index) => (
             <CompetenciesList competence={competence} />
           ))}
-
-          {/* <Row style={{ marginTop: "20px" }}>
-            <Col span={18}>
-              Creatividad<span className="span"></span>
-            </Col>
-            <Col span={6} style={{ paddingLeft: "15px" }}>
-              3<span className="span"></span>
-            </Col>
-          </Row>
-          <Row style={{ marginTop: "20px", background: "#F4F6FB" }}>
-            <Col span={18}>
-              Solución de Problemas - Desarrolla Alternativas
-              <span className="span"></span>
-            </Col>
-            <Col span={6} style={{ paddingLeft: "15px" }}>
-              3<span className="span"></span>
-            </Col>
-          </Row> */}
         </Col>
       </Row>
     </div>
