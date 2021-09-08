@@ -1,54 +1,59 @@
-import React, { useState } from "react";
 import { Col, Dropdown, Row } from "antd";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Avatar from "../../../../assets/img/avatar.png";
 import More from "../../../../assets/img/icons/more_vert-24px.svg";
 import { GiOfficeChair } from "react-icons/gi";
-import { FaUserAlt } from "react-icons/fa";
+import { FaUserAlt, FaUserCircle } from "react-icons/fa";
 import Insings from "../../../../assets/img/icons/insights-24px.svg";
 import Trending from "../../../../assets/img/icons/trending_up-24px.svg";
 import { PlusCircleOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
+
 import MenuOrganigram from "../MenuOrganigram/MenuOrganigram";
 
 import "./CardNode.scss";
 
-export default function CardNodeEraseGrandFather({
+export default function CardNodeStartedGrandFather({
   setModalPassword,
   fathers,
   setFathers,
-  index,
+  setMessageOrg,
+  setEraser,
 }) {
   const [t, i18n] = useTranslation("global");
+  const [circle, setCircle] = useState("hide");
   const [visible, setVisible] = useState(false);
 
   return (
     <>
-      <div id="GrandFather">
+      <div>
         <div>
-          <p className="showBlock">Área de Marketing</p>
+          <p className="showBlock">Nombre del Área</p>
         </div>
-
-        <div className="CardNodeGrandFather" style={{ borderColor: "#2cccd3" }}>
+        <div
+          onClick={() => {
+            setCircle("showBlock");
+          }}
+          className="CardNodeGrandFather"
+        >
           <Row
             style={{ textAlign: "left", height: "50px", paddingBottom: "50px" }}
             className="dividerBottomFull"
           >
             <Col span={5}>
               <p>
-                <img
-                  style={{ marginTop: "-5px" }}
+                <FaUserCircle
+                  className="iconGray"
+                  style={{ marginTop: "5px", fontSize: "40px" }}
                   alt="ico"
-                  width="55"
-                  src={Avatar}
                 />
               </p>
             </Col>
             <Col span={16}>
-              <span>Panchita Lopez</span>
+              <span>Nombre del colaborador</span>
               <br />
               <span>
-                <b>Directora de marketing</b>
+                <b>Nombre del cargo</b>
               </span>
             </Col>
             <Col span={3}>
@@ -90,7 +95,7 @@ export default function CardNodeEraseGrandFather({
             <Col span={3} className="iconGreenTwo">
               <span>0%</span>
             </Col>
-            <Col span={3}>
+            <Col className="iconGray" span={3}>
               <img
                 style={{ marginTop: "-5px" }}
                 alt="ico"
@@ -101,7 +106,7 @@ export default function CardNodeEraseGrandFather({
             <Col span={3} className="iconGreenTwo">
               <span>0%</span>
             </Col>
-            <Col span={3} className="iconRed" style={{ fontSize: "16px" }}>
+            <Col span={3} className="iconRed" style={{ fontSize: "18px" }}>
               <GiOfficeChair />
             </Col>
             <Col span={3} className="iconRed">
@@ -116,6 +121,7 @@ export default function CardNodeEraseGrandFather({
           </Row>
         </div>
         <div
+          className={circle}
           style={{
             marginTop: "10px",
             marginLeft: "0px",
@@ -125,13 +131,14 @@ export default function CardNodeEraseGrandFather({
           <Link
             to="#"
             onClick={() => {
+              setMessageOrg("hide");
+              setEraser("show");
               setFathers([
                 ...fathers,
                 {
                   idFather: fathers.length,
                 },
               ]);
-              console.log(fathers);
             }}
           >
             <PlusCircleOutlined style={{ fontSize: "20px" }} />

@@ -94,6 +94,8 @@ function SubAreasList2({
                     idSubArea: subArea.idSubArea,
                     mode: 1,
                     subAreas: subAreas,
+                    modalTitle:
+                      "¿Qué deseas hacer con los colaboradores que pertenecen a esta subárea?",
                   });
                 }}
                 className="iconGreen iconsize"

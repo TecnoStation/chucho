@@ -11,201 +11,42 @@ import Insings from "../../../../assets/img/icons/insights-24px.svg";
 import Trending from "../../../../assets/img/icons/trending_up-24px.svg";
 import { v4 as uuid } from "uuid";
 import "./TreeDrop.scss";
-import ModalPermissions from "../../../../components/Modals/ModalPermissions/ModalPermissions";
-import ModalColor from "../../../../components/Modals/ModalColor/ModalColor";
-import ModalHistorialCollaborator from "../../../../components/Modals/ModalHistorialCollaborator/ModalHistorialCollaborator";
-import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/ModalHistorialJob";
-import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
 import { useTranslation } from "react-i18next";
+import MenuOrganigram from "../MenuOrganigram/MenuOrganigram";
+import ListView from "./components/ListView/ListView";
 
 export default function TreeDrop({ name }) {
   const [t, i18n] = useTranslation("global");
-  const [Permissions, setPermissions] = useState(false);
-  const [Color, setColor] = useState(false);
-
-  const [modalHistorialC, setModalHistorialC] = useState(false);
-  const [HistorialP, setHistorialP] = useState(false);
-  // implementar array
-  const [Password, setPassword] = useState(false);
-
-  const menu = (
-    <Menu>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to={
-              "/" +
-              t("routes.organigram") +
-              "/" +
-              t("paths_organigram.areasandpositions-collaborator")
-            }
-          >
-            {t("organigram.menu-treedrop.edit-colaborator")}
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to={
-              "/" +
-              t("routes.organigram") +
-              "/" +
-              t("paths_organigram.areasandpositions-addjob")
-            }
-          >
-            {t("organigram.menu-treedrop.edit-position")}
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to={
-              "/" + t("routes.organigram") + "/" + t("paths_organigram.eraser")
-            }
-          >
-            {t("organigram.menu-treedrop.edit-estructure")}
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setPermissions(true);
-            }}
-          >
-            {t("organigram.menu-treedrop.add-permissions")}
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setColor(true);
-            }}
-          >
-            {t("organigram.menu-treedrop.define-colour")}
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Divider />
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to={
-              "/" +
-              t("routes.organigram") +
-              "/" +
-              t("paths_organigram.areasandpositions-perfil")
-            }
-          >
-            {t("organigram.menu-treedrop.watch-proceedings")}
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()} disabled>
-          <Link to="#">{t("organigram.menu-treedrop.watch-vacancies")}</Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()} disabled>
-          <Link to="#">{t("organigram.menu-treedrop.watch-objectives")}</Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setHistorialP(true);
-            }}
-          >
-            {t("organigram.menu-treedrop.record-position")}
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setModalHistorialC(true);
-            }}
-          >
-            {t("organigram.menu-treedrop.record-collaborators")}
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Divider />
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setPassword({
-                visible: true,
-                titleModal: t(
-                  "organigram.menu-treedrop.modal-collaborator.drop-collaborators"
-                ),
-                type: 0,
-                messageModal: t(
-                  "organigram.menu-treedrop.modal-collaborator.text"
-                ),
-                messageWarning: t(
-                  "organigram.menu-treedrop.modal-collaborator.text2"
-                ),
-                question: t(
-                  "organigram.menu-treedrop.modal-collaborator.safe-want-remove"
-                ),
-                function: () => {
-                  return false;
-                },
-              });
-            }}
-          >
-            {t("organigram.menu-treedrop.give-drop-collaborators")}
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setPassword({
-                visible: true,
-                titleModal: t(
-                  "organigram.menu-treedrop.modal-position.remove-position"
-                ),
-                type: 0,
-                messageModal: t("organigram.menu-treedrop.modal-position.text"),
-                messageWarning: t(
-                  "organigram.menu-treedrop.modal-position.text2"
-                ),
-                question: t(
-                  "organigram.menu-treedrop.modal-position.safe-want-remove"
-                ),
-                function: () => {
-                  return false;
-                },
-              });
-            }}
-          >
-            {t("organigram.menu-treedrop.remove-position")}
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-    </Menu>
-  );
-
   const [drop, setDrop] = useState("showBlock");
   const [visible, seVisible] = useState("hide");
+  const [menuVisible, setMenuVisible] = useState(false);
+  const [employeList, setEmployeList] = useState([
+    {
+      id: 0,
+      name: "Juan Camaney",
+      position: "Arquitecto de software",
+    },
+    {
+      id: 1,
+      name: "Pepe Grillo",
+      position: "Ejecutivo de ventas",
+    },
+    {
+      id: 2,
+      name: "Pinocho",
+      position: "Ejecutivo de ventas",
+    },
+    {
+      id: 3,
+      name: "Juan Charrasqueado",
+      position: "Lider de proyecto",
+    },
+    {
+      id: 4,
+      name: "Lorenzo Lamas",
+      position: "Programador",
+    },
+  ]);
 
   return (
     <>
@@ -306,13 +147,28 @@ export default function TreeDrop({ name }) {
               <span>18</span>
             </Col>
             <Col style={{ textAlign: "center" }} span={2}>
-              <Dropdown overlay={menu} trigger={["click"]}>
+              <Dropdown
+                overlay={<MenuOrganigram setVisible={setMenuVisible} />}
+                visible={menuVisible}
+                onVisibleChange={(e) => {
+                  setMenuVisible(e);
+                }}
+                trigger={["click"]}
+              >
                 <Link
                   to="#"
                   className="ant-dropdown-link"
-                  onClick={(e) => e.preventDefault()}
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
                 >
-                  <CgMoreAlt style={{ fontSize: "28px", color: "#000" }} />
+                  <img
+                    style={{ marginTop: "5px" }}
+                    alt="logo"
+                    src={More}
+                    width="30"
+                    height="30"
+                  />
                 </Link>
               </Dropdown>
             </Col>
@@ -320,6 +176,13 @@ export default function TreeDrop({ name }) {
         </Col>
       </Row>
 
+      <div className={visible}>
+        {employeList.map((employe, index) => (
+          <ListView employe={employe} />
+        ))}
+      </div>
+
+      {/* 
       <div className={visible}>
         <Row
           style={{
@@ -681,9 +544,9 @@ export default function TreeDrop({ name }) {
             stroke-width="3"
           />
         </svg>
-      </div>
-
-      <div className={visible}>
+      </div>*/}
+      {/* 
+      <div className={visible}> 
         <Row
           style={{
             height: "50px",
@@ -803,20 +666,7 @@ export default function TreeDrop({ name }) {
           />
         </svg>
       </div>
-      <ModalPermissions
-        Permissions={Permissions}
-        setPermissions={setPermissions}
-      />
-      <ModalColor Color={Color} setColor={setColor} />
-      <ModalHistorialCollaborator
-        modalHistorialC={modalHistorialC}
-        setModalHistorialC={setModalHistorialC}
-      />
-      <ModalHistorialJob
-        HistorialP={HistorialP}
-        setHistorialP={setHistorialP}
-      />
-      <ModalPassword Password={Password} setPassword={setPassword} />
+   */}
     </>
   );
 }

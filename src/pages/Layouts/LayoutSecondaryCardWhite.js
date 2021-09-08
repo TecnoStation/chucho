@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Row, Menu, Dropdown, Avatar, Input, Card } from "antd";
 import {
   CaretDownOutlined,
@@ -14,6 +14,7 @@ import { useTranslation } from "react-i18next";
 import { Layout } from "antd";
 
 import "./LayoutSecondary.scss";
+import SelectLevel from "./components/SelectLevel/SelectLevel";
 
 const { Search } = Input;
 
@@ -30,12 +31,16 @@ export default function LayoutSecondaryCardWhite({
   const menu = (
     <Menu>
       <Menu.Item key="0">
-        <Link to={
+        <Link
+          to={
             "/" +
             t("routes.organigram") +
             "/" +
             t("paths_organigram.areasandpositions-perfil")
-          }>Ver Perfil</Link>
+          }
+        >
+          Ver Perfil
+        </Link>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="2">Cerrar sesión</Menu.Item>
@@ -62,6 +67,30 @@ export default function LayoutSecondaryCardWhite({
   };
 
   //----------------- End Filter Teams ------------------------------------------
+
+  const [levels, setLevels] = useState([
+    {
+      id: 0,
+      name: "Ver 1 nivel",
+    },
+    {
+      id: 1,
+      name: "Ver 2 niveles",
+    },
+    {
+      id: 2,
+      name: "Ver 3 niveles",
+    },
+    {
+      id: 3,
+      name: "Ver 4 niveles",
+    },
+    {
+      id: 4,
+      name: "Ver 5 niveles",
+    },
+  ]);
+
   return (
     <Route {...rest}>
       {user ? (
@@ -141,15 +170,7 @@ export default function LayoutSecondaryCardWhite({
                     </Col>
                     <Col span={6}></Col>
                     <Col span={2} style={{ textAlign: "center" }}>
-                      <Dropdown overlay={menu} trigger={["click"]}>
-                        <Link
-                          to="#"
-                          className="iconGray"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Ver 5 niveles <CaretDownOutlined />
-                        </Link>
-                      </Dropdown>
+                      <SelectLevel levels={levels} />
                     </Col>
                     <Col
                       style={{

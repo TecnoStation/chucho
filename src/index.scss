@@ -192,7 +192,9 @@ code {
   font-weight: bold;
 }
 
-.thirdBtnTwo {
+.thirdBtnTwo,
+.thirdBtnTwo:hover,
+.thirdBtnTwo:focus {
   width: 136px;
   height: 32px;
   color: $color-link;
@@ -229,14 +231,11 @@ code {
   color: $color-principal-text !important;
 }
 
-.btnBlue {
-  background: $color-link;
-  color: $color-white;
-}
-
-.btnBlue:hover {
-  background: $color-link;
-  color: $color-white;
+.btnBlue,
+.btnBlue:hover,
+.btnBlue:focus {
+  background: $color-link !important;
+  color: $color-white !important;
   border: 0px;
 }
 
@@ -334,6 +333,43 @@ code {
   }
 }
 
+.passwordModal {
+  width: 584px !important;
+  height: 256px !important;
+  .ant-modal-content {
+    width: 584px !important;
+    height: 256px !important;
+    text-align: left;
+  }
+  p,
+  label {
+    color: $color-secondary-text;
+    font-size: 14px;
+  }
+  input {
+    border-radius: 4px !important;
+    height: 32px !important;
+  }
+}
+
+.eraserModal {
+  width: 584px !important;
+  height: 232px !important;
+
+  .ant-modal-content {
+    width: 584px !important;
+    height: 232px !important;
+    text-align: left;
+  }
+  label {
+    color: $color-secondary-text;
+  }
+  input {
+    border-radius: 4px !important;
+    height: 32px !important;
+  }
+}
+
 .TeamModal {
   width: 760px !important;
   height: 656px !important;
@@ -344,6 +380,7 @@ code {
   }
 }
 
+<<<<<<< HEAD
 .ColorModal {
   width: 360px !important;
   height: 208px !important;
@@ -368,6 +405,34 @@ code {
   #PermissionsList span{
     font-size: 14px;
     color: $color-secondary-text;
+=======
+.MessagesModal {
+  width: 368px !important;
+  height: 312px !important;
+  text-align: center !important;
+  .ant-modal-content,
+  .ant-modal-confirm-body {
+    width: 368px !important;
+    height: 312px !important;
+    text-align: center !important;
+  }
+  h3,
+  h2 {
+    color: $color-principal-text;
+  }
+}
+
+.selectAreaModal {
+  width: 408px !important;
+  height: 288px !important;
+  .ant-modal-content {
+    width: 408px !important;
+    height: 288px !important;
+    text-align: left;
+  }
+  .ant-modal-body {
+    height: 180px;
+>>>>>>> 01c90cd638eebb4f1c475f9df59ca342cf2034ab
   }
 }
 

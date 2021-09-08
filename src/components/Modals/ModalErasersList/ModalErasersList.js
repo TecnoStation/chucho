@@ -1,12 +1,10 @@
 import { Button, Col, Modal, Row } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ModalMessage from "../ModalMessage/ModalMessage";
-import Warning from "../../../assets/img/icons/atencion.svg";
 import { useTranslation } from "react-i18next";
 import EraserData from "./components/EraserData/EraserData";
 
-function ModalErasersList({ historial, setHistorial }) {
+function ModalErasersList({ historial, setHistorial, data }) {
   const [t, i18n] = useTranslation("global");
 
   const [erasersList, setErasersList] = useState([
@@ -30,9 +28,14 @@ function ModalErasersList({ historial, setHistorial }) {
   return (
     <>
       <Modal
+<<<<<<< HEAD
         title="Lista de borradores"
+=======
+        title={t("organigram.organigram-page.modal-history.ready-tsdraf")}
+>>>>>>> 01c90cd638eebb4f1c475f9df59ca342cf2034ab
         className="eraserList"
         visible={historial}
+        centered={true}
         onCancel={() => {
           setHistorial(false);
         }}

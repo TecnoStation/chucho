@@ -8,12 +8,6 @@ import CardNodeFather from "../CardNode/CardNodeFather";
 function TreeOffice() {
   const [t, i18n] = useTranslation("global");
 
-  {
-    //1 granfather
-    //3 father
-    // 7 grandchild
-  }
-
   const [grandFathers, setGrandFathers] = useState([
     {
       idGrandFather: 0,

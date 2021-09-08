@@ -1,4 +1,4 @@
-import { Button, Col, Dropdown, Menu, Row } from "antd";
+import { Col, Dropdown, Row } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Avatar from "../../../../assets/img/avatar.png";
@@ -7,161 +7,16 @@ import { GiOfficeChair } from "react-icons/gi";
 import { FaUserAlt, FaUserCircle } from "react-icons/fa";
 import Insings from "../../../../assets/img/icons/insights-24px.svg";
 import Trending from "../../../../assets/img/icons/trending_up-24px.svg";
-import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 
-import { v4 as uuid } from "uuid";
+import MenuOrganigram from "../MenuOrganigram/MenuOrganigram";
 
 import "./CardNode.scss";
-import ModalPermissions from "../../../../components/Modals/ModalPermissions/ModalPermissions";
-import ModalColor from "../../../../components/Modals/ModalColor/ModalColor";
-import ModalHistorialCollaborator from "../../../../components/Modals/ModalHistorialCollaborator/ModalHistorialCollaborator";
-import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/ModalHistorialJob";
-import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
 
 export default function CardNode({ setModalPassword }) {
   const [t, i18n] = useTranslation("global");
   const [active, setActive] = useState("CardNodeGrandChildhide");
-  const [flag, setFalg] = useState("primary roundBtnFull showInline");
-  const [flag2, setFalg2] = useState("primaryInvert roundBtnFull hide");
-  const [Permisions, setPermissions] = useState(false);
-  const [Color, setColor] = useState(false);
-
-  const [modalHistorialC, setModalHistorialC] = useState(false);
-  const [HistorialP, setHistorialP] = useState(false);
-  // implementar array
-  const [Password, setPassword] = useState({
-    visible: false,
-    titleModal: "",
-    messageModal: "",
-    actionWarning: "",
-  });
-
-  const menu = (
-    <Menu>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link to="/organigrama/areasandpositions-collaborator">
-            Editar colaborador
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link to="/organigrama/areasandpositions-addjob">Editar puesto</Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link to="/organigrama/eraser">Editar estructura</Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setPermissions(true);
-            }}
-          >
-            Agregar permisos
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setColor(true);
-            }}
-          >
-            Difinir color de área
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Divider />
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link to="/organigrama/areasandpositions-perfil">Ver expediente</Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()} disabled>
-          <Link to="#">Ver Vacantes</Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()} disabled>
-          <Link to="#">Ver Ovjetivos</Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setHistorialP(true);
-            }}
-          >
-            Historial puesto
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setModalHistorialC(true);
-            }}
-          >
-            Historial colaborador
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Divider />
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setPassword({
-                visible: true,
-                titleModal: "Dar de baja a colaborador",
-                messageModal:
-                  "Al dar de baja a un colaborador de tu organización ya no se verá reflejada en tu organigrama.",
-                messageWarning:
-                  "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
-                question: "¿Seguro deseas eliminarlo?",
-              });
-            }}
-          >
-            Dar de baja colaborador
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setPassword({
-                visible: true,
-                titleModal: "Eliminar puesto",
-                messageModal:
-                  "Al eliminar un puesto de tu organización ya no se verá reflejada en tu organigrama.",
-                messageWarning: "Estás a punto de eliminar el puesto",
-                question: "¿Seguro deseas eliminarlo?",
-              });
-            }}
-          >
-            Eliminar puesto
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-    </Menu>
-  );
+  const [visible, setVisible] = useState(false);
 
   return (
     <>
@@ -169,7 +24,12 @@ export default function CardNode({ setModalPassword }) {
         <div>
           <p className="showBlock">Nombre del Área</p>
         </div>
-        <div className="CardNodeGrandFather">
+        <div
+          onClick={() => {
+            alert("jhj");
+          }}
+          className="CardNodeGrandFather"
+        >
           <Row
             style={{ textAlign: "left", height: "50px", paddingBottom: "50px" }}
             className="dividerBottomFull"
@@ -191,11 +51,20 @@ export default function CardNode({ setModalPassword }) {
               </span>
             </Col>
             <Col span={3}>
-              <Dropdown overlay={menu} trigger={["click"]}>
+              <Dropdown
+                overlay={<MenuOrganigram setVisible={setVisible} />}
+                visible={visible}
+                onVisibleChange={(e) => {
+                  setVisible(e);
+                }}
+                trigger={["click"]}
+              >
                 <Link
                   to="#"
                   className="ant-dropdown-link"
-                  onClick={(e) => e.preventDefault()}
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
                 >
                   <img
                     style={{ marginTop: "5px" }}
@@ -274,11 +143,20 @@ export default function CardNode({ setModalPassword }) {
                 </span>
               </Col>
               <Col span={3}>
-                <Dropdown overlay={menu} trigger={["click"]}>
+                <Dropdown
+                  overlay={<MenuOrganigram setVisible={setVisible} />}
+                  visible={visible}
+                  onVisibleChange={(e) => {
+                    setVisible(e);
+                  }}
+                  trigger={["click"]}
+                >
                   <Link
                     to="#"
                     className="ant-dropdown-link"
-                    onClick={(e) => e.preventDefault()}
+                    onClick={(e) => {
+                      e.preventDefault();
+                    }}
                   >
                     <img
                       style={{ marginTop: "5px" }}
@@ -371,11 +249,20 @@ export default function CardNode({ setModalPassword }) {
                 </span>
               </Col>
               <Col span={3}>
-                <Dropdown overlay={menu} trigger={["click"]}>
+                <Dropdown
+                  overlay={<MenuOrganigram setVisible={setVisible} />}
+                  visible={visible}
+                  onVisibleChange={(e) => {
+                    setVisible(e);
+                  }}
+                  trigger={["click"]}
+                >
                   <Link
                     to="#"
                     className="ant-dropdown-link"
-                    onClick={(e) => e.preventDefault()}
+                    onClick={(e) => {
+                      e.preventDefault();
+                    }}
                   >
                     <img
                       style={{ marginTop: "5px" }}
@@ -441,20 +328,6 @@ export default function CardNode({ setModalPassword }) {
           </div>
         </div>
       </div>
-      <ModalPermissions
-        Permisions={Permisions}
-        setPermissions={setPermissions}
-      />
-      <ModalColor Color={Color} setColor={setColor} />
-      <ModalHistorialCollaborator
-        modalHistorialC={modalHistorialC}
-        setModalHistorialC={setModalHistorialC}
-      />
-      <ModalHistorialJob
-        HistorialP={HistorialP}
-        setHistorialP={setHistorialP}
-      />
-      <ModalPassword Password={Password} setPassword={setPassword} />
     </>
   );
 }

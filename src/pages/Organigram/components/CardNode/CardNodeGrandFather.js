@@ -1,4 +1,4 @@
-import { Button, Col, Dropdown, Menu, Row } from "antd";
+import { Col, Dropdown, Row } from "antd";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Avatar from "../../../../assets/img/avatar.png";
@@ -7,201 +7,14 @@ import { GiOfficeChair } from "react-icons/gi";
 import { FaUserAlt } from "react-icons/fa";
 import Insings from "../../../../assets/img/icons/insights-24px.svg";
 import Trending from "../../../../assets/img/icons/trending_up-24px.svg";
-import { DownOutlined, UpOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
-import { v4 as uuid } from "uuid";
-import ModalPermissions from "../../../../components/Modals/ModalPermissions/ModalPermissions";
-import ModalColor from "../../../../components/Modals/ModalColor/ModalColor";
-import ModalHistorialCollaborator from "../../../../components/Modals/ModalHistorialCollaborator/ModalHistorialCollaborator";
-import ModalHistorialJob from "../../../../components/Modals/ModalHistorialJob/ModalHistorialJob";
-import ModalPassword from "../../../../components/Modals/ModalPassword/ModalPassword";
+import MenuOrganigram from "../MenuOrganigram/MenuOrganigram";
 
 import "./CardNode.scss";
 
 function CardNodeGrandFather({ data }) {
-  console.log(data);
-
   const [t, i18n] = useTranslation("global");
-  const [active, setActive] = useState("CardNodeGrandChildhide");
-  const [flag, setFalg] = useState("primary roundBtnFull showInline");
-  const [flag2, setFalg2] = useState("primaryInvert roundBtnFull hide");
-  const [Permissions, setPermissions] = useState(false);
-  const [Color, setColor] = useState(false);
-
-  const [modalHistorialC, setModalHistorialC] = useState(false);
-  const [HistorialP, setHistorialP] = useState(false);
-  // implementar array
-  const [Password, setPassword] = useState({
-    visible: false,
-    titleModal: "",
-    messageModal: "",
-    actionWarning: "",
-  });
-
-  const menu = (
-    <Menu>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to={
-              "/" +
-              t("routes.organigram") +
-              "/" +
-              t("paths_organigram.areasandpositions-collaborator")
-            }
-          >
-            Editar colaborador
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to={
-              "/" +
-              t("routes.organigram") +
-              "/" +
-              t("paths_organigram.areasandpositions-addjob")
-            }
-          >
-            Editar puesto
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to={
-              "/" + t("routes.organigram") + "/" + t("paths_organigram.eraser")
-            }
-          >
-            Editar estructura
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setPermissions(true);
-            }}
-          >
-            Agregar permisos
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setColor(true);
-            }}
-          >
-            Difinir color de área
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Divider />
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to={
-              "/" +
-              t("routes.organigram") +
-              "/" +
-              t("paths_organigram.areasandpositions-perfil")
-            }
-          >
-            Ver expediente
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()} disabled>
-          <Link to="#">Ver Vacantes</Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()} disabled>
-          <Link to="#">Ver Ovjetivos</Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setHistorialP(true);
-            }}
-          >
-            Historial puesto
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setModalHistorialC(true);
-            }}
-          >
-            Historial colaborador
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Divider />
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setPassword({
-                visible: true,
-                titleModal: "Dar de baja a colaborador",
-                type: 0,
-                messageModal:
-                  "Al dar de baja a un colaborador de tu organización ya no se verá reflejada en tu organigrama.",
-                messageWarning:
-                  "Estás a punto de dar de baja al colaborador.[Nombre colaborador]",
-                question: "¿Seguro deseas eliminarlo?",
-                function: () => {
-                  return false;
-                },
-              });
-            }}
-          >
-            Dar de baja colaborador
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-      <Menu.Item key={uuid()}>
-        <Menu.Item key={uuid()}>
-          <Link
-            to="#"
-            onClick={() => {
-              setPassword({
-                visible: true,
-                titleModal: "Eliminar puesto",
-                type: 0,
-                messageModal:
-                  "Al eliminar un puesto de tu organización ya no se verá reflejada en tu organigrama.",
-                messageWarning: "Estás a punto de eliminar el puesto",
-                question: "¿Seguro deseas eliminarlo?",
-                function: () => {
-                  return false;
-                },
-              });
-            }}
-          >
-            Eliminar puesto
-          </Link>
-        </Menu.Item>
-      </Menu.Item>
-    </Menu>
-  );
+  const [visible, setVisible] = useState(false);
 
   return (
     <>
@@ -235,11 +48,20 @@ function CardNodeGrandFather({ data }) {
               </span>
             </Col>
             <Col span={3}>
-              <Dropdown overlay={menu} trigger={["click"]}>
+              <Dropdown
+                overlay={<MenuOrganigram setVisible={setVisible} />}
+                visible={visible}
+                onVisibleChange={(e) => {
+                  setVisible(e);
+                }}
+                trigger={["click"]}
+              >
                 <Link
                   to="#"
                   className="ant-dropdown-link"
-                  onClick={(e) => e.preventDefault()}
+                  onClick={(e) => {
+                    e.preventDefault();
+                  }}
                 >
                   <img
                     style={{ marginTop: "5px" }}
@@ -290,21 +112,6 @@ function CardNodeGrandFather({ data }) {
           </Row>
         </div>
       </div>
-
-      <ModalPermissions
-        Permissions={Permissions}
-        setPermissions={setPermissions}
-      />
-      <ModalColor Color={Color} setColor={setColor} />
-      <ModalHistorialCollaborator
-        modalHistorialC={modalHistorialC}
-        setModalHistorialC={setModalHistorialC}
-      />
-      <ModalHistorialJob
-        HistorialP={HistorialP}
-        setHistorialP={setHistorialP}
-      />
-      <ModalPassword Password={Password} setPassword={setPassword} />
     </>
   );
 }

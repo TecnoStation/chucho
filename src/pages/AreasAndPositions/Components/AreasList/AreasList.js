@@ -132,6 +132,8 @@ function AreasList({
                     mode: 0,
                     idArea: area.idArea,
                     Areas: Areas,
+                    modalTitle:
+                      "¿Qué deseas hacer con los colaboradores que pertenecen a esta área?",
                   });
                 }}
                 className="iconGreen iconsize"

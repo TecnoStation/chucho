@@ -16,42 +16,50 @@ function OrganigramList() {
   const menu = (
     <>
       <div className="menuToltip">
-        <Link to={
+        <Link
+          to={
             "/" +
             t("routes.organigram") +
             "/" +
             t("paths_organigram.areasandpositions-general")
-          }>
+          }
+        >
           <span>{t("organigram.organigramlist.menu-1.load-massive")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to={
+        <Link
+          to={
             "/" +
             t("routes.organigram") +
             "/" +
             t("paths_organigram.areasandpositions-general")
-          }>
+          }
+        >
           <span>{t("organigram.organigramlist.menu-1.areas-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to={
+        <Link
+          to={
             "/" +
             t("routes.organigram") +
             "/" +
             t("paths_organigram.areasandpositions-general")
-          }>
+          }
+        >
           <span>{t("organigram.organigramlist.menu-1.profile-positions")}</span>
         </Link>
       </div>
       <div className="menuToltip">
-        <Link to={
+        <Link
+          to={
             "/" +
             t("routes.organigram") +
             "/" +
             t("paths_organigram.areasandpositions-general")
-          }>
+          }
+        >
           <span>{t("organigram.organigramlist.menu-1.Collaborators")}</span>
         </Link>
       </div>
@@ -155,8 +163,6 @@ function OrganigramList() {
       <div id="organigramList">
         <br />
         <TreeDrop name={"Panchita Lopez"} />
-        <br />
-        <TreeDrop name={"Juan Camaney"} />
       </div>
 
       <ModalErasersList historial={historial} setHistorial={setHistorial} />

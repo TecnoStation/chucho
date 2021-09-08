@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Row, Modal, Button, Col } from "antd";
 import Avatar from "../../../assets/img/avatar.png";
+import Good from "../../../assets/img/icons/bien_hecho.svg";
+import { useTranslation } from "react-i18next";
 import ModalSelectArea from "../ModalSelectArea/ModalSelectArea";
 
 function ModalMoveArea({
@@ -11,13 +13,15 @@ function ModalMoveArea({
   setSubAreas,
   setPositionsInfo,
 }) {
+  const [t, i18n] = useTranslation("global");
   const [modalSelect, setModalSelect] = useState(false);
 
   return (
     <>
       <Modal
-        title="¿Qué deseas hacer con los colaboradores que pertenecen a esta área?"
+        title={modalMove.modalTitle}
         className="modalCuztom"
+        centered={true}
         visible={modalMove.visible}
         onCancel={() => {
           setModalMove(false);
@@ -35,8 +39,13 @@ function ModalMoveArea({
                 messageWarning:
                   modalMove.mode === 2
                     ? "Estas a punto de dar de baja a  [número] los colaboradores"
+                    : modalMove.mode === 5
+                    ? "Estas a punto de dar de baja al colaborador [Nombre del colaborador]"
                     : "Estas a punto de dar de baja a los colaboradores",
-                question: "¿Estás seguro?",
+                question:
+                  modalMove.mode === 5
+                    ? "¿Seguro deseas eliminarlo?"
+                    : "¿Estás seguro?",
                 function: () => {
                   if (modalMove.mode === 1) {
                     const arrayFilter = modalMove.subAreas.filter(
@@ -49,6 +58,45 @@ function ModalMoveArea({
                       (item) => item.idPositionInfo !== modalMove.idPositionInfo
                     );
                     setPositionsInfo(arrayFilter);
+                  } else if (modalMove.mode === 5) {
+                    const modal = Modal.info({
+                      title: "",
+                      className: "MessagesModal",
+                      centered: true,
+                      content: (
+                        <Row style={{ marginTop: "-15px" }}>
+                          <Col span={24}>
+                            <p>
+                              <img alt="ico" className="" src={Good} />
+                            </p>
+                          </Col>
+                          <Col style={{ marginTop: "0px" }} span={24}>
+                            <h2>
+                              <b>¡Completado!</b>
+                            </h2>
+                          </Col>
+                          <Col span={24}>
+                            <h3>Has dado de baja al colaborador</h3>
+                          </Col>
+                          <Col span={24}>
+                            <h3></h3>
+                            <br />
+                          </Col>
+                          <Col span={24}>
+                            <Button
+                              style={{ marginRight: "15px" }}
+                              onClick={() => {
+                                modal.destroy();
+                              }}
+                              className="primary btn"
+                            >
+                              {t("organigram.password-modal.btn-done")}
+                            </Button>
+                          </Col>
+                        </Row>
+                      ),
+                      onOk() {},
+                    });
                   } else {
                     const arrayFilter = modalMove.Areas.filter(
                       (item) => item.idArea !== modalMove.idArea
@@ -67,6 +115,7 @@ function ModalMoveArea({
             style={{ width: "180px" }}
             onClick={() => {
               setModalSelect(true);
+              setModalMove(false);
             }}
             className="primary"
           >
