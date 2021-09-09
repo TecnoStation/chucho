@@ -2,10 +2,13 @@ import React from "react";
 import { Col, Dropdown, Menu, Row } from "antd";
 import More from "../../assets/img/icons/more_vert-24px.svg";
 import { v4 as uuid } from "uuid";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 export default function Branchs({ branchs, edit, deleteBranch }) {
+  const [t, i18n] = useTranslation("global");
   return branchs.map((branch, index) => (
+    
     <Row
       key={uuid()}
       gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
@@ -39,12 +42,12 @@ export default function Branchs({ branchs, edit, deleteBranch }) {
                     edit(branch, index);
                   }}
                 >
-                  Editar sucursal
+                  {t("organigram.add-branch-modal.menu.edit-branch")}
                 </Link>
               </Menu.Item>
               <Menu.Item key={uuid()}>
                 <Link to="#" onClick={() => deleteBranch(branch.idBranch)}>
-                  Eliminar Sucursal
+                {t("organigram.add-branch-modal.menu.remove-branch")}
                 </Link>
               </Menu.Item>
             </Menu>

@@ -76,7 +76,7 @@ export default function Mybusiness() {
         <Col className="gutter-row" span={10}>
           <Row>
             <Col span={22} style={{ textAlign: "center" }}>
-              <h1>{t("organigram.mybusiness-principal.data-general.title")}</h1>
+              <h1 className="primaryText" >{t("organigram.mybusiness-principal.data-general.title")}</h1>
             </Col>
             <Col span={2}>
               <Dropdown overlay={menu} trigger={["click"]}>
@@ -99,7 +99,7 @@ export default function Mybusiness() {
           </Row>
           <Row>
             <Col span={12}>
-              <span className="span">
+              <span className="secondaryText">
                 <b>
                   {t(
                     "organigram.mybusiness-principal.data-general.business-name"
@@ -107,10 +107,10 @@ export default function Mybusiness() {
                 </b>
               </span>
               <br />
-              <span className="span">{data.companyName}</span>
+              <span className="primaryText">{data.companyName}</span>
             </Col>
             <Col span={12}>
-              <span className="span">
+              <span className="secondaryText">
                 <b>
                   {t(
                     "organigram.mybusiness-principal.data-general.business-activity"
@@ -118,12 +118,12 @@ export default function Mybusiness() {
                 </b>
               </span>
               <br />
-              <span className="span">{data.activity}</span>
+              <span className="primaryText">{data.activity}</span>
             </Col>
           </Row>
           <Row style={{ marginTop: "40px" }}>
             <Col span={12}>
-              <span className="span">
+              <span className="secondaryText">
                 <b>
                   {t(
                     "organigram.mybusiness-principal.data-general.subactivity"
@@ -131,10 +131,10 @@ export default function Mybusiness() {
                 </b>
               </span>
               <br />
-              <span className="span">{data.subActivity}</span>
+              <span className="primaryText">{data.subActivity}</span>
             </Col>
             <Col span={12}>
-              <span className="span">
+              <span className="secondaryText">
                 <b>
                   {t(
                     "organigram.mybusiness-principal.data-general.business-size"
@@ -142,12 +142,12 @@ export default function Mybusiness() {
                 </b>
               </span>
               <br />
-              <span className="span">{data.businessZise}</span>
+              <span className="primaryText">{data.businessZise}</span>
             </Col>
           </Row>
           <Row style={{ marginTop: "40px" }}>
             <Col span={12}>
-              <span className="span">
+              <span className="secondaryText">
                 <b>
                   {t("organigram.mybusiness-principal.data-general.site-web")}
                 </b>
@@ -156,16 +156,16 @@ export default function Mybusiness() {
               <span className="link">{data.siteWeb}</span>
             </Col>
             <Col span={12}>
-              <span className="span">
+              <span className="secondaryText">
                 <b>{t("organigram.mybusiness-principal.data-general.from")}</b>
               </span>
               <br />
-              <span className="span">{data.from}</span>
+              <span className="primaryText">{data.from}</span>
             </Col>
           </Row>
           <Row style={{ marginTop: "40px" }}>
             <Col span={12}>
-              <span className="span">
+              <span className="secondaryText">
                 <b>
                   {t(
                     "organigram.mybusiness-principal.data-general.name-headquartes"
@@ -179,7 +179,7 @@ export default function Mybusiness() {
           </Row>
           <Row style={{ marginTop: "40px" }}>
             <Col span={24}>
-              <span className="span">
+              <span className="secondaryText">
                 <b>
                   {t(
                     "organigram.mybusiness-principal.data-general.headquartes-direction"
@@ -213,14 +213,14 @@ export default function Mybusiness() {
         <Col span={14} className="dividerLeft gutter-row">
           <Row>
             <Col span={24} style={{ textAlign: "center" }}>
-              <h1>
+              <h1 className="primaryText">
                 {t("organigram.mybusiness-principal.business-culture.title")}
               </h1>
             </Col>
           </Row>
           <Row>
             <Col span={24}>
-              <span className="span">
+              <span className="secondaryText">
                 <b>
                   {t(
                     "organigram.mybusiness-principal.business-culture.mission"
@@ -231,12 +231,12 @@ export default function Mybusiness() {
           </Row>
           <Row style={{ marginTop: "10px" }}>
             <Col span={24}>
-              <span className="span">{data.mission}</span>
+              <span className="primaryText">{data.mission}</span>
             </Col>
           </Row>
           <Row style={{ marginTop: "10px" }}>
             <Col span={24}>
-              <span className="span">
+              <span className="secondaryText">
                 <b>
                   {t("organigram.mybusiness-principal.business-culture.view")}
                 </b>
@@ -245,13 +245,13 @@ export default function Mybusiness() {
           </Row>
           <Row style={{ marginTop: "10px" }}>
             <Col span={24}>
-              <span className="span">{data.vision}</span>
+              <span className="primaryText">{data.vision}</span>
             </Col>
           </Row>
 
           <Row style={{ marginTop: "10px" }}>
             <Col span={24}>
-              <span className="span">
+              <span className="secondaryText">
                 <b>
                   {t(
                     "organigram.mybusiness-principal.business-culture.business-description"
@@ -262,7 +262,7 @@ export default function Mybusiness() {
           </Row>
           <Row style={{ marginTop: "10px" }}>
             <Col span={24}>
-              <span className="span">{data.description}</span>
+              <span className="primaryText">{data.description}</span>
             </Col>
           </Row>
           <Row
@@ -270,12 +270,10 @@ export default function Mybusiness() {
             style={{ marginTop: "40px", width: "100%" }}
           >
             <Col span={18}>
-              <b>Competencias Institucionales</b>
-              <span className="span"></span>
+              <span className="secondaryText"><b>Competencias Institucionales</b></span>
             </Col>
             <Col span={6}>
-              <b>Nivel</b>
-              <span className="span"></span>
+              <span className="secondaryText"><b>Nivel</b></span>
             </Col>
           </Row>
 

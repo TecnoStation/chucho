@@ -59,6 +59,14 @@ label {
   height: 80vh;
   background: $color-white;
   border-radius: 10px;
+  h1 {
+    font-size: 21px !important;
+    color: $color-principal-text;   
+  }
+  p {
+    font-size: 14px !important;
+    color: $color-secondary-text; 
+  }
 }
 
 .screen {
@@ -163,6 +171,14 @@ label {
   p {
     text-align: justify;
   }
+  h2 {
+   color: $color-principal-text;
+   font-size: 21px !important; 
+   font-weight: bold;
+  }
+  label {
+    font-weight: bold; 
+  } 
 }
 
 .secondary {
@@ -228,7 +244,7 @@ label {
   color: $color-link !important;
 }
 
-.iconBluehard .material-icons {
+.iconBluehard .material-icons, .primaryText {
   color: $color-principal-text !important;
 }
 

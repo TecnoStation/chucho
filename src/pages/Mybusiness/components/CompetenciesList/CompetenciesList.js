@@ -5,12 +5,10 @@ function CompetenciesList({ competence }) {
   return (
     <Row style={{ marginTop: "20px" }}>
       <Col span={18}>
-        {competence.name}
-        <span className="span"></span>
+        <span className="secondaryText">{competence.name}</span>
       </Col>
       <Col span={6} style={{ paddingLeft: "15px" }}>
-        {competence.level}
-        <span className="span"></span>
+        <span className="secondaryText">{competence.level}</span>
       </Col>
     </Row>
   );

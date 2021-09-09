@@ -92,7 +92,6 @@ export default function TeamStarted() {
           style={{ fontSize: "16px" }}
           span={1}
         >
-          <RiFilterFill />
         </Col>
         <Col className="gutter-row rigth" span={1}>
           <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.teams")}>

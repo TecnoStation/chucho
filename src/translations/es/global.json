@@ -248,7 +248,11 @@
             "branch-direction-placeholder": "Agrega la dirección de la sucursal",
             "btn-cancel": "Cancelar",
             "btn-edit": "Editar",
-            "btn-save": "Guardar"
+            "btn-save": "Guardar",
+            "menu":{
+             "edit-branch": "Editar Sucursal",
+             "remove-branch": "Eliminar Sucursal"   
+            }
         },
         "add-competencies-modal": {
             "title": "Agregar competencias institucionales",
@@ -501,7 +505,7 @@
                 "years": "Años",
                 "languages": "Idiomas",
                 "skills-techniques": "Habilidades técnicas",
-                "experience-labor": "Experiencia lavoral",
+                "experience-labor": "Experiencia laboral",
                 "add-experience": "Agregar otra experiencia",
                 "menu2-collaborator": {
                     "edit-abilities": "Editar mis habilidades",
