@@ -22,7 +22,7 @@ export default function LayoutSecondaryMenu({ component: Component, ...rest }) {
         <>
           <Layout>
             <Row>
-              <Col span={2} className="menuSide">
+              <Col className="menuSide">
                 <MenuEvo />
               </Col>
 

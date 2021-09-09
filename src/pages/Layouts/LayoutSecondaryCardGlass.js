@@ -76,7 +76,7 @@ export default function LayoutSecondaryCardGlass({
         <>
           <Layout>
             <Row>
-              <Col span={2} className="menuSide">
+              <Col className="menuSide">
                 <MenuEvo />
               </Col>
 

@@ -47,7 +47,7 @@ export default function Modalcompetencies({
   return (
     <>
       <Modal
-        className="middleModal"
+        className="competenciesModal"
         title="Agregar competencias institucionales"
         visible={modalComp}
         closable={false}

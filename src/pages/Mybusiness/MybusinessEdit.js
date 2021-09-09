@@ -200,7 +200,7 @@ export default function MybusinessEdit() {
             <Form name="formInformtion" onFinish={onFinish} layout="vertical">
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={12}>
-                  <h2 style={{ textAlign: "left" }}>
+                  <h2 className="title1">
                     {t("organigram.my-business-edit.information.title")}
                   </h2>
                   <p>
@@ -372,11 +372,11 @@ export default function MybusinessEdit() {
                   </div>
                 </Col>
                 <Col className="gutter-row dividerLeft" span={12}>
-                  <h2 style={{ textAlign: "left" }}>
+                  <h3 className="title2" style={{}}>
                     {t(
                       "organigram.my-business-edit.information.form.add-branch-title"
                     )}
-                  </h2>
+                  </h3>
                   <br />
                   <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                     <Col className="gutter-row" span={12}>
@@ -402,9 +402,12 @@ export default function MybusinessEdit() {
                         }}
                       >
                         <PlusCircleOutlined className="iconGreen" />
-                        {t(
-                          "organigram.my-business-edit.information.form.add-branch-link"
-                        )}
+                        <span style={{ marginLeft: "8px" }}>
+                          {" "}
+                          {t(
+                            "organigram.my-business-edit.information.form.add-branch-link"
+                          )}
+                        </span>
                       </Link>
                     </Col>
                   </Row>
@@ -588,9 +591,11 @@ export default function MybusinessEdit() {
                         }}
                       >
                         <PlusCircleOutlined />{" "}
-                        {t(
-                          "organigram.my-business-edit.culture.add-competencies-link"
-                        )}
+                        <span style={{ marginLeft: "8px" }}>
+                          {t(
+                            "organigram.my-business-edit.culture.add-competencies-link"
+                          )}
+                        </span>
                       </Link>
                     </Col>
                   </Row>

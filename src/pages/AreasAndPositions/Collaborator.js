@@ -8,19 +8,19 @@ import {
   Select,
   Input,
   Button,
-  Modal,
-  Checkbox,
+  Tag,
 } from "antd";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import More from "../../assets/img/icons/more_vert-24px.svg";
 import Avatar from "../../assets/img/avatar.png";
 import Bien from "../../assets/img/icons/bien_hecho.svg";
 import Screendefault from "../../components/Screens/Screendefault";
-import { PlusCircleOutlined } from "@ant-design/icons";
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import { useTranslation } from "react-i18next";
 import ModalPermissions from "../../components/Modals/ModalPermissions/ModalPermissions";
 import ModalDocument from "../../components/Modals/ModalDocument/ModalDocument";
+import ModalMoveArea from "../../components/Modals/ModalMoveArea/ModalMoveArea";
+import SelectDinamic from "../../components/SelectDinamic/SelectDinamic";
 const { Option } = Select;
 
 export default function Collaborator() {
@@ -28,6 +28,7 @@ export default function Collaborator() {
   const [Password, setPassword] = useState(false);
   const [ModalDocumets, setModalDocumets] = useState(false);
   const [Permissions, setPermissions] = useState(false);
+  const [modalMove, setModalMove] = useState(false);
   const [flag, setFlag] = useState("hide");
   const history = useHistory();
   const location = useLocation();
@@ -97,15 +98,21 @@ export default function Collaborator() {
                   "organigram.delete-collaborator.warning.text"
                 ),
                 question: t("organigram.delete-collaborator.warning.question"),
-                type: 0,
+                type: 1,
                 function: () => {
-                  history.push({
-                    pathname:
-                      "/" +
-                      t("routes.organigram") +
-                      "/" +
-                      t("paths_organigram.areasandpositions"),
+                  setModalMove({
+                    visible: true,
+                    mode: 5,
+                    modalTitle:
+                      "¿Qué deseas hacer con los colaboradores que pertenecen a esta área?",
                   });
+                  // history.push({
+                  //   pathname:
+                  //     "/" +
+                  //     t("routes.organigram") +
+                  //     "/" +
+                  //     t("paths_organigram.areasandpositions"),
+                  // });
                 },
               });
             }}
@@ -124,6 +131,31 @@ export default function Collaborator() {
   const onFinish = (values) => {
     showmessage();
   };
+
+  const tagRender = ({ label, closable }) => {
+    return (
+      <Tag className="tagNormal" closable={closable}>
+        {label}
+      </Tag>
+    );
+  };
+
+  //----------------- Selects Dinamic Data ------------------------------------
+
+  const data = [
+    {
+      id: 0,
+      value: "dato1",
+      name: "dato1",
+    },
+    {
+      id: 1,
+      value: "dato2",
+      name: "dato2",
+    },
+  ];
+
+  //----------------- End Selects Dinamic Data --------------------------------
 
   return (
     <Form name="form1" layout="vertical" onFinish={onFinish}>
@@ -169,15 +201,12 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select
+                <SelectDinamic
                   placeholder={t(
                     "organigram.collaborator-form.position-placeholder"
                   )}
-                >
-                  <Option value="jack">Jack</Option>
-                  <Option value="lucy">Lucy</Option>
-                  <Option value="tom">Tom</Option>
-                </Select>
+                  data={data}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -287,15 +316,12 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select
+                <SelectDinamic
                   placeholder={t(
                     "organigram.collaborator-form.marital-status-placeholder"
                   )}
-                >
-                  <Option value="jack">Jack</Option>
-                  <Option value="lucy">Lucy</Option>
-                  <Option value="tom">Tom</Option>
-                </Select>
+                  data={data}
+                />
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
@@ -309,15 +335,12 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select
+                <SelectDinamic
                   placeholder={t(
                     "organigram.collaborator-form.gender-placeholder"
                   )}
-                >
-                  <Option value="jack">Jack</Option>
-                  <Option value="lucy">Lucy</Option>
-                  <Option value="tom">Tom</Option>
-                </Select>
+                  data={data}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -372,15 +395,12 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select
+                <SelectDinamic
                   placeholder={t(
                     "organigram.collaborator-form.id-colaborator-placeholder"
                   )}
-                >
-                  <Option value="jack">Jack</Option>
-                  <Option value="lucy">Lucy</Option>
-                  <Option value="tom">Tom</Option>
-                </Select>
+                  data={data}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -399,15 +419,12 @@ export default function Collaborator() {
                   },
                 ]}
               >
-                <Select
+                <SelectDinamic
                   placeholder={t(
                     "organigram.collaborator-form.city-placeholder"
                   )}
-                >
-                  <Option value="jack">Jack</Option>
-                  <Option value="lucy">Lucy</Option>
-                  <Option value="tom">Tom</Option>
-                </Select>
+                  data={data}
+                />
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
@@ -443,15 +460,12 @@ export default function Collaborator() {
                 ]}
                 label={t("organigram.collaborator-form.area-label")}
               >
-                <Select
+                <SelectDinamic
                   placeholder={t(
                     "organigram.collaborator-form.area-placeholder"
                   )}
-                >
-                  <Option value="jack">Jack</Option>
-                  <Option value="lucy">Lucy</Option>
-                  <Option value="tom">Tom</Option>
-                </Select>
+                  data={data}
+                />
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
@@ -465,15 +479,12 @@ export default function Collaborator() {
                 ]}
                 label={t("organigram.collaborator-form.branch-label")}
               >
-                <Select
+                <SelectDinamic
                   placeholder={t(
                     "organigram.collaborator-form.branch-placeholder"
                   )}
-                >
-                  <Option value="jack">Jack</Option>
-                  <Option value="lucy">Lucy</Option>
-                  <Option value="tom">Tom</Option>
-                </Select>
+                  data={data}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -514,15 +525,12 @@ export default function Collaborator() {
                   "organigram.collaborator-form.educational-level-label"
                 )}
               >
-                <Select
+                <SelectDinamic
                   placeholder={t(
                     "organigram.collaborator-form.educational-level-placeholder"
                   )}
-                >
-                  <Option value="jack">Jack</Option>
-                  <Option value="lucy">Lucy</Option>
-                  <Option value="tom">Tom</Option>
-                </Select>
+                  data={data}
+                />
               </Form.Item>
             </Col>
             <Col className="gutter-row" span={12}>
@@ -536,15 +544,12 @@ export default function Collaborator() {
                 ]}
                 label={t("organigram.collaborator-form.years-experience-label")}
               >
-                <Select
+                <SelectDinamic
                   placeholder={t(
                     "organigram.collaborator-form.years-experience-placeholder"
                   )}
-                >
-                  <Option value="jack">Jack</Option>
-                  <Option value="lucy">Lucy</Option>
-                  <Option value="tom">Tom</Option>
-                </Select>
+                  data={data}
+                />
               </Form.Item>
             </Col>
           </Row>
@@ -561,8 +566,9 @@ export default function Collaborator() {
                 ]}
                 label={t("organigram.collaborator-form.skills-label")}
               >
-                <Input
-                  type="text"
+                <Select
+                  mode="tags"
+                  tagRender={tagRender}
                   placeholder={t(
                     "organigram.collaborator-form.skills-placeholder"
                   )}
@@ -583,8 +589,9 @@ export default function Collaborator() {
                 ]}
                 label={t("organigram.collaborator-form.languajes-label")}
               >
-                <Input
-                  type="text"
+                <Select
+                  mode="tags"
+                  tagRender={tagRender}
                   placeholder={t(
                     "organigram.collaborator-form.languajes-placeholder"
                   )}
@@ -643,6 +650,11 @@ export default function Collaborator() {
         setModalDocumets={setModalDocumets}
       />
       <ModalPassword Password={Password} setPassword={setPassword} />
+      <ModalMoveArea
+        modalMove={modalMove}
+        setModalMove={setModalMove}
+        setPassword={setPassword}
+      />
     </Form>
   );
 }

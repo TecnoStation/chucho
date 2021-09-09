@@ -82,10 +82,14 @@
   border-radius: 5px;
   padding-left: 16px;
 }
+.areasdiv:hover,
+.subareasdiv:hover {
+  background: $secuA;
+}
 
 .subareasdiv {
   width: 100%;
-  background: $secuA;
+  background: $color-hover;
   height: 32px;
   padding-top: 7px;
   padding-left: 10px;

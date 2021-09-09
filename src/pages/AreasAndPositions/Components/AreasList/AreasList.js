@@ -69,16 +69,24 @@ function AreasList({
     input.setAttribute("style", "display: none");
   };
 
+  const [colorIcon, setColorIcon] = useState("iconGray");
+
   return (
     <>
       {Areas.map((area, index) => (
         <div>
           <Row
+            onMouseOver={() => {
+              setColorIcon("iconGreen");
+            }}
+            onMouseOut={() => {
+              setColorIcon("iconGray");
+            }}
             className="areasdiv"
             style={{ marginTop: "20px", paddingLeft: "10px" }}
           >
             <Col span={18} style={{ textAlign: "left" }}>
-              <IoMdSquare className="iconGray" /> {area.areaName}
+              <IoMdSquare className={colorIcon} /> {area.areaName}
             </Col>
             <Col
               style={{

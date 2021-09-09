@@ -36,6 +36,29 @@ code {
   font-family: "Lato";
 }
 
+.ant-select-selector,
+.ant-input {
+  height: 32px !important;
+}
+
+.ant-dropdown-menu-item-disabled,
+.ant-dropdown-menu-submenu-title-disabled {
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.title2 {
+  text-align: left;
+  font-size: 16px;
+  font-weight: bold;
+  color: $color-principal-text !important;
+}
+
+.title1 {
+  text-align: left;
+  font-size: 18px;
+  color: $color-principal-text !important;
+}
+
 .ant-modal-content {
   box-shadow: -1px 1px 16px #3d4f8060 !important;
   border-radius: 8px;
@@ -47,6 +70,7 @@ code {
 .ant-modal-title {
   color: $color-principal-text !important;
   font-weight: bold;
+  font-size: 16px !important;
 }
 
 .secondaryText,
@@ -79,7 +103,7 @@ label {
   background: $color-base !important;
   color: $color-white !important;
   border: 1px solid $color-base !important;
-  border-radius: 5px !important;
+  border-radius: 4px !important;
   height: 32px;
   width: auto;
 }
@@ -89,7 +113,7 @@ label {
   background: $color-base !important;
   color: $color-white !important;
   border: 1px solid $color-base !important;
-  border-radius: 5px !important;
+  border-radius: 4px !important;
   height: 32px;
   font-weight: bold;
 }
@@ -139,6 +163,12 @@ label {
   color: $color-base !important;
 }
 
+.ant-tabs-tab-btn {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .tabPane {
   background: $color-white;
   width: 100%;
@@ -147,6 +177,7 @@ label {
   align-items: flex-start;
   margin-top: -20px;
   padding: 0px 20px 0px 30px;
+  font-size: 16px;
 }
 
 .card {
@@ -390,6 +421,16 @@ label {
   .ant-modal-content {
     width: 760px !important;
     height: 656px !important;
+    text-align: left;
+  }
+}
+
+.competenciesModal {
+  width: 576px !important;
+  height: 536px !important;
+  .ant-modal-content {
+    width: 576px !important;
+    height: 536px !important;
     text-align: left;
   }
 }

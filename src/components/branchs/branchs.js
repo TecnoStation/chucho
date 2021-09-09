@@ -42,9 +42,10 @@ export default function Branchs({ branchs, edit, deleteBranch }) {
                   Editar sucursal
                 </Link>
               </Menu.Item>
+              <Menu.Divider />
               <Menu.Item key={uuid()}>
                 <Link to="#" onClick={() => deleteBranch(branch.idBranch)}>
-                  Eliminar Sucursal
+                  Eliminar sucursal
                 </Link>
               </Menu.Item>
             </Menu>

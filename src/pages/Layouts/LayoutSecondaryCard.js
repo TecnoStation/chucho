@@ -22,12 +22,16 @@ export default function LayoutSecondaryCard({
   const menu = (
     <Menu>
       <Menu.Item key="0">
-        <Link to={
+        <Link
+          to={
             "/" +
             t("routes.organigram") +
             "/" +
             t("paths_organigram.areasandpositions-perfil")
-          }>Ver Perfil</Link>
+          }
+        >
+          Ver Perfil
+        </Link>
       </Menu.Item>
       <Menu.Divider />
       <Menu.Item key="2">Cerrar sesión</Menu.Item>
@@ -40,7 +44,7 @@ export default function LayoutSecondaryCard({
         <>
           <Layout>
             <Row>
-              <Col span={2} className="menuSide">
+              <Col className="menuSide">
                 <MenuEvo />
               </Col>
               <Col span={22} className="contentFrame">
