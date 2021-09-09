@@ -12,14 +12,14 @@
   }
 
   .itemtex {
-    font-size: 12px !important;
+    font-size: 7px !important;
   }
 }
 
 .slideSide {
-  width: 14.4vw;
+  width: 192px;
   height: 100%;
-  left: 8.2vw;
+  left: 4.2vw;
   background: $secuA;
   padding: 20px 15px 20px 15px;
   text-align: left;
@@ -29,7 +29,7 @@
   display: none;
   span {
     font-weight: bold;
-    color: $color-secu-b;
+    color: $color-secu-b !important;
   }
   hr {
     border: 1px solid $color-base;
@@ -41,15 +41,15 @@
       list-style: none;
       text-align: left;
       padding: 10px 5px 20px 0px;
-      color: #000;
-      font-size: 12px;
+      color: $color-principal-text !important;
+      font-size: 14px;
       ul .hide {
         display: none;
       }
     }
 
     li:hover {
-      color: $color-secu-b;
+      color: $color-secu-b !important;
       list-style: disc;
       margin-left: 5px;
       font-weight: bold;
@@ -62,7 +62,7 @@
 
 .item:hover {
   background: $secuA;
-  color: $color-base;
+  color: $color-principal-text;
   border-left: 8px solid $color-base;
 
   .itemtex {
@@ -83,7 +83,7 @@
 
 .brive {
   background: $color-base;
-  width: 21.5vw;
+  width: 248px;
   height: 40px;
   position: absolute;
   bottom: 120px;
@@ -97,7 +97,7 @@
     margin-top: 30px;
     text-align: center;
     float: right;
-    font-size: 0.75vw;
-    margin-right: -4.2vw;
+    font-size: 10px;
+    margin-right: -4.5vw;
   }
 }

@@ -54,9 +54,10 @@
 }
 
 .tagList {
-  width: 470px;
-  height: 180px !important;
+  width: 545px;
+  height: 260px !important;
   overflow: auto;
+  margin-top: 30px;
 }
 
 .rowC {
@@ -68,12 +69,14 @@
   background: $color-white;
   border-radius: 5px;
   margin-bottom: 5px;
-  height: 25px;
+  height: 32px;
+  font-size: 14px !important;
+  padding-top: 5px;
 
   .plusOutlined {
     color: $color-base;
     float: right;
-    margin-top: 4px;
+    margin-top: 3px;
     margin-right: 5px;
     font-size: 13px;
   }
@@ -81,7 +84,7 @@
   .CheckCircleFilled {
     color: $color-base;
     float: right;
-    margin-top: 4px;
+    margin-top: 3px;
     margin-right: 5px;
     font-size: 17px;
   }

@@ -33,9 +33,17 @@ function SubAreasList2({
     setinputSubArea("show");
   };
 
+  const [colorIcon, setColorIcon] = useState("iconGray");
+
   return (
     <>
       <Row
+        onMouseOver={() => {
+          setColorIcon("iconGreen");
+        }}
+        onMouseOut={() => {
+          setColorIcon("iconGray");
+        }}
         style={{
           marginTop: "20px",
           paddingLeft: "20px",
@@ -45,7 +53,7 @@ function SubAreasList2({
         <Col span={24}>
           <Row className="subareasdiv">
             <Col span={18} style={{ textAlign: "left" }}>
-              <IoMdSquare className="iconGreen" /> {subArea.subareaName}
+              <IoMdSquare className={colorIcon} /> {subArea.subareaName}
             </Col>
             <Col
               style={{

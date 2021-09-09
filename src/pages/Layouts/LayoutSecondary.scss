@@ -1,6 +1,7 @@
 @import "../../index.scss";
 
 .menuSide {
+  width: 64px;
   background: $color-white;
   height: auto;
   text-align: center;
@@ -10,7 +11,7 @@
 .contentFrame {
   background: $color-font;
   height: 100vh;
-  padding: 0px 0px 60px 60px;
+  padding: 0px 0px 60px 105px;
 
   header {
     width: 85vw;
@@ -61,6 +62,7 @@
   width: 82vw;
   height: auto;
   border-radius: 10px;
+  box-shadow: 0px 0px 3px #394a7626;
 }
 
 .layoutBtn {

@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import { Row, Modal, Button, Col, AutoComplete, Form } from "antd";
 import { IoMdSquare } from "react-icons/io";
+import Good from "../../../assets/img/icons/bien_hecho.svg";
+import { useTranslation } from "react-i18next";
 
 function ModalSelectArea({ modalSelect, setModalSelect, setModalMove }) {
+  const [t, i18n] = useTranslation("global");
   const [listTeamName, setListTeamName] = useState([
     { value: "Director de marketing" },
     { value: "Gerente de ventas" },
     { value: "Analista de software" },
   ]);
+
   return (
     <Modal
       title="Selecciona el área al que los deseas mover"
@@ -36,6 +40,44 @@ function ModalSelectArea({ modalSelect, setModalSelect, setModalMove }) {
               onClick={() => {
                 setModalSelect(false);
                 setModalMove(false);
+                const modal = Modal.info({
+                  title: "",
+                  className: "MessagesModal",
+                  centered: true,
+                  content: (
+                    <Row style={{ marginTop: "-15px" }}>
+                      <Col span={24}>
+                        <p>
+                          <img alt="ico" className="" src={Good} />
+                        </p>
+                      </Col>
+                      <Col style={{ marginTop: "0px" }} span={24}>
+                        <h2>
+                          <b>Colaboradores reubicados</b>
+                        </h2>
+                      </Col>
+                      <Col span={24}>
+                        <h3></h3>
+                      </Col>
+                      <Col span={24}>
+                        <h3></h3>
+                        <br />
+                      </Col>
+                      <Col span={24}>
+                        <Button
+                          style={{ marginRight: "15px", width: "50%" }}
+                          onClick={() => {
+                            modal.destroy();
+                          }}
+                          className="primary btn"
+                        >
+                          {t("organigram.password-modal.btn-done")}
+                        </Button>
+                      </Col>
+                    </Row>
+                  ),
+                  onOk() {},
+                });
               }}
             >
               Mover

@@ -166,7 +166,7 @@ export default function AreasAndPositions() {
             <Form name="formInformtion" onFinish={onFinish} layout="vertical">
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={11}>
-                  <h2 style={{ textAlign: "left" }}>
+                  <h2 className="title1">
                     {t("organigram.areas-and-positions.structure.title")}
                   </h2>
 
@@ -230,7 +230,7 @@ export default function AreasAndPositions() {
                     </Row>
                     <Row style={{ marginTop: "20px" }}>
                       <Col>
-                        <p>
+                        <p className="secondaryText">
                           {t("organigram.areas-and-positions.structure.text1")}
                         </p>
                       </Col>
@@ -289,9 +289,11 @@ export default function AreasAndPositions() {
                         >
                           {" "}
                           <PlusCircleOutlined />{" "}
-                          {t(
-                            "organigram.areas-and-positions.structure.link-add-new-area"
-                          )}
+                          <span style={{ marginLeft: "8px" }}>
+                            {t(
+                              "organigram.areas-and-positions.structure.link-add-new-area"
+                            )}
+                          </span>
                         </Link>
                       </Col>
                     </Row>
@@ -303,12 +305,12 @@ export default function AreasAndPositions() {
                   style={{ textAlign: "left" }}
                   span={13}
                 >
-                  <h2>
+                  <h2 className="title2">
                     {t(
                       "organigram.areas-and-positions.structure.positions-in-area"
                     )}
                   </h2>
-                  <p>
+                  <p className="secondaryText">
                     {t(
                       "organigram.areas-and-positions.structure.insert- your-positions"
                     )}
@@ -352,10 +354,12 @@ export default function AreasAndPositions() {
                           SetInputPosition("show");
                         }}
                       >
-                        <PlusCircleOutlined />{" "}
-                        {t(
-                          "organigram.areas-and-positions.structure.link-add-position"
-                        )}
+                        <PlusCircleOutlined />
+                        <span style={{ marginLeft: "8px" }}>
+                          {t(
+                            "organigram.areas-and-positions.structure.link-add-position"
+                          )}
+                        </span>
                       </Link>
                     </Col>
                   </Row>
@@ -375,9 +379,7 @@ export default function AreasAndPositions() {
                       className="secondary"
                       style={{ marginRight: "15px" }}
                     >
-                      {t(
-                        "organigram.areas-and-positions.structure.btn-cancel"
-                      )}
+                      {t("organigram.areas-and-positions.structure.btn-cancel")}
                     </Button>
                   </Link>
                   {firtFlag ? (
@@ -413,9 +415,7 @@ export default function AreasAndPositions() {
                 </span>
                 <br />
                 <span className="iconGreen">
-                  {t(
-                    "organigram.areas-and-positions.position.total-positions"
-                  )}
+                  {t("organigram.areas-and-positions.position.total-positions")}
                 </span>
               </Col>
 

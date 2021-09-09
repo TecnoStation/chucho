@@ -97,7 +97,7 @@ export default function LayoutSecondaryCardWhite({
         <>
           <Layout>
             <Row>
-              <Col span={2} className="menuSide">
+              <Col className="menuSide">
                 <MenuEvo />
               </Col>
 

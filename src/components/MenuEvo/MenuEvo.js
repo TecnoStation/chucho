@@ -22,7 +22,7 @@ export default function MenuEvo() {
     <>
       <div>
         <p>
-          <img alt="logo" src={LogoSmall} width="45" height="45" />
+          <img alt="logo" src={LogoSmall} style={{ width: "23px" }} />
         </p>
       </div>
       <div
@@ -34,7 +34,12 @@ export default function MenuEvo() {
           setBrive("brive hide");
         }}
       >
-        <img alt="ico" className="itemicon" src={Hub} />
+        <img
+          alt="ico"
+          className="itemicon"
+          style={{ width: "18px" }}
+          src={Hub}
+        />
         <p className="itemtex">{t("sidebar.organization-chart")}</p>
         <div className="slideSide">
           <span>{t("sidebar.organization-chart")}</span>
@@ -101,6 +106,9 @@ export default function MenuEvo() {
                       t("paths_organigram.areasandpositions") +
                       "?tab=1"
                     }
+                    onClick={() => {
+                      setDrop("hide");
+                    }}
                   >
                     <li>{t("areas-and-positions.create-area")}</li>
                   </Link>
@@ -112,6 +120,9 @@ export default function MenuEvo() {
                       t("paths_organigram.areasandpositions") +
                       "?tab=2"
                     }
+                    onClick={() => {
+                      setDrop("hide");
+                    }}
                   >
                     <li>{t("areas-and-positions.create-position")}</li>
                   </Link>
@@ -122,6 +133,9 @@ export default function MenuEvo() {
                       "/" +
                       t("paths_organigram.areasandpositions-collaborator")
                     }
+                    onClick={() => {
+                      setDrop("hide");
+                    }}
                   >
                     <li>{t("areas-and-positions.create-collaborator")}</li>
                   </Link>
@@ -161,7 +175,12 @@ export default function MenuEvo() {
           setBrive("brive hide");
         }}
       >
-        <img alt="ico" className="itemicon" src={Tres} />
+        <img
+          alt="ico"
+          className="itemicon"
+          style={{ width: "18px" }}
+          src={Tres}
+        />
         <p className="itemtex">{t("sidebar.evaluation360")}</p>
         <div className="slideSide">
           <span>{t("sidebar.evaluation360")}</span>
@@ -203,7 +222,12 @@ export default function MenuEvo() {
           setBrive("brive hide");
         }}
       >
-        <img alt="ico" className="itemicon" src={Insights} />
+        <img
+          alt="ico"
+          style={{ width: "18px" }}
+          className="itemicon"
+          src={Insights}
+        />
         <p className="itemtex">{t("sidebar.keyindicators")}</p>
         <div className="slideSide">
           <span>{t("sidebar.keyindicators")}</span>
@@ -224,7 +248,12 @@ export default function MenuEvo() {
           setBrive("brive hide");
         }}
       >
-        <img alt="ico" className="itemicon" src={Grupo} />
+        <img
+          alt="ico"
+          style={{ width: "18px" }}
+          className="itemicon"
+          src={Grupo}
+        />
         <p className="itemtex">{t("sidebar.nineBox")}</p>
         <div className="slideSide">
           <span>{t("sidebar.nineBox")}</span>
@@ -282,7 +311,7 @@ export default function MenuEvo() {
         </div>
       </div>
       <div className={brive}>
-        <img alt="" src={Brive} width="160" />
+        <img alt="" style={{ width: "152px" }} src={Brive} />
         <div className="allRigths">
           <p>{t("sidebar.copyright-brive")}</p>
           <p className="link">
