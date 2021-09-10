@@ -1,9 +1,18 @@
 import { Col, Row } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function DetailSuccess() {
   const [t, i18n] = useTranslation("global");
+  //------------------- data dinamics ------------------------
+  const [data, setData] = useState({
+    file: "organigrama2018.csv",
+    user: "Demo Soporte TI",
+    status: "Adjuntado con éxito",
+    totalErrors: "",
+    date: "10 MAY 2021",
+  });
+  //------------------- end data dinamics ------------------------
   return (
     <>
       <Row
@@ -41,7 +50,7 @@ export default function DetailSuccess() {
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
-              <p>organigrama2018.csv</p>
+              <p>{data.file}</p>
             </Col>
           </Row>
 
@@ -56,7 +65,7 @@ export default function DetailSuccess() {
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
-              <p>Demo Soporte TI</p>
+              <p>{data.user}</p>
             </Col>
           </Row>
 
@@ -72,7 +81,7 @@ export default function DetailSuccess() {
             </Col>
             <Col className="gutter-row" span={13}>
               <p className="iconGreen" style={{ fontWeight: "bold" }}>
-                Adjuntado con éxito
+                {data.status}
               </p>
             </Col>
           </Row>
@@ -102,7 +111,7 @@ export default function DetailSuccess() {
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
-              <p>10 MAY 2021</p>
+              <p>{data.date}</p>
             </Col>
           </Row>
         </Col>

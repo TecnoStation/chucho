@@ -1,9 +1,34 @@
 import { Col, Row } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function DetailError() {
   const [t, i18n] = useTranslation("global");
+
+  //------------------- data dinamics ------------------------
+  const [data, setData] = useState({
+    file: "organigrama2018.csv",
+    user: "Demo Soporte TI",
+    status: "ERROR",
+    totalErrors: 2 + " Errores",
+    date: "10 MAY 2021",
+    errors: [
+      {
+        iderror: 0,
+        column: "Biblioteca 2",
+        row: "6",
+        error: "Biblioteca inexistente",
+      },
+      {
+        iderror: 1,
+        column: "Biblioteca 8",
+        row: "16",
+        error: "Biblioteca inexistente",
+      },
+    ],
+  });
+  //------------------- end data dinamics ------------------------
+
   return (
     <>
       <Row
@@ -39,7 +64,7 @@ export default function DetailError() {
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
-              <p>organigrama2018.csv</p>
+              <p>{data.file}</p>
             </Col>
           </Row>
 
@@ -54,7 +79,7 @@ export default function DetailError() {
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
-              <p>Demo Soporte TI</p>
+              <p>{data.user}</p>
             </Col>
           </Row>
 
@@ -70,7 +95,7 @@ export default function DetailError() {
             </Col>
             <Col className="gutter-row" span={13}>
               <p className="iconRed" style={{ fontWeight: "bold" }}>
-                ERROR
+                {data.status}
               </p>
             </Col>
           </Row>
@@ -87,7 +112,7 @@ export default function DetailError() {
             </Col>
             <Col className="gutter-row" span={13}>
               <p className="iconRed" style={{ fontWeight: "bold" }}>
-                2 ERRORES
+                {data.totalErrors}
               </p>
             </Col>
           </Row>
@@ -102,7 +127,7 @@ export default function DetailError() {
               </p>
             </Col>
             <Col className="gutter-row" span={12}>
-              <p>10 MAY 2021</p>
+              <p>{data.date}</p>
             </Col>
           </Row>
         </Col>
@@ -139,41 +164,25 @@ export default function DetailError() {
             </Col>
           </Row>
 
-          <Row
-            className="dividerBottomFull"
-            style={{ marginTop: "20px" }}
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-          >
-            <Col className="gutter-row" span={8}>
-              <p>Biblioteca 2</p>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <p>6</p>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <p className="iconRed" style={{ fontWeight: "bold" }}>
-                Biblioteca inexistente
-              </p>
-            </Col>
-          </Row>
-
-          <Row
-            className="dividerBottomFull"
-            style={{ marginTop: "20px" }}
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-          >
-            <Col className="gutter-row" span={8}>
-              <p>Biblioteca 8</p>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <p>16</p>
-            </Col>
-            <Col className="gutter-row" span={8}>
-              <p className="iconRed" style={{ fontWeight: "bold" }}>
-                Biblioteca inexistente
-              </p>
-            </Col>
-          </Row>
+          {data.errors.map((error, index) => (
+            <Row
+              className="dividerBottomFull"
+              style={{ marginTop: "20px" }}
+              gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+            >
+              <Col className="gutter-row" span={8}>
+                <p>{error.column}</p>
+              </Col>
+              <Col className="gutter-row" span={8}>
+                <p>{error.row}</p>
+              </Col>
+              <Col className="gutter-row" span={8}>
+                <p className="iconRed" style={{ fontWeight: "bold" }}>
+                  {error.error}
+                </p>
+              </Col>
+            </Row>
+          ))}
         </Col>
       </Row>
       <div style={{ height: "100px" }}></div>

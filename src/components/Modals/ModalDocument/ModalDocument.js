@@ -3,6 +3,7 @@ import { Form, Button, Modal, Checkbox, Row, Col, Input } from "antd";
 import { Link } from "react-router-dom";
 import { PlusCircleOutlined } from "@ant-design/icons";
 import { useForm } from "antd/lib/form/Form";
+import Good from "../../../assets/img/icons/bien_hecho.svg";
 import { v4 as uuid } from "uuid";
 import DocumentsList from "./components/DocumentsList/DocumentsList";
 import { useTranslation } from "react-i18next";
@@ -27,7 +28,6 @@ function ModalDocument({ ModalDocumets, setModalDocumets }) {
   const [form] = useForm();
 
   return (
-    
     <Modal
       title={t("organigram.assign-documents.title")}
       className="smallModal"
@@ -50,6 +50,44 @@ function ModalDocument({ ModalDocumets, setModalDocumets }) {
           className="primary"
           onClick={() => {
             setModalDocumets(false);
+
+            const modal = Modal.info({
+              title: "",
+              className: "MessagesModal",
+              centered: true,
+              content: (
+                <Row style={{ marginTop: "-30px" }}>
+                  <Col span={24}>
+                    <p>
+                      <img alt="ico" className="" src={Good} />
+                    </p>
+                  </Col>
+                  <Col style={{ marginTop: "-15px" }} span={24}>
+                    <h2>
+                      <b>¡Bien hecho!</b>
+                    </h2>
+                  </Col>
+                  <Col span={24} style={{ padding: "0px 60px 0px 60px" }}>
+                    <h3>Has guardado la lista de documentos</h3>
+                  </Col>
+                  <Col span={24}>
+                    <h3></h3>
+                    <br />
+                  </Col>
+                  <Col span={24}>
+                    <Button
+                      onClick={() => {
+                        modal.destroy();
+                      }}
+                      className="primary btn"
+                    >
+                      {t("organigram.password-modal.btn-done")}
+                    </Button>
+                  </Col>
+                </Row>
+              ),
+              onOk() {},
+            });
           }}
         >
           {t("organigram.assign-documents.btn-save")}
