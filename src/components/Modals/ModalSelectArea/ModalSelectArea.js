@@ -14,9 +14,13 @@ function ModalSelectArea({ modalSelect, setModalSelect, setModalMove }) {
 
   return (
     <Modal
-      title="Selecciona el área al que los deseas mover"
+      title={
+        modalSelect.type === 0
+          ? "Selecciona el área al que los deseas mover"
+          : "Selecciona el puesto al que los deseas mover"
+      }
       visible={modalSelect}
-      centered={true}
+      centered={modalSelect.visible}
       className="selectAreaModal"
       onCancel={() => {
         setModalSelect(false);

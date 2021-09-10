@@ -26,6 +26,7 @@ import ModalPermissions from "../../components/Modals/ModalPermissions/ModalPerm
 import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import { useForm } from "antd/lib/form/Form";
 import Screens from "../../components/Screens/Screens";
+import SelectDinamic from "../../components/SelectDinamic/SelectDinamic";
 
 const { Option } = Select;
 
@@ -221,6 +222,30 @@ export default function AreasAndPositionsAddJob() {
     );
   };
 
+  //----------------- Selects Dinamic Data ------------------------------------
+
+  const data = [
+    {
+      id: 0,
+      value: "dato1",
+      name: "dato1",
+    },
+    {
+      id: 1,
+      value: "dato2",
+      name: "dato2",
+    },
+  ];
+
+  const tagRender = ({ label, closable }) => {
+    return (
+      <Tag className="tagNormal" closable={closable}>
+        {label}
+      </Tag>
+    );
+  };
+  //----------------- End Selects Dinamic Data --------------------------------
+
   return (
     <div>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
@@ -292,15 +317,12 @@ export default function AreasAndPositionsAddJob() {
                     )}
                     tooltip={info}
                   >
-                    <Select
+                    <SelectDinamic
                       placeholder={t(
                         "organigram.areasandpositions-addjob.placeholder-direction"
                       )}
-                    >
-                      <Option value="jack">Jack</Option>
-                      <Option value="lucy">Lucy</Option>
-                      <Option value="tom">Tom</Option>
-                    </Select>
+                      data={data}
+                    />
                   </Form.Item>
                 </Col>
                 <Col className="gutter-row" span={12}>
@@ -317,15 +339,12 @@ export default function AreasAndPositionsAddJob() {
                     )}
                     tooltip={infosub}
                   >
-                    <Select
+                    <SelectDinamic
                       placeholder={t(
                         "organigram.areasandpositions-addjob.placeholder-personalized"
                       )}
-                    >
-                      <Option value="jack">Jack</Option>
-                      <Option value="lucy">Lucy</Option>
-                      <Option value="tom">Tom</Option>
-                    </Select>
+                      data={data}
+                    />
                   </Form.Item>
                 </Col>
               </Row>
@@ -343,15 +362,12 @@ export default function AreasAndPositionsAddJob() {
                       "organigram.areasandpositions-addjob.label-kindposition"
                     )}
                   >
-                    <Select
+                    <SelectDinamic
                       placeholder={t(
                         "organigram.areasandpositions-addjob.placeholder-positionkey"
                       )}
-                    >
-                      <Option value="jack">Jack</Option>
-                      <Option value="lucy">Lucy</Option>
-                      <Option value="tom">Tom</Option>
-                    </Select>
+                      data={data}
+                    />
                   </Form.Item>
                 </Col>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={12}>
@@ -367,16 +383,12 @@ export default function AreasAndPositionsAddJob() {
                       "organigram.areasandpositions-addjob.label-levelrisk"
                     )}
                   >
-                    <Select
-                      className="gutter-row"
+                    <SelectDinamic
                       placeholder={t(
                         "organigram.areasandpositions-addjob.placeholder-high"
                       )}
-                    >
-                      <Option value="jack">Jack</Option>
-                      <Option value="lucy">Lucy</Option>
-                      <Option value="tom">Tom</Option>
-                    </Select>
+                      data={data}
+                    />
                   </Form.Item>
                 </Col>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={12}>
@@ -392,16 +404,12 @@ export default function AreasAndPositionsAddJob() {
                       "organigram.areasandpositions-addjob.label-levelstudies"
                     )}
                   >
-                    <Select
-                      className="gutter-row"
+                    <SelectDinamic
                       placeholder={t(
                         "organigram.areasandpositions-addjob.placeholder-educationhigher"
                       )}
-                    >
-                      <Option value="jack">Jack</Option>
-                      <Option value="lucy">Lucy</Option>
-                      <Option value="tom">Tom</Option>
-                    </Select>
+                      data={data}
+                    />
                   </Form.Item>
                 </Col>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={12}>
@@ -417,16 +425,12 @@ export default function AreasAndPositionsAddJob() {
                       "organigram.areasandpositions-addjob.label-yearsexperience"
                     )}
                   >
-                    <Select
-                      className="gutter-row"
+                    <SelectDinamic
                       placeholder={t(
                         "organigram.areasandpositions-addjob.placeholder-selec"
                       )}
-                    >
-                      <Option value="jack">Jack</Option>
-                      <Option value="lucy">Lucy</Option>
-                      <Option value="tom">Tom</Option>
-                    </Select>
+                      data={data}
+                    />
                   </Form.Item>
                 </Col>
               </Row>
@@ -446,30 +450,23 @@ export default function AreasAndPositionsAddJob() {
               </Col>
             </Row>
 
-            <Row style={{ marginBottom: "10px" }}>
-              <Col span={24}>
-                <Tag className="tagNormal" closable>
-                  QuickBooks
-                </Tag>{" "}
-                <Tag className="tagNormal" closable>
-                  Suite Office
-                </Tag>
-              </Col>
-            </Row>
-
             <Row>
               <Col span={24}>
                 <Form.Item
-                  name="habilidades"
-                  label={t(
-                    "organigram.areasandpositions-addjob.label-skilltech"
-                  )}
+                  name="skills"
+                  rules={[
+                    {
+                      required: true,
+                      message: "*Campo requerido",
+                    },
+                  ]}
+                  label={t("organigram.collaborator-form.skills-label")}
                 >
-                  <Input
-                    type="text"
-                    id="habilidades"
+                  <Select
+                    mode="tags"
+                    tagRender={tagRender}
                     placeholder={t(
-                      "organigram.areasandpositions-addjob.placeholder-word"
+                      "organigram.collaborator-form.skills-placeholder"
                     )}
                   />
                 </Form.Item>
@@ -486,30 +483,23 @@ export default function AreasAndPositionsAddJob() {
               </Col>
             </Row>
 
-            <Row style={{ marginBottom: "10px" }}>
-              <Col span={24}>
-                <Tag className="tagNormal" closable>
-                  Ingles avanzado
-                </Tag>{" "}
-                <Tag className="tagNormal" closable>
-                  Frances
-                </Tag>
-              </Col>
-            </Row>
-
             <Row>
               <Col span={24}>
                 <Form.Item
-                  name="idiomas"
-                  label={t(
-                    "organigram.areasandpositions-addjob.lavel-languages"
-                  )}
+                  name="languajes"
+                  rules={[
+                    {
+                      required: true,
+                      message: "*Campo requerido",
+                    },
+                  ]}
+                  label={t("organigram.collaborator-form.languajes-label")}
                 >
-                  <Input
-                    type="text"
-                    id="idiomas"
+                  <Select
+                    mode="tags"
+                    tagRender={tagRender}
                     placeholder={t(
-                      "organigram.areasandpositions-addjob.placeholder-english"
+                      "organigram.collaborator-form.languajes-placeholder"
                     )}
                   />
                 </Form.Item>
@@ -559,7 +549,9 @@ export default function AreasAndPositionsAddJob() {
                   }}
                 >
                   <PlusCircleOutlined />{" "}
-                  {t("organigram.areasandpositions-addjob.link-addcompeten")}
+                  <span style={{ marginLeft: "8px" }}>
+                    {t("organigram.areasandpositions-addjob.link-addcompetens")}
+                  </span>
                 </Link>
               </Col>
             </Row>
@@ -593,7 +585,9 @@ export default function AreasAndPositionsAddJob() {
                   }}
                 >
                   <PlusCircleOutlined />{" "}
-                  {t("organigram.areasandpositions-addjob.link-addcompetens")}
+                  <span style={{ marginLeft: "8px" }}>
+                    {t("organigram.areasandpositions-addjob.link-addcompetens")}
+                  </span>
                 </Link>
               </Col>
             </Row>

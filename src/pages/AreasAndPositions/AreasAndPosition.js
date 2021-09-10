@@ -28,6 +28,7 @@ export default function AreasAndPositions() {
 
   const tabs = ["1", "2"];
   const [Active, setActive] = useState(tabState);
+  const [text, setText] = useState("¿Estás listo? Agrega tu primer área");
 
   const changeActive = () => {
     query.set("tab", 2);
@@ -149,6 +150,12 @@ export default function AreasAndPositions() {
 
   //----------------- End Filter Job ------------------------------------------
 
+  //------------------- setAreas -------------------------------------------
+  const [viewPositions, setviewPositions] = useState("hide");
+  const [areaPosition, setAreaPosition] = useState("");
+
+  //------------------- end setAreas -------------------------------------------
+
   return (
     <>
       <Tabs
@@ -245,6 +252,8 @@ export default function AreasAndPositions() {
 
                     <div>
                       <AreasList
+                        setviewPositions={setviewPositions}
+                        setAreaPosition={setAreaPosition}
                         setModalMove={setModalMove}
                         Areas={Areas}
                         setArea={setArea}
@@ -285,15 +294,12 @@ export default function AreasAndPositions() {
                           to="#"
                           onClick={() => {
                             setinputArea("show");
+                            setText("Agregar nueva área");
                           }}
                         >
                           {" "}
                           <PlusCircleOutlined />{" "}
-                          <span style={{ marginLeft: "8px" }}>
-                            {t(
-                              "organigram.areas-and-positions.structure.link-add-new-area"
-                            )}
-                          </span>
+                          <span style={{ marginLeft: "8px" }}>{text}</span>
                         </Link>
                       </Col>
                     </Row>
@@ -301,14 +307,15 @@ export default function AreasAndPositions() {
                 </Col>
 
                 <Col
-                  className="gutter-row dividerLeft"
+                  className={"gutter-row dividerLeft " + viewPositions}
                   style={{ textAlign: "left" }}
                   span={13}
                 >
-                  <h2 className="title2">
+                  <h2 className="title2" style={{ display: "" }}>
                     {t(
                       "organigram.areas-and-positions.structure.positions-in-area"
                     )}
+                    <span> {areaPosition}</span>
                   </h2>
                   <p className="secondaryText">
                     {t(
@@ -571,11 +578,12 @@ export default function AreasAndPositions() {
                       setAddJob("show formPos");
                     }}
                   >
-                    <PlusCircleOutlined className="iconsize" />{" "}
-                    {t(
-                      "organigram.areas-and-positions.position.link-add-new-position"
-                    )}
-                    del puesto
+                    <PlusCircleOutlined className="iconsize" />
+                    <span style={{ marginLeft: "8px" }}>
+                      {t(
+                        "organigram.areas-and-positions.position.link-add-new-position"
+                      )}
+                    </span>
                   </Link>
                 </Col>
               </Row>

@@ -19,6 +19,9 @@ function SubAreasList2({
   setinputSubArea,
   showInput,
   index,
+  setAreaPosition,
+  item,
+  setviewPositions,
 }) {
   const [modalMoveSub, setModalMoveSub] = useState(false);
   const editS = (e, subArea) => {
@@ -39,10 +42,14 @@ function SubAreasList2({
     <>
       <Row
         onMouseOver={() => {
-          setColorIcon("iconGreen");
+          document
+            .getElementById("IoMdSquareS" + item)
+            .setAttribute("style", "color: #2cccd3");
         }}
         onMouseOut={() => {
-          setColorIcon("iconGray");
+          document
+            .getElementById("IoMdSquareS" + item)
+            .setAttribute("style", "color: #5e6d88");
         }}
         style={{
           marginTop: "20px",
@@ -52,8 +59,16 @@ function SubAreasList2({
       >
         <Col span={24}>
           <Row className="subareasdiv">
-            <Col span={18} style={{ textAlign: "left" }}>
-              <IoMdSquare className={colorIcon} /> {subArea.subareaName}
+            <Col
+              span={18}
+              onClick={() => {
+                setAreaPosition(subArea.subareaName);
+                setviewPositions("showBlock");
+              }}
+              style={{ textAlign: "left" }}
+            >
+              <IoMdSquare id={"IoMdSquareS" + item} className={colorIcon} />{" "}
+              {subArea.subareaName}
             </Col>
             <Col
               style={{

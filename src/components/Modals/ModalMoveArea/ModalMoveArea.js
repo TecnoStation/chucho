@@ -15,6 +15,23 @@ function ModalMoveArea({
 }) {
   const [t, i18n] = useTranslation("global");
   const [modalSelect, setModalSelect] = useState(false);
+  const [collaboratorsArea, setCollaboratorsArea] = useState([
+    {
+      idCollaborator: 0,
+      name: "Laura Mendoza",
+      position: "Programador JR",
+    },
+    {
+      idCollaborator: 1,
+      name: "Chilindrina",
+      position: "Psicologa",
+    },
+    {
+      idCollaborator: 2,
+      name: "Juan charrasquiado",
+      position: "Lider de proyecto",
+    },
+  ]);
 
   return (
     <>
@@ -38,7 +55,7 @@ function ModalMoveArea({
                 type: 0,
                 messageWarning:
                   modalMove.mode === 2
-                    ? "Estas a punto de dar de baja a  [número] los colaboradores"
+                    ? "Estas a punto de dar de baja a  [número] colaboradores"
                     : modalMove.mode === 5
                     ? "Estas a punto de dar de baja al colaborador [Nombre del colaborador]"
                     : "Estas a punto de dar de baja a los colaboradores",
@@ -58,6 +75,47 @@ function ModalMoveArea({
                       (item) => item.idPositionInfo !== modalMove.idPositionInfo
                     );
                     setPositionsInfo(arrayFilter);
+
+                    const modal = Modal.info({
+                      title: "",
+                      className: "MessagesModal",
+                      centered: true,
+                      content: (
+                        <Row style={{ marginTop: "-15px" }}>
+                          <Col span={24}>
+                            <p>
+                              <img alt="ico" className="" src={Good} />
+                            </p>
+                          </Col>
+                          <Col style={{ marginTop: "0px" }} span={24}>
+                            <h2>
+                              <b>¡Completado!</b>
+                            </h2>
+                          </Col>
+                          <Col
+                            span={24}
+                            style={{ padding: "0px 60px 0px 60px" }}
+                          >
+                            <h3>Has eliminado a los colaboradores</h3>
+                          </Col>
+                          <Col span={24}>
+                            <h3></h3>
+                          </Col>
+                          <Col span={24}>
+                            <Button
+                              style={{ marginRight: "15px" }}
+                              onClick={() => {
+                                modal.destroy();
+                              }}
+                              className="primary btn"
+                            >
+                              {t("organigram.password-modal.btn-done")}
+                            </Button>
+                          </Col>
+                        </Row>
+                      ),
+                      onOk() {},
+                    });
                   } else if (modalMove.mode === 5) {
                     const modal = Modal.info({
                       title: "",
@@ -114,7 +172,10 @@ function ModalMoveArea({
           <Button
             style={{ width: "180px" }}
             onClick={() => {
-              setModalSelect(true);
+              setModalSelect({
+                visible: true,
+                type: modalMove.type,
+              });
               setModalMove(false);
             }}
             className="primary"
@@ -124,52 +185,27 @@ function ModalMoveArea({
         ]}
       >
         <Row>
-          <Col span={12}>
-            <Row>
-              <Col span={7}>
-                <p>
-                  <img alt="ico" width="50" src={Avatar} />
-                </p>
-              </Col>
-              <Col span={15}>
-                <span>
-                  <b>Laura Mendoza</b>
-                </span>
-                <br />
-                <span>Programador JR</span>
-              </Col>
-            </Row>
-            <Row>
-              <Col span={7}>
-                <p>
-                  <img alt="ico" width="50" src={Avatar} />
-                </p>
-              </Col>
-              <Col span={15}>
-                <span>
-                  <b>Laura Mendoza</b>
-                </span>
-                <br />
-                <span>Programador JR</span>
-              </Col>
-            </Row>
-            <Row>
-              <Col span={7}>
-                <p>
-                  <img alt="ico" width="50" src={Avatar} />
-                </p>
-              </Col>
-              <Col span={15}>
-                <span>
-                  <b>Laura Mendoza</b>
-                </span>
-                <br />
-                <span>Programador JR</span>
-              </Col>
-            </Row>
+          <Col span={14} style={{ textAlign: "left" }}>
+            {collaboratorsArea.map((collaborator, index) => (
+              <Row>
+                <Col span={6}>
+                  <p>
+                    <img alt="ico" width="50" src={Avatar} />
+                  </p>
+                </Col>
+                <Col span={18}>
+                  <span>
+                    <b>{collaborator.name}</b>
+                  </span>
+                  <br />
+                  <span>{collaborator.position}</span>
+                </Col>
+              </Row>
+            ))}
+
             <br />
           </Col>
-          <Col span={12}></Col>
+          <Col span={10}></Col>
         </Row>
       </Modal>
       <ModalSelectArea
