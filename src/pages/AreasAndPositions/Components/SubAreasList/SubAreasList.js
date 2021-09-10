@@ -116,6 +116,7 @@ function SubAreasList2({
                     visible: true,
                     idSubArea: subArea.idSubArea,
                     mode: 1,
+                    type: 0,
                     subAreas: subAreas,
                     modalTitle:
                       "¿Qué deseas hacer con los colaboradores que pertenecen a esta subárea?",

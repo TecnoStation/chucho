@@ -154,6 +154,7 @@ function AreasList({
                   setModalMove({
                     visible: true,
                     mode: 0,
+                    type: 0,
                     idArea: area.idArea,
                     Areas: Areas,
                     modalTitle:

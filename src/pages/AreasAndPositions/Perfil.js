@@ -326,6 +326,139 @@ export default function Perfil() {
     </Menu>
   );
 
+  // ------------------------- data dinamic ------------------------------
+
+  const [dataUser, setDataUser] = useState({
+    idUser: 0,
+    name: "Marco Antonio Ramirez Perez",
+    position: "Director de Mercadotecnia y Publicidad",
+    email: "mramirez@empresa.org",
+  });
+
+  const [dataCollaborator, setDataCollaborator] = useState({
+    idCollaborator: 0,
+    birthday: "29-jun-1987",
+    start: "01-ENE-2015",
+    gender: "Masculino",
+    mariedState: "Soltero",
+    nationality: "Mexicana",
+    city: "Ciudad de México",
+  });
+
+  const [dataPosition, setDataPosition] = useState({
+    idPosition: 0,
+    positionLevel: "Gerente",
+    chargeLevel: "Gerente A",
+    positionType: "Puesto clave",
+    riskLevel: "Medio",
+    branch: "CDMX",
+    area: "Marketing",
+    reportTo: "Dirección General del Corporativo",
+    email: "nombre@empresa.com",
+  });
+
+  const [dataSkillsPosition, setDataSkillsPosition] = useState({
+    idSkillsPosition: 0,
+    studyLevel: "Gerente",
+    years: "Gerente A",
+    languajes: [
+      {
+        idLanguaje: 0,
+        name: "Ingles-Avanzado",
+      },
+      {
+        idLanguaje: 1,
+        name: "Chino-Básico",
+      },
+    ],
+    techniquesSkills: [
+      {
+        idTechniqueSkill: 0,
+        name: "Photoshop - Avanzado",
+        level: 1,
+      },
+      {
+        idTechniqueSkill: 1,
+        name: "Illustrator - Medio",
+        level: 1,
+      },
+      {
+        idTechniqueSkill: 2,
+        name: "Tweetdeck",
+        level: 1,
+      },
+      {
+        idTechniqueSkill: 3,
+        name: "Hootsuite - Avanzado",
+        level: 2,
+      },
+      {
+        idTechniqueSkill: 4,
+        name: "Microsoft Office",
+        level: 1,
+      },
+      {
+        idTechniqueSkill: 5,
+        name: "Uso de algoritmos",
+        level: 1,
+      },
+      {
+        idTechniqueSkill: 6,
+        name: "Uso de fórmulas",
+        level: 2,
+      },
+      {
+        idTechniqueSkill: 7,
+        name: "Uso de aparatos",
+        level: 1,
+      },
+      {
+        idTechniqueSkill: 8,
+        name: "Prezi",
+        level: 1,
+      },
+      {
+        idTechniqueSkill: 9,
+        name: "After Effects",
+        level: 3,
+      },
+    ],
+    competences: [
+      {
+        idCompetence: 0,
+        name: "Creatividad",
+        type: "INSTITU",
+      },
+      {
+        idCompetence: 1,
+        name: "Solución de Problemas - Desarrolla Alterna",
+        type: "INSTITU",
+      },
+      {
+        idCompetence: 2,
+        name: "Actitud de servicio",
+        type: "NIVEL",
+      },
+      {
+        idCompetence: 3,
+        name: "Apego a Normas",
+        type: "NIVEL",
+      },
+      {
+        idCompetence: 4,
+        name: "Iniciativa",
+        type: "PUESTO",
+      },
+      {
+        idCompetence: 5,
+        name: "Liderazgo - Supervisión de Procesos",
+        type: "PUESTO",
+      },
+    ],
+  });
+
+  // ------------------------- end data dinamic ------------------------------
+
   return (
     <>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
@@ -337,13 +470,11 @@ export default function Perfil() {
               </p>
             </Col>
             <Col className="gutter-row" span={18}>
-              <span>{t("organigram.areasandpositions-perfil.tab1.text1")}</span>
+              <span>{dataUser.name}</span>
               <br></br>
-              <span>{t("organigram.areasandpositions-perfil.tab1.text2")}</span>
+              <span>{dataUser.position}</span>
               <br></br>
-              <span className="iconGreen">
-                {t("organigram.areasandpositions-perfil.tab1.positions-mail")}
-              </span>
+              <span className="iconGreen">{dataUser.email}</span>
               <br></br>
             </Col>
             <Col className="gutter-row" span={2}>
@@ -370,7 +501,7 @@ export default function Perfil() {
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={24}>
+            <Col id="tabHeadPerfil" className="gutter-row" span={24}>
               <Tabs defaultActiveKey="1" onChange={callback}>
                 <TabPane tab="Información colaborador" key="1">
                   <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
@@ -381,7 +512,7 @@ export default function Perfil() {
                         )}
                       </b>
                       <br></br>
-                      <span>29-jun-1987</span>
+                      <span>{dataCollaborator.birthday}</span>
                     </Col>
                     <Col className="gutter-row" span={12}>
                       <b>
@@ -390,7 +521,7 @@ export default function Perfil() {
                         )}
                       </b>
                       <br></br>
-                      <span>01-ENE-2015</span>
+                      <span>{dataCollaborator.start}</span>
                     </Col>
                   </Row>
 
@@ -403,7 +534,7 @@ export default function Perfil() {
                         {t("organigram.areasandpositions-perfil.tab1.gender")}
                       </b>
                       <br></br>
-                      <span>Masculino</span>
+                      <span>{dataCollaborator.gender}</span>
                     </Col>
                     <Col className="gutter-row" span={12}>
                       <b>
@@ -412,7 +543,7 @@ export default function Perfil() {
                         )}
                       </b>
                       <br></br>
-                      <span>Soltero</span>
+                      <span>{dataCollaborator.mariedState}</span>
                     </Col>
                   </Row>
 
@@ -427,14 +558,14 @@ export default function Perfil() {
                         )}
                       </b>
                       <br></br>
-                      <span>Mexicana</span>
+                      <span>{dataCollaborator.nationality}</span>
                     </Col>
                     <Col className="gutter-row" span={12}>
                       <b>
                         {t("organigram.areasandpositions-perfil.tab1.city")}
                       </b>
                       <br></br>
-                      <span>Ciudad de México</span>
+                      <span>{dataCollaborator.city}</span>
                     </Col>
                   </Row>
 
@@ -590,11 +721,7 @@ export default function Perfil() {
                         )}
                       </b>
                       <br></br>
-                      <span>
-                        {t(
-                          "organigram.areasandpositions-perfil.tab1.tab2.manager"
-                        )}
-                      </span>
+                      <span>{dataPosition.positionLevel}</span>
                     </Col>
                     <Col>
                       <b>
@@ -603,11 +730,7 @@ export default function Perfil() {
                         )}
                       </b>
                       <br></br>
-                      <span>
-                        {t(
-                          "organigram.areasandpositions-perfil.tab1.tab2.manager-a"
-                        )}
-                      </span>
+                      <span>{dataPosition.chargeLevel}</span>
                     </Col>
                   </Row>
 
@@ -622,11 +745,7 @@ export default function Perfil() {
                         )}
                       </b>
                       <br></br>
-                      <span>
-                        {t(
-                          "organigram.areasandpositions-perfil.tab1.tab2.position-key"
-                        )}
-                      </span>
+                      <span>{dataPosition.positionType}</span>
                     </Col>
                     <Col>
                       <b>
@@ -635,11 +754,7 @@ export default function Perfil() {
                         )}
                       </b>
                       <br></br>
-                      <span>
-                        {t(
-                          "organigram.areasandpositions-perfil.tab1.tab2.half"
-                        )}
-                      </span>
+                      <span>{dataPosition.riskLevel}</span>
                     </Col>
                   </Row>
 
@@ -654,11 +769,7 @@ export default function Perfil() {
                         )}
                       </b>
                       <br></br>
-                      <span>
-                        {t(
-                          "organigram.areasandpositions-perfil.tab1.tab2.town"
-                        )}
-                      </span>
+                      <span>{dataPosition.branch}</span>
                     </Col>
                     <Col>
                       <b>
@@ -667,11 +778,7 @@ export default function Perfil() {
                         )}
                       </b>
                       <br></br>
-                      <span>
-                        {t(
-                          "organigram.areasandpositions-perfil.tab1.tab2.marketing"
-                        )}
-                      </span>
+                      <span>{dataPosition.area}</span>
                     </Col>
                   </Row>
 
@@ -686,11 +793,7 @@ export default function Perfil() {
                         )}
                       </b>
                       <br></br>
-                      <span>
-                        {t(
-                          "organigram.areasandpositions-perfil.tab1.tab2.direction-corporate"
-                        )}
-                      </span>
+                      <span>{dataPosition.reportTo}</span>
                     </Col>
                   </Row>
 
@@ -705,11 +808,7 @@ export default function Perfil() {
                         )}
                       </b>
                       <br></br>
-                      <span>
-                        {t(
-                          "organigram.areasandpositions-perfil.tab1.tab2.name-mail"
-                        )}
-                      </span>
+                      <span>{dataPosition.email}</span>
                     </Col>
                   </Row>
                 </TabPane>
@@ -748,14 +847,16 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={12}>
               <span>
-                <b>
+                <b className="secondaryText">
                   {t("organigram.areasandpositions-perfil.tab1.level-studies")}
                 </b>
               </span>
             </Col>
             <Col className="gutter-row" span={12}>
               <span>
-                <b>{t("organigram.areasandpositions-perfil.tab1.years")}</b>
+                <b className="secondaryText">
+                  {t("organigram.areasandpositions-perfil.tab1.years")}
+                </b>
               </span>
             </Col>
           </Row>
@@ -768,7 +869,9 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={12}>
               <span>
-                <b>{t("organigram.areasandpositions-perfil.tab1.languages")}</b>
+                <b className="secondaryText">
+                  {t("organigram.areasandpositions-perfil.tab1.languages")}
+                </b>
               </span>
               <br />
             </Col>
@@ -795,7 +898,7 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={12}>
               <span>
-                <b>
+                <b className="secondaryText">
                   {t(
                     "organigram.areasandpositions-perfil.tab1.skills-techniques"
                   )}
@@ -823,7 +926,7 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={12}>
               <span>
-                <b>
+                <b className="secondaryText">
                   {t(
                     "organigram.areasandpositions-perfil.tab1.experience-labor"
                   )}
@@ -839,7 +942,10 @@ export default function Perfil() {
               >
                 {" "}
                 <PlusCircleOutlined />{" "}
-                {t("organigram.areasandpositions-perfil.tab1.add-experience")}
+                <span style={{ marginLeft: "8px" }}>
+                  {" "}
+                  {t("organigram.areasandpositions-perfil.tab1.add-experience")}
+                </span>
               </Link>
             </Col>
           </Row>
@@ -884,16 +990,12 @@ export default function Perfil() {
                 {t("organigram.areasandpositions-perfil.tab1.tab2.level-study")}
               </b>
               <br></br>
-              <span>
-                {t("organigram.areasandpositions-perfil.tab1.tab2.bachelor")}
-              </span>
+              <span>{dataSkillsPosition.studyLevel}</span>
             </Col>
             <Col className="gutter-row" span={12}>
               <b>{t("organigram.areasandpositions-perfil.tab1.tab2.years")}</b>
               <br></br>
-              <span>
-                {t("organigram.areasandpositions-perfil.tab1.tab2.eight-years")}
-              </span>
+              <span>{dataSkillsPosition.years}</span>
             </Col>
           </Row>
 
@@ -910,8 +1012,11 @@ export default function Perfil() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Tag className="tagNormal">Ingles-Avanzado</Tag>
-              <Tag className="tagNormal">Chino-Básico</Tag>
+              {dataSkillsPosition.languajes.map((languaje, index) => (
+                <Tag key={index} className="tagNormal">
+                  {languaje.name}
+                </Tag>
+              ))}
             </Col>
           </Row>
 
@@ -930,16 +1035,21 @@ export default function Perfil() {
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <Tag className="tagNormal">Photoshop - Avanzado</Tag>
-              <Tag className="tagNormal">Illustrator - Medio</Tag>
-              <Tag className="tagNormal">Tweetdeck</Tag>
-              <Tag className="tagNormal TagAreaGreen">Hootsuite - Avanzado</Tag>
-              <Tag className="tagNormal">Microsoft Office </Tag>
-              <Tag className="tagNormal">Uso de algoritmos</Tag>
-              <Tag className="tagNormal TagAreaGreen">Uso de fórmulas</Tag>
-              <Tag className="tagNormal">Uso de aparatos</Tag>
-              <Tag className="tagNormal">Prezi</Tag>
-              <Tag className="tagNormal TagAreaRed">After Effects</Tag>
+              {dataSkillsPosition.techniquesSkills.map((skill, index) =>
+                skill.level === 2 ? (
+                  <Tag key={index} className="tagNormal TagAreaGreen">
+                    {skill.name}
+                  </Tag>
+                ) : skill.level === 3 ? (
+                  <Tag key={index} className="tagNormal TagAreaRed">
+                    {skill.name}
+                  </Tag>
+                ) : (
+                  <Tag key={index} className="tagNormal">
+                    {skill.name}
+                  </Tag>
+                )
+              )}
             </Col>
           </Row>
 
@@ -956,82 +1066,21 @@ export default function Perfil() {
             </Col>
           </Row>
 
-          <Row
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-            className="dividerBottomFull"
-            style={{ marginTop: "20px" }}
-          >
-            <Col className="gutter-row" span={19}>
-              <span>Creatividad</span>
-            </Col>
-            <Col className="gutter-row" span={5}>
-              <span>INSTITU</span>
-            </Col>
-          </Row>
-
-          <Row
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-            className="dividerBottomFull"
-            style={{ marginTop: "20px" }}
-          >
-            <Col className="gutter-row" span={19}>
-              <span>Solución de Problemas - Desarrolla Alterna</span>
-            </Col>
-            <Col className="gutter-row" span={5}>
-              <span>INSTITU</span>
-            </Col>
-          </Row>
-
-          <Row
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-            className="dividerBottomFull"
-            style={{ marginTop: "20px" }}
-          >
-            <Col className="gutter-row" span={19}>
-              <span>Actitud de servicio</span>
-            </Col>
-            <Col className="gutter-row" span={5}>
-              <span>NIVEL</span>
-            </Col>
-          </Row>
-
-          <Row
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-            className="dividerBottomFull"
-            style={{ marginTop: "20px" }}
-          >
-            <Col className="gutter-row" span={19}>
-              <span>Apego a Normas</span>
-            </Col>
-            <Col className="gutter-row" span={5}>
-              <span>NIVEL</span>
-            </Col>
-          </Row>
-
-          <Row
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-            className="dividerBottomFull"
-            style={{ marginTop: "20px" }}
-          >
-            <Col className="gutter-row" span={19}>
-              <span>Iniciativa</span>
-            </Col>
-            <Col className="gutter-row" span={5}>
-              <span>PUESTO</span>
-            </Col>
-          </Row>
-
-          <Row
-            gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-            style={{ marginTop: "20px" }}
-          >
-            <Col className="gutter-row" span={18}>
-              <span>Liderazgo - Supervisión de Procesos</span>
-            </Col>
-            <Col className="gutter-row" span={6}>
-              <span>PUESTO</span>
-            </Col>
-          </Row>
+          {dataSkillsPosition.competences.map((competencie, index) => (
+            <Row
+              key={index}
+              gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+              className="dividerBottomFull"
+              style={{ marginTop: "20px" }}
+            >
+              <Col className="gutter-row" span={19}>
+                <span>{competencie.name}</span>
+              </Col>
+              <Col className="gutter-row" span={5}>
+                <span>{competencie.type}</span>
+              </Col>
+            </Row>
+          ))}
         </Col>
         {
           //---------------------------------flag 3------------
