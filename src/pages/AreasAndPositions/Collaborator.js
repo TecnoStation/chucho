@@ -9,6 +9,7 @@ import {
   Input,
   Button,
   Tag,
+  Modal,
 } from "antd";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import More from "../../assets/img/icons/more_vert-24px.svg";
@@ -21,6 +22,8 @@ import ModalPermissions from "../../components/Modals/ModalPermissions/ModalPerm
 import ModalDocument from "../../components/Modals/ModalDocument/ModalDocument";
 import ModalMoveArea from "../../components/Modals/ModalMoveArea/ModalMoveArea";
 import SelectDinamic from "../../components/SelectDinamic/SelectDinamic";
+import Good from "../../assets/img/icons/bien_hecho.svg";
+
 const { Option } = Select;
 
 export default function Collaborator() {
@@ -103,8 +106,7 @@ export default function Collaborator() {
                   setModalMove({
                     visible: true,
                     mode: 5,
-                    modalTitle:
-                    t("organigram.delete-collaborator.tex2"),
+                    modalTitle: t("organigram.delete-collaborator.tex2"),
                   });
                   // history.push({
                   //   pathname:
@@ -129,7 +131,52 @@ export default function Collaborator() {
     screen.setAttribute("style", "display: flex;");
   };
   const onFinish = (values) => {
-    showmessage();
+    // showmessage();
+    const modal = Modal.info({
+      title: "",
+      className: "MessagesModal",
+      centered: true,
+      content: (
+        <Row style={{ marginTop: "-30px" }}>
+          <Col span={24}>
+            <p>
+              <img alt="ico" className="" src={Good} />
+            </p>
+          </Col>
+          <Col style={{ marginTop: "-15px" }} span={24}>
+            <h2>
+              <h3>{t("organigram.collaborator-form.well-done")}</h3>
+            </h2>
+          </Col>
+          <Col span={24} style={{ padding: "0px 60px 0px 60px" }}>
+            <h3>{t("organigram.collaborator-form.organization-created")}</h3>
+          </Col>
+          <Col span={24}>
+            <h3></h3>
+            <br />
+          </Col>
+          <Col span={24}>
+            <Button
+              style={{ width: "50%" }}
+              onClick={() => {
+                modal.destroy();
+                history.push({
+                  pathname:
+                    "/" +
+                    t("routes.organigram") +
+                    "/" +
+                    t("paths_organigram.organigram"),
+                });
+              }}
+              className="primary btn"
+            >
+              {t("organigram.password-modal.btn-done")}
+            </Button>
+          </Col>
+        </Row>
+      ),
+      onOk() {},
+    });
   };
 
   const tagRender = ({ label, closable }) => {
@@ -618,7 +665,7 @@ export default function Collaborator() {
             </Col>
           </Row>
         </Col>
-        <Screendefault>
+        {/* <Screendefault>
           <p style={{ textAlign: "center" }}>
             <img alt="ico" width="140" src={Bien} />
           </p>
@@ -637,7 +684,7 @@ export default function Collaborator() {
               {t("organigram.collaborator-form.btn-done")}
             </Button>
           </Link>
-        </Screendefault>
+        </Screendefault> */}
       </Row>
 
       <ModalPermissions
