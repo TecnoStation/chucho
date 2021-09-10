@@ -501,7 +501,7 @@ export default function Perfil() {
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={24}>
+            <Col id="tabHeadPerfil" className="gutter-row" span={24}>
               <Tabs defaultActiveKey="1" onChange={callback}>
                 <TabPane tab="Información colaborador" key="1">
                   <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
@@ -847,14 +847,16 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={12}>
               <span>
-                <b>
+                <b className="secondaryText">
                   {t("organigram.areasandpositions-perfil.tab1.level-studies")}
                 </b>
               </span>
             </Col>
             <Col className="gutter-row" span={12}>
               <span>
-                <b>{t("organigram.areasandpositions-perfil.tab1.years")}</b>
+                <b className="secondaryText">
+                  {t("organigram.areasandpositions-perfil.tab1.years")}
+                </b>
               </span>
             </Col>
           </Row>
@@ -867,7 +869,9 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={12}>
               <span>
-                <b>{t("organigram.areasandpositions-perfil.tab1.languages")}</b>
+                <b className="secondaryText">
+                  {t("organigram.areasandpositions-perfil.tab1.languages")}
+                </b>
               </span>
               <br />
             </Col>
@@ -894,7 +898,7 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={12}>
               <span>
-                <b>
+                <b className="secondaryText">
                   {t(
                     "organigram.areasandpositions-perfil.tab1.skills-techniques"
                   )}
@@ -922,7 +926,7 @@ export default function Perfil() {
           >
             <Col className="gutter-row" span={12}>
               <span>
-                <b>
+                <b className="secondaryText">
                   {t(
                     "organigram.areasandpositions-perfil.tab1.experience-labor"
                   )}
@@ -938,7 +942,10 @@ export default function Perfil() {
               >
                 {" "}
                 <PlusCircleOutlined />{" "}
-                {t("organigram.areasandpositions-perfil.tab1.add-experience")}
+                <span style={{ marginLeft: "8px" }}>
+                  {" "}
+                  {t("organigram.areasandpositions-perfil.tab1.add-experience")}
+                </span>
               </Link>
             </Col>
           </Row>
