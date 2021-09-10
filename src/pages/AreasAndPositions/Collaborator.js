@@ -104,7 +104,7 @@ export default function Collaborator() {
                     visible: true,
                     mode: 5,
                     modalTitle:
-                      "¿Qué deseas hacer con los colaboradores que pertenecen a esta área?",
+                    t("organigram.delete-collaborator.tex2"),
                   });
                   // history.push({
                   //   pathname:

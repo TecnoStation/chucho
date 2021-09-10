@@ -283,7 +283,7 @@ export default function AreasAndPositionsAddJob() {
                     rules={[
                       {
                         required: true,
-                        message: "*Campo requerido",
+                        message: t("field-requiered"),
                       },
                     ]}
                     name="activity"
@@ -308,7 +308,7 @@ export default function AreasAndPositionsAddJob() {
                     rules={[
                       {
                         required: true,
-                        message: "*Campo requerido",
+                        message: t("field-requiered"),
                       },
                     ]}
                     name="subactivity"
@@ -335,7 +335,7 @@ export default function AreasAndPositionsAddJob() {
                     rules={[
                       {
                         required: true,
-                        message: "*Campo requerido",
+                        message: t("field-requiered"),
                       },
                     ]}
                     name="size"
@@ -359,7 +359,7 @@ export default function AreasAndPositionsAddJob() {
                     rules={[
                       {
                         required: true,
-                        message: "*Campo requerido",
+                        message: t("field-requiered"),
                       },
                     ]}
                     name="levelRisk"
@@ -384,7 +384,7 @@ export default function AreasAndPositionsAddJob() {
                     rules={[
                       {
                         required: true,
-                        message: "*Campo requerido",
+                        message: t("field-requiered"),
                       },
                     ]}
                     name="studyLevel"
@@ -409,7 +409,7 @@ export default function AreasAndPositionsAddJob() {
                     rules={[
                       {
                         required: true,
-                        message: "*Campo requerido",
+                        message: t("field-requiered"),
                       },
                     ]}
                     name="yearsExperencie"
