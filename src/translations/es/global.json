@@ -462,6 +462,7 @@
             "text": "Al eliminar un colaborador de tu organización ya no formará parte de tu organizacion.",
             "insert-password": "Ingresa tu contraseña de usuario",
             "insert-password-placeholder": "Ej. Ghkcclsd23",
+            "tex2": "¿Qué deseas hacer con los colaboradores que pertenecen a esta área?",
             "btn-cancel": "Cancelar",
             "btn-save": "Ingresar",
             "warning": {
