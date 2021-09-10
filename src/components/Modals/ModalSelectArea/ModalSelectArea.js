@@ -16,8 +16,8 @@ function ModalSelectArea({ modalSelect, setModalSelect, setModalMove }) {
     <Modal
       title={
         modalSelect.type === 0
-          ? "Selecciona el área al que los deseas mover"
-          : "Selecciona el puesto al que los deseas mover"
+          ? t("organigram.delete-collaborator.modal-collaborator.tex1")
+          : t("organigram.delete-collaborator.modal-collaborator.tex")
       }
       visible={modalSelect}
       centered={modalSelect.visible}
@@ -35,7 +35,7 @@ function ModalSelectArea({ modalSelect, setModalSelect, setModalMove }) {
                 setModalSelect(false);
               }}
             >
-              Cancelar
+              {t("organigram.password-modal.btn-cancel")}
             </Button>
 
             <Button
@@ -57,7 +57,7 @@ function ModalSelectArea({ modalSelect, setModalSelect, setModalMove }) {
                       </Col>
                       <Col style={{ marginTop: "0px" }} span={24}>
                         <h2>
-                          <b>Colaboradores reubicados</b>
+                          <b>{t("organigram.delete-collaborator.modal-collaborator.collaborators")}</b>
                         </h2>
                       </Col>
                       <Col span={24}>
@@ -84,7 +84,7 @@ function ModalSelectArea({ modalSelect, setModalSelect, setModalMove }) {
                 });
               }}
             >
-              Mover
+               {t("organigram.delete-collaborator.modal-collaborator.btn-move")}
             </Button>
           </Col>
         </Row>,
@@ -94,7 +94,7 @@ function ModalSelectArea({ modalSelect, setModalSelect, setModalMove }) {
         <Form.Item name="password" label="">
           <AutoComplete
             className="autoComplete"
-            placeholder="Buscar área"
+            placeholder={t("organigram.delete-collaborator.modal-collaborator.search-placeholder")}
             options={listTeamName}
             filterOption={(inputValue, option) =>
               option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !==

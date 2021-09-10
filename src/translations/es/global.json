@@ -305,6 +305,15 @@
                 "btn-cancel": "Cancelar",
                 "btn-save": "Guardar"
             },
+            "modal-file":{
+             "download-file": "Descarga el archivo",
+             "date-creation": "Fecha de creación",
+             "date": "Archivo",
+             "btn-cancel": "Cancelar",
+             "btn-download": "Descargar",
+             "file-download": "Archivo descargado",
+             "btn-done": "Hecho"   
+            },
             "position": {
                 "title-position": "Puesto",
                 "total-positions": "(Total 2 puestos)",
@@ -384,6 +393,10 @@
                 "view-proceedings": "Ver Expediente",
                 "assign-documents": "Asignar documentos",
                 "delete-collaborator": "Eliminar Colaborador"
+            },
+            "modal-permissions": {
+             "well-done": "¡Bien hecho!",
+             "text": "Has guardado los permisos del colaborador"   
             },
             "position-label": "Puesto",
             "position-placeholder": "Selecciona el puesto a ocupar",
@@ -469,9 +482,35 @@
                 "title": "¡Atención!",
                 "text": "Estás a punto de eliminar al colaborador",
                 "question": "¿Seguro deseas eliminarlo?",
+                "sure": "¿Estás seguro?",
+                "completed": "Completado",
+                "text2": "Has eliminado a los colaboradores",
                 "btn-cancel": "Cancelar",
                 "btn-save": "Guardar",
                 "btn-delete": "Eliminar"
+            },
+            "modal-move":{
+             "title": "Dar de baja colaboradores",
+             "text": "Al dar de baja a un colaborador, esté ya no formará parte de tu organización.",
+             "deposit-lebel": "Ingresa tu contraseña de usuario",
+             "attention": "¡Atención!",
+             "text1": "Estas a punto de dar de baja a los colaboradores",
+             "text2": "Estas a punto de dar de baja al colaborador",
+             "text0": "Estas a punto de dar de baja al colaborador ",
+             "btn-collaborator": "Dar de baja",
+             "btn-move": "Mover a otra área",
+             "text3": "¿Seguro deseas eliminarlo?",
+             "completed": "¡Completado!",
+             "text4": "Has dado de baja al colaborador"
+            },
+            "modal-collaborator":{
+             "tex": "Selecciona el puesto al que los deseas mover",
+             "tex1": "Selecciona el área al que los deseas mover",
+             "search-placeholder": "Buscar área",
+             "btn-cancel": "Cancelar",
+             "btn-move": "Mover",
+             "collaborators": "Colaboradores reubicados",
+             "btn-done": "Hecho"   
             }
         },
         "areasandpositions-perfil": {

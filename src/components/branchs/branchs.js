@@ -47,11 +47,7 @@ export default function Branchs({ branchs, edit, deleteBranch }) {
               <Menu.Divider />
               <Menu.Item key={uuid()}>
                 <Link to="#" onClick={() => deleteBranch(branch.idBranch)}>
-<<<<<<< HEAD
                 {t("organigram.add-branch-modal.menu.remove-branch")}
-=======
-                  {t("organigram.add-branch-modal.menu.remove-branch")}
->>>>>>> 154749d6d34b6049e7f4ea5c0d041510033ae3a3
                 </Link>
               </Menu.Item>
             </Menu>

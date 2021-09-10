@@ -9,7 +9,7 @@ function ModalDownLoad({ ModalDownload, setModalDownload }) {
   return (
     <Modal
       className="middleModal"
-      title="Descarga el archivo"
+      title={t("organigram.areas-and-positions.modal-file.download-file")}
       visible={ModalDownload}
       onCancel={() => {
         setModalDownload(false);
@@ -22,7 +22,7 @@ function ModalDownLoad({ ModalDownload, setModalDownload }) {
             setModalDownload(false);
           }}
         >
-          Cancelar
+          {t("organigram.areas-and-positions.modal-file.btn-cancel")}
         </Button>,
         <Button
           className="primary"
@@ -41,7 +41,7 @@ function ModalDownLoad({ ModalDownload, setModalDownload }) {
                   </Col>
                   <Col style={{ marginTop: "0px" }} span={24}>
                     <h2>
-                      <b>Archivo descargado</b>
+                      <b>{t("organigram.areas-and-positions.modal-file.file-download")}</b>
                     </h2>
                   </Col>
                   <Col span={24}>
@@ -67,16 +67,16 @@ function ModalDownLoad({ ModalDownload, setModalDownload }) {
             });
           }}
         >
-          Descargar
+          {t("organigram.areas-and-positions.modal-file.btn-download")}
         </Button>,
       ]}
     >
       <Row>
         <Col span={12}>
-          <h3>Archivo</h3>
+          <h3>{t("organigram.areas-and-positions.modal-file.date")}</h3>
         </Col>
         <Col span={12}>
-          <h3>Fecha de creación</h3>
+          <h3>{t("organigram.areas-and-positions.modal-file.date-creation")}</h3>
         </Col>
       </Row>
       <Row style={{ marginTop: "20px" }}>
