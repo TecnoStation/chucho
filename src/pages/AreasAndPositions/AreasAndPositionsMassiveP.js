@@ -31,7 +31,13 @@ export default function AreasAndPositionsMassiveP() {
   const endFn = () => {
     let screen = document.getElementById("screen");
     screen.setAttribute("style", "display: none;");
-    history.push({ pathname: "/" + t("routes.organigram") + "/" + t("paths_organigram.areasandpositions") });
+    history.push({
+      pathname:
+        "/" +
+        t("routes.organigram") +
+        "/" +
+        t("paths_organigram.areasandpositions"),
+    });
   };
 
   return (
@@ -108,7 +114,9 @@ export default function AreasAndPositionsMassiveP() {
               <Link to="#" onClick={openModalUpload}>
                 {" "}
                 <PlusCircleOutlined />{" "}
-                {t("organigram.areasandpositions-masivep.link-attach")}
+                <span style={{ marginLeft: "8px" }}>
+                  {t("organigram.areasandpositions-masivee.link-attach")}
+                </span>
               </Link>
               <br />
               <br />
@@ -185,7 +193,7 @@ export default function AreasAndPositionsMassiveP() {
           <p>12 MAY 2021</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p className="iconGreen">Éxito</p>
+          <p className="iconGreenTwo">Éxito</p>
         </Col>
         <Col className="gutter-row" span={6}>
           <Link
@@ -231,9 +239,7 @@ export default function AreasAndPositionsMassiveP() {
             </Col>
             <Col span={24}>
               <h3>
-                {t(
-                  "organigram.areasandpositions-masivep.organization-created"
-                )}
+                {t("organigram.areasandpositions-masivep.organization-created")}
               </h3>
               <br />
             </Col>

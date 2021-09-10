@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 export default function Branchs({ branchs, edit, deleteBranch }) {
   const [t, i18n] = useTranslation("global");
   return branchs.map((branch, index) => (
-    
     <Row
       key={uuid()}
       gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
@@ -48,11 +47,7 @@ export default function Branchs({ branchs, edit, deleteBranch }) {
               <Menu.Divider />
               <Menu.Item key={uuid()}>
                 <Link to="#" onClick={() => deleteBranch(branch.idBranch)}>
-<<<<<<< HEAD
-                {t("organigram.add-branch-modal.menu.remove-branch")}
-=======
-                  Eliminar sucursal
->>>>>>> 50134a6638b22d3ac14f36d9e0b0cfb41e851ea6
+                  {t("organigram.add-branch-modal.menu.remove-branch")}
                 </Link>
               </Menu.Item>
             </Menu>

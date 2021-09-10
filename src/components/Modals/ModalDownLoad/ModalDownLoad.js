@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Col, Modal, Row } from "antd";
 import { AiOutlineFileText } from "react-icons/ai";
+import Good from "../../../assets/img/icons/bien_hecho.svg";
 import { useTranslation } from "react-i18next";
 
 function ModalDownLoad({ ModalDownload, setModalDownload }) {
@@ -23,14 +24,51 @@ function ModalDownLoad({ ModalDownload, setModalDownload }) {
         >
           Cancelar
         </Button>,
-        <input
-          type="button"
+        <Button
           className="primary"
           onClick={() => {
             setModalDownload(false);
+            const modal = Modal.info({
+              title: "",
+              className: "MessagesModal",
+              centered: true,
+              content: (
+                <Row style={{ marginTop: "0px" }}>
+                  <Col span={24}>
+                    <p>
+                      <img alt="ico" className="" src={Good} />
+                    </p>
+                  </Col>
+                  <Col style={{ marginTop: "0px" }} span={24}>
+                    <h2>
+                      <b>Archivo descargado</b>
+                    </h2>
+                  </Col>
+                  <Col span={24}>
+                    <h3></h3>
+                  </Col>
+                  <Col span={24}>
+                    <h3></h3>
+                    <br />
+                  </Col>
+                  <Col span={24}>
+                    <Button
+                      onClick={() => {
+                        modal.destroy();
+                      }}
+                      className="primary btn"
+                    >
+                      {t("organigram.password-modal.btn-done")}
+                    </Button>
+                  </Col>
+                </Row>
+              ),
+              onOk() {},
+            });
           }}
-          value="Descargar"
-        />,
+        >
+          Descargar
+        </Button>,
       ]}
     >
       <Row>

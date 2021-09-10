@@ -17,6 +17,8 @@ function AreasList({
   setEditionMode,
   setArea,
   setPassword,
+  setAreaPosition,
+  setviewPositions,
 }) {
   const [inputSubArea, setinputSubArea] = useState("show");
   const [form] = useForm();
@@ -77,16 +79,30 @@ function AreasList({
         <div>
           <Row
             onMouseOver={() => {
-              setColorIcon("iconGreen");
+              //setColorIcon("iconGreen");
+              document
+                .getElementById("IoMdSquare" + index)
+                .setAttribute("style", "color: #2cccd3");
             }}
             onMouseOut={() => {
-              setColorIcon("iconGray");
+              //setColorIcon("iconGray");
+              document
+                .getElementById("IoMdSquare" + index)
+                .setAttribute("style", "color: #5e6d88");
             }}
             className="areasdiv"
             style={{ marginTop: "20px", paddingLeft: "10px" }}
           >
-            <Col span={18} style={{ textAlign: "left" }}>
-              <IoMdSquare className={colorIcon} /> {area.areaName}
+            <Col
+              span={18}
+              onClick={() => {
+                setAreaPosition(area.areaName);
+                setviewPositions("showBlock");
+              }}
+              style={{ textAlign: "left" }}
+            >
+              <IoMdSquare id={"IoMdSquare" + index} className={colorIcon} />
+              {area.areaName}
             </Col>
             <Col
               style={{
@@ -179,7 +195,7 @@ function AreasList({
             {subAreas.map((subArea, item) =>
               subArea.item === area.idArea ? (
                 <SubAreasList
-                  key={item}
+                  item={item}
                   setModalMove={setModalMove}
                   subArea={subArea}
                   setSubArea={setSubArea}
@@ -191,6 +207,8 @@ function AreasList({
                   setinputSubArea={setinputSubArea}
                   showInput={showInput}
                   index={index}
+                  setAreaPosition={setAreaPosition}
+                  setviewPositions={setviewPositions}
                 />
               ) : (
                 ""
