@@ -75,11 +75,11 @@ export default function ModalPermissions({ Permissions, setPermissions }) {
                       </Col>
                       <Col style={{ marginTop: "-15px" }} span={24}>
                         <h2>
-                          <b>¡Bien hecho!</b>
+                          <b>{t("organigram.collaborator-form.modal-permissions.well-done")}</b>
                         </h2>
                       </Col>
                       <Col span={24} style={{ padding: "0px 60px 0px 60px" }}>
-                        <h3>Has guardado los permisos del colaborador</h3>
+                        <h3>{t("organigram.collaborator-form.modal-permissions.text")}</h3>
                       </Col>
                       <Col span={24}>
                         <h3></h3>
