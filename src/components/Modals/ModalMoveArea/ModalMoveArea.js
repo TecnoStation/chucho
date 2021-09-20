@@ -69,7 +69,6 @@ function ModalMoveArea({
                       (item) => item.idSubArea !== modalMove.idSubArea
                     );
                     setSubAreas(arrayFilter);
-                    // setAreas(arrayFilter);
                   } else if (modalMove.mode === 2) {
                     const arrayFilter = modalMove.PositionsInfo.filter(
                       (item) => item.idPositionInfo !== modalMove.idPositionInfo
@@ -175,6 +174,10 @@ function ModalMoveArea({
               setModalSelect({
                 visible: true,
                 type: modalMove.type,
+                Areas: modalMove.Areas,
+                idArea: modalMove.idArea,
+                subAreas: modalMove.subAreas,
+                idSubArea: modalMove.idSubArea,
               });
               setModalMove(false);
             }}
@@ -209,9 +212,12 @@ function ModalMoveArea({
         </Row>
       </Modal>
       <ModalSelectArea
+        setAreas={setAreas}
+        setSubAreas={setSubAreas}
         modalSelect={modalSelect}
         setModalSelect={setModalSelect}
         setModalMove={setModalMove}
+        setPassword={setPassword}
       />
     </>
   );

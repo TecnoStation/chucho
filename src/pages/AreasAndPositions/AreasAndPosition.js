@@ -26,21 +26,13 @@ export default function AreasAndPositions() {
   const query = new URLSearchParams(location.search);
   const tabState = query.get("tab") || "1";
 
-  const tabs = ["1", "2"];
   const [Active, setActive] = useState(tabState);
   const [text, setText] = useState("¿Estás listo? Agrega tu primer área");
 
-  const changeActive = () => {
-    query.set("tab", 2);
-    if (Active === "1") {
-      query.set("tab", 2);
-      setActive(tabs[1]);
-      history.push({ search: "?tab=2" });
-    } else {
-      query.set("tab", 1);
-      setActive(tabs[0]);
-      history.push({ search: "?tab=1" });
-    }
+  const changeActive = (e) => {
+    query.set("tab", e);
+    setActive(e);
+    history.push({ search: "?tab=" + e });
   };
 
   const [firtFlag, setFirtFlag] = useState(true);
@@ -63,6 +55,9 @@ export default function AreasAndPositions() {
   const [modalMove, setModalMove] = useState(false);
   const [Areas, setAreas] = useState([]);
   const [Area, setArea] = useState();
+  const [subAreas, setSubAreas] = useState([]);
+  const [item, setItem] = useState("");
+
   const [editionMode, setEditionMode] = useState(false);
   const [formp] = useForm();
   const sendArea = (e) => {
@@ -70,17 +65,19 @@ export default function AreasAndPositions() {
     setAreas([
       ...Areas,
       {
-        idArea: Areas.length,
+        idArea: uuid(),
         areaName: e.target.value,
       },
     ]);
     setinputArea("hide");
     formp.resetFields();
+    console.log(Areas);
   };
-  const editArea = (e) => {
+  const editArea = (e, index) => {
     e.preventDefault();
-    Areas[Area.idArea].areaName = e.target.value;
+    Areas[item].areaName = e.target.value;
     setinputArea("hide");
+    setEditionMode(false);
   };
 
   //--------------------- End Areas --------------------------------------------
@@ -160,6 +157,7 @@ export default function AreasAndPositions() {
     <>
       <Tabs
         className="tab"
+        defaultActiveKey={"1"}
         activeKey={Active}
         onChange={changeActive}
         type="card"
@@ -252,11 +250,15 @@ export default function AreasAndPositions() {
 
                     <div>
                       <AreasList
+                        item={item}
+                        setItem={setItem}
                         setviewPositions={setviewPositions}
                         setAreaPosition={setAreaPosition}
                         setModalMove={setModalMove}
                         Areas={Areas}
                         setArea={setArea}
+                        setSubAreas={setSubAreas}
+                        subAreas={subAreas}
                         setinputArea={setinputArea}
                         formp={formp}
                         setEditionMode={setEditionMode}
@@ -627,6 +629,8 @@ export default function AreasAndPositions() {
         setModalMove={setModalMove}
         setPassword={setPassword}
         setAreas={setAreas}
+        subAreas={subAreas}
+        setSubAreas={setSubAreas}
         setPositionsInfo={setPositionsInfo}
       />
 

@@ -1,25 +1,27 @@
 import React, { useState } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
-import { Button, Modal, Row, Col, Input, Upload } from "antd";
 
+import { Button, Modal, Row, Col, Input, Upload } from "antd";
 import { useTranslation } from "react-i18next";
 import { RiArrowUpSFill } from "react-icons/ri";
 import { MdTextFields } from "react-icons/md";
-
-import "./ModalUpdateIndicator.scss";
 import { FiUpload } from "react-icons/fi";
 import { Link } from "react-router-dom";
-import ModalHistorial from "./components/ModalHistorial/ModalHistorial";
+import { v4 as uuid } from "uuid";
+import ModalHistorial from "../ModalHistorial/ModalHistorial";
 
-function ModalUpdateIndicator({ Indicator, setIndicator }) {
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+
+import "./ModalUpdateIndicator.scss";
+import CustomToolbar from "../../Editor/components/CustomToolbar/CustomToolbar";
+// import EditorU from "../../Editor/Editor";
+
+function ModalUpdateIndicator({ Indicator, setIndicator, setHistorial }) {
   const [t, i18n] = useTranslation("global");
   const [value, setValue] = useState("");
-  const [Historial, setHistorial] = useState(false);
-
   const modules = {
     toolbar: {
-      container: "#toolbar",
+      container: ".toolbar",
     },
   };
   const formats = [
@@ -44,7 +46,8 @@ function ModalUpdateIndicator({ Indicator, setIndicator }) {
       <>
         <Modal
           title="Actualizar indicador"
-          className="smallModal"
+          className="updateModal"
+          centered={true}
           visible={Indicator}
           onCancel={() => {
             setIndicator(false);
@@ -109,7 +112,6 @@ function ModalUpdateIndicator({ Indicator, setIndicator }) {
           <Row style={{ textAlign: "left", marginTop: "10px" }}>
             <Col span={24}>
               <ReactQuill
-                theme="snow"
                 modules={modules}
                 formats={formats}
                 value={value}
@@ -119,35 +121,9 @@ function ModalUpdateIndicator({ Indicator, setIndicator }) {
             </Col>
           </Row>
         </Modal>
-        <ModalHistorial Historial={Historial} setHistorial={setHistorial} />
       </>
     </>
   );
 }
 
 export default ModalUpdateIndicator;
-
-const CustomToolbar = () => (
-  <div id="toolbar">
-    <button className="ql-header">
-      <MdTextFields className="iconsize2" />
-    </button>
-    <button className="ql-bold"></button>
-    <button className="ql-italic"></button>
-    <select className="ql-color">
-      <option value="red"></option>
-      <option value="green"></option>
-      <option value="blue"></option>
-      <option value="orange"></option>
-      <option value="violet"></option>
-      <option value="#d0d1d2"></option>
-      <option selected></option>
-    </select>
-    <Upload>
-      <Link style={{ marginLeft: "28px" }} className="iconsize iconBlue" to="#">
-        <FiUpload />
-        <span> Adjuntar evidencia</span>
-      </Link>
-    </Upload>
-  </div>
-);

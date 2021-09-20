@@ -1,18 +1,27 @@
 import React, { useState } from "react";
-import { Button, Modal, Row, Col, Input, Upload, Card, Slider } from "antd";
+
+import { Button, Modal, Row, Col, Input, Card, Slider, Upload } from "antd";
 import { Line } from "@ant-design/charts";
 import { IoFilter } from "react-icons/io5";
 import { RiArrowUpSFill } from "react-icons/ri";
 import { DownloadOutlined } from "@ant-design/icons";
-import Avatar from "../../../../../assets/img/avatar.png";
-import More from "../../../../../assets/img/icons/more_vert-24px.svg";
+import Avatar from "../../../assets/img/avatar.png";
+import More from "../../../assets/img/icons/more_vert-24px.svg";
 import { AiFillLike } from "react-icons/ai";
-import { MdMessage } from "react-icons/md";
+import { MdMessage, MdTextFields } from "react-icons/md";
 import { GiTrophyCup } from "react-icons/gi";
+import { Link } from "react-router-dom";
+import { v4 as uuid } from "uuid";
+import Editor from "../../Editor/Editor";
+import ReactQuill, { Quill } from "react-quill";
+// import "react-quill/dist/quill.snow.css";
+import CustomToolbar from "../../Editor/components/CustomToolbar/CustomToolbar";
+import { FiUpload } from "react-icons/fi";
 
 const { Search } = Input;
 
 function ModalHistorial({ Historial, setHistorial }) {
+  const [value, setValue] = useState("");
   const data = [
     { year: "30-DEC-20", value: 18 },
     { year: "8-JAN-21", value: 40 },
@@ -61,11 +70,59 @@ function ModalHistorial({ Historial, setHistorial }) {
     return `${value * 12}`;
   }
 
+  new Quill("#editor", {
+    modules: {
+      toolbar: {
+        container: ".toolbar", // Selector for toolbar container
+      },
+    },
+    theme: "snow",
+    formats: [
+      "header",
+      "font",
+      "size",
+      "bold",
+      "italic",
+      "underline",
+      "strike",
+      "blockquote",
+      "list",
+      "bullet",
+      "indent",
+      "link",
+      "image",
+      "color",
+    ],
+  });
+
+  const modules = {
+    toolbar: {
+      container: ".toolbar",
+    },
+  };
+  const formats = [
+    "header",
+    "font",
+    "size",
+    "bold",
+    "italic",
+    "underline",
+    "strike",
+    "blockquote",
+    "list",
+    "bullet",
+    "indent",
+    "link",
+    "image",
+    "color",
+  ];
+
   return (
     <Modal
       title="Objetivo: Volumen de tráfico en la página web"
-      className="largeModal"
+      className="objetiveModal"
       visible={Historial}
+      centered={true}
       onCancel={() => {
         setHistorial(false);
       }}
@@ -73,7 +130,7 @@ function ModalHistorial({ Historial, setHistorial }) {
     >
       <Row>
         <Col span={24}>
-          <Line {...config} />
+          <Line className="graf" {...config} />
         </Col>
       </Row>
       <Row style={{ marginTop: "20px", textAlign: "left" }}>
@@ -84,9 +141,7 @@ function ModalHistorial({ Historial, setHistorial }) {
           <h3>Historial de actualizaciones</h3>
         </Col>
         <Col span={6}>
-          {" "}
           <Search
-            size="small"
             id="filter"
             // onChange={filterTeams}
             placeholder={"Buscar actualización"}
@@ -133,7 +188,6 @@ function ModalHistorial({ Historial, setHistorial }) {
                   value={slider}
                   onChange={onChange}
                   tipFormatter={formatter}
-                  tooltipVisible
                 />
               </Col>
             </Row>
@@ -166,7 +220,7 @@ function ModalHistorial({ Historial, setHistorial }) {
                   <Col span={20}>
                     <div
                       style={{
-                        background: "#ccc",
+                        background: "#f4f6fb",
                         fontSize: "12px",
                         textAlign: "justify",
                         padding: "10px 15px 10px 15px",
@@ -184,53 +238,71 @@ function ModalHistorial({ Historial, setHistorial }) {
                     <div style={{ marginTop: "5px", textAlign: "left" }}>
                       <Row>
                         <Col span={5}>
-                          <span style={{ marginLeft: "10px" }}>
-                            <AiFillLike className="iconsize iconGray" />
-                          </span>
-                          <span
-                            style={{
-                              position: "absolute",
-                              top: "-2px",
-                              marginLeft: "5px",
-                            }}
-                          >
-                            Like
-                          </span>
+                          <Link className="iconGray" to="#">
+                            <span style={{ marginLeft: "10px" }}>
+                              <AiFillLike className="iconsize" />
+                            </span>
+                            <span
+                              style={{
+                                position: "absolute",
+                                top: "-2px",
+                                marginLeft: "5px",
+                              }}
+                            >
+                              Like
+                            </span>
+                          </Link>
                         </Col>
 
                         <Col span={7}>
-                          <span>
-                            <MdMessage className="iconsize iconGray" />
-                          </span>
-                          <span
-                            style={{
-                              position: "absolute",
-                              top: "-2px",
-                              marginLeft: "5px",
-                            }}
-                          >
-                            Responder
-                          </span>
+                          <Link className="iconGray" to="#">
+                            <span>
+                              <MdMessage className="iconsize" />
+                            </span>
+                            <span
+                              style={{
+                                position: "absolute",
+                                top: "-2px",
+                                marginLeft: "5px",
+                              }}
+                            >
+                              Responder
+                            </span>
+                          </Link>
                         </Col>
                         <Col span={8}>
-                          <span>
-                            <GiTrophyCup className="iconsize iconGray" />
-                          </span>
-                          <span
-                            style={{
-                              position: "absolute",
-                              top: "-2px",
-                              marginLeft: "5px",
-                            }}
-                          >
-                            Reconocer
-                          </span>
+                          <Link className="iconGray" to="#">
+                            <span>
+                              <GiTrophyCup className="iconsize " />
+                            </span>
+                            <span
+                              style={{
+                                position: "absolute",
+                                top: "-2px",
+                                marginLeft: "5px",
+                              }}
+                            >
+                              Reconocer
+                            </span>
+                          </Link>
                         </Col>
                       </Row>
                     </div>
                   </Col>
                   <Col span={1}>
                     <img alt="logo" src={More} width="25" height="25" />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col span={24}>
+                    {/* <Editor
+                      id="editor2"
+                      modules={modules}
+                      formats={formats}
+                      value={value}
+                      onChange={setValue}
+                    />
+                    <CustomToolbar /> */}
                   </Col>
                 </Row>
               </Col>

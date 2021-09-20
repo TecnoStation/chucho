@@ -8,7 +8,6 @@ function Screens({ message, setMessage, messageType, setActive }) {
   const history = useHistory();
   const location = useLocation();
   const query = new URLSearchParams(location.search);
-  const tabs = ["1", "2"];
   const msg = [
     {
       title: "¡Bien hecho!",
@@ -16,7 +15,7 @@ function Screens({ message, setMessage, messageType, setActive }) {
       text: "El papel de la cultura organizacional es esencial, pues constituye un motor que permite a la organización caminar hacia un mismo lugar, ya que determina las acciones y actitudes que deben tomarse en consideración para lograr los objetivos.",
       btn: "Continuar",
       url: () => {
-        setActive(tabs[1]);
+        setActive("2");
         setMessage(false);
       },
     },
@@ -28,7 +27,13 @@ function Screens({ message, setMessage, messageType, setActive }) {
         "Igualmente esta parte la puedes realizar al cargar de forma masiva los datos o de forma manual. Con el fin de que conozcas qué datos se necesitan para cada puesto vamos a realizar uno de forma manual.",
       btn: "Continuar",
       url: () => {
-        history.push({ pathname: "/" + t("routes.organigram") + "/" + t("paths_organigram.areasandpositions-collaborator") });
+        history.push({
+          pathname:
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-collaborator"),
+        });
       },
     },
     {
@@ -38,7 +43,11 @@ function Screens({ message, setMessage, messageType, setActive }) {
       btn: "Continuar",
       url: () => {
         history.push({
-          pathname:"/" + t("routes.organigram") + "/" + t("paths_organigram.areasandpositions")
+          pathname:
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions"),
         });
       },
     },
@@ -49,7 +58,7 @@ function Screens({ message, setMessage, messageType, setActive }) {
       text: "En esta sección debes de agregar solo los nombres de los puestos en tu empresa, esto ayuda a tener claridad de todos los puestos necesarios en tu empresa y ayudará a la cración de la estructura de tu organigrama",
       btn: "Continuar",
       url: () => {
-        setActive(tabs[1]);
+        setActive("2");
         setMessage(false);
       },
     },
@@ -62,8 +71,12 @@ function Screens({ message, setMessage, messageType, setActive }) {
       btn: "Continuar",
       url: () => {
         history.push({
-          pathname:"/" + t("routes.organigram") + "/" + t("paths_organigram.areasandpositions-addjob")})
-        
+          pathname:
+            "/" +
+            t("routes.organigram") +
+            "/" +
+            t("paths_organigram.areasandpositions-addjob"),
+        });
       },
     },
   ];

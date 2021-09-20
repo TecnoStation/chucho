@@ -102,24 +102,17 @@ export default function Competencies({
 
   return competencies.map((comp, index) => (
     <>
-      <Row
-        style={{ marginTop: "16px" }}
-        gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-      >
-        <Col
-          className="gutter-row"
-          style={{ textAlign: "left", paddingLeft: "30px" }}
-          span={14}
-        >
+      <Row style={{ marginTop: "16px", width: "100%", textAlign: "left" }}>
+        <Col style={{ paddingLeft: "0px" }} span={17}>
           <span>
             <b>{comp.name}</b>
           </span>
         </Col>
-        <Col className="gutter-row" span={4}>
+        <Col span={3}>
           <span>{comp.level}</span>
         </Col>
 
-        <Col className="gutter-row" span={6}>
+        <Col span={4}>
           <Button className="points">
             {" "}
             <img
