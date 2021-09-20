@@ -3,14 +3,24 @@ import { Row, Modal, Button, Col, AutoComplete, Form } from "antd";
 import { IoMdSquare } from "react-icons/io";
 import Good from "../../../assets/img/icons/bien_hecho.svg";
 import { useTranslation } from "react-i18next";
+import { useForm } from "antd/lib/form/Form";
 
-function ModalSelectArea({ modalSelect, setModalSelect, setModalMove }) {
+function ModalSelectArea({
+  modalSelect,
+  setModalSelect,
+  setModalMove,
+  setPassword,
+  setAreas,
+  setSubAreas,
+}) {
   const [t, i18n] = useTranslation("global");
   const [listTeamName, setListTeamName] = useState([
     { value: "Director de marketing" },
     { value: "Gerente de ventas" },
     { value: "Analista de software" },
   ]);
+
+  const [form] = useForm();
 
   return (
     <Modal
@@ -57,7 +67,11 @@ function ModalSelectArea({ modalSelect, setModalSelect, setModalMove }) {
                       </Col>
                       <Col style={{ marginTop: "0px" }} span={24}>
                         <h2>
-                          <b>{t("organigram.delete-collaborator.modal-collaborator.collaborators")}</b>
+                          <b>
+                            {t(
+                              "organigram.delete-collaborator.modal-collaborator.collaborators"
+                            )}
+                          </b>
                         </h2>
                       </Col>
                       <Col span={24}>
@@ -84,7 +98,7 @@ function ModalSelectArea({ modalSelect, setModalSelect, setModalMove }) {
                 });
               }}
             >
-               {t("organigram.delete-collaborator.modal-collaborator.btn-move")}
+              {t("organigram.delete-collaborator.modal-collaborator.btn-move")}
             </Button>
           </Col>
         </Row>,
@@ -94,7 +108,9 @@ function ModalSelectArea({ modalSelect, setModalSelect, setModalMove }) {
         <Form.Item name="password" label="">
           <AutoComplete
             className="autoComplete"
-            placeholder={t("organigram.delete-collaborator.modal-collaborator.search-placeholder")}
+            placeholder={t(
+              "organigram.delete-collaborator.modal-collaborator.search-placeholder"
+            )}
             options={listTeamName}
             filterOption={(inputValue, option) =>
               option.value.toUpperCase().indexOf(inputValue.toUpperCase()) !==

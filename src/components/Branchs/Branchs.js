@@ -8,23 +8,15 @@ import { Link } from "react-router-dom";
 export default function Branchs({ branchs, edit, deleteBranch }) {
   const [t, i18n] = useTranslation("global");
   return branchs.map((branch, index) => (
-    <Row
-      key={uuid()}
-      gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-      className="rowbranch"
-    >
-      <Col className="gutter-row namesbranch" id="namesbranch" span={8}>
+    <Row key={uuid()} className="rowbranch">
+      <Col className="namesbranch" id="namesbranch" span={8}>
         <span>{branch.name}</span>
       </Col>
-      <Col
-        className="gutter-row directionbranch"
-        id="directionbranch"
-        span={12}
-      >
+      <Col className="directionbranch" id="directionbranch" span={14}>
         <span>{branch.direction}</span>
       </Col>
 
-      <Col className="gutter-row" span={4}>
+      <Col style={{ textAlign: "right" }} span={2}>
         <Dropdown
           overlay={
             <Menu

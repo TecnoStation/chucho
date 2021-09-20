@@ -143,7 +143,6 @@ export default function Teams() {
             onChange={filterTeams}
           >
             <Input.Search
-              size="small"
               placeholder={t("organigram.teams2.search-position")}
             />
           </AutoComplete>

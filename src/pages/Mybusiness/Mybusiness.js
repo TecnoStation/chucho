@@ -30,6 +30,23 @@ export default function Mybusiness() {
     </Menu>
   );
   //-------------------------------- company data ---------------------
+  const [Branch, setBranch] = useState("");
+  const renderItem = (title, direction) => (
+    <div
+      onClick={() => {
+        setBranch({
+          value: title,
+          direction: direction,
+        });
+      }}
+      style={{
+        display: "flex",
+        justifyContent: "space-between",
+      }}
+    >
+      {title}
+    </div>
+  );
 
   const [data, setData] = useState({
     companyName: "Manpower Inc.",
@@ -60,10 +77,22 @@ export default function Mybusiness() {
       {
         id: 0,
         value: "Zona Centro CDMX",
+        label: renderItem(
+          "Zona Centro CDMX",
+          "Calz San Simon 208, San Simón Tolnahuac, Cuauhtémoc, 06920 Ciudad de México, CDMX"
+        ),
+        direction:
+          "Calz San Simon 208, San Simón Tolnahuac, Cuauhtémoc, 06920 Ciudad de México, CDMX",
       },
       {
         id: 1,
         value: "Zona Centro 2",
+        label: renderItem(
+          "Zona Centro 2",
+          "Calz San Simon 208, San Simón Tolnahuac, Cuauhtémoc, 06920 Ciudad de México, CDMX"
+        ),
+        direction:
+          "Calz San Simon 208, San Simón Tolnahuac, Cuauhtémoc, 06920 Ciudad de México, CDMX",
       },
     ],
   });
@@ -76,7 +105,9 @@ export default function Mybusiness() {
         <Col className="gutter-row" span={10}>
           <Row>
             <Col span={22} style={{ textAlign: "center" }}>
-              <h1 className="primaryText" >{t("organigram.mybusiness-principal.data-general.title")}</h1>
+              <h1 className="primaryText">
+                {t("organigram.mybusiness-principal.data-general.title")}
+              </h1>
             </Col>
             <Col span={2}>
               <Dropdown overlay={menu} trigger={["click"]}>
@@ -193,7 +224,12 @@ export default function Mybusiness() {
           <Row style={{ marginTop: "40px" }}>
             <Col span={24}>
               <Form layout="vertical">
-                <Form.Item name="empresa" label={t("organigram.mybusiness-principal.data-general.branch")}>
+                <Form.Item
+                  name="empresa"
+                  label={t(
+                    "organigram.mybusiness-principal.data-general.branch"
+                  )}
+                >
                   <AutoComplete
                     options={data.branchs}
                     filterOption={(inputValue, option) =>
@@ -203,11 +239,22 @@ export default function Mybusiness() {
                     }
                     addonAfter={<SearchOutlined />}
                   >
-                    <Input.Search size="middle" placeholder={t("organigram.mybusiness-principal.data-general.branch-placeholder")}/>
+                    <Input.Search
+                      size="middle"
+                      placeholder={t(
+                        "organigram.mybusiness-principal.data-general.branch-placeholder"
+                      )}
+                    />
                   </AutoComplete>
                 </Form.Item>
               </Form>
             </Col>
+          </Row>
+          <Row>
+            <Col span={24}>{Branch.value}</Col>
+          </Row>
+          <Row className="link">
+            <Col span={24}>{Branch.direction}</Col>
           </Row>
         </Col>
         <Col span={14} className="dividerLeft gutter-row">
@@ -270,10 +317,14 @@ export default function Mybusiness() {
             style={{ marginTop: "40px", width: "100%" }}
           >
             <Col span={18}>
-              <span className="secondaryText"><b>Competencias Institucionales</b></span>
+              <span className="secondaryText">
+                <b>Competencias Institucionales</b>
+              </span>
             </Col>
             <Col span={6}>
-              <span className="secondaryText"><b>Nivel</b></span>
+              <span className="secondaryText">
+                <b>Nivel</b>
+              </span>
             </Col>
           </Row>
 

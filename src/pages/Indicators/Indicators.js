@@ -19,9 +19,10 @@ import { MdShowChart } from "react-icons/md";
 import { GrDocumentUpload } from "react-icons/gr";
 import { RiArrowUpSFill } from "react-icons/ri";
 import Increase from "../../assets/img/icons/aumentar.svg";
-import MpdalUpdateIndicator from "../../components/Modals/ModalUpdateIndicator/ModalUpdateIndicator";
+import ModalUpdateIndicator from "../../components/Modals/ModalUpdateIndicator/ModalUpdateIndicator";
 
 import "./Indicators.scss";
+import ModalHistorial from "../../components/Modals/ModalHistorial/ModalHistorial";
 
 const { Header } = Layout;
 const { TabPane } = Tabs;
@@ -51,6 +52,7 @@ function Indicators({ user }) {
   }
 
   const [Indicator, setIndicator] = useState(false);
+  const [Historial, setHistorial] = useState(false);
 
   return (
     <>
@@ -213,9 +215,14 @@ function Indicators({ user }) {
                   </Col>
                 </Row>
 
-                <MpdalUpdateIndicator
+                <ModalUpdateIndicator
                   Indicator={Indicator}
                   setIndicator={setIndicator}
+                  setHistorial={setHistorial}
+                />
+                <ModalHistorial
+                  Historial={Historial}
+                  setHistorial={setHistorial}
                 />
               </TabPane>
               <TabPane tab="Mis evaluaciones" key="2">

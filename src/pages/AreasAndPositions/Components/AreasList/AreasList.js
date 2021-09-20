@@ -16,44 +16,49 @@ function AreasList({
   formp,
   setEditionMode,
   setArea,
+  subAreas,
+  setSubAreas,
   setPassword,
   setAreaPosition,
   setviewPositions,
+  item,
+  setItem,
 }) {
   const [inputSubArea, setinputSubArea] = useState("show");
   const [form] = useForm();
   const [editionModeSub, setEditionModeSub] = useState(false);
-  const [subAreas, setSubAreas] = useState([]);
-  const [subArea, setSubArea] = useState();
-  const [item, setItem] = useState("");
 
-  const sendSubArea = (e, index) => {
+  const [subArea, setSubArea] = useState();
+
+  const sendSubArea = (e, idArea, index) => {
     e.preventDefault();
     setSubAreas([
       ...subAreas,
       {
         idSubArea: subAreas.length,
-        item: index,
+        item: idArea,
         subareaName: e.target.value,
       },
     ]);
     let input = document.getElementById("inputArea" + index);
     input.setAttribute("style", "display: none");
     form.resetFields();
+    console.log(subAreas);
   };
 
-  const editSubArea = (e, index) => {
+  const editSubArea = (e, idArea, index) => {
     e.preventDefault();
     subAreas[subArea.idSubArea].subareaName = e.target.value;
     hideInput(index);
     setEditionModeSub(false);
   };
 
-  const edit = (area) => {
+  const edit = (area, index) => {
     setArea(area);
     formp.setFieldsValue({
       area: area.areaName,
     });
+    setItem(index);
     setEditionMode(true);
     setinputArea("show");
   };
@@ -78,6 +83,7 @@ function AreasList({
       {Areas.map((area, index) => (
         <div>
           <Row
+            key={index}
             onMouseOver={() => {
               //setColorIcon("iconGreen");
               document
@@ -128,7 +134,7 @@ function AreasList({
             >
               <RiPencilFill
                 onClick={() => {
-                  edit(area);
+                  edit(area, index);
                 }}
                 className="iconGreen iconsize"
               />
@@ -157,6 +163,7 @@ function AreasList({
                     type: 0,
                     idArea: area.idArea,
                     Areas: Areas,
+                    subAreas: subAreas,
                     modalTitle:
                       "¿Qué deseas hacer con los colaboradores que pertenecen a esta área?",
                   });
@@ -183,8 +190,8 @@ function AreasList({
                   <Input
                     onPressEnter={
                       editionModeSub
-                        ? (e) => editSubArea(e, index)
-                        : (e) => sendSubArea(e, index)
+                        ? (e) => editSubArea(e, area.idArea, index)
+                        : (e) => sendSubArea(e, area.idArea, index)
                     }
                     value={subArea}
                   />
@@ -196,7 +203,7 @@ function AreasList({
             {subAreas.map((subArea, item) =>
               subArea.item === area.idArea ? (
                 <SubAreasList
-                  item={item}
+                  item={area.idArea}
                   setModalMove={setModalMove}
                   subArea={subArea}
                   setSubArea={setSubArea}

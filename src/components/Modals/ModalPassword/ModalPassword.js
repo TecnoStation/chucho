@@ -122,13 +122,13 @@ export default function ModalPassword({ Password, setPassword }) {
                     className: "MessagesModal",
                     centered: true,
                     content: (
-                      <Row style={{ marginTop: "-30px" }}>
+                      <Row style={{ marginTop: "0px" }}>
                         <Col span={24}>
                           <p>
                             <img alt="ico" className="" src={Good} />
                           </p>
                         </Col>
-                        <Col style={{ marginTop: "-15px" }} span={24}>
+                        <Col style={{ marginTop: "0px" }} span={24}>
                           <h2>
                             <b>{Password.titleWarning}</b>
                           </h2>
@@ -142,6 +142,7 @@ export default function ModalPassword({ Password, setPassword }) {
                         </Col>
                         <Col span={24}>
                           <Button
+                            style={{ width: "50%" }}
                             onClick={() => {
                               modal.destroy();
                               Password.function();

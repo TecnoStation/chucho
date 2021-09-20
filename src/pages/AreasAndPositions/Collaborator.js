@@ -23,6 +23,8 @@ import ModalDocument from "../../components/Modals/ModalDocument/ModalDocument";
 import ModalMoveArea from "../../components/Modals/ModalMoveArea/ModalMoveArea";
 import SelectDinamic from "../../components/SelectDinamic/SelectDinamic";
 import Good from "../../assets/img/icons/bien_hecho.svg";
+import { FaCamera } from "react-icons/fa";
+import ModalPhoto from "../../components/Modals/ModalPhoto/ModalPhoto";
 
 const { Option } = Select;
 
@@ -204,6 +206,17 @@ export default function Collaborator() {
 
   //----------------- End Selects Dinamic Data --------------------------------
 
+  //----------------------- Image Perfil --------------------------------------
+
+  const [src, setSrc] = useState(Avatar);
+
+  //----------------------- End Image Perfil -----------------------------------
+  //---------------- upload photo -----------------------------
+
+  const [photo, setPhoto] = useState(false);
+
+  //---------------- end upload photo -------------------------
+
   return (
     <Form name="form1" layout="vertical" onFinish={onFinish}>
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
@@ -230,9 +243,24 @@ export default function Collaborator() {
             style={{ textAlign: "center" }}
           >
             <Col className="gutter-row" span={24}>
-              <p>
-                <img alt="ico" width="140" src={Avatar} />
-              </p>
+              <div className="photo">
+                <img
+                  alt="ico"
+                  style={{
+                    width: "100px",
+                    borderRadius: "50%",
+                  }}
+                  src={src}
+                />
+                <div
+                  onClick={() => {
+                    setPhoto(true);
+                  }}
+                  className="camera"
+                >
+                  <FaCamera className="iconsize1" />
+                </div>
+              </div>
             </Col>
           </Row>
 
@@ -702,6 +730,7 @@ export default function Collaborator() {
         setModalMove={setModalMove}
         setPassword={setPassword}
       />
+      <ModalPhoto setSrc={setSrc} photo={photo} setPhoto={setPhoto} />
     </Form>
   );
 }

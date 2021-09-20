@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Modal, Row } from "antd";
+import { Button, Col, Modal, Row, Upload } from "antd";
 import { CgSoftwareUpload } from "react-icons/cg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
@@ -64,18 +64,16 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
           <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
             Comprobante de Ingresos
           </Col>
-          <Col style={{ paddingLeft: "15px" }} span={6}>
-            No adjuntado
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={7}>
-            10 MAY 2016
-          </Col>
+          <Col style={{ paddingLeft: "15px" }} span={6}></Col>
+          <Col style={{ paddingLeft: "10px" }} span={7}></Col>
           <Col style={{ paddingLeft: "10px" }} span={3}>
-            <Link className="iconGreen" style={{ fontSize: "26px" }} to="#">
-              <CgSoftwareUpload
-                style={{ position: "absolute", marginTop: "-3px" }}
-              />
-            </Link>
+            <Upload>
+              <Link className="iconGreen" style={{ fontSize: "26px" }} to="#">
+                <CgSoftwareUpload
+                  style={{ position: "absolute", marginTop: "-20px" }}
+                />
+              </Link>
+            </Upload>
           </Col>
         </Row>
 
@@ -90,12 +88,8 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
           <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
             Comprobante de Estudios
           </Col>
-          <Col style={{ paddingLeft: "15px" }} span={6}>
-            No adjuntado
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={7}>
-            10 MAY 2016
-          </Col>
+          <Col style={{ paddingLeft: "15px" }} span={6}></Col>
+          <Col style={{ paddingLeft: "10px" }} span={7}></Col>
           <Col style={{ paddingLeft: "10px" }} span={3}>
             <Link className="iconGreen" style={{ fontSize: "26px" }} to="#">
               <CgSoftwareUpload
@@ -116,18 +110,16 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
           <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
             Comprobante de Domicilio
           </Col>
-          <Col style={{ paddingLeft: "15px" }} span={6}>
-            No adjuntado
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={7}>
-            10 MAY 2016
-          </Col>
+          <Col style={{ paddingLeft: "15px" }} span={6}></Col>
+          <Col style={{ paddingLeft: "10px" }} span={7}></Col>
           <Col style={{ paddingLeft: "10px" }} span={3}>
-            <Link className="iconGreen" style={{ fontSize: "26px" }} to="#">
-              <CgSoftwareUpload
-                style={{ position: "absolute", marginTop: "-3px" }}
-              />
-            </Link>
+            <Upload>
+              <Link className="iconGreen" style={{ fontSize: "26px" }} to="#">
+                <CgSoftwareUpload
+                  style={{ position: "absolute", marginTop: "-20px" }}
+                />
+              </Link>
+            </Upload>
           </Col>
         </Row>
 
@@ -142,18 +134,16 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
           <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
             Identificación Oficial
           </Col>
-          <Col style={{ paddingLeft: "15px" }} span={6}>
-            No adjuntado
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={7}>
-            10 MAY 2016
-          </Col>
+          <Col style={{ paddingLeft: "15px" }} span={6}></Col>
+          <Col style={{ paddingLeft: "10px" }} span={7}></Col>
           <Col style={{ paddingLeft: "10px" }} span={3}>
-            <Link className="iconGreen" style={{ fontSize: "26px" }} to="#">
-              <CgSoftwareUpload
-                style={{ position: "absolute", marginTop: "-3px" }}
-              />
-            </Link>
+            <Upload>
+              <Link className="iconGreen" style={{ fontSize: "26px" }} to="#">
+                <CgSoftwareUpload
+                  style={{ position: "absolute", marginTop: "-20px" }}
+                />
+              </Link>
+            </Upload>
           </Col>
         </Row>
 
@@ -167,18 +157,16 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
           <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
             Identificación Oficial
           </Col>
-          <Col style={{ paddingLeft: "15px" }} span={6}>
-            No adjuntado
-          </Col>
-          <Col style={{ paddingLeft: "10px" }} span={7}>
-            10 MAY 2016
-          </Col>
+          <Col style={{ paddingLeft: "15px" }} span={6}></Col>
+          <Col style={{ paddingLeft: "10px" }} span={7}></Col>
           <Col style={{ paddingLeft: "10px" }} span={3}>
-            <Link className="iconGreen" style={{ fontSize: "26px" }} to="#">
-              <CgSoftwareUpload
-                style={{ position: "absolute", marginTop: "-3px" }}
-              />
-            </Link>
+            <Upload>
+              <Link className="iconGreen" style={{ fontSize: "26px" }} to="#">
+                <CgSoftwareUpload
+                  style={{ position: "absolute", marginTop: "-20px" }}
+                />
+              </Link>
+            </Upload>
           </Col>
         </Row>
       </Modal>

@@ -1,11 +1,10 @@
 import { PlusCircleOutlined } from "@ant-design/icons";
-import { Button, Col, Row, Form } from "antd";
-import Modal from "antd/lib/modal/Modal";
+import { Button, Col, Row, Form, Modal } from "antd";
 import React, { useState } from "react";
-//import { AiOutlineFileText } from 'react-icons/ai'
 import { Link } from "react-router-dom";
-import "./AreasAndPositions.scss";
+import Good from "../../assets/img/icons/bien_hecho.svg";
 import { useTranslation } from "react-i18next";
+import "./AreasAndPositions.scss";
 
 export default function AreasAndPositionsMassiveGeneral() {
   const [t, i18n] = useTranslation("global");
@@ -243,7 +242,6 @@ export default function AreasAndPositionsMassiveGeneral() {
         )}
         visible={modalUpload}
         onCancel={closeModalUpload}
-        onOk={sendUpload}
         footer={[
           <Button
             style={{ marginRight: "15px" }}
@@ -257,7 +255,53 @@ export default function AreasAndPositionsMassiveGeneral() {
           <input
             type="button"
             className="primary"
-            onClick={sendUpload}
+            onClick={() => {
+              closeModalUpload();
+              const modal = Modal.info({
+                title: "",
+                className: "MessagesModal",
+                centered: true,
+                content: (
+                  <Row style={{ marginTop: "-20px" }}>
+                    <Col span={24}>
+                      <p>
+                        <img alt="ico" className="" src={Good} />
+                      </p>
+                    </Col>
+                    <Col span={24}>
+                      <h2>
+                        <b>
+                          {t("organigram.areasandpositions-masivee.well-done")}
+                        </b>
+                      </h2>
+                    </Col>
+                    <Col span={24}>
+                      <h3></h3>
+                    </Col>
+                    <Col span={24}>
+                      <h3>
+                        {t(
+                          "organigram.areasandpositions-masivee.organization-created"
+                        )}
+                      </h3>
+                      <br />
+                    </Col>
+                    <Col span={24}>
+                      <Button
+                        style={{ width: "50%" }}
+                        onClick={() => {
+                          modal.destroy();
+                        }}
+                        className="primary btn"
+                      >
+                        {t("organigram.password-modal.btn-done")}
+                      </Button>
+                    </Col>
+                  </Row>
+                ),
+                onOk() {},
+              });
+            }}
             value={t(
               "organigram.areasandpositions-general.modal-upload-file.btn-upload"
             )}

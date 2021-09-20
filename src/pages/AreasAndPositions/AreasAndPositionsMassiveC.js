@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-
 import { PlusCircleOutlined } from "@ant-design/icons";
-import { Button, Col, Row, Form } from "antd";
-import Modal from "antd/lib/modal/Modal";
-import Like from "../../assets/img/icons/bien_hecho.svg";
+import { Button, Col, Row, Form, Modal } from "antd";
+import Good from "../../assets/img/icons/bien_hecho.svg";
 import { Link, useHistory } from "react-router-dom";
-import "./AreasAndPositions.scss";
-import Screendefault from "../../components/Screens/Screendefault";
 import { useTranslation } from "react-i18next";
+import "./AreasAndPositions.scss";
 
 export default function AreasAndPositionsMassiveC() {
   const [t, i18n] = useTranslation("global");
@@ -212,32 +209,6 @@ export default function AreasAndPositionsMassiveC() {
         </Col>
       </Row>
 
-      <Screendefault>
-        <div id="deleteMessage">
-          <Row>
-            <Col span={24}>
-              <p style={{ textAlign: "center" }}>
-                <img alt="ico" className="" src={Like} />
-              </p>
-            </Col>
-            <Col span={24}>
-              <h3>
-                {t("organigram.areasandpositions-E.modal-file.well-done")}
-              </h3>
-            </Col>
-            <Col span={24}>
-              <h3>{t("organigram.areasandpositions-E.modal-file.text")}</h3>
-              <br />
-            </Col>
-            <Col span={24}>
-              <Button onClick={endFn} className="primary btn">
-                {t("organigram.areasandpositions-E.modal-file.btn-done")}
-              </Button>
-            </Col>
-          </Row>
-        </div>
-      </Screendefault>
-
       <Modal
         title={t("organigram.areasandpositions-E.modal-file.goes-file")}
         visible={modalUpload}
@@ -254,7 +225,53 @@ export default function AreasAndPositionsMassiveC() {
           <input
             type="button"
             className="primary"
-            onClick={sendUpload}
+            onClick={() => {
+              closeModalUpload();
+              const modal = Modal.info({
+                title: "",
+                className: "MessagesModal",
+                centered: true,
+                content: (
+                  <Row style={{ marginTop: "-20px" }}>
+                    <Col span={24}>
+                      <p>
+                        <img alt="ico" className="" src={Good} />
+                      </p>
+                    </Col>
+                    <Col span={24}>
+                      <h2>
+                        <b>
+                          {t("organigram.areasandpositions-masivee.well-done")}
+                        </b>
+                      </h2>
+                    </Col>
+                    <Col span={24}>
+                      <h3></h3>
+                    </Col>
+                    <Col span={24}>
+                      <h3>
+                        {t(
+                          "organigram.areasandpositions-masivee.organization-created"
+                        )}
+                      </h3>
+                      <br />
+                    </Col>
+                    <Col span={24}>
+                      <Button
+                        style={{ width: "50%" }}
+                        onClick={() => {
+                          modal.destroy();
+                        }}
+                        className="primary btn"
+                      >
+                        {t("organigram.password-modal.btn-done")}
+                      </Button>
+                    </Col>
+                  </Row>
+                ),
+                onOk() {},
+              });
+            }}
             value={t("organigram.areasandpositions-E.modal-file.btn-upload")}
           />,
         ]}

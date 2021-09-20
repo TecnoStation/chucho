@@ -11,9 +11,11 @@ import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import Screens from "../../components/Screens/Screens";
 import ModalBranch from "../../components/Modals/ModalBranch/ModalBranch";
 import Good from "../../assets/img/icons/bien_hecho.svg";
+import { FaCamera } from "react-icons/fa";
 
 import "./MybusinessEdit.scss";
 import SelectDinamic from "../../components/SelectDinamic/SelectDinamic";
+import ModalPhoto from "../../components/Modals/ModalPhoto/ModalPhoto";
 
 const { TextArea, Search } = Input;
 const { Option } = Select;
@@ -22,15 +24,12 @@ export default function MybusinessEdit() {
   const [t, i18n] = useTranslation("global");
 
   const { TabPane } = Tabs;
-  const tabs = ["1", "2"];
-  const [Active, setActive] = useState(tabs[0]);
 
-  const changeActive = () => {
-    if (Active === "1") {
-      setActive(tabs[1]);
-    } else {
-      setActive(tabs[0]);
-    }
+  const tabs = ["1", "2"];
+  const [Active, setActive] = useState("1");
+
+  const changeActive = (e) => {
+    setActive(e);
   };
 
   const [firtFlag, setFirtFlag] = useState(true);
@@ -46,6 +45,12 @@ export default function MybusinessEdit() {
     setMessageType(2);
     firtFlag ? setMessage(true) : console.log("Success:", values);
   };
+
+  //---------------- upload photo -----------------------------
+
+  const [photo, setPhoto] = useState(false);
+
+  //---------------- end upload photo -------------------------
 
   // ---------- Branchs ---------------------------------------
 
@@ -183,10 +188,16 @@ export default function MybusinessEdit() {
 
   //----------------- End Selects Dinamic Data --------------------------------
 
+  //----------------------- Image Perfil --------------------------------------
+
+  const [src, setSrc] = useState(Avatar);
+
+  //----------------------- End Image Perfil -----------------------------------
+
   return (
     <>
       <Tabs
-        className="tab"
+        defaultActiveKey={"1"}
         activeKey={Active}
         onChange={changeActive}
         type="card"
@@ -200,14 +211,29 @@ export default function MybusinessEdit() {
             <Form name="formInformtion" onFinish={onFinish} layout="vertical">
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={12}>
-                  <h2 className="title1">
+                  <h2 className="title2">
                     {t("organigram.my-business-edit.information.title")}
                   </h2>
-                  <p>
-                    <img alt="ico" width="140" src={Avatar} />
-                  </p>
+                  <div className="photo">
+                    <img
+                      alt="ico"
+                      style={{
+                        width: "100px",
+                        borderRadius: "50%",
+                      }}
+                      src={src}
+                    />
+                    <div
+                      onClick={() => {
+                        setPhoto(true);
+                      }}
+                      className="camera"
+                    >
+                      <FaCamera className="iconsize1" />
+                    </div>
+                  </div>
 
-                  <div className="formWork">
+                  <div style={{ marginTop: "15px" }} className="formWork">
                     <Form.Item
                       rules={[
                         {
@@ -412,7 +438,7 @@ export default function MybusinessEdit() {
                     </Col>
                   </Row>
                   <Row
-                    style={{ marginTop: "15px" }}
+                    style={{ marginTop: "15px", textAlign: "left" }}
                     gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
                   >
                     <Col className="gutter-row" span={12}>
@@ -422,11 +448,7 @@ export default function MybusinessEdit() {
                         )}
                       </span>
                     </Col>
-                    <Col
-                      className="gutter-row"
-                      style={{ textAlign: "left" }}
-                      span={12}
-                    >
+                    <Col className="gutter-row" style={{}} span={12}>
                       <span>
                         {t(
                           "organigram.my-business-edit.information.form.direction"
@@ -434,10 +456,10 @@ export default function MybusinessEdit() {
                       </span>
                     </Col>
                     <div className="divider">
-                      <div className="dividerBottom"></div>
+                      <div className="dividerBottom2"></div>
                     </div>
                   </Row>
-                  <div id="branchList">
+                  <div id="branchList" className="branchList">
                     <Branchs
                       branchs={branchs}
                       edit={edit}
@@ -601,8 +623,15 @@ export default function MybusinessEdit() {
                   </Row>
 
                   <br />
-                  <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-                    <Col className="gutter-row" span={11}>
+                  <Row
+                    style={{ textAlign: "left" }}
+                    gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+                  >
+                    <Col
+                      style={{ paddingLeft: "15px" }}
+                      className="gutter-row"
+                      span={12}
+                    >
                       <span>
                         <b>
                           {t(
@@ -621,7 +650,7 @@ export default function MybusinessEdit() {
                       </span>
                     </Col>
                     <div className="divider">
-                      <div className="dividerBottom"></div>
+                      <div className="dividerBottom2"></div>
                     </div>
                   </Row>
                   <div id="competencies" className="competencies">
@@ -717,6 +746,8 @@ export default function MybusinessEdit() {
         editionModeSlider={editionModeSlider}
         setEditionModeSlider={setEditionModeSlider}
       />
+
+      <ModalPhoto setSrc={setSrc} photo={photo} setPhoto={setPhoto} />
 
       <Screens
         message={message}
