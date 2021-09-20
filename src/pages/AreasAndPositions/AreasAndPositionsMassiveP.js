@@ -267,7 +267,7 @@ export default function AreasAndPositionsMassiveP() {
             {t("organigram.areasandpositions-masivep.btn-cancel")}
           </Button>,
           <input
-            type="button"
+           style={{width: "80px"}} type="button"
             className="primary"
             onClick={sendUpload}
             value={t("organigram.areasandpositions-masivep.btn-rise")}
