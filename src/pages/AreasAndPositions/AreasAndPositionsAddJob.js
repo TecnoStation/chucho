@@ -537,7 +537,7 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull" style={{ marginTop: "20px" }}>
               <Col span={16}>
-                <b>Competencias institucionales</b>
+                <b>{t("organigram.areasandpositions-addjob.competences2")}</b>
               </Col>
               <Col span={8}>
                 <Link
