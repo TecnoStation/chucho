@@ -42,13 +42,10 @@ export default function AreasAndPositionsMassiveC() {
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
         <Col className="gutter-row" span={12}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-<<<<<<< HEAD
             <Col className="title2" span={24}>
-              <h3 className="primaryText">{t("organigram.areasandpositions-E.title")}</h3> 
-=======
-            <Col className="gutter-row" span={24}>
-              <h3>{t("organigram.areasandpositions-E.title")}</h3>
->>>>>>> 157568b8d86c64456306f94fd05758a4afc666b4
+              <h3 className="primaryText">
+                {t("organigram.areasandpositions-E.title")}
+              </h3>
             </Col>
           </Row>
 
@@ -80,7 +77,9 @@ export default function AreasAndPositionsMassiveC() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b className="primaryText">{t("organigram.areasandpositions-E.text-5")}</b>
+                <b className="primaryText">
+                  {t("organigram.areasandpositions-E.text-5")}
+                </b>
               </p>
             </Col>
           </Row>
@@ -106,7 +105,9 @@ export default function AreasAndPositionsMassiveC() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b className="primaryText">{t("organigram.areasandpositions-E.tex-file-a")}</b>
+                <b className="primaryText">
+                  {t("organigram.areasandpositions-E.tex-file-a")}
+                </b>
               </p>
             </Col>
           </Row>
@@ -132,7 +133,9 @@ export default function AreasAndPositionsMassiveC() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={24}>
-          <h1 className="primaryText">{t("organigram.areasandpositions-E.text-file-b")}</h1>
+          <h1 className="primaryText">
+            {t("organigram.areasandpositions-E.text-file-b")}
+          </h1>
         </Col>
       </Row>
 
@@ -142,16 +145,24 @@ export default function AreasAndPositionsMassiveC() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={6}>
-          <p className="secondaryText">{t("organigram.areasandpositions-E.file")}</p>
+          <p className="secondaryText">
+            {t("organigram.areasandpositions-E.file")}
+          </p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p className="secondaryText">{t("organigram.areasandpositions-E.date-load")}</p>
+          <p className="secondaryText">
+            {t("organigram.areasandpositions-E.date-load")}
+          </p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p className="secondaryText">{t("organigram.areasandpositions-E.status")}</p>
+          <p className="secondaryText">
+            {t("organigram.areasandpositions-E.status")}
+          </p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p className="secondaryText">{t("organigram.areasandpositions-E.actions")}</p>
+          <p className="secondaryText">
+            {t("organigram.areasandpositions-E.actions")}
+          </p>
         </Col>
       </Row>
 

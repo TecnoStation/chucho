@@ -260,9 +260,13 @@ export default function AreasAndPositionsAddJob() {
               style={{ textAlign: "left", marginBottom: "30px" }}
             >
               <h3>
-                <b className="primaryText">{t("organigram.areasandpositions-addjob.title")}</b>
+                <b className="primaryText">
+                  {t("organigram.areasandpositions-addjob.title")}
+                </b>
               </h3>
-              <span className="secondaryText">{t("organigram.areasandpositions-addjob.tex")}</span>
+              <span className="secondaryText">
+                {t("organigram.areasandpositions-addjob.tex")}
+              </span>
             </Col>
             <Col className="gutter-row" span={2}>
               <Dropdown overlay={menu} trigger={["click"]}>
@@ -479,7 +483,9 @@ export default function AreasAndPositionsAddJob() {
             <Row>
               <Col span={24}>
                 <span>
-                  <b className="secondaryText">{t("organigram.areasandpositions-addjob.languages")}</b>
+                  <b className="secondaryText">
+                    {t("organigram.areasandpositions-addjob.languages")}
+                  </b>
                 </span>
                 <br />
                 <br />
@@ -511,7 +517,13 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull">
               <Col span={10}>
+<<<<<<< HEAD
                 <b>{t("organigram.areasandpositions-addjob.competences")}</b>
+=======
+                <b className="secondaryText">
+                  {t("organigram.areasandpositions-addjob.competences")}
+                </b>
+>>>>>>> cfc13e035e7e5c0fe520e27bb77eec16fde13cb7
                 <Tooltip title="prompt text">
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
@@ -519,7 +531,9 @@ export default function AreasAndPositionsAddJob() {
                 </Tooltip>
               </Col>
               <Col style={{ textAlign: "center" }} span={14}>
-                <b className="secondaryText">{t("organigram.areasandpositions-addjob.level")}</b>
+                <b className="secondaryText">
+                  {t("organigram.areasandpositions-addjob.level")}
+                </b>
               </Col>
             </Row>
 
@@ -533,7 +547,9 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="tagTwo" style={{ marginTop: "10px" }}>
               <Col span={17}>
-                <b className="primaryText">Solución de Problemas - Desarrolla Alternativas</b>
+                <b className="primaryText">
+                  Solución de Problemas - Desarrolla Alternativas
+                </b>
               </Col>
               <Col span={5}>3</Col>
               <Col span={2}>
@@ -545,12 +561,18 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull" style={{ marginTop: "20px" }}>
               <Col span={16}>
+<<<<<<< HEAD
                 <b>{t("organigram.areasandpositions-addjob.competences2")}</b>
                 <Tooltip title="prompt text">
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
                   </span>
                 </Tooltip>
+=======
+                <b className="secondaryText">
+                  {t("organigram.areasandpositions-addjob.competences2")}
+                </b>
+>>>>>>> cfc13e035e7e5c0fe520e27bb77eec16fde13cb7
               </Col>
               <Col span={8}>
                 <Link
@@ -586,7 +608,13 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull" style={{ marginTop: "20px" }}>
               <Col span={16}>
+<<<<<<< HEAD
                 <b>Competencias del puesto</b>
+=======
+                <b className="secondaryText">
+                  {t("organigram.areasandpositions-addjob.competen-position")}
+                </b>
+>>>>>>> cfc13e035e7e5c0fe520e27bb77eec16fde13cb7
                 <Tooltip title="prompt text">
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
@@ -656,7 +684,9 @@ export default function AreasAndPositionsAddJob() {
         <Col className="gutter-row dividerLeft" span={10}>
           <Row>
             <Col span={24}>
-              <h3 className="primaryText">{t("organigram.areasandpositions-addjob.title1")}</h3>
+              <h3 className="primaryText">
+                {t("organigram.areasandpositions-addjob.title1")}
+              </h3>
             </Col>
           </Row>
           <Row>
