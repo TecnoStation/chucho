@@ -511,16 +511,12 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull">
               <Col span={10}>
-<<<<<<< HEAD
-                <b className="secondaryText">{t("organigram.areasandpositions-addjob.competences")}</b>
-=======
                 <b>{t("organigram.areasandpositions-addjob.competences")}</b>
                 <Tooltip title="prompt text">
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
                   </span>
                 </Tooltip>
->>>>>>> 157568b8d86c64456306f94fd05758a4afc666b4
               </Col>
               <Col style={{ textAlign: "center" }} span={14}>
                 <b className="secondaryText">{t("organigram.areasandpositions-addjob.level")}</b>
@@ -549,16 +545,12 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull" style={{ marginTop: "20px" }}>
               <Col span={16}>
-<<<<<<< HEAD
-                <b className="secondaryText">{t("organigram.areasandpositions-addjob.competences2")}</b>
-=======
                 <b>{t("organigram.areasandpositions-addjob.competences2")}</b>
                 <Tooltip title="prompt text">
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
                   </span>
                 </Tooltip>
->>>>>>> 157568b8d86c64456306f94fd05758a4afc666b4
               </Col>
               <Col span={8}>
                 <Link
@@ -594,16 +586,12 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull" style={{ marginTop: "20px" }}>
               <Col span={16}>
-<<<<<<< HEAD
-                <b className="secondaryText">{t("organigram.areasandpositions-addjob.competen-position")}</b>
-=======
                 <b>Competencias del puesto</b>
                 <Tooltip title="prompt text">
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
                   </span>
                 </Tooltip>
->>>>>>> 157568b8d86c64456306f94fd05758a4afc666b4
               </Col>
               <Col span={8}>
                 <Link
