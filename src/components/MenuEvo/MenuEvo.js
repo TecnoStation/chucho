@@ -233,7 +233,14 @@ export default function MenuEvo() {
           <span>{t("sidebar.keyindicators")}</span>
           <hr></hr>
           <ul>
-            <Link to="/indicadores/indicadores-clave">
+            <Link
+              to={
+                "/" +
+                t("routes.indicators") +
+                "/" +
+                t("path_indicator.indicatorStarted")
+              }
+            >
               <li>{t("key-Indicators.my-indicators")}</li>
             </Link>
             <li>{t("key-Indicators.my-evaluations")}</li>

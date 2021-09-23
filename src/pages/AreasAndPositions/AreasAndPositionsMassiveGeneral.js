@@ -253,6 +253,7 @@ export default function AreasAndPositionsMassiveGeneral() {
             )}
           </Button>,
           <input
+            style={{ width: "80px" }}
             type="button"
             className="primary"
             onClick={() => {

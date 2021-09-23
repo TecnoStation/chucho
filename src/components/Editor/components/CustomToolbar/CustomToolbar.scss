@@ -1,12 +1,22 @@
-.toolbar {
+#toolbar1,
+#toolbar2 {
   border: 0px solid #ccc !important;
   padding: 0px !important;
   margin-left: -8px;
   margin-top: 5px;
 }
-.ql-editor {
-  height: 110px;
+#editor1 {
+  .ql-editor {
+    height: 110px;
+  }
 }
-.ql-container.ql-snow {
+#toolbar1 .ql-container.ql-snow {
   border-radius: 5px;
+}
+
+#editor2 {
+  .ql-editor {
+    height: 72px !important;
+    width: 347px !important;
+  }
 }

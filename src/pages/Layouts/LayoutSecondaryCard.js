@@ -51,13 +51,13 @@ export default function LayoutSecondaryCard({
                 <Header>
                   <Row>
                     <Col style={{ textAlign: "left" }} span={3} MdDeviceHub>
-                      <h3>{Title}</h3>
+                      <h3 className="title2">{Title}</h3>
                     </Col>
                     <Col span={15}></Col>
                     <Col span={4} style={{ textAlign: "right" }}>
                       <Dropdown overlay={menu} trigger={["click"]}>
                         <Link
-                          to=""
+                          to="#"
                           className="principalColorText"
                           onClick={(e) => e.preventDefault()}
                         >

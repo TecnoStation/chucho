@@ -238,7 +238,8 @@ export default function AreasAndPositionsMassiveP() {
             {t("organigram.areasandpositions-masivep.btn-cancel")}
           </Button>,
           <input
-           style={{width: "80px"}} type="button"
+            style={{ width: "80px" }}
+            type="button"
             className="primary"
             onClick={() => {
               closeModalUpload();

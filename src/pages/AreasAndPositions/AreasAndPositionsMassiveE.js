@@ -237,6 +237,7 @@ export default function AreasAndPositionsMassiveE() {
             {t("organigram.areasandpositions-masivee.btn-cancel")}
           </Button>,
           <input
+            style={{ width: "80px" }}
             type="button"
             className="primary"
             onClick={() => {

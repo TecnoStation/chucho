@@ -147,13 +147,14 @@ function Indicators({ user }) {
                           <br />
                           <span style={{ fontSize: "10px" }}>Aumentar</span>
                         </Col>
-                        <Col span={2}>
+                        <Col style={{ textAlign: "center" }} span={2}>
                           <span>
                             <Input
                               onClick={() => {
                                 setIndicator(true);
                               }}
                               style={{
+                                width: "72px",
                                 borderRadius: "5px",
                                 textAlign: "center",
                               }}

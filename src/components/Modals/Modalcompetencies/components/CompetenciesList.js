@@ -51,9 +51,10 @@ export default function CompetenciesList({
     <>
       {competenciesList.map((competence, index) =>
         competence.visible ? (
-          <div className="rowC">
+          <div className="rowC" style={{ textAlign: "left" }}>
             <Tag
               className="tag"
+              style={{ paddingLeft: "16px" }}
               id={"competence" + component + index}
               key={uuid}
               onClick={(e) => {
@@ -67,7 +68,11 @@ export default function CompetenciesList({
               />
             </Tag>
 
-            <Tag className="hide" id={"competenceV" + component + index}>
+            <Tag
+              style={{ paddingLeft: "16px" }}
+              className="hide"
+              id={"competenceV" + component + index}
+            >
               {competence.name}
               <CheckCircleFilled
                 id={"CheckCircleFilled" + component + index}
@@ -76,8 +81,12 @@ export default function CompetenciesList({
             </Tag>
           </div>
         ) : (
-          <div className="rowC">
-            <Tag className="tag tag-active" key={index}>
+          <div className="rowC" style={{ textAlign: "left" }}>
+            <Tag
+              style={{ paddingLeft: "16px" }}
+              className="tag tag-active"
+              key={index}
+            >
               {competence.name}
               <CheckCircleFilled className="CheckCircleFilled" />
             </Tag>

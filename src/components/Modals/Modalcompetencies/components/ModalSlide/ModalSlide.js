@@ -25,7 +25,7 @@ function ModalSlide({
   };
 
   function formatter(value) {
-    return `${value / 25}`;
+    return `${(value / 25).toFixed(1)}`;
   }
 
   const onChange = (inputValue) => {
@@ -101,8 +101,9 @@ function ModalSlide({
               className="tag-cefective"
               min={0}
               max={4}
-              value={slider / 25}
+              value={(slider / 25).toFixed(1)}
               onChange={onChangeInput}
+              step={0.1}
             />
             <br />
             <span>
@@ -117,8 +118,9 @@ function ModalSlide({
               tipFormatter={formatter}
               onChange={onChange}
               included={true}
-              value={slider}
+              value={slider.toFixed(1)}
               defaultValue={slider}
+              step={0.1}
             />
           </Col>
           <Col span={4}></Col>

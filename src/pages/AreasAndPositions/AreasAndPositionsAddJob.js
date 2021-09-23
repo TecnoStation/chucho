@@ -9,11 +9,12 @@ import {
   Select,
   Button,
   Tag,
+  Tooltip,
 } from "antd";
 import More from "../../assets/img/icons/more_vert-24px.svg";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import { RiPencilFill } from "react-icons/ri";
-import { PlusCircleOutlined } from "@ant-design/icons";
+import { PlusCircleOutlined, QuestionCircleOutlined } from "@ant-design/icons";
 import { IoMdSquare } from "react-icons/io";
 import Avatar from "../../assets/img/avatar.png";
 import Treearea from "../../components/Tree/Treearea";
@@ -27,6 +28,8 @@ import ModalPassword from "../../components/Modals/ModalPassword/ModalPassword";
 import { useForm } from "antd/lib/form/Form";
 import Screens from "../../components/Screens/Screens";
 import SelectDinamic from "../../components/SelectDinamic/SelectDinamic";
+
+import "./AreasAndPositions.scss";
 
 const { Option } = Select;
 
@@ -508,7 +511,16 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull">
               <Col span={10}>
+<<<<<<< HEAD
                 <b className="secondaryText">{t("organigram.areasandpositions-addjob.competences")}</b>
+=======
+                <b>{t("organigram.areasandpositions-addjob.competences")}</b>
+                <Tooltip title="prompt text">
+                  <span style={{ marginLeft: "8px", fontSize: "13px" }}>
+                    <QuestionCircleOutlined className="iconSureGray" />
+                  </span>
+                </Tooltip>
+>>>>>>> 157568b8d86c64456306f94fd05758a4afc666b4
               </Col>
               <Col style={{ textAlign: "center" }} span={14}>
                 <b className="secondaryText">{t("organigram.areasandpositions-addjob.level")}</b>
@@ -537,7 +549,16 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull" style={{ marginTop: "20px" }}>
               <Col span={16}>
+<<<<<<< HEAD
                 <b className="secondaryText">{t("organigram.areasandpositions-addjob.competences2")}</b>
+=======
+                <b>{t("organigram.areasandpositions-addjob.competences2")}</b>
+                <Tooltip title="prompt text">
+                  <span style={{ marginLeft: "8px", fontSize: "13px" }}>
+                    <QuestionCircleOutlined className="iconSureGray" />
+                  </span>
+                </Tooltip>
+>>>>>>> 157568b8d86c64456306f94fd05758a4afc666b4
               </Col>
               <Col span={8}>
                 <Link
@@ -573,7 +594,16 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull" style={{ marginTop: "20px" }}>
               <Col span={16}>
+<<<<<<< HEAD
                 <b className="secondaryText">{t("organigram.areasandpositions-addjob.competen-position")}</b>
+=======
+                <b>Competencias del puesto</b>
+                <Tooltip title="prompt text">
+                  <span style={{ marginLeft: "8px", fontSize: "13px" }}>
+                    <QuestionCircleOutlined className="iconSureGray" />
+                  </span>
+                </Tooltip>
+>>>>>>> 157568b8d86c64456306f94fd05758a4afc666b4
               </Col>
               <Col span={8}>
                 <Link
@@ -585,7 +615,7 @@ export default function AreasAndPositionsAddJob() {
                   }}
                 >
                   <PlusCircleOutlined />{" "}
-                  <span style={{ marginLeft: "8px" }}>
+                  <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     {t("organigram.areasandpositions-addjob.link-addcompetens")}
                   </span>
                 </Link>
@@ -613,8 +643,9 @@ export default function AreasAndPositionsAddJob() {
                   {t("organigram.areasandpositions-addjob.fields-obligatory")}
                 </b>
               </Col>
-              <Col span={5}>
+              <Col style={{ textAlign: "right" }} span={10}>
                 <Link
+                  style={{ marginRight: "16px" }}
                   to={
                     "/" +
                     t("routes.organigram") +
@@ -626,8 +657,6 @@ export default function AreasAndPositionsAddJob() {
                     {t("organigram.areasandpositions-addjob.btn-cancel")}
                   </Button>
                 </Link>
-              </Col>
-              <Col span={5}>
                 <Button htmlType="submit" className="primary">
                   {t("organigram.areasandpositions-addjob.btn-save")}
                 </Button>

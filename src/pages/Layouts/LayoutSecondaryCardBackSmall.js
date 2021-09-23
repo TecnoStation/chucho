@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router";
+import { useHistory, useLocation } from "react-router";
 import { Col, Row, Menu, Dropdown, Avatar, Card, Button } from "antd";
 import { CaretDownOutlined, UserOutlined } from "@ant-design/icons";
 import { Link, Redirect, Route } from "react-router-dom";
@@ -20,9 +20,8 @@ export default function LayoutSecondaryCardBackSmall({
   component: Component,
   ...rest
 }) {
+  const history = useHistory();
   const [t, i18n] = useTranslation("global");
-  const location = useLocation();
-  let backTo = location.pathname.split("-");
 
   const menu = (
     <Menu>
@@ -57,7 +56,12 @@ export default function LayoutSecondaryCardBackSmall({
                 <Header>
                   <Row>
                     <Col style={{ textAlign: "left" }} span={3}>
-                      <Link to={backTo[0]}>
+                      <Link
+                        to="#"
+                        onClick={() => {
+                          history.goBack();
+                        }}
+                      >
                         <Button
                           className="layoutBtn"
                           style={{ textAlign: "left" }}
@@ -65,7 +69,7 @@ export default function LayoutSecondaryCardBackSmall({
                             <AiOutlineArrowLeft className="iconAjust2 iconGreen" />
                           }
                         >
-                          <span className="textAjust5">{Title}</span>
+                          <span className="textAjust5 title2">{Title}</span>
                         </Button>
                       </Link>
                     </Col>

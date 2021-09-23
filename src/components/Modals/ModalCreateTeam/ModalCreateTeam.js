@@ -298,6 +298,7 @@ function ModalCreateTeam({
         // centered={true}
         onCancel={() => {
           setCreateTeamModal(false);
+          form.resetFields();
         }}
         footer={false}
       >
@@ -462,6 +463,7 @@ function ModalCreateTeam({
                 className="secondary"
                 onClick={() => {
                   setCreateTeamModal(false);
+                  form.resetFields();
                 }}
               >
                 {t("organigram.teams-modal.btn-cancel")}

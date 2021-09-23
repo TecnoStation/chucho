@@ -3,43 +3,14 @@ import React, { useState } from "react";
 import { Button, Modal, Row, Col, Input, Upload } from "antd";
 import { useTranslation } from "react-i18next";
 import { RiArrowUpSFill } from "react-icons/ri";
-import { MdTextFields } from "react-icons/md";
-import { FiUpload } from "react-icons/fi";
-import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
-import ModalHistorial from "../ModalHistorial/ModalHistorial";
-
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+import Editor from "../../Editor/Editor";
 
 import "./ModalUpdateIndicator.scss";
-import CustomToolbar from "../../Editor/components/CustomToolbar/CustomToolbar";
-// import EditorU from "../../Editor/Editor";
 
 function ModalUpdateIndicator({ Indicator, setIndicator, setHistorial }) {
   const [t, i18n] = useTranslation("global");
   const [value, setValue] = useState("");
-  const modules = {
-    toolbar: {
-      container: ".toolbar",
-    },
-  };
-  const formats = [
-    "header",
-    "font",
-    "size",
-    "bold",
-    "italic",
-    "underline",
-    "strike",
-    "blockquote",
-    "list",
-    "bullet",
-    "indent",
-    "link",
-    "image",
-    "color",
-  ];
 
   return (
     <>
@@ -111,13 +82,7 @@ function ModalUpdateIndicator({ Indicator, setIndicator, setHistorial }) {
           </Row>
           <Row style={{ textAlign: "left", marginTop: "10px" }}>
             <Col span={24}>
-              <ReactQuill
-                modules={modules}
-                formats={formats}
-                value={value}
-                onChange={setValue}
-              />
-              <CustomToolbar />
+              <Editor id="1" value={value} setValue={setValue} />
             </Col>
           </Row>
         </Modal>
