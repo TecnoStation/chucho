@@ -826,7 +826,7 @@ export default function Perfil() {
         <Col className={flag} span={12} style={{ paddingLeft: "30px" }}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={22}>
-              <h3>
+              <h3 className="title2">
                 {t(
                   "organigram.areasandpositions-perfil.tab1.skills-collaborator"
                 )}
@@ -966,7 +966,7 @@ export default function Perfil() {
         <Col className={flag2} span={12} style={{ paddingLeft: "30px" }}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={22}>
-              <h3>
+              <h3 class="title2">
                 {t(
                   "organigram.areasandpositions-perfil.tab1.tab2.skills-position"
                 )}
@@ -1092,7 +1092,7 @@ export default function Perfil() {
         <Col className={flag3} span={12} style={{ paddingLeft: "30px" }}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={22}>
-              <h3>
+              <h3 className="title2">
                 {t(
                   "organigram.areasandpositions-perfil.tab1.tab2.edit-skills-collaborator.title"
                 )}

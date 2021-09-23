@@ -442,14 +442,14 @@ export default function MybusinessEdit() {
                     gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
                   >
                     <Col className="gutter-row" span={12}>
-                      <span>
+                      <span className="secondaryText">
                         {t(
                           "organigram.my-business-edit.information.form.branches-added"
                         )}
                       </span>
                     </Col>
                     <Col className="gutter-row" style={{}} span={12}>
-                      <span>
+                      <span className="secondaryText">
                         {t(
                           "organigram.my-business-edit.information.form.direction"
                         )}
@@ -526,7 +526,11 @@ export default function MybusinessEdit() {
             <Form name="formCulture" onFinish={onFinish2} layout="vertical">
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col className="gutter-row" span={12}>
+<<<<<<< HEAD
+                  <h2 className="primaryText" style={{ textAlign: "left" }}>
+=======
                   <h2 style={{ textAlign: "left" }} className="title2">
+>>>>>>> 157568b8d86c64456306f94fd05758a4afc666b4
                     {t("organigram.my-business-edit.culture.title")}
                   </h2>
                   <br />
@@ -597,7 +601,11 @@ export default function MybusinessEdit() {
                   </div>
                 </Col>
                 <Col className="gutter-row dividerLeft" span={12}>
+<<<<<<< HEAD
+                  <h2 className="primaryText" style={{ textAlign: "left" }}>
+=======
                   <h2 className="title2" style={{ textAlign: "left" }}>
+>>>>>>> 157568b8d86c64456306f94fd05758a4afc666b4
                     {t(
                       "organigram.my-business-edit.culture.institutional-competencies"
                     )}
@@ -636,7 +644,7 @@ export default function MybusinessEdit() {
                       span={12}
                     >
                       <span>
-                        <b>
+                        <b className="secondaryText">
                           {t(
                             "organigram.my-business-edit.culture.competencies-added"
                           )}
@@ -649,7 +657,7 @@ export default function MybusinessEdit() {
                       span={10}
                     >
                       <span>
-                        <b>{t("organigram.my-business-edit.culture.level")}</b>
+                        <b className="secondaryText">{t("organigram.my-business-edit.culture.level")}</b>
                       </span>
                     </Col>
                     <div className="divider">

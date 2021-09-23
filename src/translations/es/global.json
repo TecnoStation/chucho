@@ -318,7 +318,7 @@
              "btn-done": "Hecho"   
             },
             "position": {
-                "title-position": "Puesto",
+                "title-position": "Lista de puestos en Mi empresa",
                 "total-positions": "(Total 2 puestos)",
                 "btn-load-masive": "Carga masiva",
                 "btn-download-file": "Descargar archivo",
@@ -860,7 +860,7 @@
              "btn-cancel": "cancelar",
              "btn-enter": "Ingresar"   
             },
-            "title1": "Areas en las que participa el puesto",
+            "title1": "Áreas en las que participa el puesto",
             "tex-colaborator": "Colaboradores asignados al puesto de Director General"
            },
            "areasandpositions-general":{
