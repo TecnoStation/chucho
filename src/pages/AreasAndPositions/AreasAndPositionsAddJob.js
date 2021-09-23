@@ -517,7 +517,13 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull">
               <Col span={10}>
+<<<<<<< HEAD
                 <b>{t("organigram.areasandpositions-addjob.competences")}</b>
+=======
+                <b className="secondaryText">
+                  {t("organigram.areasandpositions-addjob.competences")}
+                </b>
+>>>>>>> 7ebea264ec0f8bec252d76b8fae4167d1fddad24
                 <Tooltip title="prompt text">
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />

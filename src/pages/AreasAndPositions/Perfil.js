@@ -588,7 +588,7 @@ export default function Perfil() {
 
                   <Row
                     gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-                    style={{ marginTop: "32px", paddingBottom: "10px" }}
+                    style={{ marginTop: "32px", paddingBottom: "15px" }}
                     className="dividerBottomFull"
                   >
                     <Col className="gutter-row" span={12}>
@@ -607,7 +607,7 @@ export default function Perfil() {
 
                   <Row
                     gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
-                    style={{ marginTop: "32px" }}
+                    style={{ marginTop: "15px" }}
                   >
                     <Col className="gutter-row" span={11}>
                       <span className="link">
