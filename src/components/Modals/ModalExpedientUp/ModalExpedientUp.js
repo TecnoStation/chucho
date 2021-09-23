@@ -2,12 +2,14 @@ import React from "react";
 import { Button, Col, Modal, Row, Upload } from "antd";
 import { CgSoftwareUpload } from "react-icons/cg";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 function ModalExpedientUp({ expedientUp, setExpedientUp }) {
+  const [t, i18n] = useTranslation("global");
   return (
     <>
       <Modal
-        title="Expediente: Marco Antonio Remirez Perez"
+        title={t("organigram.areasandpositions-perfil.tab1.add-file-modal.title")} 
         className="largeModal"
         visible={expedientUp}
         onCancel={() => {
@@ -15,13 +17,13 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
         }}
         footer={[
           <Button
-            style={{ marginRight: "15px" }}
+            style={{ marginRight: "15px" }} 
             className="secondary"
             onClick={() => {
               setExpedientUp(false);
             }}
           >
-            Cancelar
+            {t("organigram.areasandpositions-perfil.tab1.add-file-modal.btn-cancel")}
           </Button>,
           <Button
             className="primary"
@@ -29,7 +31,7 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
               setExpedientUp(false);
             }}
           >
-            Guardar
+            {t("organigram.areasandpositions-perfil.tab1.add-file-modal.btn-save")}
           </Button>,
         ]}
       >
@@ -38,16 +40,16 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
           style={{ textAlign: "center", paddingBottom: "15px" }}
         >
           <Col span={7}>
-            <b>Documento</b>
+            <b>{t("organigram.areasandpositions-perfil.tab1.add-file-modal.document")}</b>
           </Col>
           <Col span={6}>
-            <b>Estatus</b>
+            <b>{t("organigram.areasandpositions-perfil.tab1.add-file-modal.status")}</b>
           </Col>
           <Col span={7}>
-            <b>Fecha de carga</b>
+            <b>{t("organigram.areasandpositions-perfil.tab1.add-file-modal.date-load")}</b>
           </Col>
           <Col span={4}>
-            <b>Acciones</b>
+            <b>{t("organigram.areasandpositions-perfil.tab1.add-file-modal.actions")}</b>
           </Col>
         </Row>
 

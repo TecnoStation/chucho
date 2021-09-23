@@ -1,13 +1,12 @@
 import React, { useState } from "react";
-import reactDom from "react-dom";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import CustomToolbar from "./components/CustomToolbar/CustomToolbar";
 
-function Editor({ value, setValue }) {
+function Editor({ id, value, setValue, add }) {
   const modules = {
     toolbar: {
-      container: ".toolbar",
+      container: "#toolbar" + id,
     },
   };
   const formats = [
@@ -29,12 +28,18 @@ function Editor({ value, setValue }) {
   return (
     <>
       <ReactQuill
+        id={"editor" + id}
         modules={modules}
         formats={formats}
         value={value}
+        onKeyDown={(e) => {
+          if (e.code === "Enter") {
+            add();
+          }
+        }}
         onChange={setValue}
       />
-      <CustomToolbar />
+      <CustomToolbar id={"toolbar" + id} />
     </>
   );
 }

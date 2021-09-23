@@ -105,7 +105,7 @@ export default function Mybusiness() {
         <Col className="gutter-row" span={10}>
           <Row>
             <Col span={22} style={{ textAlign: "center" }}>
-              <h1 className="primaryText">
+              <h1 className="titleText">
                 {t("organigram.mybusiness-principal.data-general.title")}
               </h1>
             </Col>
@@ -260,7 +260,7 @@ export default function Mybusiness() {
         <Col span={14} className="dividerLeft gutter-row">
           <Row>
             <Col span={24} style={{ textAlign: "center" }}>
-              <h1 className="primaryText">
+              <h1 className="titleText">
                 {t("organigram.mybusiness-principal.business-culture.title")}
               </h1>
             </Col>

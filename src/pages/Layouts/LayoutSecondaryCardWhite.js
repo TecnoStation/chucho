@@ -10,11 +10,9 @@ import MenuEvo from "../../components/MenuEvo/MenuEvo";
 import MaterialIcon from "material-icons-react";
 import { MdDeviceHub } from "react-icons/md";
 import { useTranslation } from "react-i18next";
-
 import { Layout } from "antd";
-
-import "./LayoutSecondary.scss";
 import SelectLevel from "./components/SelectLevel/SelectLevel";
+import "./LayoutSecondary.scss";
 
 const { Search } = Input;
 
@@ -105,7 +103,7 @@ export default function LayoutSecondaryCardWhite({
                 <Header>
                   <Row>
                     <Col style={{ textAlign: "left" }} span={3} MdDeviceHub>
-                      <h3>{Title}</h3>
+                      <h3 className="title2">{Title}</h3>
                     </Col>
                     <Col
                       span={1}

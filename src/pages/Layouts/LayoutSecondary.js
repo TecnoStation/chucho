@@ -59,7 +59,7 @@ export default function LayoutSecondary({
                 <Header>
                   <Row>
                     <Col style={{ textAlign: "left" }} span={3}>
-                      <h3>{Title}</h3>
+                      <h3 className="title2">{Title}</h3>
                     </Col>
                     <Col span={15}></Col>
                     <Col style={{ textAlign: "right" }} span={4}>

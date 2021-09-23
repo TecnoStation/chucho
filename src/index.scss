@@ -308,6 +308,12 @@ label {
   color: $color-principal-text !important;
 }
 
+.titleText {
+  font-size: 22px;
+  font-weight: bold;
+  color: $color-principal-text !important;
+}
+
 .btnBlue,
 .btnBlue:hover,
 .btnBlue:focus {
@@ -373,6 +379,7 @@ label {
 .textAjust3 {
   float: right;
   margin-right: 0px !important;
+  margin-top: -3px;
 }
 
 .textAjust4 {
@@ -384,6 +391,7 @@ label {
 .textAjust5 {
   float: right;
   margin-right: 90px !important;
+  margin-top: -3px;
 }
 
 .select {

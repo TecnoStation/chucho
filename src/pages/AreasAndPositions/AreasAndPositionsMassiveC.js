@@ -127,7 +127,7 @@ export default function AreasAndPositionsMassiveC() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={24}>
-          <h1>{t("organigram.areasandpositions-E.text-file-")}</h1>
+          <h1>{t("organigram.areasandpositions-E.text-file-b")}</h1>
         </Col>
       </Row>
 
@@ -223,6 +223,7 @@ export default function AreasAndPositionsMassiveC() {
             {t("organigram.areasandpositions-E.modal-file.btn-cancel")}
           </Button>,
           <input
+            style={{ width: "80px" }}
             type="button"
             className="primary"
             onClick={() => {

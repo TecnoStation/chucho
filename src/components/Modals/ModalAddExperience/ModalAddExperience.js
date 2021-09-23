@@ -98,7 +98,7 @@ function ModalAddExperience({
           rules={[
             {
               required: true,
-              message: "*Campo requerido",
+              message: t("field-requiered"),
             },
           ]}
         >
@@ -108,7 +108,7 @@ function ModalAddExperience({
             rules={[
               {
                 required: true,
-                message: "*Campo requerido",
+                message: t("field-requiered"),
               },
             ]}
           />
@@ -119,7 +119,7 @@ function ModalAddExperience({
           rules={[
             {
               required: true,
-              message: "*Campo requerido",
+              message: t("field-requiered"),
             },
           ]}
         >
@@ -131,7 +131,7 @@ function ModalAddExperience({
           rules={[
             {
               required: true,
-              message: "*Campo requerido",
+              message: t("field-requiered"),
             },
           ]}
         >
@@ -148,7 +148,7 @@ function ModalAddExperience({
               rules={[
                 {
                   required: true,
-                  message: "*Campo requerido",
+                  message: t("field-requiered"),
                 },
               ]}
             >
@@ -162,7 +162,7 @@ function ModalAddExperience({
               rules={[
                 {
                   required: true,
-                  message: "*Campo requerido",
+                  message: t("field-requiered"),
                 },
               ]}
             >

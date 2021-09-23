@@ -676,43 +676,29 @@ export default function Collaborator() {
           </Row>
 
           <Row style={{ marginTop: "300px" }}>
-            <Col className="gutter-row" span={15}>
+            <Col className="gutter-row" span={16}>
               {t("organigram.collaborator-form.text-footer")}
             </Col>
-            <Col className="gutter-row" span={5}>
-              <Link to="/areasandpositions?tab=2">
+            <Col style={{ textAlign: "right" }} span={8}>
+              <Link
+                style={{ marginRight: "16px" }}
+                to={
+                  "/" +
+                  t("routes.organigram") +
+                  "/" +
+                  t("paths_organigram.areasandpositions")
+                }
+              >
                 <Button className="secondary">
                   {t("organigram.collaborator-form.btn-cancel")}
                 </Button>
               </Link>
-            </Col>
-            <Col className="gutter-row" span={3}>
               <Button htmlType="submit" className="primary">
                 {t("organigram.collaborator-form.btn-save")}
               </Button>
             </Col>
           </Row>
         </Col>
-        {/* <Screendefault>
-          <p style={{ textAlign: "center" }}>
-            <img alt="ico" width="140" src={Bien} />
-          </p>
-          <h3>{t("organigram.collaborator-form.well-done")}</h3>
-          <h3>{t("organigram.collaborator-form.organization-created")}</h3>
-          <br />
-          <Link
-            to={
-              "/" +
-              t("routes.organigram") +
-              "/" +
-              t("paths_organigram.organigram")
-            }
-          >
-            <Button className="primary">
-              {t("organigram.collaborator-form.btn-done")}
-            </Button>
-          </Link>
-        </Screendefault> */}
       </Row>
 
       <ModalPermissions

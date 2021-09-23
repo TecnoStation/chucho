@@ -33,6 +33,8 @@ function ModalMoveArea({
     },
   ]);
 
+  console.log("mode: " + modalMove.mode);
+
   return (
     <>
       <Modal
@@ -48,9 +50,12 @@ function ModalMoveArea({
             onClick={() => {
               setModalMove(false);
               setPassword({
-                titleModal: t("organigram.delete-collaborator.modal-move.title"),
-                messageModal:
-                t("organigram.delete-collaborator.modal-move.text"),
+                titleModal: t(
+                  "organigram.delete-collaborator.modal-move.title"
+                ),
+                messageModal: t(
+                  "organigram.delete-collaborator.modal-move.text"
+                ),
                 visible: true,
                 type: 0,
                 messageWarning:
@@ -88,14 +93,22 @@ function ModalMoveArea({
                           </Col>
                           <Col style={{ marginTop: "0px" }} span={24}>
                             <h2>
-                              <b>{t("organigram.delete-collaborator.warning.completed")}</b>
+                              <b>
+                                {t(
+                                  "organigram.delete-collaborator.warning.completed"
+                                )}
+                              </b>
                             </h2>
                           </Col>
                           <Col
                             span={24}
                             style={{ padding: "0px 60px 0px 60px" }}
                           >
-                            <h3>{t("organigram.delete-collaborator.warning.text2")}</h3>
+                            <h3>
+                              {t(
+                                "organigram.delete-collaborator.warning.text2"
+                              )}
+                            </h3>
                           </Col>
                           <Col span={24}>
                             <h3></h3>
@@ -129,11 +142,19 @@ function ModalMoveArea({
                           </Col>
                           <Col style={{ marginTop: "0px" }} span={24}>
                             <h2>
-                              <b>{t("organigram.delete-collaborator.modal-move.completed")}</b>
+                              <b>
+                                {t(
+                                  "organigram.delete-collaborator.modal-move.completed"
+                                )}
+                              </b>
                             </h2>
                           </Col>
                           <Col span={24}>
-                            <h3>{t("organigram.delete-collaborator.modal-move.text4")}</h3>
+                            <h3>
+                              {t(
+                                "organigram.delete-collaborator.modal-move.text4"
+                              )}
+                            </h3>
                           </Col>
                           <Col span={24}>
                             <h3></h3>
@@ -183,7 +204,9 @@ function ModalMoveArea({
             }}
             className="primary"
           >
-            {t("organigram.delete-collaborator.modal-move.btn-move")}
+            {modalMove.mode === 2
+              ? t("organigram.delete-collaborator.modal-move.btn-move2")
+              : t("organigram.delete-collaborator.modal-move.btn-move")}
           </Button>,
         ]}
       >

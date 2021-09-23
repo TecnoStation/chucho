@@ -526,7 +526,7 @@ export default function MybusinessEdit() {
             <Form name="formCulture" onFinish={onFinish2} layout="vertical">
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col className="gutter-row" span={12}>
-                  <h2 style={{ textAlign: "left" }}>
+                  <h2 style={{ textAlign: "left" }} className="title2">
                     {t("organigram.my-business-edit.culture.title")}
                   </h2>
                   <br />
@@ -597,13 +597,16 @@ export default function MybusinessEdit() {
                   </div>
                 </Col>
                 <Col className="gutter-row dividerLeft" span={12}>
-                  <h2 style={{ textAlign: "left" }}>
+                  <h2 className="title2" style={{ textAlign: "left" }}>
                     {t(
                       "organigram.my-business-edit.culture.institutional-competencies"
                     )}
                   </h2>
                   <br />
-                  <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+                  <Row
+                    style={{ textAlign: "left" }}
+                    gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+                  >
                     <Col className="gutter-row" span={10}>
                       <Link
                         to="#"

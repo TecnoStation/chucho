@@ -163,6 +163,7 @@ export default function AreasAndPositions() {
         type="card"
       >
         <TabPane
+          style={{ minHeight: "648px" }}
           className="tabPane"
           tab={t("organigram.areas-and-positions.structure.tab-name")}
           key="1"
@@ -171,7 +172,7 @@ export default function AreasAndPositions() {
             <Form name="formInformtion" onFinish={onFinish} layout="vertical">
               <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
                 <Col gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} span={11}>
-                  <h2 className="title1">
+                  <h2 className="title2">
                     {t("organigram.areas-and-positions.structure.title")}
                   </h2>
 
@@ -377,7 +378,10 @@ export default function AreasAndPositions() {
 
               <br />
 
-              <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+              <Row
+                className="btnTabs"
+                gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+              >
                 <Col
                   style={{ textAlign: "right" }}
                   className="gutter-row"
@@ -407,7 +411,12 @@ export default function AreasAndPositions() {
           </div>
         </TabPane>
 
-        <TabPane className="tabPane" tab="Puesto" key="2">
+        <TabPane
+          className="tabPane"
+          style={{ minHeight: "648px" }}
+          tab="Puesto"
+          key="2"
+        >
           <div className="info">
             <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
               <Col
@@ -591,7 +600,10 @@ export default function AreasAndPositions() {
               </Row>
             </Row>
             <Form onFinish={onFinish2}>
-              <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+              <Row
+                className="btnTabs"
+                gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
+              >
                 <Col
                   style={{ textAlign: "right" }}
                   className="gutter-row"

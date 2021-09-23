@@ -84,7 +84,7 @@ export default function LayoutSecondaryCardGlass({
                 <Header>
                   <Row>
                     <Col style={{ textAlign: "left" }} span={3} MdDeviceHub>
-                      <h3>{Title}</h3>
+                      <h3 className="title2">{Title}</h3>
                     </Col>
                     <Col
                       span={1}

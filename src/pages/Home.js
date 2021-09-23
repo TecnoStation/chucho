@@ -34,8 +34,9 @@ import Teams from "./Teams/Teams";
 import Teamv from "./Teams/Teamv";
 import TeamStarted from "./Teams/TeamStarted";
 import Collaborator from "./AreasAndPositions/Collaborator";
-import { useTranslation } from "react-i18next";
 import Indicators from "./Indicators/Indicators";
+import IndicatorStarted from "./Indicators/IndicatorStarted";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
   const [t, i18n] = useTranslation("global");
@@ -44,8 +45,22 @@ export default function Home() {
       <Switch>
         <LayoutSecondaryMenu
           exact
-          path={"/" + t("routes.indicators") + "/" + t("path_indicator")}
+          path={
+            "/" + t("routes.indicators") + "/" + t("path_indicator.indicator")
+          }
           component={Indicators}
+        />
+
+        <LayoutSecondaryCard
+          exact
+          path={
+            "/" +
+            t("routes.indicators") +
+            "/" +
+            t("path_indicator.indicatorStarted")
+          }
+          title="Indicadores Clave"
+          component={IndicatorStarted}
         />
 
         <LayoutSecondary

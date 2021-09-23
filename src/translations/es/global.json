@@ -31,7 +31,10 @@
         "areasandpositions-massivec": "areasypuestos-masivoc",
         "areasandpositions-perfil": "areasypuestos-perfil"
     },
-    "path_indicator": "indicadores-clave",
+    "path_indicator":{
+        "indicatorStarted": "indicadoresInicio",
+        "indicator": "indicadores-clave"
+    }, 
 
 
 
@@ -250,8 +253,8 @@
             "btn-edit": "Editar",
             "btn-save": "Guardar",
             "menu":{
-             "edit-branch": "Editar Sucursal",
-             "remove-branch": "Eliminar Sucursal"   
+             "edit-branch": "Editar sucursal",
+             "remove-branch": "Eliminar sucursal"   
             }
         },
         "add-competencies-modal": {
@@ -353,7 +356,7 @@
             "btn-cancel": "Cancelar",
             "btn-load-file": "Subir archivo",
             "up-load-file": "Sube el archivo",
-            "btn-rise": "subir",
+            "btn-rise": "Subir",
             "well-done": "¡Bien hecho!",
             "organization-created": "Organigrama creado",
             "btn-done": "hecho"
@@ -361,8 +364,8 @@
         "areasandpositions-masivep": {
             "title": "Carga masiva de puestos",
             "text1": "En este apartado vas a poder realizar la carga masiva de información.",
-            "text2": "Para facilitar la carga de datos, proponemos subir la información en 3 partes, la",
-            "text3": "primera sería un archivo con todas tus áreas y todos los puestos en tu empresa,",
+            "text2": "Para facilitar la carga de datos, proponemos subir la información en 3 partes, la ",
+            "text3": "primera sería un archivo con todas tus áreas y todos los puestos en tu empresa, ",
             "text4": "para facilitar este paso hemos creado una plantilla que puedes descargar, llenar y volver a subir:",
             "text5": "Descargar plantilla de Información de puesto",
             "text6": "Antes de importar los datos, es esencial asegurarse de que la tabla cumple estos tres requisitos:",
@@ -380,7 +383,7 @@
             "btn-cancel": "Cancelar",
             "btn-load-file": "Subir archivo",
             "up-load-file": "Sube el archivo",
-            "btn-rise": "subir",
+            "btn-rise": "Subir",
             "well-done": "¡Bien hecho!",
             "organization-created": "Organigrama creado",
             "btn-done": "hecho"
@@ -489,7 +492,7 @@
                 "btn-save": "Guardar",
                 "btn-delete": "Eliminar"
             },
-            "modal-move":{
+            "modal-move":{ 
              "title": "Dar de baja colaboradores",
              "text": "Al dar de baja a un colaborador, esté ya no formará parte de tu organización.",
              "deposit-lebel": "Ingresa tu contraseña de usuario",
@@ -499,6 +502,7 @@
              "text0": "Estas a punto de dar de baja al colaborador ",
              "btn-collaborator": "Dar de baja",
              "btn-move": "Mover a otra área",
+             "btn-move2": "Mover a otro puesto",
              "text3": "¿Seguro deseas eliminarlo?",
              "completed": "¡Completado!",
              "text4": "Has dado de baja al colaborador"
@@ -521,7 +525,7 @@
                 "title": "Información Colabrador",
                 "birthday-date": "Fecha de nacimiento",
                 "entry-date": "Fecha de ingreso",
-                "gender": "Genero",
+                "gender": "Género",
                 "marital-status": "Estado civil",
                 "nationality": "Nacionalidad",
                 "city": "Ciudad",
@@ -537,7 +541,7 @@
                 "proccedings": "Expediente digital",
                 "proccess-result": "Resultados de procesos",
                 "menu-collaborator": {
-                    "add-file": "Agregar Archivos",
+                    "add-file": "Agregar archivos",
                     "record-position": "Historial de puestos"
                 },
                 "skills-collaborator": "Habilidades del colaborador",
@@ -552,7 +556,7 @@
                     "edit-experience": "Editar mi experiencia"
                 },
                 "add-file-modal": {
-                    "title": "Expediente",
+                    "title": "Expediente:",
                     "document": "documento",
                     "status": "Estatus",
                     "date-load": "Fecha de carga",
@@ -658,10 +662,10 @@
                     "years": "Años",
                     "eight-years": "8 años",
                     "languages": "Idiomas",
-                    "skills-techniques": "Havilidades técnicas",
+                    "skills-techniques": "Habilidades técnicas",
                     "menu2-positions": {
                         "edit-skills": "Editar mis habilidades",
-                        "edit-experience": "Editar mi Experiencia"
+                        "edit-experience": "Editar mi experiencia"
                     },
                     "edit-skills-collaborator": {
                         "title": "Habilidades de colaborador",
@@ -799,7 +803,7 @@
             "placeholder-positionkey": "Ej.Puesto clave",
             "label-levelrisk": "Nivel de riesgo*",
             "placeholder-high": "Ej. Alto",
-            "label-levelstudies": "Nivel de Estudios*",
+            "label-levelstudies": "Nivel de estudios*",
             "placeholder-educationhigher": "Ej. Educación superior",
             "label-yearsexperience": "Años de experiencia*",
             "placeholder-selec": "Selecciona una opción",
@@ -861,17 +865,17 @@
            "areasandpositions-general":{
             "title": "Carga masiva",
             "text-1": "En este apartado vas a poder realizar la carga masiva de información.",
-            "text-2": "para facilitar la carga de datos, proponemos subir la información en 3 partes, la",
-            "text-3": "primera sería un archivo con todas tu áreas y todos los puestos en tu empresa,",
-            "text-4": ",para facilitar este paso hemos creado una plantilla que pudes descargar,llenar y subir:",
+            "text-2": "para facilitar la carga de datos, proponemos subir la información en 3 partes, la ",
+            "text-3": "primera sería un archivo con todas tu áreas y todos los puestos en tu empresa, ",
+            "text-4": "para facilitar este paso hemos creado una plantilla que pudes descargar, llenar y subir:",
             "downloads-template": "Descargar plantilla de Estructura",
             "text-5": "La segunda parte está pensada para que puedas subir toda la",
-            "text-6": " información que conforma cada puesto en tu organización,",
-            "text-7": "lo que se traduce en los datos básicos,las habilidades requeridas y las competencias de cada uno. Esta información debe decuadrar con la que previamente subiste de Estructura, por lo que tambiénpreparamos una plantilla:",
+            "text-6": " información que conforma cada puesto en tu organización",
+            "text-7": " lo que se traduce en los datos básicos,las habilidades requeridas y las competencias de cada uno. Esta información debe decuadrar con la que previamente subiste de Estructura, por lo que también preparamos una plantilla:",
             "downloads-positions": "Descargar plantilla de Información de Puestos",
             "text-8": "Finalmente tenemos una tercera parte, donde vas a poder subir ",
-            "text-9": " la información de las personas que ocupan esos puestos,",
-            "text-10": "por lo que también tenemos una plantilla:",
+            "text-9": " la información de las personas que ocupan esos puestos",
+            "text-10": " por lo que también tenemos una plantilla:",
             "downloads-collaborator": "Descargar plantilla de Información de Colaboradores",
             "title-2": "Antes de importar los datos, es esencial asegurarse de que la tabla cumple estos tres requisitos:",
             "text-a": "- Cada columna tiene un encabezado.",
@@ -894,9 +898,9 @@
           "areasandpositions-E":{
             "title": "Carga masiva de colaboradores",
             "text-1": "En este apartado vas a poder realizar la carga masiva de información.",
-            "text-2": "para facilitar la carga de datos, proponemos subir la información en 3 partes, la",
+            "text-2": "para facilitar la carga de datos, proponemos subir la información en 3 partes, la ",
             "text-3": "primera sería un archivo con todas tu áreas y todos los puestos en tu empresa,",
-            "text-4": ",para facilitar este paso hemos creado una plantilla que pudes descargar,llenar y subir:",
+            "text-4": " para facilitar este paso hemos creado una plantilla que pudes descargar, llenar y subir:",
             "collaborator-template": "Descargar plantilla de Información de Colaboradores",
             "text-5": "Antes de importar los datos, es esencial asegurarse de que la tabla cumple estos tres requisitos:",
             "text-a": "- Cada columna tiene un encabezado.",
@@ -1167,7 +1171,7 @@
         "btn-upgrade": "Actualizar"   
        },
        "modal-objectives":{
-        "title": "Objetivo: Volumen de tráfico en la página web",
+        "title": "Objetivo Volumen de tráfico en la página web",
         "updates": "Historial de actualizaciones",
         "placeholder-upgrade": "Buscar actualización",
         "upgrade": "Actualización",
@@ -1246,8 +1250,27 @@
        "upgrade": "Actualizar",
        "edit": "Editar",
        "remove": "Eliminar"   
+      },
+      "modal-indicator":{
+       "title": "Actualizar indicador",
+       "current": "Actual",
+       "objective": "Objetivo",
+       "trend": "Tendencia",
+       "add-text": "Agregar contexto:",
+       "attach": "Adjuntar evidencia",
+       "btn-cancel": "Cancelar",
+       "btn-upgrade": "Actualizar"   
+      },
+
+      "modal-video":{
+       "title": "¿Qué son los indicadores clave?",
+       "text": "Este video te ayudará a entender que son los indicadores clave.",
+       "btn-continue": "Continuar"   
+      },
+
+      "modal-recognition":{
+
       }
-      
-      
+
     }        
 }

@@ -79,8 +79,8 @@ function ModalCardTeam({
             </Dropdown>
           </Col>
         </Row>
-        <Row>
-          <Col span={8}>
+        <Row style={{ textAlign: "left", paddingLeft: "12px" }}>
+          <Col span={12}>
             <p>{modalCard.type}</p>
           </Col>
           <Col span={12}>
@@ -99,7 +99,7 @@ function ModalCardTeam({
             <p>{modalCard.frameWork}</p>
           </Col>
         </Row>
-        <Row style={{ textAlign: "center" }}>
+        <Row style={{ textAlign: "center", marginTop: "40px" }}>
           <Col span={10}>Miembros del Equipo</Col>
           <Col span={6}>Líder</Col>
           <Col span={8}>Roles</Col>

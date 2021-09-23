@@ -61,6 +61,20 @@ function ModalHistorial({ Historial, setHistorial }) {
     },
   };
 
+  const [message, setMessage] = useState([
+    {
+      idMessage: 0,
+      message:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      reply: [
+        // {
+        //   idRepli: 0,
+        //   message: "",
+        // },
+      ],
+    },
+  ]);
+
   const [slider, setSlider] = useState(50 / 12);
   const onChange = (inputValue) => {
     setSlider(inputValue);
@@ -70,52 +84,9 @@ function ModalHistorial({ Historial, setHistorial }) {
     return `${value * 12}`;
   }
 
-  new Quill("#editor", {
-    modules: {
-      toolbar: {
-        container: ".toolbar", // Selector for toolbar container
-      },
-    },
-    theme: "snow",
-    formats: [
-      "header",
-      "font",
-      "size",
-      "bold",
-      "italic",
-      "underline",
-      "strike",
-      "blockquote",
-      "list",
-      "bullet",
-      "indent",
-      "link",
-      "image",
-      "color",
-    ],
-  });
-
-  const modules = {
-    toolbar: {
-      container: ".toolbar",
-    },
+  const add = () => {
+    console.log(value);
   };
-  const formats = [
-    "header",
-    "font",
-    "size",
-    "bold",
-    "italic",
-    "underline",
-    "strike",
-    "blockquote",
-    "list",
-    "bullet",
-    "indent",
-    "link",
-    "image",
-    "color",
-  ];
 
   return (
     <Modal
@@ -294,16 +265,16 @@ function ModalHistorial({ Historial, setHistorial }) {
                   </Col>
                 </Row>
                 <Row>
-                  <Col span={24}>
-                    {/* <Editor
-                      id="editor2"
-                      modules={modules}
-                      formats={formats}
+                  <Col span={6}></Col>
+                  <Col span={17}>
+                    <Editor
+                      id="2"
+                      add={add}
                       value={value}
-                      onChange={setValue}
+                      setValue={setValue}
                     />
-                    <CustomToolbar /> */}
                   </Col>
+                  <Col span={1}></Col>
                 </Row>
               </Col>
             </Row>
