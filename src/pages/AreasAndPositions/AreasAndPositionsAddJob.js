@@ -517,13 +517,7 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull">
               <Col span={10}>
-<<<<<<< HEAD
                 <b>{t("organigram.areasandpositions-addjob.competences")}</b>
-=======
-                <b className="secondaryText">
-                  {t("organigram.areasandpositions-addjob.competences")}
-                </b>
->>>>>>> cfc13e035e7e5c0fe520e27bb77eec16fde13cb7
                 <Tooltip title="prompt text">
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
@@ -561,18 +555,12 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull" style={{ marginTop: "20px" }}>
               <Col span={16}>
-<<<<<<< HEAD
                 <b>{t("organigram.areasandpositions-addjob.competences2")}</b>
                 <Tooltip title="prompt text">
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
                   </span>
                 </Tooltip>
-=======
-                <b className="secondaryText">
-                  {t("organigram.areasandpositions-addjob.competences2")}
-                </b>
->>>>>>> cfc13e035e7e5c0fe520e27bb77eec16fde13cb7
               </Col>
               <Col span={8}>
                 <Link
@@ -608,13 +596,9 @@ export default function AreasAndPositionsAddJob() {
 
             <Row className="dividerBottomFull" style={{ marginTop: "20px" }}>
               <Col span={16}>
-<<<<<<< HEAD
-                <b>Competencias del puesto</b>
-=======
                 <b className="secondaryText">
                   {t("organigram.areasandpositions-addjob.competen-position")}
                 </b>
->>>>>>> cfc13e035e7e5c0fe520e27bb77eec16fde13cb7
                 <Tooltip title="prompt text">
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />

@@ -989,14 +989,14 @@ export default function Perfil() {
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
             style={{ marginTop: "20px" }}
           >
-            <Col className="gutter-row" span={12}>
+            <Col className="primaryText" span={12}>
               <b>
                 {t("organigram.areasandpositions-perfil.tab1.tab2.level-study")}
               </b>
               <br></br>
               <span>{dataSkillsPosition.studyLevel}</span>
             </Col>
-            <Col className="gutter-row" span={12}>
+            <Col className="primaryText" span={12}>
               <b>{t("organigram.areasandpositions-perfil.tab1.tab2.years")}</b>
               <br></br>
               <span>{dataSkillsPosition.years}</span>
@@ -1008,7 +1008,7 @@ export default function Perfil() {
             style={{ marginTop: "20px" }}
           >
             <Col className="gutter-row" span={12}>
-              <span>
+              <span className="secondaryText">
                 {t("organigram.areasandpositions-perfil.tab1.tab2.languages")}
               </span>
             </Col>
@@ -1029,7 +1029,7 @@ export default function Perfil() {
             style={{ marginTop: "20px" }}
           >
             <Col className="gutter-row" span={12}>
-              <span>
+              <span className="secondaryText">
                 {t(
                   "organigram.areasandpositions-perfil.tab1.tab2.skills-techniques"
                 )}
@@ -1062,11 +1062,11 @@ export default function Perfil() {
             className="dividerBottomFull"
             style={{ marginTop: "20px" }}
           >
-            <Col className="gutter-row" span={19}>
-              <span>Competencias del puesto</span>
+            <Col className="secondaryText" span={19}>
+              <span>{t("organigram.areasandpositions-perfil.tab1.tab2.competence-position")}</span>
             </Col>
-            <Col className="gutter-row" span={5}>
-              <span>Tipo</span>
+            <Col className="secondaryText" span={5}>
+              <span>{t("organigram.areasandpositions-perfil.tab1.tab2.kind")}</span>
             </Col>
           </Row>
 
@@ -1077,10 +1077,10 @@ export default function Perfil() {
               className="dividerBottomFull"
               style={{ marginTop: "20px" }}
             >
-              <Col className="gutter-row" span={19}>
+              <Col className="primaryText" span={19}>
                 <span>{competencie.name}</span>
               </Col>
-              <Col className="gutter-row" span={5}>
+              <Col className="primaryText" span={5}>
                 <span>{competencie.type}</span>
               </Col>
             </Row>
