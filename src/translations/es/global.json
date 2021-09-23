@@ -663,6 +663,8 @@
                     "eight-years": "8 años",
                     "languages": "Idiomas",
                     "skills-techniques": "Habilidades técnicas",
+                    "competence-position": "Competencias del puesto",
+                    "kind": "Tipo",
                     "menu2-positions": {
                         "edit-skills": "Editar mis habilidades",
                         "edit-experience": "Editar mi experiencia"

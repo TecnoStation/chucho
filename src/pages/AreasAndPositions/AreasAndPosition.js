@@ -494,21 +494,21 @@ export default function AreasAndPositions() {
                 />
               </Col>
               <Row className="info2 dividerBottomFull">
-                <Col span={8}>
+                <Col className="secondaryText" span={8}>
                   {t("organigram.areas-and-positions.position.position-name")}
                 </Col>
-                <Col span={4}>
+                <Col className="secondaryText" span={4}>
                   {t(
                     "organigram.areas-and-positions.position.basic-information"
                   )}
                 </Col>
-                <Col span={4}>
+                <Col className="secondaryText" span={4}>
                   {t("organigram.areas-and-positions.position.profiling")}
                 </Col>
-                <Col span={4}>
+                <Col className="secondaryText" span={4}>
                   {t("organigram.areas-and-positions.position.skills")}
                 </Col>
-                <Col span={4}>
+                <Col className="secondaryText" span={4}>
                   {t("organigram.areas-and-positions.position.actions")}
                 </Col>
               </Row>
