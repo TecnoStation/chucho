@@ -1076,15 +1076,17 @@
     
     "indicators":{
         "title": "¡Bienvenido a tus indicadores clave!",
-        "tex-a": "Aquí podrás actualizar, tener retroalimentación y ver la tendencia de tu desempeño",
-        "tex-b": "¿Cómo deseas actualizar tu indicador por primera vez?",
-        "btn-direct": "directo",
-        "btn-guide": "con guia",
+        "text-a": "Aquí podrás actualizar, tener retroalimentación y ver la tendencia de tu desempeño",
+        "text-b": "¿Cómo deseas actualizar tu indicador por primera vez?",
+        "btn-direct": "Directo",
+        "btn-guide": "Con guía",
+
         "modal-indicators":{
-        "idicators-key": "¿Qué son los indicadores clave?",
-        "tex": "Este video te ayudará a entender que son los indicadores clave.",
+        "indicators-key": "¿Qué son los indicadores clave?",
+        "text": "Este video te ayudará a entender que son los indicadores clave.",
         "btn-continue": "Continuar"   
         }   
+
        },
        "evaluations":{
         "tab-1": "Mis indicadores clave",

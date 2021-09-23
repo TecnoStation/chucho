@@ -152,6 +152,13 @@ label {
 
 .secondary {
   border-radius: 5px;
+  border: 1px solid $color-base !important;
+  color: $color-base !important;
+  background: $color-white !important;
+}
+
+.secondaryB {
+  border-radius: 5px;
 }
 
 .link {
