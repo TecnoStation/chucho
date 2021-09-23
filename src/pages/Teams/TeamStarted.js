@@ -154,7 +154,7 @@ export default function TeamStarted() {
             <img alt="ico" className="" src={Inicio} />
           </p>
           <br />
-          <h1>{t("organigram.teams.title")}</h1>
+          <h1 className="primaryText">{t("organigram.teams.title")}</h1>
           <p>{t("organigram.teams.tex")}</p>
           <br />
           <p>

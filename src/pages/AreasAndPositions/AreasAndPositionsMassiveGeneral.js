@@ -29,7 +29,7 @@ export default function AreasAndPositionsMassiveGeneral() {
         <Col className="gutter-row" span={12}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <h3>{t("organigram.areasandpositions-general.title")}</h3>
+              <h3 className="title2">{t("organigram.areasandpositions-general.title")}</h3>
             </Col>
           </Row>
 
@@ -37,7 +37,7 @@ export default function AreasAndPositionsMassiveGeneral() {
             style={{ paddingBottom: "10px" }}
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
           >
-            <Col className="gutter-row" span={24}>
+            <Col className="secondaryText" span={24}>
               <p>{t("organigram.areasandpositions-general.text-1")}</p>
             </Col>
           </Row>
@@ -46,10 +46,10 @@ export default function AreasAndPositionsMassiveGeneral() {
             style={{ paddingBottom: "10px" }}
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
           >
-            <Col className="gutter-row" span={24}>
+            <Col className="secondaryText" span={24}>
               <p>
                 {t("organigram.areasandpositions-general.text-2")}
-                <b>{t("organigram.areasandpositions-general.text-3")}</b>
+                <b className="primaryText">{t("organigram.areasandpositions-general.text-3")}</b>
                 {t("organigram.areasandpositions-general.text-4")}
               </p>
             </Col>
@@ -71,10 +71,10 @@ export default function AreasAndPositionsMassiveGeneral() {
             style={{ paddingBottom: "20px" }}
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
           >
-            <Col className="gutter-row" span={24}>
+            <Col className="secondaryText" span={24}>
               <p>
                 {t("organigram.areasandpositions-general.text-5")}
-                <b>{t("organigram.areasandpositions-general.text-6")}</b>,
+                <b className="primaryText">{t("organigram.areasandpositions-general.text-6")}</b>,
                 {t("organigram.areasandpositions-general.text-7")}
               </p>
             </Col>
@@ -95,10 +95,10 @@ export default function AreasAndPositionsMassiveGeneral() {
             style={{ paddingBottom: "20px" }}
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
           >
-            <Col className="gutter-row" span={24}>
+            <Col className="secondaryText" span={24}>
               <p>
                 {t("organigram.areasandpositions-general.text-8")}
-                <b>{t("organigram.areasandpositions-general.text-9")}</b>,
+                <b className="primaryText">{t("organigram.areasandpositions-general.text-9")}</b>,
                 {t("organigram.areasandpositions-general.text-10")}
               </p>
             </Col>
@@ -124,7 +124,7 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p>
-                <b>{t("organigram.areasandpositions-general.title-2")}</b>
+                <b className="primaryText">{t("organigram.areasandpositions-general.title-2")}</b>
               </p>
             </Col>
           </Row>
@@ -133,7 +133,7 @@ export default function AreasAndPositionsMassiveGeneral() {
             style={{ paddingBottom: "10px" }}
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
           >
-            <Col className="gutter-row" span={24}>
+            <Col className="secondaryText" span={24}>
               <span> {t("organigram.areasandpositions-general.text-a")}</span>
               <br />
               <span>{t("organigram.areasandpositions-general.text-b")}</span>
@@ -148,7 +148,7 @@ export default function AreasAndPositionsMassiveGeneral() {
             style={{ paddingBottom: "10px" }}
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
           >
-            <Col className="gutter-row" span={24}>
+            <Col className="secondaryText" span={24}>
               <p>{t("organigram.areasandpositions-general.text-file")}</p>
             </Col>
           </Row>
@@ -159,7 +159,7 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p>
-                <b>{t("organigram.areasandpositions-general.tex-file-a")}</b>
+                <b className="primaryText">{t("organigram.areasandpositions-general.tex-file-a")}</b>
               </p>
             </Col>
           </Row>
@@ -187,7 +187,7 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p>
-                <b>{t("organigram.areasandpositions-general.text-file-b")}</b>
+                <b className="primaryText">{t("organigram.areasandpositions-general.text-file-b")}</b>
               </p>
             </Col>
           </Row>
@@ -215,7 +215,7 @@ export default function AreasAndPositionsMassiveGeneral() {
           >
             <Col className="gutter-row" span={24}>
               <p>
-                <b>{t("organigram.areasandpositions-general.text-file-c")}</b>
+                <b className="primaryText">{t("organigram.areasandpositions-general.text-file-c")}</b>
               </p>
             </Col>
           </Row>

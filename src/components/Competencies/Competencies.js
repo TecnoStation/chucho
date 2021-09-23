@@ -105,11 +105,11 @@ export default function Competencies({
       <Row style={{ marginTop: "16px", width: "100%", textAlign: "left" }}>
         <Col style={{ paddingLeft: "0px" }} span={17}>
           <span>
-            <b>{comp.name}</b>
+            <b className="secondaryText">{comp.name}</b>
           </span>
         </Col>
         <Col span={3}>
-          <span>{comp.level}</span>
+          <span className="secondaryText">{comp.level}</span>
         </Col>
 
         <Col span={4}>

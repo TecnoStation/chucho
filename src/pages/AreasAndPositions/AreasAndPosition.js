@@ -412,7 +412,7 @@ export default function AreasAndPositions() {
             <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
               <Col
                 style={{ textAlign: "left" }}
-                className="gutter-row"
+                className="primaryText"
                 span={6}
               >
                 <span>

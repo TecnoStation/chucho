@@ -223,7 +223,7 @@ export default function Collaborator() {
         <Col className="gutter-row" span={11}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col span={22} style={{ textAlign: "left" }}>
-              <h1>{t("organigram.collaborator-form.title")}</h1>
+              <h1 className="primaryText">{t("organigram.collaborator-form.title")}</h1>
             </Col>
             <Col span={2}>
               <Dropdown overlay={menu} trigger={["click"]}>

@@ -43,21 +43,21 @@ export default function AreasAndPositionsMassiveE() {
         <Col className="gutter-row" span={12}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <h3>{t("organigram.areasandpositions-masivee.title")}</h3>
+              <h3 className="title2">{t("organigram.areasandpositions-masivee.title")}</h3>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={24}>
+            <Col className="secondaryText" span={24}>
               <p>{t("organigram.areasandpositions-masivee.text1")}</p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={24}>
+            <Col className="secondaryText" span={24}>
               <p>
                 {t("organigram.areasandpositions-masivee.text2")}
-                <b>{t("organigram.areasandpositions-masivee.text3")}</b>
+                <b className="primaryText">{t("organigram.areasandpositions-masivee.text3")}</b>
                 {t("organigram.areasandpositions-masivee.text4")}
               </p>
             </Col>
@@ -75,13 +75,13 @@ export default function AreasAndPositionsMassiveE() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b>{t("organigram.areasandpositions-masivee.text6")}</b>
+                <b className="primaryText">{t("organigram.areasandpositions-masivee.text6")}</b>
               </p>
             </Col>
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={24}>
+            <Col className="secondaryText" span={24}>
               <span>{t("organigram.areasandpositions-masivee.text7")}</span>
               <br />
               <span>{t("organigram.areasandpositions-masivee.text8")}</span>
@@ -93,7 +93,7 @@ export default function AreasAndPositionsMassiveE() {
           </Row>
 
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-            <Col className="gutter-row" span={24}>
+            <Col className="secondaryText" span={24}>
               <p>{t("organigram.areasandpositions-masivee.text10")}</p>
             </Col>
           </Row>
@@ -101,7 +101,7 @@ export default function AreasAndPositionsMassiveE() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b>{t("organigram.areasandpositions-masivee.text11")}</b>
+                <b className="primaryText">{t("organigram.areasandpositions-masivee.text11")}</b>
               </p>
             </Col>
           </Row>
@@ -127,7 +127,7 @@ export default function AreasAndPositionsMassiveE() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={24}>
-          <h1>{t("organigram.areasandpositions-masivee.history-loads")}</h1>
+          <h1 className="primaryText">{t("organigram.areasandpositions-masivee.history-loads")}</h1>
         </Col>
       </Row>
 
@@ -137,16 +137,16 @@ export default function AreasAndPositionsMassiveE() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={6}>
-          <p>{t("organigram.areasandpositions-masivee.file")}</p>
+          <p className="secondaryText">{t("organigram.areasandpositions-masivee.file")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>{t("organigram.areasandpositions-masivee.date-load")}</p>
+          <p className="secondaryText">{t("organigram.areasandpositions-masivee.date-load")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>{t("organigram.areasandpositions-masivee.status")}</p>
+          <p className="secondaryText">{t("organigram.areasandpositions-masivee.status")}</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>{t("organigram.areasandpositions-masivee.actions")}</p>
+          <p className="secondaryText">{t("organigram.areasandpositions-masivee.actions")}</p>
         </Col>
       </Row>
 
