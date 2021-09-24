@@ -4,7 +4,6 @@ import Inicio from "../../assets/img/icons/Grupo 1182.svg";
 import { IoMdAdd } from "react-icons/io";
 import { SearchOutlined } from "@ant-design/icons";
 import { BsFillGrid3X2GapFill, BsListUl } from "react-icons/bs";
-import { RiFilterFill } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import ModalCreateTeam from "../../components/Modals/ModalCreateTeam/ModalCreateTeam";
@@ -91,10 +90,13 @@ export default function TeamStarted() {
           className="gutter-row iconGray"
           style={{ fontSize: "16px" }}
           span={1}
-        >
-        </Col>
+        ></Col>
         <Col className="gutter-row rigth" span={1}>
-          <Link to={"/" + t("routes.organigram") + "/" + t("paths_organigram.teams")}>
+          <Link
+            to={
+              "/" + t("routes.organigram") + "/" + t("paths_organigram.teams")
+            }
+          >
             <span style={{ fontSize: "17px" }}>
               <BsFillGrid3X2GapFill className="iconBlue" />
             </span>
