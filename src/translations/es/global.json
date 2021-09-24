@@ -1280,6 +1280,12 @@
        "text": "Reconocimiento para:",
        "btn-cancel": "Cancelar",
        "btn-create": "Crear"   
+      },
+
+      "modal-medals":{
+       "title": "Reconocimientos y medallas",
+       "visualize": "Visualizar"
+
       }
 
     }        
