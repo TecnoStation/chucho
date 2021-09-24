@@ -1132,7 +1132,7 @@
         },
         
         "modal-1":{
-         "title": "Crear Indicador Clave",
+         "title": "Crear indicador Clave",
          "what-measure-label": "¿Qué vas a medir? (Nombre del indicador clave)",
          "temporaliti-label": "Temporalidad:",
          "placeholder-quarterly": "Trimestral (Q)",
@@ -1272,7 +1272,14 @@
       },
 
       "modal-recognition":{
-
+       "title": "Reconocimiento",
+       "reason-lebel": "Motivo:",
+       "solution-plesegolder": "Solución de problemas",
+       "comments-lebel": "Comentarios:",
+       "text-placeholder": "Aqui pudes describir el por que de tu reconocimiento",
+       "text": "Reconocimiento para:",
+       "btn-cancel": "Cancelar",
+       "btn-create": "Crear"   
       }
 
     }        
