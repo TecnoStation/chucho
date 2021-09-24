@@ -23,66 +23,104 @@ function ModalUpdateIndicator({ Indicator, setIndicator, setHistorial }) {
           onCancel={() => {
             setIndicator(false);
           }}
-          footer={[
-            <Button
-              style={{ marginRight: "15px" }}
-              className="secondary"
-              onClick={() => {
-                setIndicator(false);
-              }}
-            >
-              Cancelar
-            </Button>,
-            <Button
-              className="primary"
-              onClick={() => {
-                setIndicator(false);
-                setHistorial(true);
-              }}
-            >
-              Actualizar
-            </Button>,
-          ]}
+          footer={false}
         >
-          <Row style={{ textAlign: "center" }}>
-            <Col style={{ textAlign: "left" }} span={6}>
-              <span>Actual</span>
-            </Col>
-            <Col span={12}>
-              <span>Objetivos</span>
-            </Col>
-            <Col span={6}>
-              <span>Tendencia</span>
-            </Col>
-          </Row>
-          <Row style={{ textAlign: "center", marginTop: "10px" }}>
-            <Col span={6}>
-              <Input
-                style={{ textAlign: "center", borderRadius: "5px" }}
-                type="text"
-              />
-            </Col>
-            <Col style={{ paddingLeft: "15px" }} span={11}>
-              <span>20</span>
-            </Col>
-            <Col className="iconGreen" span={7}>
-              <span>125%</span>
-              <span>
-                <RiArrowUpSFill
-                  style={{ position: "absolute", top: "-4px" }}
-                  className="iconsize3"
+          <div
+            style={{
+              width: "100%",
+              textAlign: "center",
+              paddingLeft: "7%",
+            }}
+          >
+            <Row className="contentM">
+              <Col style={{ textAlign: "left" }} span={6}>
+                <span>Actual</span>
+              </Col>
+              <Col span={12}>
+                <span>Objetivos</span>
+              </Col>
+              <Col span={6}>
+                <span>Tendencia</span>
+              </Col>
+            </Row>
+            <Row
+              className="contentM"
+              style={{
+                textAlign: "center",
+                marginTop: "10px",
+              }}
+            >
+              <Col
+                style={{
+                  textAlign: "left",
+                }}
+                span={6}
+              >
+                <Input
+                  style={{
+                    width: "64px",
+                    textAlign: "center",
+                    borderRadius: "5px",
+                  }}
+                  type="text"
                 />
-              </span>
-            </Col>
-          </Row>
-          <Row style={{ textAlign: "left", marginTop: "10px" }}>
+              </Col>
+              <Col style={{ paddingLeft: "15px" }} span={11}>
+                <span>20</span>
+              </Col>
+              <Col className="iconGreen" span={7}>
+                <span>125%</span>
+                <span>
+                  <RiArrowUpSFill
+                    style={{ position: "absolute", top: "-4px" }}
+                    className="iconsize3"
+                  />
+                </span>
+              </Col>
+            </Row>
+            <Row
+              className="contentM"
+              style={{
+                textAlign: "left",
+                marginTop: "30px",
+              }}
+            >
+              <Col span={24}>
+                <span>Agregar contexto:</span>
+              </Col>
+            </Row>
+            <Row
+              className="contentM"
+              style={{
+                textAlign: "left",
+                marginTop: "10px",
+              }}
+            >
+              <Col span={24}>
+                <Editor id="1" value={value} setValue={setValue} />
+              </Col>
+            </Row>
+          </div>
+          <Row style={{ textAlign: "right", marginTop: "30px" }}>
             <Col span={24}>
-              <span>Agregar contexto:</span>
-            </Col>
-          </Row>
-          <Row style={{ textAlign: "left", marginTop: "10px" }}>
-            <Col span={24}>
-              <Editor id="1" value={value} setValue={setValue} />
+              <Button
+                style={{ marginRight: "15px" }}
+                className="secondary"
+                onClick={() => {
+                  setIndicator(false);
+                }}
+              >
+                Cancelar
+              </Button>
+              <Button
+                className="primary"
+                onClick={() => {
+                  setIndicator(false);
+                  setHistorial(true);
+                }}
+              >
+                Actualizar
+              </Button>
             </Col>
           </Row>
         </Modal>

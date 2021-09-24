@@ -4,9 +4,19 @@
   padding: 0px !important;
   margin-left: -8px;
   margin-top: 5px;
+  .ant-upload {
+    width: 180px;
+  }
 }
+
+#toolbar1 button {
+  width: 20px;
+}
+
 #editor1 {
+  width: 296px !important;
   .ql-editor {
+    width: 296px !important;
     height: 110px;
   }
 }

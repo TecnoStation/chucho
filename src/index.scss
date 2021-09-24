@@ -534,6 +534,19 @@ label {
   }
 }
 
+.videoModal {
+  width: 864px !important;
+  height: 520px !important;
+  .ant-modal-header {
+    text-align: center;
+  }
+  .ant-modal-content {
+    width: 864px !important;
+    height: 520px !important;
+    text-align: left;
+  }
+}
+
 .competenciesModal {
   width: 576px !important;
   height: 536px !important;
@@ -551,6 +564,17 @@ label {
   .ant-modal-content {
     width: 360px !important;
     height: 208px !important;
+    text-align: left;
+  }
+}
+
+.recognitionModal {
+  width: 480px !important;
+  height: 608px !important;
+  text-align: left;
+  .ant-modal-content {
+    width: 480px !important;
+    height: 608px !important;
     text-align: left;
   }
 }
@@ -603,12 +627,13 @@ label {
 }
 
 .updateModal {
-  width: 440px !important;
-  height: 392px !important;
+  width: 392px !important;
+  height: 440px !important;
+  text-align: center !important;
   .ant-modal-content {
-    width: 440px !important;
-    height: 392px !important;
-    text-align: left;
+    width: 392px !important;
+    height: 440px !important;
+    text-align: center !important;
   }
   .ant-modal-footer {
     margin-top: -15px;
