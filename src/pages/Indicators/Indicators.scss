@@ -27,3 +27,68 @@
     color: $color-principal-text;
   }
 }
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.graph1 {
+  width: 560px;
+  height: 197px !important;
+}
+
+.graph2 {
+  margin-top: 20px;
+  width: 376px !important;
+  height: 224px !important;
+}
+
+.tagExpectative {
+  width: 192px;
+  height: 32px;
+  background: $color-base-b;
+  text-align: center;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    color: $color-white !important;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+
+@mixin medals {
+  width: 64px;
+  height: 24px;
+  border-radius: 4px;
+  text-align: left;
+  img {
+    width: 24px;
+    margin-top: -4px;
+  }
+}
+
+.tagCup {
+  @include medals;
+  border: 1px solid #ebd312;
+}
+
+.tagGold {
+  @include medals;
+  border: 1px solid #c9b412;
+}
+
+.tagPlate {
+  @include medals;
+  border: 1px solid #d3e3e8;
+}
+
+.tagCobrum {
+  @include medals;
+  border: 1px solid #faa76a;
+}

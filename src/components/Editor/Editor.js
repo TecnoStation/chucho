@@ -3,7 +3,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import CustomToolbar from "./components/CustomToolbar/CustomToolbar";
 
-function Editor({ id, value, setValue, add }) {
+function Editor({ id, value, setValue, add, placeholder }) {
   const modules = {
     toolbar: {
       container: "#toolbar" + id,
@@ -31,6 +31,7 @@ function Editor({ id, value, setValue, add }) {
         id={"editor" + id}
         modules={modules}
         formats={formats}
+        placeholder={placeholder}
         value={value}
         onKeyDown={(e) => {
           if (e.code === "Enter") {

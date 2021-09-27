@@ -200,7 +200,6 @@ export default function AreasAndPositions() {
                             }}
                             icon={<ImArrowUp className="iconAjust2" />}
                           >
-                            {" "}
                             <span className="textAjust2">
                               {t(
                                 "organigram.areas-and-positions.structure.btn-load-masive"

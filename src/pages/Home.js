@@ -36,6 +36,7 @@ import TeamStarted from "./Teams/TeamStarted";
 import Collaborator from "./AreasAndPositions/Collaborator";
 import Indicators from "./Indicators/Indicators";
 import IndicatorStarted from "./Indicators/IndicatorStarted";
+import Panel from "./Indicators/Panel";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
@@ -49,6 +50,12 @@ export default function Home() {
             "/" + t("routes.indicators") + "/" + t("path_indicator.indicator")
           }
           component={Indicators}
+        />
+
+        <LayoutSecondaryMenu
+          exact
+          path={"/" + t("routes.indicators") + "/" + t("path_indicator.panel")}
+          component={Panel}
         />
 
         <LayoutSecondaryCard

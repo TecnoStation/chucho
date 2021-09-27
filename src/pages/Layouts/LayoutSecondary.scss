@@ -11,7 +11,6 @@
 .contentFrame {
   background: $color-font;
   min-height: 100vh;
-  //height: 100%;
   padding: 0px 0px 60px 105px;
 
   header {
@@ -39,7 +38,6 @@
 }
 
 .cardlayoutGlass {
-  //background: rgba(255, 255, 255,0);
   background: rgba(0, 0, 0, 0.02);
   height: auto;
   border: 0px;
@@ -48,12 +46,11 @@
 }
 
 .cardlayoutGlassFull {
-  //background: rgba(255, 255, 255,0);
   background: rgba(0, 0, 0, 0);
+  min-height: 100vh;
   height: auto;
   border: 0px;
   width: 82vw;
-  height: auto;
 }
 
 .cardlayoutGlassWhite {

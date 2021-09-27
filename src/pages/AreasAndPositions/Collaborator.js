@@ -151,7 +151,9 @@ export default function Collaborator() {
             </h2>
           </Col>
           <Col span={24} style={{ padding: "0px 60px 0px 60px" }}>
-            <h3>{t("organigram.collaborator-form.organization-created")}</h3>
+            <h3 style={{ fontWeight: "bold" }}>
+              {t("organigram.collaborator-form.organization-created")}
+            </h3>
           </Col>
           <Col span={24}>
             <h3></h3>
@@ -223,7 +225,9 @@ export default function Collaborator() {
         <Col className="gutter-row" span={11}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col span={22} style={{ textAlign: "left" }}>
-              <h1 className="primaryText">{t("organigram.collaborator-form.title")}</h1>
+              <h1 className="primaryText">
+                {t("organigram.collaborator-form.title")}
+              </h1>
             </Col>
             <Col span={2}>
               <Dropdown overlay={menu} trigger={["click"]}>
