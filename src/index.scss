@@ -30,12 +30,14 @@ body {
   font-family: "Lato";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f2f4f8 !important;
 }
 
 body,
 html {
   min-height: 100vh;
   height: auto;
+  background: #f2f4f8 !important;
 }
 
 code {
