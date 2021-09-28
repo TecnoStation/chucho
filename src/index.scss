@@ -92,6 +92,10 @@ label {
   color: $color-secondary-text !important;
 }
 
+label {
+  font-weight: bold;
+}
+
 .square {
   width: 100%;
   height: 80vh;
@@ -152,13 +156,14 @@ label {
 
 .secondary {
   border-radius: 5px;
-  border: 1px solid $color-base !important;
-  color: $color-base !important;
   background: $color-white !important;
 }
 
 .secondaryB {
   border-radius: 5px;
+  border: 1px solid $color-base !important;
+  color: $color-base !important;
+  background: $color-white !important;
 }
 
 .link {
@@ -246,10 +251,6 @@ label {
   label {
     font-weight: bold;
   }
-}
-
-.secondary {
-  border-radius: 5px;
 }
 
 .points {
@@ -534,6 +535,19 @@ label {
   }
 }
 
+.videoModal {
+  width: 864px !important;
+  height: 520px !important;
+  .ant-modal-header {
+    text-align: center;
+  }
+  .ant-modal-content {
+    width: 864px !important;
+    height: 520px !important;
+    text-align: left;
+  }
+}
+
 .competenciesModal {
   width: 576px !important;
   height: 536px !important;
@@ -551,6 +565,17 @@ label {
   .ant-modal-content {
     width: 360px !important;
     height: 208px !important;
+    text-align: left;
+  }
+}
+
+.recognitionModal {
+  width: 608px !important;
+  height: 480px !important;
+  text-align: left;
+  .ant-modal-content {
+    width: 608px !important;
+    height: 480px !important;
     text-align: left;
   }
 }
@@ -603,12 +628,13 @@ label {
 }
 
 .updateModal {
-  width: 440px !important;
-  height: 392px !important;
+  width: 392px !important;
+  height: 440px !important;
+  text-align: center !important;
   .ant-modal-content {
-    width: 440px !important;
-    height: 392px !important;
-    text-align: left;
+    width: 392px !important;
+    height: 440px !important;
+    text-align: center !important;
   }
   .ant-modal-footer {
     margin-top: -15px;
@@ -621,7 +647,7 @@ label {
     width: 776px !important;
     text-align: left;
   }
-  .graf {
+  .graph {
     width: 720px !important;
     height: 253px !important;
   }
@@ -807,4 +833,10 @@ label {
 
 .ant-upload-list-text-container {
   display: none;
+}
+
+.alignCenter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

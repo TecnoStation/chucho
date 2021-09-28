@@ -34,26 +34,38 @@ export default function ScreenOrganigram() {
         title={title}
         className="cardCarrousel"
         id="cardOrganigram"
-        headStyle={{ textAlign: "center" }}
+        headStyle={{
+          textAlign: "center",
+          color: "#00205b",
+          fontWeight: "bold",
+        }}
       >
         <div>
           <Carousel ref={(ref) => (carusel = ref)}>
             <Item>
               <div className="carruselItem">
                 <p>
-                  <b>{t("organigram.carousel-content0.text1-a")}</b>{" "}
+                  <b className="primaryText">
+                    {t("organigram.carousel-content0.text1-a")}
+                  </b>{" "}
                   {t("organigram.carousel-content0.text1-b")}
                 </p>
                 <p>
-                  <b>{t("organigram.carousel-content0.text2-a")}</b>{" "}
+                  <b className="primaryText">
+                    {t("organigram.carousel-content0.text2-a")}
+                  </b>{" "}
                   {t("organigram.carousel-content0.text2-b")}
                 </p>
                 <p>
-                  <b>{t("organigram.carousel-content0.text3-a")}</b>
+                  <b className="primaryText">
+                    {t("organigram.carousel-content0.text3-a")}
+                  </b>
                   {t("organigram.carousel-content0.text3-b")}
                 </p>
                 <p>
-                  <b>{t("organigram.carousel-content0.text4-a")}</b>
+                  <b className="primaryText">
+                    {t("organigram.carousel-content0.text4-a")}
+                  </b>
                 </p>
               </div>
             </Item>
@@ -61,19 +73,27 @@ export default function ScreenOrganigram() {
               <div className="carruselItem">
                 <p>{t("organigram.carousel-content1.text1-a")}</p>
                 <p>
-                  <b>{t("organigram.carousel-content1.text2-a")},</b>
+                  <b className="primaryText">
+                    {t("organigram.carousel-content1.text2-a")},
+                  </b>
                   {t("organigram.carousel-content1.text2-b")}
                 </p>
                 <p>
-                  <b>{t("organigram.carousel-content1.text3-a")}</b>
+                  <b className="primaryText">
+                    {t("organigram.carousel-content1.text3-a")}
+                  </b>
                   {t("organigram.carousel-content1.text3-b")}
                 </p>
                 <p>
-                  <b>{t("organigram.carousel-content1.text4-a")}</b>
+                  <b className="primaryText">
+                    {t("organigram.carousel-content1.text4-a")}
+                  </b>
                   {t("organigram.carousel-content1.text4-b")}
                 </p>
                 <p>
-                  <b>{t("organigram.carousel-content1.text4-c")}</b>{" "}
+                  <b className="primaryText">
+                    {t("organigram.carousel-content1.text4-c")}
+                  </b>{" "}
                   {t("organigram.carousel-content1.text4-d")}
                 </p>
               </div>
@@ -90,17 +110,54 @@ export default function ScreenOrganigram() {
             </Item>
             <Item>
               <div className="carruselItem">
-                <h4 style={{ textAlign: "center" }}>
+                <h4
+                  className="primaryText"
+                  style={{
+                    textAlign: "center",
+                    fontWeight: "bold",
+                  }}
+                >
                   {t("organigram.started.title")}
                 </h4>
-
-                <p className={br}>{t("organigram.started.text1-a")}</p>
-
-                <p className={br}>{t("organigram.started.text2-a")}</p>
-
+                <br />
+                <span
+                  className="secondaryText"
+                  style={{ fontWeight: "normal", fontSize: "14px" }}
+                >
+                  {t("organigram.started.text1-a")}
+                </span>
+                <span
+                  className="secondaryText"
+                  style={{ fontWeight: "normal", fontSize: "14px" }}
+                >
+                  <b>{t("organigram.started.text1-b")}</b>
+                </span>
+                <span
+                  className="secondaryText"
+                  style={{ fontWeight: "normal", fontSize: "14px" }}
+                >
+                  {t("organigram.started.text1-c")}
+                </span>
+                <span
+                  className="secondaryText"
+                  style={{ fontWeight: "normal", fontSize: "14px" }}
+                >
+                  <b>{t("organigram.started.text1-d")}</b>
+                </span>
+                <br />
+                <br />
+                <span
+                  className="secondaryText"
+                  style={{ fontWeight: "normal", fontSize: "14px" }}
+                >
+                  {t("organigram.started.text2-a")}
+                </span>
+                <br />
+                <br />
                 <p className={br} style={{ textAlign: "center" }}>
                   <img alt="ico" width={visible} src={Business} />
                 </p>
+
                 <div className={br} style={{ textAlign: "center" }}>
                   <Link
                     to={
@@ -173,17 +230,29 @@ export default function ScreenOrganigram() {
       </Card>
 
       <Card className="card" id="cardWarning" style={{ textAlign: "center" }}>
-        <p style={{ textAlign: "center" }}>
+        <p style={{ textAlign: "center", marginTop: "-20px" }}>
           <img alt="ico" width="120" className="" src={Warning} />
         </p>
         <h1>{t("organigram.dialog-warnin.atention")}</h1>
-        <p>{t("organigram.dialog-warnin.text1")}</p>
-        <p>{t("organigram.dialog-warnin.text2")}</p>
-        <p>{t("organigram.dialog-warnin.question")}</p>
+        <p className="primaryText">
+          <b style={{ fontSize: "16px" }}>
+            {t("organigram.dialog-warnin.text1")}
+          </b>
+        </p>
+        <p className="primaryText">
+          <b style={{ fontSize: "16px" }}>
+            {t("organigram.dialog-warnin.text2")}
+          </b>
+        </p>
+        <p className="primaryText">
+          <b style={{ fontSize: "16px" }}>
+            {t("organigram.dialog-warnin.question")}
+          </b>
+        </p>
         <Button
           onClick={showCard}
           className="secondary"
-          style={{ marginRight: "15px" }}
+          style={{ marginRight: "15px", marginTop: "15px" }}
         >
           {t("organigram.dialog-warnin.btn-continue")}
         </Button>

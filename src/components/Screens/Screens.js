@@ -90,14 +90,25 @@ function Screens({ message, setMessage, messageType, setActive }) {
         closable={false}
         footer={false}
       >
-        <h3>{msg[messageType].title}</h3>
-        <h3>{msg[messageType].subTitle}</h3>
+        <h3 className="primaryText" style={{ fontWeight: "bold" }}>
+          {msg[messageType].title}
+        </h3>
+        <h3 className="primaryText" style={{ fontWeight: "bold" }}>
+          {msg[messageType].subTitle}
+        </h3>
         <br />
-        <p style={{ textAlign: "justify" }}>{msg[messageType].text}</p>
-        <p style={{ textAlign: "justify" }}>{msg[messageType].text2}</p>
+        <p
+          className="secondaryText"
+          style={{ textAlign: "justify", fontSize: "16px" }}
+        >
+          {msg[messageType].text}
+        </p>
+        <p className="secondaryText" style={{ textAlign: "justify" }}>
+          {msg[messageType].text2}
+        </p>
         <br />
         <Button
-          style={{ width: "50%" }}
+          style={{ width: "50%", marginTop: "10px" }}
           onClick={msg[messageType].url}
           className="primary"
         >

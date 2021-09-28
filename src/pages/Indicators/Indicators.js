@@ -9,6 +9,7 @@ import {
   Tabs,
   Card,
   Input,
+  Button,
 } from "antd";
 import { CaretDownOutlined, UserOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
@@ -20,9 +21,14 @@ import { GrDocumentUpload } from "react-icons/gr";
 import { RiArrowUpSFill } from "react-icons/ri";
 import Increase from "../../assets/img/icons/aumentar.svg";
 import ModalUpdateIndicator from "../../components/Modals/ModalUpdateIndicator/ModalUpdateIndicator";
+import ModalHistorial from "../../components/Modals/ModalHistorial/ModalHistorial";
+import { Line } from "@ant-design/charts";
+import Cup from "../../assets/img/icons/emoji_events-24px.svg";
+import Medalgold from "../../assets/img/icons/military_tech-24px.svg";
+import Medalplate from "../../assets/img/icons/military_tech-24px_2.svg";
+import Medalcobrum from "../../assets/img/icons/military_tech-24px_3.svg";
 
 import "./Indicators.scss";
-import ModalHistorial from "../../components/Modals/ModalHistorial/ModalHistorial";
 
 const { Header } = Layout;
 const { TabPane } = Tabs;
@@ -54,6 +60,29 @@ function Indicators({ user }) {
   const [Indicator, setIndicator] = useState(false);
   const [Historial, setHistorial] = useState(false);
 
+  const data = [
+    { year: "30-DEC-20", value: 18 },
+    { year: "8-JAN-21", value: 40 },
+    { year: "17-JAN-21", value: 35 },
+    { year: "26-JAN-21", value: 50 },
+    { year: "4-FEB-21", value: 49 },
+    { year: "13-FEB-21", value: 60 },
+    { year: "22-FEB-21", value: 70 },
+    { year: "3-MAR-21", value: 90 },
+    { year: "12-MAR-21", value: 95 },
+  ];
+
+  const config = {
+    data,
+    height: 400,
+    xField: "year",
+    yField: "value",
+    point: {
+      size: 5,
+      shape: "diamond",
+    },
+  };
+
   return (
     <>
       <Header>
@@ -72,9 +101,18 @@ function Indicators({ user }) {
                     }}
                     span={1}
                   >
-                    <span>
-                      <MdShowChart className="iconsize3 iconGray" />
-                    </span>
+                    <Link
+                      to={
+                        "/" +
+                        t("routes.indicators") +
+                        "/" +
+                        t("path_indicator.panel")
+                      }
+                    >
+                      <span>
+                        <MdShowChart className="iconsize3 iconGray" />
+                      </span>
+                    </Link>
                   </Col>
 
                   <Col
@@ -202,7 +240,12 @@ function Indicators({ user }) {
                           className="dividerLeft"
                           span={1}
                         >
-                          <MdShowChart className="iconsize3 iconGray" />
+                          <MdShowChart
+                            onClick={() => {
+                              setHistorial(true);
+                            }}
+                            className="iconsize3 iconGray"
+                          />
                         </Col>
                         <Col
                           style={{ height: "35px", textAlign: "center" }}
@@ -226,8 +269,267 @@ function Indicators({ user }) {
                   setHistorial={setHistorial}
                 />
               </TabPane>
-              <TabPane tab="Mis evaluaciones" key="2">
-                Mis evaluaciones
+              <TabPane tab="Mis evaluaciones" className="chart" key="2">
+                <div
+                  style={{
+                    width: "976px",
+                    height: "auto",
+                  }}
+                >
+                  <h2
+                    className="secondaryText"
+                    style={{
+                      textAlign: "left",
+                      marginTop: "20px",
+                      marginLeft: "30px",
+                    }}
+                  >
+                    Mis evaluaciones
+                  </h2>
+                  <Row>
+                    <Col span={24}>
+                      <Card style={{ borderRadius: "8px" }}>
+                        <Row>
+                          <Col span={5}>
+                            <span
+                              style={{ fontSize: "16px" }}
+                              className="primaryText"
+                            >
+                              <b>{t("evaluations.result-performance")}</b>
+                            </span>
+                            <div className="tagExpectative">
+                              <span>{t("evaluations.text")}</span>
+                            </div>
+                          </Col>
+                          <Col span={14}></Col>
+                          <Col span={5}>
+                            <Link to="#">
+                              <Button
+                                onClick={() => {
+                                  // setModalDownload(true);
+                                }}
+                                className="btnBlue third"
+                                size="default"
+                              >
+                                <IoMdCloudDownload className="iconAjust" />{" "}
+                                <span
+                                  style={{ color: "#fff" }}
+                                  className="textAjust"
+                                >
+                                  {t("my-evaluations.download-report")}
+                                </span>
+                              </Button>
+                            </Link>
+                          </Col>
+                        </Row>
+
+                        <Row style={{ marginTop: "40px" }}>
+                          <Col
+                            style={{
+                              textAlign: "center",
+                              paddingLeft: "10px",
+                            }}
+                            span={11}
+                          >
+                            <span>{t("my-evaluations.evaluation")}</span>
+
+                            <Line className="graph2" {...config} />
+                            <div></div>
+                          </Col>
+                          <Col
+                            className="dividerLeft alignCenter"
+                            style={{
+                              textAlign: "center",
+                              padding: "0px 40px 0px 40px",
+                            }}
+                            span={5}
+                          >
+                            <span>
+                              {t("my-evaluations.recognitions-medals")}
+                            </span>
+                            <div
+                              style={{ marginTop: "20px" }}
+                              className="tagCup"
+                            >
+                              <Row>
+                                <Col span={14}>
+                                  <img alt="" src={Cup} />
+                                </Col>
+                                <Col className="secondaryText" span={10}>
+                                  2
+                                </Col>
+                              </Row>
+                            </div>
+
+                            <div
+                              style={{ marginTop: "20px" }}
+                              className="tagGold"
+                            >
+                              <Row>
+                                <Col span={14}>
+                                  <img alt="" src={Medalgold} />
+                                </Col>
+                                <Col className="secondaryText" span={10}>
+                                  3
+                                </Col>
+                              </Row>
+                            </div>
+
+                            <div
+                              style={{ marginTop: "20px" }}
+                              className="tagPlate"
+                            >
+                              <Row>
+                                <Col span={14}>
+                                  <img alt="" src={Medalplate} />
+                                </Col>
+                                <Col className="secondaryText" span={10}>
+                                  8
+                                </Col>
+                              </Row>
+                            </div>
+
+                            <div
+                              style={{ marginTop: "20px" }}
+                              className="tagCobrum"
+                            >
+                              <Row>
+                                <Col span={14}>
+                                  <img alt="" src={Medalcobrum} />
+                                </Col>
+                                <Col className="secondaryText" span={10}>
+                                  2
+                                </Col>
+                              </Row>
+                            </div>
+                            <Link
+                              to="#"
+                              className="link"
+                              style={{ marginTop: "20px" }}
+                            >
+                              {t("my-evaluations.watch-detail")}
+                            </Link>
+                          </Col>
+                          <Col className="dividerLeft" span={8}></Col>
+                        </Row>
+                      </Card>
+                    </Col>
+                  </Row>
+                </div>
+
+                <div
+                  style={{
+                    width: "976px",
+                    height: "auto",
+                  }}
+                >
+                  <h2
+                    className="secondaryText"
+                    style={{
+                      textAlign: "left",
+                      marginTop: "20px",
+                      marginLeft: "30px",
+                    }}
+                  >
+                    {t("my-evaluations.self-appraisal")}
+                  </h2>
+                  <Row>
+                    <Col span={24}>
+                      <Card style={{ borderRadius: "8px" }}>
+                        <Row style={{ marginTop: "40px" }}>
+                          <Col
+                            style={{
+                              textAlign: "center",
+                              paddingLeft: "10px",
+                            }}
+                            span={11}
+                          >
+                            <span>{t("my-evaluations.evaluation")}</span>
+                            <span></span>
+
+                            <Line className="graph2" {...config} />
+                            <div></div>
+                          </Col>
+                          <Col
+                            className="dividerLeft alignCenter"
+                            style={{
+                              textAlign: "center",
+                              padding: "0px 40px 0px 40px",
+                            }}
+                            span={5}
+                          >
+                            <span>
+                              {t("my-evaluations.recognitions-medals")}
+                            </span>
+                            <div
+                              style={{ marginTop: "20px" }}
+                              className="tagCup"
+                            >
+                              <Row>
+                                <Col span={14}>
+                                  <img alt="" src={Cup} />
+                                </Col>
+                                <Col className="secondaryText" span={10}>
+                                  2
+                                </Col>
+                              </Row>
+                            </div>
+
+                            <div
+                              style={{ marginTop: "20px" }}
+                              className="tagGold"
+                            >
+                              <Row>
+                                <Col span={14}>
+                                  <img alt="" src={Medalgold} />
+                                </Col>
+                                <Col className="secondaryText" span={10}>
+                                  3
+                                </Col>
+                              </Row>
+                            </div>
+
+                            <div
+                              style={{ marginTop: "20px" }}
+                              className="tagPlate"
+                            >
+                              <Row>
+                                <Col span={14}>
+                                  <img alt="" src={Medalplate} />
+                                </Col>
+                                <Col className="secondaryText" span={10}>
+                                  8
+                                </Col>
+                              </Row>
+                            </div>
+
+                            <div
+                              style={{ marginTop: "20px" }}
+                              className="tagCobrum"
+                            >
+                              <Row>
+                                <Col span={14}>
+                                  <img alt="" src={Medalcobrum} />
+                                </Col>
+                                <Col className="secondaryText" span={10}>
+                                  2
+                                </Col>
+                              </Row>
+                            </div>
+                            <Link
+                              to="#"
+                              className="link"
+                              style={{ marginTop: "20px" }}
+                            >
+                              {t("my-evaluations.watch-detail")}
+                            </Link>
+                          </Col>
+                          <Col className="dividerLeft" span={8}></Col>
+                        </Row>
+                      </Card>
+                    </Col>
+                  </Row>
+                </div>
               </TabPane>
               <TabPane tab="Gestion de indicadores clave" key="3">
                 Gestion de indicadores clave

@@ -10,7 +10,7 @@ export default function Branchs({ branchs, edit, deleteBranch }) {
   return branchs.map((branch, index) => (
     <Row key={uuid()} className="rowbranch">
       <Col className="namesbranch" id="namesbranch" span={8}>
-        <span>{branch.name}</span>
+        <span className="primaryText">{branch.name}</span>
       </Col>
       <Col className="directionbranch" id="directionbranch" span={14}>
         <span>{branch.direction}</span>

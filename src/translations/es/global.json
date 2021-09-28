@@ -33,7 +33,8 @@
     },
     "path_indicator":{
         "indicatorStarted": "indicadoresInicio",
-        "indicator": "indicadores-clave"
+        "indicator": "indicadores-clave",
+        "panel": "Panel"
     }, 
 
 
@@ -129,17 +130,17 @@
             "text2-a": "Divide y segmenta el trabajo",
             "text2-b": "por unidades tácticas, mejorando la gestión de la estrategia.",
             "text3-a": "Visualiza el vínculo entre el alcance del puesto y el talento del colaborador",
-            "text3-b": "cerrando las brechas de las áreas de acción de la compañías así como las responsabilidades de los miembros que la forman.",
+            "text3-b": " cerrando las brechas de las áreas de acción de la compañías así como las responsabilidades de los miembros que la forman.",
             "text4-a": "Optimiza y facilita la gestión de los procesos entre EVOU y Evaluatest"
         },
         "carousel-content1": {
             "text1-a": "Para poder implementar tu organigrama se necesita conocer:",
             "text2-a": "Tu empresa",
-            "text2-b": "su información básica y su cultura.",
+            "text2-b": " su información básica y su cultura.",
             "text3-a": "La estructura de tu empresa,",
-            "text3-b": "es decir que áreas la componen y que puestos existen dentro de ella.",
+            "text3-b": " es decir que áreas la componen y que puestos existen dentro de ella.",
             "text4-a": "El perfil de tus puestos,",
-            "text4-b": "lo que se traduce en los datos básicos, las habilidades requeridas y las competencias de cada uno.",
+            "text4-b": " lo que se traduce en los datos básicos, las habilidades requeridas y las competencias de cada uno.",
             "text4-c": "El perfil de las personas",
             "text4-d": "que ocupan estos puestos, lo que significa sus datos básicos y las habilidades de cada uno."
         },
@@ -150,7 +151,10 @@
         },
         "started": {
             "title": "Iniciemos la creación de tu organigrama",
-            "text1-a": " Para iniciar la creación de tu organigrama, te sugerimos comenzar llenando la información de la sección de “Mi Empresa”.",
+            "text1-a": " Para iniciar la, ",
+            "text1-b": "creación de tu organigrama ",
+            "text1-c": "te sugerimos comenzar llenando la información de ",
+            "text1-d": "la sección de “Mi Empresa”.",
             "text2-a": "Si te faltara información para completar lo que te pedimos, siempre vas a poder regresar dando click desde el menú principal o en este icono:",
             "btn-started": "Comenzar"
         },
@@ -1102,7 +1106,7 @@
         "recognitions-medals": "Reconocimientos y  medallas",
         "comments-leader": "Comentarios del lider",
         "performance": "Desempeño",
-        "tex": "Cumplimiento de expectativas",
+        "text": "Cumple expectativas ",
         "weeks": "Semanas",
         "detail-link": "Ver detalle",
         "depict": "Describe tu autoevaluación",
@@ -1216,7 +1220,7 @@
        "compliance-expectations": "Cumplimiento de expectativas",
        "watch-detail": "Ver detalle",
        "download-report": "Descargar reporte",
-       "self appraisal": "Autoevaluación-Q3",
+       "self-appraisal": "Autoevaluación-Q3",
        "evaluation-calculated": "Evaluación calculada del Q3:",
        "recognition": "Reconocimientos y medallas",
        "depict-self appraisal": "Describe tu autoevaluación",
@@ -1276,7 +1280,11 @@
       "modal-recognition":{
        "title": "Reconocimiento",
        "reason-label": "Motivo:",
+<<<<<<< HEAD
        "solution-placeholder": "Solución de problemas",
+=======
+       "solution-pleceholder": "Solución de problemas",
+>>>>>>> 891bfe1290e1b97c1e9b4fc6ed1dc895ee700d2a
        "comments-label": "Comentarios:",
        "text-placeholder": "Aqui pudes describir el por que de tu reconocimiento",
        "text": "Reconocimiento para:",

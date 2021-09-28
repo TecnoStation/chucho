@@ -37,7 +37,7 @@ function IndicatorStarted() {
                 t("path_indicator.indicator")
               }
             >
-              <Button className="secondary">
+              <Button className="secondaryB">
                 <span className="textAjust4">{t("indicators.btn-direct")}</span>
               </Button>
             </Link>
