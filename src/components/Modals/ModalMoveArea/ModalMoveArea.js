@@ -219,7 +219,7 @@ function ModalMoveArea({
                     <img alt="ico" width="50" src={Avatar} />
                   </p>
                 </Col>
-                <Col span={18}>
+                <Col className="primaryText" span={18}>
                   <span>
                     <b>{collaborator.name}</b>
                   </span>

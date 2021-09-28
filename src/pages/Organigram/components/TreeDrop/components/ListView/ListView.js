@@ -43,10 +43,10 @@ function ListView({ employe }) {
           </p>
         </Col>
         <Col style={{ paddingLeft: "15px" }} span={5}>
-          <span>{employe.name}</span>
+          <span className="secondaryText">{employe.name}</span>
           <br />
           <span>
-            <b>{employe.position}</b>
+            <b className="primaryText">{employe.position}</b>
           </span>
         </Col>
         <Col span={17}>

@@ -58,7 +58,10 @@ export default function CardNodeEraseFather({
                     console.log(fathers);
                   }}
                 >
-                  <PlusCircleOutlined style={{ fontSize: "20px" }} />
+                  <PlusCircleOutlined
+                    className="iconGreen"
+                    style={{ fontSize: "20px" }}
+                  />
                 </Link>
               </div>
               <p>
@@ -97,7 +100,10 @@ export default function CardNodeEraseFather({
                     console.log(fathers);
                   }}
                 >
-                  <PlusCircleOutlined style={{ fontSize: "20px" }} />
+                  <PlusCircleOutlined
+                    className="iconGreen"
+                    style={{ fontSize: "20px" }}
+                  />
                 </Link>
               </div>
               <Dropdown
@@ -184,7 +190,10 @@ export default function CardNodeEraseFather({
               console.log(childrens);
             }}
           >
-            <PlusCircleOutlined style={{ fontSize: "20px" }} />
+            <PlusCircleOutlined
+              className="iconGreen"
+              style={{ fontSize: "20px" }}
+            />
           </Link>
         </div>
         {childrens.map(

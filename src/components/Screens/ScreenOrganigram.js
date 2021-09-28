@@ -42,63 +42,63 @@ export default function ScreenOrganigram() {
       >
         <div>
           <Carousel ref={(ref) => (carusel = ref)}>
-            <Item>
+            <Item style={{ fontWeight: "normal" }}>
               <div className="carruselItem">
                 <p>
-                  <b className="primaryText">
+                  <b className="primaryTextBold">
                     {t("organigram.carousel-content0.text1-a")}
                   </b>{" "}
                   {t("organigram.carousel-content0.text1-b")}
                 </p>
                 <p>
-                  <b className="primaryText">
+                  <b className="primaryTextBold">
                     {t("organigram.carousel-content0.text2-a")}
                   </b>{" "}
                   {t("organigram.carousel-content0.text2-b")}
                 </p>
                 <p>
-                  <b className="primaryText">
+                  <b className="primaryTextBold">
                     {t("organigram.carousel-content0.text3-a")}
                   </b>
                   {t("organigram.carousel-content0.text3-b")}
                 </p>
                 <p>
-                  <b className="primaryText">
+                  <b className="primaryTextBold">
                     {t("organigram.carousel-content0.text4-a")}
                   </b>
                 </p>
               </div>
             </Item>
-            <Item>
+            <Item style={{ fontWeight: "normal" }}>
               <div className="carruselItem">
                 <p>{t("organigram.carousel-content1.text1-a")}</p>
                 <p>
-                  <b className="primaryText">
+                  <b className="primaryTextBold">
                     {t("organigram.carousel-content1.text2-a")},
                   </b>
                   {t("organigram.carousel-content1.text2-b")}
                 </p>
                 <p>
-                  <b className="primaryText">
+                  <b className="primaryTextBold">
                     {t("organigram.carousel-content1.text3-a")}
                   </b>
                   {t("organigram.carousel-content1.text3-b")}
                 </p>
                 <p>
-                  <b className="primaryText">
+                  <b className="primaryTextBold">
                     {t("organigram.carousel-content1.text4-a")}
                   </b>
                   {t("organigram.carousel-content1.text4-b")}
                 </p>
                 <p>
-                  <b className="primaryText">
+                  <b className="primaryTextBold">
                     {t("organigram.carousel-content1.text4-c")}
                   </b>{" "}
                   {t("organigram.carousel-content1.text4-d")}
                 </p>
               </div>
             </Item>
-            <Item>
+            <Item style={{ fontWeight: "normal" }}>
               <div className="carruselItem">
                 <p>{t("organigram.carousel-content2.text1-a")}</p>
                 <p>{t("organigram.carousel-content2.text2-a")}</p>
@@ -108,7 +108,7 @@ export default function ScreenOrganigram() {
                 </p>
               </div>
             </Item>
-            <Item>
+            <Item style={{ fontWeight: "normal" }}>
               <div className="carruselItem">
                 <h4
                   className="primaryText"

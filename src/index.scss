@@ -317,6 +317,11 @@ label {
   color: $color-principal-text !important;
 }
 
+.primaryTextBold {
+  color: $color-principal-text !important;
+  font-weight: bold !important;
+}
+
 .titleText {
   font-size: 22px;
   font-weight: bold;

@@ -146,22 +146,22 @@ export default function AreasAndPositionsMassiveC() {
       >
         <Col className="gutter-row" span={6}>
           <p className="secondaryText">
-            {t("organigram.areasandpositions-E.file")}
+            <b>{t("organigram.areasandpositions-E.file")}</b>
           </p>
         </Col>
         <Col className="gutter-row" span={6}>
           <p className="secondaryText">
-            {t("organigram.areasandpositions-E.date-load")}
+            <b>{t("organigram.areasandpositions-E.date-load")}</b>
           </p>
         </Col>
         <Col className="gutter-row" span={6}>
           <p className="secondaryText">
-            {t("organigram.areasandpositions-E.status")}
+            <b>{t("organigram.areasandpositions-E.status")}</b>
           </p>
         </Col>
         <Col className="gutter-row" span={6}>
           <p className="secondaryText">
-            {t("organigram.areasandpositions-E.actions")}
+            <b>{t("organigram.areasandpositions-E.actions")}</b>
           </p>
         </Col>
       </Row>
@@ -172,16 +172,23 @@ export default function AreasAndPositionsMassiveC() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={6}>
-          <p>organigram2018.csv</p>
+          <p className="secondaryText">organigram2018.csv</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>10 MAY 2021</p>
+          <p className="secondaryText">10 MAY 2021</p>
         </Col>
         <Col className="gutter-row" span={6}>
           <p className="iconRed">Error</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <Link to="/areasandpositions-detailerror">
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-detailerror")
+            }
+          >
             <p>Ver Detalle</p>
           </Link>
         </Col>
@@ -193,16 +200,23 @@ export default function AreasAndPositionsMassiveC() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={6}>
-          <p>organigramaok.csv.csv</p>
+          <p className="secondaryText">organigramaok.csv.csv</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>12 MAY 2021</p>
+          <p className="secondaryText">12 MAY 2021</p>
         </Col>
         <Col className="gutter-row" span={6}>
           <p className="iconGreenTwo">Éxito</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <Link to="/areasandpositions-detailsuccess">
+          <Link
+            to={
+              "/" +
+              t("routes.organigram") +
+              "/" +
+              t("paths_organigram.areasandpositions-detailsuccess")
+            }
+          >
             <p>Ver Detalle</p>
           </Link>
         </Col>
