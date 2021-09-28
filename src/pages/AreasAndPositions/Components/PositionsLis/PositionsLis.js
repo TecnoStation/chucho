@@ -11,7 +11,11 @@ function PositionsLis({ Positions, SetPositions }) {
           className="dividerBottom"
           style={{ paddingBottom: "5px", marginTop: "10px" }}
         >
-          <Col span={14} style={{ marginLeft: "30px" }}>
+          <Col
+            className="secondaryText"
+            span={14}
+            style={{ marginLeft: "30px" }}
+          >
             <span>{position.name}</span>{" "}
             <span id={"item" + index} style={{ display: "none" }}>
               (<span id={"number" + index}>1</span>)

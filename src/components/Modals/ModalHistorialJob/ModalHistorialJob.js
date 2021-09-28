@@ -7,26 +7,26 @@ import HistorialData from "./components/HistorialData";
 export default function ModalHistorialJob({ HistorialP, setHistorialP }) {
   const [t, i18n] = useTranslation("global");
 
-   const [historialjobs, setHistorialjob] = useState([
-      {
-        id: 0,
-        name: "Diseñador Gráfico",
-        date: "10 MAY 2016",
-        collaborators: "2 colaboradores"
-      },
-      {
-        id: 1,
-        name: "Diseñador web",
-        date: "12 MAY 2018",
-        collaborators: "1 colaboradores"
-      },
-      {
-        id: 2,
-        name: "Diseñador UI",
-        date: "12 MAY 2020",
-        collaborators: "2 colaboradores"
-      },
-    ]);
+  const [historialjobs, setHistorialjob] = useState([
+    {
+      id: 0,
+      name: "Diseñador Gráfico",
+      date: "10 MAY 2016",
+      collaborators: "2 colaboradores",
+    },
+    {
+      id: 1,
+      name: "Diseñador web",
+      date: "12 MAY 2018",
+      collaborators: "1 colaboradores",
+    },
+    {
+      id: 2,
+      name: "Diseñador UI",
+      date: "12 MAY 2020",
+      collaborators: "2 colaboradores",
+    },
+  ]);
 
   return (
     <>
@@ -52,11 +52,10 @@ export default function ModalHistorialJob({ HistorialP, setHistorialP }) {
             Cancelar
           </Button>,
           <Button
-          style={{color: "#fff !important"}} 
-          className="primary"
+            style={{ color: "#fff !important" }}
+            className="primary"
             onClick={() => {
               setHistorialP(false);
-
             }}
           >
             Aceptar
@@ -68,26 +67,24 @@ export default function ModalHistorialJob({ HistorialP, setHistorialP }) {
           style={{ textAlign: "center", paddingBottom: "15px" }}
         >
           <Col span={5}>
-            <b>Puesto</b>
+            <b className="primaryText">Puesto</b>
           </Col>
           <Col span={6}>
-            <b>Creación</b>
+            <b className="primaryText">Creación</b>
           </Col>
-          <Col style={{paddingLeft: "80px", paddingRight: "70px"}} span={9}>
-            <b>Colaboradores que lo ocuparon</b>
+          <Col style={{ paddingLeft: "80px", paddingRight: "70px" }} span={9}>
+            <b className="primaryText">Colaboradores que lo ocuparon</b>
           </Col>
-          <Col style={{paddingLeft: "5px"}} span={4}>
-            <b>Acciones</b>
+          <Col style={{ paddingLeft: "5px" }} span={4}>
+            <b className="primaryText">Acciones</b>
           </Col>
         </Row>
 
-         <div id="historialjob">
-         {historialjobs.map((historialjob, index) => (
-            <HistorialData  historialjob={historialjob} />
+        <div id="historialjob">
+          {historialjobs.map((historialjob, index) => (
+            <HistorialData historialjob={historialjob} />
           ))}
-         </div>
-
-
+        </div>
       </Modal>
     </>
   );

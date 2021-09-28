@@ -412,7 +412,10 @@ export default function AreasAndPositions() {
 
         <TabPane
           className="tabPane"
-          style={{ minHeight: "648px" }}
+          style={{
+            minHeight: "648px",
+            paddingRight: "50px",
+          }}
           tab="Puesto"
           key="2"
         >
@@ -512,7 +515,7 @@ export default function AreasAndPositions() {
                 </Col>
               </Row>
 
-              <div style={{ width: "100vw" }} id="positionList">
+              <div style={{ width: "77.5vw" }} id="positionList">
                 <PositionListInformation
                   PositionsInfo={PositionsInfo}
                   setModalMove={setModalMove}

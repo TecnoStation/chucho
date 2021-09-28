@@ -43,7 +43,9 @@ export default function AreasAndPositionsMassiveE() {
         <Col className="gutter-row" span={12}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <h3 className="title2">{t("organigram.areasandpositions-masivee.title")}</h3>
+              <h3 className="title2">
+                {t("organigram.areasandpositions-masivee.title")}
+              </h3>
             </Col>
           </Row>
 
@@ -57,7 +59,9 @@ export default function AreasAndPositionsMassiveE() {
             <Col className="secondaryText" span={24}>
               <p>
                 {t("organigram.areasandpositions-masivee.text2")}
-                <b className="primaryText">{t("organigram.areasandpositions-masivee.text3")}</b>
+                <b className="primaryText">
+                  {t("organigram.areasandpositions-masivee.text3")}
+                </b>
                 {t("organigram.areasandpositions-masivee.text4")}
               </p>
             </Col>
@@ -75,7 +79,9 @@ export default function AreasAndPositionsMassiveE() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b className="primaryText">{t("organigram.areasandpositions-masivee.text6")}</b>
+                <b className="primaryText">
+                  {t("organigram.areasandpositions-masivee.text6")}
+                </b>
               </p>
             </Col>
           </Row>
@@ -101,7 +107,9 @@ export default function AreasAndPositionsMassiveE() {
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
               <p>
-                <b className="primaryText">{t("organigram.areasandpositions-masivee.text11")}</b>
+                <b className="primaryText">
+                  {t("organigram.areasandpositions-masivee.text11")}
+                </b>
               </p>
             </Col>
           </Row>
@@ -127,7 +135,9 @@ export default function AreasAndPositionsMassiveE() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={24}>
-          <h1 className="primaryText">{t("organigram.areasandpositions-masivee.history-loads")}</h1>
+          <h1 className="primaryText">
+            {t("organigram.areasandpositions-E.text-file-b")}
+          </h1>
         </Col>
       </Row>
 
@@ -137,16 +147,24 @@ export default function AreasAndPositionsMassiveE() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={6}>
-          <p className="secondaryText">{t("organigram.areasandpositions-masivee.file")}</p>
+          <p className="secondaryText">
+            <b>{t("organigram.areasandpositions-E.file")}</b>
+          </p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p className="secondaryText">{t("organigram.areasandpositions-masivee.date-load")}</p>
+          <p className="secondaryText">
+            <b>{t("organigram.areasandpositions-E.date-load")}</b>
+          </p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p className="secondaryText">{t("organigram.areasandpositions-masivee.status")}</p>
+          <p className="secondaryText">
+            <b>{t("organigram.areasandpositions-E.status")}</b>
+          </p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p className="secondaryText">{t("organigram.areasandpositions-masivee.actions")}</p>
+          <p className="secondaryText">
+            <b>{t("organigram.areasandpositions-E.actions")}</b>
+          </p>
         </Col>
       </Row>
 
@@ -156,10 +174,10 @@ export default function AreasAndPositionsMassiveE() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={6}>
-          <p>organigram2018.csv</p>
+          <p className="secondaryText">organigram2018.csv</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>10 MAY 2021</p>
+          <p className="secondaryText">10 MAY 2021</p>
         </Col>
         <Col className="gutter-row" span={6}>
           <p className="iconRed">Error</p>
@@ -184,10 +202,10 @@ export default function AreasAndPositionsMassiveE() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={6}>
-          <p>organigramaok.csv.csv</p>
+          <p className="secondaryText">organigramaok.csv.csv</p>
         </Col>
         <Col className="gutter-row" span={6}>
-          <p>12 MAY 2021</p>
+          <p className="secondaryText">12 MAY 2021</p>
         </Col>
         <Col className="gutter-row" span={6}>
           <p className="iconGreenTwo">Éxito</p>

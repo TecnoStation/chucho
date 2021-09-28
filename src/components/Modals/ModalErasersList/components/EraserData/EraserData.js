@@ -1,7 +1,5 @@
 import { Button, Col, Row } from "antd";
 import { Link } from "react-router-dom";
-import ModalMessage from "../../../ModalMessage/ModalMessage";
-import Warning from "../../../../../assets/img/icons/atencion.svg";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import ModalMessages from "../../../ModalMessages/ModalMessages";
@@ -9,6 +7,7 @@ import ModalMessages from "../../../ModalMessages/ModalMessages";
 function EraserData({ setHistorial, eraser }) {
   const [t, i18n] = useTranslation("global");
   const [message, setMessage] = useState(false);
+
   return (
     <>
       <Row
