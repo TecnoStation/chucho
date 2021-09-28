@@ -63,14 +63,14 @@ function ModalErasersList({ historial, setHistorial, data }) {
           style={{ textAlign: "center", paddingBottom: "15px" }}
         >
           <Col span={6}>
-            <b>{t("organigram.organigram-page.modal-history.name")}</b>
+            <b className="primaryText">{t("organigram.organigram-page.modal-history.name")}</b>
           </Col>
           <Col span={7}>
-            <b>{t("organigram.organigram-page.modal-history.modification")}</b>
+            <b className="primaryText">{t("organigram.organigram-page.modal-history.modification")}</b>
           </Col>
 
           <Col span={11}>
-            <b>{t("organigram.organigram-page.modal-history.actions")}</b>
+            <b className="primaryText">{t("organigram.organigram-page.modal-history.actions")}</b>
           </Col>
         </Row>
 

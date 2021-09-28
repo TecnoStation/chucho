@@ -20,10 +20,10 @@ function EraserData({ setHistorial, eraser }) {
         }}
       >
         <Col style={{ paddingLeft: "35px" }} span={5}>
-          <span>{eraser.name}</span>
+          <span className="secondaryText">{eraser.name}</span>
         </Col>
         <Col span={9}>
-          <span>{eraser.date}</span>
+          <span className="secondaryText">{eraser.date}</span>
         </Col>
         <Col span={2}>
           <Link

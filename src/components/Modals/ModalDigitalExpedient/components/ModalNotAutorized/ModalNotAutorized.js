@@ -27,7 +27,7 @@ function ModalNotAutorized({ NotAutorized, setNotAutorized }) {
           </Button>,
         ]}
       >
-        <p>
+        <p className="secondaryText">
           Falta de legibilidad en el archivo, la imagen debe de ser más clara
         </p>
       </Modal>

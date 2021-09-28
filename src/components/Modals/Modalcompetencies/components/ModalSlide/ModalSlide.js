@@ -1,5 +1,6 @@
 import { Button, Col, InputNumber, Row, Modal, Slider } from "antd";
 import React from "react";
+import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import "./Slider/ModalSlide.scss";
 
@@ -73,26 +74,38 @@ function ModalSlide({
       >
         <Row>
           <Col style={{ textAlign: "left" }} span={24}>
-            <p>
+            <p className="secondaryText">
               Los colaboradores que tienen un alto dominio de esta competencia,
               por lo general tienen la capacidad de:
             </p>
           </Col>
           <Col style={{ textAlign: "left" }} span={24}>
             <ul>
-              <li>Escuchar y dispuesto a hacerlo.</li>
-              <li>Entiende los mensajes verbales.</li>
-              <li>Comprende los aspectos no verbales de la comunicación.</li>
-              <li>Expresa sus ideas con claridad y coherencia.</li>
-              <li>Genera el impacto deseado en sus interlocutores.</li>
+              <li className="secondaryText">Escuchar y dispuesto a hacerlo.</li>
+              <li className="secondaryText">Entiende los mensajes verbales.</li>
+              <li className="secondaryText">
+                Comprende los aspectos no verbales de la comunicación.
+              </li>
+              <li className="secondaryText">
+                Expresa sus ideas con claridad y coherencia.
+              </li>
+              <li className="secondaryText">
+                Genera el impacto deseado en sus interlocutores.
+              </li>
             </ul>
           </Col>
           <Col span={24} style={{ textAlign: "left" }}>
-            Aquí puedes consultar el significado de cada nivel
+            <Link to="#" className="iconGreen">
+              Aquí
+            </Link>
+            <span className="secondaryText">
+              {" "}
+              puedes consultar el significado de cada nivel
+            </span>
           </Col>
           <Col span={24}>
             <br />
-            <span>
+            <span className="secondaryText">
               <b>Dominio de competencia</b>
             </span>
             <br />
@@ -106,7 +119,7 @@ function ModalSlide({
               step={0.1}
             />
             <br />
-            <span>
+            <span className="secondaryText">
               Competente: <b>2.6 - 3.4</b>
             </span>
           </Col>

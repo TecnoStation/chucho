@@ -44,3 +44,33 @@
   margin-left: -50px;
   margin-top: -150px;
 }
+
+.CardNodeGrandFather span,
+.CardNodeFather span,
+.CardNodeGrandChild span {
+  color: $color-secondary-text;
+}
+
+.CardNodeGrandFather span b,
+.CardNodeFather span b,
+.CardNodeGrandChild span b {
+  color: $color-principal-text;
+}
+
+.CardNodeGrandFather .iconGreenTwo span,
+.CardNodeFather .iconGreenTwo span,
+.CardNodeGrandChild .iconGreenTwo span {
+  color: $GreenMarker !important;
+}
+
+.CardNodeGrandFather .iconRed span,
+.CardNodeFather .iconRed span,
+.CardNodeGrandChild .iconRed span {
+  color: $color-red !important;
+}
+
+.CardNodeGrandFather .iconGray span,
+.CardNodeFather .iconGray span,
+.CardNodeGrandChild .iconGray span {
+  color: $color-secondary-text !important;
+}

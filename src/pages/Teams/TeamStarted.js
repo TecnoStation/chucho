@@ -157,7 +157,7 @@ export default function TeamStarted() {
           </p>
           <br />
           <h1 className="primaryText">{t("organigram.teams.title")}</h1>
-          <p>{t("organigram.teams.tex")}</p>
+          <p className="secondaryText">{t("organigram.teams.tex")}</p>
           <br />
           <p>
             <Button

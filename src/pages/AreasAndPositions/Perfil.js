@@ -75,7 +75,7 @@ export default function Perfil() {
   const [Permissions, setPermissions] = useState(false);
   const [ModalExperience, setModalExperience] = useState(false);
   const [modalHistorialC, setModalHistorialC] = useState(false);
-  const [HistorialJ, setHistorialJ] = useState(false);
+  const [HistorialP, setHistorialP] = useState(false);
   const [Experiences, setExperiences] = useState([]);
   const [expedientUp, setExpedientUp] = useState();
 
@@ -218,7 +218,7 @@ export default function Perfil() {
           <Link
             to="#"
             onClick={() => {
-              setHistorialJ(true);
+              setHistorialP(true);
             }}
           >
             {t(
@@ -1063,10 +1063,16 @@ export default function Perfil() {
             style={{ marginTop: "20px" }}
           >
             <Col className="secondaryText" span={19}>
-              <span>{t("organigram.areasandpositions-perfil.tab1.tab2.competence-position")}</span>
+              <span>
+                {t(
+                  "organigram.areasandpositions-perfil.tab1.tab2.competence-position"
+                )}
+              </span>
             </Col>
             <Col className="secondaryText" span={5}>
-              <span>{t("organigram.areasandpositions-perfil.tab1.tab2.kind")}</span>
+              <span>
+                {t("organigram.areasandpositions-perfil.tab1.tab2.kind")}
+              </span>
             </Col>
           </Row>
 
@@ -1331,8 +1337,8 @@ export default function Perfil() {
       />
 
       <ModalHistorialJob
-        HistorialJ={HistorialJ}
-        setHistorialJ={setHistorialJ}
+        HistorialP={HistorialP}
+        setHistorialP={setHistorialP}
       />
 
       <ModalPassword Password={Password} setPassword={setPassword} />

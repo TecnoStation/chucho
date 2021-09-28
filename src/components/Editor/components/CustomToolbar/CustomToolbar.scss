@@ -1,6 +1,9 @@
+@import "../../../../index.scss";
+
 #toolbar1,
 #toolbar2,
-#toolbar3 {
+#toolbar3,
+#toolbar4 {
   border: 0px solid #ccc !important;
   padding: 0px !important;
   margin-left: -8px;
@@ -18,7 +21,8 @@
   display: none;
 }
 
-#toolbar3 .ql-container.ql-snow {
+#toolbar4 .ant-upload {
+  width: 150px;
 }
 
 #editor1 {
@@ -39,5 +43,12 @@
   .ql-editor {
     height: 72px !important;
     width: 347px !important;
+  }
+}
+
+#editor4 {
+  .ql-editor {
+    height: 224px !important;
+    width: 264px !important;
   }
 }

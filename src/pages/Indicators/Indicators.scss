@@ -26,6 +26,9 @@
   span {
     color: $color-principal-text;
   }
+  button span {
+    color: $color-white;
+  }
 }
 
 .chart {
@@ -43,7 +46,7 @@
 .graph2 {
   margin-top: 20px;
   width: 376px !important;
-  height: 224px !important;
+  height: 324px !important;
 }
 
 .tagExpectative {

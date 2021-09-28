@@ -12,19 +12,19 @@ function ModalHistorialCollaborator({ modalHistorialC, setModalHistorialC }) {
       id: 0,
       position: "Diseñador Gráfico",
       start: "15 MAY 2014",
-      end: "1 de ABR 2016"
+      end: "1 de ABR 2016",
     },
     {
       id: 1,
       position: "Lider de área",
       start: "1 ABR 2016",
-      end: "30 OCT 2017"
+      end: "30 OCT 2017",
     },
     {
       id: 2,
       position: "Gerente de división",
       start: "30 OCT 2017",
-      end: "A LA FECHA"
+      end: "A LA FECHA",
     },
   ]);
   return (
@@ -61,26 +61,25 @@ function ModalHistorialCollaborator({ modalHistorialC, setModalHistorialC }) {
           style={{ textAlign: "center", paddingBottom: "15px" }}
         >
           <Col span={5}>
-            <b>Puesto</b>
+            <b className="primaryText">Puesto</b>
           </Col>
           <Col span={6}>
-            <b>Periodo de inicio</b>
+            <b className="primaryText">Periodo de inicio</b>
           </Col>
           <Col span={9}>
-            <b>Periodo final</b>
+            <b className="primaryText">Periodo final</b>
           </Col>
           <Col span={4}>
-            <b>Detalle</b>
+            <b className="primaryText">Detalle</b>
           </Col>
         </Row>
 
         <div id="collaboratorlist">
-         {Collaboratorslist.map((Collaborator, index) => (
-            <CollaboratorList  Collaborator={Collaborator} />
+          {Collaboratorslist.map((Collaborator, index) => (
+            <CollaboratorList Collaborator={Collaborator} />
           ))}
-         </div>
-
-              </Modal>
+        </div>
+      </Modal>
     </>
   );
 }
