@@ -598,8 +598,18 @@
                     "position": "puesto",
                     "period-start": "Periodo de inicio",
                     "period-final": "Periodo final",
-                    "detail": "Detalle"
+                    "detail": "Detalle",
+                    "btn-cancel": "Cancelar",
+                    "btn-accept": "Aceptar"
                 },
+                "add-file-modal6": {
+                    "title": "Expediente",
+                    "document": "documento",
+                    "status": "Estatus",
+                    "date-load": "Fecha de carga",
+                    "actions": "Acciones"
+                },
+
                 "tab2": {
                     "title": "Información del puesto",
                     "level-position": "Nivel del puesto",
@@ -1280,7 +1290,11 @@
       "modal-recognition":{
        "title": "Reconocimiento",
        "reason-label": "Motivo:",
+<<<<<<< HEAD
        "solution-placeholder": "Solución de problemas",
+=======
+       "solution-pleceholder": "Solución de problemas",
+>>>>>>> 17ff79300635f0eb8e074995fbb89f56bc70b07e
        "comments-label": "Comentarios:",
        "text-placeholder": "Aqui pudes describir el por que de tu reconocimiento",
        "text": "Reconocimiento para:",
