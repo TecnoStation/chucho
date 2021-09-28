@@ -1280,7 +1280,11 @@
       "modal-recognition":{
        "title": "Reconocimiento",
        "reason-label": "Motivo:",
+<<<<<<< HEAD
+       "solution-placeholder": "Solución de problemas",
+=======
        "solution-pleceholder": "Solución de problemas",
+>>>>>>> 891bfe1290e1b97c1e9b4fc6ed1dc895ee700d2a
        "comments-label": "Comentarios:",
        "text-placeholder": "Aqui pudes describir el por que de tu reconocimiento",
        "text": "Reconocimiento para:",
@@ -1290,8 +1294,44 @@
 
       "modal-medals":{
        "title": "Reconocimientos y medallas",
-       "visualize": "Visualizar"
+       "visualize-label": "Visualizar",
+       "recognition-placeholder": "Reconocimientos (2)",
+       "reason": "Motivo",
+       "recognition": "Reconocimiento de:",
+       "results": "Resultado clave",
+       "text": "Descipción"
+      },
 
+      "modal-indicatorkey":{
+       "title": "Crear Indicador Clave",
+       "question-label": "¿Que vas a medir? (Nombre del indicador clave)",
+       "text-placeholder": "Ej. Tasa de converción por palabra clave",
+       "temporality-label": "Temporalidad:",
+       "quarterly-placeholder": "Trimestral (Q)",
+       "duration-label": "Duración:",
+       "months-placeholder": "6 meses",
+       "upgrade-label": "Actualizar:",
+       "text-placeholder1": "Cada miércoles",
+       "creation-label": "Temporalidad de creación:",
+       "text-placeholder2": "Trimestre (Q1)/De: ENE-01-2021 Hasta: MAR-31-2021",
+       "priority-label": "Prioridad:",
+       "high-placeholder": "Alta",
+       "weight-label": "Peso:",
+       "text-placeholder3": "0%",
+       "assign-label": "Asignar indicador clave:",
+       "name-placeholder": "Ana Paola",
+       "action-label": "Tipo de acción:",
+       "increase-placeholder": "Aumentar",
+       "scale-label": "Escala:",
+       "text-placeholder4": "#",
+       "from-label": "Desde:",
+       "number-placeholder": "500",
+       "until-label": "Hasta:",
+       "number1-placeholder": "1,200",
+       "goal-label": "Meta calculada:",
+       "number2-placeholder": "Aumentar 700",
+       "btn-cancel": "Cancelar",
+       "btn-create": "Crear"   
       }
 
     }        
