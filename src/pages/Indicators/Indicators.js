@@ -29,6 +29,8 @@ import Medalplate from "../../assets/img/icons/military_tech-24px_2.svg";
 import Medalcobrum from "../../assets/img/icons/military_tech-24px_3.svg";
 
 import "./Indicators.scss";
+import Editor from "../../components/Editor/Editor";
+import { hasValue } from "@antv/util";
 
 const { Header } = Layout;
 const { TabPane } = Tabs;
@@ -61,27 +63,73 @@ function Indicators({ user }) {
   const [Historial, setHistorial] = useState(false);
 
   const data = [
-    { year: "30-DEC-20", value: 18 },
-    { year: "8-JAN-21", value: 40 },
-    { year: "17-JAN-21", value: 35 },
-    { year: "26-JAN-21", value: 50 },
-    { year: "4-FEB-21", value: 49 },
-    { year: "13-FEB-21", value: 60 },
-    { year: "22-FEB-21", value: 70 },
-    { year: "3-MAR-21", value: 90 },
-    { year: "12-MAR-21", value: 95 },
+    { weeks: "1", value: 5.3 },
+    { weeks: "2", value: 5.0 },
+    { weeks: "3", value: 5.4 },
+    { weeks: "4", value: 5.5 },
+    { weeks: "5", value: 5.9 },
+    { weeks: "6", value: 5.5 },
+    { weeks: "7", value: 6 },
+    { weeks: "8", value: 6.2 },
+    { weeks: "9", value: 6 },
+    { weeks: "10", value: 6.5 },
+    { weeks: "11", value: 6.6 },
+    { weeks: "12", value: 6.8 },
   ];
 
   const config = {
     data,
-    height: 400,
-    xField: "year",
+    xField: "weeks",
     yField: "value",
+    renderer: "svg",
+
+    lineStyle: { stroke: "#AAB4C8", lineWidth: 1 },
     point: {
-      size: 5,
-      shape: "diamond",
+      size: 2,
+      shape: "circle",
+      style: { fill: "#AAB4C8" },
     },
+    yAxis: {
+      title: {
+        text: "Desempeño",
+        style: { fontSize: 16 },
+      },
+      label: false,
+      line: { style: { stroke: "#aaa" } },
+      grid: {
+        line: false,
+      },
+    },
+    xAxis: {
+      title: {
+        text: "Semanas",
+        style: { fontSize: 16 },
+      },
+    },
+
+    annotations: [
+      {
+        type: "line",
+        start: ["min", "median"],
+        end: ["max", "median"],
+        offsetY: 37.5,
+        style: {
+          stroke: "#AADB1E",
+          lineWidth: 1,
+        },
+      },
+      {
+        type: "text",
+        position: ["min", "median"],
+        content: "Cumplimiento de expectativas",
+        offsetY: 50,
+        offsetX: 110,
+        style: { fill: "#AADB1E", fontSize: 12, fontWeight: "bold" },
+      },
+    ],
   };
+
+  const [value, setValue] = useState(false);
 
   return (
     <>
@@ -331,7 +379,12 @@ function Indicators({ user }) {
                             }}
                             span={11}
                           >
-                            <span>{t("my-evaluations.evaluation")}</span>
+                            <span
+                              className="secondaryText"
+                              style={{ fontWeight: "bold" }}
+                            >
+                              {t("my-evaluations.evaluation")}
+                            </span>
 
                             <Line className="graph2" {...config} />
                             <div></div>
@@ -344,7 +397,10 @@ function Indicators({ user }) {
                             }}
                             span={5}
                           >
-                            <span>
+                            <span
+                              className="secondaryText"
+                              style={{ fontWeight: "bold" }}
+                            >
                               {t("my-evaluations.recognitions-medals")}
                             </span>
                             <div
@@ -444,8 +500,19 @@ function Indicators({ user }) {
                             }}
                             span={11}
                           >
-                            <span>{t("my-evaluations.evaluation")}</span>
-                            <span></span>
+                            <span
+                              className="secondaryText"
+                              style={{ fontWeight: "bold" }}
+                            >
+                              {t("my-evaluations.evaluation")}
+                            </span>
+                            <span
+                              className="iconGreen"
+                              style={{ fontWeight: "bold" }}
+                            >
+                              {" "}
+                              Calcuado
+                            </span>
 
                             <Line className="graph2" {...config} />
                             <div></div>
@@ -458,7 +525,10 @@ function Indicators({ user }) {
                             }}
                             span={5}
                           >
-                            <span>
+                            <span
+                              className="secondaryText"
+                              style={{ fontWeight: "bold" }}
+                            >
                               {t("my-evaluations.recognitions-medals")}
                             </span>
                             <div
@@ -524,7 +594,52 @@ function Indicators({ user }) {
                               {t("my-evaluations.watch-detail")}
                             </Link>
                           </Col>
-                          <Col className="dividerLeft" span={8}></Col>
+                          <Col
+                            className="dividerLeft"
+                            style={{ paddingLeft: "25px" }}
+                            span={8}
+                          >
+                            <span
+                              className="secondaryText"
+                              style={{ fontWeight: "bold" }}
+                            >
+                              {t("my-evaluations.depict-self")}
+                            </span>
+                            <Row>
+                              <Col style={{ marginTop: "10px" }} span={24}>
+                                <Editor
+                                  id="4"
+                                  placeholder="Aquí puedes explicar como consideras que fue tu desempeño en este periodo, recuerda que se esta evaluando el cumplimiento de tus objetivos, resultados clave e indicadores clave."
+                                  value={value}
+                                  setValue={setValue}
+                                />
+                              </Col>
+                            </Row>
+                          </Col>
+                        </Row>
+                        <Row style={{ marginTop: "15px" }}>
+                          <Col span={9}></Col>
+                          <Col
+                            style={{ paddingLeft: "0px", textAlign: "right" }}
+                            span={12}
+                          >
+                            <span
+                              style={{ fontSize: "12px" }}
+                              className="secondaryText"
+                            >
+                              Al presionar <b>“Validar”</b>, se enviara tu
+                              autoevaluación a tu jefe directo, <br />
+                              para que te asigne una calificación final.
+                            </span>
+                          </Col>
+                          <Col style={{ textAlign: "right" }} span={3}>
+                            <Button
+                              className="primary"
+                              style={{ color: "#fff" }}
+                            >
+                              Validar
+                            </Button>
+                          </Col>
                         </Row>
                       </Card>
                     </Col>

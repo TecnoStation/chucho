@@ -681,11 +681,12 @@ export default function Collaborator() {
 
           <Row style={{ marginTop: "300px" }}>
             <Col className="gutter-row" span={16}>
-              {t("organigram.collaborator-form.text-footer")}
+              <span className="secondaryText">
+                {t("organigram.collaborator-form.text-footer")}
+              </span>
             </Col>
-            <Col style={{ textAlign: "right" }} span={8}>
+            <Col style={{ textAlign: "right" }} span={4}>
               <Link
-                style={{ marginRight: "16px" }}
                 to={
                   "/" +
                   t("routes.organigram") +
@@ -697,7 +698,13 @@ export default function Collaborator() {
                   {t("organigram.collaborator-form.btn-cancel")}
                 </Button>
               </Link>
-              <Button htmlType="submit" className="primary">
+            </Col>
+            <Col style={{ textAlign: "right" }} span={4}>
+              <Button
+                style={{ marginLeft: "16px" }}
+                htmlType="submit"
+                className="primary"
+              >
                 {t("organigram.collaborator-form.btn-save")}
               </Button>
             </Col>

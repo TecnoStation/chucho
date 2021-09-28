@@ -425,16 +425,24 @@ function ModalCreateTeam({
             }}
           >
             <Col className="gutter-row" span={8}>
-              {t("organigram.teams-modal.members-team-2")}
+              <span className="secondaryText">
+                {t("organigram.teams-modal.members-team-2")}
+              </span>
             </Col>
             <Col className="gutter-row" span={4}>
-              {t("organigram.teams-modal.leader")}
+              <span className="secondaryText">
+                {t("organigram.teams-modal.leader")}
+              </span>
             </Col>
             <Col className="gutter-row" span={6}>
-              {t("organigram.teams-modal.role-team")}
+              <span className="secondaryText">
+                {t("organigram.teams-modal.role-team")}
+              </span>
             </Col>
             <Col className="gutter-row" span={6}>
-              {t("organigram.teams-modal.actions")}
+              <span className="secondaryText">
+                {t("organigram.teams-modal.actions")}
+              </span>
             </Col>
           </Row>
           <div className={memberScroll}>
@@ -456,7 +464,9 @@ function ModalCreateTeam({
             <Col span={24}>
               <span style={{ marginRight: "120px" }}>
                 <Link to="#"> {t("organigram.teams-modal.text-link")}</Link>{" "}
-                {t("organigram.teams-modal.text")}
+                <span className="secondaryText">
+                  {t("organigram.teams-modal.text")}
+                </span>
               </span>
               <Button
                 style={{ marginRight: "20px", width: "100px" }}

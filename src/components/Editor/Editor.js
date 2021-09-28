@@ -40,7 +40,7 @@ function Editor({ id, value, setValue, add, placeholder }) {
         }}
         onChange={setValue}
       />
-      <CustomToolbar id={"toolbar" + id} />
+      <CustomToolbar id={id} />
     </>
   );
 }

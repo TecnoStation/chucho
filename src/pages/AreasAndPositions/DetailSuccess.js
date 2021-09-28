@@ -8,6 +8,7 @@ export default function DetailSuccess() {
   const [data, setData] = useState({
     file: "organigrama2018.csv",
     user: "Demo Soporte TI",
+    detail: "Archivo_final.csv",
     status: "Adjuntado con éxito",
     totalErrors: "",
     date: "10 MAY 2021",
@@ -20,8 +21,11 @@ export default function DetailSuccess() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={24}>
-          <h3>
-            {t("organigram.areasandpositions-detailsuccess.title-detailfile")}
+          <h3 className="primaryText">
+            <b>
+              {t("organigram.areasandpositions-detailsuccess.title-detailfile")}
+            </b>
+            <span> {data.detail}</span>
           </h3>
         </Col>
       </Row>
@@ -33,7 +37,7 @@ export default function DetailSuccess() {
         <Col className="gutter-row" span={8}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <h3>
+              <h3 className="primaryText">
                 {t("organigram.areasandpositions-detailsuccess.abstract")}
               </h3>
             </Col>
@@ -45,12 +49,15 @@ export default function DetailSuccess() {
           >
             <Col className="gutter-row" span={3}></Col>
             <Col className="gutter-row" span={7}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+              <p
+                className="primaryText"
+                style={{ fontWeight: "bold", textAlign: "right" }}
+              >
                 {t("organigram.areasandpositions-detailsuccess.file")}
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
-              <p>{data.file}</p>
+              <p className="primaryText">{data.file}</p>
             </Col>
           </Row>
 
@@ -60,12 +67,15 @@ export default function DetailSuccess() {
           >
             <Col className="gutter-row" span={3}></Col>
             <Col className="gutter-row" span={7}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+              <p
+                className="primaryText"
+                style={{ fontWeight: "bold", textAlign: "right" }}
+              >
                 {t("organigram.areasandpositions-detailsuccess.username")}
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
-              <p>{data.user}</p>
+              <p className="primaryText">{data.user}</p>
             </Col>
           </Row>
 
@@ -75,12 +85,15 @@ export default function DetailSuccess() {
           >
             <Col className="gutter-row" span={3}></Col>
             <Col className="gutter-row" span={7}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+              <p
+                className="primaryText"
+                style={{ fontWeight: "bold", textAlign: "right" }}
+              >
                 {t("organigram.areasandpositions-detailsuccess.status")}
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
-              <p className="iconGreen" style={{ fontWeight: "bold" }}>
+              <p className="iconGreenTwo" style={{ fontWeight: "bold" }}>
                 {data.status}
               </p>
             </Col>
@@ -92,7 +105,10 @@ export default function DetailSuccess() {
           >
             <Col className="gutter-row" span={3}></Col>
             <Col className="gutter-row" span={7}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+              <p
+                className="primaryText"
+                style={{ fontWeight: "bold", textAlign: "right" }}
+              >
                 {t("organigram.areasandpositions-detailsuccess.total-mistakes")}
               </p>
             </Col>
@@ -106,12 +122,15 @@ export default function DetailSuccess() {
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
           >
             <Col className="gutter-row" span={10}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+              <p
+                className="primaryText"
+                style={{ fontWeight: "bold", textAlign: "right" }}
+              >
                 {t("organigram.areasandpositions-detailsuccess.date-load")}
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
-              <p>{data.date}</p>
+              <p className="primaryText">{data.date}</p>
             </Col>
           </Row>
         </Col>

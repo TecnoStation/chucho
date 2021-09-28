@@ -53,7 +53,7 @@ export default function CompetenciesList({
         competence.visible ? (
           <div className="rowC" style={{ textAlign: "left" }}>
             <Tag
-              className="tag"
+              className="tag secondaryText"
               style={{ paddingLeft: "16px" }}
               id={"competence" + component + index}
               key={uuid}

@@ -61,7 +61,7 @@ export default function Modalcompetencies({
           </Button>
         }
       >
-        <p style={{ textAlign: "justify" }}>
+        <p className="secondaryText" style={{ textAlign: "justify" }}>
           Agrega las competencias institucionales que deben tener todos los
           colaboradores de tu organización, puedes elegir hasta un máximo de
           tres.

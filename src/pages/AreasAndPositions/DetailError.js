@@ -8,6 +8,7 @@ export default function DetailError() {
   //------------------- data dinamics ------------------------
   const [data, setData] = useState({
     file: "organigrama2018.csv",
+    detail: "Archivo_final.csv",
     user: "Demo Soporte TI",
     status: "ERROR",
     totalErrors: 2 + " Errores",
@@ -36,8 +37,11 @@ export default function DetailError() {
         gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
       >
         <Col className="gutter-row" span={24}>
-          <h3>
-            {t("organigram.areasandpositions-detailerror.title-detailfile")}
+          <h3 className="primaryText">
+            <b>
+              {t("organigram.areasandpositions-detailerror.title-detailfile")}
+            </b>
+            <span> {data.detail}</span>
           </h3>
         </Col>
       </Row>
@@ -49,7 +53,9 @@ export default function DetailError() {
         <Col className="gutter-row" span={8}>
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <h3>{t("organigram.areasandpositions-detailerror.abstract")}</h3>
+              <h3 className="primaryText">
+                {t("organigram.areasandpositions-detailerror.abstract")}
+              </h3>
             </Col>
           </Row>
 
@@ -59,7 +65,10 @@ export default function DetailError() {
           >
             <Col className="gutter-row" span={2}></Col>
             <Col className="gutter-row" span={8}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+              <p
+                className="primaryText"
+                style={{ fontWeight: "bold", textAlign: "right" }}
+              >
                 {t("organigram.areasandpositions-detailerror.file")}
               </p>
             </Col>
@@ -74,12 +83,15 @@ export default function DetailError() {
           >
             <Col className="gutter-row" span={2}></Col>
             <Col className="gutter-row" span={8}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+              <p
+                className="primaryText"
+                style={{ fontWeight: "bold", textAlign: "right" }}
+              >
                 {t("organigram.areasandpositions-detailerror.username")}
               </p>
             </Col>
             <Col className="gutter-row" span={13}>
-              <p>{data.user}</p>
+              <p className="primaryText">{data.user}</p>
             </Col>
           </Row>
 
@@ -89,7 +101,10 @@ export default function DetailError() {
           >
             <Col className="gutter-row" span={2}></Col>
             <Col className="gutter-row" span={8}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+              <p
+                className="primaryText"
+                style={{ fontWeight: "bold", textAlign: "right" }}
+              >
                 {t("organigram.areasandpositions-detailerror.status")}:
               </p>
             </Col>
@@ -106,7 +121,10 @@ export default function DetailError() {
           >
             <Col className="gutter-row" span={2}></Col>
             <Col className="gutter-row" span={8}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+              <p
+                className="primaryText"
+                style={{ fontWeight: "bold", textAlign: "right" }}
+              >
                 {t("organigram.areasandpositions-detailerror.total-mistakes")}
               </p>
             </Col>
@@ -122,12 +140,15 @@ export default function DetailError() {
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
           >
             <Col className="gutter-row" span={10}>
-              <p style={{ fontWeight: "bold", textAlign: "right" }}>
+              <p
+                className="primaryText"
+                style={{ fontWeight: "bold", textAlign: "right" }}
+              >
                 {t("organigram.areasandpositions-detailerror.date-load")}
               </p>
             </Col>
             <Col className="gutter-row" span={12}>
-              <p>{data.date}</p>
+              <p className="primaryText">{data.date}</p>
             </Col>
           </Row>
         </Col>
@@ -138,7 +159,9 @@ export default function DetailError() {
         >
           <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
             <Col className="gutter-row" span={24}>
-              <h3>{t("organigram.areasandpositions-detailerror.mistakes")}</h3>
+              <h3 className="primaryText">
+                {t("organigram.areasandpositions-detailerror.mistakes")}
+              </h3>
             </Col>
           </Row>
 
@@ -148,17 +171,17 @@ export default function DetailError() {
             gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
           >
             <Col className="gutter-row" span={8}>
-              <p style={{ fontWeight: "bold" }}>
+              <p className="secondaryText" style={{ fontWeight: "bold" }}>
                 {t("organigram.areasandpositions-detailerror.column")}
               </p>
             </Col>
             <Col className="gutter-row" span={8}>
-              <p style={{ fontWeight: "bold" }}>
+              <p className="secondaryText" style={{ fontWeight: "bold" }}>
                 {t("organigram.areasandpositions-detailerror.row")}
               </p>
             </Col>
             <Col className="gutter-row" span={8}>
-              <p style={{ fontWeight: "bold" }}>
+              <p className="secondaryText" style={{ fontWeight: "bold" }}>
                 {t("organigram.areasandpositions-detailerror.error")}
               </p>
             </Col>
@@ -171,10 +194,10 @@ export default function DetailError() {
               gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}
             >
               <Col className="gutter-row" span={8}>
-                <p>{error.column}</p>
+                <p className="secondaryText">{error.column}</p>
               </Col>
               <Col className="gutter-row" span={8}>
-                <p>{error.row}</p>
+                <p className="secondaryText">{error.row}</p>
               </Col>
               <Col className="gutter-row" span={8}>
                 <p className="iconRed" style={{ fontWeight: "bold" }}>
