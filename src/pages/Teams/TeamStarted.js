@@ -102,18 +102,14 @@ export default function TeamStarted() {
             </span>
           </Link>
         </Col>
-        <Col
-          className="gutter-row iconGray"
-          span={3}
-          style={{ textAlign: "left" }}
-        >
+        <Col className="gutter-row" span={3} style={{ textAlign: "left" }}>
           <Link
             to={
               "/" + t("routes.organigram") + "/" + t("paths_organigram.teamsv")
             }
           >
             <BsListUl
-              className="dividerLeft"
+              className="dividerLeft iconBlue"
               style={{ paddingLeft: "5px", fontSize: "22px" }}
             />
           </Link>
