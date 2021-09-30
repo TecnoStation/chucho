@@ -1,8 +1,10 @@
 import React from "react";
 import { Button, Col, Modal, Row } from "antd";
 import Warning from "../../../assets/img/icons/atencion.svg";
+import { useTranslation } from "react-i18next";
 
 function ModalMessages({ message, setMessage, setHistorial }) {
+  const [t, i18n] = useTranslation("global");
   return (
     <Modal
       title={false}
@@ -20,14 +22,14 @@ function ModalMessages({ message, setMessage, setHistorial }) {
         </Col>
         <Col span={24}>
           <h2>
-            <b>¡Atención!</b>
+            <b>{t("organigram.organigram-page.modal-remove.attention")}</b>
           </h2>
         </Col>
         <Col span={24}>
-          <h3>Estás a punto de eliminar el borrador.</h3>
+          <h3>{t("organigram.organigram-page.modal-remove.text")}</h3>
         </Col>
         <Col span={24}>
-          <h3>¿Seguro deseas eliminarlo?</h3>
+          <h3>{t("organigram.organigram-page.modal-remove.text2")}</h3>
           <br />
         </Col>
         <Col span={24}>
@@ -39,7 +41,7 @@ function ModalMessages({ message, setMessage, setHistorial }) {
             }}
             className="secondary btn"
           >
-            Cancelar
+            {t("organigram.organigram-page.modal-remove.btn-cancel")}
           </Button>
           <Button
             className="primary btn"
@@ -48,7 +50,7 @@ function ModalMessages({ message, setMessage, setHistorial }) {
               setHistorial(true);
             }}
           >
-            Eliminar
+            {t("organigram.organigram-page.modal-remove.btn-remove")}
           </Button>
         </Col>
       </Row>
