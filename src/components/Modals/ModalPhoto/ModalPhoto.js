@@ -29,7 +29,7 @@ function ModalPhoto({ photo, setPhoto, setSrc }) {
 
   return (
     <Modal
-      title={"Sube tu foto de perfil"}
+      title={t("organigram.modal-photo.title")}
       className="photoModal"
       centered={true}
       visible={photo}
@@ -40,7 +40,7 @@ function ModalPhoto({ photo, setPhoto, setSrc }) {
     >
       <Row>
         <Col span={24}>
-          <p style={{ textAlign: "left" }}>Subir una imagen</p>
+          <p style={{ textAlign: "left" }}>{t("organigram.modal-photo.image")}</p>
         </Col>
       </Row>
       <Row className="borderPicture">
@@ -62,7 +62,7 @@ function ModalPhoto({ photo, setPhoto, setSrc }) {
                 <br />
                 <BiImageAdd className="iconsize5 iconGreen" />
                 <br />
-                Da clic para buscar o arrastra tu imagen
+                {t("organigram.modal-photo.text")}
               </p>
             </Upload>
           </ImgCrop>
@@ -76,7 +76,7 @@ function ModalPhoto({ photo, setPhoto, setSrc }) {
             setPhoto(false);
           }}
         >
-          Cancelar
+          {t("organigram.modal-photo.btn-cancel")}
         </Button>
         <Button
           className="primary"
@@ -84,7 +84,7 @@ function ModalPhoto({ photo, setPhoto, setSrc }) {
             setPhoto(false);
           }}
         >
-          Aceptar
+          {t("organigram.modal-photo.btn-accept")}
         </Button>
       </div>
     </Modal>

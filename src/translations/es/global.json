@@ -114,6 +114,10 @@
         "vendors": "Proveedores"
     },
     "organigram": {
+        "perfil":{
+         "view-perfil": "Ver perfil",
+         "close-session": "Cerrar sesión"   
+        },
         "empty-organigram-layout": {
             "h1-welcome": "¡Bienvenido al Organigrama!",
             "p-row1": "Aquí podrás visualizar todas las estructuras de la organización, además de facilitar la evaluación 360 y la vista de los equipos para alcanzar los Objetivos.",
@@ -624,6 +628,17 @@
                     "btn-cancel": "Cancelar",
                     "btn-accept": "Aceptar"
                 },
+                "modal-position":{
+                 "title": "Historial del Puesto",
+                 "position": "Puesto",
+                 "creation": "Creación",
+                 "collaborators": "Colaboradores que lo ocuparon",
+                 "actions": "Acciones",
+                 "btn-cancel": "Cancelar",
+                 "btn-accept": "Aceptar",
+                 "view-detail": "Ver Detalle"   
+                }, 
+
                 "add-file-modal6": {
                     "title": "Expediente",
                     "document": "Documento",
@@ -1114,6 +1129,13 @@
             "direction-placeholder": "Dirección de Marketing",
             "btn-cancel": "Cancelar",
             "btn-save": "Guardar"   
+           },
+           "modal-photo":{
+            "title": "Sube tu foto de perfil",
+            "image": "Subir una imagen",
+            "text": "Da clic para buscar o arrastrar tu imagen",
+            "btn-cancel": "Cancelar",
+            "btn-accept": "Aceptar"
            }
            
     },
@@ -1218,7 +1240,7 @@
         "btn-upgrade": "Actualizar"   
        },
        "modal-objectives":{
-        "title": "Objetivo Volumen de tráfico en la página web",
+        "title": "Objetivo: Volumen de tráfico en la página web",
         "updates": "Historial de actualizaciones",
         "placeholder-upgrade": "Buscar actualización",
         "upgrade": "Actualización",
