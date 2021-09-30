@@ -34,7 +34,7 @@ function EraserData({ setHistorial, eraser }) {
               t("paths_organigram.organigrammain")
             }
           >
-            Ver
+            {t("organigram.organigram-page.modal-history.watch")}
           </Link>
         </Col>
         <Col className="dividerLeft" span={2}>
@@ -44,7 +44,7 @@ function EraserData({ setHistorial, eraser }) {
               "/" + t("routes.organigram") + "/" + t("paths_organigram.eraser")
             }
           >
-            Editar
+            {t("organigram.organigram-page.modal-history.edit")}
           </Link>
         </Col>
         <Col className="dividerLeft" span={3}>
@@ -56,7 +56,7 @@ function EraserData({ setHistorial, eraser }) {
             }}
             to="#"
           >
-            Eliminar
+            {t("organigram.organigram-page.modal-history.remove")}
           </Link>
         </Col>
         <Col className="dividerLeft" span={3}>
@@ -67,7 +67,7 @@ function EraserData({ setHistorial, eraser }) {
               setHistorial(false);
             }}
           >
-            Aplicar
+            {t("organigram.organigram-page.modal-history.apply")}
           </Link>
         </Col>
       </Row>

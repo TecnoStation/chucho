@@ -318,12 +318,18 @@ export default function Mybusiness() {
           >
             <Col span={18}>
               <span className="secondaryText">
-                <b>Competencias Institucionales</b>
+                <b>
+                  {t(
+                    "organigram.mybusiness-principal.business-culture.institutional-competences"
+                  )}
+                </b>
               </span>
             </Col>
             <Col span={6}>
               <span className="secondaryText">
-                <b>Nivel</b>
+                <b>
+                  {t("organigram.mybusiness-principal.business-culture.level")}
+                </b>
               </span>
             </Col>
           </Row>

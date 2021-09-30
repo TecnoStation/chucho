@@ -23,12 +23,13 @@ import { GiTrophyCup } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import Editor from "../../Editor/Editor";
-
+import { useTranslation } from "react-i18next";
 import ModalRecognition from "../ModalRecognition/ModalRecognition";
 
 const { Search } = Input;
 
 function ModalHistorial({ Historial, setHistorial }) {
+  const [t, i18n] = useTranslation("global");
   const [value, setValue] = useState("");
   const data = [
     { year: "30-DEC-20", value: 18 },
@@ -122,7 +123,7 @@ function ModalHistorial({ Historial, setHistorial }) {
   return (
     <>
       <Modal
-        title="Objetivo: Volumen de tráfico en la página web"
+        title={t("indicators-evaluations.modal-objectives.title")}
         className="objetiveModal"
         visible={Historial}
         centered={true}
@@ -143,10 +144,15 @@ function ModalHistorial({ Historial, setHistorial }) {
             </Dropdown>
           </Col>
           <Col span={10}>
-            <h3>Historial de actualizaciones</h3>
+            <h3>{t("indicators-evaluations.modal-objectives.updates")}</h3>
           </Col>
           <Col span={6}>
-            <Search id="filter" placeholder={"Buscar actualización"} />
+            <Search
+              id="filter"
+              placeholder={t(
+                "indicators-evaluations.modal-objectives.placeholder-upgrade"
+              )}
+            />
           </Col>
         </Row>
         <Row style={{ marginTop: "20px" }}>
@@ -159,17 +165,23 @@ function ModalHistorial({ Historial, setHistorial }) {
                   </span>
                 </Col>
                 <Col span={5} className="iconGreen">
-                  <span>Actualización</span>
+                  <span>
+                    {t("indicators-evaluations.modal-objectives.upgrade")}
+                  </span>
                   <br />
                   <span>25</span>
                 </Col>
                 <Col span={2}>
-                  <span>Objetivo</span>
+                  <span>
+                    {t("indicators-evaluations.modal-objectives.objective")}
+                  </span>
                   <br />
                   <span>20</span>
                 </Col>
                 <Col span={5}>
-                  <span>Tendencia</span>
+                  <span>
+                    {t("indicators-evaluations.modal-objectives.trend")}
+                  </span>
                   <br />
                   <span style={{ marginRight: "10px" }} className="iconGreen">
                     125%
@@ -198,10 +210,16 @@ function ModalHistorial({ Historial, setHistorial }) {
               </Row>
               <Row style={{ marginTop: "20px", textAlign: "left" }}>
                 <Col span={8}>
-                  <span>Evidencia adjunta</span>
+                  <span>
+                    {t("indicators-evaluations.modal-objectives.evidences")}
+                  </span>
                 </Col>
                 <Col span={16}>
-                  <span>Contexto de actualización</span>
+                  <span>
+                    {t(
+                      "indicators-evaluations.modal-objectives.contex-upgrade"
+                    )}
+                  </span>
                 </Col>
               </Row>
               <Row style={{ textAlign: "left", marginTop: "20px" }}>
@@ -254,7 +272,9 @@ function ModalHistorial({ Historial, setHistorial }) {
                                   marginLeft: "5px",
                                 }}
                               >
-                                Like
+                                {t(
+                                  "indicators-evaluations.modal-objectives.like"
+                                )}
                               </span>
                             </Link>
                           </Col>
@@ -271,7 +291,9 @@ function ModalHistorial({ Historial, setHistorial }) {
                                   marginLeft: "5px",
                                 }}
                               >
-                                Responder
+                                {t(
+                                  "indicators-evaluations.modal-objectives.answer"
+                                )}
                               </span>
                             </Link>
                           </Col>
@@ -293,7 +315,9 @@ function ModalHistorial({ Historial, setHistorial }) {
                                   marginLeft: "5px",
                                 }}
                               >
-                                Reconocer
+                                {t(
+                                  "indicators-evaluations.modal-objectives.recognize"
+                                )}
                               </span>
                             </Link>
                           </Col>

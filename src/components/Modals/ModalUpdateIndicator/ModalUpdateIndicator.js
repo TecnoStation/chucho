@@ -34,13 +34,19 @@ function ModalUpdateIndicator({ Indicator, setIndicator, setHistorial }) {
           >
             <Row className="contentM">
               <Col style={{ textAlign: "left" }} span={6}>
-                <span>Actual</span>
+                <span>
+                  {t("indicators-evaluations.modal-indicators.current")}
+                </span>
               </Col>
               <Col span={12}>
-                <span>Objetivos</span>
+                <span>
+                  {t("indicators-evaluations.modal-indicators.adjective")}
+                </span>
               </Col>
               <Col span={6}>
-                <span>Tendencia</span>
+                <span>
+                  {t("indicators-evaluations.modal-indicators.trend")}
+                </span>
               </Col>
             </Row>
             <Row
@@ -86,7 +92,9 @@ function ModalUpdateIndicator({ Indicator, setIndicator, setHistorial }) {
               }}
             >
               <Col span={24}>
-                <span>Agregar contexto:</span>
+                <span>
+                  {t("indicators-evaluations.modal-indicators.add-context")}
+                </span>
               </Col>
             </Row>
             <Row
@@ -110,7 +118,7 @@ function ModalUpdateIndicator({ Indicator, setIndicator, setHistorial }) {
                   setIndicator(false);
                 }}
               >
-                Cancelar
+                {t("indicators-evaluations.modal-indicators.btn-cancel")}
               </Button>
               <Button
                 className="primary"
@@ -119,7 +127,7 @@ function ModalUpdateIndicator({ Indicator, setIndicator, setHistorial }) {
                   setHistorial(true);
                 }}
               >
-                Actualizar
+                {t("indicators-evaluations.modal-indicators.btn-upgrade")}
               </Button>
             </Col>
           </Row>
