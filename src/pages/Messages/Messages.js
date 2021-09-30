@@ -52,14 +52,14 @@ export default function Messages() {
                 color: "#000",
               }}
             />
-            <b>Validar estructuras</b>
+            <b>{t("organigram.modal-messages.validate-structure")}</b>
           </Link>
 
           <Link
             className={dropright}
             onClick={() => {
               setDropdown("showInline principalColorText");
-              setCardvisible("showBlock principalColorText");
+              setCardvisible("showBlock principalColorText"); 
               setDropright("hide");
             }}
             to="#"
@@ -73,13 +73,13 @@ export default function Messages() {
                 color: "#000",
               }}
             />
-            <b>Validar estructuras</b>
+            <b>{t("organigram.modal-messages.validate-structure")}</b>
           </Link>
         </Col>
 
         <Col className="iconBlue" span={7}>
-          <span>Validar seleccionados | </span>
-          <span>No Validar seleccionados</span>
+          <span>{t("organigram.modal-messages.validate-selected-a")} | </span>
+          <span>{t("organigram.modal-messages.not-validate-selected-a")}</span>
         </Col>
       </Row>
 
@@ -87,22 +87,22 @@ export default function Messages() {
         <Row>
           <Col span={11}>
             <p>
-              <b>Borrador</b>
+              <b className="secondaryText">{t("organigram.modal-messages.draft")}</b>
             </p>
           </Col>
           <Col span={6}>
             <p>
-              <b>Creado por</b>
+              <b className="secondaryText">{t("organigram.modal-messages.created-for")}</b>
             </p>
           </Col>
           <Col span={4}>
             <p>
-              <b>Creación</b>
+              <b className="secondaryText">{t("organigram.modal-messages.creation")}</b>
             </p>
           </Col>
           <Col style={{ textAlign: "center" }} span={3}>
             <p>
-              <b>Acciones</b>
+              <b className="secondaryText">{t("organigram.modal-messages.actions-1")}</b>
             </p>
           </Col>
         </Row>
@@ -117,11 +117,11 @@ export default function Messages() {
             </p>
           </Col>
           <Col style={{ paddingLeft: "25px" }} span={5}>
-            <p>MAR 31, 2021</p>
+            <p className="secondaryText">MAR 31, 2021</p>
           </Col>
 
           <Col style={{ paddingLeft: "10px" }} className="iconBlue" span={3}>
-            <span>Validar | </span>
+            <span>{t("organigram.modal-messages.validate-a")} | </span>
             <Link
               className="iconBlue"
               onClick={() => {
@@ -129,7 +129,7 @@ export default function Messages() {
               }}
               to="#"
             >
-              <span>No validar</span>
+              <span>{t("organigram.modal-messages.not-validate")}</span>
             </Link>
           </Col>
         </Row>
@@ -155,7 +155,7 @@ export default function Messages() {
                 color: "#000",
               }}
             />
-            <b>Validar habilidades de colaboradores</b>
+            <b>{t("organigram.modal-messages.validate-abilities")}</b>
           </Link>
 
           <Link
@@ -176,7 +176,7 @@ export default function Messages() {
                 color: "#000",
               }}
             />
-            <b>Validar habilidades de colaboradores</b>
+            <b>{t("organigram.modal-messages.validate-abilities")}</b>
           </Link>
         </Col>
         <Col style={{ textAlign: "right" }} span={1} className="aaa">
@@ -187,8 +187,8 @@ export default function Messages() {
         </Col>
         <Col span={6}></Col>
         <Col className="iconBlue" span={7}>
-          <span>Validar seleccionados | </span>
-          <span>No Validar seleccionados</span>
+          <span>{t("organigram.modal-messages.validate-selected-b")} | </span>
+          <span>{t("organigram.modal-messages.not-validate-selected-b")}</span>
         </Col>
       </Row>
 
@@ -199,17 +199,17 @@ export default function Messages() {
           </Col>
           <Col span={10}>
             <p>
-              <b>Nombre y puesto</b>
+              <b className="secondaryText">{t("organigram.modal-messages.name-position")}</b>
             </p>
           </Col>
           <Col span={10}>
             <p>
-              <b>Última actualización</b>
+              <b className="secondaryText">{t("organigram.modal-messages.last-update")}</b>
             </p>
           </Col>
           <Col style={{ textAlign: "center" }} span={3}>
             <p>
-              <b>Acciones</b>
+              <b className="secondaryText">{t("organigram.modal-messages.actions-2")}</b>
             </p>
           </Col>
         </Row>
@@ -236,11 +236,11 @@ export default function Messages() {
             </span>
           </Col>
           <Col style={{ paddingLeft: "25px" }} span={10}>
-            <p>ENE 01,2021</p>
+            <p className="secondaryText">ENE 01,2021</p>
           </Col>
 
           <Col style={{ paddingLeft: "10px" }} className="iconBlue" span={3}>
-            <span>Validar | </span>
+            <span>{t("organigram.modal-messages.validate-b")} | </span>
             <Link
               className="iconBlue"
               onClick={() => {
@@ -248,7 +248,7 @@ export default function Messages() {
               }}
               to="#"
             >
-              <span>No validar</span>
+              <span>{t("organigram.modal-messages.not-validate-b")}</span>
             </Link>
           </Col>
         </Row>
@@ -274,7 +274,7 @@ export default function Messages() {
                 color: "#000",
               }}
             />
-            <b>Validar documentos de expediente digital</b>
+            <b>{t("organigram.modal-messages.validate-document")}</b>
           </Link>
 
           <Link
@@ -295,20 +295,20 @@ export default function Messages() {
                 color: "#000",
               }}
             />
-            <b>Validar documentos de expediente digital</b>
+            <b>{t("organigram.modal-messages.validate-document")}</b>
           </Link>
         </Col>
         <Col style={{ textAlign: "right" }} span={1}>
           <MaterialIcon icon="filter_alt" />
         </Col>
-        <Col span={1}>
+        <Col span={1} className="dividerLeftbold " >
           <MaterialIcon icon="inbox" />
         </Col>
         <Col span={5}></Col>
         <span class="material-icons"></span>
         <Col className="iconBlue" span={7}>
-          <span>Validar seleccionados | </span>
-          <span>No Validar seleccionados</span>
+          <span>{t("organigram.modal-messages.validate-selected-c")} | </span>
+          <span>{t("organigram.modal-messages.not-validate-selected-c")}</span>
         </Col>
       </Row>
 
@@ -319,17 +319,17 @@ export default function Messages() {
           </Col>
           <Col span={10}>
             <p>
-              <b>Nombre y puesto</b>
+              <b className="secondaryText">{t("organigram.modal-messages.name-position1")}</b>
             </p>
           </Col>
           <Col span={10}>
             <p>
-              <b>Última actualización</b>
+              <b className="secondaryText">{t("organigram.modal-messages.last-update1")}</b>
             </p>
           </Col>
           <Col style={{ textAlign: "center" }} span={3}>
             <p>
-              <b>Acciones</b>
+              <b className="secondaryText">{t("organigram.modal-messages.actions-3")}</b>
             </p>
           </Col>
         </Row>
@@ -356,11 +356,11 @@ export default function Messages() {
             </span>
           </Col>
           <Col style={{ paddingLeft: "25px" }} span={10}>
-            <p>ENE 01,2021</p>
+            <p className="secondaryText">ENE 01,2021</p>
           </Col>
 
           <Col style={{ paddingLeft: "10px" }} className="iconBlue" span={3}>
-            <span>Validar | </span>
+            <span>{t("organigram.modal-messages.validate-c")} | </span>
             <Link
               className="iconBlue"
               onClick={() => {
@@ -368,7 +368,7 @@ export default function Messages() {
               }}
               to="#"
             >
-              <span>No validar</span>
+              <span>{t("organigram.modal-messages.not-validate-c")}</span>
             </Link>
           </Col>
         </Row>
@@ -376,7 +376,7 @@ export default function Messages() {
 
       <Modal
         className="modalPref"
-        title="¿Por qué no se autoriza el documento?"
+        title={t("organigram.modal-document.title")}
         visible={visible}
         onCancel={() => {
           setVisible(false);
@@ -392,7 +392,7 @@ export default function Messages() {
               setVisible(false);
             }}
           >
-            Cancelar
+            {t("organigram.modal-document.btn-cancel")}
           </Button>,
           <input
             type="button"
@@ -400,14 +400,14 @@ export default function Messages() {
               setVisible(false);
             }}
             className="primaryC"
-            value="Enviar"
+            value={t("organigram.modal-document.btn-send")}
           />,
         ]}
       >
         <Form layout="vertical">
           <Form.Item
             name="Visible"
-            label="Ingresa algún motivo por el cual no se autoriza, para que el colaborador sepa que corregir"
+            label={t("organigram.modal-document.text")}
           >
             <TextArea rows={2} />
           </Form.Item>
