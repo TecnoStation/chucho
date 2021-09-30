@@ -10,7 +10,7 @@ import { v4 as uuid } from "uuid";
 import "./Simplecard.scss";
 
 export default function Simplecard({ teamList, setTeamList, edit }) {
-  const [t, i18n] = useTranslation("global");
+  const [t, i18n] = useTranslation("global"); 
   const [modalRename, setModalRename] = useState(false);
   const [modalCard, setModalCard] = useState(false);
 
@@ -55,7 +55,7 @@ export default function Simplecard({ teamList, setTeamList, edit }) {
                         teamList.push(clone);
                       }}
                     >
-                      Clonar equipo
+                      {t("organigram.menu.clone-team")}
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="12">
@@ -69,7 +69,7 @@ export default function Simplecard({ teamList, setTeamList, edit }) {
                       }}
                       to="#"
                     >
-                      Renombrar
+                      {t("organigram.menu.rename")}
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="23">
@@ -82,7 +82,7 @@ export default function Simplecard({ teamList, setTeamList, edit }) {
                         edit(team, index);
                       }}
                     >
-                      Editar
+                      {t("organigram.menu.edit")}
                     </Link>
                   </Menu.Item>
                   <Menu.Divider />
@@ -96,7 +96,7 @@ export default function Simplecard({ teamList, setTeamList, edit }) {
                         setTeamList(arrayFilter);
                       }}
                     >
-                      Eliminar
+                      {t("organigram.menu.remove")}
                     </Link>
                   </Menu.Item>
                 </Menu>

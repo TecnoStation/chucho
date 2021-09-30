@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Input, Button, Modal } from "antd";
-//import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import CompetenciesList from "./components/CompetenciesList";
 import { useForm } from "antd/lib/form/Form";
 const { Search } = Input;
@@ -20,7 +20,7 @@ export default function Modalcompetencies({
   editionModeSlider,
   component,
 }) {
-  //const [t, i18n] = useTranslation("global");
+  const [t, i18n] = useTranslation("global");
 
   //----------------- Filter Competencies ------------------------------------------
   const filterCompetencies = () => {
@@ -48,7 +48,7 @@ export default function Modalcompetencies({
     <>
       <Modal
         className="competenciesModal"
-        title="Agregar competencias institucionales"
+        title={t("organigram.add-competencies-modal.title")}
         visible={modalComp}
         closable={false}
         footer={
@@ -57,21 +57,19 @@ export default function Modalcompetencies({
               setModalComp(false);
             }}
           >
-            Cancelar
+            {t("organigram.add-competencies-modal.btn-cancel")}
           </Button>
         }
       >
         <p className="secondaryText" style={{ textAlign: "justify" }}>
-          Agrega las competencias institucionales que deben tener todos los
-          colaboradores de tu organización, puedes elegir hasta un máximo de
-          tres.
+        {t("organigram.add-competencies-modal.text")}
         </p>
         <Form form={form} name="seacrhCompetence" layout="vertical">
           <Form.Item name="competence">
             <Search
               id="filterComp"
               onChange={filterCompetencies}
-              placeholder="Buscar Competencia"
+              placeholder={t("organigram.add-competencies-modal.search-competencies-placeholder")}
             />
           </Form.Item>
         </Form>

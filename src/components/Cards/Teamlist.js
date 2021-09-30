@@ -47,7 +47,7 @@ export default function Teamlist({ teamList, setTeamList, edit }) {
                       teamList.push(clone);
                     }}
                   >
-                    Clonar equipo
+                    {t("organigram.menu.clone-team")}
                   </Link>
                 </Menu.Item>
                 <Menu.Item key="12">
@@ -61,7 +61,7 @@ export default function Teamlist({ teamList, setTeamList, edit }) {
                     }}
                     to="#"
                   >
-                    Renombrar
+                     {t("organigram.menu.rename")}
                   </Link>
                 </Menu.Item>
                 <Menu.Item key="23">
@@ -74,10 +74,10 @@ export default function Teamlist({ teamList, setTeamList, edit }) {
                       edit(team, index);
                     }}
                   >
-                    Editar
+                    {t("organigram.menu.edit")}
                   </Link>
                 </Menu.Item>
-                <Menu.Divider />
+                <Menu.Divider /> 
                 <Menu.Item key="34">
                   <Link
                     to="#"

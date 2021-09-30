@@ -263,17 +263,21 @@
         },
         "add-competencies-modal": {
             "title": "Agregar competencias institucionales",
-            "text": "Agrega las competencias institucionales que deben tener todos los colaboradores de tu organización,puedes elegir hasta un máximo de tres.",
+            "text": "Agrega las competencias institucionales que deben tener todos los colaboradores de tu organización, puedes elegir hasta un máximo de tres.",
             "search-competencies-placeholder": "Buscar competencia",
+            "btn-cancel": "Cancelar",
             "second-modal": {
-                "text1": "Los colaboradores que tienen un alto dominio de esta competencia, por lo general tienen la capacidad de:",
+                "title": "Actitud de Servicio",
+                "text0": "Los colaboradores que tienen un alto dominio de esta competencia, por lo general tienen la capacidad de:",
+                "text1": "Escuchar y dispuesto a hacerlo.",
                 "text2": "Entiende los mensajes verbales.",
                 "text3": "Comprende los aspectos no verbales de la comunicación.",
                 "text4": "Expresa sus ideas con claridad y coherencia.",
                 "text5": "Genera el impacto deseado en sus interlocutores.",
-                "text6": "Aquí puedes consultar el significado de cada nivel",
-                "text7": "Dominio de competencia",
-                "competent": "Competente",
+                "text6-link": "Aqui",
+                "text7": " puedes consultar el significado de cada nivel",
+                "text8": "Dominio de competencia",
+                "competent": "Competente:",
                 "btn-cancel": "Cancelar",
                 "btn-save": "Guardar",
                 "btn-edit": "Editar"
@@ -477,6 +481,12 @@
             "btn-cancel": "Cancelar",
             "btn-save": "Guardar"
         },
+        "modal-collaborators":{
+         "title": "¡Bien hecho!",
+         "text": "Has guardado la lista de documentos.",
+         "btn-done": "Hecho"   
+        },
+
         "delete-collaborator": {
             "title": "Eliminar Colaborador",
             "text": "Al eliminar un colaborador de tu organización ya no formará parte de tu organizacion.",
@@ -522,6 +532,18 @@
             }
         },
         "areasandpositions-perfil": {
+            "modal-experience": "Agregar experiencia",
+            "position-lebel": "Puesto",
+            "text-placeholder": "Ej. Ejecutivo de ventas SR.",
+            "business-lebel": "Empresa",
+            "text1-placeholder": "Ej. GPO comunicación",
+            "activities-lebel": "Actividades y logros",
+            "text2-placeholder": "Agregar un breve resumen de tus principales actividades y logros",
+            "initiation-lebel": "Inicio",
+            "date-placeholder": "dd / mm / aaa",
+            "end-lebel": "Fin",
+            "date1-placeholder": "dd / mm / aaa",
+            "btn-add": "Agregar",
             "tab1": {
                 "text1": "Marco Antonio Ramirez Perez",
                 "text2": "Director de Mercadotecnia y Publicidad",
@@ -561,11 +583,11 @@
                 },
                 "add-file-modal": {
                     "title": "Expediente:",
-                    "document": "documento",
+                    "document": "Documento",
                     "status": "Estatus",
                     "date-load": "Fecha de carga",
                     "actions": "Acciones",
-                    "btn-cancel": "Canselar",
+                    "btn-cancel": "Cancelar",
                     "btn-save": "Guardar"
                 },
                 "add-file-modal2": {
@@ -603,12 +625,18 @@
                     "btn-accept": "Aceptar"
                 },
                 "add-file-modal6": {
-                    "title": "Expediente",
+                    "title": "Expediente: Marco Antonio Ramirez Perez",
                     "document": "documento",
                     "status": "Estatus",
                     "date-load": "Fecha de carga",
-                    "actions": "Acciones"
+                    "actions": "Acciones",
+                    "authorized-link": "No autorizado"
                 },
+                "modal-authorized":{
+                 "title": "¿Por que no se autoriza?",
+                 "btn-replace": "Sustituir"   
+                },
+
 
                 "tab2": {
                     "title": "Información del puesto",
@@ -787,7 +815,7 @@
             "remove": "Eliminar"   
            },
            "rename-modal":{
-            "rename-team": "Rename de equipo",
+            "rename-team": "Renombre de equipo",
             "btn-cancel": "cancelar",
             "btn-save": "Guardar"   
            },

@@ -20,7 +20,7 @@ export default function Modalcustom(props) {
         bordered={false}
         style={{ width: 300 }}
       >
-        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+        <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}> 
           <Col className="gutter-row" span={24}>
             <Form>
               <Form.Item>

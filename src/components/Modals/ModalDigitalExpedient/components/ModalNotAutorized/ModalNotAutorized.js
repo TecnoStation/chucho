@@ -9,11 +9,11 @@ function ModalNotAutorized({ NotAutorized, setNotAutorized }) {
   return (
     <>
       <Modal
-        title="¿Por que no se autoriza?"
+        title={t("organigram.areasandpositions-perfil.tab1.modal-authorized.title")}
         className="middleModal"
         visible={NotAutorized}
         onCancel={() => {
-          setNotAutorized(false);
+          setNotAutorized(false); 
         }}
         footer={[
           <Button
@@ -23,7 +23,7 @@ function ModalNotAutorized({ NotAutorized, setNotAutorized }) {
               setModalLoadFile(true);
             }}
           >
-            Sustituir
+            {t("organigram.areasandpositions-perfil.tab1.modal-authorized.btn-replace")}
           </Button>,
         ]}
       >

@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import "./Slider/ModalSlide.scss";
+import { useTranslation } from "react-i18next";
 
 function ModalSlide({
   setCompetencies,
@@ -62,6 +63,7 @@ function ModalSlide({
     setModalSlide(false);
     setSlider(50);
   };
+  const [t, i18n] = useTranslation("global");
 
   return (
     <>
@@ -75,38 +77,37 @@ function ModalSlide({
         <Row>
           <Col style={{ textAlign: "left" }} span={24}>
             <p className="secondaryText">
-              Los colaboradores que tienen un alto dominio de esta competencia,
-              por lo general tienen la capacidad de:
+              {t("organigram.add-competencies-modal.second-modal.text0")}
             </p>
           </Col>
           <Col style={{ textAlign: "left" }} span={24}>
             <ul>
-              <li className="secondaryText">Escuchar y dispuesto a hacerlo.</li>
-              <li className="secondaryText">Entiende los mensajes verbales.</li>
+              <li className="secondaryText">{t("organigram.add-competencies-modal.second-modal.text1")}</li>
+              <li className="secondaryText">{t("organigram.add-competencies-modal.second-modal.text2")}</li>
               <li className="secondaryText">
-                Comprende los aspectos no verbales de la comunicación.
+              {t("organigram.add-competencies-modal.second-modal.text3")}
               </li>
               <li className="secondaryText">
-                Expresa sus ideas con claridad y coherencia.
+              {t("organigram.add-competencies-modal.second-modal.text4")}
               </li>
               <li className="secondaryText">
-                Genera el impacto deseado en sus interlocutores.
+              {t("organigram.add-competencies-modal.second-modal.text5")}
               </li>
             </ul>
           </Col>
           <Col span={24} style={{ textAlign: "left" }}>
             <Link to="#" className="iconGreen">
-              Aquí
+            {t("organigram.add-competencies-modal.second-modal.text6-link")}
             </Link>
             <span className="secondaryText">
               {" "}
-              puedes consultar el significado de cada nivel
+              {t("organigram.add-competencies-modal.second-modal.text7")}
             </span>
           </Col>
           <Col span={24}>
             <br />
             <span className="secondaryText">
-              <b>Dominio de competencia</b>
+              <b>{t("organigram.add-competencies-modal.second-modal.text8")}</b>
             </span>
             <br />
             <InputNumber
@@ -120,7 +121,7 @@ function ModalSlide({
             />
             <br />
             <span className="secondaryText">
-              Competente: <b>2.6 - 3.4</b>
+            {t("organigram.add-competencies-modal.second-modal.competent")} <b>2.6 - 3.4</b>
             </span>
           </Col>
           <Col span={4}></Col>
@@ -141,11 +142,11 @@ function ModalSlide({
             <br />
             {editionModeSlider ? (
               <Button onClick={editCompetences} className="primary">
-                Editar
+                {t("organigram.add-competencies-modal.second-modal.btn-edit")}
               </Button>
             ) : (
               <Button onClick={saveCompetencess} className="primary">
-                Guardar
+                {t("organigram.add-competencies-modal.second-modal.btn-save")}
               </Button>
             )}
           </Col>

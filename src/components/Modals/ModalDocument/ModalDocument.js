@@ -64,11 +64,11 @@ function ModalDocument({ ModalDocumets, setModalDocumets }) {
                   </Col>
                   <Col style={{ marginTop: "-15px" }} span={24}>
                     <h2>
-                      <b>¡Bien hecho!</b>
+                      <b>{t("organigram.modal-collaborators.title")}</b>
                     </h2>
                   </Col>
                   <Col span={24} style={{ padding: "0px 60px 0px 60px" }}>
-                    <h3>Has guardado la lista de documentos</h3>
+                    <h3>{t("organigram.modal-collaborators.text")}</h3>
                   </Col>
                   <Col span={24}>
                     <h3></h3>

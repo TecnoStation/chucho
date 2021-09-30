@@ -78,7 +78,7 @@ function ModalAddExperience({
   return (
     <Modal
       className="middleModal"
-      title="Agregar experiencia"
+      title={t("organigram.areasandpositions-perfil.modal-experience")}
       visible={ModalExperience}
       onCancel={() => {
         setModalExperience(false);
@@ -94,7 +94,7 @@ function ModalAddExperience({
       >
         <Form.Item
           name="position"
-          label="Puesto"
+          label={t("organigram.areasandpositions-perfil.position-lebel")}
           rules={[
             {
               required: true,
@@ -104,7 +104,7 @@ function ModalAddExperience({
         >
           <Input
             type="text"
-            placeholder="Ej. Ejecutivo de ventas SR."
+            placeholder={t("organigram.areasandpositions-perfil.text-placeholder")}
             rules={[
               {
                 required: true,
@@ -115,7 +115,7 @@ function ModalAddExperience({
         </Form.Item>
         <Form.Item
           name="business"
-          label="Empresa"
+          label={t("organigram.areasandpositions-perfil.business-lebel")}
           rules={[
             {
               required: true,
@@ -123,11 +123,11 @@ function ModalAddExperience({
             },
           ]}
         >
-          <Input type="text" placeholder="Ej. GPO comunicación" />
+          <Input type="text" placeholder={t("organigram.areasandpositions-perfil.text1-placeholder")} />
         </Form.Item>
         <Form.Item
           name="activity"
-          label="Actividades y logros"
+          label={t("organigram.areasandpositions-perfil.activities-lebel")}
           rules={[
             {
               required: true,
@@ -136,7 +136,7 @@ function ModalAddExperience({
           ]}
         >
           <TextArea
-            placeholder="Agrega una breve resumen de tus principales actividades y logros"
+            placeholder={t("organigram.areasandpositions-perfil.text2-placeholder")}
             rows={6}
           />
         </Form.Item>
@@ -144,7 +144,7 @@ function ModalAddExperience({
           <Col className="gutter-row" span={12}>
             <Form.Item
               name="start"
-              label="Inicio"
+              label={t("organigram.areasandpositions-perfil.initiation-lebel")}
               rules={[
                 {
                   required: true,
@@ -158,7 +158,7 @@ function ModalAddExperience({
           <Col className="gutter-row" span={12}>
             <Form.Item
               name="end"
-              label="Fin"
+              label={t("organigram.areasandpositions-perfil.end-lebel")}
               rules={[
                 {
                   required: true,
@@ -172,7 +172,7 @@ function ModalAddExperience({
         </Row>
         <Form.Item style={{ textAlign: "right" }}>
           <Button htmlType="submit" className="primary">
-            Agregar
+          {t("organigram.areasandpositions-perfil.btn-add")}
           </Button>
         </Form.Item>
       </Form>

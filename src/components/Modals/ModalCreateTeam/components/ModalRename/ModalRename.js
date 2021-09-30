@@ -1,8 +1,10 @@
 import React from "react";
 import { Button, Input, Form, Modal } from "antd";
 import { useForm } from "antd/lib/form/Form";
+import { useTranslation } from "react-i18next";
 
 function ModalRename({ modalRename, teamList, setModalRename }) {
+  const [t, i18n] = useTranslation("global");
   const [form] = useForm();
   form.setFieldsValue({
     nameTeam: modalRename.name,
@@ -36,14 +38,14 @@ function ModalRename({ modalRename, teamList, setModalRename }) {
                 setModalRename(false);
               }}
             >
-              Cancelar
+              {t("organigram.add-competencies-modal.second-modal.btn-cancel")}
             </Button>
             <Button
               htmlType="submit"
               style={{ width: "100px", marginRight: "0px" }}
               className="primary"
             >
-              Guardar
+              {t("organigram.add-competencies-modal.second-modal.btn-save")}
             </Button>
           </div>
         </Form>

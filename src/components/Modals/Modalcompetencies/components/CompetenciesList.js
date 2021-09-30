@@ -3,7 +3,6 @@ import { Tag } from "antd";
 import { PlusOutlined, CheckCircleFilled } from "@ant-design/icons";
 import { v4 as uuid } from "uuid";
 import ModalSlide from "./ModalSlide/ModalSlide";
-import Form from "rc-field-form/es/Form";
 
 export default function CompetenciesList({
   competenciesList,
@@ -92,7 +91,7 @@ export default function CompetenciesList({
             </Tag>
           </div>
         )
-      )}
+      )} 
 
       <ModalSlide
         setModalComp={setModalComp}
