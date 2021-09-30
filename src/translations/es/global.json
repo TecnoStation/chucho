@@ -625,13 +625,8 @@
                     "btn-accept": "Aceptar"
                 },
                 "add-file-modal6": {
-<<<<<<< HEAD
-                    "title": "Expediente: Marco Antonio Ramirez Perez",
-                    "document": "documento",
-=======
                     "title": "Expediente",
                     "document": "Documento",
->>>>>>> 24d23385d62de47758df987dc4c2f56046130fc7
                     "status": "Estatus",
                     "date-load": "Fecha de carga",
                     "actions": "Acciones",
