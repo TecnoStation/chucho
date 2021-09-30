@@ -127,7 +127,7 @@ function ModalDocument({ ModalDocumets, setModalDocumets }) {
           <Col span={24}>
             <Row style={{ marginTop: "-20px" }}>
               <Col span={24}>
-                <span>
+                <span className="primaryText">
                   <b>{t("organigram.assign-documents.add-new-document")}</b>
                 </span>
                 <hr />
