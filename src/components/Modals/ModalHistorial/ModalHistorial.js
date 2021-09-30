@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 
-import { Button, Modal, Row, Col, Input, Card, Slider, Upload } from "antd";
+import {
+  Button,
+  Modal,
+  Row,
+  Col,
+  Input,
+  Card,
+  Slider,
+  Menu,
+  Dropdown,
+} from "antd";
 import { Line } from "@ant-design/charts";
 import { IoFilter } from "react-icons/io5";
 import { RiArrowUpSFill } from "react-icons/ri";
@@ -8,15 +18,12 @@ import { DownloadOutlined } from "@ant-design/icons";
 import Avatar from "../../../assets/img/avatar.png";
 import More from "../../../assets/img/icons/more_vert-24px.svg";
 import { AiFillLike } from "react-icons/ai";
-import { MdMessage, MdTextFields } from "react-icons/md";
+import { MdMessage } from "react-icons/md";
 import { GiTrophyCup } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import Editor from "../../Editor/Editor";
-import ReactQuill, { Quill } from "react-quill";
-// import "react-quill/dist/quill.snow.css";
-import CustomToolbar from "../../Editor/components/CustomToolbar/CustomToolbar";
-import { FiUpload } from "react-icons/fi";
+
 import ModalRecognition from "../ModalRecognition/ModalRecognition";
 
 const { Search } = Input;
@@ -90,6 +97,27 @@ function ModalHistorial({ Historial, setHistorial }) {
   };
 
   const [recognition, setRecognition] = useState(false);
+  const menu = (
+    <Menu>
+      <Menu.Item key="0">
+        <span>Primero más antiguo</span>
+      </Menu.Item>
+      <Menu.Item key="1">
+        <span>Primero más reciente</span>
+      </Menu.Item>
+    </Menu>
+  );
+
+  const menu2 = (
+    <Menu style={{ marginLeft: "-50px" }}>
+      <Menu.Item key="0">
+        <span>Editar</span>
+      </Menu.Item>
+      <Menu.Item key="1">
+        <span>Eliminar</span>
+      </Menu.Item>
+    </Menu>
+  );
 
   return (
     <>
@@ -110,17 +138,15 @@ function ModalHistorial({ Historial, setHistorial }) {
         </Row>
         <Row style={{ marginTop: "20px", textAlign: "left" }}>
           <Col span={8} style={{ paddingLeft: "10px" }}>
-            <IoFilter className="iconsize2" />
+            <Dropdown overlay={menu} trigger={["click"]}>
+              <IoFilter className="iconsize2" />
+            </Dropdown>
           </Col>
           <Col span={10}>
             <h3>Historial de actualizaciones</h3>
           </Col>
           <Col span={6}>
-            <Search
-              id="filter"
-              // onChange={filterTeams}
-              placeholder={"Buscar actualización"}
-            />
+            <Search id="filter" placeholder={"Buscar actualización"} />
           </Col>
         </Row>
         <Row style={{ marginTop: "20px" }}>
@@ -275,7 +301,9 @@ function ModalHistorial({ Historial, setHistorial }) {
                       </div>
                     </Col>
                     <Col span={1}>
-                      <img alt="logo" src={More} width="25" height="25" />
+                      <Dropdown overlay={menu2} trigger={["click"]}>
+                        <img alt="logo" src={More} width="25" height="25" />
+                      </Dropdown>
                     </Col>
                   </Row>
                   <Row>

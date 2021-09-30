@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Input, Button, Modal } from "antd";
-//import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import CompetenciesList from "./components/CompetenciesList";
 import { useForm } from "antd/lib/form/Form";
 const { Search } = Input;
@@ -20,7 +20,7 @@ export default function Modalcompetencies({
   editionModeSlider,
   component,
 }) {
-  //const [t, i18n] = useTranslation("global");
+  const [t, i18n] = useTranslation("global");
 
   //----------------- Filter Competencies ------------------------------------------
   const filterCompetencies = () => {

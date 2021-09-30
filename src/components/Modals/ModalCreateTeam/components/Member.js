@@ -83,11 +83,6 @@ export default function Member({
                   )}
                   data={dataSelects}
                 />
-                {/* <Select placeholder="Product Owner">
-                  <Option value="SCRUM1">SCRUM1</Option>
-                  <Option value="SCRUM2">SCRUM2</Option>
-                  <Option value="SCRUM3">SCRUM3</Option>
-                </Select> */}
               </Form.Item>
             ) : (
               <Form.Item

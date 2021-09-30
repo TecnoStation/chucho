@@ -34,7 +34,7 @@
     "path_indicator":{
         "indicatorStarted": "indicadoresInicio",
         "indicator": "indicadores-clave",
-        "panel": "Panel"
+        "panel": "panel"
     }, 
 
 
@@ -54,11 +54,11 @@
         "p3-privacy": "Aviso de Privacidad",
         "title-recovery": "Recuperar contraseña",
         "label-email-recovery": "Usuario",
-        "placeholder-user-recovery": "ejemplo@empresa.com",
+        "placeholder-user-recovery": "Ejemplo@empresa.com",
         "btn-recovery": "Recuperar",
         "recovery-success": "¡Listo!",
         "p-recovery-message": "Hemos enviado un correo electrónico al registrado para el usuario, sigue ls instrucciones para recuperar tu contraseña",
-        "btn-success": "ok",
+        "btn-success": "Ok",
         "h1-welcome-recovery": "¡Bienvenido!",
         "h1-user": "Usuario",
         "text": "Por favor configura tu contraseña",
@@ -66,7 +66,7 @@
         "insert-password-placeholder": "Contraseña",
         "repeat-password": "Repite tu nueva contraseña",
         "repeat-password-placeholder": "Contraseña",
-        "btn-next": "siguiente"
+        "btn-next": "Siguiente"
     },
     "sidebar": {
         "organization-chart": "Organigrama",
@@ -363,7 +363,7 @@
             "btn-rise": "Subir",
             "well-done": "¡Bien hecho!",
             "organization-created": "Organigrama creado",
-            "btn-done": "hecho"
+            "btn-done": "Hecho"
         },
         "areasandpositions-masivep": {
             "title": "Carga masiva de puestos",
@@ -390,7 +390,7 @@
             "btn-rise": "Subir",
             "well-done": "¡Bien hecho!",
             "organization-created": "Organigrama creado",
-            "btn-done": "hecho"
+            "btn-done": "Hecho"
         },
         "collaborator-form": {
             "title": "Información del Colaborador",
@@ -561,11 +561,11 @@
                 },
                 "add-file-modal": {
                     "title": "Expediente:",
-                    "document": "documento",
+                    "document": "Documento",
                     "status": "Estatus",
                     "date-load": "Fecha de carga",
                     "actions": "Acciones",
-                    "btn-cancel": "Canselar",
+                    "btn-cancel": "Cancelar",
                     "btn-save": "Guardar"
                 },
                 "add-file-modal2": {
@@ -586,16 +586,16 @@
                 },
                 "add-file-modal4": {
                     "title": "Expediente",
-                    "document": "documento",
+                    "document": "Documento",
                     "status": "Estatus",
                     "date-load": "Fecha de carga",
                     "actions": "Acciones",
-                    "btn-cancel": "Canselar",
+                    "btn-cancel": "Cancelar",
                     "btn-send": "Enviar"
                 },
                 "add-file-modal5": {
                     "title": "Historial del Colaborador",
-                    "position": "puesto",
+                    "position": "Puesto",
                     "period-start": "Periodo de inicio",
                     "period-final": "Periodo final",
                     "detail": "Detalle",
@@ -604,7 +604,7 @@
                 },
                 "add-file-modal6": {
                     "title": "Expediente",
-                    "document": "documento",
+                    "document": "Documento",
                     "status": "Estatus",
                     "date-load": "Fecha de carga",
                     "actions": "Acciones"
@@ -631,7 +631,7 @@
                     "menu-positions": {
                         "edit-collaborator": "Editar colaborador",
                         "edit-position": "Editar puesto",
-                        "edit-structure": "Estrutura",
+                        "edit-structure": "Editar estructura",
                         "add-permissions": "Agregar permisos",
                         "historial-collaborator": "Historial del colaborador",
                         "historial-position": "Historial del puesto",
@@ -844,7 +844,7 @@
              "tex1": "Agregar las competencias institucionales que deben tener todos los",
              "tex2": "colaboradores de tu organización, puedes elegir hasta un máximo de tres.",
              "placeholder-competens": "Buscar competencias",
-             "btn-cancel": "cancelar"   
+             "btn-cancel": "Cancelar"   
             },
             "menu":{
              "add-permissions": "Agregar permisos",
@@ -873,7 +873,7 @@
              "tex": "Al editar las competencias institucionales se verá reflejado en todos los colaboradores de tu empresa.",
              "label-enteruser": "Ingresa tu contraseña de usuario",
              "placeholder-user": "Ej. Ghkcclsd23",
-             "btn-cancel": "cancelar",
+             "btn-cancel": "Cancelar",
              "btn-enter": "Ingresar"   
             },
             "title1": "Áreas en las que participa el puesto",
@@ -907,7 +907,7 @@
             "to attach-link-a": "Adjuntar archivo",
             "modal-upload-file":{
              "upload-file": "Sube es archivo",
-             "btn-casel": "Canselar",
+             "btn-cancel": "Cancelar",
              "btn-upload": "Subir"   
             }
           },
@@ -1264,7 +1264,7 @@
        "collaborators": "Colaboradores a cargo"   
       },
       "menu-3":{
-       "collaborator": "colaborador indicador",
+       "collaborator": "Colaborador indicador",
        "new-temporality": "Nueva temporalidad",
        "upgrade": "Actualizar",
        "edit": "Editar",

@@ -29,6 +29,9 @@
   button span {
     color: $color-white;
   }
+  button span.anticon-search {
+    color: rgba(0, 0, 0, 0.45);
+  }
 }
 
 .chart {

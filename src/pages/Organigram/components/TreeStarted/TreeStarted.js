@@ -28,8 +28,6 @@ function TreeStarted({ setMessageOrg, setEraser }) {
               father={father}
               setFathers={setFathers}
               fathers={fathers}
-              // childrens={childrens}
-              // setChildrens={setChildrens}
             />
           }
         ></TreeNode>
