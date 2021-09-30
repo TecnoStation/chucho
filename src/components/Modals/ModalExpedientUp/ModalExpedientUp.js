@@ -9,7 +9,9 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
   return (
     <>
       <Modal
-        title={t("organigram.areasandpositions-perfil.tab1.add-file-modal.title")} 
+        title={t(
+          "organigram.areasandpositions-perfil.tab1.add-file-modal.title"
+        )}
         className="largeModal"
         visible={expedientUp}
         onCancel={() => {
@@ -17,13 +19,15 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
         }}
         footer={[
           <Button
-            style={{ marginRight: "15px" }} 
+            style={{ marginRight: "15px" }}
             className="secondary"
             onClick={() => {
               setExpedientUp(false);
             }}
           >
-            {t("organigram.areasandpositions-perfil.tab1.add-file-modal.btn-cancel")}
+            {t(
+              "organigram.areasandpositions-perfil.tab1.add-file-modal.btn-cancel"
+            )}
           </Button>,
           <Button
             className="primary"
@@ -31,30 +35,48 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
               setExpedientUp(false);
             }}
           >
-            {t("organigram.areasandpositions-perfil.tab1.add-file-modal.btn-save")}
+            {t(
+              "organigram.areasandpositions-perfil.tab1.add-file-modal.btn-save"
+            )}
           </Button>,
         ]}
       >
         <Row
-          className="dividerBottomFull"
+          className="dividerBottomFull primaryText"
           style={{ textAlign: "center", paddingBottom: "15px" }}
         >
           <Col span={7}>
-            <b>{t("organigram.areasandpositions-perfil.tab1.add-file-modal.document")}</b>
+            <b>
+              {t(
+                "organigram.areasandpositions-perfil.tab1.add-file-modal.document"
+              )}
+            </b>
           </Col>
           <Col span={6}>
-            <b>{t("organigram.areasandpositions-perfil.tab1.add-file-modal.status")}</b>
+            <b>
+              {t(
+                "organigram.areasandpositions-perfil.tab1.add-file-modal.status"
+              )}
+            </b>
           </Col>
           <Col span={7}>
-            <b>{t("organigram.areasandpositions-perfil.tab1.add-file-modal.date-load")}</b>
+            <b>
+              {t(
+                "organigram.areasandpositions-perfil.tab1.add-file-modal.date-load"
+              )}
+            </b>
           </Col>
           <Col span={4}>
-            <b>{t("organigram.areasandpositions-perfil.tab1.add-file-modal.actions")}</b>
+            <b>
+              {t(
+                "organigram.areasandpositions-perfil.tab1.add-file-modal.actions"
+              )}
+            </b>
           </Col>
         </Row>
 
         <Row
-          className="dividerBottomFull"
+          className="dividerBottomFull secondaryText"
           style={{
             textAlign: "center",
             marginTop: "15px",
@@ -78,7 +100,7 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
         </Row>
 
         <Row
-          className="dividerBottomFull"
+          className="dividerBottomFull secondaryText"
           style={{
             textAlign: "center",
             marginTop: "15px",
@@ -100,7 +122,7 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
         </Row>
 
         <Row
-          className="dividerBottomFull"
+          className="dividerBottomFull secondaryText"
           style={{
             textAlign: "center",
             marginTop: "15px",
@@ -124,7 +146,7 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
         </Row>
 
         <Row
-          className="dividerBottomFull"
+          className="dividerBottomFull secondaryText"
           style={{
             textAlign: "center",
             marginTop: "15px",
@@ -153,6 +175,7 @@ function ModalExpedientUp({ expedientUp, setExpedientUp }) {
             marginTop: "15px",
             paddingBottom: "15px",
           }}
+          className="secondaryText"
         >
           <Col style={{ textAlign: "left", paddingLeft: "20px" }} span={7}>
             Identificación Oficial

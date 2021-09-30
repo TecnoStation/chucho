@@ -45,14 +45,6 @@ function ModalEraser({ save, setSave }) {
               onClick={() => {
                 setSave(false);
                 setHistorial(true);
-                // setErasersList([
-                //   ...erasersList,
-                //   {
-                //     id: 0,
-                //     name: "Área MKT",
-                //     date: "10 MAY 2016",
-                //   },
-                // ]);
               }}
             >
               {t("organigram.modal-org.btn-save")}

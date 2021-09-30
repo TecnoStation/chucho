@@ -73,9 +73,6 @@ export default function Simplecard({ teamList, setTeamList, edit }) {
                     </Link>
                   </Menu.Item>
                   <Menu.Item key="23">
-                    {
-                      //aqui
-                    }
                     <Link
                       to="#"
                       onClick={() => {

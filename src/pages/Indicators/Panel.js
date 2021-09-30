@@ -8,7 +8,6 @@ import {
   Layout,
   Tabs,
   Card,
-  Input,
   Button,
   Slider,
 } from "antd";
@@ -19,15 +18,10 @@ import { Line } from "@ant-design/charts";
 import { useHistory } from "react-router";
 import { IoMdCloudDownload } from "react-icons/io";
 import { useTranslation } from "react-i18next";
-import { MdShowChart } from "react-icons/md";
-import { GrDocumentUpload } from "react-icons/gr";
 import { RiArrowUpSFill } from "react-icons/ri";
-import Increase from "../../assets/img/icons/aumentar.svg";
-import ModalUpdateIndicator from "../../components/Modals/ModalUpdateIndicator/ModalUpdateIndicator";
+import { AiOutlineArrowLeft } from "react-icons/ai";
 
 import "./Indicators.scss";
-import ModalHistorial from "../../components/Modals/ModalHistorial/ModalHistorial";
-import { AiOutlineArrowLeft } from "react-icons/ai";
 
 const { Header } = Layout;
 const { TabPane } = Tabs;
@@ -109,12 +103,7 @@ function Panel({ user }) {
       <Row>
         <Col id="tabHead" span={19}>
           <Tabs defaultActiveKey="1" onChange={callback}>
-            <TabPane
-              tab="Mis indicadores clave"
-              //   style={{ background: "yellow" }}
-              className="chart"
-              key="1"
-            >
+            <TabPane tab="Mis indicadores clave" className="chart" key="1">
               <div
                 style={{
                   width: "608px",
@@ -139,7 +128,7 @@ function Panel({ user }) {
                 </Link>
                 <Row>
                   <Col span={24}>
-                    <Card style={{ borderRadius: "8px", marginTop: "40px" }}>
+                    <Card style={{ borderRadius: "8px", marginTop: "20px" }}>
                       <Row>
                         <Col span={24}>
                           <h2
