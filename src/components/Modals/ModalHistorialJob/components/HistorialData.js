@@ -1,8 +1,10 @@
 import React from 'react'
 import {  Col, Row } from "antd";
 import { Link } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
 
 function HistorialData({historialjob}) {
+  const [t, i18n] = useTranslation("global");
     return (
         <Row
           className="dividerBottomFull"
@@ -17,7 +19,7 @@ function HistorialData({historialjob}) {
           <Col span={9}><span>{historialjob.collaborators}</span></Col>
           <Col span={4}>
             <Link className="iconBlue" to="#">
-              Ver Detalle
+            {t("organigram.areasandpositions-perfil.tab1.modal-position.view-detail")}
             </Link>
           </Col>
         </Row>

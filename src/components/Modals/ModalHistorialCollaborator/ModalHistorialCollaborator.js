@@ -30,7 +30,7 @@ function ModalHistorialCollaborator({ modalHistorialC, setModalHistorialC }) {
   return (
     <>
       <Modal
-        title="Historial del Colaborador"
+        title={t("organigram.areasandpositions-perfil.tab1.add-file-modal5.title")}
         className="ModalHistorialCollaborator"
         visible={modalHistorialC}
         onCancel={() => {
@@ -44,7 +44,7 @@ function ModalHistorialCollaborator({ modalHistorialC, setModalHistorialC }) {
               setModalHistorialC(false);
             }}
           >
-            Cancelar
+            {t("organigram.areasandpositions-perfil.tab1.add-file-modal5.btn-cancel")}
           </Button>,
           <Button
             className="primary"
@@ -52,7 +52,7 @@ function ModalHistorialCollaborator({ modalHistorialC, setModalHistorialC }) {
               setModalHistorialC(false);
             }}
           >
-            Aceptar
+            {t("organigram.areasandpositions-perfil.tab1.add-file-modal5.btn-accept")}
           </Button>,
         ]}
       >
@@ -61,16 +61,16 @@ function ModalHistorialCollaborator({ modalHistorialC, setModalHistorialC }) {
           style={{ textAlign: "center", paddingBottom: "15px" }}
         >
           <Col span={5}>
-            <b className="primaryText">Puesto</b>
+            <b className="primaryText">{t("organigram.areasandpositions-perfil.tab1.add-file-modal5.position")}</b>
           </Col>
           <Col span={6}>
-            <b className="primaryText">Periodo de inicio</b>
+            <b className="primaryText">{t("organigram.areasandpositions-perfil.tab1.add-file-modal5.period-start")}</b>
           </Col>
           <Col span={9}>
-            <b className="primaryText">Periodo final</b>
+            <b className="primaryText">{t("organigram.areasandpositions-perfil.tab1.add-file-modal5.period-final")}</b>
           </Col>
           <Col span={4}>
-            <b className="primaryText">Detalle</b>
+            <b className="primaryText">{t("organigram.areasandpositions-perfil.tab1.add-file-modal5.detail")}</b>
           </Col>
         </Row>
 

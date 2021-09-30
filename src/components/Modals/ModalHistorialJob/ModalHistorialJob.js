@@ -31,9 +31,9 @@ export default function ModalHistorialJob({ HistorialP, setHistorialP }) {
   return (
     <>
       <Modal
-        title="Historial del Puesto"
+        title={t("organigram.areasandpositions-perfil.tab1.modal-position.title")}
         className="HistorialJobModal"
-        visible={HistorialP}
+        visible={HistorialP} 
         centered={true}
         onCancel={() => {
           setHistorialP(false);
@@ -49,7 +49,7 @@ export default function ModalHistorialJob({ HistorialP, setHistorialP }) {
               setHistorialP(false);
             }}
           >
-            Cancelar
+            {t("organigram.areasandpositions-perfil.tab1.modal-position.btn-cancel")}
           </Button>,
           <Button
             style={{ color: "#fff !important" }}
@@ -58,7 +58,7 @@ export default function ModalHistorialJob({ HistorialP, setHistorialP }) {
               setHistorialP(false);
             }}
           >
-            Aceptar
+            {t("organigram.areasandpositions-perfil.tab1.modal-position.btn-accept")}
           </Button>,
         ]}
       >
@@ -67,16 +67,16 @@ export default function ModalHistorialJob({ HistorialP, setHistorialP }) {
           style={{ textAlign: "center", paddingBottom: "15px" }}
         >
           <Col span={5}>
-            <b className="primaryText">Puesto</b>
+            <b className="primaryText">{t("organigram.areasandpositions-perfil.tab1.modal-position.position")}</b>
           </Col>
           <Col span={6}>
-            <b className="primaryText">Creación</b>
+            <b className="primaryText">{t("organigram.areasandpositions-perfil.tab1.modal-position.creation")}</b>
           </Col>
           <Col style={{ paddingLeft: "80px", paddingRight: "70px" }} span={9}>
-            <b className="primaryText">Colaboradores que lo ocuparon</b>
+            <b className="primaryText">{t("organigram.areasandpositions-perfil.tab1.modal-position.collaborators")}</b>
           </Col>
           <Col style={{ paddingLeft: "5px" }} span={4}>
-            <b className="primaryText">Acciones</b>
+            <b className="primaryText">{t("organigram.areasandpositions-perfil.tab1.modal-position.actions")}</b>
           </Col>
         </Row>
 
