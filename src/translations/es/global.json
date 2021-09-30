@@ -626,7 +626,8 @@
                     "period-final": "Periodo final",
                     "detail": "Detalle",
                     "btn-cancel": "Cancelar",
-                    "btn-accept": "Aceptar"
+                    "btn-accept": "Aceptar",
+                    "detail-link": "Ver Detalle"
                 },
                 "modal-position":{
                  "title": "Historial del Puesto",
