@@ -61,11 +61,11 @@ function Indicators({ user }) {
             t("paths_organigram.areasandpositions-perfil")
           }
         >
-          Ver Perfil
+          {t("organigram.perfil.view-perfil")}
         </Link>
       </Menu.Item>
       <Menu.Divider />
-      <Menu.Item key="2">Cerrar sesión</Menu.Item>
+      <Menu.Item key="2">{t("organigram.perfil.close-session")}</Menu.Item>
     </Menu>
   );
   function callback(key) {
