@@ -194,6 +194,9 @@ export default function MybusinessEdit() {
 
   //----------------------- End Image Perfil -----------------------------------
 
+  const tooltip = (<><span><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</b></span><br/><br/><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volup</span></>);
+
+
   return (
     <>
       <Tabs
@@ -266,7 +269,7 @@ export default function MybusinessEdit() {
                           label={t(
                             "organigram.my-business-edit.information.form.business-activity"
                           )}
-                          tooltip="info"
+                          tooltip={tooltip}
                         >
                           <SelectDinamic
                             placeholder={t(

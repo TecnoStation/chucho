@@ -45,7 +45,11 @@ export default function Simplecard({ teamList, setTeamList, edit }) {
           <Col className="gutter-row" span={2}>
             <Dropdown
               overlay={
-                <Menu>
+                <Menu style={{
+      position: "absolute",
+      marginLeft: "-75px",
+      marginTop: "-20px",
+    }} >
                   <Menu.Item key="01">
                     <Link
                       to="#"

@@ -51,7 +51,11 @@ const { TabPane } = Tabs;
 function Indicators({ user }) {
   const [t, i18n] = useTranslation("global");
   const menu = (
-    <Menu>
+    <Menu style={{
+      position: "absolute",
+      marginLeft: "-90px",
+      marginTop: "-20px",
+    }} >
       <Menu.Item key="0">
         <Link
           to={

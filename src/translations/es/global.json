@@ -961,7 +961,7 @@
            "areasandpositions-general":{
             "title": "Carga masiva",
             "text-1": "En este apartado vas a poder realizar la carga masiva de información.",
-            "text-2": "para facilitar la carga de datos, proponemos subir la información en 3 partes, la ",
+            "text-2": "para facilitar la carga de datos, proponemos subir la información en 3 partes, la",
             "text-3": "primera sería un archivo con todas tu áreas y todos los puestos en tu empresa, ",
             "text-4": "para facilitar este paso hemos creado una plantilla que pudes descargar, llenar y subir:",
             "downloads-template": "Descargar plantilla de Estructura",
@@ -985,7 +985,7 @@
             "text-file-c": "Subir archivo de información de colaboradores:",
             "to attach-link-a": "Adjuntar archivo",
             "modal-upload-file":{
-             "upload-file": "Sube es archivo",
+             "upload-file": "Sube el archivo",
              "btn-cancel": "Cancelar",
              "btn-upload": "Subir"   
             }

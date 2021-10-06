@@ -107,7 +107,11 @@ export default function AreasAndPositionsAddJob() {
   const [Active, setActive] = useState(tabState);
 
   const menu = (
-    <Menu>
+    <Menu style={{
+      position: "absolute",
+      marginLeft: "-90px",
+      marginTop: "-20px",
+    }} >
       <Menu.Item key="3">
         <Link
           to="#"
@@ -642,10 +646,8 @@ export default function AreasAndPositionsAddJob() {
             </div>
 
             <Row style={{ marginTop: "30px" }}>
-              <Col style={{ textAlign: "center" }} span={14}>
-                <b className="primaryText">
+              <Col style={{ textAlign: "center" }} span={14} className="primaryText">
                   {t("organigram.areasandpositions-addjob.fields-obligatory")}
-                </b>
               </Col>
               <Col style={{ textAlign: "right" }} span={10}>
                 <Link

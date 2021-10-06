@@ -133,7 +133,11 @@ export default function Perfil() {
   //----------------- End Languajes ----------------------------
 
   const menu3 = (
-    <Menu>
+    <Menu style={{
+      position: "absolute",
+      marginLeft: "-165px",
+      marginTop: "-25px",
+    }} >
       <Menu.Item key={uuid()}>
         <Menu.Item key={uuid()}>
           <Link
@@ -266,7 +270,11 @@ export default function Perfil() {
   );
 
   const menu2 = (
-    <Menu>
+    <Menu style={{
+      position: "absolute",
+      marginLeft: "-140px",
+      marginTop: "-20px",
+    }} >
       <Menu.Item key="0">
         <Menu.Item key="3">
           <Link to="#" onClick={editSkills}>
@@ -294,7 +302,11 @@ export default function Perfil() {
   );
 
   const menu = (
-    <Menu>
+    <Menu style={{
+      position: "absolute",
+      marginLeft: "-135px",
+      marginTop: "-25px",
+    }} >
       <Menu.Item key="0">
         <Menu.Item key="3">
           <Link

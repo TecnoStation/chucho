@@ -30,7 +30,10 @@ function MenuOrganigram({ visible, setVisible }) {
   return (
     <>
       <div className={visible}>
-        <Menu className="menuOrganigram">
+        <Menu style={{
+      position: "absolute",
+      marginLeft: "-75px",
+      marginTop: "-20px",}} className="menuOrganigram">
           <Menu.Item key={uuid()}>
             <Link
               to={

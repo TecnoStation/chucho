@@ -14,7 +14,11 @@ function ModalCardTeam({
 }) {
   const team = teamList[modalCard.index];
   const menu = (
-    <Menu>
+    <Menu style={{
+      position: "absolute",
+      marginLeft: "-90px",
+      marginTop: "-20px",
+    }} >
       <Menu.Item key="1">
         <Link
           to="#"
