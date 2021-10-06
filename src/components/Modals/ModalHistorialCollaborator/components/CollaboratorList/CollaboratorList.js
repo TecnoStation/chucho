@@ -27,7 +27,7 @@ function CollaboratorList({ Collaborator }) {
         </Col>
         <Col span={4}>
           <Link className="iconBlue" to="#">
-            Ver Detalle
+          {t("organigram.areasandpositions-perfil.tab1.add-file-modal5.detail-link")}
           </Link>
         </Col>
       </Row>

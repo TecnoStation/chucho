@@ -12,12 +12,12 @@ function ListLevelStudy({ levels }) {
         >
           <Col className="gutter-row" span={12}>
             <span>
-              <span>{level.stydyLevel}</span>
+              <span className="primaryText">{level.stydyLevel}</span>
             </span>
           </Col>
           <Col className="gutter-row" span={12}>
             <span>
-              <span>{level.years}</span>
+              <span className="primaryText">{level.years}</span>
             </span>
           </Col>
         </Row>

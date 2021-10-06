@@ -10,7 +10,7 @@ function ExperienceList({ Experiences }) {
       >
         <Col className="gutter-row" span={24}>
           <span>
-            <b>{experience.position}</b>
+            <b className="secondaryText">{experience.position}</b>
           </span>
           <br></br>
           <span className="iconSureGray">

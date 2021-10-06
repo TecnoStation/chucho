@@ -59,12 +59,12 @@ function ModalCardTeam({
         <Row>
           <Col span={6}>
             <p>
-              <b>Tipo de equipo</b>
+              <b className="secondaryText">Tipo de equipo</b>
             </p>
           </Col>
           <Col span={16}>
             <p>
-              <b>Modalidad</b>
+              <b className="secondaryText">Modalidad</b>
             </p>
           </Col>
           <Col span={2}>
@@ -81,28 +81,40 @@ function ModalCardTeam({
         </Row>
         <Row style={{ textAlign: "left", paddingLeft: "12px" }}>
           <Col span={12}>
-            <p>{modalCard.type}</p>
+            <p className="secondaryText">{modalCard.type}</p>
           </Col>
           <Col span={12}>
-            <p>{modalCard.modality} </p>
+            <p className="secondaryText">{modalCard.modality} </p>
           </Col>
         </Row>
         <Row>
           <Col style={{ textAlign: "left", paddingLeft: "5px" }} span={24}>
             <p>
-              <b>Marco de trabajo</b>
+              <b className="secondaryText">Marco de trabajo</b>
             </p>
           </Col>
         </Row>
         <Row>
           <Col style={{ textAlign: "left", paddingLeft: "5px" }} span={24}>
-            <p>{modalCard.frameWork}</p>
+            <p className="secondaryText">{modalCard.frameWork}</p>
           </Col>
         </Row>
         <Row style={{ textAlign: "center", marginTop: "40px" }}>
-          <Col span={10}>Miembros del Equipo</Col>
-          <Col span={6}>Líder</Col>
-          <Col span={8}>Roles</Col>
+          <Col span={10}>
+            <span className="secondaryText">
+              <b>Miembros del Equipo</b>
+            </span>
+          </Col>
+          <Col span={6}>
+            <span className="secondaryText">
+              <b>Líder</b>
+            </span>
+          </Col>
+          <Col span={8}>
+            <span className="secondaryText">
+              <b>Roles</b>
+            </span>
+          </Col>
         </Row>
 
         <MembersTeam collaborators={modalCard.collaborators} />

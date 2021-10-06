@@ -42,19 +42,21 @@ export default function RecoveryPassword() {
             <br />
           </Col>
           <Col span={24}>
-            <h2>{t("login.recovery-success")}</h2>
+            <h2 style={{ marginTop: "20px" }}>{t("login.recovery-success")}</h2>
+            <br />
             <br />
           </Col>
           <Col span={24}>
             <p style={{ textAlign: "center" }}>
-            {t("login.p-recovery-message")}
+              {t("login.p-recovery-message")}
             </p>
+            <br />
             <br />
           </Col>
           <Col span={24}>
             <Link to="/login">
-              <Button className="primary" style={{ width: "100px" }}>  
-              {t("login.btn-success")}
+              <Button className="primary" style={{ width: "100px" }}>
+                {t("login.btn-success")}
               </Button>
             </Link>
             <br />

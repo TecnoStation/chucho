@@ -118,6 +118,41 @@
          "view-perfil": "Ver perfil",
          "close-session": "Cerrar sesión"   
         },
+        "modal-messages":{
+         "validate-structure": "Validar estructuras",
+         "validate-selected-a": "Validar seleccionados",
+         "not-validate-selected-a": "No Validar seleccionados",
+         "draft": "Borrador",
+         "created-for": "Creado por",
+         "creation": "Creación",
+         "actions-1": "Acciones",
+         "validate-a": "Validar",
+         "not-validate": "No validar",
+         "validate-abilities": "Validar habilidades de colaboradores",
+         "validate-selected-b": "Validar seleccionados",
+         "not-validate-selected-b": "No Validar seleccionados",
+         "name-position": "Nombre y puesto",
+         "last-update": "Última actualización",
+         "actions-2": "Acciones",
+         "validate-b": "Validar",
+         "not-validate-b": "No validar",
+         "validate-document": "Validar documentos de expediente digital",
+         "validate-selected-c": "Validar seleccionados",
+         "not-validate-selected-c": "No Validar seleccionados",
+         "name-position1": "Nombre y puesto",
+         "last-update1": "Última actualización",
+         "actions-3": "Acciones",
+         "validate-c": "Validar",
+         "not-validate-c": "No validar"   
+        },
+        
+        "modal-document":{
+         "title": "¿Por qué no se autoriza el documento?",
+         "text": "Ingresa algún motivo por el cual no se autoriza, para que el colaborador sepa que corregir",
+         "btn-cancel": "Cancelar",
+         "btn-send": "Enviar"   
+        },
+
         "empty-organigram-layout": {
             "h1-welcome": "¡Bienvenido al Organigrama!",
             "p-row1": "Aquí podrás visualizar todas las estructuras de la organización, además de facilitar la evaluación 360 y la vista de los equipos para alcanzar los Objetivos.",
@@ -262,7 +297,7 @@
             "btn-save": "Guardar",
             "menu":{
              "edit-branch": "Editar sucursal",
-             "remove-branch": "Eliminar sucursal"   
+             "remove-branch": "Eliminar"   
             }
         },
         "add-competencies-modal": {
@@ -626,7 +661,8 @@
                     "period-final": "Periodo final",
                     "detail": "Detalle",
                     "btn-cancel": "Cancelar",
-                    "btn-accept": "Aceptar"
+                    "btn-accept": "Aceptar",
+                    "detail-link": "Ver Detalle"
                 },
                 "modal-position":{
                  "title": "Historial del Puesto",

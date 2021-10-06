@@ -41,7 +41,11 @@ function ModalDownLoad({ ModalDownload, setModalDownload }) {
                   </Col>
                   <Col style={{ marginTop: "0px" }} span={24}>
                     <h2>
-                      <b>{t("organigram.areas-and-positions.modal-file.file-download")}</b>
+                      <b>
+                        {t(
+                          "organigram.areas-and-positions.modal-file.file-download"
+                        )}
+                      </b>
                     </h2>
                   </Col>
                   <Col span={24}>
@@ -73,10 +77,16 @@ function ModalDownLoad({ ModalDownload, setModalDownload }) {
     >
       <Row>
         <Col span={12}>
-          <h3>{t("organigram.areas-and-positions.modal-file.date")}</h3>
+          <h3 className="secondaryText">
+            <b> {t("organigram.areas-and-positions.modal-file.date")}</b>
+          </h3>
         </Col>
         <Col span={12}>
-          <h3>{t("organigram.areas-and-positions.modal-file.date-creation")}</h3>
+          <h3 className="secondaryText">
+            <b>
+              {t("organigram.areas-and-positions.modal-file.date-creation")}
+            </b>
+          </h3>
         </Col>
       </Row>
       <Row style={{ marginTop: "20px" }}>
@@ -87,9 +97,11 @@ function ModalDownLoad({ ModalDownload, setModalDownload }) {
           />
         </Col>
         <Col span={10}>
-          <span>organigram2018.csv</span>
+          <span className="secondaryText">organigram2018.csv</span>
         </Col>
-        <Col span={11}>12-julio-2021</Col>
+        <Col span={11}>
+          <span className="secondaryText">12-julio-2021</span>
+        </Col>
       </Row>
     </Modal>
   );
