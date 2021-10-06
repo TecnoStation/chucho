@@ -16,7 +16,7 @@ function PositionsLis({ Positions, SetPositions }) {
             span={14}
             style={{ marginLeft: "30px" }}
           >
-            <span>{position.name}</span>{" "}
+            <span><b>{position.name}</b></span>{" "}
             <span id={"item" + index} style={{ display: "none" }}>
               (<span id={"number" + index}>1</span>)
             </span>

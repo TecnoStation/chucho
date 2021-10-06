@@ -357,7 +357,7 @@ export default function AreasAndPositions() {
                       span={24}
                       style={{ textAlign: "justify" }}
                     >
-                      <Link
+                      <Link style={{ marginLeft: "30px" }}
                         to="#"
                         onClick={() => {
                           SetInputPosition("show");
@@ -497,21 +497,21 @@ export default function AreasAndPositions() {
               </Col>
               <Row className="info2 dividerBottomFull">
                 <Col className="secondaryText" span={8}>
-                  {t("organigram.areas-and-positions.position.position-name")}
+                  <b>{t("organigram.areas-and-positions.position.position-name")}</b>
                 </Col>
                 <Col className="secondaryText" span={4}>
-                  {t(
+                 <b> {t(
                     "organigram.areas-and-positions.position.basic-information"
-                  )}
+                  )}</b>
                 </Col>
                 <Col className="secondaryText" span={4}>
-                  {t("organigram.areas-and-positions.position.profiling")}
+                  <b>{t("organigram.areas-and-positions.position.profiling")}</b>
                 </Col>
                 <Col className="secondaryText" span={4}>
-                  {t("organigram.areas-and-positions.position.skills")}
+                 <b> {t("organigram.areas-and-positions.position.skills")}</b>
                 </Col>
                 <Col className="secondaryText" span={4}>
-                  {t("organigram.areas-and-positions.position.actions")}
+                  <b>{t("organigram.areas-and-positions.position.actions")}</b>
                 </Col>
               </Row>
 

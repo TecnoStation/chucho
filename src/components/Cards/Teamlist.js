@@ -37,7 +37,11 @@ export default function Teamlist({ teamList, setTeamList, edit }) {
         <Col span={2}>
           <Dropdown
             overlay={
-              <Menu>
+              <Menu style={{
+      position: "absolute",
+      marginLeft: "-90px",
+      marginTop: "-20px",
+    }} >
                 <Menu.Item key="01">
                   <Link
                     to="#"

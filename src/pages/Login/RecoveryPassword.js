@@ -21,14 +21,14 @@ export default function RecoveryPassword() {
         </div>
         <h2>{t("login.title-recovery")}</h2>
         <Form name="formRecovery" layout="vertical">
-          <Form.Item name="username" label={t("login.label-email-recovery")}>
+          <Form.Item style={{marginTop: "20px"}} name="username" label={t("login.label-email-recovery")}>
             <Input
               type="text"
               placeholder={t("login.placeholder-user-recovery")}
             />
           </Form.Item>
           <Form.Item>
-            <Button className="primary" onClick={Send}>
+            <Button style={{marginTop: "20px"}} className="primary" onClick={Send}>
               {t("login.btn-recovery")}
             </Button>
           </Form.Item>
@@ -46,7 +46,7 @@ export default function RecoveryPassword() {
             <br />
           </Col>
           <Col span={24}>
-            <p style={{ textAlign: "center" }}>
+            <p className="secondaryText" style={{ textAlign: "center", }}>
             {t("login.p-recovery-message")}
             </p>
             <br />
