@@ -20,11 +20,11 @@ function MembersTeam({ collaborators }) {
                   </p>
                 </Col>
                 <Col style={{ textAlign: "left" }} span={18}>
-                  <span>
+                  <span className="primaryText">
                     <b>{collaborator.name}</b>
                   </span>
                   <br />
-                  <span>Programador JR</span>
+                  <span className="primaryText">Programador JR</span>
                 </Col>
               </Row>
             </Col>
@@ -59,10 +59,10 @@ function MembersTeam({ collaborators }) {
                 </Col>
                 <Col style={{ textAlign: "left" }} span={18}>
                   <span>
-                    <b>{collaborator.name}</b>
+                    <b className="primaryText">{collaborator.name}</b>
                   </span>
                   <br />
-                  <span>Programador JR</span>
+                  <span className="primaryText">Programador JR</span>
                 </Col>
               </Row>
             </Col>

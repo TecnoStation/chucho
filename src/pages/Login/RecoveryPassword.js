@@ -21,14 +21,22 @@ export default function RecoveryPassword() {
         </div>
         <h2>{t("login.title-recovery")}</h2>
         <Form name="formRecovery" layout="vertical">
-          <Form.Item style={{marginTop: "20px"}} name="username" label={t("login.label-email-recovery")}>
+          <Form.Item
+            style={{ marginTop: "20px" }}
+            name="username"
+            label={t("login.label-email-recovery")}
+          >
             <Input
               type="text"
               placeholder={t("login.placeholder-user-recovery")}
             />
           </Form.Item>
           <Form.Item>
-            <Button style={{marginTop: "20px"}} className="primary" onClick={Send}>
+            <Button
+              style={{ marginTop: "20px" }}
+              className="primary"
+              onClick={Send}
+            >
               {t("login.btn-recovery")}
             </Button>
           </Form.Item>
@@ -42,19 +50,21 @@ export default function RecoveryPassword() {
             <br />
           </Col>
           <Col span={24}>
-            <h2>{t("login.recovery-success")}</h2>
+            <h2 style={{ marginTop: "20px" }}>{t("login.recovery-success")}</h2>
+            <br />
             <br />
           </Col>
           <Col span={24}>
-            <p className="secondaryText" style={{ textAlign: "center", }}>
-            {t("login.p-recovery-message")}
+            <p className="secondaryText" style={{ textAlign: "center" }}>
+              {t("login.p-recovery-message")}
             </p>
+            <br />
             <br />
           </Col>
           <Col span={24}>
             <Link to="/login">
-              <Button className="primary" style={{ width: "100px" }}>  
-              {t("login.btn-success")}
+              <Button className="primary" style={{ width: "100px" }}>
+                {t("login.btn-success")}
               </Button>
             </Link>
             <br />

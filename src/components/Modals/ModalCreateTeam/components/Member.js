@@ -40,10 +40,10 @@ export default function Member({
           </Col>
           <Col style={{ paddingLeft: "5px" }} span={19}>
             <span>
-              <b>{collaborator.name}</b>
+              <b className="primaryText">{collaborator.name}</b>
             </span>
             <br />
-            <span>Programador JR</span>
+            <span className="primaryText">Programador JR</span>
           </Col>
         </Row>
       </Col>

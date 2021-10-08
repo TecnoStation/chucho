@@ -71,22 +71,30 @@ function ModalCardTeam({
         <Row>
           <Col span={6}>
             <p>
+<<<<<<< HEAD
               <b className="secondaryText">{t("organigram.teams-modal.kind-team-label")}</b>
               <Tooltip color="#FFFDE7" title={text}>
                   <span style={{ marginLeft: "10px", fontSize: "13px", position: "absolute" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
                   </span>
               </Tooltip>
+=======
+              <b className="secondaryText">Tipo de equipo</b>
+>>>>>>> 9de3504efdff2752196a5f8258033d197710caab
             </p>
           </Col>
           <Col span={16}>
             <p>
+<<<<<<< HEAD
               <b className="secondaryText">{t("organigram.teams-modal.modality-label")}</b>
               <Tooltip color="#FFFDE7" title={text}  >
                   <span style={{ marginLeft: "10px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
                   </span>
               </Tooltip>
+=======
+              <b className="secondaryText">Modalidad</b>
+>>>>>>> 9de3504efdff2752196a5f8258033d197710caab
             </p>
           </Col>
           <Col span={2}>
@@ -112,20 +120,25 @@ function ModalCardTeam({
         <Row>
           <Col style={{ textAlign: "left", paddingLeft: "5px" }} span={24}>
             <p>
+<<<<<<< HEAD
               <b className="secondaryText">{t("organigram.teams-modal.members-team")}</b>
               <Tooltip color="#FFFDE7" title={text}>
                   <span style={{ marginLeft: "10px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
                   </span>
               </Tooltip>
+=======
+              <b className="secondaryText">Marco de trabajo</b>
+>>>>>>> 9de3504efdff2752196a5f8258033d197710caab
             </p>
           </Col>
         </Row>
         <Row>
           <Col style={{ textAlign: "left", paddingLeft: "5px" }} span={24}>
-            <p>{modalCard.frameWork}</p>
+            <p className="secondaryText">{modalCard.frameWork}</p>
           </Col>
         </Row>
+<<<<<<< HEAD
         <Row className="secondaryText" style={{ textAlign: "center", marginTop: "40px" }}>
           <Col span={10}>
             <b>{t("organigram.teams-modal.members-team-2")}</b>
@@ -135,6 +148,23 @@ function ModalCardTeam({
           </Col>
           <Col span={8}>
             <b>{t("organigram.teams-modal.role")}</b>
+=======
+        <Row style={{ textAlign: "center", marginTop: "40px" }}>
+          <Col span={10}>
+            <span className="secondaryText">
+              <b>Miembros del Equipo</b>
+            </span>
+          </Col>
+          <Col span={6}>
+            <span className="secondaryText">
+              <b>Líder</b>
+            </span>
+          </Col>
+          <Col span={8}>
+            <span className="secondaryText">
+              <b>Roles</b>
+            </span>
+>>>>>>> 9de3504efdff2752196a5f8258033d197710caab
           </Col>
         </Row>
 

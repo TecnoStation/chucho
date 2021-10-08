@@ -405,7 +405,12 @@ export default function MybusinessEdit() {
                         "organigram.my-business-edit.information.form.headquartes-direction"
                       )}
                     >
-                      <Input addonAfter={<EnvironmentOutlined />} />
+                      <Input
+                        placeholder={t(
+                          "organigram.my-business-edit.information.form.headquartes-direction-placeholder"
+                        )}
+                        addonAfter={<EnvironmentOutlined />}
+                      />
                     </Form.Item>
                   </div>
                 </Col>
@@ -455,16 +460,20 @@ export default function MybusinessEdit() {
                   >
                     <Col className="gutter-row" span={12}>
                       <span className="secondaryText">
-                        {t(
-                          "organigram.my-business-edit.information.form.branches-added"
-                        )}
+                        <b>
+                          {t(
+                            "organigram.my-business-edit.information.form.branches-added"
+                          )}
+                        </b>
                       </span>
                     </Col>
                     <Col className="gutter-row" style={{}} span={12}>
                       <span className="secondaryText">
-                        {t(
-                          "organigram.my-business-edit.information.form.direction"
-                        )}
+                        <b>
+                          {t(
+                            "organigram.my-business-edit.information.form.direction"
+                          )}
+                        </b>
                       </span>
                     </Col>
                     <div className="divider">

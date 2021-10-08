@@ -19,11 +19,13 @@ export default function Login() {
           <Form.Item name="username" label={t("login.label-user")}>
             <Input type="text" placeholder={t("login.placeholder-user")} />
           </Form.Item>
-          <Form.Item name="password" label={t("login.label-password")}> 
+          <Form.Item name="password" label={t("login.label-password")}>
             <Input.Password placeholder={t("login.placeholder-password")} />
           </Form.Item>
           <Form.Item style={{ textAlign: "left", marginTop: "-12px" }}>
-            <Checkbox><span>{t("login.check-box")}</span></Checkbox>
+            <Checkbox>
+              <span>{t("login.check-box")}</span>
+            </Checkbox>
           </Form.Item>
           <Form.Item style={{ textAlign: "left", marginTop: "-30px" }}>
             <Link to={"/" + t("routes.recoverypassword")} className="linkText">
@@ -47,7 +49,7 @@ export default function Login() {
         </Form>
         <p className="legacyP grayText">{t("login.p1-privacy")}</p>
         <p>
-          <Checkbox className="terminos grayText">
+          <Checkbox className="terminos grayText" checked={true}>
             {t("login.check-privacy")}
           </Checkbox>
         </p>

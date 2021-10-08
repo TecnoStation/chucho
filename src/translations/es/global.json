@@ -297,7 +297,7 @@
             "btn-save": "Guardar",
             "menu":{
              "edit-branch": "Editar sucursal",
-             "remove-branch": "Eliminar sucursal"   
+             "remove-branch": "Eliminar"   
             }
         },
         "add-competencies-modal": {
