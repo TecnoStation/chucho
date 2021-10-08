@@ -12,7 +12,7 @@ import {
   Tooltip,
 } from "antd";
 import More from "../../assets/img/icons/more_vert-24px.svg";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation, } from "react-router-dom";
 import { RiPencilFill } from "react-icons/ri";
 import { PlusCircleOutlined, QuestionCircleOutlined } from "@ant-design/icons";
 import { IoMdSquare } from "react-icons/io";
@@ -32,6 +32,10 @@ import SelectDinamic from "../../components/SelectDinamic/SelectDinamic";
 import "./AreasAndPositions.scss";
 
 const { Option } = Select;
+
+const text = (<>
+  <span style={{color: "#000"}}><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</b></span><br/><br/><span style={{color: "#000"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volup</span>
+</>);
 
 export default function AreasAndPositionsAddJob() {
   const [t, i18n] = useTranslation("global");
@@ -326,8 +330,12 @@ export default function AreasAndPositionsAddJob() {
                     label={t(
                       "organigram.areasandpositions-addjob.label-levelposition"
                     )}
-                    tooltip={info}
                   >
+                      <Tooltip color="#FFFDE7" title={text}>
+                        <span style={{ marginLeft: "123px", fontSize: "13px", marginTop: "-29px", position: "absolute" }}>
+                        <QuestionCircleOutlined className="iconSureGray" />
+                        </span>
+                     </Tooltip> 
                     <SelectDinamic
                       placeholder={t(
                         "organigram.areasandpositions-addjob.placeholder-direction"
@@ -348,8 +356,12 @@ export default function AreasAndPositionsAddJob() {
                     label={t(
                       "organigram.areasandpositions-addjob.label-positionpersonalized"
                     )}
-                    tooltip={infosub}
                   >
+                    <Tooltip color="#FFFDE7" title={text}>
+                        <span style={{ marginLeft: "216px", fontSize: "13px", marginTop: "-29px", position: "absolute" }}>
+                        <QuestionCircleOutlined className="iconSureGray" />
+                        </span>
+                     </Tooltip>
                     <SelectDinamic
                       placeholder={t(
                         "organigram.areasandpositions-addjob.placeholder-personalized"
@@ -524,7 +536,7 @@ export default function AreasAndPositionsAddJob() {
                 <b className="secondaryText">
                   {t("organigram.areasandpositions-addjob.competences")}
                 </b>
-                <Tooltip title="prompt text">
+                <Tooltip color="#FFFDE7" title={text}>
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
                   </span>
@@ -564,7 +576,7 @@ export default function AreasAndPositionsAddJob() {
                 <b className="secondaryText">
                   {t("organigram.areasandpositions-addjob.competences2")}
                 </b>
-                <Tooltip title="prompt text">
+                <Tooltip color="#FFFDE7" title={text}>
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
                   </span>
@@ -607,7 +619,7 @@ export default function AreasAndPositionsAddJob() {
                 <b className="secondaryText">
                   {t("organigram.areasandpositions-addjob.competen-position")}
                 </b>
-                <Tooltip title="prompt text">
+                <Tooltip color="#FFFDE7" title={text}>
                   <span style={{ marginLeft: "8px", fontSize: "13px" }}>
                     <QuestionCircleOutlined className="iconSureGray" />
                   </span>

@@ -37,7 +37,7 @@ export default function CardNodeStartedGrandFather({
           className="CardNodeGrandFather"
         >
           <Row
-            style={{ textAlign: "left", height: "50px", paddingBottom: "50px" }}
+            style={{ textAlign: "left", height: "50px", paddingBottom: "50px", marginTop: "5px" }}
             className="dividerBottomFull"
           >
             <Col span={5}>

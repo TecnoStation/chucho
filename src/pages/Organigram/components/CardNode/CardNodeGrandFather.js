@@ -27,7 +27,7 @@ function CardNodeGrandFather({ data }) {
           style={{ borderColor: data[0].color }}
         >
           <Row
-            style={{ textAlign: "left", height: "50px", paddingBottom: "50px" }}
+            style={{ textAlign: "left", height: "50px", paddingBottom: "50px", marginTop: "5px" }}
             className="dividerBottomFull"
           >
             <Col span={5}>

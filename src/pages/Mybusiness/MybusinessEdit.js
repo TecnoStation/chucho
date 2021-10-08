@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Form, Tabs, Input, Select, Col, Row, Button, Modal } from "antd";
-import { EnvironmentOutlined, PlusCircleOutlined } from "@ant-design/icons";
+import { Form, Tabs, Input, Select, Col, Row, Button, Modal, Tooltip, Text } from "antd";
+import { EnvironmentOutlined, PlusCircleOutlined, QuestionCircleOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import Branchs from "../../components/Branchs/Branchs";
 import Competencies from "../../components/Competencies/Competencies";
@@ -194,8 +194,9 @@ export default function MybusinessEdit() {
 
   //----------------------- End Image Perfil -----------------------------------
 
-  const tooltip = (<><span><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</b></span><br/><br/><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volup</span></>);
-
+  const text = (<>
+    <span style={{color: "#000"}}><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</b></span><br/><br/><span style={{color: "#000"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volup</span>
+  </>);
 
   return (
     <>
@@ -269,8 +270,12 @@ export default function MybusinessEdit() {
                           label={t(
                             "organigram.my-business-edit.information.form.business-activity"
                           )}
-                          tooltip={tooltip}
                         >
+                          <Tooltip color="#FFFDE7" title={text}>
+                              <span style={{ marginLeft: "172px", fontSize: "13px", marginTop: "-29px", position: "absolute" }}>
+                              <QuestionCircleOutlined className="iconSureGray" />
+                              </span>
+                          </Tooltip>  
                           <SelectDinamic
                             placeholder={t(
                               "organigram.my-business-edit.information.form.business-activity-placeholder"
@@ -291,8 +296,12 @@ export default function MybusinessEdit() {
                           label={t(
                             "organigram.my-business-edit.information.form.subactivity-busines"
                           )}
-                          tooltip="info"
                         >
+                          <Tooltip color="#FFFDE7" title={text}>
+                              <span style={{ marginLeft: "195px", fontSize: "13px", marginTop: "-29px", position: "absolute" }}>
+                              <QuestionCircleOutlined className="iconSureGray" />
+                              </span>
+                          </Tooltip>  
                           <SelectDinamic
                             placeholder={t(
                               "organigram.my-business-edit.information.form.business-activity-placeholder"
@@ -538,7 +547,7 @@ export default function MybusinessEdit() {
                     <Form.Item
                       name="propose"
                       label="Proposito / mision"
-                      tooltip="info"
+                      
                       rules={[
                         {
                           required: true,
@@ -546,6 +555,11 @@ export default function MybusinessEdit() {
                         },
                       ]}
                     >
+                      <Tooltip color="#FFFDE7" title={text}>
+                        <span style={{ marginLeft: "133px", fontSize: "13px", marginTop: "-28px", position: "absolute" }}>
+                        <QuestionCircleOutlined className="iconSureGray" />
+                        </span>
+                      </Tooltip>
                       <TextArea
                         placeholder={t(
                           "organigram.my-business-edit.culture.mission-placeholder"
@@ -556,7 +570,6 @@ export default function MybusinessEdit() {
                     <Form.Item
                       name="vision"
                       label="Visión"
-                      tooltip="info"
                       rules={[
                         {
                           required: true,
@@ -564,6 +577,11 @@ export default function MybusinessEdit() {
                         },
                       ]}
                     >
+                      <Tooltip color="#FFFDE7" title={text}>
+                        <span style={{ marginLeft: "57px", fontSize: "13px", marginTop: "-28px", position: "absolute" }}>
+                        <QuestionCircleOutlined className="iconSureGray" />
+                        </span>
+                      </Tooltip>
                       <TextArea
                         placeholder={t(
                           "organigram.my-business-edit.culture.View-placeholder"
@@ -576,7 +594,6 @@ export default function MybusinessEdit() {
                       label={t(
                         "organigram.my-business-edit.culture.business-description"
                       )}
-                      tooltip="info"
                       rules={[
                         {
                           required: true,
@@ -584,6 +601,11 @@ export default function MybusinessEdit() {
                         },
                       ]}
                     >
+                      <Tooltip color="#FFFDE7" title={text}>
+                        <span style={{ marginLeft: "183px", fontSize: "13px", marginTop: "-28px", position: "absolute" }}>
+                        <QuestionCircleOutlined className="iconSureGray" />
+                        </span>
+                      </Tooltip>
                       <TextArea
                         placeholder={t(
                           "organigram.my-business-edit.culture.business-description-placeholder"

@@ -8,9 +8,10 @@ import {
   Modal,
   Select,
   AutoComplete,
+  Tooltip
 } from "antd";
 import { Link, useHistory, useLocation } from "react-router-dom";
-import { UserOutlined } from "@ant-design/icons";
+import { UserOutlined, QuestionCircleOutlined} from "@ant-design/icons";
 import { v4 as uuid } from "uuid";
 import Member from "./components/Member";
 import { useTranslation } from "react-i18next";
@@ -178,7 +179,9 @@ function ModalCreateTeam({
   //----------------- Create And Render Collaborators ------------------------------------------
 
   //----------------- FrameWork change ------------------------------------------
-
+  const text = (<>
+    <span style={{color: "#000"}}><b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</b></span><br/><br/><span style={{color: "#000"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in volup</span>
+  </>);
   const showInput = (value) => {
     if (value === "Personalizado") {
       setTypeTeam("hide");
@@ -339,7 +342,6 @@ function ModalCreateTeam({
                 style={{ textAlign: "left" }}
                 name="type"
                 label={t("organigram.teams-modal.kind-team-label")}
-                tooltip="info"
                 rules={[
                   {
                     required: true,
@@ -347,6 +349,11 @@ function ModalCreateTeam({
                   },
                 ]}
               >
+                <Tooltip color="#FFFDE7" title={text}>
+                   <span style={{ marginLeft: "112px", fontSize: "13px", marginTop: "-29px", position: "absolute" }}>
+                    <QuestionCircleOutlined className="iconSureGray" />
+                    </span>
+                </Tooltip>
                 <SelectDinamic
                   placeholder={t(
                     "organigram.teams-modal.placeholder-imput-selec"
@@ -383,7 +390,6 @@ function ModalCreateTeam({
               <Form.Item
                 name="Modality"
                 label={t("organigram.teams-modal.modality-label")}
-                tooltip="info"
                 rules={[
                   {
                     required: true,
@@ -391,6 +397,11 @@ function ModalCreateTeam({
                   },
                 ]}
               >
+                <Tooltip color="#FFFDE7" title={text}>
+                   <span style={{ marginLeft: "87px", fontSize: "13px", marginTop: "-29px", position: "absolute" }}>
+                    <QuestionCircleOutlined className="iconSureGray" />
+                    </span>
+                </Tooltip>
                 <SelectDinamic
                   placeholder={t(
                     "organigram.teams-modal.placeholder-imput-option"

@@ -21,6 +21,7 @@ function CardNodeEraseGrandChild() {
           textAlign: "left",
           height: "50px",
           paddingBottom: "50px",
+          marginTop: "5px"
         }}
         className="dividerBottomFull"
       >

@@ -842,6 +842,7 @@
             "members-team-2": "Miembros del equipo",
             "leader": "Lider",
             "role-team": "Rol en el equipo",
+            "role": "Rol",
             "actions": "Acciones",
             "text-link": "Aqui",
             "text": "puedes ver buenas prácticas en equipos Agile",
@@ -850,6 +851,10 @@
             "btn-edit": "Editar",
             "personalized": "Personalizado",
             "mode-operative": "Modo Operativo Agile"   
+           },
+           "menu-card":{
+            "edit-data": "Editar datos",
+            "remove": "Eliminar"   
            },
 
             "teams2":{
